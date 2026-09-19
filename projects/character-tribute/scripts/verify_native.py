@@ -48,10 +48,28 @@ def main():
     step.read(str(ROOT / "native/character-tribute.step"))
     if len(step.Solids) != len(objects):
         raise ValueError("STEP reread solid count does not match the native assembly")
-    if abs(step.Volume - assembly.Volume) > 1e-2:
+    volume_delta = abs(step.Volume - assembly.Volume)
+    if volume_delta > .1 or volume_delta / assembly.Volume > 1e-6:
         raise ValueError("STEP reread volume differs from native geometry")
     report["step_reopened_solids"] = len(step.Solids)
     report["step_volume_difference_mm3"] = abs(step.Volume - assembly.Volume)
+    report["step_volume_difference_fraction"] = volume_delta / assembly.Volume
+    report["step_numerical_tolerance"] = {"absolute_mm3": .1, "relative": 1e-6,
+                                         "note":"Numerical BRep/STEP integration tolerance, not a print-fit allowance."}
+    part_reports = {}
+    for part in parts.values():
+        master = Part.Shape()
+        master.read(str(ROOT / part["step"]))
+        if not master.isValid() or len(master.Solids) != 1:
+            raise ValueError(f"Invalid individual STEP: {part['id']}")
+        delta = abs(master.Volume-part["cad_volume_mm3"])
+        if delta > .05 or delta/part["cad_volume_mm3"] > 1e-5:
+            raise ValueError(f"Individual STEP volume mismatch: {part['id']}")
+        b = master.optimalBoundingBox(False,False)
+        if any(abs(x-y) > .001 for x,y in zip([b.XLength,b.YLength,b.ZLength],part["bounds_mm"])):
+            raise ValueError(f"Individual STEP bounds mismatch: {part['id']}")
+        part_reports[part["id"]] = {"valid_solid":True,"volume_difference_mm3":delta}
+    report["individual_steps"] = part_reports
     (ROOT / "validation/native.json").write_text(json.dumps(report, indent=2) + "\n")
     catalog["native_reopened"] = True
     catalog["assembly_size_mm"] = report["assembly_size_mm"]

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project": "character-tribute",
-  "revision": "T1",
+  "revision": "T2",
   "units": "mm",
   "axes": "X right, Y rear, Z up; front camera looks toward +Y",
   "message": [
@@ -63,378 +63,1431 @@
       "quantity": 1
     },
     {
-      "name_ja": "背板と差込舌",
-      "color": "white",
+      "name_ja": "8×1 フランジ付き色インサート",
+      "color": "green",
       "category": "assembly",
-      "source": "parameters.json",
-      "id": "T02",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        8,
+        1
+      ],
+      "flange_mm": [
+        63.6,
+        7.6
+      ],
+      "window_mm": [
+        62.0,
+        6.0
+      ],
+      "id": "IN-G-8x1",
       "print_origin_mm": [
-        -80.0,
-        -32.0,
+        -31.8,
+        -3.8,
         0.0
       ],
       "bounds_mm": [
-        160.0,
-        192.0,
-        7.4
+        63.6,
+        7.6,
+        8.0
       ],
-      "cad_volume_mm3": 177033.60000000003,
-      "facets": 316,
+      "cad_volume_mm3": 2981.1200000000003,
+      "facets": 28,
+      "mesh": "meshes/IN-G-8x1.stl",
+      "step": "native/parts/IN-G-8x1.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "4×1 フランジ付き色インサート",
+      "color": "green",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        4,
+        1
+      ],
+      "flange_mm": [
+        31.6,
+        7.6
+      ],
+      "window_mm": [
+        30.0,
+        6.0
+      ],
+      "id": "IN-G-4x1",
+      "print_origin_mm": [
+        -15.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        31.6,
+        7.6,
+        8.0
+      ],
+      "cad_volume_mm3": 1445.1200000000001,
+      "facets": 28,
+      "mesh": "meshes/IN-G-4x1.stl",
+      "step": "native/parts/IN-G-4x1.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "1×1 フランジ付き色インサート",
+      "color": "green",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        1
+      ],
+      "flange_mm": [
+        7.6,
+        7.6
+      ],
+      "window_mm": [
+        6.0,
+        6.0
+      ],
+      "id": "IN-G-1x1",
+      "print_origin_mm": [
+        -3.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        7.6,
+        7.6,
+        8.0
+      ],
+      "cad_volume_mm3": 293.12,
+      "facets": 28,
+      "mesh": "meshes/IN-G-1x1.stl",
+      "step": "native/parts/IN-G-1x1.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "1×1 フランジ付き色インサート",
+      "color": "mint",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        1
+      ],
+      "flange_mm": [
+        7.6,
+        7.6
+      ],
+      "window_mm": [
+        6.0,
+        6.0
+      ],
+      "id": "IN-L-1x1",
+      "print_origin_mm": [
+        -3.8000000999999997,
+        -3.8000000999999997,
+        0.0
+      ],
+      "bounds_mm": [
+        7.600000199999999,
+        7.600000199999999,
+        9.6000001
+      ],
+      "cad_volume_mm3": 289.45669278826733,
+      "facets": 398,
+      "mesh": "meshes/IN-L-1x1.stl",
+      "step": "native/parts/IN-L-1x1.step",
+      "quantity": 4
+    },
+    {
+      "name_ja": "2×2 フランジ付き色インサート",
+      "color": "green",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        2,
+        2
+      ],
+      "flange_mm": [
+        15.6,
+        15.6
+      ],
+      "window_mm": [
+        14.0,
+        14.0
+      ],
+      "id": "IN-G-2x2",
+      "print_origin_mm": [
+        -7.8,
+        -7.8,
+        0.0
+      ],
+      "bounds_mm": [
+        15.6,
+        15.6,
+        8.0
+      ],
+      "cad_volume_mm3": 1573.1200000000001,
+      "facets": 28,
+      "mesh": "meshes/IN-G-2x2.stl",
+      "step": "native/parts/IN-G-2x2.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "2×1 フランジ付き色インサート",
+      "color": "skin",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        2,
+        1
+      ],
+      "flange_mm": [
+        15.6,
+        7.6
+      ],
+      "window_mm": [
+        14.0,
+        6.0
+      ],
+      "id": "IN-S-2x1",
+      "print_origin_mm": [
+        -7.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        15.6,
+        7.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 798.976,
+      "facets": 28,
+      "mesh": "meshes/IN-S-2x1.stl",
+      "step": "native/parts/IN-S-2x1.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "2×1 フランジ付き色インサート",
+      "color": "green",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        2,
+        1
+      ],
+      "flange_mm": [
+        15.6,
+        7.6
+      ],
+      "window_mm": [
+        14.0,
+        6.0
+      ],
+      "id": "IN-G-2x1",
+      "print_origin_mm": [
+        -7.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        15.6,
+        7.6,
+        8.0
+      ],
+      "cad_volume_mm3": 677.1199999999999,
+      "facets": 28,
+      "mesh": "meshes/IN-G-2x1.stl",
+      "step": "native/parts/IN-G-2x1.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "2×4 フランジ付き色インサート",
+      "color": "blue",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        2,
+        4
+      ],
+      "flange_mm": [
+        15.6,
+        31.6
+      ],
+      "window_mm": [
+        14.0,
+        30.0
+      ],
+      "id": "IN-B-2x4",
+      "print_origin_mm": [
+        -7.8,
+        -15.8,
+        0.0
+      ],
+      "bounds_mm": [
+        15.6,
+        31.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 4009.216000000001,
+      "facets": 28,
+      "mesh": "meshes/IN-B-2x4.stl",
+      "step": "native/parts/IN-B-2x4.step",
+      "quantity": 3
+    },
+    {
+      "name_ja": "2×1 フランジ付き色インサート",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        2,
+        1
+      ],
+      "flange_mm": [
+        15.6,
+        7.6
+      ],
+      "window_mm": [
+        14.0,
+        6.0
+      ],
+      "id": "IN-W-2x1",
+      "print_origin_mm": [
+        -7.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        15.6,
+        7.6,
+        8.8
+      ],
+      "cad_volume_mm3": 738.048,
+      "facets": 28,
+      "mesh": "meshes/IN-W-2x1.stl",
+      "step": "native/parts/IN-W-2x1.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "1×1 フランジ付き色インサート",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        1
+      ],
+      "flange_mm": [
+        7.6,
+        7.6
+      ],
+      "window_mm": [
+        6.0,
+        6.0
+      ],
+      "id": "IN-W-1x1",
+      "print_origin_mm": [
+        -3.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        7.6,
+        7.6,
+        8.8
+      ],
+      "cad_volume_mm3": 318.20799999999997,
+      "facets": 28,
+      "mesh": "meshes/IN-W-1x1.stl",
+      "step": "native/parts/IN-W-1x1.step",
+      "quantity": 3
+    },
+    {
+      "name_ja": "1×4 フランジ付き色インサート",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        4
+      ],
+      "flange_mm": [
+        7.6,
+        31.6
+      ],
+      "window_mm": [
+        6.0,
+        30.0
+      ],
+      "id": "IN-R-1x4",
+      "print_origin_mm": [
+        -3.8,
+        -15.8,
+        0.0
+      ],
+      "bounds_mm": [
+        7.6,
+        31.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 1710.3360000000002,
+      "facets": 28,
+      "mesh": "meshes/IN-R-1x4.stl",
+      "step": "native/parts/IN-R-1x4.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "1×3 フランジ付き色インサート",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        3
+      ],
+      "flange_mm": [
+        7.6,
+        23.6
+      ],
+      "window_mm": [
+        6.0,
+        22.0
+      ],
+      "id": "IN-R-1x3",
+      "print_origin_mm": [
+        -3.8,
+        -11.8,
+        0.0
+      ],
+      "bounds_mm": [
+        7.6,
+        23.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 1254.656,
+      "facets": 28,
+      "mesh": "meshes/IN-R-1x3.stl",
+      "step": "native/parts/IN-R-1x3.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "3×1 フランジ付き色インサート",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        3,
+        1
+      ],
+      "flange_mm": [
+        23.6,
+        7.6
+      ],
+      "window_mm": [
+        22.0,
+        6.0
+      ],
+      "id": "IN-R-3x1",
+      "print_origin_mm": [
+        -11.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        23.6,
+        7.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 1254.6560000000002,
+      "facets": 28,
+      "mesh": "meshes/IN-R-3x1.stl",
+      "step": "native/parts/IN-R-3x1.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "1×1 フランジ付き色インサート",
+      "color": "blue",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        1
+      ],
+      "flange_mm": [
+        7.6,
+        7.6
+      ],
+      "window_mm": [
+        6.0,
+        6.0
+      ],
+      "id": "IN-B-1x1",
+      "print_origin_mm": [
+        -3.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        7.6,
+        7.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 343.296,
+      "facets": 28,
+      "mesh": "meshes/IN-B-1x1.stl",
+      "step": "native/parts/IN-B-1x1.step",
+      "quantity": 4
+    },
+    {
+      "name_ja": "2×2 フランジ付き色インサート",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        2,
+        2
+      ],
+      "flange_mm": [
+        15.6,
+        15.6
+      ],
+      "window_mm": [
+        14.0,
+        14.0
+      ],
+      "id": "IN-W-2x2",
+      "print_origin_mm": [
+        -7.8,
+        -7.8,
+        0.0
+      ],
+      "bounds_mm": [
+        15.6,
+        15.6,
+        8.8
+      ],
+      "cad_volume_mm3": 1721.0880000000002,
+      "facets": 28,
+      "mesh": "meshes/IN-W-2x2.stl",
+      "step": "native/parts/IN-W-2x2.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "2×1 フランジ付き色インサート",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        2,
+        1
+      ],
+      "flange_mm": [
+        15.6,
+        7.6
+      ],
+      "window_mm": [
+        14.0,
+        6.0
+      ],
+      "id": "IN-R-2x1",
+      "print_origin_mm": [
+        -7.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        15.6,
+        7.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 798.976,
+      "facets": 28,
+      "mesh": "meshes/IN-R-2x1.stl",
+      "step": "native/parts/IN-R-2x1.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "1×1 フランジ付き色インサート",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        1
+      ],
+      "flange_mm": [
+        7.6,
+        7.6
+      ],
+      "window_mm": [
+        6.0,
+        6.0
+      ],
+      "id": "IN-R-1x1",
+      "print_origin_mm": [
+        -3.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        7.6,
+        7.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 343.296,
+      "facets": 28,
+      "mesh": "meshes/IN-R-1x1.stl",
+      "step": "native/parts/IN-R-1x1.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "4×1 フランジ付き色インサート",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        4,
+        1
+      ],
+      "flange_mm": [
+        31.6,
+        7.6
+      ],
+      "window_mm": [
+        30.0,
+        6.0
+      ],
+      "id": "IN-R-4x1",
+      "print_origin_mm": [
+        -15.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        31.6,
+        7.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 1710.336,
+      "facets": 28,
+      "mesh": "meshes/IN-R-4x1.stl",
+      "step": "native/parts/IN-R-4x1.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "4×2 フランジ付き色インサート",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        4,
+        2
+      ],
+      "flange_mm": [
+        31.6,
+        15.6
+      ],
+      "window_mm": [
+        30.0,
+        14.0
+      ],
+      "id": "IN-K-4x2",
+      "print_origin_mm": [
+        -15.8,
+        -7.8,
+        0.0
+      ],
+      "bounds_mm": [
+        31.6,
+        15.6,
+        8.8
+      ],
+      "cad_volume_mm3": 3687.168,
+      "facets": 28,
+      "mesh": "meshes/IN-K-4x2.stl",
+      "step": "native/parts/IN-K-4x2.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "1×1 フランジ付き色インサート",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        1
+      ],
+      "flange_mm": [
+        7.6,
+        7.6
+      ],
+      "window_mm": [
+        6.0,
+        6.0
+      ],
+      "id": "IN-K-1x1",
+      "print_origin_mm": [
+        -3.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        7.6,
+        7.6,
+        8.8
+      ],
+      "cad_volume_mm3": 318.20799999999997,
+      "facets": 28,
+      "mesh": "meshes/IN-K-1x1.stl",
+      "step": "native/parts/IN-K-1x1.step",
+      "quantity": 5
+    },
+    {
+      "name_ja": "3×1 フランジ付き色インサート",
+      "color": "skin",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        3,
+        1
+      ],
+      "flange_mm": [
+        23.6,
+        7.6
+      ],
+      "window_mm": [
+        22.0,
+        6.0
+      ],
+      "id": "IN-S-3x1",
+      "print_origin_mm": [
+        -11.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        23.6,
+        7.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 1254.6560000000002,
+      "facets": 28,
+      "mesh": "meshes/IN-S-3x1.stl",
+      "step": "native/parts/IN-S-3x1.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "2×1 フランジ付き色インサート",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        2,
+        1
+      ],
+      "flange_mm": [
+        15.6,
+        7.6
+      ],
+      "window_mm": [
+        14.0,
+        6.0
+      ],
+      "id": "IN-K-2x1",
+      "print_origin_mm": [
+        -7.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        15.6,
+        7.6,
+        8.8
+      ],
+      "cad_volume_mm3": 738.048,
+      "facets": 28,
+      "mesh": "meshes/IN-K-2x1.stl",
+      "step": "native/parts/IN-K-2x1.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "5×1 フランジ付き色インサート",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        5,
+        1
+      ],
+      "flange_mm": [
+        39.6,
+        7.6
+      ],
+      "window_mm": [
+        38.0,
+        6.0
+      ],
+      "id": "IN-K-5x1",
+      "print_origin_mm": [
+        -19.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        39.6,
+        7.6,
+        8.8
+      ],
+      "cad_volume_mm3": 1997.568,
+      "facets": 28,
+      "mesh": "meshes/IN-K-5x1.stl",
+      "step": "native/parts/IN-K-5x1.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "1×3 フランジ付き色インサート",
+      "color": "skin",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        3
+      ],
+      "flange_mm": [
+        7.6,
+        23.6
+      ],
+      "window_mm": [
+        6.0,
+        22.0
+      ],
+      "id": "IN-S-1x3",
+      "print_origin_mm": [
+        -3.8,
+        -11.8,
+        0.0
+      ],
+      "bounds_mm": [
+        7.6,
+        23.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 1254.656,
+      "facets": 28,
+      "mesh": "meshes/IN-S-1x3.stl",
+      "step": "native/parts/IN-S-1x3.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "2×3 フランジ付き色インサート",
+      "color": "skin",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        2,
+        3
+      ],
+      "flange_mm": [
+        15.6,
+        23.6
+      ],
+      "window_mm": [
+        14.0,
+        22.0
+      ],
+      "id": "IN-S-2x3",
+      "print_origin_mm": [
+        -7.8,
+        -11.8,
+        0.0
+      ],
+      "bounds_mm": [
+        15.6,
+        23.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 2939.1360000000004,
+      "facets": 28,
+      "mesh": "meshes/IN-S-2x3.stl",
+      "step": "native/parts/IN-S-2x3.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "4×1 フランジ付き色インサート",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        4,
+        1
+      ],
+      "flange_mm": [
+        31.6,
+        7.6
+      ],
+      "window_mm": [
+        30.0,
+        6.0
+      ],
+      "id": "IN-K-4x1",
+      "print_origin_mm": [
+        -15.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        31.6,
+        7.6,
+        8.8
+      ],
+      "cad_volume_mm3": 1577.728,
+      "facets": 28,
+      "mesh": "meshes/IN-K-4x1.stl",
+      "step": "native/parts/IN-K-4x1.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "1×2 フランジ付き色インサート",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        2
+      ],
+      "flange_mm": [
+        7.6,
+        15.6
+      ],
+      "window_mm": [
+        6.0,
+        14.0
+      ],
+      "id": "IN-K-1x2",
+      "print_origin_mm": [
+        -3.8,
+        -7.8,
+        0.0
+      ],
+      "bounds_mm": [
+        7.6,
+        15.6,
+        8.8
+      ],
+      "cad_volume_mm3": 738.048,
+      "facets": 28,
+      "mesh": "meshes/IN-K-1x2.stl",
+      "step": "native/parts/IN-K-1x2.step",
+      "quantity": 4
+    },
+    {
+      "name_ja": "1×2 フランジ付き色インサート",
+      "color": "skin",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        1,
+        2
+      ],
+      "flange_mm": [
+        7.6,
+        15.6
+      ],
+      "window_mm": [
+        6.0,
+        14.0
+      ],
+      "id": "IN-S-1x2",
+      "print_origin_mm": [
+        -3.8,
+        -7.8,
+        0.0
+      ],
+      "bounds_mm": [
+        7.6,
+        15.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 798.9760000000001,
+      "facets": 28,
+      "mesh": "meshes/IN-S-1x2.stl",
+      "step": "native/parts/IN-S-1x2.step",
+      "quantity": 4
+    },
+    {
+      "name_ja": "8×2 フランジ付き色インサート",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        8,
+        2
+      ],
+      "flange_mm": [
+        63.6,
+        15.6
+      ],
+      "window_mm": [
+        62.0,
+        14.0
+      ],
+      "id": "IN-R-8x2",
+      "print_origin_mm": [
+        -31.8,
+        -7.8,
+        0.0
+      ],
+      "bounds_mm": [
+        63.6,
+        15.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 8289.536000000002,
+      "facets": 28,
+      "mesh": "meshes/IN-R-8x2.stl",
+      "step": "native/parts/IN-R-8x2.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "6×1 フランジ付き色インサート",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        6,
+        1
+      ],
+      "flange_mm": [
+        47.6,
+        7.6
+      ],
+      "window_mm": [
+        46.0,
+        6.0
+      ],
+      "id": "IN-R-6x1",
+      "print_origin_mm": [
+        -23.8,
+        -3.8,
+        0.0
+      ],
+      "bounds_mm": [
+        47.6,
+        7.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 2621.6960000000004,
+      "facets": 28,
+      "mesh": "meshes/IN-R-6x1.stl",
+      "step": "native/parts/IN-R-6x1.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "4×2 フランジ付き色インサート",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json#mosaic",
+      "retention": "front_shoulder_and_back_cover",
+      "cells": [
+        4,
+        2
+      ],
+      "flange_mm": [
+        31.6,
+        15.6
+      ],
+      "window_mm": [
+        30.0,
+        14.0
+      ],
+      "id": "IN-R-4x2",
+      "print_origin_mm": [
+        -15.8,
+        -7.8,
+        0.0
+      ],
+      "bounds_mm": [
+        31.6,
+        15.6,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 4009.216000000001,
+      "facets": 28,
+      "mesh": "meshes/IN-R-4x2.stl",
+      "step": "native/parts/IN-R-4x2.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "目の白い捕捉カセット",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json#retention",
+      "retention": "nested_flange_capture",
+      "id": "EYE-W",
+      "print_origin_mm": [
+        -7.8000001,
+        -11.8000001,
+        -1e-07
+      ],
+      "bounds_mm": [
+        15.6000002,
+        23.6000002,
+        9.600000199999998
+      ],
+      "cad_volume_mm3": 1678.4099437473078,
+      "facets": 766,
+      "mesh": "meshes/EYE-W.stl",
+      "step": "native/parts/EYE-W.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "青い虹彩と背面フランジ",
+      "color": "blue",
+      "category": "assembly",
+      "source": "parameters.json#retention",
+      "retention": "nested_flange_capture",
+      "id": "EYE-B",
+      "print_origin_mm": [
+        -5.6000001,
+        -8.8000001,
+        -2.0
+      ],
+      "bounds_mm": [
+        11.2000002,
+        17.6000002,
+        13.200000099999999
+      ],
+      "cad_volume_mm3": 793.8744995624993,
+      "facets": 396,
+      "mesh": "meshes/EYE-B.stl",
+      "step": "native/parts/EYE-B.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "瞳と背面フランジ",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json#retention",
+      "retention": "nested_flange_capture",
+      "id": "EYE-K",
+      "print_origin_mm": [
+        -3.2,
+        -5.6,
+        -4.0
+      ],
+      "bounds_mm": [
+        6.4,
+        11.2,
+        16.8
+      ],
+      "cad_volume_mm3": 464.8960000000001,
+      "facets": 28,
+      "mesh": "meshes/EYE-K.stl",
+      "step": "native/parts/EYE-K.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "白い丸の捕捉カセット",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json#retention",
+      "retention": "nested_flange_capture",
+      "id": "BADGE-W",
+      "print_origin_mm": [
+        -7.8000001,
+        -7.8000001,
+        0.0
+      ],
+      "bounds_mm": [
+        15.6000002,
+        15.6000002,
+        9.600000099999999
+      ],
+      "cad_volume_mm3": 1004.6233334003798,
+      "facets": 450,
+      "mesh": "meshes/BADGE-W.stl",
+      "step": "native/parts/BADGE-W.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "Mと背面フランジ",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json#retention",
+      "retention": "nested_flange_capture",
+      "id": "BADGE-M",
+      "print_origin_mm": [
+        -6.0,
+        -6.0,
+        -2.0
+      ],
+      "bounds_mm": [
+        12.0,
+        12.0,
+        13.2
+      ],
+      "cad_volume_mm3": 782.56,
+      "facets": 60,
+      "mesh": "meshes/BADGE-M.stl",
+      "step": "native/parts/BADGE-M.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "フランジ捕捉前枠と差込舌",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json#retention",
+      "id": "T02",
+      "print_origin_mm": [
+        -80.0000001,
+        -32.0000001,
+        -8.0000001
+      ],
+      "bounds_mm": [
+        160.0000002,
+        192.0000002,
+        14.400000200000001
+      ],
+      "cad_volume_mm3": 110507.60667017286,
+      "facets": 15632,
       "mesh": "meshes/T02.stl",
       "step": "native/parts/T02.step",
       "quantity": 1
     },
     {
-      "name_ja": "緑の足場",
-      "color": "green",
+      "name_ja": "全小部品を支持する着脱裏蓋",
+      "color": "charcoal",
       "category": "assembly",
-      "source": "parameters.json",
+      "source": "parameters.json#retention",
       "id": "T03",
       "print_origin_mm": [
-        -56.0,
-        4.0,
-        0.0
+        -76.0,
+        0.0,
+        -11.2
       ],
       "bounds_mm": [
-        112.0,
-        16.0,
-        3.2
+        152.0,
+        160.0,
+        11.0
       ],
-      "cad_volume_mm3": 5101.184000000001,
-      "facets": 76,
+      "cad_volume_mm3": 247938.95937238837,
+      "facets": 2012,
       "mesh": "meshes/T03.stl",
       "step": "native/parts/T03.step",
       "quantity": 1
     },
     {
-      "name_ja": "赤い服と腕",
-      "color": "red",
+      "name_ja": "交換可能な印刷粗ねじ",
+      "color": "charcoal",
       "category": "assembly",
-      "source": "parameters.json",
+      "source": "parameters.json#retention",
       "id": "T04",
       "print_origin_mm": [
-        -48.0,
-        36.0,
+        -8.0000001,
+        -6.928203330275509,
         0.0
       ],
       "bounds_mm": [
-        84.0,
-        44.0,
-        3.2
+        16.0000002,
+        13.85640666055102,
+        17.600000100000038
       ],
-      "cad_volume_mm3": 4252.975999999998,
-      "facets": 140,
+      "cad_volume_mm3": 1785.9025400477317,
+      "facets": 2762,
       "mesh": "meshes/T04.stl",
       "step": "native/parts/T04.step",
-      "quantity": 1
-    },
-    {
-      "name_ja": "青いつなぎ",
-      "color": "blue",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T05",
-      "print_origin_mm": [
-        -20.0,
-        28.0,
-        0.0
-      ],
-      "bounds_mm": [
-        40.0,
-        40.0,
-        4.8
-      ],
-      "cad_volume_mm3": 6422.975999999997,
-      "facets": 92,
-      "mesh": "meshes/T05.stl",
-      "step": "native/parts/T05.step",
-      "quantity": 1
-    },
-    {
-      "name_ja": "足",
-      "color": "skin",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T06",
-      "print_origin_mm": [
-        -8.0,
-        -4.0,
-        0.0
-      ],
-      "bounds_mm": [
-        16.0,
-        8.0,
-        3.2
-      ],
-      "cad_volume_mm3": 348.99199999999996,
-      "facets": 36,
-      "mesh": "meshes/T06.stl",
-      "step": "native/parts/T06.step",
-      "quantity": 2
-    },
-    {
-      "name_ja": "猫の耳・輪郭・支持付きひげ",
-      "color": "charcoal",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T07",
-      "print_origin_mm": [
-        -72.0,
-        80.0,
-        0.0
-      ],
-      "bounds_mm": [
-        144.0,
-        72.0,
-        4.2
-      ],
-      "cad_volume_mm3": 24412.736000000004,
-      "facets": 268,
-      "mesh": "meshes/T07.stl",
-      "step": "native/parts/T07.step",
-      "quantity": 1
-    },
-    {
-      "name_ja": "顔と鼻",
-      "color": "skin",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T08",
-      "print_origin_mm": [
-        -44.0,
-        84.0,
-        0.0
-      ],
-      "bounds_mm": [
-        88.0,
-        32.0,
-        5.6
-      ],
-      "cad_volume_mm3": 8363.903999999999,
-      "facets": 140,
-      "mesh": "meshes/T08.stl",
-      "step": "native/parts/T08.step",
-      "quantity": 1
-    },
-    {
-      "name_ja": "目の白い土台",
-      "color": "white",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T09",
-      "print_origin_mm": [
-        -8.0,
-        -12.0,
-        0.0
-      ],
-      "bounds_mm": [
-        16.0,
-        24.0,
-        2.4
-      ],
-      "cad_volume_mm3": 714.4149473870883,
-      "facets": 368,
-      "mesh": "meshes/T09.stl",
-      "step": "native/parts/T09.step",
-      "quantity": 2
-    },
-    {
-      "name_ja": "青い虹彩",
-      "color": "blue",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T10",
-      "print_origin_mm": [
-        -4.0,
-        -7.0,
-        0.0
-      ],
-      "bounds_mm": [
-        8.0,
-        14.0,
-        1.6
-      ],
-      "cad_volume_mm3": 140.74335088082273,
-      "facets": 352,
-      "mesh": "meshes/T10.stl",
-      "step": "native/parts/T10.step",
-      "quantity": 2
-    },
-    {
-      "name_ja": "黒い瞳",
-      "color": "charcoal",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T11",
-      "print_origin_mm": [
-        -1.6,
-        -4.0,
-        0.0
-      ],
-      "bounds_mm": [
-        3.2,
-        8.0,
-        1.2
-      ],
-      "cad_volume_mm3": 30.720000000000002,
-      "facets": 12,
-      "mesh": "meshes/T11.stl",
-      "step": "native/parts/T11.step",
-      "quantity": 2
-    },
-    {
-      "name_ja": "口ひげ",
-      "color": "charcoal",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T12",
-      "print_origin_mm": [
-        -12.0,
-        84.0,
-        0.0
-      ],
-      "bounds_mm": [
-        24.0,
-        8.0,
-        1.6
-      ],
-      "cad_volume_mm3": 184.3200000000001,
-      "facets": 60,
-      "mesh": "meshes/T12.stl",
-      "step": "native/parts/T12.step",
-      "quantity": 1
-    },
-    {
-      "name_ja": "手",
-      "color": "white",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T13",
-      "print_origin_mm": [
-        -6.0,
-        -6.0,
-        0.0
-      ],
-      "bounds_mm": [
-        12.0,
-        12.0,
-        3.2
-      ],
-      "cad_volume_mm3": 400.192,
-      "facets": 36,
-      "mesh": "meshes/T13.stl",
-      "step": "native/parts/T13.step",
-      "quantity": 2
-    },
-    {
-      "name_ja": "赤い段差帽子",
-      "color": "red",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T14",
-      "print_origin_mm": [
-        -60.0,
-        116.0,
-        0.0
-      ],
-      "bounds_mm": [
-        120.0,
-        32.0,
-        4.800000000000001
-      ],
-      "cad_volume_mm3": 9756.736000000006,
-      "facets": 132,
-      "mesh": "meshes/T14.stl",
-      "step": "native/parts/T14.step",
-      "quantity": 1
-    },
-    {
-      "name_ja": "帽子の白い丸",
-      "color": "white",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T15",
-      "print_origin_mm": [
-        -8.0,
-        -8.0,
-        0.0
-      ],
-      "bounds_mm": [
-        16.0,
-        16.0,
-        2.4
-      ],
-      "cad_volume_mm3": 473.1406315913922,
-      "facets": 332,
-      "mesh": "meshes/T15.stl",
-      "step": "native/parts/T15.step",
-      "quantity": 1
-    },
-    {
-      "name_ja": "帽子のM",
-      "color": "red",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T16",
-      "print_origin_mm": [
-        -5.0,
-        -5.0,
-        0.0
-      ],
-      "bounds_mm": [
-        10.0,
-        10.0,
-        1.6
-      ],
-      "cad_volume_mm3": 113.20000000000002,
-      "facets": 44,
-      "mesh": "meshes/T16.stl",
-      "step": "native/parts/T16.step",
-      "quantity": 1
-    },
-    {
-      "name_ja": "足場の丸タイル",
-      "color": "mint",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T17",
-      "print_origin_mm": [
-        -4.0,
-        -4.0,
-        0.0
-      ],
-      "bounds_mm": [
-        8.0,
-        8.0,
-        1.6
-      ],
-      "cad_volume_mm3": 80.4247719318987,
-      "facets": 308,
-      "mesh": "meshes/T17.stl",
-      "step": "native/parts/T17.step",
       "quantity": 4
     },
     {
-      "name_ja": "つなぎのボタン",
-      "color": "white",
-      "category": "assembly",
-      "source": "parameters.json",
-      "id": "T18",
+      "name_ja": "粗ねじ雌側クリアランス 0.20 試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "parameters.json#screw",
+      "radial_clearance_mm": 0.2,
+      "id": "THREAD-C20",
       "print_origin_mm": [
-        -1.6,
-        -1.6,
+        -12.0000001,
+        -12.0000001,
+        -1.0000000052402433e-07
+      ],
+      "bounds_mm": [
+        24.0000002,
+        24.0000002,
+        9.60000020000003
+      ],
+      "cad_volume_mm3": 4692.776041212891,
+      "facets": 2252,
+      "mesh": "meshes/THREAD-C20.stl",
+      "step": "native/parts/THREAD-C20.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "粗ねじ雌側クリアランス 0.30 試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "parameters.json#screw",
+      "radial_clearance_mm": 0.3,
+      "id": "THREAD-C30",
+      "print_origin_mm": [
+        -12.0000001,
+        -12.0000001,
+        -1.0000000030392405e-07
+      ],
+      "bounds_mm": [
+        24.0000002,
+        24.0000002,
+        9.600000200000027
+      ],
+      "cad_volume_mm3": 4660.764449559567,
+      "facets": 2332,
+      "mesh": "meshes/THREAD-C30.stl",
+      "step": "native/parts/THREAD-C30.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "粗ねじ雌側クリアランス 0.40 試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "parameters.json#screw",
+      "radial_clearance_mm": 0.4,
+      "id": "THREAD-C40",
+      "print_origin_mm": [
+        -12.0000001,
+        -12.0000001,
+        -1.0000000017204994e-07
+      ],
+      "bounds_mm": [
+        24.0000002,
+        24.0000002,
+        9.600000200000002
+      ],
+      "cad_volume_mm3": 4628.238313041072,
+      "facets": 2236,
+      "mesh": "meshes/THREAD-C40.stl",
+      "step": "native/parts/THREAD-C40.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "一枠のフランジ捕捉・ねじ試験台",
+      "color": "charcoal",
+      "category": "coupon",
+      "tool_quantity": 1,
+      "source": "parameters.json#retention",
+      "id": "CAPTURE-FRAME",
+      "print_origin_mm": [
+        -24.0,
+        -12.0,
+        -8.0000001
+      ],
+      "bounds_mm": [
+        48.0,
+        24.0,
+        14.4000001
+      ],
+      "cad_volume_mm3": 8114.162258030814,
+      "facets": 2850,
+      "mesh": "meshes/CAPTURE-FRAME.stl",
+      "step": "native/parts/CAPTURE-FRAME.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "捕捉試験台の着脱裏蓋",
+      "color": "charcoal",
+      "category": "coupon",
+      "tool_quantity": 1,
+      "source": "parameters.json#retention",
+      "id": "CAPTURE-COVER",
+      "print_origin_mm": [
+        -24.0,
+        -12.0,
+        -11.2
+      ],
+      "bounds_mm": [
+        48.0,
+        24.0,
+        11.0
+      ],
+      "cad_volume_mm3": 5321.288526306455,
+      "facets": 312,
+      "mesh": "meshes/CAPTURE-COVER.stl",
+      "step": "native/parts/CAPTURE-COVER.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "短い剛性先端の取り出し押し棒",
+      "color": "charcoal",
+      "category": "tool",
+      "tool_quantity": 1,
+      "source": "parameters.json#retention",
+      "id": "EJECTOR",
+      "print_origin_mm": [
+        -4.0,
+        0.0,
         0.0
       ],
       "bounds_mm": [
-        3.2,
-        3.2,
-        1.2
+        8.0,
+        36.0,
+        2.4
       ],
-      "cad_volume_mm3": 9.650972631827845,
-      "facets": 284,
-      "mesh": "meshes/T18.stl",
-      "step": "native/parts/T18.step",
-      "quantity": 2
+      "cad_volume_mm3": 568.3199999999999,
+      "facets": 28,
+      "mesh": "meshes/EJECTOR.stl",
+      "step": "native/parts/EJECTOR.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "前面を保護する組立用支持台",
+      "color": "charcoal",
+      "category": "tool",
+      "tool_quantity": 2,
+      "source": "parameters.json#retention",
+      "id": "ASSEMBLY-REST",
+      "print_origin_mm": [
+        -8.0,
+        -56.0,
+        0.0
+      ],
+      "bounds_mm": [
+        16.0,
+        112.0,
+        12.0
+      ],
+      "cad_volume_mm3": 12902.400000000003,
+      "facets": 28,
+      "mesh": "meshes/ASSEMBLY-REST.stl",
+      "step": "native/parts/ASSEMBLY-REST.step",
+      "quantity": 0
     },
     {
       "name_ja": "共通メッセージドック",
@@ -458,14 +1511,14 @@
       "print_origin_mm": [
         0.1,
         0.1,
-        -3.552713678800501e-15
+        -1e-07
       ],
       "bounds_mm": [
         95.8,
         15.8,
-        9.600000000000003
+        9.600000099999999
       ],
-      "cad_volume_mm3": 11709.281562372256,
+      "cad_volume_mm3": 11709.281562372254,
       "facets": 7864,
       "mesh": "meshes/MSG-DOCK.stl",
       "step": "native/parts/MSG-DOCK.step",
@@ -493,16 +1546,16 @@
       "optional_color_change_z_mm": 2.0,
       "id": "MSG-CARD",
       "print_origin_mm": [
-        0.0,
-        0.0,
+        -1e-07,
+        -1e-07,
         0.0
       ],
       "bounds_mm": [
-        88.0,
-        24.0,
-        2.6
+        88.00000019999999,
+        24.000000200000002,
+        2.6000001
       ],
-      "cad_volume_mm3": 4324.262518266912,
+      "cad_volume_mm3": 4324.262518266911,
       "facets": 27854,
       "mesh": "meshes/MSG-CARD.stl",
       "step": "native/parts/MSG-CARD.step",
@@ -639,14 +1692,14 @@
       "print_origin_mm": [
         0.1,
         0.1,
-        -1.229785510308584e-15
+        -1e-07
       ],
       "bounds_mm": [
         31.8,
         15.8,
-        9.600000000000001
+        9.600000099999999
       ],
-      "cad_volume_mm3": 2787.8423078393403,
+      "cad_volume_mm3": 2787.8423078393407,
       "facets": 2184,
       "mesh": "meshes/FIT-F-CM04.stl",
       "step": "native/parts/FIT-F-CM04.step",
@@ -675,14 +1728,14 @@
       "print_origin_mm": [
         0.1,
         0.1,
-        -1.84467825630026e-15
+        -1e-07
       ],
       "bounds_mm": [
         31.8,
         15.8,
-        9.600000000000001
+        9.600000099999999
       ],
-      "cad_volume_mm3": 2749.223218701332,
+      "cad_volume_mm3": 2749.2232187013324,
       "facets": 2184,
       "mesh": "meshes/FIT-F-CP00.stl",
       "step": "native/parts/FIT-F-CP00.step",
@@ -711,14 +1764,14 @@
       "print_origin_mm": [
         0.1,
         0.1,
-        -3.552713678800501e-15
+        -1e-07
       ],
       "bounds_mm": [
         31.8,
         15.8,
-        9.600000000000003
+        9.600000099999999
       ],
-      "cad_volume_mm3": 2710.7436669580993,
+      "cad_volume_mm3": 2710.7436669581007,
       "facets": 2184,
       "mesh": "meshes/FIT-F-CP04.stl",
       "step": "native/parts/FIT-F-CP04.step",
@@ -747,14 +1800,14 @@
       "print_origin_mm": [
         0.1,
         0.1,
-        -2.6645352591003757e-15
+        -1e-07
       ],
       "bounds_mm": [
         31.8,
         15.8,
-        9.600000000000001
+        9.600000099999999
       ],
-      "cad_volume_mm3": 2672.4036782367884,
+      "cad_volume_mm3": 2672.4036782367893,
       "facets": 2160,
       "mesh": "meshes/FIT-F-CP08.stl",
       "step": "native/parts/FIT-F-CP08.step",
@@ -783,14 +1836,14 @@
       "print_origin_mm": [
         0.1,
         0.1,
-        -1.84467825630026e-15
+        -1e-07
       ],
       "bounds_mm": [
         31.8,
         15.8,
-        9.600000000000001
+        9.600000099999999
       ],
-      "cad_volume_mm3": 2634.203279509974,
+      "cad_volume_mm3": 2634.2032795099735,
       "facets": 2160,
       "mesh": "meshes/FIT-F-CP12.stl",
       "step": "native/parts/FIT-F-CP12.step",
@@ -819,7 +1872,7 @@
       "quantity": 0
     },
     {
-      "name_ja": "背板厚6.4の試験舌",
+      "name_ja": "差込舌の厚さ試験片",
       "color": "charcoal",
       "category": "coupon",
       "source": "parameters.json#custom_coupons",
@@ -839,50 +1892,6 @@
       "mesh": "meshes/T91.stl",
       "step": "native/parts/T91.step",
       "quantity": 0
-    },
-    {
-      "name_ja": "色タイル位置決め試験台",
-      "color": "charcoal",
-      "category": "coupon",
-      "source": "parameters.json#custom_coupons",
-      "id": "T92",
-      "print_origin_mm": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bounds_mm": [
-        20.0,
-        12.0,
-        4.2
-      ],
-      "cad_volume_mm3": 773.7600000000001,
-      "facets": 28,
-      "mesh": "meshes/T92.stl",
-      "step": "native/parts/T92.step",
-      "quantity": 0
-    },
-    {
-      "name_ja": "色タイル試験蓋",
-      "color": "charcoal",
-      "category": "coupon",
-      "source": "parameters.json#custom_coupons",
-      "id": "T93",
-      "print_origin_mm": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bounds_mm": [
-        20.0,
-        12.0,
-        2.4
-      ],
-      "cad_volume_mm3": 566.592,
-      "facets": 28,
-      "mesh": "meshes/T93.stl",
-      "step": "native/parts/T93.step",
-      "quantity": 0
     }
   ],
   "instances": [
@@ -890,7 +1899,7 @@
       "id": "stand",
       "part": "T01",
       "parent": null,
-      "step": 1,
+      "step": 8,
       "position_mm": [
         -88.0,
         -48.0,
@@ -904,18 +1913,58 @@
       ]
     },
     {
-      "id": "board",
+      "id": "capture-frame",
       "part": "T02",
-      "xy": [
-        0,
-        0
-      ],
       "parent": "stand",
+      "xy": [
+        0,
+        0
+      ],
+      "depth": 0,
+      "step": 1,
+      "position_mm": [
+        -80.0000001,
+        20.80000009999999,
+        9.5999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-001",
+      "part": "IN-G-8x1",
+      "color": "green",
+      "cells": [
+        8,
+        1
+      ],
+      "xy": [
+        -16.0,
+        4.0
+      ],
+      "rise": 1.6,
+      "kind": "rectangle",
+      "parent": "capture-frame",
       "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.0,
+      "tool_target_xy": [
+        -16.0,
+        4.0
+      ],
+      "tool_tip_rotation_deg": 0,
       "position_mm": [
-        -80.0,
-        12.799999999999994,
-        9.600000000000001
+        -47.8,
+        12.8,
+        41.800000000000004
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -925,18 +1974,36 @@
       ]
     },
     {
-      "id": "ground",
-      "part": "T03",
-      "xy": [
-        0,
-        0
+      "id": "tile-002",
+      "part": "IN-G-4x1",
+      "color": "green",
+      "cells": [
+        4,
+        1
       ],
-      "parent": "board",
-      "step": 3,
+      "xy": [
+        32.0,
+        4.0
+      ],
+      "rise": 1.6,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.0,
+      "tool_target_xy": [
+        32.0,
+        4.0
+      ],
+      "tool_tip_rotation_deg": 0,
       "position_mm": [
-        -56.0,
-        6.400000000000001,
-        45.6
+        16.2,
+        12.8,
+        41.800000000000004
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -946,18 +2013,972 @@
       ]
     },
     {
-      "id": "jacket",
-      "part": "T04",
+      "id": "tile-003",
+      "part": "IN-G-1x1",
+      "color": "green",
+      "cells": [
+        1,
+        1
+      ],
       "xy": [
+        -52.0,
+        12.0
+      ],
+      "rise": 1.6,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.0,
+      "tool_target_xy": [
+        -52.0,
+        12.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -55.8,
+        12.8,
+        49.800000000000004
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
         0,
         0
+      ]
+    },
+    {
+      "id": "tile-004",
+      "part": "IN-L-1x1",
+      "color": "mint",
+      "cells": [
+        1,
+        1
       ],
-      "parent": "board",
-      "step": 4,
+      "xy": [
+        -44.0,
+        12.0
+      ],
+      "rise": 3.2,
+      "kind": "circle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -44.0,
+        12.0
+      ],
+      "tool_tip_rotation_deg": 0,
       "position_mm": [
+        -47.8000001,
+        12.8,
+        49.7999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-005",
+      "part": "IN-G-2x2",
+      "color": "green",
+      "cells": [
+        2,
+        2
+      ],
+      "xy": [
+        -32.0,
+        16.0
+      ],
+      "rise": 1.6,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.0,
+      "tool_target_xy": [
+        -32.0,
+        16.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -39.8,
+        12.799999999999999,
+        49.800000000000004
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-006",
+      "part": "IN-L-1x1",
+      "color": "mint",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        -20.0,
+        12.0
+      ],
+      "rise": 3.2,
+      "kind": "circle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -20.0,
+        12.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -23.8000001,
+        12.8,
+        49.7999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-007",
+      "part": "IN-G-4x1",
+      "color": "green",
+      "cells": [
+        4,
+        1
+      ],
+      "xy": [
+        0.0,
+        12.0
+      ],
+      "rise": 1.6,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.0,
+      "tool_target_xy": [
+        0.0,
+        12.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -15.8,
+        12.8,
+        49.800000000000004
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-008",
+      "part": "IN-L-1x1",
+      "color": "mint",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        20.0,
+        12.0
+      ],
+      "rise": 3.2,
+      "kind": "circle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        20.0,
+        12.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        16.1999999,
+        12.8,
+        49.7999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-009",
+      "part": "IN-G-2x2",
+      "color": "green",
+      "cells": [
+        2,
+        2
+      ],
+      "xy": [
+        32.0,
+        16.0
+      ],
+      "rise": 1.6,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.0,
+      "tool_target_xy": [
+        32.0,
+        16.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        24.2,
+        12.799999999999999,
+        49.800000000000004
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-010",
+      "part": "IN-L-1x1",
+      "color": "mint",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        44.0,
+        12.0
+      ],
+      "rise": 3.2,
+      "kind": "circle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        44.0,
+        12.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        40.1999999,
+        12.8,
+        49.7999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-011",
+      "part": "IN-G-1x1",
+      "color": "green",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        52.0,
+        12.0
+      ],
+      "rise": 1.6,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.0,
+      "tool_target_xy": [
+        52.0,
+        12.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        48.2,
+        12.8,
+        49.800000000000004
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-012",
+      "part": "IN-S-2x1",
+      "color": "skin",
+      "cells": [
+        2,
+        1
+      ],
+      "xy": [
+        -16.0,
+        20.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -16.0,
+        20.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -23.8,
+        12.8,
+        57.800000000000004
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-013",
+      "part": "IN-G-2x1",
+      "color": "green",
+      "cells": [
+        2,
+        1
+      ],
+      "xy": [
+        0.0,
+        20.0
+      ],
+      "rise": 1.6,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.0,
+      "tool_target_xy": [
+        0.0,
+        20.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -7.8,
+        12.8,
+        57.800000000000004
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-014",
+      "part": "IN-S-2x1",
+      "color": "skin",
+      "cells": [
+        2,
+        1
+      ],
+      "xy": [
+        16.0,
+        20.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        16.0,
+        20.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        8.2,
+        12.8,
+        57.800000000000004
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-015",
+      "part": "IN-B-2x4",
+      "color": "blue",
+      "cells": [
+        2,
+        4
+      ],
+      "xy": [
+        -16.0,
+        40.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -16.0,
+        40.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -23.8,
+        12.799999999999997,
+        65.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-016",
+      "part": "IN-B-2x4",
+      "color": "blue",
+      "cells": [
+        2,
+        4
+      ],
+      "xy": [
+        16.0,
+        40.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        16.0,
+        40.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        8.2,
+        12.799999999999997,
+        65.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-017",
+      "part": "IN-W-2x1",
+      "color": "white",
+      "cells": [
+        2,
+        1
+      ],
+      "xy": [
+        32.0,
+        28.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        32.0,
+        28.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        24.2,
+        12.8,
+        65.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-018",
+      "part": "IN-W-1x1",
+      "color": "white",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        28.0,
+        36.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        28.0,
+        36.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        24.2,
+        12.8,
+        73.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-019",
+      "part": "IN-R-1x4",
+      "color": "red",
+      "cells": [
+        1,
+        4
+      ],
+      "xy": [
+        36.0,
+        48.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        36.0,
+        48.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        32.2,
+        12.799999999999997,
+        73.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-020",
+      "part": "IN-B-2x4",
+      "color": "blue",
+      "cells": [
+        2,
+        4
+      ],
+      "xy": [
+        0.0,
+        56.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        0.0,
+        56.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -7.8,
+        12.799999999999997,
+        81.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-021",
+      "part": "IN-R-1x3",
+      "color": "red",
+      "cells": [
+        1,
+        3
+      ],
+      "xy": [
+        28.0,
+        52.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        28.0,
+        52.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        24.2,
+        12.799999999999999,
+        81.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-022",
+      "part": "IN-R-3x1",
+      "color": "red",
+      "cells": [
+        3,
+        1
+      ],
+      "xy": [
+        -36.0,
+        60.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -36.0,
+        60.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -47.8,
+        12.8,
+        97.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-023",
+      "part": "IN-B-1x1",
+      "color": "blue",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        -20.0,
+        60.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -20.0,
+        60.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -23.8,
+        12.8,
+        97.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-024",
+      "part": "IN-W-1x1",
+      "color": "white",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        -12.0,
+        60.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        -12.0,
+        60.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -15.8,
+        12.8,
+        97.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-025",
+      "part": "IN-W-1x1",
+      "color": "white",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        12.0,
+        60.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        12.0,
+        60.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        8.2,
+        12.8,
+        97.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-026",
+      "part": "IN-B-1x1",
+      "color": "blue",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        20.0,
+        60.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        20.0,
+        60.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        16.2,
+        12.8,
+        97.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-027",
+      "part": "IN-W-2x2",
+      "color": "white",
+      "cells": [
+        2,
+        2
+      ],
+      "xy": [
         -48.0,
-        6.400000000000008,
-        77.6
+        72.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        -48.0,
+        72.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -55.8,
+        12.799999999999999,
+        105.8
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -967,60 +2988,309 @@
       ]
     },
     {
-      "id": "overalls",
-      "part": "T05",
+      "id": "tile-028",
+      "part": "IN-R-2x1",
+      "color": "red",
+      "cells": [
+        2,
+        1
+      ],
       "xy": [
+        -24.0,
+        68.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -24.0,
+        68.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -31.8,
+        12.8,
+        105.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
         0,
         0
+      ]
+    },
+    {
+      "id": "tile-029",
+      "part": "IN-B-1x1",
+      "color": "blue",
+      "cells": [
+        1,
+        1
       ],
-      "parent": "board",
-      "step": 4,
+      "xy": [
+        -12.0,
+        68.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -12.0,
+        68.0
+      ],
+      "tool_tip_rotation_deg": 0,
       "position_mm": [
+        -15.8,
+        12.8,
+        105.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-030",
+      "part": "IN-B-1x1",
+      "color": "blue",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        12.0,
+        68.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        12.0,
+        68.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        8.2,
+        12.8,
+        105.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-031",
+      "part": "IN-R-1x1",
+      "color": "red",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        20.0,
+        68.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        20.0,
+        68.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        16.2,
+        12.8,
+        105.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-032",
+      "part": "IN-R-4x1",
+      "color": "red",
+      "cells": [
+        4,
+        1
+      ],
+      "xy": [
+        0.0,
+        76.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        0.0,
+        76.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -15.8,
+        12.8,
+        113.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-033",
+      "part": "IN-K-4x2",
+      "color": "charcoal",
+      "cells": [
+        4,
+        2
+      ],
+      "xy": [
+        -56.0,
+        88.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        -56.0,
+        88.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -71.8,
+        12.799999999999999,
+        121.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-034",
+      "part": "IN-K-1x1",
+      "color": "charcoal",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        -36.0,
+        84.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        -36.0,
+        84.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -39.8,
+        12.8,
+        121.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-035",
+      "part": "IN-S-3x1",
+      "color": "skin",
+      "cells": [
+        3,
+        1
+      ],
+      "xy": [
         -20.0,
-        6.400000000000007,
-        69.6
+        84.0
       ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "foot-left",
-      "part": "T06",
-      "xy": [
-        -12,
-        24
-      ],
-      "parent": "board",
-      "step": 4,
-      "position_mm": [
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
         -20.0,
-        6.3999999999999995,
-        61.599999999999994
+        84.0
       ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "foot-right",
-      "part": "T06",
-      "xy": [
-        12,
-        24
-      ],
-      "parent": "board",
-      "step": 4,
+      "tool_tip_rotation_deg": 0,
       "position_mm": [
-        4.0,
-        6.3999999999999995,
-        61.599999999999994
+        -31.8,
+        12.8,
+        121.8
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -1030,18 +3300,1107 @@
       ]
     },
     {
-      "id": "head",
-      "part": "T07",
+      "id": "tile-036",
+      "part": "IN-K-2x1",
+      "color": "charcoal",
+      "cells": [
+        2,
+        1
+      ],
       "xy": [
+        0.0,
+        84.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        0.0,
+        84.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -7.8,
+        12.8,
+        121.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
         0,
         0
+      ]
+    },
+    {
+      "id": "tile-037",
+      "part": "IN-S-3x1",
+      "color": "skin",
+      "cells": [
+        3,
+        1
       ],
-      "parent": "board",
+      "xy": [
+        20.0,
+        84.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        20.0,
+        84.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        8.2,
+        12.8,
+        121.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-038",
+      "part": "IN-K-5x1",
+      "color": "charcoal",
+      "cells": [
+        5,
+        1
+      ],
+      "xy": [
+        52.0,
+        84.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        52.0,
+        84.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        32.2,
+        12.8,
+        121.8
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-039",
+      "part": "IN-S-1x3",
+      "color": "skin",
+      "cells": [
+        1,
+        3
+      ],
+      "xy": [
+        -36.0,
+        100.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -36.0,
+        100.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -39.8,
+        12.799999999999999,
+        129.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-040",
+      "part": "IN-K-1x1",
+      "color": "charcoal",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        -12.0,
+        92.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        -12.0,
+        92.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -15.8,
+        12.8,
+        129.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-041",
+      "part": "IN-S-2x3",
+      "color": "skin",
+      "cells": [
+        2,
+        3
+      ],
+      "xy": [
+        0.0,
+        100.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        0.0,
+        100.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -7.8,
+        12.799999999999999,
+        129.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-042",
+      "part": "IN-K-1x1",
+      "color": "charcoal",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        12.0,
+        92.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        12.0,
+        92.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        8.2,
+        12.8,
+        129.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-043",
+      "part": "IN-S-1x3",
+      "color": "skin",
+      "cells": [
+        1,
+        3
+      ],
+      "xy": [
+        36.0,
+        100.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        36.0,
+        100.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        32.2,
+        12.799999999999999,
+        129.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-044",
+      "part": "IN-K-4x1",
+      "color": "charcoal",
+      "cells": [
+        4,
+        1
+      ],
+      "xy": [
+        56.0,
+        92.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        56.0,
+        92.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        40.2,
+        12.8,
+        129.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-045",
+      "part": "IN-K-1x2",
+      "color": "charcoal",
+      "cells": [
+        1,
+        2
+      ],
+      "xy": [
+        -52.0,
+        104.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        -52.0,
+        104.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -55.8,
+        12.799999999999999,
+        137.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-046",
+      "part": "IN-S-1x2",
+      "color": "skin",
+      "cells": [
+        1,
+        2
+      ],
+      "xy": [
+        -44.0,
+        104.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -44.0,
+        104.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -47.8,
+        12.799999999999999,
+        137.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-047",
+      "part": "IN-S-1x2",
+      "color": "skin",
+      "cells": [
+        1,
+        2
+      ],
+      "xy": [
+        -12.0,
+        104.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -12.0,
+        104.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -15.8,
+        12.799999999999999,
+        137.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-048",
+      "part": "IN-S-1x2",
+      "color": "skin",
+      "cells": [
+        1,
+        2
+      ],
+      "xy": [
+        12.0,
+        104.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        12.0,
+        104.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        8.2,
+        12.799999999999999,
+        137.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-049",
+      "part": "IN-S-1x2",
+      "color": "skin",
+      "cells": [
+        1,
+        2
+      ],
+      "xy": [
+        44.0,
+        104.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        44.0,
+        104.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        40.2,
+        12.799999999999999,
+        137.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-050",
+      "part": "IN-K-1x2",
+      "color": "charcoal",
+      "cells": [
+        1,
+        2
+      ],
+      "xy": [
+        52.0,
+        104.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        52.0,
+        104.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        48.2,
+        12.799999999999999,
+        137.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-051",
+      "part": "IN-R-8x2",
+      "color": "red",
+      "cells": [
+        8,
+        2
+      ],
+      "xy": [
+        -32.0,
+        120.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -32.0,
+        120.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -63.8,
+        12.799999999999999,
+        153.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-052",
+      "part": "IN-R-8x2",
+      "color": "red",
+      "cells": [
+        8,
+        2
+      ],
+      "xy": [
+        32.0,
+        120.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        32.0,
+        120.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        0.1999999999999993,
+        12.799999999999999,
+        153.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-053",
+      "part": "IN-R-6x1",
+      "color": "red",
+      "cells": [
+        6,
+        1
+      ],
+      "xy": [
+        -32.0,
+        132.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -32.0,
+        132.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -55.8,
+        12.8,
+        169.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-054",
+      "part": "IN-R-4x2",
+      "color": "red",
+      "cells": [
+        4,
+        2
+      ],
+      "xy": [
+        24.0,
+        136.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        24.0,
+        136.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        8.2,
+        12.799999999999999,
+        169.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-055",
+      "part": "IN-R-2x1",
+      "color": "red",
+      "cells": [
+        2,
+        1
+      ],
+      "xy": [
+        48.0,
+        132.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        48.0,
+        132.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        40.2,
+        12.8,
+        169.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-056",
+      "part": "IN-K-1x2",
+      "color": "charcoal",
+      "cells": [
+        1,
+        2
+      ],
+      "xy": [
+        -44.0,
+        144.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        -44.0,
+        144.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -47.8,
+        12.799999999999999,
+        177.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-057",
+      "part": "IN-R-4x1",
+      "color": "red",
+      "cells": [
+        4,
+        1
+      ],
+      "xy": [
+        -24.0,
+        140.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        -24.0,
+        140.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -39.8,
+        12.8,
+        177.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-058",
+      "part": "IN-K-1x2",
+      "color": "charcoal",
+      "cells": [
+        1,
+        2
+      ],
+      "xy": [
+        44.0,
+        144.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        44.0,
+        144.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        40.2,
+        12.799999999999999,
+        177.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-059",
+      "part": "IN-K-1x1",
+      "color": "charcoal",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        -36.0,
+        148.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        -36.0,
+        148.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -39.8,
+        12.8,
+        185.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-060",
+      "part": "IN-R-6x1",
+      "color": "red",
+      "cells": [
+        6,
+        1
+      ],
+      "xy": [
+        0.0,
+        148.0
+      ],
+      "rise": 3.2,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.600000000000001,
+      "tool_target_xy": [
+        0.0,
+        148.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -23.8,
+        12.8,
+        185.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tile-061",
+      "part": "IN-K-1x1",
+      "color": "charcoal",
+      "cells": [
+        1,
+        1
+      ],
+      "xy": [
+        36.0,
+        148.0
+      ],
+      "rise": 2.4,
+      "kind": "rectangle",
+      "parent": "capture-frame",
+      "step": 2,
+      "depth": 0,
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 8.8,
+      "tool_target_xy": [
+        36.0,
+        148.0
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        32.2,
+        12.8,
+        185.79999999999998
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "eye-left-white",
+      "part": "EYE-W",
+      "xy": [
+        -24,
+        100
+      ],
+      "depth": 0,
+      "step": 3,
+      "parent": "capture-frame",
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.6,
+      "tool_target_xy": [
+        -29.3,
+        100
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -31.8000001,
+        12.800000099999998,
+        129.7999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "eye-left-iris",
+      "part": "EYE-B",
+      "xy": [
+        -24,
+        100
+      ],
+      "depth": 0,
+      "step": 4,
+      "parent": "eye-left-white",
+      "front_stop": "eye-left-white",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.4,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 11.2,
+      "tool_target_xy": [
+        -24,
+        95
+      ],
+      "tool_tip_rotation_deg": 90,
+      "position_mm": [
+        -29.6000001,
+        14.799999999999999,
+        132.7999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "eye-left-pupil",
+      "part": "EYE-K",
+      "xy": [
+        -24,
+        100
+      ],
+      "depth": 0,
       "step": 5,
+      "parent": "eye-left-iris",
+      "front_stop": "eye-left-iris",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.4,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 12.8,
+      "tool_target_xy": [
+        -24,
+        100
+      ],
+      "tool_tip_rotation_deg": 0,
       "position_mm": [
-        -72.0,
-        6.400000000000018,
-        121.6
+        -27.2,
+        16.8,
+        136.0
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -1051,18 +4410,179 @@
       ]
     },
     {
-      "id": "face",
-      "part": "T08",
+      "id": "eye-right-white",
+      "part": "EYE-W",
+      "xy": [
+        24,
+        100
+      ],
+      "depth": 0,
+      "step": 3,
+      "parent": "capture-frame",
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.6,
+      "tool_target_xy": [
+        18.7,
+        100
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        16.1999999,
+        12.800000099999998,
+        129.7999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "eye-right-iris",
+      "part": "EYE-B",
+      "xy": [
+        24,
+        100
+      ],
+      "depth": 0,
+      "step": 4,
+      "parent": "eye-right-white",
+      "front_stop": "eye-right-white",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.4,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 11.2,
+      "tool_target_xy": [
+        24,
+        95
+      ],
+      "tool_tip_rotation_deg": 90,
+      "position_mm": [
+        18.3999999,
+        14.799999999999999,
+        132.7999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "eye-right-pupil",
+      "part": "EYE-K",
+      "xy": [
+        24,
+        100
+      ],
+      "depth": 0,
+      "step": 5,
+      "parent": "eye-right-iris",
+      "front_stop": "eye-right-iris",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.4,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 12.8,
+      "tool_target_xy": [
+        24,
+        100
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        20.8,
+        16.8,
+        136.0
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "badge-white",
+      "part": "BADGE-W",
+      "xy": [
+        0,
+        136
+      ],
+      "depth": 0,
+      "step": 3,
+      "parent": "capture-frame",
+      "front_stop": "capture-frame",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.2,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 9.6,
+      "tool_target_xy": [
+        0,
+        130.6
+      ],
+      "tool_tip_rotation_deg": 90,
+      "position_mm": [
+        -7.8000001,
+        12.799999999999999,
+        169.7999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "badge-m",
+      "part": "BADGE-M",
+      "xy": [
+        0,
+        136
+      ],
+      "depth": 0,
+      "step": 4,
+      "parent": "badge-white",
+      "front_stop": "badge-white",
+      "rear_stop": "back-cover",
+      "front_stop_offset_mm": 0.4,
+      "rear_stop_offset_mm": 0.2,
+      "front_z": 11.2,
+      "tool_target_xy": [
+        -3,
+        136
+      ],
+      "tool_tip_rotation_deg": 0,
+      "position_mm": [
+        -6.0,
+        14.799999999999999,
+        171.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "back-cover",
+      "part": "T03",
+      "parent": "capture-frame",
       "xy": [
         0,
         0
       ],
-      "parent": "head",
+      "depth": 0,
       "step": 6,
       "position_mm": [
-        -44.0,
-        3.200000000000018,
-        125.6
+        -76.0,
+        24.0,
+        41.6
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -1072,18 +4592,21 @@
       ]
     },
     {
-      "id": "eye-left",
-      "part": "T09",
+      "id": "screw-1",
+      "part": "T04",
+      "parent": "capture-frame",
       "xy": [
-        -24,
-        100
+        -68,
+        16
       ],
-      "parent": "face",
+      "depth": -16.0,
       "step": 7,
+      "motion": "helical",
+      "pitch_mm": 3.2,
       "position_mm": [
-        -32.0,
-        -2.6645352591003757e-15,
-        129.6
+        -76.0000001,
+        28.8,
+        50.67179666972449
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -1093,18 +4616,21 @@
       ]
     },
     {
-      "id": "eye-right",
-      "part": "T09",
+      "id": "screw-2",
+      "part": "T04",
+      "parent": "capture-frame",
       "xy": [
-        24,
-        100
+        68,
+        16
       ],
-      "parent": "face",
+      "depth": -16.0,
       "step": 7,
+      "motion": "helical",
+      "pitch_mm": 3.2,
       "position_mm": [
-        16.0,
-        -2.6645352591003757e-15,
-        129.6
+        59.9999999,
+        28.8,
+        50.67179666972449
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -1114,18 +4640,21 @@
       ]
     },
     {
-      "id": "iris-left",
-      "part": "T10",
+      "id": "screw-3",
+      "part": "T04",
+      "parent": "capture-frame",
       "xy": [
-        -24,
-        100
+        -68,
+        144
       ],
-      "parent": "eye-left",
+      "depth": -16.0,
       "step": 7,
+      "motion": "helical",
+      "pitch_mm": 3.2,
       "position_mm": [
-        -28.0,
-        -2.400000000000002,
-        134.6
+        -76.0000001,
+        28.8,
+        178.67179666972447
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -1135,312 +4664,21 @@
       ]
     },
     {
-      "id": "iris-right",
-      "part": "T10",
+      "id": "screw-4",
+      "part": "T04",
+      "parent": "capture-frame",
       "xy": [
-        24,
-        100
+        68,
+        144
       ],
-      "parent": "eye-right",
+      "depth": -16.0,
       "step": 7,
+      "motion": "helical",
+      "pitch_mm": 3.2,
       "position_mm": [
-        20.0,
-        -2.400000000000002,
-        134.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "pupil-left",
-      "part": "T11",
-      "xy": [
-        -24,
-        100
-      ],
-      "parent": "iris-left",
-      "step": 7,
-      "position_mm": [
-        -25.6,
-        -4.000000000000001,
-        137.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "pupil-right",
-      "part": "T11",
-      "xy": [
-        24,
-        100
-      ],
-      "parent": "iris-right",
-      "step": 7,
-      "position_mm": [
-        22.4,
-        -4.000000000000001,
-        137.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "moustache",
-      "part": "T12",
-      "xy": [
-        0,
-        0
-      ],
-      "parent": "face",
-      "step": 7,
-      "position_mm": [
-        -12.0,
-        1.865174681370263e-14,
-        125.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "hand-left",
-      "part": "T13",
-      "xy": [
-        -46,
-        70
-      ],
-      "parent": "board",
-      "step": 4,
-      "position_mm": [
-        -52.0,
-        6.399999999999999,
-        105.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "hand-right",
-      "part": "T13",
-      "xy": [
-        32,
-        30
-      ],
-      "parent": "board",
-      "step": 4,
-      "position_mm": [
-        26.0,
-        6.399999999999999,
-        65.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "hat",
-      "part": "T14",
-      "xy": [
-        0,
-        0
-      ],
-      "parent": "head",
-      "step": 8,
-      "position_mm": [
-        -60.0,
-        3.200000000000025,
-        157.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "badge",
-      "part": "T15",
-      "xy": [
-        0,
-        136
-      ],
-      "parent": "hat",
-      "step": 8,
-      "position_mm": [
-        -8.0,
-        -1.7763568394002505e-15,
-        169.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "letter-m",
-      "part": "T16",
-      "xy": [
-        0,
-        136
-      ],
-      "parent": "badge",
-      "step": 8,
-      "position_mm": [
-        -5.0,
-        -2.4000000000000012,
-        172.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "spot-left-outer",
-      "part": "T17",
-      "xy": [
-        -40,
-        12
-      ],
-      "parent": "ground",
-      "step": 3,
-      "position_mm": [
-        -44.0,
-        3.1999999999999984,
-        49.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "spot-left-inner",
-      "part": "T17",
-      "xy": [
-        -20,
-        8
-      ],
-      "parent": "ground",
-      "step": 3,
-      "position_mm": [
-        -24.0,
-        3.1999999999999984,
-        45.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "spot-right-inner",
-      "part": "T17",
-      "xy": [
-        20,
-        8
-      ],
-      "parent": "ground",
-      "step": 3,
-      "position_mm": [
-        16.0,
-        3.1999999999999984,
-        45.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "spot-right-outer",
-      "part": "T17",
-      "xy": [
-        40,
-        12
-      ],
-      "parent": "ground",
-      "step": 3,
-      "position_mm": [
-        36.0,
-        3.1999999999999984,
-        49.6
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "button-left",
-      "part": "T18",
-      "xy": [
-        -8,
-        60
-      ],
-      "parent": "overalls",
-      "step": 4,
-      "position_mm": [
-        -9.6,
-        1.600000000000001,
-        100.0
-      ],
-      "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
-        90,
-        0,
-        0
-      ]
-    },
-    {
-      "id": "button-right",
-      "part": "T18",
-      "xy": [
-        8,
-        60
-      ],
-      "parent": "overalls",
-      "step": 4,
-      "position_mm": [
-        6.4,
-        1.600000000000001,
-        100.0
+        59.9999999,
+        28.8,
+        178.67179666972447
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -1457,7 +4695,7 @@
       "position_mm": [
         -47.9,
         -35.9,
-        9.599999999999996
+        9.5999999
       ],
       "rotation_x_deg": 0,
       "rotation_deg_xyz": [
@@ -1472,9 +4710,9 @@
       "parent": "message-dock",
       "step": 10,
       "position_mm": [
-        -44.0,
+        -44.0000001,
         -31.0,
-        14.399999999999999
+        14.3999999
       ],
       "rotation_x_deg": 90,
       "rotation_deg_xyz": [
@@ -1485,7 +4723,7 @@
     }
   ],
   "native_reopened": true,
-  "native_instance_count": 29,
+  "native_instance_count": 78,
   "shared_interface": {
     "id": "BRICK-8-MSG-SLOT-1",
     "revision": "1.0",
@@ -1543,6 +4781,9 @@
     "note": "Design candidates, not a LEGO specification or compatibility certification.",
     "insertion": "Vertical downward; card slides freely into gravity-retained slot."
   },
+  "adhesive_required": false,
+  "all_parts_removable": true,
+  "retention_mechanism": "rear_loaded_flange_capture_with_screw_retained_back_cover",
   "assembly_size_mm": [
     176.0,
     96.0,

@@ -16,7 +16,7 @@ def export_artifacts(root, data, specs, raw_shapes, instance_specs):
     for folder in ("meshes", "native/parts", "validation"):
         (root / folder).mkdir(parents=True, exist_ok=True)
     doc = App.newDocument("CharacterTribute")
-    doc.Label = "Character tribute / T1 / mm"
+    doc.Label = f"Character tribute / {data['revision']} / fully removable / mm"
     assembly = doc.addObject("App::Part", "Assembly")
     inputs = doc.addObject("App::FeaturePython", "DesignInputs")
     inputs.addProperty("App::PropertyString", "CanonicalSource").CanonicalSource = "parameters.json"
@@ -25,7 +25,7 @@ def export_artifacts(root, data, specs, raw_shapes, instance_specs):
     for part_id, raw_shape in raw_shapes.items():
         print(f"CAD_EXPORT_PART {part_id}", flush=True)
         shape = raw_shape.copy()
-        b = shape.BoundBox
+        b = shape.optimalBoundingBox(False, False)
         origin = [b.XMin, b.YMin, b.ZMin]
         shape.translate(-App.Vector(*origin))
         # Preserve analytic faces, but put the translated shell inside an identity-location solid.
@@ -50,6 +50,11 @@ def export_artifacts(root, data, specs, raw_shapes, instance_specs):
             "quantity": sum(item["part"] == part_id for item in instance_specs)
         })
     catalog_parts = {part["id"]: part for part in parts}
+    expected_ids = set(raw_shapes)
+    for folder, suffix in (("meshes", ".stl"), ("native/parts", ".step")):
+        for previous in (root / folder).glob("*" + suffix):
+            if previous.stem not in expected_ids:
+                previous.unlink()
     instances, objects = [], []
     for item in instance_specs:
         part = catalog_parts[item["part"]]

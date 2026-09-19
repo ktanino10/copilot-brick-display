@@ -82,15 +82,13 @@ def check_text(catalog):
 
 
 def main():
-    print("ASSEMBLY_BEGIN", flush=True)
+    print("T2_NATIVE_RETENTION_BEGIN", flush=True)
     catalog = json.loads((ROOT / "catalog.json").read_text())
     params = json.loads((ROOT / "parameters.json").read_text())
     text = check_text(catalog)
-    print("ACTUAL_CARD_TEXT_GAUGES_PASS", flush=True)
     doc = App.openDocument(str(ROOT / "native/character-tribute.FCStd"))
     shapes = {obj.InstanceID: obj.Shape for obj in doc.Objects if hasattr(obj, "InstanceID")}
-    print(f"ASSEMBLY_PAIRS {len(shapes)} shapes", flush=True)
-    pairs, contacts = 0, []
+    pairs = 0
     ids = list(shapes)
     for index, name in enumerate(ids):
         for other in ids[index + 1:]:
@@ -98,49 +96,106 @@ def main():
             if volume > TOLERANCE:
                 raise ValueError(f"Assembly interference {name}/{other}: {volume} mm3")
             pairs += 1
-    for item in catalog["instances"]:
-        if item.get("parent"):
-            distance = shapes[item["id"]].distToShape(shapes[item["parent"]])[0]
-            if distance > 1e-5:
-                raise ValueError(f"Floating unsupported part: {item['id']} ({distance}mm)")
-            contacts.append({"instance": item["id"], "support": item["parent"],
-                             "surface_distance_mm": distance})
-    print(f"ASSEMBLY_CONTACTS_PASS {pairs} pairs, {len(contacts)} supports", flush=True)
-    sequence = sorted(catalog["instances"], key=lambda item: item["step"])
-    checked_path_positions = 0
-    installed = []
-    distances = [.1, .5, 1, 4, 16, 40]
+    print(f"PAIR_INTERFERENCE_PASS {pairs}", flush=True)
+    colored = [item for item in catalog["instances"] if "front_stop" in item]
+    capture = []
+    for item in colored:
+        record = {"instance":item["id"],"front_stop":item["front_stop"],"rear_stop":item["rear_stop"]}
+        for label, delta, stop in (
+            ("front",App.Vector(0,-.65,0),item["front_stop"]),
+            ("rear",App.Vector(0,.65,0),item["rear_stop"]),
+            ("left",App.Vector(-.65,0,0),item["front_stop"]),
+            ("right",App.Vector(.65,0,0),item["front_stop"]),
+            ("up",App.Vector(0,0,.65),item["front_stop"]),
+            ("down",App.Vector(0,0,-.65),item["front_stop"])):
+            moved = shapes[item["id"]].copy()
+            moved.translate(delta)
+            overlap = intersection_volume(moved,shapes[stop])
+            if overlap <= TOLERANCE:
+                raise ValueError(f"Color insert lacks positive {label} capture: {item['id']}")
+            record[label+"_blocked_volume_mm3"] = overlap
+        capture.append(record)
+    print(f"POSITIVE_CAPTURE_PASS {len(capture)} inserts",flush=True)
+    screw_results = []
+    screws = [item for item in catalog["instances"] if item.get("motion")=="helical"]
+    for item in screws:
+        shape = shapes[item["id"]]
+        pulled = shape.copy()
+        pulled.translate(App.Vector(0,1.6,0))
+        blocked = intersection_volume(pulled,shapes["capture-frame"])
+        if blocked < .1:
+            raise ValueError(f"Screw axial retention missing: {item['id']}")
+        x, y = item["xy"]
+        pivot = App.Vector(x,params["board"]["back_y"],params["board"]["bottom_z"]+y)
+        for distance in (.4,1.6,3.2,6.4,12.8,18):
+            moving = shape.copy()
+            moving.rotate(pivot,App.Vector(0,-1,0),-360*distance/item["pitch_mm"])
+            moving.translate(App.Vector(0,distance,0))
+            for name, fixed in shapes.items():
+                if name != item["id"] and intersection_volume(moving,fixed)>TOLERANCE:
+                    raise ValueError(f"Helical release collision: {item['id']}/{name}/{distance}")
+        access = Part.makeCylinder(9,8,App.Vector(x,29,params["board"]["bottom_z"]+y),App.Vector(0,1,0))
+        for name, fixed in shapes.items():
+            if name != item["id"] and intersection_volume(access,fixed)>TOLERANCE:
+                raise ValueError(f"Rear screw access obstructed: {item['id']}/{name}")
+        screw_results.append({"instance":item["id"],"pure_pull_blocked_volume_mm3":blocked,
+                              "pitch_mm":item["pitch_mm"],"unscrew_offsets_mm":[.4,1.6,3.2,6.4,12.8,18],
+                              "rear_access_envelope_mm":{"diameter":18,"depth":8}})
+    remaining = {key:value for key,value in shapes.items() if key not in {i["id"] for i in screws}}
+    sequence = [next(i for i in catalog["instances"] if i["id"]=="back-cover")]
+    sequence += sorted(colored,key=lambda i:-i["step"])
+    release = []
+    distances = [.2,1,4,12,24]
     for item in sequence:
-        print(f"INSERTION_PATH {item['id']}", flush=True)
-        direction = (App.Vector(0, 0, 1) if item["id"] in ("stand", "board", "message-dock", "message-card")
-                     else App.Vector(0, -1, 0))
+        shape = remaining.pop(item["id"])
+        if "tool_target_xy" in item:
+            x, y = item["tool_target_xy"]
+            tip = Part.makeBox(1.6,2.4,2,App.Vector(-.8,-1.2,item["front_z"]-.1))
+            tip.rotate(App.Vector(),App.Vector(0,0,1),item["tool_tip_rotation_deg"])
+            tip.translate(App.Vector(x,y,0))
+            tip.rotate(App.Vector(),App.Vector(1,0,0),90)
+            tip.translate(App.Vector(0,params["board"]["back_y"],params["board"]["bottom_z"]))
+            if intersection_volume(tip,shape)<=TOLERANCE:
+                raise ValueError(f"Printed-tool target misses the part: {item['id']}")
+            for name, fixed in remaining.items():
+                if intersection_volume(tip,fixed)>TOLERANCE:
+                    raise ValueError(f"Tool target blocked: {item['id']}/{name}")
         for distance in distances:
-            moving = shapes[item["id"]].copy()
-            moving.translate(direction * distance)
-            for prior in installed:
-                if intersection_volume(moving, shapes[prior]) > TOLERANCE:
-                    raise ValueError(f"Blocked insertion path: {item['id']}/{prior}, {distance} mm")
-            checked_path_positions += 1
-        installed.append(item["id"])
-    plaque_ids = [item["id"] for item in catalog["instances"] if item["part"].startswith("T") and item["part"] != "T01"]
+            moved = shape.copy()
+            moved.translate(App.Vector(0,distance,0))
+            for name, fixed in remaining.items():
+                if intersection_volume(moved,fixed)>TOLERANCE:
+                    raise ValueError(f"Rear removal blocked: {item['id']}/{name}/{distance}")
+        release.append({"instance":item["id"],"direction_world":"+Y rearward","offsets_mm":distances,
+                        "front_tool_target_xy":item.get("tool_target_xy"),
+                        "tool_tip_rotation_deg":item.get("tool_tip_rotation_deg")})
+    plaque_ids = [name for name in shapes if name not in ("stand","message-dock","message-card")]
     plaque = Part.makeCompound([shapes[name] for name in plaque_ids])
-    for distance in distances + [160]:
+    for distance in (.2,1,8,32.2,40,160):
         raised = plaque.copy()
         raised.translate(App.Vector(0, 0, distance))
         for name in ("stand", "message-dock", "message-card"):
             if intersection_volume(raised, shapes[name]) > TOLERANCE:
                 raise ValueError(f"Finished plaque cannot be lifted past {name}")
-    print("ASSEMBLY_PATHS_PASS", flush=True)
+    card_path = []
+    for distance in (.2,1,4.8,8,40,100):
+        card = shapes["message-card"].copy()
+        card.translate(App.Vector(0,0,distance))
+        for name, fixed in shapes.items():
+            if name!="message-card" and intersection_volume(card,fixed)>TOLERANCE:
+                raise ValueError(f"Message card removal blocked: {name}/{distance}")
+        card_path.append(distance)
+    print("ALL_REMOVAL_AND_TOOL_PATHS_PASS", flush=True)
     stand_spec, board_spec = params["stand"], params["board"]
     message = catalog["shared_interface"]["message"]
     brick = catalog["shared_interface"]["brick"]
-    board_thickness = next(p["thickness"] for p in params["parts"] if p["id"] == "T02")
+    board_thickness = params["retention"]["frame_thickness"]
     slot_floor = stand_spec["dock_origin"][2] + message["dock_height"] - message["slot_depth"]
     diameter = brick["reference_stud_diameter"] + brick["stud_diameter_correction"]
     pitch = brick["pitch"]
     stand_section = measured_floor(shapes["stand"], stand_spec["height"],
                                    [stand_spec["slot_width"], stand_spec["slot_depth"]])
-    tongue_section = measured_floor(shapes["board"], board_spec["bottom_z"]-board_spec["tongue_length"],
+    tongue_section = measured_floor(shapes["capture-frame"], board_spec["bottom_z"]-board_spec["tongue_length"],
                                     [board_spec["tongue_width"], board_thickness])
     dock_section = measured_floor(shapes["message-dock"], slot_floor,
                                   [message["slot_length"], message["slot_width"]])
@@ -171,21 +226,25 @@ def main():
         raise ValueError("Uniform-solid center of mass is outside the support polygon")
     print("ASSEMBLY_FIT_FACES_PASS", flush=True)
     report = {
-        "status": "pass", "brep_pair_checks": pairs, "maximum_allowed_intersection_mm3": TOLERANCE,
-        "support_contacts": contacts,
-        "insertion_path": {"sampled_offsets_mm": distances, "sampled_positions": checked_path_positions,
+        "status": "pass", "revision":"T2","adhesive_required":False,"all_parts_removable":True,
+        "brep_pair_checks": pairs, "maximum_allowed_intersection_mm3": TOLERANCE,
+        "positive_capture": capture, "coarse_screw_retention_and_release":screw_results,
+        "reverse_order_removal_and_tool_access":release,
+        "message_card_upward_removal_offsets_mm":card_path,
+        "insertion_path": {"sampled_offsets_mm": distances,"reverse_paths_provide_assembly":True,
                            "finished_plaque_upward_removal_also_checked": True,
-                           "scope": "BRep samples plus open-axis slots; not a human-hand, glue-cure or elastic-clutch simulation."},
+                           "scope": "Rigid BRep samples, positive shoulders and helical paths; not printed wear, force, hand ergonomics or elastic-clutch certification."},
         "measured_fit_faces_mm": {"stand_socket": stand_section, "board_tongue": tongue_section,
                                   "message_slot": dock_section, "message_card": card_section,
                                   "shared_stud_diameter": diameter, "shared_pitch": pitch, "shared_stud_count": 24},
         "geometric_stability": {"uniform_solid_com_mm": list(center),
                                  "nearest_support_edge_margin_mm": min(margins),
                                  "solid_proxy_tip_angle_deg": math.degrees(math.atan(min(margins)/center.z)),
-                                 "scope": "Uniform-density full-solid CAD proxy only. Slicer infill, glue, PLA creep, impacts and real tipping strength are not certified."},
-        "feature_gauges_mm": {"supported_whisker_width": 3.2, "glove_step": 4,
-                              "pupil_width": 3.2, "minimum_relief_thickness": 1.2,
-                              "minimum_locator_socket_roof": 1.2},
+                                 "scope": "Uniform-density full-solid CAD proxy only. Slicer infill, PLA creep, impacts and real tipping strength are not certified."},
+        "feature_gauges_mm": {"flange_thickness":1.6,"nominal_shoulder_overlap_per_side":.8,
+                              "minimum_overlap_after_lateral_play":.6,"minimum_grid_web":2,
+                              "pupil_width":3.2,"tool_tip":[1.6,2.4],"thread_root_diameter":8.8,
+                              "thread_major_diameter":11.2,"thread_pitch":3.2,"nominal_thread_engagement":9.6},
         "text": text, "physical_fit_tested": False, "safety_certified": False
     }
     (ROOT / "validation/assembly.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")

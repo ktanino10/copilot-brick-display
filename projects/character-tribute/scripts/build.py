@@ -7,7 +7,7 @@ import sys
 import FreeCAD as App
 
 from export_artifacts import export_artifacts
-from relief_geometry import relief_depths, relief_shapes
+from capture_design import build_capture
 from shared_source import load_shared
 from stand_geometry import custom_coupons, stand_body
 
@@ -20,10 +20,7 @@ def build_shapes(data):
         raise ValueError("Confirmed message differs from shared message source")
     if data["nominal_pitch"] != shared["interface"]["pitch"]:
         raise ValueError("Nominal pitch differs from shared interface")
-    shapes = relief_shapes(data)
-    specs = {p["id"]: {"name_ja": p["name_ja"], "color": p["color"],
-                       "category": "assembly", "source": "parameters.json"}
-             for p in data["parts"]}
+    specs, shapes, captured = build_capture(data)
     stand = stand_body(data)
     origin = data["stand"]["dock_origin"]
     pitch = data["nominal_pitch"]
@@ -33,12 +30,11 @@ def build_shapes(data):
     shapes = {"T01": stand.multiFuse(studs).removeSplitter(), **shapes}
     specs["T01"] = {"name_ja": "台座・背板ソケット・共通24スタッド", "color": "charcoal",
                      "category": "assembly", "source": "parameters.json + shared stud_shape"}
-    depths = relief_depths(data)
-    instances = [{"id": "stand", "part": "T01", "parent": None, "step": 1,
+    instances = [{"id": "stand", "part": "T01", "parent": None, "step": 8,
                   "position_mm": [0, 0, 0], "rotation_x_deg": 0}]
-    for item in data["instances"]:
-        instances.append({**item, "parent": item["parent"] or "stand",
-                          "position_mm": [item["xy"][0], data["board"]["back_y"] - depths[item["id"]],
+    for item in captured:
+        instances.append({**item,
+                          "position_mm": [item["xy"][0], data["board"]["back_y"] - item["depth"],
                                           data["board"]["bottom_z"] + item["xy"][1]],
                           "rotation_x_deg": 90})
     for spec in shared_catalog["parts"].values():
@@ -61,7 +57,7 @@ def build_shapes(data):
         {"id": "message-card", "part": "MSG-CARD", "parent": "message-dock", "step": 10,
          "position_mm": [origin[0] + 4, origin[1] + 5, origin[2] + 4.8], "rotation_x_deg": 90}
     ]
-    names = ["背板ソケット試験片 A–D", "背板厚6.4の試験舌", "色タイル位置決め試験台", "色タイル試験蓋"]
+    names = ["背板ソケット試験片 A–D", "差込舌の厚さ試験片"]
     for (part_id, shape), name in zip(custom_coupons(data).items(), names):
         shapes[part_id] = shape
         specs[part_id] = {"name_ja": name, "color": "charcoal", "category": "coupon",
@@ -79,6 +75,9 @@ def main():
     specs, shapes, instances, interface = build_shapes(data)
     catalog = export_artifacts(ROOT, data, specs, shapes, instances)
     catalog["shared_interface"] = interface
+    catalog["adhesive_required"] = False
+    catalog["all_parts_removable"] = True
+    catalog["retention_mechanism"] = data["retention"]["type"]
     (ROOT / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n")
     Gui.getMainWindow().close()
     print("CAD_VERIFY_NATIVE_SUBPROCESS", flush=True)

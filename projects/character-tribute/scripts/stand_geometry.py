@@ -39,12 +39,4 @@ def custom_coupons(data):
         block = block.cut(cutter)
     tongue = prism([(0, 0), (10, 0), (10, 16), (12, 16), (12, 24),
                     (-2, 24), (-2, 16), (0, 16)], p["tongue_thickness"])
-    a = data["alignment"]
-    pin_base = Part.makeBox(20, 12, 3.2)
-    pin_base = pin_base.fuse(Part.makeBox(a["pin_width"], a["pin_width"], a["pin_height"],
-                            App.Vector(10 - a["pin_width"]/2, 6 - a["pin_width"]/2, 3.2)))
-    cap = Part.makeBox(20, 12, 2.4)
-    cap = cap.cut(Part.makeBox(a["socket_width"], a["socket_width"], a["socket_depth"] + .01,
-                   App.Vector(10 - a["socket_width"]/2, 6 - a["socket_width"]/2, -.01)))
-    return {"T90": block.removeSplitter(), "T91": tongue,
-            "T92": pin_base.removeSplitter(), "T93": cap.removeSplitter()}
+    return {"T90": block.removeSplitter(), "T91": tongue}
