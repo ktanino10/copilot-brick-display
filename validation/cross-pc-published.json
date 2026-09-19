@@ -1,0 +1,131 @@
+{
+  "status": "PASS_LIVE_GENERIC_COLOR_PRINT_GUIDE",
+  "guide_revision": "separate-color-2026-09-19",
+  "geometry_revision": "4.0-public-template",
+  "deployed_commit": "7af459e5c5c9f0e3956bf785e34db20135a7ba97",
+  "deployment": {
+    "run_url": "https://github.com/ktanino10/copilot-brick-display/actions/runs/35450899803",
+    "validation": "success",
+    "pages": "success",
+    "browser": "Google Chrome 152.0.7977.82",
+    "browser_result": "PASS_REAL_BROWSER",
+    "guide_result": "separate-color-2026-09-19; direct model downloads and manually configured pause boundaries checked"
+  },
+  "entry_url": "https://ktanino10.github.io/copilot-brick-display/guide.html?guide=separate-color-2026-09-19#print-another-pc",
+  "scope": "Only the listed generic Pages files; separately authorized transfers are outside this check.",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 18747,
+      "sha256": "67295c37ade80ac4c56e217f37999d546170985f663b6e39f8cbdbf8c470dc9e"
+    },
+    {
+      "path": "guide.html",
+      "bytes": 39468,
+      "sha256": "76460e04443bacc22d9f2f4c4b5630261949770b0f7eb26d4121c18d0bbea818"
+    },
+    {
+      "path": "trial.html",
+      "bytes": 14236,
+      "sha256": "dc53616337caad59556acda1ec18526f043566d82e9ec2ef8c3907f8681fd4a8"
+    },
+    {
+      "path": "downloads/fit-coupons.zip",
+      "bytes": 312452,
+      "sha256": "43c2cd99c87e8ff009b58367dee0c336764cd93ae06c161883520f13599e116d"
+    },
+    {
+      "path": "downloads/trial-subset.zip",
+      "bytes": 701731,
+      "sha256": "da0a50ffeeb62694ca13b3ebc8cad73bb774760ef014c72efa93387a7f77f217"
+    },
+    {
+      "path": "downloads/fit-log.csv",
+      "bytes": 869,
+      "sha256": "13bc3ca1c0da0a43dbc74fd70ff22a2f534834a6a79c1641c4146324e6c37f5b"
+    },
+    {
+      "path": "downloads/A/print-kit.zip",
+      "bytes": 5118520,
+      "sha256": "652a051c435cbf2c97060856fac6c227307324bd66f255232d89c5a3139cb811"
+    },
+    {
+      "path": "downloads/A/plates.zip",
+      "bytes": 3683264,
+      "sha256": "8671238c4ba4e3250268ea63685a9cefa183489cd49465e91eae4e0880c89528"
+    },
+    {
+      "path": "downloads/A/bom.csv",
+      "bytes": 1090,
+      "sha256": "c989aa0b825509db80d4c403a728e4feb627ca0f63a8d2d9efc092e961be0f86"
+    },
+    {
+      "path": "downloads/A/drawings.pdf",
+      "bytes": 938668,
+      "sha256": "899bf62fdffe4a78f8fcb3e3fbf340da071a36b487db389337549d43e531a766"
+    },
+    {
+      "path": "downloads/A/plates/manifest.json",
+      "bytes": 28596,
+      "sha256": "40de05fa47d3d894371e938f2ee931b8e1d06c0874bf3237aff0eb6c4b7f4faf"
+    },
+    {
+      "path": "downloads/B/print-kit.zip",
+      "bytes": 7807320,
+      "sha256": "533accafabe09d86d48cc9bf5fd5c1d3d9304a57e02872bbd6ed06aecff61cb5"
+    },
+    {
+      "path": "downloads/B/plates.zip",
+      "bytes": 6138593,
+      "sha256": "617e87d8075c0df5778c3f3738caec0d62bd61f20dd29b9a6753618bd33e7463"
+    },
+    {
+      "path": "downloads/B/bom.csv",
+      "bytes": 1307,
+      "sha256": "98f9988e8ea58ac1414b348cbfdba479d5ff811da91aac7922083c0ee43ba889"
+    },
+    {
+      "path": "downloads/B/drawings.pdf",
+      "bytes": 1356717,
+      "sha256": "aa7e98599b745c2e592f232604bd3b9d0c6c2461ba8d9084cc46ede310c1166e"
+    },
+    {
+      "path": "downloads/B/plates/manifest.json",
+      "bytes": 46072,
+      "sha256": "44a0498de8ccdc4756c8a802f83f72710ee245a2c8ac0f5c4e6ff141d9038af1"
+    },
+    {
+      "path": "downloads/C/print-kit.zip",
+      "bytes": 11634932,
+      "sha256": "67e775b14af48ec3b3acb900b2de4c12e679b4359569a41af4bebabe617f5dde"
+    },
+    {
+      "path": "downloads/C/plates.zip",
+      "bytes": 12593150,
+      "sha256": "7e646a0167ef8529247e943275425aaf8365548525bd04cc3d53aeb0f2db0968"
+    },
+    {
+      "path": "downloads/C/bom.csv",
+      "bytes": 1371,
+      "sha256": "b82a17e8a600e414bb47d8b52d82fa44129b0280faf3c8f332bf27d3ebff0672"
+    },
+    {
+      "path": "downloads/C/drawings.pdf",
+      "bytes": 1983670,
+      "sha256": "f59985f99ec9b2d36253996d48ce787bf22dd67d57f230e92f02fd811aafc907"
+    },
+    {
+      "path": "downloads/C/plates/manifest.json",
+      "bytes": 70018,
+      "sha256": "f98f8bb8b492ddb66528704696a1660bc9588ddd0336f663b28037a8fbc306ce"
+    }
+  ],
+  "personal_files_in_verified_pages_files": false,
+  "manual_black_to_white_after_mm": {
+    "message_plate": 2.4,
+    "logo": 2.8
+  },
+  "pause_commands_in_distributed_3mf": false,
+  "actual_slicer_profile_received": false,
+  "sliced_or_physical_print_verified": false
+}

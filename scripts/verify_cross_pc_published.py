@@ -29,12 +29,13 @@ def main():
         "status": "PASS_LIVE_GENERIC_COLOR_PRINT_GUIDE",
         "guide_revision": version, "geometry_revision": "4.0-public-template",
         "entry_url": base + "guide.html?guide=" + version + "#print-another-pc",
-        "files": records, "personal_files_published": False,
+        "scope": "Only the listed generic Pages files; separately authorized transfers are outside this check.",
+        "files": records, "personal_files_in_verified_pages_files": False,
         "manual_black_to_white_after_mm": {"message_plate": 2.4, "logo": 2.8},
         "pause_commands_in_distributed_3mf": False,
         "actual_slicer_profile_received": False, "sliced_or_physical_print_verified": False,
     })
-    print(f"PASS {len(records)} live generic guide/package hashes; private files were not published.")
+    print(f"PASS {len(records)} live generic Pages guide/package hashes; separate transfers are outside this check.")
 
 
 if __name__ == "__main__":
