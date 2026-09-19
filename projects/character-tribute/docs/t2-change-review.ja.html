@@ -1,0 +1,110 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>T2の変更と独立レビューの境界</title><link rel="stylesheet" href="../site.css"></head><body><main class="guide"><nav class="guide-nav" aria-label="パンくず"><a href="../index.html">← @YOUR-USERNAME 製作ページ</a></nav><h1 id="t2">T2の変更と独立レビューの境界</h1>
+<h2 id="_1">決定と状態</h2>
+<ul>
+<li>ユーザーが選択・確認した方式は <strong>無接着、全パーツ取り外し／再組立可能</strong> です。</li>
+<li><strong>T1の接着方式は却下</strong>。承認待ちの候補ではありません。<code>046a48e</code> は履歴比較用の基準だけです。</li>
+<li>接着剤・テープ・熱かしめ・溶着は使いません。追加購入金具も不要です。</li>
+<li>T2はデジタル試作。実物嵌合、印刷ねじの耐久性、保持力、転倒、手での作業性は未検証です。</li>
+<li>独立保持レビューは <code>pending_coordinated_review</code>。本変更記録は独立承認ではありません。</li>
+</ul>
+<h2 id="_2">変更理由</h2>
+<p>小さな色部品を位置決めだけに頼る構成では、全パーツを可逆的に保持するという選択を満たせません。
+T2では前後の正の止め面を持つフランジ捕捉に変更し、消耗し得る印刷ねじも個別交換可能にしました。
+きつい摩擦、弾性ラッチ、不可逆な固定で小部品を保持する方式ではありません。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>T2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>外形</td>
+<td>幅176 × 奥行96 × 高さ201.6 mmを維持</td>
+</tr>
+<tr>
+<td>共通仕様</td>
+<td>固定8 mm、共通版WITHDRAWN-PRIVACY-REVISIONのMSG-DOCK/CARD、文面3行、台座T01を維持</td>
+</tr>
+<tr>
+<td>色形状</td>
+<td>8 mmの複数セルをまとめた通常カセット61個＋目6個＋バッジ2個＝69個</td>
+</tr>
+<tr>
+<td>保持</td>
+<td>T02前枠の肩＋T03裏蓋。通常フランジの掛かり0.8 mm、片側へ寄った最小0.6 mm</td>
+</tr>
+<tr>
+<td>締結</td>
+<td>T04×4、独自の印刷TR11.2-P3.2。標準M12金具ではない</td>
+</tr>
+<tr>
+<td>解除</td>
+<td>ねじを回して外す→蓋→色部品を後方へ。瞳→虹彩→白目、M→白バッジ</td>
+</tr>
+<tr>
+<td>治具</td>
+<td>EJECTOR×1、ASSEMBLY-REST×2。数量はカタログのtool_quantity</td>
+</tr>
+<tr>
+<td>カタログ集計</td>
+<td>組立42種類・78個、試験片15種類、治具2種類、印刷マスター計59種類</td>
+</tr>
+<tr>
+<td>メディア</td>
+<td>同じ.blend内のAssembly / Disassemblyから別々のMP4と日本語字幕。GLBはAssembly完成時のみ</td>
+</tr>
+</tbody>
+</table>
+<p>上記の数量は現行 <a href="../catalog.json">生成カタログ</a> からの集計です。カタログ自体を手編集せず、
+すべての部品・色・数量・配置・工程と治具の押し位置をここから導出します。
+<code>adhesive_required: false</code> と <code>all_parts_removable: true</code> は、この選択を公開メタデータへ運ぶ値です。</p>
+<h2 id="medium-t2-r1">同じ独立レビュアーからのMEDIUM是正 / T2-R1</h2>
+<p>同じ独立レビュアーからHIGH/CRITICAL指摘はなく、次のMEDIUM 2件が返りました。
+<strong>是正を実施・記録することと、是正後の独立受容は別です。<code>pending_coordinated_review</code> を維持します。</strong></p>
+<ol>
+<li><strong>印刷接地。</strong> 旧T02 / CAPTURE-FRAMEは4本の背面ボスだけが接地し、主パネルがZ8 mmから始まっていました。
+   この2マスターだけをX軸180°回転し、前面をベッドに向けた提供STL・個別STEPへ変更します。
+   提供物は方向設定済みで、使用者がもう一度回転する指示ではありません。他部品の印刷姿勢は変更しません。
+   <code>print_rotation_deg_xyz</code> と逆の組立配置を記録し、<a href="../validation/print-pose.json">接地</a> と
+   <a href="../validation/print-pose-invariance.json">完成状態の不変性</a> を別々に確認します。</li>
+<li><strong>押し棒の全形状。</strong> 全EJECTORを瞳と一緒に9.5 mm進めると、虹彩との共通体積は約0.8112 mm³になります。
+   工具は<strong>初動のみ最大3.5 mmで止め</strong>、露出した後ろのフランジをつまんで残りを引き抜く手順へ限定します。
+   押し棒で最後まで押し出しません。全工具の初動0..3.5 mmの検査と危険な過大押しの反例を保存し、
+   両動画・字幕・tool-access図にも停止と把持への切替を示します。目・Mの解除順は変更しません。</li>
+</ol>
+<p>これらの証拠は <a href="../validation/assembly.json">assembly.json</a> と上記の印刷姿勢JSONへ統合します。
+実物の印刷、手の届きやすさ、ねじ寿命、転倒は依然として未検証です。</p>
+<h2 id="_3">レビューに渡す機構上の論点</h2>
+<ol>
+<li><strong>前後の止め面。</strong> 通常部品の前面 <code>8n−2.4</code>、開口 <code>8n−2.0</code>、背面フランジ <code>8n−0.4</code> mm、
+   厚1.6 mm。前枠6.4 mm・ポケット1.8 mm・裏蓋当たり面Z=−0.2 mmを同時に確認。</li>
+<li><strong>入れ子の保持と解除。</strong> 白目／虹彩／瞳のフランジ下面Z=0 / −2 / −4 mm、白バッジ／Mは0 / −2 mm。
+   対応する蓋ポケットと正の当たり、先行部品を除いた後方0.2 / 1 / 4 / 12 / 24 mmの経路を確認。</li>
+<li><strong>真のねじ形状。</strong> ピッチ3.2、谷径8.8、外径11.2、根元幅2.8、山頂幅0.4 mm。
+   掛かり9.6 mm（3回転）、雌深さ11.2、半径隙間0.3、追加軸方向余裕0.15 mm。
+   螺旋山が円筒に退化していないこと、純引抜き1.6 mmの衝突と回転連動時の解除を別々に確認。</li>
+<li><strong>押し棒と作業姿勢。</strong> 短い剛性先端1.6 × 2.4 mmだけでなく全工具を使った初動0..3.5 mmの隙間、
+   最大3.5 mmで工具を止めてフランジをつまむ条件と、
+   2個のASSEMBLY-RESTによる外側リム支持。顔の突出部に荷重を掛けない前面下向きの組立を説明。</li>
+<li><strong>試験と交換。</strong> 本番関数で作ったTHREAD-C40から実物T04を試す。
+   CAPTURE-FRAME/COVER＋実物IN-W-1x1＋T04で、全模型より先に捕捉と取り外しを試す。</li>
+</ol>
+<p>独立レビュアーには同じT2のカタログ、保持回帰テスト、native/meshes/assemblyの検査JSON、
+図面目録、Assembly / Disassemblyの両シーン、両MP4・両字幕、公開ファイルhashを渡します。
+印刷接地・逆配置の不変性・全工具の初動上限の証拠も、同じ製造是正版へそろえます。
+動画の尺・フレーム数・fpsは各々の検査メタデータから取得し、ソースへ固定値を転記しません。
+T1の証拠や別スナップショットのメディアを混ぜません。全対数は現行78個なら3003組です。</p>
+<h2 id="_4">承認権限と未検証範囲</h2>
+<p><strong>統合担当だけが、共通部品と元の3案を扱った同じ独立レビュアーによる確認後、
+<code>independent_retention_review: accepted_digital_only</code> を設定できます。</strong>
+ソース更新担当・カタログ生成・サイト公開処理は、この値を付与しません。
+ユーザーの方式確認も、独立レビューの代替ではありません。</p>
+<p>ローカルChromeは新しい専用プロファイルでDevTools接続前にクラッシュし、
+<a href="../validation/web.json">ブラウザー検査</a> は環境起因でblockedです。
+librsvgによるSVGプレビューやソース回帰の合格は実ブラウザー検査の合格ではありません。
+統合担当による別の正常なChrome環境での検査を残し、新しいブラウザーpassを主張しません。</p>
+<p>デジタル受容後も、印刷誤差、ねじの摩耗、clutch、手指の到達性、転倒・衝撃、長期安全性は別の物理試験です。
+<code>physical_fit_tested: false</code> を維持し、測定していない重量・印刷時間・耐久回数を作りません。
+詳細は <a href="validation.ja.html">検証範囲</a>、可逆な作業手順は <a href="howto.ja.html">作り方</a> を参照してください。</p></main></body></html>

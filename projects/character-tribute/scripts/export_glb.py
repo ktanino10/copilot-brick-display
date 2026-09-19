@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     bpy.ops.wm.open_mainfile(filepath=str(ROOT / "media/character-assembly.blend"), load_ui=False)
+    bpy.context.window.scene = bpy.data.scenes["Assembly"]
     bpy.context.scene.frame_set(bpy.context.scene.frame_end)
     bpy.ops.object.select_all(action="DESELECT")
     for obj in bpy.context.scene.objects:
@@ -19,7 +20,7 @@ def main():
     path = ROOT / "media/model.glb"
     bpy.ops.export_scene.gltf(filepath=str(path), export_format="GLB", use_selection=True,
                              export_animations=False, export_current_frame=True,
-                             export_extras=True, export_yup=True)
+                             export_extras=True, export_yup=True, use_active_scene=True)
     data = path.read_bytes()
     magic, version, length = struct.unpack_from("<4sII", data)
     if (magic, version, length) != (b"glTF", 2, len(data)):

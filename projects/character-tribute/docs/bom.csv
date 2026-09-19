@@ -1,33 +1,60 @@
-﻿Part ID,部品名,色,完成品組込数,試験用推奨数,最大X mm,最大Y mm,最大Z mm,組立工程,配置ID,STL,STEP
-T01,台座・背板ソケット・共通24スタッド,黒,1,0,176.0,96.0,41.6,1,stand,meshes/T01.stl,native/parts/T01.step
-T02,背板と差込舌,白,1,0,160.0,192.0,7.4,2,board,meshes/T02.stl,native/parts/T02.step
-T03,緑の足場,緑,1,0,112.0,16.0,3.2,3,ground,meshes/T03.stl,native/parts/T03.step
-T04,赤い服と腕,赤,1,0,84.0,44.0,3.2,4,jacket,meshes/T04.stl,native/parts/T04.step
-T05,青いつなぎ,青,1,0,40.0,40.0,4.8,4,overalls,meshes/T05.stl,native/parts/T05.step
-T06,足,肌色,2,0,16.0,8.0,3.2,4,"foot-left,foot-right",meshes/T06.stl,native/parts/T06.step
-T07,猫の耳・輪郭・支持付きひげ,黒,1,0,144.0,72.0,4.2,5,head,meshes/T07.stl,native/parts/T07.step
-T08,顔と鼻,肌色,1,0,88.0,32.0,5.6,6,face,meshes/T08.stl,native/parts/T08.step
-T09,目の白い土台,白,2,0,16.0,24.0,2.4,7,"eye-left,eye-right",meshes/T09.stl,native/parts/T09.step
-T10,青い虹彩,青,2,0,8.0,14.0,1.6,7,"iris-left,iris-right",meshes/T10.stl,native/parts/T10.step
-T11,黒い瞳,黒,2,0,3.2,8.0,1.2,7,"pupil-left,pupil-right",meshes/T11.stl,native/parts/T11.step
-T12,口ひげ,黒,1,0,24.0,8.0,1.6,7,moustache,meshes/T12.stl,native/parts/T12.step
-T13,手,白,2,0,12.0,12.0,3.2,4,"hand-left,hand-right",meshes/T13.stl,native/parts/T13.step
-T14,赤い段差帽子,赤,1,0,120.0,32.0,4.8,8,hat,meshes/T14.stl,native/parts/T14.step
-T15,帽子の白い丸,白,1,0,16.0,16.0,2.4,8,badge,meshes/T15.stl,native/parts/T15.step
-T16,帽子のM,赤,1,0,10.0,10.0,1.6,8,letter-m,meshes/T16.stl,native/parts/T16.step
-T17,足場の丸タイル,薄緑,4,0,8.0,8.0,1.6,3,"spot-left-outer,spot-left-inner,spot-right-inner,spot-right-outer",meshes/T17.stl,native/parts/T17.step
-T18,つなぎのボタン,白,2,0,3.2,3.2,1.2,4,"button-left,button-right",meshes/T18.stl,native/parts/T18.step
-MSG-DOCK,共通メッセージドック,黒,1,0,95.8,15.8,9.6,9,message-dock,meshes/MSG-DOCK.stl,native/parts/MSG-DOCK.step
-MSG-CARD,交換文字カード,白,1,0,88.0,24.0,2.6,10,message-card,meshes/MSG-CARD.stl,native/parts/MSG-CARD.step
-FIT-M-D470,共通嵌合試験片,黒,0,1,31.8,15.8,5.0,0 試験,,meshes/FIT-M-D470.stl,native/parts/FIT-M-D470.step
-FIT-M-D480,共通嵌合試験片,黒,0,1,31.8,15.8,5.0,0 試験,,meshes/FIT-M-D480.stl,native/parts/FIT-M-D480.step
-FIT-M-D490,共通嵌合試験片,黒,0,1,31.8,15.8,5.0,0 試験,,meshes/FIT-M-D490.stl,native/parts/FIT-M-D490.step
-FIT-F-CM04,共通嵌合試験片,黒,0,1,31.8,15.8,9.6,0 試験,,meshes/FIT-F-CM04.stl,native/parts/FIT-F-CM04.step
-FIT-F-CP00,共通嵌合試験片,黒,0,1,31.8,15.8,9.6,0 試験,,meshes/FIT-F-CP00.stl,native/parts/FIT-F-CP00.step
-FIT-F-CP04,共通嵌合試験片,黒,0,1,31.8,15.8,9.6,0 試験,,meshes/FIT-F-CP04.stl,native/parts/FIT-F-CP04.step
-FIT-F-CP08,共通嵌合試験片,黒,0,1,31.8,15.8,9.6,0 試験,,meshes/FIT-F-CP08.stl,native/parts/FIT-F-CP08.step
-FIT-F-CP12,共通嵌合試験片,黒,0,1,31.8,15.8,9.6,0 試験,,meshes/FIT-F-CP12.stl,native/parts/FIT-F-CP12.step
-T90,背板ソケット試験片 A–D,黒,0,1,64.0,24.0,12.8,0 試験,,meshes/T90.stl,native/parts/T90.step
-T91,背板厚6.4の試験舌,黒,0,1,14.0,24.0,6.4,0 試験,,meshes/T91.stl,native/parts/T91.step
-T92,色タイル位置決め試験台,黒,0,1,20.0,12.0,4.2,0 試験,,meshes/T92.stl,native/parts/T92.step
-T93,色タイル試験蓋,黒,0,1,20.0,12.0,2.4,0 試験,,meshes/T93.stl,native/parts/T93.step
+﻿Part ID,部品名,色,分類,完成品組込数,試験用推奨数,工具数,最大X mm,最大Y mm,最大Z mm,組立工程,配置ID,STL,STEP
+T01,台座・背板ソケット・共通24スタッド,黒,assembly,1,0,0,176.0,96.0,41.6,8,stand,meshes/T01.stl,native/parts/T01.step
+IN-G-8x1,8×1 フランジ付き色インサート,緑,assembly,1,0,0,63.6,7.6,8.0,2,tile-001,meshes/IN-G-8x1.stl,native/parts/IN-G-8x1.step
+IN-G-4x1,4×1 フランジ付き色インサート,緑,assembly,2,0,0,31.6,7.6,8.0,2,"tile-002,tile-007",meshes/IN-G-4x1.stl,native/parts/IN-G-4x1.step
+IN-G-1x1,1×1 フランジ付き色インサート,緑,assembly,2,0,0,7.6,7.6,8.0,2,"tile-003,tile-011",meshes/IN-G-1x1.stl,native/parts/IN-G-1x1.step
+IN-L-1x1,1×1 フランジ付き色インサート,薄緑,assembly,4,0,0,7.6,7.6,9.6,2,"tile-004,tile-006,tile-008,tile-010",meshes/IN-L-1x1.stl,native/parts/IN-L-1x1.step
+IN-G-2x2,2×2 フランジ付き色インサート,緑,assembly,2,0,0,15.6,15.6,8.0,2,"tile-005,tile-009",meshes/IN-G-2x2.stl,native/parts/IN-G-2x2.step
+IN-S-2x1,2×1 フランジ付き色インサート,肌色,assembly,2,0,0,15.6,7.6,9.6,2,"tile-012,tile-014",meshes/IN-S-2x1.stl,native/parts/IN-S-2x1.step
+IN-G-2x1,2×1 フランジ付き色インサート,緑,assembly,1,0,0,15.6,7.6,8.0,2,tile-013,meshes/IN-G-2x1.stl,native/parts/IN-G-2x1.step
+IN-B-2x4,2×4 フランジ付き色インサート,青,assembly,3,0,0,15.6,31.6,9.6,2,"tile-015,tile-016,tile-020",meshes/IN-B-2x4.stl,native/parts/IN-B-2x4.step
+IN-W-2x1,2×1 フランジ付き色インサート,白,assembly,1,0,0,15.6,7.6,8.8,2,tile-017,meshes/IN-W-2x1.stl,native/parts/IN-W-2x1.step
+IN-W-1x1,1×1 フランジ付き色インサート,白,assembly,3,0,0,7.6,7.6,8.8,2,"tile-018,tile-024,tile-025",meshes/IN-W-1x1.stl,native/parts/IN-W-1x1.step
+IN-R-1x4,1×4 フランジ付き色インサート,赤,assembly,1,0,0,7.6,31.6,9.6,2,tile-019,meshes/IN-R-1x4.stl,native/parts/IN-R-1x4.step
+IN-R-1x3,1×3 フランジ付き色インサート,赤,assembly,1,0,0,7.6,23.6,9.6,2,tile-021,meshes/IN-R-1x3.stl,native/parts/IN-R-1x3.step
+IN-R-3x1,3×1 フランジ付き色インサート,赤,assembly,1,0,0,23.6,7.6,9.6,2,tile-022,meshes/IN-R-3x1.stl,native/parts/IN-R-3x1.step
+IN-B-1x1,1×1 フランジ付き色インサート,青,assembly,4,0,0,7.6,7.6,9.6,2,"tile-023,tile-026,tile-029,tile-030",meshes/IN-B-1x1.stl,native/parts/IN-B-1x1.step
+IN-W-2x2,2×2 フランジ付き色インサート,白,assembly,1,0,0,15.6,15.6,8.8,2,tile-027,meshes/IN-W-2x2.stl,native/parts/IN-W-2x2.step
+IN-R-2x1,2×1 フランジ付き色インサート,赤,assembly,2,0,0,15.6,7.6,9.6,2,"tile-028,tile-055",meshes/IN-R-2x1.stl,native/parts/IN-R-2x1.step
+IN-R-1x1,1×1 フランジ付き色インサート,赤,assembly,1,0,0,7.6,7.6,9.6,2,tile-031,meshes/IN-R-1x1.stl,native/parts/IN-R-1x1.step
+IN-R-4x1,4×1 フランジ付き色インサート,赤,assembly,2,0,0,31.6,7.6,9.6,2,"tile-032,tile-057",meshes/IN-R-4x1.stl,native/parts/IN-R-4x1.step
+IN-K-4x2,4×2 フランジ付き色インサート,黒,assembly,1,0,0,31.6,15.6,8.8,2,tile-033,meshes/IN-K-4x2.stl,native/parts/IN-K-4x2.step
+IN-K-1x1,1×1 フランジ付き色インサート,黒,assembly,5,0,0,7.6,7.6,8.8,2,"tile-034,tile-040,tile-042,tile-059,tile-061",meshes/IN-K-1x1.stl,native/parts/IN-K-1x1.step
+IN-S-3x1,3×1 フランジ付き色インサート,肌色,assembly,2,0,0,23.6,7.6,9.6,2,"tile-035,tile-037",meshes/IN-S-3x1.stl,native/parts/IN-S-3x1.step
+IN-K-2x1,2×1 フランジ付き色インサート,黒,assembly,1,0,0,15.6,7.6,8.8,2,tile-036,meshes/IN-K-2x1.stl,native/parts/IN-K-2x1.step
+IN-K-5x1,5×1 フランジ付き色インサート,黒,assembly,1,0,0,39.6,7.6,8.8,2,tile-038,meshes/IN-K-5x1.stl,native/parts/IN-K-5x1.step
+IN-S-1x3,1×3 フランジ付き色インサート,肌色,assembly,2,0,0,7.6,23.6,9.6,2,"tile-039,tile-043",meshes/IN-S-1x3.stl,native/parts/IN-S-1x3.step
+IN-S-2x3,2×3 フランジ付き色インサート,肌色,assembly,1,0,0,15.6,23.6,9.6,2,tile-041,meshes/IN-S-2x3.stl,native/parts/IN-S-2x3.step
+IN-K-4x1,4×1 フランジ付き色インサート,黒,assembly,1,0,0,31.6,7.6,8.8,2,tile-044,meshes/IN-K-4x1.stl,native/parts/IN-K-4x1.step
+IN-K-1x2,1×2 フランジ付き色インサート,黒,assembly,4,0,0,7.6,15.6,8.8,2,"tile-045,tile-050,tile-056,tile-058",meshes/IN-K-1x2.stl,native/parts/IN-K-1x2.step
+IN-S-1x2,1×2 フランジ付き色インサート,肌色,assembly,4,0,0,7.6,15.6,9.6,2,"tile-046,tile-047,tile-048,tile-049",meshes/IN-S-1x2.stl,native/parts/IN-S-1x2.step
+IN-R-8x2,8×2 フランジ付き色インサート,赤,assembly,2,0,0,63.6,15.6,9.6,2,"tile-051,tile-052",meshes/IN-R-8x2.stl,native/parts/IN-R-8x2.step
+IN-R-6x1,6×1 フランジ付き色インサート,赤,assembly,2,0,0,47.6,7.6,9.6,2,"tile-053,tile-060",meshes/IN-R-6x1.stl,native/parts/IN-R-6x1.step
+IN-R-4x2,4×2 フランジ付き色インサート,赤,assembly,1,0,0,31.6,15.6,9.6,2,tile-054,meshes/IN-R-4x2.stl,native/parts/IN-R-4x2.step
+EYE-W,目の白い捕捉カセット,白,assembly,2,0,0,15.6,23.6,9.6,3,"eye-left-white,eye-right-white",meshes/EYE-W.stl,native/parts/EYE-W.step
+EYE-B,青い虹彩と背面フランジ,青,assembly,2,0,0,11.2,17.6,13.2,4,"eye-left-iris,eye-right-iris",meshes/EYE-B.stl,native/parts/EYE-B.step
+EYE-K,瞳と背面フランジ,黒,assembly,2,0,0,6.4,11.2,16.8,5,"eye-left-pupil,eye-right-pupil",meshes/EYE-K.stl,native/parts/EYE-K.step
+BADGE-W,白い丸の捕捉カセット,白,assembly,1,0,0,15.6,15.6,9.6,3,badge-white,meshes/BADGE-W.stl,native/parts/BADGE-W.step
+BADGE-M,Mと背面フランジ,赤,assembly,1,0,0,12.0,12.0,13.2,4,badge-m,meshes/BADGE-M.stl,native/parts/BADGE-M.step
+T02,フランジ捕捉前枠と差込舌,白,assembly,1,0,0,160.0,192.0,14.4,1,capture-frame,meshes/T02.stl,native/parts/T02.step
+T03,全小部品を支持する着脱裏蓋,黒,assembly,1,0,0,152.0,160.0,11.0,6,back-cover,meshes/T03.stl,native/parts/T03.step
+T04,交換可能な印刷粗ねじ,黒,assembly,4,0,0,16.0,13.856,17.6,7,"screw-1,screw-2,screw-3,screw-4",meshes/T04.stl,native/parts/T04.step
+THREAD-C20,粗ねじ雌側クリアランス 0.20 試験片,黒,coupon,0,1,0,24.0,24.0,9.6,0 試験,,meshes/THREAD-C20.stl,native/parts/THREAD-C20.step
+THREAD-C30,粗ねじ雌側クリアランス 0.30 試験片,黒,coupon,0,1,0,24.0,24.0,9.6,0 試験,,meshes/THREAD-C30.stl,native/parts/THREAD-C30.step
+THREAD-C40,粗ねじ雌側クリアランス 0.40 試験片,黒,coupon,0,1,0,24.0,24.0,9.6,0 試験,,meshes/THREAD-C40.stl,native/parts/THREAD-C40.step
+CAPTURE-FRAME,一枠のフランジ捕捉・ねじ試験台,黒,coupon,0,1,1,48.0,24.0,14.4,0 試験,,meshes/CAPTURE-FRAME.stl,native/parts/CAPTURE-FRAME.step
+CAPTURE-COVER,捕捉試験台の着脱裏蓋,黒,coupon,0,1,1,48.0,24.0,11.0,0 試験,,meshes/CAPTURE-COVER.stl,native/parts/CAPTURE-COVER.step
+EJECTOR,短い剛性先端の取り出し押し棒,黒,tool,0,0,1,8.0,36.0,2.4,0 試験,,meshes/EJECTOR.stl,native/parts/EJECTOR.step
+ASSEMBLY-REST,前面を保護する組立用支持台,黒,tool,0,0,2,16.0,112.0,12.0,0 試験,,meshes/ASSEMBLY-REST.stl,native/parts/ASSEMBLY-REST.step
+MSG-DOCK,共通メッセージドック,黒,assembly,1,0,0,95.8,15.8,9.6,9,message-dock,meshes/MSG-DOCK.stl,native/parts/MSG-DOCK.step
+MSG-CARD,交換文字カード,白,assembly,1,0,0,88.0,24.0,2.6,10,message-card,meshes/MSG-CARD.stl,native/parts/MSG-CARD.step
+FIT-M-D470,共通嵌合試験片,黒,coupon,0,1,0,31.8,15.8,5.0,0 試験,,meshes/FIT-M-D470.stl,native/parts/FIT-M-D470.step
+FIT-M-D480,共通嵌合試験片,黒,coupon,0,1,0,31.8,15.8,5.0,0 試験,,meshes/FIT-M-D480.stl,native/parts/FIT-M-D480.step
+FIT-M-D490,共通嵌合試験片,黒,coupon,0,1,0,31.8,15.8,5.0,0 試験,,meshes/FIT-M-D490.stl,native/parts/FIT-M-D490.step
+FIT-F-CM04,共通嵌合試験片,黒,coupon,0,1,0,31.8,15.8,9.6,0 試験,,meshes/FIT-F-CM04.stl,native/parts/FIT-F-CM04.step
+FIT-F-CP00,共通嵌合試験片,黒,coupon,0,1,0,31.8,15.8,9.6,0 試験,,meshes/FIT-F-CP00.stl,native/parts/FIT-F-CP00.step
+FIT-F-CP04,共通嵌合試験片,黒,coupon,0,1,0,31.8,15.8,9.6,0 試験,,meshes/FIT-F-CP04.stl,native/parts/FIT-F-CP04.step
+FIT-F-CP08,共通嵌合試験片,黒,coupon,0,1,0,31.8,15.8,9.6,0 試験,,meshes/FIT-F-CP08.stl,native/parts/FIT-F-CP08.step
+FIT-F-CP12,共通嵌合試験片,黒,coupon,0,1,0,31.8,15.8,9.6,0 試験,,meshes/FIT-F-CP12.stl,native/parts/FIT-F-CP12.step
+T90,背板ソケット試験片 A–D,黒,coupon,0,1,0,64.0,24.0,12.8,0 試験,,meshes/T90.stl,native/parts/T90.step
+T91,差込舌の厚さ試験片,黒,coupon,0,1,0,14.0,24.0,6.4,0 試験,,meshes/T91.stl,native/parts/T91.step

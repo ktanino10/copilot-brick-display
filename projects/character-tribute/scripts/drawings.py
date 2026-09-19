@@ -45,7 +45,7 @@ def page(title, content, filename):
               'orient="auto-start-reverse"><path d="M 9 1 L 1 5 L 9 9" fill="none" stroke="#526b78"/></marker></defs>'
               '<rect width="420" height="297" fill="white"/><g font-family="sans-serif">'
               '<rect x="5" y="5" width="410" height="287" fill="none" stroke="#92a6ac" stroke-width=".3"/>')
-    footer = text(12, 283, "CHARACTER TRIBUTE / T1 / mm / CAD-derived vector projection", 3)
+    footer = text(12, 283, "CHARACTER TRIBUTE / T2 / mm / removable mechanical capture", 3)
     footer += text(12, 289, "縮尺は印刷設定に依存。寸法は数値を優先。実物嵌合・強度・安全認証は未確認。", 2.8)
     svg = header + text(12, 15, title, 5) + content + footer + "</g></svg>\n"
     (ROOT / "drawings" / filename).write_text(svg)
@@ -118,103 +118,128 @@ def projection(geometry, view, x, y, scale, colors):
 def expanded_views(geometry, catalog, meshes):
     colors = catalog["colors"]
     parameters = json.loads((ROOT / "parameters.json").read_text())
-    fit = parameters["stand"]
-    alignment = parameters["alignment"]
+    retention = parameters["retention"]
     message = catalog["shared_interface"]["message"]
     brick = catalog["shared_interface"]["brick"]
     gauges = json.loads((ROOT / "validation/assembly.json").read_text())["text"]
+    sheets=[]
+    def emit(title,content,file,subtitle):
+        page(title,content,file)
+        sheets.append({"file":file,"title":title.split(" / ")[0],"subtitle":subtitle})
     exploded = []
     for group in geometry:
         item = group["instance"]
-        if item["id"] == "stand":
-            delta = (0, 0, 0)
-        elif item["id"] == "message-dock":
-            delta = (0, -45, 12)
-        elif item["id"] == "message-card":
-            delta = (0, -80, 40)
-        else:
-            delta = (0, -max(0, 12.8-item["position_mm"][1])*5, 48)
+        if item["id"] in ("stand","message-dock","message-card"):
+            continue
+        delta = (0,{1:0,2:32,3:64,4:96,5:128,6:176,7:208}[item["step"]],0)
         exploded.append({**group, "vertices": [tuple(p[i]+delta[i] for i in range(3))
                                                for p in group["vertices"]]})
-    drawing, locate, _ = projection(exploded, (1, -2, 1.3), 16, 30, .70, colors)
-    content = drawing + text(280, 30, "ID / 色 / 数 / 工程", 3.5)
-    unique = [part for part in catalog["parts"] if part["category"] == "assembly"]
-    for index, part in enumerate(unique):
-        group = next(g for g in exploded if g["part"]["id"] == part["id"])
+    drawing, locate, _ = projection(exploded, (1, 2, 1.1), 14, 35, .62, colors)
+    content = drawing + text(274, 30, "後方へ分離 / 寸法ではありません", 3.5)
+    callouts=[("capture-frame","T02 前枠"),("tile-001","IN-* 色インサート61個"),
+              ("eye-left-white","EYE-W 白目 ×2"),("eye-left-iris","EYE-B 虹彩 ×2"),
+              ("eye-left-pupil","EYE-K 瞳 ×2"),("badge-white","BADGE-W 白い丸"),
+              ("badge-m","BADGE-M M"),("back-cover","T03 着脱裏蓋")]
+    callouts += [(f"screw-{i}",f"T04 印刷粗ねじ {i}/4") for i in range(1,5)]
+    for index,(instance,label) in enumerate(callouts):
+        group = next(g for g in exploded if g["instance"]["id"] == instance)
         center = [sum(p[i] for p in group["vertices"])/len(group["vertices"]) for i in range(3)]
         sx, sy = locate(center)
-        y = 41+index*10.4
-        content += line(sx, sy, 273, y-1, stroke_dasharray="1 1")
-        content += text(278, y, f'{part["id"]}  {colors[part["color"]]["name_ja"]} ×{part["quantity"]}', 3)
-        content += text(278, y+4, f'{part["name_ja"]} / 工程 {group["instance"]["step"]}', 2.4)
-    page("分解図 / EXPLODED ASSEMBLY（分離距離は説明用）", content, "exploded.svg")
-    for category, filename, title in (
-            ("assembly", "part-dimensions.svg", "色別部品図 / PRINT-LOCAL PARTS"),
-            ("coupon", "fit-coupons.svg", "試験片図 / FIT BEFORE PRINTING THE DISPLAY")):
-        parts = [part for part in catalog["parts"] if part["category"] == category]
-        content = text(12, 23, "寸法は最大外形 X × Y × Z mm（突起を含む）。完成品への組込数と試験片数を区別。", 3)
-        cell_h = 48 if category == "assembly" else 78
-        for index, part in enumerate(parts):
-            col, row = index % 4, index // 4
-            x, y = 12+col*100, 31+row*cell_h
-            vertices, faces = meshes[part["id"]]
-            group = {"part": part, "vertices": vertices, "print_vertices": vertices, "faces": faces}
-            view = (0, 0, -1) if part["id"].startswith("FIT-F") else (1, -2, 3)
-            width, length, height = part["bounds_mm"]
-            scale = min(42/max(width, length, 1), (cell_h-17)/max(width, length, 1))
-            image, _, _ = projection([group], view, x, y+8, scale, colors)
-            content += image
-            content += text(x, y+3, part["id"], 3.2)
-            content += text(x+47, y+11, colors[part["color"]]["name_ja"], 2.8)
-            count = part["quantity"] if category == "assembly" else 1
-            content += text(x+47, y+17, f'{"組込" if category == "assembly" else "試験"} ×{count}', 2.8)
-            content += text(x+47, y+23, f"{width:.2f} × {length:.2f}", 2.6)
-            content += text(x+47, y+29, f"× {height:.2f} mm", 2.6)
-            if category == "coupon":
-                spec = part.get("shared_spec", {})
-                if "male_correction" in spec:
-                    content += text(x+47, y+39, f'φ{4.8+spec["male_correction"]:.2f}', 3)
-                if "female_clearance" in spec:
-                    content += text(x+47, y+39, f'半径補正 {spec["female_clearance"]:+.2f}', 2.6)
-                if part["id"] == "T90":
-                    content += text(x+47, y+39, "A/B/C/D = 6.5/6.7/", 2.4)
-                    content += text(x+47, y+44, "6.9/7.1 mm", 2.4)
-            content += line(x, y+cell_h-3, x+96, y+cell_h-3)
-        page(title, content, filename)
-    stand = [group for group in geometry if group["instance"]["id"] == "stand"]
-    diagram, locate, _ = projection(stand, (0, 0, 1), 15, 41, 1.05, colors)
-    content = diagram + text(15, 35, "T01 上面（実CADメッシュ）", 3.5)
-    a, b = locate((-fit["slot_width"]/2, fit["slot_y_min"], fit["height"])), locate(
-        (fit["slot_width"]/2, fit["slot_y_min"], fit["height"]))
-    content += dimension(a[0], b[0], a[1]+15, f'{fit["slot_width"]:g}')
-    p, q = locate((-44, -32, 9.6)), locate((-36, -32, 9.6))
-    content += dimension(p[0], q[0], p[1]+9, "8")
+        y = 44+index*16
+        content += line(sx,sy,269,y-1,stroke_dasharray="1 1")
+        content += text(273,y,label,3)
+    content += text(273,249,"ねじ→裏蓋→瞳→虹彩/M→白→色部品",2.6)
+    emit("分解図 / REARWARD EXPLODED VIEW",content,"exploded.svg","POSITIVE CAPTURE / REVERSE RELEASE")
+    back,locate,_=projection(geometry,(1,2,1.3),18,31,.93,colors)
+    content=back+text(272,40,"背面の粗ねじ4本で裏蓋を保持",4)
+    for i in range(1,5):
+        instance=next(g for g in geometry if g["instance"]["id"]==f"screw-{i}")
+        center=[sum(p[j] for p in instance["vertices"])/len(instance["vertices"]) for j in range(3)]
+        x,y=locate(center)
+        content+=line(x,y,268,65+i*18,stroke_dasharray="1 1")+text(272,67+i*18,f"T04 / {i}",3)
+    for i,note in enumerate(["手で締め、背面から見て反時計回りに外す。",
+                              "標準Mねじではありません。専用T04を使用。",
+                              "実物の保持力・着脱耐久は試作待ち。",
+                              "裏蓋を外す前に、前面を支持台で保護。"]):
+        content+=text(272,175+i*11,note,2.7)
+    emit("背面図 / REMOVABLE BACK COVER",content,"assembly-back.svg","FOUR REPLACEABLE SCREWS")
+    for category,base,title in (("assembly","part-dimensions","組込部品図"),("aux","fit-coupons","試験片・工具図")):
+        entries=[p for p in catalog["parts"] if (p["category"]=="assembly")== (category=="assembly")]
+        for offset in range(0,len(entries),20):
+            content=text(12,23,"印刷座標の最大外形 / mm。工具・試験片は完成品の組込数と別です。",3)
+            for index,part in enumerate(entries[offset:offset+20]):
+                x,y=12+index%4*100,31+index//4*48
+                vertices,faces=meshes[part["id"]]
+                group={"part":part,"vertices":vertices,"print_vertices":vertices,"faces":faces}
+                w,h,d=part["bounds_mm"]
+                view=(0,0,-1) if part["id"].startswith("FIT-F") else (1,-2,3)
+                image,_,_=projection([group],view,x,y+8,min(40/max(w,h,d,1),29/max(w,h,d,1)),colors)
+                content+=image+text(x,y+3,part["id"],3)
+                count=part["quantity"] if category=="assembly" else part.get("tool_quantity",1)
+                content+=text(x+47,y+11,colors[part["color"]]["name_ja"],2.7)
+                content+=text(x+47,y+17,f'{part["category"]} ×{count}',2.5)
+                content+=text(x+47,y+23,f"{w:.2f} × {h:.2f}",2.6)+text(x+47,y+29,f"× {d:.2f} mm",2.6)
+                if part.get("print_rotation_deg_xyz")==[180,0,0]:
+                    content+=text(x+47,y+36,"前面ベッド / STL補正済み",2.3,"#b62731")
+                content+=line(x,y+45,x+96,y+45)
+            number=offset//20+1
+            file=f"{base}{'' if number==1 else '-'+str(number)}.svg"
+            emit(f"{title} / {number}",content,file,"CAD PRINT MASTERS")
+    front,locate,_=projection(geometry,(0,-1,0),18,34,.95,colors)
+    content=front+text(230,33,"後ろへ外すための前面接触点",4)
+    targets=[("tile-001","通常インサート：面の中央"),("eye-left-white","白目：左の白い縁"),
+             ("eye-left-iris","虹彩：下の青い帯"),("eye-left-pupil","瞳：中央"),
+             ("badge-m","M：左の縦画"),("badge-white","白い丸：Mを外した後の下縁")]
+    for i,(name,label) in enumerate(targets):
+        item=next(g["instance"] for g in geometry if g["instance"]["id"]==name)
+        tx,ty=item["tool_target_xy"]
+        x,y=locate((tx,parameters["board"]["back_y"]-item["front_z"],parameters["board"]["bottom_z"]+ty))
+        content+=f'<circle cx="{x:.2f}" cy="{y:.2f}" r="1.4" fill="#df303b"/>'
+        content+=line(x,y,226,54+i*25,stroke_dasharray="1 1")+text(230,55+i*25,label,2.8)
+        content+=text(230,62+i*25,f'座標({tx:g}, {ty:g}) / 先端回転 {item["tool_tip_rotation_deg"]}°',2.6)
+    content+=text(230,219,"先端1.6×2.4 mm。初期押出は最大3.5 mm。",2.7)
+    content+=text(230,228,"ここで工具を止め、フランジを指で引き抜く。",2.7)
+    content+=text(230,237,"工具で最後まで押さない。9.5 mm押込は禁止。",2.7)
+    emit("取り出し工具の接触点 / RELEASE ACCESS",content,"tool-access.svg","PUSH THEN GRIP THE REAR FLANGE")
+    content=""
+    parts={p["id"]:p for p in catalog["parts"]}
+    for pid,offset,color in [("CAPTURE-FRAME",(0,0,0),"#426071"),("CAPTURE-COVER",(0,0,0),"#303841"),
+                             ("IN-W-1x1",(-12,0,0),"#df303b"),("T04",(12,0,-16),"#187dd0")]:
+        vertices,faces=meshes[pid]
+        origin=parts[pid]["print_origin_mm"]
+        angle=math.radians(-parts[pid].get("print_rotation_deg_xyz",[0,0,0])[0])
+        c,s=math.cos(angle),math.sin(angle)
+        raw=[tuple(p[i]+origin[i] for i in range(3)) for p in vertices]
+        vertices=[(p[0]+offset[0],p[1]*c-p[2]*s+offset[1],p[1]*s+p[2]*c+offset[2]) for p in raw]
+        segments=set()
+        for indices in faces:
+            triangle=[vertices[i] for i in indices]
+            hits=[]
+            for a,b in zip(triangle,triangle[1:]+triangle[:1]):
+                if abs(a[1])<1e-7:hits.append((a[0],a[2]))
+                if a[1]*b[1]<0:
+                    f=-a[1]/(b[1]-a[1])
+                    hits.append((a[0]+f*(b[0]-a[0]),a[2]+f*(b[2]-a[2])))
+            points=sorted(set((round(a,5),round(b,5)) for a,b in hits))
+            if len(points)==2:segments.add(tuple(points))
+        for a,b in segments:
+            content+=f'<path d="M{25+(a[0]+25)*4:.3f},{110-a[1]*4:.3f} L{25+(b[0]+25)*4:.3f},{110-b[1]*4:.3f}" fill="none" stroke="{color}" stroke-width=".24"/>'
+        content+=text(25,198+list(["CAPTURE-FRAME","CAPTURE-COVER","IN-W-1x1","T04"]).index(pid)*9,pid,3,color)
+    content+=text(18,27,"実CADメッシュ Y=0 断面。線色は部品の識別用。",3)
     notes = [
-        ("背板ソケット", f'{fit["slot_width"]:g} × {fit["slot_depth"]:g} / 舌80.0 × 6.4',
-         f'全体隙間 X{fit["slot_width"]-80:.2f}・Y{fit["slot_depth"]-6.4:.2f} / 差込32.0'),
-        ("共有スタッド", f'12 × 2 / pitch{brick["pitch"]:g} / φ{brick["reference_stud_diameter"]+brick["stud_diameter_correction"]:g}候補',
-         f'高さ{brick["stud_height"]:g}、面取り{brick["stud_lead_in"]:g} / 実物clutch未検証'),
-        ("共有ドック", "95.8 × 15.8 × 9.6", f'下面socket深{message["dock_socket_depth"]:g} / ABSへ無理押ししない'),
-        ("文字カードの溝", f'{message["slot_length"]:g} × {message["slot_width"]:g} / 深さ{message["slot_depth"]:g}',
-         f'カード{message["card_width"]:g} × {message["card_height"]:g} × {message["card_thickness"]:g} / 文字浮出{message["text_relief"]:g}'),
-        ("カードの遊び", "幅・厚みとも全体0.4 = 片側0.2", "下端4.8は無文字 / 上から抜き差し・無接着"),
-        ("色タイル用の角ピン",
-         f'{alignment["pin_width"]:g}角 × 高{alignment["pin_height"]:g} / 穴{alignment["socket_width"]:g}角 × 深{alignment["socket_depth"]:g}',
-         f'片側{(alignment["socket_width"]-alignment["pin_width"])/2:.2f} / 市販互換ではない')
+        ("前後の正の捕捉","窓6.0 / 軸5.6 / フランジ7.6","1セルの場合。重なり0.8、横遊び後も0.6。"),
+        ("前枠・裏蓋","前枠6.4 / フランジ厚1.6 / 後ポケット1.8","後退側は裏蓋の段差で停止。摩擦で保持しない。"),
+        ("交換用印刷粗ねじ","TR11.2-P3.2 / minor8.8 / 有効掛かり9.6","半径クリアランス0.3、軸形状余裕0.15。"),
+        ("先に試す試験片","THREAD-C40→C30→C20 / 実T04ねじ","捕捉台は実IN-W-1x1＋T04を共用。"),
+        ("文字moduleは共通正本","カード88×24×2 / 溝88.4×2.4×4.8","共通12×2の8mmピッチ / 実物clutch未確認。")
     ]
     for index, (heading, value, note) in enumerate(notes):
-        y = 39+index*33
-        content += text(225, y, heading, 4) + text(225, y+7, value, 3.2) + text(225, y+14, note, 2.6)
-    content += text(15, 183, "CANDIDATE DIMENSIONS ≠ GUARANTEED PRINT TOLERANCE", 3)
-    for i, note in enumerate([
-            "上記は設計した隙間・補正値です。プリンターの達成精度や保持力を保証しません。",
-            "T90/T91 は背板厚み、T92/T93 は位置決め、FIT-* は共有ブロック接続の試験片。",
-            "最も緩い候補から確認し、白化・割れ・強い抵抗があれば中止します。",
-            "補正は該当パラメーターだけを変更して再生成。STL全体の拡大縮小は禁止。",
-            f'文字ストローク最小実測{gauges["minimum_parallel_straight_stroke_mm"]:.3f} mm、独立島外形{gauges["minimum_separate_glyph_island_bbox_mm"]:.3f} mm。',
-            "文字は0.2mmノズルを使用し、スライサーで細い字画・句読点を確認します。"]):
-        content += text(15, 194+i*8, note, 2.8)
-    page("接続・隙間・最小形状 / INTERFACE DETAILS", content, "interface-details.svg")
+        y=40+index*39
+        content+=text(238,y,heading,3.8)+text(238,y+8,value,2.8)+text(238,y+16,note,2.6)
+    content+=text(18,248,f'文字直線ストローク実測{gauges["minimum_parallel_straight_stroke_mm"]:.3f} mm。0.2mmノズルを使用。',3)
+    content+=text(18,260,"ねじ締結力、クリープ、着脱耐久は未試験。数値は設計候補で保証公差ではありません。",2.8)
+    emit("捕捉・ねじ断面 / RETENTION SECTION",content,"interface-details.svg","ACTUAL CAD SECTION / NO ADHESIVE")
+    return sheets
 
 
 def main():
@@ -246,20 +271,25 @@ def main():
     content = iso + text(270, 42, "@YOUR-USERNAME", 6)
     content += text(270, 52, "Same icon, New adventures", 3.5)
     content += text(270, 60, "github.com/YOUR-USERNAME", 3.5)
-    for index, note in enumerate(["20種類 / 組込29個 / 7色", "卓上用の段差レリーフ", "防護用の盾ではありません",
+    count=sum(p["category"]=="assembly" for p in catalog["parts"])
+    for index, note in enumerate([f'{count}種類 / 組込{len(catalog["instances"])}個 / 7色', "全パーツ取り外し・再組立可能", "防護用の盾ではありません",
                                   "市販ブロックとの接続は試験前提", "AMS不要。色別単色部品で構成",
                                   "PLA / 0.4 mm基準・文字は0.2 mm推奨", "非公式の個人記念品"]):
         content += text(270, 85+index*9, note, 3.5)
     page("完成図 / CAD ASSEMBLY", content, "assembly-isometric.svg")
-    expanded_views(geometry, catalog, meshes)
+    sheets=[{"file":"assembly-isometric.svg","title":"完成図","subtitle":"T2 FULLY REMOVABLE"},
+            {"file":"three-views.svg","title":"三面図","subtitle":"FRONT / TOP / RIGHT"}]
+    sheets+=expanded_views(geometry,catalog,meshes)
+    (ROOT/"drawings/index.json").write_text(json.dumps({"revision":"T2","sheets":sheets},ensure_ascii=False,indent=2)+"\n")
     with (ROOT / "docs/bom.csv").open("w", encoding="utf-8-sig", newline="") as output:
         writer = csv.writer(output, lineterminator="\n")
-        writer.writerow(["Part ID", "部品名", "色", "完成品組込数", "試験用推奨数", "最大X mm", "最大Y mm", "最大Z mm",
+        writer.writerow(["Part ID", "部品名", "色", "分類", "完成品組込数", "試験用推奨数", "工具数", "最大X mm", "最大Y mm", "最大Z mm",
                          "組立工程", "配置ID", "STL", "STEP"])
         for part in catalog["parts"]:
             instances = [item for item in catalog["instances"] if item["part"] == part["id"]]
-            writer.writerow([part["id"], part["name_ja"], colors[part["color"]]["name_ja"], part["quantity"],
-                             1 if part["category"] == "coupon" else 0, *[round(v, 3) for v in part["bounds_mm"]],
+            writer.writerow([part["id"], part["name_ja"], colors[part["color"]]["name_ja"],part["category"],part["quantity"],
+                             1 if part["category"] == "coupon" else 0,part.get("tool_quantity",0),
+                             *[round(v, 3) for v in part["bounds_mm"]],
                              ",".join(map(str, sorted({item["step"] for item in instances}))) or "0 試験",
                              ",".join(item["id"] for item in instances), part["mesh"], part["step"]])
     print("DRAWINGS_AND_BOM_GENERATED")

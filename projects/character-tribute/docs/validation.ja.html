@@ -1,87 +1,158 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>検証範囲と残る物理試験</title><link rel="stylesheet" href="../site.css"></head><body><main class="guide"><nav class="guide-nav" aria-label="パンくず"><a href="../index.html">← @YOUR-USERNAME 製作ページ</a></nav><h1 id="_1">検証範囲と残る物理試験</h1>
-<p>これはデジタル試作の検証記録です。実機の製造承認、玩具認証、互換性保証ではありません。
-独立した機械レビューは、共通部品と元の3案の統合担当が同じ固定スナップショットで調整します。
-この文書で自己設計の独立承認を宣言しません。</p>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>検証範囲と残る物理試験 / T2</title><link rel="stylesheet" href="../site.css"></head><body><main class="guide"><nav class="guide-nav" aria-label="パンくず"><a href="../index.html">← @YOUR-USERNAME 製作ページ</a></nav><h1 id="t2">検証範囲と残る物理試験 / T2</h1>
+<p>これは無接着・全パーツ着脱可能な<strong>デジタル試作</strong>の検証範囲です。
+ユーザーによる方式の選択は確認済みで、T1の接着方式は却下しました。
+実機の製造承認、独立レビューへの合格、玩具認証、互換性保証とは別です。</p>
+<p>部品・色・数量・配置・工程は <a href="../catalog.json">catalog.json</a> が唯一の正本です。
+現行T2の集計は組立42種類・78個、試験片15種類、治具2種類、合計59マスターです。
+EJECTORは1個、ASSEMBLY-RESTは2個で、試験片・治具を完成品の78個へ足しません。</p>
+<h2 id="_1">証拠の読み方</h2>
+<p>下表はT2公開時に照合する検査項目です。生成途中のフォルダーでは過去版のJSON・動画・図面が残る場合があります。
+<strong>同じT2のカタログ、配置数、ファイルhashに一致しない検査結果を合格証として流用しません。</strong>
+<code>check_release.py</code> は数量・全対数・メディアhash・図面目録・公開ファイルhashの不一致をエラーにします。
+同じ独立レビュアーからHIGH/CRITICAL指摘はなく、MEDIUMの印刷姿勢と工具過大押しを製造是正T2-R1で扱います。
+下記の追加証拠やソース修正だけで、これらの是正が独立受容済みになったとは宣言しません。</p>
 <table>
 <thead>
 <tr>
-<th>要件</th>
-<th>実施した確認</th>
+<th>項目</th>
+<th>T2で照合する内容</th>
 <th>証拠</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>本物のFreeCAD完成モデル</td>
-<td>保存後、別の純Appプロセスで29個の形状・体積・配置を再読込</td>
+<td>FreeCAD / STEP</td>
+<td>保存後に別の純Appプロセスで再読込。現行の78配置・78 solids、全59種類の個別STEP</td>
 <td><a href="../validation/native.json">native.json</a></td>
 </tr>
 <tr>
-<td>STEPの互換出力</td>
-<td>組立STEPを実際に再読込。29 solid、体積照合</td>
-<td><a href="../validation/native.json">native.json</a></td>
-</tr>
-<tr>
-<td>20cm級、8mm固定ピッチ</td>
-<td>176 × 96 × 201.6 mmを実形状で確認。24個の円筒面から径・ピッチを確認</td>
-<td><a href="../validation/assembly.json">assembly.json</a></td>
-</tr>
-<tr>
-<td>印刷可能な閉体</td>
-<td>32種類を独立STLパーサーで検査。各辺2面、向き、頂点linkの一周性、単一shell、正の符号付き体積</td>
+<td>STLの閉体</td>
+<td>現行59マスターについて各辺2面、向き、頂点link、単一shell、正の符号付き体積</td>
 <td><a href="../validation/meshes.json">meshes.json</a></td>
 </tr>
 <tr>
-<td>ベッドへの収まり</td>
-<td>各STLのXY外形＋片側8mmブリム、Zが256mm範囲内。湾曲部のbounds比較は宣言した0.05mmメッシュ偏差を考慮</td>
+<td>外形・共通接続</td>
+<td>176 × 96 × 201.6 mm、固定8 mm、共通版WITHDRAWN-PRIVACY-REVISIONのMSG-DOCK/CARD</td>
+<td><a href="../validation/assembly.json">assembly.json</a> / <a href="../shared-lock.json">固定参照</a></td>
+</tr>
+<tr>
+<td>ベッド範囲</td>
+<td>256 mmの造形範囲と片側8 mmブリム。メッシュ偏差0.05 mmを考慮したbounds照合</td>
 <td><a href="../validation/meshes.json">meshes.json</a></td>
 </tr>
 <tr>
-<td>浮遊・干渉・挿入</td>
-<td>全406組のBRep共通体積、28接点、0.1/0.5/1/4/16/40mmの挿入方向サンプル、完成レリーフの上抜き</td>
+<td>印刷接地</td>
+<td>T02 / CAPTURE-FRAMEをX軸180°回転して前面下にした保存印刷STEP。接地断面と後続層の投影を確認。提供STLは方向設定済み</td>
+<td><a href="../validation/print-pose.json">print-pose.json</a></td>
+</tr>
+<tr>
+<td>組立形状の不変性</td>
+<td>印刷回転の逆を組立配置へ反映。6e065f5の完成形と全配置を照合。他部品の印刷姿勢は変更しない</td>
+<td><a href="../validation/print-pose-invariance.json">print-pose-invariance.json</a></td>
+</tr>
+<tr>
+<td>BRep全対</td>
+<td><code>n × (n−1) / 2</code>。現行78個なら3003組。過去版の対数は非適用</td>
 <td><a href="../validation/assembly.json">assembly.json</a></td>
 </tr>
 <tr>
-<td>カードは交換式</td>
-<td>溝88.4 × 2.4、カード88 × 2.0を実際の平面から測定。上抜き経路に干渉なし</td>
+<td>正の捕捉</td>
+<td>保存ネイティブの全69色部品で前後・横方向の止め面を確認。通常部品は名目0.8 mm／片側へ寄った最小0.6 mmの掛かり</td>
+<td><a href="../scripts/test_retention.py">保持回帰テスト</a> / <a href="../validation/assembly.json">assembly.json</a></td>
+</tr>
+<tr>
+<td>色部品の取り外し</td>
+<td>蓋と先行部品を除いた部品単体の後方0.2 / 1 / 4 / 12 / 24 mm経路。工具の許可ストロークではなく、初動後のフランジ把持・引抜きを含む</td>
+<td><a href="../scripts/test_retention.py">保持回帰テスト</a> / <a href="../validation/assembly.json">assembly.json</a></td>
+</tr>
+<tr>
+<td>ねじの成立</td>
+<td>真の螺旋山と雌側切削。単なる円筒へのBoolean退化を回帰テストで拒否。4本の実経路で直線引抜きの衝突と螺旋解除、背面の頭へのアクセスを確認</td>
+<td><a href="../scripts/test_retention.py">保持回帰テスト</a> / <a href="../validation/assembly.json">assembly.json</a></td>
+</tr>
+<tr>
+<td>押し棒</td>
+<td>全EJECTOR形状を0..3.5 mmの初動サンプルで検査。最大3.5 mmで工具を止め、フランジをつまんで残りを引き抜く。先端だけの接触検査ではない</td>
+<td><a href="../catalog.json">カタログの押し位置・回転</a> / <a href="../validation/assembly.json">assembly.json</a></td>
+</tr>
+<tr>
+<td>前面下向きの支持治具</td>
+<td>保存ネイティブ＋実ASSEMBLY-REST STEPで支持台2個の衝突0・前枠だけへの接触を確認。構造前面は机上12 mm、目などの突出部の最小隙間は約5.6 mm</td>
+<td><a href="../validation/fixture.json">fixture.json</a> / <a href="../scripts/verify_fixture.py">検査スクリプト</a></td>
+</tr>
+<tr>
+<td>楯・カードと文字</td>
+<td>直立時の楯とカードの上方取り外し。カード88 × 24 × 2 mm＋文字0.6 mm、溝88.4 × 2.4 mm。直線ストローク最小0.4105 mm／文字島最小外形0.4812 mm→0.2 mmノズル</td>
 <td><a href="../validation/assembly.json">assembly.json</a></td>
 </tr>
 <tr>
-<td>細い文字</td>
-<td>実カードSTEPの文字頂面で独立島の外形と平行な直線ストロークを測定。最小0.4812 / 0.4105mm。0.2mmノズルを案内</td>
-<td><a href="../validation/assembly.json">assembly.json</a></td>
+<td>Blender / GLB</td>
+<td>カタログと同じ配置・完成外形・hash。同じ.blend内のAssembly / Disassemblyに実キーフレーム。GLBはAssembly完成時だけを出力したm・Y-upの表示用</td>
+<td><a href="../validation/blender.json">blender.json</a> / <a href="../validation/glb.json">glb.json</a></td>
 </tr>
 <tr>
-<td>Blenderが同じ模型</td>
-<td>.blendを再読込、29配置と完成寸法・カタログhashを確認</td>
-<td><a href="../validation/blender.json">blender.json</a></td>
-</tr>
-<tr>
-<td>本物の組立動画</td>
-<td>504フレーム、24fps、640×640、21秒のH.264。全フレームdecode、日本語mov_text字幕＋WebVTT</td>
+<td>両動画</td>
+<td>assembly.mp4とdisassembly.mp4を個別に全フレームdecode。各々の尺・fps・解像度・フレーム数・hashを検査JSONから取得。各動画の日本語字幕とWebVTT</td>
 <td><a href="../validation/video.json">video.json</a></td>
 </tr>
 <tr>
 <td>公開内容</td>
-<td>写真・人物・バッグ・個人パスを含めない。BlenderのFile Browser保存パスはAPIで相対化、PNGの文字メタデータを除去</td>
-<td><a href="../scripts/artifact_metadata.py">生成コード</a></td>
+<td>図面目録の全SVGと対応PNG、相対URL、SHA256、一括パックの全マスター、T1作業指示の除去、私有パスと元写真の非配布</td>
+<td><a href="../validation/release.json">release.json</a></td>
+</tr>
+<tr>
+<td>ブラウザー実表示</td>
+<td>現在はChromeが専用プロファイルでDevTools接続前にクラッシュする環境起因のblocked。新しいブラウザー合格を主張しない</td>
+<td><a href="../validation/web.json">web.json</a></td>
+</tr>
+<tr>
+<td>SVGプレビュー</td>
+<td>render_drawing_previews.pyが標準rsvg-convertでCAD由来SVGをPNGへ変換。元SVG・出力PNGのhashを記録。ブラウザーでのレイアウト・再生検査ではない</td>
+<td><a href="../validation/drawing-previews.json">drawing-previews.json</a> / <a href="../scripts/render_drawing_previews.py">生成スクリプト</a></td>
 </tr>
 </tbody>
 </table>
-<p>CADでは接着層の厚み・接着強度・樹脂のたわみ・手指の動き・プリンターの誤差を再現していません。
-「干渉なし」は、ある隙間で保持する／着脱しやすい／壊れないという主張ではありません。
-挿入経路は、開いた直線方向のスロットと指定した位置でのBRep検査です。全連続時刻の弾性・人間工学シミュレーションではありません。</p>
-<p>均質な完全ソリッドの幾何学的重心は、およそX−0.002、Y3.961、Z67.500 mm。
-支持多角形の最寄り辺までの投影余裕は44.039 mmです。
-これは実際にスライスした充填率・密度・接着剤の重量を反映した値ではありません。
-試験で測った重量・印刷時間・保持力・転倒角はありません。</p>
-<h2 id="_2">実物で残る確認</h2>
+<p>ネイティブ78 solids、全59メッシュ、保存ネイティブの3003組と保持・解除経路のT2検査は合格しています。
+曲面のSTEP再読込による体積積分差は、検査JSONで宣言した有界の数値許容差で照合します。
+支持治具の配置は作業台上の印刷原点 <code>[-84, -136, 0]</code> / <code>[68, -136, 0]</code> mmです。
+これは前枠局所座標の支持パッドx≈±76、図柄y=24..136 mmとは異なる座標表現です。
+支持と隙間の証拠は剛体CADの結果であり、実物の反り・机の水平・治具の安定性を保証しません。
+動画・図面・公開データなどが再生成中である間は、この幾何検査だけを根拠に「全公開検査完了」としません。
+<code>validation/video.json</code> の主レコードが組立、<code>disassembly</code> が分解です。双方の全フレームdecodeとMP4のhashが必要です。
+図面のページ数は固定しません。<a href="../drawings/index.json">drawings/index.json</a> に基本6枚と追加ページを列挙します。</p>
+<h2 id="_2">デジタル検証の限界</h2>
+<p>CADはプリンターの誤差、PLAの弾性、ねじ山の積層強度・摩耗、手指の動きを再現していません。
+0.2 mmの遊びと前後の止め面を持つ捕捉は摩擦保持の仮定ではありませんが、
+名目形状で捕捉できることと、印刷物が軽い力で外せることは別です。
+目の瞳→虹彩→白目、バッジのM→白という先行取り外し条件を満たした経路検査です。
+指定された離散位置・ねじの連動経路の確認であり、全連続時刻の弾性や人間工学の証明ではありません。
+<strong>EJECTORを瞳と一緒に9.5 mmまで進めると虹彩に約0.8112 mm³の衝突が生じます。</strong>
+この反例を残し、工具は初動だけ最大3.5 mmで停止させます。露出したフランジをつかんで残りを引き抜き、
+押し棒で全行程を通しません。上限以内でフランジをつかめなければ中止します。
+印刷接地の是正も、全ての橋・オーバーハング・ねじの実印刷品質を認証するものではありません。</p>
+<p>静的公開検査のpassはファイル・hash・リンク等の整合性についてです。
+<code>scope: static_publication_integrity</code> と別記したブラウザー状態を読み、
+ソース回帰やlibrsvg変換だけで新しいChrome検査が通ったことにしません。
+統合担当による正常なChrome環境での後続検査が必要です。</p>
+<p>幾何学的重心の計算は均質な完全ソリッドの参考値で、実際の充填率・密度・反りを含みません。
+過去版の重心や転倒余裕の数値はT2へ転記しません。
+測定した重量・印刷時間・保持力・繰り返し寿命・転倒角の値はありません。
+造形範囲内でも、スライサーの除外領域・サポート・実際のプレート配置は別途確認が必要です。</p>
+<h2 id="_3">実物で残る確認</h2>
 <ol>
-<li>使用PLA、ノズル、層高、温度、補正を記録して試験片を印刷。</li>
-<li>市販品→印刷品、印刷品→市販品、印刷品同士の3方向で、軽い着脱・白化・割れ・摩耗を確認。</li>
-<li>背板の長い差込部、台座の反り、カードの抜き差しを本番部品でも仮合わせ。</li>
-<li>小色部品の接着を端材で確認し、完全硬化後の脱落・変色を確認。</li>
-<li>完成品を平らな机で確認。机の端を避け、異常に傾く・ぐらつく場合は使わない。</li>
+<li>本番と同じPLA・色・ノズル・層高・温度・補正を記録し、THREAD-C40から実物T04で試験。</li>
+<li>CAPTURE-FRAME/COVERと実物IN-W-1x1・T04で保持、意図した解除、再組立を確認。</li>
+<li>FIT-*で市販品→印刷品、印刷品→市販品、印刷品同士を別々に確認。T90/T91と本番の長い舌も確認。</li>
+<li>手回しねじの抵抗・白化・割れ・摩耗と、取り外した部品のフランジを確認。寿命やトルクの合格値は未設定。</li>
+<li>2個のASSEMBLY-RESTによる前面保護、EJECTOR初動最大3.5 mmで停止してフランジをつまむ作業性、指定順の取り外しを実物で確認。</li>
+<li>平らな机で反り・傾き・脱落を確認。転倒・振動・長期使用への耐性は未試験のままと明記。</li>
 </ol>
-<p>結果が出るまでは <code>physical_fit_tested: false</code> として扱います。
-寸法の元資料、FDMの候補補正、実物の測定結果を混同しないでください。</p></main></body></html>
+<p>公開メタデータは <code>adhesive_required: false</code>、<code>all_parts_removable: true</code>、
+<code>physical_fit_tested: false</code>、<code>thread_durability_tested: false</code>、<code>tipping_tested: false</code> とします。
+0.4/0.2 mmのPLA設定は未印刷の出発点であり、自動プリンター操作は行いません。</p>
+<h2 id="_4">独立保持レビュー</h2>
+<p>既定値は <strong><code>independent_retention_review: pending_coordinated_review</code></strong> です。
+統合担当だけが、共通部品・元の3案と調整した<strong>同じ独立レビュアー</strong>によるT2の確認後、
+<code>accepted_digital_only</code> を設定できます。公開ジェネレーターやこの文書は承認を付与しません。
+その状態になっても実物の嵌合・耐久性・転倒試験は未検証のままです。
+<a href="t2-change-review.ja.html">T2の変更とレビュー境界</a> も参照してください。</p></main></body></html>
