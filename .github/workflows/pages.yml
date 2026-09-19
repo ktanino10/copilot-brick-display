@@ -28,6 +28,10 @@ jobs:
         run: |
           python -m pip install -r requirements.txt
           python -m playwright install --with-deps chromium --only-shell
+      - name: Check the additional publication source contract
+        run: |
+          python projects/character-tribute/scripts/test_site.py --source-only
+          python projects/character-tribute/scripts/check_release.py
       - name: Verify real browser behavior before deployment
         env:
           BROWSER_PATH: /usr/bin/google-chrome
@@ -41,6 +45,7 @@ jobs:
           name: browser-validation
           path: |
             validation/web.json
+            validation/tribute-web-ci.json
             build/screenshots/
           if-no-files-found: warn
       - uses: actions/configure-pages@v5

@@ -6,6 +6,7 @@ from pathlib import Path
 
 from PIL import Image
 from playwright.sync_api import sync_playwright, expect
+from tribute_browser import verify_tribute
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = os.environ.get("BASE_URL", "http://127.0.0.1:8766/copilot-brick-display/")
@@ -130,6 +131,8 @@ with sync_playwright() as playwright:
         raise
     mobile_page.screenshot(path=str(OUT / "mobile.png"), full_page=True)
     check_no_overflow(mobile_page)
+    mobile.close()
+    verify_tribute(browser, ROOT, BASE, OUT)
     assert not errors, errors
     assert not failures, failures
     report = {

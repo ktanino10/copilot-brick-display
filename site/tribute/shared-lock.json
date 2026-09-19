@@ -1,0 +1,13 @@
+{
+  "commit": "WITHDRAWN-PRIVACY-REVISION",
+  "interface_id": "BRICK-8-MSG-SLOT-1",
+  "status": "digital_prototype_physical_fit_unverified",
+  "files": {
+    "scripts/freecad_geometry.py": "b85ae6d0b375d75c01cf778449f1f12379313a13911fd281e531ca821a21b8ed",
+    "design/parameters.json": "5aa4e2f247085ff7a5b6e33461fdaab03f75628f2a6bd442fb56a7f30e83f598",
+    "design/interface.json": "580148f3ea4cc83b254282ed6ec3e948058bfebf7002bd1fd3c8c09802db7210",
+    "design/catalog.json": "233158eb385de709971cc292d490faad4224eac77c51cd1f50a5039eb03f5fd1",
+    "resources/fonts/B612Mono-Bold.ttf": "b467b1d19fdabed42be51d87e38c86645ceeff2f828f294775188d00d1fd68ca",
+    "resources/fonts/OFL.txt": "a815f65bc72d90494b01842d3171f7cb0f9f935e023d9cc260904d221ef1064a"
+  }
+}

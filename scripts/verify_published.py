@@ -45,6 +45,16 @@ def main():
         exact += [f"downloads/{key}/{key}.FCStd", f"downloads/{key}/bom.csv",
                   f"media/{key}-assembly.mp4"]
     files.update(f"downloads/{part['stl']}" for part in c["parts"].values())
+    tribute_path = ROOT / "site/tribute/manifest.json"
+    if tribute_path.exists():
+        tribute = json.loads(tribute_path.read_text())
+        assert tribute["adhesive_required"] is False and tribute["all_parts_removable"] is True
+        assert tribute["independent_retention_review"] == "accepted_digital_only"
+        files.add("tribute/manifest.json")
+        files.update(f"tribute/{item['url']}" for item in tribute["assets"])
+        exact += ["tribute/manifest.json", "tribute/native/character-tribute.FCStd",
+                  "tribute/media/assembly.mp4", "tribute/media/disassembly.mp4",
+                  "tribute/docs/bom.csv", "tribute/downloads/print-pack.zip"]
     def check(relative):
         headers = fetch(base + quote(relative), head=True).decode("latin1")
         assert "200" in headers or "206" in headers, relative

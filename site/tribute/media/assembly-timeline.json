@@ -1,0 +1,79 @@
+[
+  {
+    "step": 1,
+    "first_frame": 1,
+    "last_frame": 36,
+    "title": "CAPTURE FRAME",
+    "caption_ja": "T2 無接着。実作業は前面を下にして支持台へ。まず粗ねじ・捕捉試験片を確認します。"
+  },
+  {
+    "step": 2,
+    "first_frame": 37,
+    "last_frame": 180,
+    "title": "REAR-LOADED INSERTS",
+    "caption_ja": "前枠の後ろから色インサートを入れます。背面フランジが前方への抜けを止めます。"
+  },
+  {
+    "step": 3,
+    "first_frame": 181,
+    "last_frame": 212,
+    "title": "WHITE DETAIL CASSETTES",
+    "caption_ja": "白目と帽子の白い丸を背面から差し込みます。"
+  },
+  {
+    "step": 4,
+    "first_frame": 213,
+    "last_frame": 244,
+    "title": "IRISES AND M",
+    "caption_ja": "青い虹彩とMを背面から。小部品もフランジで捕捉する構造です。"
+  },
+  {
+    "step": 5,
+    "first_frame": 245,
+    "last_frame": 272,
+    "title": "REMOVABLE PUPILS",
+    "caption_ja": "瞳を最後に差し込みます。小部品にも接着剤は使いません。"
+  },
+  {
+    "step": 6,
+    "first_frame": 273,
+    "last_frame": 312,
+    "title": "REMOVABLE BACK COVER",
+    "caption_ja": "裏蓋の段差が各フランジを後ろから支持し、後方への抜けを止めます。"
+  },
+  {
+    "step": 7,
+    "first_frame": 313,
+    "last_frame": 384,
+    "title": "PRINTED COARSE SCREWS",
+    "caption_ja": "交換可能な印刷粗ねじ4本を手で締めます。ねじは回転と送りを対応させます。"
+  },
+  {
+    "step": 8,
+    "first_frame": 385,
+    "last_frame": 440,
+    "title": "STAND",
+    "caption_ja": "舌を十分高く保ち、台座を机上で水平移動して正対。台座が静止してから垂直に差し込みます。"
+  },
+  {
+    "step": 9,
+    "first_frame": 441,
+    "last_frame": 464,
+    "title": "COMMON DOCK",
+    "caption_ja": "共通8mmピッチのドックを装着。無理押ししません。"
+  },
+  {
+    "step": 10,
+    "first_frame": 465,
+    "last_frame": 496,
+    "title": "REMOVABLE MESSAGE",
+    "caption_ja": "固定の交換カードを差し込みます。黒文字は任意の手動色替え表示例です。"
+  },
+  {
+    "step": 11,
+    "first_frame": 497,
+    "last_frame": 576,
+    "title": "T2 COMPLETE",
+    "caption_ja": "全パーツ無接着・取り外し可能な設計候補。実物保持・ねじ耐久・転倒は試作待ちです。"
+  }
+]
