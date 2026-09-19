@@ -131,24 +131,38 @@ def main():
             if intersection_volume(raised, shapes[name]) > TOLERANCE:
                 raise ValueError(f"Finished plaque cannot be lifted past {name}")
     print("ASSEMBLY_PATHS_PASS", flush=True)
-    stand_section = measured_floor(shapes["stand"], 9.6, [80.6, 6.9])
-    tongue_section = measured_floor(shapes["board"], 9.6, [80, 6.4])
-    dock_section = measured_floor(shapes["message-dock"], 14.4, [88.4, 2.4])
-    card_section = measured_floor(shapes["message-card"], 14.4, [88, 2])
+    stand_spec, board_spec = params["stand"], params["board"]
+    message = catalog["shared_interface"]["message"]
+    brick = catalog["shared_interface"]["brick"]
+    board_thickness = next(p["thickness"] for p in params["parts"] if p["id"] == "T02")
+    slot_floor = stand_spec["dock_origin"][2] + message["dock_height"] - message["slot_depth"]
+    diameter = brick["reference_stud_diameter"] + brick["stud_diameter_correction"]
+    pitch = brick["pitch"]
+    stand_section = measured_floor(shapes["stand"], stand_spec["height"],
+                                   [stand_spec["slot_width"], stand_spec["slot_depth"]])
+    tongue_section = measured_floor(shapes["board"], board_spec["bottom_z"]-board_spec["tongue_length"],
+                                    [board_spec["tongue_width"], board_thickness])
+    dock_section = measured_floor(shapes["message-dock"], slot_floor,
+                                  [message["slot_length"], message["slot_width"]])
+    card_section = measured_floor(shapes["message-card"], slot_floor,
+                                  [message["card_width"], message["card_thickness"]])
     cylinders = [face for face in shapes["stand"].Faces
                  if isinstance(face.Surface, Part.Cylinder) and
-                 abs(face.BoundBox.ZMin - 9.6) < 1e-5 and
-                 abs(face.Surface.Radius - 2.4) < 1e-5]
+                 abs(face.BoundBox.ZMin - stand_spec["dock_origin"][2]) < 1e-5 and
+                 abs(face.Surface.Radius - diameter/2) < 1e-5]
     if len(cylinders) != 24:
         raise ValueError("Shared stand mating patch does not contain 24 measured diameter-4.8 studs")
     xs = sorted({round(face.BoundBox.Center.x, 5) for face in cylinders})
     ys = sorted({round(face.BoundBox.Center.y, 5) for face in cylinders})
-    if len(xs) != 12 or len(ys) != 2 or any(abs(b-a-8) > 1e-5 for a, b in zip(xs, xs[1:])) or ys[1]-ys[0] != 8:
+    if (len(xs) != 12 or len(ys) != 2 or
+            any(abs(b-a-pitch) > 1e-5 for values in (xs, ys) for a, b in zip(values, values[1:]))):
         raise ValueError("Measured shared stand stud pitch differs from 8mm")
     volume = sum(shape.Volume for shape in shapes.values())
     center = sum((shape.CenterOfMass * shape.Volume for shape in shapes.values()), App.Vector()) / volume
     # The full support polygon includes clipped corners, rather than a generous rectangle.
-    polygon = [(-88,-40),(-80,-48),(80,-48),(88,-40),(88,40),(80,48),(-80,48),(-88,40)]
+    x, y, corner = stand_spec["width"]/2, stand_spec["depth"]/2, params["nominal_pitch"]
+    polygon = [(-x,-y+corner),(-x+corner,-y),(x-corner,-y),(x,-y+corner),
+               (x,y-corner),(x-corner,y),(-x+corner,y),(-x,y-corner)]
     margins = []
     for a, b in zip(polygon, polygon[1:] + polygon[:1]):
         margins.append(((b[0]-a[0])*(center.y-a[1])-(b[1]-a[1])*(center.x-a[0])) /
@@ -164,7 +178,7 @@ def main():
                            "scope": "BRep samples plus open-axis slots; not a human-hand, glue-cure or elastic-clutch simulation."},
         "measured_fit_faces_mm": {"stand_socket": stand_section, "board_tongue": tongue_section,
                                   "message_slot": dock_section, "message_card": card_section,
-                                  "shared_stud_diameter": 4.8, "shared_pitch": 8, "shared_stud_count": 24},
+                                  "shared_stud_diameter": diameter, "shared_pitch": pitch, "shared_stud_count": 24},
         "geometric_stability": {"uniform_solid_com_mm": list(center),
                                  "nearest_support_edge_margin_mm": min(margins),
                                  "solid_proxy_tip_angle_deg": math.degrees(math.atan(min(margins)/center.z)),

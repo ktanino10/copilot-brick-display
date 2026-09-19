@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="@YOUR-USERNAMEのキャラクターを、色別に印刷して組む20cm級の記念楯へ。実CAD、部品、図面、日本語手順、組立動画を公開。">
+  <title>@YOUR-USERNAME / 同じアイコン、次の冒険</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ</a>
+<header class="masthead">
+  <a class="wordmark" href="#main">CHARACTER <span>TRIBUTE / T1</span></a>
+  <nav aria-label="ページ内メニュー">
+    <a href="#build">組み立て</a><a href="#parts">印刷部品</a><a href="#drawings">図面</a><a href="#downloads">データ</a>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="tribute-title">
+    <div class="artifact-frame">
+      <img src="media/finished.png" width="1200" height="1200" alt="赤いM帽子、黒い猫の耳、青い目とつなぎ、緑の足場を立体化した記念楯の完成形">
+      <span class="image-note">CADから作成した完成像 / 実物の写真ではありません</span>
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">PRINT · ASSEMBLE · KEEP</p>
+      <h1 id="tribute-title">@YOUR-USERNAME</h1>
+      <p class="message">Same icon, New adventures</p>
+      <a class="profile" href="https://github.com/YOUR-USERNAME">github.com/YOUR-USERNAME ↗</a>
+      <p class="lead">いつものキャラクターを、<br>色を重ねて組み立てる記念楯に。</p>
+      <p>新しく設計した段差レリーフ。赤い帽子から小さな瞳まで、7色の単色部品を組み合わせます。言葉は、本体に刻まず交換できるカードへ。</p>
+      <dl class="spec-line">
+        <div><dt>完成寸法 / mm</dt><dd>176 × 96 × 201.6</dd></div>
+        <div><dt>組込部品</dt><dd>20種類 / 29個</dd></div>
+        <div><dt>製作方法</dt><dd>PLA / AMS不要</dd></div>
+      </dl>
+      <a class="button primary" href="docs/howto.ja.html">日本語の作り方を読む <span aria-hidden="true">→</span></a>
+      <a class="text-link" href="downloads/print-pack.zip" download>印刷パックをダウンロード</a>
+    </div>
+  </section>
+  <aside class="notice" aria-label="製作前の重要事項">
+    <strong>最初に試験片。</strong>
+    <p>デジタル形状は検査済みですが、市販ブロックとの保持力・実物の転倒・接着強度は未試験です。
+      色部品は位置決め＋少量の接着。カード・ドック・背板と台座の接続は接着しません。<a href="docs/validation.ja.html">検証範囲を見る</a></p>
+  </aside>
+  <section class="build-section" id="build" aria-labelledby="build-title">
+    <div class="section-heading"><p class="eyebrow">ASSEMBLY SEQUENCE</p><h2 id="build-title">色が重なると、あの顔になる。</h2></div>
+    <div class="build-layout">
+      <video controls preload="metadata" poster="media/finished.png" width="640" height="640" aria-label="記念楯の組立アニメーション、日本語字幕付き">
+        <source src="media/assembly.mp4" type="video/mp4">
+        <track kind="captions" src="media/assembly.ja.vtt" srclang="ja" label="日本語" default>
+        <a href="media/assembly.mp4">組立動画MP4をダウンロード</a>
+      </video>
+      <div class="assembly-copy">
+        <p>実Blenderシーンの21秒の組立説明です。実物の作業では背板を寝かせて色部品を接着し、完全硬化後に台座へ戻します。</p>
+        <ol class="sequence">
+          <li><b>接続を試す</b><span>使用PLAで試験片を印刷。最も緩い候補から。</span></li>
+          <li><b>色を重ねる</b><span>足場、服、輪郭、顔、目、帽子。部品IDと図を照合。</span></li>
+          <li><b>言葉を差し込む</b><span>独立カードを上から。交換する部品には接着しない。</span></li>
+          <li><b>机の上で確かめる</b><span>がたつき・傾き・脱落を確認。実物試験はここから。</span></li>
+        </ol>
+        <p class="small">字幕は動画のCCから表示できます。動画の速度は印刷時間・接着硬化時間ではありません。
+          黒い文字は、任意の手動フィラメント交換をした場合の表示例です。</p>
+        <a class="text-link" href="media/assembly.mp4" download>動画を保存</a>
+        <a class="text-link" href="drawings/exploded.svg">分解図とIDを見る</a>
+      </div>
+    </div>
+  </section>
+  <section id="parts" aria-labelledby="parts-title">
+    <div class="section-heading"><p class="eyebrow">ONE COLOUR AT A TIME</p><h2 id="parts-title">色ごとの製作トレイ。</h2>
+      <p>単色で印刷し、袋やトレイをIDで分けます。STLはmm・100%のまま。カードは0.2 mmノズルで。</p></div>
+    <div class="palette-rack" aria-label="必要な7色">{{PALETTE}}</div>
+    <div class="part-batches">{{PART_BATCHES}}</div>
+    <details class="coupon-batch"><summary>先に刷る試験片 / 12種類 <span>本体への組込数には含みません</span></summary>
+      <p>試験片図の黒は便宜上の表示色です。接続相手と同じ色・銘柄のPLAで試してください。
+        T90は台座、T91は背板の材料を使います。<a href="drawings/fit-coupons.svg">試験片図</a></p>
+      <div class="table-wrap">{{COUPONS}}</div>
+    </details>
+    <a class="text-link" href="docs/bom.csv" download>色・個数・配置・工程をCSVで保存</a>
+  </section>
+  <section id="drawings" aria-labelledby="drawings-title">
+    <div class="section-heading"><p class="eyebrow">DRAWN FROM THE SAME CAD</p><h2 id="drawings-title">図と部品を、同じ番号で。</h2>
+      <p>保存したCADから書き出した形状を投影しています。画面や紙の自動縮尺ではなく、mmの寸法値を使います。</p></div>
+    <div class="drawing-grid">{{DRAWINGS}}</div>
+  </section>
+  <section id="downloads" class="download-section" aria-labelledby="downloads-title">
+    <div class="section-heading"><p class="eyebrow">THE WORKING FILES</p><h2 id="downloads-title">飾る形も、作るデータも。</h2>
+      <p>実際に保存・再読込したネイティブデータです。FreeCADは組立BRep、Blenderは組立キーフレームを保持します。</p></div>
+    <div class="download-grid">{{DOWNLOADS}}</div>
+    <div class="reference-links"><a href="docs/reproduce.ja.html">再生成の手順</a><a href="docs/validation.ja.html">検証と未確認事項</a><a href="sources.json">寸法の出典</a><a href="manifest.json">統合用manifest</a></div>
+  </section>
+</main>
+<footer>
+  <b>@YOUR-USERNAME / Same icon, New adventures</b>
+  <p>ユーザー提供のキャラクター画像から作った、新しい個人記念品の設計です。元写真・人物・バッグは同梱していません。
+    任天堂・LEGO・GitHubの公認品ではなく、子ども向け玩具・防護具の認証もありません。</p>
+</footer>
+</body>
+</html>

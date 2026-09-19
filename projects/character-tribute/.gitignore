@@ -4,3 +4,6 @@ __pycache__/
 *.blend1
 media/frames/
 validation/*.log
+.venv-docs/
+validation/previews/
+validation/browser-profile/

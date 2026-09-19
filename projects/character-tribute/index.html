@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="@YOUR-USERNAMEのキャラクターを、色別に印刷して組む20cm級の記念楯へ。実CAD、部品、図面、日本語手順、組立動画を公開。">
+  <title>@YOUR-USERNAME / 同じアイコン、次の冒険</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ</a>
+<header class="masthead">
+  <a class="wordmark" href="#main">CHARACTER <span>TRIBUTE / T1</span></a>
+  <nav aria-label="ページ内メニュー">
+    <a href="#build">組み立て</a><a href="#parts">印刷部品</a><a href="#drawings">図面</a><a href="#downloads">データ</a>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="tribute-title">
+    <div class="artifact-frame">
+      <img src="media/finished.png" width="1200" height="1200" alt="赤いM帽子、黒い猫の耳、青い目とつなぎ、緑の足場を立体化した記念楯の完成形">
+      <span class="image-note">CADから作成した完成像 / 実物の写真ではありません</span>
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">PRINT · ASSEMBLE · KEEP</p>
+      <h1 id="tribute-title">@YOUR-USERNAME</h1>
+      <p class="message">Same icon, New adventures</p>
+      <a class="profile" href="https://github.com/YOUR-USERNAME">github.com/YOUR-USERNAME ↗</a>
+      <p class="lead">いつものキャラクターを、<br>色を重ねて組み立てる記念楯に。</p>
+      <p>新しく設計した段差レリーフ。赤い帽子から小さな瞳まで、7色の単色部品を組み合わせます。言葉は、本体に刻まず交換できるカードへ。</p>
+      <dl class="spec-line">
+        <div><dt>完成寸法 / mm</dt><dd>176 × 96 × 201.6</dd></div>
+        <div><dt>組込部品</dt><dd>20種類 / 29個</dd></div>
+        <div><dt>製作方法</dt><dd>PLA / AMS不要</dd></div>
+      </dl>
+      <a class="button primary" href="docs/howto.ja.html">日本語の作り方を読む <span aria-hidden="true">→</span></a>
+      <a class="text-link" href="downloads/print-pack.zip" download>印刷パックをダウンロード</a>
+    </div>
+  </section>
+  <aside class="notice" aria-label="製作前の重要事項">
+    <strong>最初に試験片。</strong>
+    <p>デジタル形状は検査済みですが、市販ブロックとの保持力・実物の転倒・接着強度は未試験です。
+      色部品は位置決め＋少量の接着。カード・ドック・背板と台座の接続は接着しません。<a href="docs/validation.ja.html">検証範囲を見る</a></p>
+  </aside>
+  <section class="build-section" id="build" aria-labelledby="build-title">
+    <div class="section-heading"><p class="eyebrow">ASSEMBLY SEQUENCE</p><h2 id="build-title">色が重なると、あの顔になる。</h2></div>
+    <div class="build-layout">
+      <video controls preload="metadata" poster="media/finished.png" width="640" height="640" aria-label="記念楯の組立アニメーション、日本語字幕付き">
+        <source src="media/assembly.mp4" type="video/mp4">
+        <track kind="captions" src="media/assembly.ja.vtt" srclang="ja" label="日本語" default>
+        <a href="media/assembly.mp4">組立動画MP4をダウンロード</a>
+      </video>
+      <div class="assembly-copy">
+        <p>実Blenderシーンの21秒の組立説明です。実物の作業では背板を寝かせて色部品を接着し、完全硬化後に台座へ戻します。</p>
+        <ol class="sequence">
+          <li><b>接続を試す</b><span>使用PLAで試験片を印刷。最も緩い候補から。</span></li>
+          <li><b>色を重ねる</b><span>足場、服、輪郭、顔、目、帽子。部品IDと図を照合。</span></li>
+          <li><b>言葉を差し込む</b><span>独立カードを上から。交換する部品には接着しない。</span></li>
+          <li><b>机の上で確かめる</b><span>がたつき・傾き・脱落を確認。実物試験はここから。</span></li>
+        </ol>
+        <p class="small">字幕は動画のCCから表示できます。動画の速度は印刷時間・接着硬化時間ではありません。
+          黒い文字は、任意の手動フィラメント交換をした場合の表示例です。</p>
+        <a class="text-link" href="media/assembly.mp4" download>動画を保存</a>
+        <a class="text-link" href="drawings/exploded.svg">分解図とIDを見る</a>
+      </div>
+    </div>
+  </section>
+  <section id="parts" aria-labelledby="parts-title">
+    <div class="section-heading"><p class="eyebrow">ONE COLOUR AT A TIME</p><h2 id="parts-title">色ごとの製作トレイ。</h2>
+      <p>単色で印刷し、袋やトレイをIDで分けます。STLはmm・100%のまま。カードは0.2 mmノズルで。</p></div>
+    <div class="palette-rack" aria-label="必要な7色"><div class="swatch" style="--swatch:#202932">黒<span>6 PARTS</span></div><div class="swatch" style="--swatch:#F3F0E4">白<span>9 PARTS</span></div><div class="swatch" style="--swatch:#F4C59B">肌色<span>3 PARTS</span></div><div class="swatch" style="--swatch:#DF303B">赤<span>3 PARTS</span></div><div class="swatch" style="--swatch:#187DD0">青<span>3 PARTS</span></div><div class="swatch" style="--swatch:#269B5C">緑<span>1 PARTS</span></div><div class="swatch" style="--swatch:#9AD69E">薄緑<span>4 PARTS</span></div></div>
+    <div class="part-batches"><details class="color-batch" open><summary><i class="color-dot" style="--swatch:#202932" aria-hidden="true"></i>黒<span>5種類 / 組込6個</span></summary><div class="table-wrap"><table><thead><tr><th scope="col">ID</th><th scope="col">部品 / 印刷時の最大外形</th><th scope="col">個数</th><th scope="col">工程</th><th scope="col">保存</th></tr></thead><tbody><tr data-part="T01"><td>T01</td><td>台座・背板ソケット・共通24スタッド<small>176.00 × 96.00 × 41.60 mm</small></td><td>1</td><td>1</td><td><a href="meshes/T01.stl" download>STL</a> · <a href="native/parts/T01.step" download>STEP</a></td></tr><tr data-part="T07"><td>T07</td><td>猫の耳・輪郭・支持付きひげ<small>144.00 × 72.00 × 4.20 mm</small></td><td>1</td><td>5</td><td><a href="meshes/T07.stl" download>STL</a> · <a href="native/parts/T07.step" download>STEP</a></td></tr><tr data-part="T11"><td>T11</td><td>黒い瞳<small>3.20 × 8.00 × 1.20 mm</small></td><td>2</td><td>7</td><td><a href="meshes/T11.stl" download>STL</a> · <a href="native/parts/T11.step" download>STEP</a></td></tr><tr data-part="T12"><td>T12</td><td>口ひげ<small>24.00 × 8.00 × 1.60 mm</small></td><td>1</td><td>7</td><td><a href="meshes/T12.stl" download>STL</a> · <a href="native/parts/T12.step" download>STEP</a></td></tr><tr data-part="MSG-DOCK"><td>MSG-DOCK</td><td>共通メッセージドック<small>95.80 × 15.80 × 9.60 mm</small></td><td>1</td><td>9</td><td><a href="meshes/MSG-DOCK.stl" download>STL</a> · <a href="native/parts/MSG-DOCK.step" download>STEP</a></td></tr></tbody></table></div></details><details class="color-batch"><summary><i class="color-dot" style="--swatch:#F3F0E4" aria-hidden="true"></i>白<span>6種類 / 組込9個</span></summary><div class="table-wrap"><table><thead><tr><th scope="col">ID</th><th scope="col">部品 / 印刷時の最大外形</th><th scope="col">個数</th><th scope="col">工程</th><th scope="col">保存</th></tr></thead><tbody><tr data-part="T02"><td>T02</td><td>背板と差込舌<small>160.00 × 192.00 × 7.40 mm</small></td><td>1</td><td>2</td><td><a href="meshes/T02.stl" download>STL</a> · <a href="native/parts/T02.step" download>STEP</a></td></tr><tr data-part="T09"><td>T09</td><td>目の白い土台<small>16.00 × 24.00 × 2.40 mm</small></td><td>2</td><td>7</td><td><a href="meshes/T09.stl" download>STL</a> · <a href="native/parts/T09.step" download>STEP</a></td></tr><tr data-part="T13"><td>T13</td><td>手<small>12.00 × 12.00 × 3.20 mm</small></td><td>2</td><td>4</td><td><a href="meshes/T13.stl" download>STL</a> · <a href="native/parts/T13.step" download>STEP</a></td></tr><tr data-part="T15"><td>T15</td><td>帽子の白い丸<small>16.00 × 16.00 × 2.40 mm</small></td><td>1</td><td>8</td><td><a href="meshes/T15.stl" download>STL</a> · <a href="native/parts/T15.step" download>STEP</a></td></tr><tr data-part="T18"><td>T18</td><td>つなぎのボタン<small>3.20 × 3.20 × 1.20 mm</small></td><td>2</td><td>4</td><td><a href="meshes/T18.stl" download>STL</a> · <a href="native/parts/T18.step" download>STEP</a></td></tr><tr data-part="MSG-CARD"><td>MSG-CARD</td><td>交換文字カード<small>88.00 × 24.00 × 2.60 mm</small></td><td>1</td><td>10</td><td><a href="meshes/MSG-CARD.stl" download>STL</a> · <a href="native/parts/MSG-CARD.step" download>STEP</a></td></tr></tbody></table></div></details><details class="color-batch"><summary><i class="color-dot" style="--swatch:#F4C59B" aria-hidden="true"></i>肌色<span>2種類 / 組込3個</span></summary><div class="table-wrap"><table><thead><tr><th scope="col">ID</th><th scope="col">部品 / 印刷時の最大外形</th><th scope="col">個数</th><th scope="col">工程</th><th scope="col">保存</th></tr></thead><tbody><tr data-part="T06"><td>T06</td><td>足<small>16.00 × 8.00 × 3.20 mm</small></td><td>2</td><td>4</td><td><a href="meshes/T06.stl" download>STL</a> · <a href="native/parts/T06.step" download>STEP</a></td></tr><tr data-part="T08"><td>T08</td><td>顔と鼻<small>88.00 × 32.00 × 5.60 mm</small></td><td>1</td><td>6</td><td><a href="meshes/T08.stl" download>STL</a> · <a href="native/parts/T08.step" download>STEP</a></td></tr></tbody></table></div></details><details class="color-batch"><summary><i class="color-dot" style="--swatch:#DF303B" aria-hidden="true"></i>赤<span>3種類 / 組込3個</span></summary><div class="table-wrap"><table><thead><tr><th scope="col">ID</th><th scope="col">部品 / 印刷時の最大外形</th><th scope="col">個数</th><th scope="col">工程</th><th scope="col">保存</th></tr></thead><tbody><tr data-part="T04"><td>T04</td><td>赤い服と腕<small>84.00 × 44.00 × 3.20 mm</small></td><td>1</td><td>4</td><td><a href="meshes/T04.stl" download>STL</a> · <a href="native/parts/T04.step" download>STEP</a></td></tr><tr data-part="T14"><td>T14</td><td>赤い段差帽子<small>120.00 × 32.00 × 4.80 mm</small></td><td>1</td><td>8</td><td><a href="meshes/T14.stl" download>STL</a> · <a href="native/parts/T14.step" download>STEP</a></td></tr><tr data-part="T16"><td>T16</td><td>帽子のM<small>10.00 × 10.00 × 1.60 mm</small></td><td>1</td><td>8</td><td><a href="meshes/T16.stl" download>STL</a> · <a href="native/parts/T16.step" download>STEP</a></td></tr></tbody></table></div></details><details class="color-batch"><summary><i class="color-dot" style="--swatch:#187DD0" aria-hidden="true"></i>青<span>2種類 / 組込3個</span></summary><div class="table-wrap"><table><thead><tr><th scope="col">ID</th><th scope="col">部品 / 印刷時の最大外形</th><th scope="col">個数</th><th scope="col">工程</th><th scope="col">保存</th></tr></thead><tbody><tr data-part="T05"><td>T05</td><td>青いつなぎ<small>40.00 × 40.00 × 4.80 mm</small></td><td>1</td><td>4</td><td><a href="meshes/T05.stl" download>STL</a> · <a href="native/parts/T05.step" download>STEP</a></td></tr><tr data-part="T10"><td>T10</td><td>青い虹彩<small>8.00 × 14.00 × 1.60 mm</small></td><td>2</td><td>7</td><td><a href="meshes/T10.stl" download>STL</a> · <a href="native/parts/T10.step" download>STEP</a></td></tr></tbody></table></div></details><details class="color-batch"><summary><i class="color-dot" style="--swatch:#269B5C" aria-hidden="true"></i>緑<span>1種類 / 組込1個</span></summary><div class="table-wrap"><table><thead><tr><th scope="col">ID</th><th scope="col">部品 / 印刷時の最大外形</th><th scope="col">個数</th><th scope="col">工程</th><th scope="col">保存</th></tr></thead><tbody><tr data-part="T03"><td>T03</td><td>緑の足場<small>112.00 × 16.00 × 3.20 mm</small></td><td>1</td><td>3</td><td><a href="meshes/T03.stl" download>STL</a> · <a href="native/parts/T03.step" download>STEP</a></td></tr></tbody></table></div></details><details class="color-batch"><summary><i class="color-dot" style="--swatch:#9AD69E" aria-hidden="true"></i>薄緑<span>1種類 / 組込4個</span></summary><div class="table-wrap"><table><thead><tr><th scope="col">ID</th><th scope="col">部品 / 印刷時の最大外形</th><th scope="col">個数</th><th scope="col">工程</th><th scope="col">保存</th></tr></thead><tbody><tr data-part="T17"><td>T17</td><td>足場の丸タイル<small>8.00 × 8.00 × 1.60 mm</small></td><td>4</td><td>3</td><td><a href="meshes/T17.stl" download>STL</a> · <a href="native/parts/T17.step" download>STEP</a></td></tr></tbody></table></div></details></div>
+    <details class="coupon-batch"><summary>先に刷る試験片 / 12種類 <span>本体への組込数には含みません</span></summary>
+      <p>試験片図の黒は便宜上の表示色です。接続相手と同じ色・銘柄のPLAで試してください。
+        T90は台座、T91は背板の材料を使います。<a href="drawings/fit-coupons.svg">試験片図</a></p>
+      <div class="table-wrap"><table><thead><tr><th scope="col">ID</th><th scope="col">部品 / 印刷時の最大外形</th><th scope="col">個数</th><th scope="col">工程</th><th scope="col">保存</th></tr></thead><tbody><tr data-part="FIT-M-D470"><td>FIT-M-D470</td><td>共通嵌合試験片<small>31.80 × 15.80 × 5.00 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/FIT-M-D470.stl" download>STL</a> · <a href="native/parts/FIT-M-D470.step" download>STEP</a></td></tr><tr data-part="FIT-M-D480"><td>FIT-M-D480</td><td>共通嵌合試験片<small>31.80 × 15.80 × 5.00 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/FIT-M-D480.stl" download>STL</a> · <a href="native/parts/FIT-M-D480.step" download>STEP</a></td></tr><tr data-part="FIT-M-D490"><td>FIT-M-D490</td><td>共通嵌合試験片<small>31.80 × 15.80 × 5.00 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/FIT-M-D490.stl" download>STL</a> · <a href="native/parts/FIT-M-D490.step" download>STEP</a></td></tr><tr data-part="FIT-F-CM04"><td>FIT-F-CM04</td><td>共通嵌合試験片<small>31.80 × 15.80 × 9.60 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/FIT-F-CM04.stl" download>STL</a> · <a href="native/parts/FIT-F-CM04.step" download>STEP</a></td></tr><tr data-part="FIT-F-CP00"><td>FIT-F-CP00</td><td>共通嵌合試験片<small>31.80 × 15.80 × 9.60 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/FIT-F-CP00.stl" download>STL</a> · <a href="native/parts/FIT-F-CP00.step" download>STEP</a></td></tr><tr data-part="FIT-F-CP04"><td>FIT-F-CP04</td><td>共通嵌合試験片<small>31.80 × 15.80 × 9.60 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/FIT-F-CP04.stl" download>STL</a> · <a href="native/parts/FIT-F-CP04.step" download>STEP</a></td></tr><tr data-part="FIT-F-CP08"><td>FIT-F-CP08</td><td>共通嵌合試験片<small>31.80 × 15.80 × 9.60 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/FIT-F-CP08.stl" download>STL</a> · <a href="native/parts/FIT-F-CP08.step" download>STEP</a></td></tr><tr data-part="FIT-F-CP12"><td>FIT-F-CP12</td><td>共通嵌合試験片<small>31.80 × 15.80 × 9.60 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/FIT-F-CP12.stl" download>STL</a> · <a href="native/parts/FIT-F-CP12.step" download>STEP</a></td></tr><tr data-part="T90"><td>T90</td><td>背板ソケット試験片 A–D<small>64.00 × 24.00 × 12.80 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/T90.stl" download>STL</a> · <a href="native/parts/T90.step" download>STEP</a></td></tr><tr data-part="T91"><td>T91</td><td>背板厚6.4の試験舌<small>14.00 × 24.00 × 6.40 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/T91.stl" download>STL</a> · <a href="native/parts/T91.step" download>STEP</a></td></tr><tr data-part="T92"><td>T92</td><td>色タイル位置決め試験台<small>20.00 × 12.00 × 4.20 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/T92.stl" download>STL</a> · <a href="native/parts/T92.step" download>STEP</a></td></tr><tr data-part="T93"><td>T93</td><td>色タイル試験蓋<small>20.00 × 12.00 × 2.40 mm</small></td><td>試験1</td><td>0 / 試験</td><td><a href="meshes/T93.stl" download>STL</a> · <a href="native/parts/T93.step" download>STEP</a></td></tr></tbody></table></div>
+    </details>
+    <a class="text-link" href="docs/bom.csv" download>色・個数・配置・工程をCSVで保存</a>
+  </section>
+  <section id="drawings" aria-labelledby="drawings-title">
+    <div class="section-heading"><p class="eyebrow">DRAWN FROM THE SAME CAD</p><h2 id="drawings-title">図と部品を、同じ番号で。</h2>
+      <p>保存したCADから書き出した形状を投影しています。画面や紙の自動縮尺ではなく、mmの寸法値を使います。</p></div>
+    <div class="drawing-grid"><a class="drawing-link" href="drawings/assembly-isometric.svg"><img src="media/drawings/assembly-isometric.png" width="420" height="297" loading="lazy" alt="完成図"><b>完成図</b><span>A3 / SVG / CAD ASSEMBLY</span></a><a class="drawing-link" href="drawings/three-views.svg"><img src="media/drawings/three-views.png" width="420" height="297" loading="lazy" alt="三面図"><b>三面図</b><span>A3 / SVG / FRONT / TOP / RIGHT</span></a><a class="drawing-link" href="drawings/exploded.svg"><img src="media/drawings/exploded.png" width="420" height="297" loading="lazy" alt="分解図と部品ID"><b>分解図と部品ID</b><span>A3 / SVG / EXPLODED VIEW</span></a><a class="drawing-link" href="drawings/part-dimensions.svg"><img src="media/drawings/part-dimensions.png" width="420" height="297" loading="lazy" alt="色別部品・最大外形"><b>色別部品・最大外形</b><span>A3 / SVG / PART DIMENSIONS</span></a><a class="drawing-link" href="drawings/interface-details.svg"><img src="media/drawings/interface-details.png" width="420" height="297" loading="lazy" alt="接続・隙間・最小形状"><b>接続・隙間・最小形状</b><span>A3 / SVG / INTERFACE DETAILS</span></a><a class="drawing-link" href="drawings/fit-coupons.svg"><img src="media/drawings/fit-coupons.png" width="420" height="297" loading="lazy" alt="本体より先に刷る試験片"><b>本体より先に刷る試験片</b><span>A3 / SVG / FIT COUPONS</span></a></div>
+  </section>
+  <section id="downloads" class="download-section" aria-labelledby="downloads-title">
+    <div class="section-heading"><p class="eyebrow">THE WORKING FILES</p><h2 id="downloads-title">飾る形も、作るデータも。</h2>
+      <p>実際に保存・再読込したネイティブデータです。FreeCADは組立BRep、Blenderは組立キーフレームを保持します。</p></div>
+    <div class="download-grid"><a class="download-item" href="native/character-tribute.FCStd" download><span><b>FreeCAD完成モデル</b><small>29個の実形状・組立配置</small></span><span class="file-type">FCSTD<br>683 KB ↓</span></a><a class="download-item" href="native/character-tribute.step" download><span><b>組立STEP</b><small>CAD交換用・mm</small></span><span class="file-type">STEP<br>4.0 MB ↓</span></a><a class="download-item" href="media/character-assembly.blend" download><span><b>Blender組立シーン</b><small>実キーフレーム・カタログと同じ配置</small></span><span class="file-type">BLEND<br>3.3 MB ↓</span></a><a class="download-item" href="media/model.glb" download><span><b>標準3Dプレビュー</b><small>glTF 2.0 / m / 印刷にはSTLを使用</small></span><span class="file-type">GLB<br>2.5 MB ↓</span></a><a class="download-item" href="media/assembly.mp4" download><span><b>組立動画</b><small>21秒・日本語字幕付き</small></span><span class="file-type">MP4<br>510 KB ↓</span></a><a class="download-item" href="downloads/print-pack.zip" download><span><b>印刷STLと部品表の一括パック</b><small>本体20種類＋試験片12種類・色別BOM</small></span><span class="file-type">ZIP<br>826 KB ↓</span></a></div>
+    <div class="reference-links"><a href="docs/reproduce.ja.html">再生成の手順</a><a href="docs/validation.ja.html">検証と未確認事項</a><a href="sources.json">寸法の出典</a><a href="manifest.json">統合用manifest</a></div>
+  </section>
+</main>
+<footer>
+  <b>@YOUR-USERNAME / Same icon, New adventures</b>
+  <p>ユーザー提供のキャラクター画像から作った、新しい個人記念品の設計です。元写真・人物・バッグは同梱していません。
+    任天堂・LEGO・GitHubの公認品ではなく、子ども向け玩具・防護具の認証もありません。</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+[
+  {
+    "step": 1,
+    "first_frame": 1,
+    "last_frame": 24,
+    "title": "STAND",
+    "caption_ja": "T01 台座。実物の作業では先に嵌合試験片を確認します。"
+  },
+  {
+    "step": 2,
+    "first_frame": 25,
+    "last_frame": 60,
+    "title": "BACKBOARD",
+    "caption_ja": "T02 背板の仮合わせ。色部品の接着は台座から外し、平らに寝かせて行います。"
+  },
+  {
+    "step": 3,
+    "first_frame": 61,
+    "last_frame": 116,
+    "title": "GREEN PLATFORM",
+    "caption_ja": "T03 緑の足場、T17 薄緑の丸タイル。接着剤はごく少量です。"
+  },
+  {
+    "step": 4,
+    "first_frame": 117,
+    "last_frame": 174,
+    "title": "CLOTHES AND HANDS",
+    "caption_ja": "T04 赤い服、T05 つなぎ、T06 足、T13 手、T18 ボタン。"
+  },
+  {
+    "step": 5,
+    "first_frame": 175,
+    "last_frame": 210,
+    "title": "CAT SILHOUETTE",
+    "caption_ja": "T07 耳・輪郭・ひげは一体の厚い支持付き部品です。"
+  },
+  {
+    "step": 6,
+    "first_frame": 211,
+    "last_frame": 246,
+    "title": "FACE",
+    "caption_ja": "T08 顔と鼻。背面の位置決め穴を合わせます。"
+  },
+  {
+    "step": 7,
+    "first_frame": 247,
+    "last_frame": 318,
+    "title": "EYES AND MOUSTACHE",
+    "caption_ja": "T09 白目、T10 青い虹彩、T11 瞳、T12 口ひげを順に重ねます。"
+  },
+  {
+    "step": 8,
+    "first_frame": 319,
+    "last_frame": 372,
+    "title": "RED CAP",
+    "caption_ja": "T14 帽子、T15 白い丸、T16 M。硬化後に背板を台座へ戻します。"
+  },
+  {
+    "step": 9,
+    "first_frame": 373,
+    "last_frame": 402,
+    "title": "REMOVABLE DOCK",
+    "caption_ja": "MSG-DOCK を共通8mmピッチのスタッドへ。無理押し・接着はしません。"
+  },
+  {
+    "step": 10,
+    "first_frame": 403,
+    "last_frame": 440,
+    "title": "REPLACEABLE MESSAGE",
+    "caption_ja": "MSG-CARD を上から差し込みます。動画の黒文字は任意の手動色替え例です。"
+  },
+  {
+    "step": 11,
+    "first_frame": 441,
+    "last_frame": 504,
+    "title": "SAME ICON, NEW ADVENTURES",
+    "caption_ja": "完成形。実物の保持力・転倒確認は未実施です。印刷・接着硬化時間を表す動画ではありません。"
+  }
+]

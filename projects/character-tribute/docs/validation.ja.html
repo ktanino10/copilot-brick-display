@@ -1,0 +1,87 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>検証範囲と残る物理試験</title><link rel="stylesheet" href="../site.css"></head><body><main class="guide"><nav class="guide-nav" aria-label="パンくず"><a href="../index.html">← @YOUR-USERNAME 製作ページ</a></nav><h1 id="_1">検証範囲と残る物理試験</h1>
+<p>これはデジタル試作の検証記録です。実機の製造承認、玩具認証、互換性保証ではありません。
+独立した機械レビューは、共通部品と元の3案の統合担当が同じ固定スナップショットで調整します。
+この文書で自己設計の独立承認を宣言しません。</p>
+<table>
+<thead>
+<tr>
+<th>要件</th>
+<th>実施した確認</th>
+<th>証拠</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本物のFreeCAD完成モデル</td>
+<td>保存後、別の純Appプロセスで29個の形状・体積・配置を再読込</td>
+<td><a href="../validation/native.json">native.json</a></td>
+</tr>
+<tr>
+<td>STEPの互換出力</td>
+<td>組立STEPを実際に再読込。29 solid、体積照合</td>
+<td><a href="../validation/native.json">native.json</a></td>
+</tr>
+<tr>
+<td>20cm級、8mm固定ピッチ</td>
+<td>176 × 96 × 201.6 mmを実形状で確認。24個の円筒面から径・ピッチを確認</td>
+<td><a href="../validation/assembly.json">assembly.json</a></td>
+</tr>
+<tr>
+<td>印刷可能な閉体</td>
+<td>32種類を独立STLパーサーで検査。各辺2面、向き、頂点linkの一周性、単一shell、正の符号付き体積</td>
+<td><a href="../validation/meshes.json">meshes.json</a></td>
+</tr>
+<tr>
+<td>ベッドへの収まり</td>
+<td>各STLのXY外形＋片側8mmブリム、Zが256mm範囲内。湾曲部のbounds比較は宣言した0.05mmメッシュ偏差を考慮</td>
+<td><a href="../validation/meshes.json">meshes.json</a></td>
+</tr>
+<tr>
+<td>浮遊・干渉・挿入</td>
+<td>全406組のBRep共通体積、28接点、0.1/0.5/1/4/16/40mmの挿入方向サンプル、完成レリーフの上抜き</td>
+<td><a href="../validation/assembly.json">assembly.json</a></td>
+</tr>
+<tr>
+<td>カードは交換式</td>
+<td>溝88.4 × 2.4、カード88 × 2.0を実際の平面から測定。上抜き経路に干渉なし</td>
+<td><a href="../validation/assembly.json">assembly.json</a></td>
+</tr>
+<tr>
+<td>細い文字</td>
+<td>実カードSTEPの文字頂面で独立島の外形と平行な直線ストロークを測定。最小0.4812 / 0.4105mm。0.2mmノズルを案内</td>
+<td><a href="../validation/assembly.json">assembly.json</a></td>
+</tr>
+<tr>
+<td>Blenderが同じ模型</td>
+<td>.blendを再読込、29配置と完成寸法・カタログhashを確認</td>
+<td><a href="../validation/blender.json">blender.json</a></td>
+</tr>
+<tr>
+<td>本物の組立動画</td>
+<td>504フレーム、24fps、640×640、21秒のH.264。全フレームdecode、日本語mov_text字幕＋WebVTT</td>
+<td><a href="../validation/video.json">video.json</a></td>
+</tr>
+<tr>
+<td>公開内容</td>
+<td>写真・人物・バッグ・個人パスを含めない。BlenderのFile Browser保存パスはAPIで相対化、PNGの文字メタデータを除去</td>
+<td><a href="../scripts/artifact_metadata.py">生成コード</a></td>
+</tr>
+</tbody>
+</table>
+<p>CADでは接着層の厚み・接着強度・樹脂のたわみ・手指の動き・プリンターの誤差を再現していません。
+「干渉なし」は、ある隙間で保持する／着脱しやすい／壊れないという主張ではありません。
+挿入経路は、開いた直線方向のスロットと指定した位置でのBRep検査です。全連続時刻の弾性・人間工学シミュレーションではありません。</p>
+<p>均質な完全ソリッドの幾何学的重心は、およそX−0.002、Y3.961、Z67.500 mm。
+支持多角形の最寄り辺までの投影余裕は44.039 mmです。
+これは実際にスライスした充填率・密度・接着剤の重量を反映した値ではありません。
+試験で測った重量・印刷時間・保持力・転倒角はありません。</p>
+<h2 id="_2">実物で残る確認</h2>
+<ol>
+<li>使用PLA、ノズル、層高、温度、補正を記録して試験片を印刷。</li>
+<li>市販品→印刷品、印刷品→市販品、印刷品同士の3方向で、軽い着脱・白化・割れ・摩耗を確認。</li>
+<li>背板の長い差込部、台座の反り、カードの抜き差しを本番部品でも仮合わせ。</li>
+<li>小色部品の接着を端材で確認し、完全硬化後の脱落・変色を確認。</li>
+<li>完成品を平らな机で確認。机の端を避け、異常に傾く・ぐらつく場合は使わない。</li>
+</ol>
+<p>結果が出るまでは <code>physical_fit_tested: false</code> として扱います。
+寸法の元資料、FDMの候補補正、実物の測定結果を混同しないでください。</p></main></body></html>
