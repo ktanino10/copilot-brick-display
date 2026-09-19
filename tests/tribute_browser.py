@@ -56,9 +56,23 @@ def verify_tribute(browser, root, base, screenshots):
             assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
         page.screenshot(path=str(screenshots / "tribute-mobile.png"), full_page=True, timeout=120000)
         for guide in ("howto.ja", "validation.ja", "reproduce.ja", "t2-change-review.ja"):
+            print("TRIBUTE_GUIDE", guide, flush=True)
             page.goto(base + f"tribute/docs/{guide}.html", wait_until="networkidle")
             expect(page.get_by_role("heading", level=1)).to_have_count(1)
-            assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
+            dimensions = page.evaluate("""() => ({
+              width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
+              overflowing: Array.from(document.querySelectorAll('main *')).filter(element => {
+                const box = element.getBoundingClientRect();
+                return box.width && (box.right > innerWidth + 1 || box.left < -1);
+              }).slice(0, 8).map(element => ({
+                tag: element.tagName, class: element.className,
+                text: element.textContent.slice(0, 100), width: element.getBoundingClientRect().width
+              }))
+            })""")
+            if dimensions["scrollWidth"] > dimensions["width"] + 1:
+                print("TRIBUTE_GUIDE_OVERFLOW", guide, dimensions, flush=True)
+                page.screenshot(path=str(screenshots / f"tribute-guide-{guide}-failure.png"), full_page=True)
+                raise AssertionError(f"Guide overflow: {guide} {dimensions}")
         assert not errors and not failures, (errors, failures)
         report = {
             "status": "PASS_REAL_BROWSER", "revision": "T2-R1", "browser_tested": True,
