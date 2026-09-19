@@ -29,7 +29,11 @@ jobs:
           python -m pip install -r requirements.txt
           python -m playwright install --with-deps chromium --only-shell
       - name: Verify real browser behavior before deployment
-        run: python tests/run_web.py
+        env:
+          BROWSER_PATH: /usr/bin/google-chrome
+        run: |
+          google-chrome --version
+          python tests/run_web.py
       - name: Preserve browser evidence
         if: always()
         uses: actions/upload-artifact@v4

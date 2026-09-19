@@ -84,6 +84,14 @@ with sync_playwright() as playwright:
         page.locator("#assembly").fill(str(len(model["steps"])))
         expect(page.locator("#assembly-value")).to_have_text("完成")
         print("VIDEO_BEGIN", model["id"], flush=True)
+        page.locator("#assembly-video").scroll_into_view_if_needed()
+        page.locator("#assembly-video").click()
+        print("VIDEO_STATE", page.locator("#assembly-video").evaluate("""video => ({
+          ready: video.readyState, network: video.networkState, paused: video.paused,
+          duration: Number.isFinite(video.duration) ? video.duration : null,
+          h264: video.canPlayType('video/mp4; codecs="avc1.640028"'),
+          source: video.currentSrc, error: video.error?.message || null
+        })"""), flush=True)
         page.locator("#assembly-video").evaluate("""(video) => {
           video.muted = true;
           delete video.dataset.playError;
