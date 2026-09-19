@@ -6,7 +6,7 @@
   "scripts": {
     "vendor": "node scripts/vendor.mjs",
     "test:web": ".venv/bin/python tests/web.py",
-    "test": "node tests/static.mjs"
+    "test": "node tests/motion.mjs && node tests/static.mjs"
   },
   "dependencies": {
     "three": "0.180.0"

@@ -92,11 +92,17 @@ with sync_playwright() as playwright:
     page.wait_for_function("document.querySelector('#guide-drawing').complete && document.querySelector('#guide-drawing').naturalWidth > 0")
     expect(page.locator("#guide-drawing")).to_have_attribute("src", "drawings/C/step-28.svg")
     check_no_overflow(page)
+    context.close()
     mobile = browser.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=1, reduced_motion="reduce")
     mobile_page = mobile.new_page()
     mobile_page.on("pageerror", lambda error: errors.append(str(error)))
     mobile_page.goto(BASE + "?model=A", wait_until="networkidle", timeout=180000)
-    expect(mobile_page.locator("#viewport")).to_have_attribute("data-model", "A", timeout=180000)
+    try:
+        expect(mobile_page.locator("#viewport")).to_have_attribute("data-model", "A", timeout=180000)
+    except AssertionError:
+        print("Mobile viewer diagnostic:", mobile_page.locator("#viewer-error").text_content(), errors, failures)
+        mobile_page.screenshot(path=str(OUT / "mobile-viewer-failure.png"), full_page=True)
+        raise
     mobile_page.screenshot(path=str(OUT / "mobile.png"), full_page=True)
     check_no_overflow(mobile_page)
     assert not errors, errors

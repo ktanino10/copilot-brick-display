@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/OrbitControls.js';
 import { STLLoader } from './vendor/STLLoader.js';
+import { explosionOffset } from './assembly-motion.js';
 
 const $ = (selector) => document.querySelector(selector);
 const format = (values) => values.map((n) => Number(n.toFixed(2))).join(' × ');
@@ -227,8 +228,8 @@ class PortraitViewer {
       const item = mesh.userData.instance;
       mesh.visible = item.step <= state.stage;
       mesh.position.fromArray(item.position);
-      if (item.part === 'MSG-CARD') mesh.position.y -= state.explosion * 40;
-      else mesh.position.z += state.explosion * (item.step - 1) * 3;
+      const offset = explosionOffset(item, state.model, state.catalog.message, state.explosion);
+      mesh.position.add(new THREE.Vector3(...offset));
     }
     const selected = this.meshes.find((mesh) => mesh.name === state.selected);
     this.selection.visible = !!selected?.visible;
