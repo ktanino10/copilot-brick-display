@@ -124,7 +124,7 @@ with sync_playwright() as playwright:
     check_no_overflow(page)
     context.close()
     print("MOBILE_BEGIN", flush=True)
-    mobile = browser.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=1, reduced_motion="reduce")
+    mobile = browser.new_context(viewport={"width": 375, "height": 844}, device_scale_factor=1, reduced_motion="reduce")
     mobile_page = mobile.new_page()
     mobile_page.on("pageerror", lambda error: errors.append(str(error)))
     mobile_page.goto(BASE + "?model=A", wait_until="networkidle", timeout=180000)

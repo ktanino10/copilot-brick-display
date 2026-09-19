@@ -9,6 +9,9 @@ from playwright.sync_api import expect
 
 def verify_exploded(page, model, screenshots, mobile=False):
     label = "mobile" if mobile else "desktop"
+    viewport_width = page.evaluate("innerWidth")
+    if mobile:
+        assert viewport_width == 375, "The phone acceptance gate must use the requested 375-pixel width."
     page.locator("#assembly").fill(str(len(model["steps"])))
     page.locator('[data-view="front"]').click()
     page.locator("#explode").fill("0")
@@ -62,5 +65,5 @@ def verify_exploded(page, model, screenshots, mobile=False):
         page.locator("#explode").fill("100")
         assert float(page.locator("#viewport").get_attribute("data-max-clip-coordinate")) <= 1.001
         page.locator("#explode").fill("0")
-    return {"model": model["id"], "viewport": label, "states": states,
+    return {"model": model["id"], "viewport": label, "viewport_width_px": viewport_width, "states": states,
             "keyboard_home_end": True, "return_to_zero_exact": True, "assembly_filter_consistent": True}
