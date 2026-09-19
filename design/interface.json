@@ -1,0 +1,57 @@
+{
+  "id": "BRICK-8-MSG-SLOT-1",
+  "revision": "1.0",
+  "units": "mm",
+  "status": "digital_prototype_physical_fit_unverified",
+  "brick": {
+    "pitch": 8.0,
+    "brick_height": 9.6,
+    "plate_height": 3.2,
+    "body_gap": 0.2,
+    "reference_stud_diameter": 4.8,
+    "stud_diameter_correction": 0.0,
+    "stud_height": 1.8,
+    "stud_lead_in": 0.25,
+    "female_radial_clearance": 0.04,
+    "socket_lead_in": 0.2,
+    "socket_lead_in_height": 0.3,
+    "roof": 1.6,
+    "thin_plate_roof": 1.0,
+    "tube_inner_diameter": 3.2,
+    "roof_support_rib_width": 1.2
+  },
+  "message": {
+    "lines": [
+      "@YOUR-USERNAME",
+      "Same icon, New adventures",
+      "github.com/YOUR-USERNAME"
+    ],
+    "dock_studs": [
+      12,
+      2
+    ],
+    "dock_height": 9.6,
+    "dock_socket_depth": 2.2,
+    "slot_length": 88.4,
+    "slot_width": 2.4,
+    "slot_depth": 4.8,
+    "slot_center_y": 4.0,
+    "card_width": 88.0,
+    "card_height": 24.0,
+    "card_thickness": 2.0,
+    "text_relief": 0.6,
+    "font": "resources/fonts/B612Mono-Bold.ttf",
+    "text_sizes": [
+      4.0,
+      3.3,
+      2.9
+    ],
+    "text_baselines": [
+      17.6,
+      11.8,
+      6.3
+    ]
+  },
+  "note": "Design candidates, not a LEGO specification or compatibility certification.",
+  "insertion": "Vertical downward; card slides freely into gravity-retained slot."
+}
