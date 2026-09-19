@@ -34,6 +34,7 @@ def check_colors(path):
 
 
 with sync_playwright() as playwright:
+    print("BROWSER_START", flush=True)
     launch = {"headless": True}
     if os.environ.get("BROWSER_PATH"):
         launch["executable_path"] = os.environ["BROWSER_PATH"]
@@ -43,6 +44,7 @@ with sync_playwright() as playwright:
     page.on("pageerror", lambda error: errors.append(str(error)))
     page.on("response", lambda response: failures.append(f"{response.status} {response.url}") if response.status >= 400 else None)
     page.goto(BASE, wait_until="networkidle", timeout=180000)
+    print("BROWSER_PAGE_LOADED", flush=True)
     try:
         expect(page.locator("#viewport")).to_have_class("viewport viewer-ready", timeout=180000)
     except AssertionError:
@@ -58,6 +60,7 @@ with sync_playwright() as playwright:
     page.screenshot(path=str(OUT / "desktop.png"), full_page=True)
     check_no_overflow(page)
     for model in catalog["models"]:
+        print("MODEL_BEGIN", model["id"], flush=True)
         page.locator(f'[data-model="{model["id"]}"]').click()
         expect(page.locator("#viewport")).to_have_attribute("data-model", model["id"], timeout=180000)
         expect(page.locator("#viewport")).to_have_attribute("data-instances", str(model["part_count"]))
@@ -80,10 +83,23 @@ with sync_playwright() as playwright:
         page.locator("#play").click()
         page.locator("#assembly").fill(str(len(model["steps"])))
         expect(page.locator("#assembly-value")).to_have_text("完成")
-        page.locator("#assembly-video").evaluate("(video) => { video.muted = true; return video.play(); }")
-        page.wait_for_function("document.querySelector('#assembly-video').currentTime > 0.1", timeout=30000)
+        print("VIDEO_BEGIN", model["id"], flush=True)
+        page.locator("#assembly-video").evaluate("""(video) => {
+          video.muted = true;
+          delete video.dataset.playError;
+          video.play().catch(error => { video.dataset.playError = error.message; });
+        }""")
+        page.wait_for_function("""() => {
+          const video = document.querySelector('#assembly-video');
+          return video.currentTime > 0.1 || video.error || video.dataset.playError;
+        }""", timeout=30000)
+        video_state = page.locator("#assembly-video").evaluate("""video => ({
+          time: video.currentTime, error: video.error?.message || video.dataset.playError || null
+        })""")
+        assert video_state["time"] > .1 and not video_state["error"], video_state
         page.locator("#assembly-video").evaluate("(video) => video.pause()")
         check_no_overflow(page)
+        print("MODEL_PASS", model["id"], flush=True)
     page.screenshot(path=str(OUT / "C-inspector.png"), full_page=True)
     page.goto(BASE + "guide.html?model=C", wait_until="networkidle")
     expect(page.locator("#guide-model")).to_have_value("C")
@@ -93,6 +109,7 @@ with sync_playwright() as playwright:
     expect(page.locator("#guide-drawing")).to_have_attribute("src", "drawings/C/step-28.svg")
     check_no_overflow(page)
     context.close()
+    print("MOBILE_BEGIN", flush=True)
     mobile = browser.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=1, reduced_motion="reduce")
     mobile_page = mobile.new_page()
     mobile_page.on("pageerror", lambda error: errors.append(str(error)))
