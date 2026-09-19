@@ -1,9 +1,0 @@
-__pycache__/
-*.FCStd1
-*.FCBak
-*.blend1
-media/frames/
-validation/*.log
-.venv-docs/
-validation/previews/
-validation/browser-profile/

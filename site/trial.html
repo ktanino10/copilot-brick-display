@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>7個の段階試作・閉塞を先に確認 — Brick Portrait</title><link rel="stylesheet" href="style.css?rev=4.0-public-template"><link rel="icon" href="icon.svg?rev=4.0-public-template"></head>
+<body><header class="site-header"><a class="brand" href="./?rev=4.0-public-template">BRICK<br>PORTRAIT</a>
+<nav><a href="./?rev=4.0-public-template#workbench">3Dとダウンロード</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="customize.html?rev=4.0-public-template">文字を変える</a></nav></header>
+<main class="document"><div class="doc-nav"><a href="./?rev=4.0-public-template">← 模型のページへ</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="rebuild.html?rev=4.0-public-template">再生成</a></div>
+<h1 id="7">7個だけ、段階を分けて試す</h1>
+<p><strong>これは未スライス・実物未試験の少量選択セットです。7個の確認は、5段完成品や大きい銘板の保持合格ではありません。</strong>
+外観、8 mmピッチ、穴・スタッドの寸法、承認済みSTLは変更していません。
+手順更新：<code>trial-2026-09-19</code>／対象公開形状：<code>4.0-public-template</code>。
+この7個のSTLは文字の汎用化でも変更していません。</p>
+<p><a href="downloads/trial-subset.zip?rev=4.0-public-template">少量試作ZIPを保存</a> ·
+<a href="downloads/fit-coupons.zip?rev=4.0-public-template">既存の嵌合試験片</a> ·
+<a href="downloads/fit-log.csv?rev=4.0-public-template">条件・観察記録CSV</a> · <a href="guide.html?rev=4.0-public-template">全体の作り方</a></p>
+<h2 id="_1">何を参考にしたか</h2>
+<p>別の4 mm小型ピン／受け試験で、部品が小さく扱いにくく、一部の穴が樹脂で塞がったという実使用の報告がありました。
+実際のスライス設定や入力ファイルとの対応は未確定で、ノズル、初層、支持材、材料、形状のどれが原因かは断定できません。
+0.2 mmノズル装着との事前申告も、成功を保証する条件ではありません。</p>
+<p>参照は固定コミット <code>be956ae14d2aac1601a4a2a87f2e49675a36979e</code> の
+<a href="https://github.com/ktanino10/octoprints-brick-kit-downloads/blob/be956ae14d2aac1601a4a2a87f2e49675a36979e/feedback/2026-09-19/README.md">公開フィードバック</a>と
+<a href="https://github.com/ktanino10/octoprints-brick-kit-downloads/blob/be956ae14d2aac1601a4a2a87f2e49675a36979e/README.md">当時の4 mm試験セット説明</a>です。
+その穴径差やノッチ番号を、今回の合格補正値として採用していません。
+元の写真・動画・4 mm形状・私有チャットを複製せず、元モデルのCC BY-NC 4.0を本プロジェクトへ移したものでもありません。</p>
+<h2 id="_2">今回のどこに同種のリスクがあるか</h2>
+<p>今回の本体は固定8 mmピッチのスタッドと、開いた下面の壁・筒・リブで組む構造です。
+別試験の細いピン／独立小穴と同じ形状ではありませんが、造形と手作業の確認は必要です。</p>
+<table>
+<thead>
+<tr>
+<th>今回の対象</th>
+<th>実CAD／STLにある箇所</th>
+<th>印刷・手作業で見る点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BR-02x02-H096</code>、<code>BR-02x04-H096</code></td>
+<td>下面空洞、通常1.6 mmの屋根、1.2 mmの内部リブ、スタッド</td>
+<td>入口が初層で狭まらないか、屋根の最初のブリッジが垂れないか、指でつかんで着脱できるか</td>
+</tr>
+<tr>
+<td>選択案の<code>BASE3-03x…</code>端部</td>
+<td>深い下面とリブ、前面キー溝、最前列の補強帯</td>
+<td>溝や2列目以降の受けが塞がらないか、反りで2個が座らないか。最前列の閉じた補強部は意図した形で、穴として削らない</td>
+</tr>
+<tr>
+<td><code>NP3-KEEPER</code></td>
+<td>15.8 × 15.8 × 3.2 mmの薄い部品。下面受けは後半の1列、前半は中実の上止め</td>
+<td>浅い受けの入口・屋根が塞がらないか、無理なく保持・上抜きできるか。つかみにくければ中止する</td>
+</tr>
+<tr>
+<td>既存<code>FIT-M-*</code>／<code>FIT-F-*</code></td>
+<td>オス外径とメス側クリアランスの候補</td>
+<td>実物との両方向接続を別々に確認。候補値は合格値ではない</td>
+</tr>
+<tr>
+<td>既存<code>NP3-FIT-*</code></td>
+<td>短いキー溝と差込片</td>
+<td>層方向の筋・反り・入口のつぶれを比較。長い銘板と5段の溝整列の代わりにはならない</td>
+</tr>
+</tbody>
+</table>
+<p>1列幅の顔部品（例：<code>BR-01x02-H096</code>）やAの薄い頭頂プレートは、この7個には含めていません。
+後の本体段階でも各種類を最初に1個だけ試し、ID別トレーで仕分け、机に置いた下段を支えて取り付けます。
+大きめの代表ブロックをつかめても、すべての小部品を扱えると推定しません。指で安全につかめなければ追加造形を止めて相談します。</p>
+<p>選択した6種類の現行STLについて、形状ハッシュ・外形・印刷姿勢と、Z=0.2 mmの代表受け位置に
+空間があることをデジタル断面で確認しました。屋根の材料が現れる位置も確認しています。
+これは数点のCAD由来断面であり、スライサーの全経路確認や「実物の穴が必ず開く」という証明ではありません。</p>
+<h2 id="_3">セットの選び方 — 全種類を一度に刷らない</h2>
+<p>ZIPは<strong>既存の6種類のSTLを無変更でまとめたもの</strong>です。A/B/Cの小BOMは選択肢であり、合算しません。
+1案だけ選ぶと、共通5個＋その案の台座端部2個＝<strong>計7個</strong>になります。新しいCADやプリンタ設定入り3MFではありません。</p>
+<table>
+<thead>
+<tr>
+<th>共通部品</th>
+<th style="text-align: right;">個数</th>
+<th>外形 W×D×H / mm</th>
+<th>印刷段階</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BR-02x02-H096</code></td>
+<td style="text-align: right;">2</td>
+<td>15.8 × 15.8 × 11.4</td>
+<td>まず4個の実ブロック</td>
+</tr>
+<tr>
+<td><code>BR-02x04-H096</code></td>
+<td style="text-align: right;">2</td>
+<td>15.8 × 31.8 × 11.4</td>
+<td>まず4個の実ブロック</td>
+</tr>
+<tr>
+<td><code>NP3-KEEPER</code></td>
+<td style="text-align: right;">1</td>
+<td>15.8 × 15.8 × 3.2</td>
+<td>4個が合格してから</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>選択案</th>
+<th>追加する既存台座端部</th>
+<th style="text-align: right;">個数</th>
+<th>外形 / mm</th>
+<th>外側6 mmブリムを含む1個の範囲</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><code>BASE3-03x08-T-48de52</code></td>
+<td style="text-align: right;">2</td>
+<td>23.8 × 63.8 × 11.4</td>
+<td>35.8 × 75.8 mm</td>
+</tr>
+<tr>
+<td>B</td>
+<td><code>BASE3-03x10-T-aa77a9</code></td>
+<td style="text-align: right;">2</td>
+<td>23.8 × 79.8 × 11.4</td>
+<td>35.8 × 91.8 mm</td>
+</tr>
+<tr>
+<td>C</td>
+<td><code>BASE3-03x14-T-08700f</code></td>
+<td style="text-align: right;">2</td>
+<td>23.8 × 111.8 × 11.4</td>
+<td>35.8 × 123.8 mm</td>
+</tr>
+</tbody>
+</table>
+<p>台座端部2個は<strong>同一の左端形状を2個</strong>です。左右一対や鏡像ではありません。
+正式模型の3段目と5段目で繰り返す部品を選んでいます。試作で2個だけ重ねる操作は、
+5段台座の正式な配置・継ぎ目を再現した完成組立ではありません。
+共通の2×2・2×4は現行カタログの実本体ブロックで、案によって完成BOMにその形状がない場合もある共通接続の手作業確認です。</p>
+<p>全7個を一度に並べるのではなく、次の段階ごとに止めます。黒PLAを初回候補にしますが、
+採用後も実際に使う色・銘柄・ノズルが変われば再確認が必要です。</p>
+<h2 id="_4">印刷前のレイヤープレビュー</h2>
+<p>実際に装着したP1Sのノズル径と、Bambu Studioのプリンタ・ノズルプリセットを照合します。
+PLAの銘柄・色、プレート、処理プロファイル、層高、線幅、サポート、ブリムを記録します。
+<strong>0.4 mm本体／0.2 mm文字は未実機検証のbaselineで、0.2 mmに替えれば穴詰まりが解消するとは限りません。</strong></p>
+<ol>
+<li>選んだ小BOMどおりの個数、mm・100%、提供された下面ベッド向きを確認します。モデルとSTLのSHA-256を記録します。</li>
+<li><strong>最初の層から入口を確認。</strong> 受けの空間に意図しない線や内側ブリムが入り、入口を横断していないか見ます。</li>
+<li><strong>空洞の途中を確認。</strong> 不要なサポートや別部品のブリムが内部へ入り込んでいないか、取り出せるという思い込みをしないで確認します。</li>
+<li><strong>屋根が始まる層を確認。</strong> 通常ブロックの屋根下面はZ≈8 mm、keeperの後列受けはZ≈2.2 mmです。
+   リブ間のブリッジがどこへ着地するか、空洞を埋める余計な経路がないかを見ます。リブや屋根そのものは必要な材料です。</li>
+<li><strong>細い突起と輪郭を確認。</strong> スタッド、ポスト、薄い壁、キー溝の縁の経路が欠落していないか見ます。</li>
+<li>判別できない警告・閉塞・欠落があれば印刷せず停止します。実スライス時間・重量は、今回使った設定の結果がある場合だけ記録します。</li>
+</ol>
+<p>設定は元配布ファイルと別名のBambu Studioプロジェクトに保存し、現物と対応させます。
+そのプロジェクトには私有パス等が含まれ得るため、必要な場合もprivateな診断入力として共有し、そのまま公開しません。</p>
+<h2 id="1">1段階ずつ進める合否</h2>
+<ol>
+<li><strong>既存couponから。</strong> まず既存セットのゆるいオス／メス候補、次に<code>NP3-FIT-PLAQUE</code>と
+   <code>NP3-FIT-SOCKET-C25</code>を必要な分だけ試します。全候補を一括で刷る必要はありません。</li>
+<li><strong>実ブロック4個。</strong> 2×2を2個、2×4を2個。完全に冷ましてから取り出し、明るい机と柔らかいトレー上で
+   同じIDごとに仕分けます。スタッドをつまむのでなく側壁を持ち、軽い指の力で平行に着脱します。</li>
+<li><strong>keeper＋台座端部3個。</strong> 前段が合格してから選んだ端部2個とkeeper1個を印刷します。
+   端部を平らな机で支え、2列目以降で重ね合わせ、keeperの受けを対応する2スタッドへ試します。
+   キー溝の開口と2個の整列も観察します。上止めの力・完成銘板保持をこの操作だけで認定しません。</li>
+<li><strong>選択案の実台座と前面モジュール。</strong> 7個が問題なければ、選んだ5段台座・その大きさの銘板／ロゴ・3個のkeeperだけを
+   顔より先に確認します。全幅の反り、溝整列、上止め保持、32 mm手前退避と45 mm上抜きはここで別に試します。</li>
+<li><strong>顔の全数印刷へ。</strong> その段階で初めて、残りを少量バッチで進めます。初回7個が合格しても完成品の強度・転倒の合格ではありません。</li>
+</ol>
+<p><strong>次のどれかがあれば全数印刷を止めます：穴や溝が塞がる／指でつかめない／最後まで座らない／強い力や工具が必要／白化・割れ／保持が弱い。</strong>
+小穴を一つずつ削る、工具で押し込む、全穴径やXY補正・流量・温度を一律に変えることを完成キットの前提にしません。
+まず現物の該当位置と保存したスライス断面を照合し、仮説を分け、1条件ずつ変えて記録します。
+市販部品も印刷品も無理に押し込まないでください。小部品・破片は子どもやペットの手の届かない場所へ。</p>
+<h2 id="_5">未確認の情報と、記録するもの</h2>
+<p>失敗原因を具体的に調べるための最初の不足情報は、<strong>失敗時に実際に使ったBambu Studio設定入りプロジェクト（.3mf）</strong>です。
+未入手のまま、原因や補正値を確定しません。対応する現物の写真や入口／屋根のスライス断面があれば、後から安全に照合できます。
+記録CSVには部品ID・入力hash、実ノズル／プロファイル、材料・プレート、各プレビュー確認、閉塞・つかみやすさ・着座、
+変更した1条件と結果を残します。未測定は空欄や「未確認」のままで構いません。
+記入時は配布の空欄CSVを<code>.private/fit-log.csv</code>などのgit管理外ファイルへコピーし、追跡中の公開テンプレートを直接埋めません。
+その記録やプロジェクトを自動でrepoへ公開する機能はありません。</p>
+<p>今回A/B/Cの実物嵌合・keeper保持・5段の剛性・転倒は未試験です。
+別repoの失敗写真や動画を、この模型の合格証拠として扱っていません。</p></main><footer class="site-footer"><a class="brand" href="./?rev=4.0-public-template">BRICK PORTRAIT</a>
+<p>非公式・成人向け卓上オブジェ。実物の嵌合、保持力、耐久性、転倒は未検証です。</p>
+<a href="notices.html?rev=4.0-public-template">権利・依存ライブラリ</a></footer>
+</body></html>

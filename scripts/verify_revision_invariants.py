@@ -1,52 +1,37 @@
-"""Prove unchanged faces, approved B geometry, exact text and the untouched tribute."""
+"""Check the public template's mechanical contract without private historical inputs."""
 
 import hashlib
 import json
-from collections import Counter
 
-from design import ROOT, write_json
-
-
-def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+from design import ROOT, load_parameters, write_json
 
 
 def main():
-    frozen = json.loads((ROOT / "design/revision3-invariants.json").read_text())
-    approval = json.loads((ROOT / "design/revision3-approval.json").read_text())
+    expected = json.loads((ROOT / "design/public-template-invariants.json").read_text())
     catalog = json.loads((ROOT / "design/catalog.json").read_text())
-    face_counts = {}
-    for model in catalog["models"]:
-        expected = Counter((item["part"], item["color"], tuple(item["rotation"]),
-                            tuple(round(x + d, 6) for x, d in zip(item["position"], frozen["face_translation_mm"])))
-                           for item in frozen["faces"][model["id"]])
-        actual = Counter((item["part"], item["color"], tuple(item["rotation"]), tuple(item["position"]))
-                         for item in model["placements"] if item.get("role") == "face")
-        assert actual == expected, f"Face changed beyond approved translation: {model['id']}"
-        face_counts[model["id"]] = sum(actual.values())
-    for key, expected in frozen["unchanged_stl_sha256"].items():
-        assert catalog["parts"][key]["sha256"] == expected
-        assert sha(ROOT / "site/downloads" / catalog["parts"][key]["stl"]) == expected
-    for relative, expected in frozen["frozen_tribute"].items():
-        assert sha(ROOT / relative) == expected, f"Frozen tribute changed: {relative}"
-    b = next(model for model in catalog["models"] if model["id"] == "B")
-    assert b["actual_mm"] == approval["actual_mm"]
-    assert [{k: item[k] for k in ("id", "part", "color", "position", "rotation")}
-            for item in b["placements"]] == approval["B_placements"]
-    for key, expected in approval["B_part_sha256"].items():
-        assert catalog["parts"][key]["sha256"] == expected, f"Approved B shape changed: {key}"
-    assert catalog["message"]["lines"] == approval["lines"]
-    assert all(not key.startswith(("MSG-", "NP2-")) for key in catalog["parts"])
-    write_json(ROOT / "validation/revision3-invariants.json", {
-        "status": "PASS_APPROVED_B_AND_UNCHANGED_FACES_TRIBUTE",
+    parameters = load_parameters()
+    assert catalog["message"]["lines"] == parameters["message"]["lines"]
+    assert catalog["revision"] == parameters["revision"]
+    for key, digest in expected["unchanged_nontext_stl_sha256"].items():
+        part = catalog["parts"][key]
+        assert part["kind"] != "front_plaque"
+        data = (ROOT / "site/downloads" / part["stl"]).read_bytes()
+        assert hashlib.sha256(data).hexdigest() == digest == part["sha256"], key
+    fields = ("id", "part", "color", "position", "rotation", "step", "role", "module", "course")
+    for baseline in expected["models"]:
+        model = next(model for model in catalog["models"] if model["id"] == baseline["id"])
+        assert model["actual_mm"] == baseline["actual_mm"] and model["part_count"] == baseline["part_count"]
+        assert [{key: item[key] for key in fields if key in item} for item in model["placements"]] == baseline["placements"]
+    policy = json.loads((ROOT / "design/publication-policy.json").read_text())
+    write_json(ROOT / "validation/public-template-invariants.json", {
+        "status": "PASS_PUBLIC_TEMPLATE_GEOMETRY_BOUNDARIES",
         "revision": catalog["revision"], "parameters_sha256": catalog["parameters_sha256"],
-        "face_only_translation_mm": [0, 0, 38.4], "face_instances": face_counts,
-        "unchanged_face_meshes": len(frozen["unchanged_stl_sha256"]),
-        "frozen_tribute_files": len(frozen["frozen_tribute"]),
-        "approved_B_geometry": "All instance poses, colors, part mesh hashes and exterior dimensions unchanged from approved preview.",
-        "message_lines": catalog["message"]["lines"], "physical_validation": "NOT_PERFORMED",
+        "unchanged_nontext_masters": len(expected["unchanged_nontext_stl_sha256"]),
+        "model_dimensions_and_poses_preserved": True, "public_mode": policy["mode"],
+        "unselected_individual_variant": "not_distributed",
+        "physical_validation": "NOT_PERFORMED",
     })
-    print("PASS approved B, translated-but-unchanged faces and all frozen tribute files.")
+    print("PASS public-template geometry boundary: unchanged non-text masters, dimensions and placements.")
 
 
 if __name__ == "__main__":

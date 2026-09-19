@@ -1,0 +1,10 @@
+{
+  "status": "PASS_PUBLIC_TEMPLATE_GEOMETRY_BOUNDARIES",
+  "revision": "4.0-public-template",
+  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "unchanged_nontext_masters": 68,
+  "model_dimensions_and_poses_preserved": true,
+  "public_mode": "generic",
+  "unselected_individual_variant": "not_distributed",
+  "physical_validation": "NOT_PERFORMED"
+}

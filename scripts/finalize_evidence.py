@@ -1,5 +1,6 @@
 """Combine completed evidence and verify artifact hashes; never infer physical success."""
 
+import argparse
 import hashlib
 import json
 import zipfile
@@ -19,24 +20,32 @@ def sha(path):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--require-browser", action="store_true")
+    args = parser.parse_args()
     c = read("design/catalog.json")
     cad = read("validation/cad.json")
     mesh = read("validation/meshes.json")
     packages = read("validation/print-packages.json")
     three_mf = read("validation/3mf.json")
     motion = read("validation/explosion-motion.json")
-    web = read("validation/web.json")
+    browser_file = ROOT / "validation/web.json"
+    web = read("validation/web.json") if browser_file.is_file() else {
+        "status": "PENDING_CURRENT_REVISION_CI", "revision": None,
+        "note": "No current browser execution has been recorded.",
+    }
     assert cad["status"] == mesh["status"] == "PASS_DIGITAL_ONLY"
     assert packages["status"] == "PASS_GEOMETRY_AND_QUANTITIES_ONLY"
     assert three_mf["status"] == "PASS_INDEPENDENT_3MF_REOPEN"
     assert motion["status"] == "PASS_REAL_NATIVE_MOTION_CHECK"
     assert all(item["maximum_intersection_mm3"] < 1e-5 for item in motion["models"])
-    revision = read("validation/revision3-invariants.json")
+    revision = read("validation/public-template-invariants.json")
     front = read("validation/front-nameplate.json")
-    assert revision["status"] == "PASS_APPROVED_B_AND_UNCHANGED_FACES_TRIBUTE"
+    assert revision["status"] == "PASS_PUBLIC_TEMPLATE_GEOMETRY_BOUNDARIES"
     assert front["status"] == "PASS_NATIVE_FRONT_CAPTURE_AND_EXTRACTION"
-    assert web["status"] == "PASS_REAL_BROWSER"
-    current_browser = web.get("revision") == c["revision"]
+    current_browser = web["status"] == "PASS_REAL_BROWSER" and web.get("revision") == c["revision"]
+    if args.require_browser and not current_browser:
+        raise ValueError("A current real-browser pass is required before deployment; pending or historical evidence is insufficient.")
     if current_browser:
         views = web["vertical_explosion"]
         expected_views = {(model["id"], viewport) for model in c["models"] for viewport in ("desktop", "mobile")}
@@ -72,10 +81,9 @@ def main():
         assert native["step_sha256"] == sha(folder / f"{key}.step")
         reader = PdfReader(folder / "drawings.pdf")
         assert len(reader.pages) >= len(model["steps"]) + 3
-        assert all("REV3 / 5-COURSE BASE" in page.extract_text() for page in reader.pages)
+        assert all("PUBLIC TEMPLATE / 5-COURSE BASE" in page.extract_text() for page in reader.pages)
         text = "\n".join(page.extract_text() for page in reader.pages)
         assert all(value in text for value in c["message"]["lines"])
-        assert "@YOUR-USERNAME" not in text
         with zipfile.ZipFile(folder / "print-kit.zip") as archive:
             assert archive.read("bom.csv") == (folder / "bom.csv").read_bytes()
             assert archive.read("drawings.pdf") == (folder / "drawings.pdf").read_bytes()
@@ -89,16 +97,17 @@ def main():
         })
     part_pdf = PdfReader(ROOT / "site/downloads/part-drawings.pdf")
     assert len(part_pdf.pages) == len(c["parts"])
-    assert all("REV3 / 5-COURSE BASE" in page.extract_text() for page in part_pdf.pages)
-    review = ROOT / "validation/revision3-review.md"
-    assert review.is_file(), "Independent review must be persisted before publication"
-    final_review = ROOT / "validation/revision3-final-review.md"
-    assert final_review.is_file(), "Independent final-presentation acceptance must be persisted before publication"
-    assert "**Decision:** **`accepted_digital_only`" in final_review.read_text(), "Final presentation review has not accepted the package"
+    assert all("PUBLIC TEMPLATE / 5-COURSE BASE" in page.extract_text() for page in part_pdf.pages)
+    policy = read("design/publication-policy.json")
+    private_route = read("validation/private-route.json")
+    assert private_route["status"] == "PASS_PRIVATE_OUTPUT_BOUNDARY_AND_NATIVE_REOPEN"
     result = {
         "scope": "A/B/C five-course bases, enlarged front text, independent right logos and vertical exploded display",
         "revision": c["revision"],
+        "publication_mode": policy["mode"],
         "digital_checks_passed": True,
+        "digital_checks_scope": "Native, mesh, package and software-output checks; browser execution is recorded separately.",
+        "publication_ready": current_browser,
         "physical_testing": "NOT_PERFORMED",
         "parameters_sha256": c["parameters_sha256"],
         "mechanical_source_sha256": sha(ROOT / "scripts/freecad_geometry.py"),
@@ -108,15 +117,10 @@ def main():
         "front_modules": front, "revision_invariants": revision,
         "final_browser_recheck": {"status": "PASS_CURRENT_REVISION_CI" if current_browser else "PENDING_CURRENT_REVISION_CI",
                                   "revision": c["revision"], "local_browser_retry": "not attempted; known environment limitation"},
-        "additional_project": read("validation/tribute-mirror.json"),
-        "independent_review": {
-            "mechanical_record": "validation/revision3-review.md",
-            "mechanical_record_sha256": sha(review),
-            "final_presentation_record": "validation/revision3-final-review.md",
-            "final_presentation_record_sha256": sha(final_review),
-            "decision": "accepted_digital_only",
-            "physical_gates": "OPEN",
-        },
+        "unselected_individual_variant": "withheld from public distribution",
+        "private_personalization_route": private_route,
+        "privacy_cleanup": read("validation/privacy-cleanup.json"),
+        "review_boundary": "Current digital output checks are not physical qualification. Historical personal review records are preserved privately, not republished as generic evidence.",
         "not_claimed": ["Commercial compatibility guarantee", "Physical clutch/strength/tip testing",
                         "Slicer-measured print mass/time", "Toy safety or manufacturing certification",
                         "Official LEGO/GitHub/Bambu product"],

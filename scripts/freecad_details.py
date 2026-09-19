@@ -2,6 +2,8 @@
 
 import json
 import hashlib
+import argparse
+from pathlib import Path
 
 import FreeCAD as App
 import Part
@@ -46,12 +48,15 @@ def project_coarse(shape, direction, x_direction, path, mirror_x=False):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--reuse-baseline", type=Path, help="Optional local previous catalogue for byte-identical part projection reuse.")
+    args = parser.parse_args()
     c = json.loads((ROOT / "design/catalog.json").read_text())
     build = json.loads((ROOT / "build/freecad-build.json").read_text())
     cache = ROOT / "build/brep" / build["cache_fingerprint"]
     shapes = {}
-    previous = json.loads((ROOT / "build/front-base-baseline/design/catalog.json").read_text()) if (
-        ROOT / "build/front-base-baseline/design/catalog.json").exists() else {"parts": {}}
+    previous_file = args.reuse_baseline / "design/catalog.json" if args.reuse_baseline else None
+    previous = json.loads(previous_file.read_text()) if previous_file and previous_file.is_file() else {"parts": {}}
     reused = []
     for key in c["parts"]:
         shape = Part.Shape()

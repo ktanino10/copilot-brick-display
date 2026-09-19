@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297.5mm" viewBox="0 0 1200 850"><rect width="1200" height="850" fill="white"/><text x="42" y="42" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#587085" font-weight="normal" text-anchor="start">BRICK PORTRAIT / PUBLIC TEMPLATE / 5-COURSE BASE / DIGITAL PROTOTYPE</text><text x="42" y="79" font-family="Helvetica,Arial,sans-serif" font-size="27" fill="#142c41" font-weight="bold" text-anchor="start">FIT-F-CP00</text><text x="42" y="107" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#587085" font-weight="normal" text-anchor="start">Three orthographic views + underside from the actual solid. Exterior heights include studs / text.</text><line x1="42" y1="127" x2="1158" y2="127" stroke="#c5d3df" stroke-width="1"/><text x="95" y="171" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#142c41" font-weight="bold" text-anchor="start">FRONT</text><g transform="translate(109.2,440) scale(8) rotate(90)"><g   fill="none"
+   stroke="#142c41"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-width="0.18"
+   transform="scale(1, -1)"
+  >
+<path d=" M 0 0.1 L -9.6 0.1 " />
+<path d=" M 0 0.1 L 0 31.9 " />
+<path d=" M 0 31.9 L -9.6 31.9 " />
+<path d=" M -9.6 0.1 L -9.6 31.9 " />
+</g>
+</g><line x1="110" y1="475" x2="364.4" y2="475" stroke="#2952a6" stroke-width="1"/><line x1="110" y1="470" x2="110" y2="480" stroke="#2952a6" stroke-width="1"/><line x1="364.4" y1="470" x2="364.4" y2="480" stroke="#2952a6" stroke-width="1"/><text x="237.2" y="466" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#2952a6" font-weight="normal" text-anchor="middle">31.80</text><line x1="78" y1="363.2" x2="78" y2="440" stroke="#2952a6" stroke-width="1"/><line x1="73" y1="363.2" x2="83" y2="363.2" stroke="#2952a6" stroke-width="1"/><line x1="73" y1="440" x2="83" y2="440" stroke="#2952a6" stroke-width="1"/><text x="70" y="401.6" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#2952a6" font-weight="normal" text-anchor="end">9.60</text><text x="570" y="171" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#142c41" font-weight="bold" text-anchor="start">SIDE</text><g transform="translate(584.2,440) scale(8) rotate(-90)"><g   fill="none"
+   stroke="#142c41"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-width="0.18"
+   transform="scale(1, -1)"
+  >
+<path d=" M 0 -0.1 L 9.6 -0.1 " />
+<path d=" M 9.6 -0.1 L 9.6 -15.9 " />
+<path d=" M 0 -15.9 L 9.6 -15.9 " />
+<path d=" M 0 -0.1 L 0 -15.9 " />
+</g>
+</g><line x1="585" y1="475" x2="711.4" y2="475" stroke="#2952a6" stroke-width="1"/><line x1="585" y1="470" x2="585" y2="480" stroke="#2952a6" stroke-width="1"/><line x1="711.4" y1="470" x2="711.4" y2="480" stroke="#2952a6" stroke-width="1"/><text x="648.2" y="466" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#2952a6" font-weight="normal" text-anchor="middle">15.80</text><text x="95" y="525" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#142c41" font-weight="bold" text-anchor="start">TOP / PRINT ORIENTATION</text><g transform="translate(109.3,772) scale(7) "><g   fill="none"
+   stroke="#142c41"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-width="0.18"
+   transform="scale(1, -1)"
+  >
+<path d=" M 0.1 0.1 L 0.1 15.9 " />
+<path d=" M 0.1 0.1 L 31.9 0.1 " />
+<path d=" M 0.1 15.9 L 31.9 15.9 " />
+<path d=" M 31.9 0.1 L 31.9 15.9 " />
+</g>
+</g><text x="585" y="526" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#142c41" font-weight="bold" text-anchor="start">BOTTOM / REAL CAVITIES</text><g transform="translate(599.3,772) scale(7) scale(-1,1)"><g   fill="none"
+   stroke="#142c41"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-width="0.18"
+   transform="scale(1, -1)"
+  >
+<path d="M-25.6 8 A1.6 1.6 0 0 0 -25.4832 8.6" /><path d="M-25.4832 8.6 A1.6 1.6 0 0 0 -24.6 9.48324" /><path d="M-24.6 9.48324 A1.6 1.6 0 0 0 -23.4 9.48324" /><path d="M-23.4 9.48324 A1.6 1.6 0 0 0 -22.5168 8.6" /><path d="M-22.5168 8.6 A1.6 1.6 0 0 0 -22.5168 7.4" /><path d="M-22.5168 7.4 A1.6 1.6 0 0 0 -23.4 6.51676" /><path d="M-23.4 6.51676 A1.6 1.6 0 0 0 -24.6 6.51676" /><path d="M-24.6 6.51676 A1.6 1.6 0 0 0 -25.4832 7.4" /><path d="M-25.4832 7.4 A1.6 1.6 0 0 0 -25.6 8" /><path d="M-17.6 8 A1.6 1.6 0 0 0 -17.4832 8.6" /><path d="M-17.4832 8.6 A1.6 1.6 0 0 0 -16.6 9.48324" /><path d="M-16.6 9.48324 A1.6 1.6 0 0 0 -15.4 9.48324" /><path d="M-15.4 9.48324 A1.6 1.6 0 0 0 -14.5168 8.6" /><path d="M-14.5168 8.6 A1.6 1.6 0 0 0 -14.5168 7.4" /><path d="M-14.5168 7.4 A1.6 1.6 0 0 0 -15.4 6.51676" /><path d="M-15.4 6.51676 A1.6 1.6 0 0 0 -16.6 6.51676" /><path d="M-16.6 6.51676 A1.6 1.6 0 0 0 -17.4832 7.4" /><path d="M-17.4832 7.4 A1.6 1.6 0 0 0 -17.6 8" /><path d="M-8.6 9.48324 A1.6 1.6 0 0 0 -7.4 9.48324" /><path d="M-9.6 8 A1.6 1.6 0 0 0 -9.48324 8.6" /><path d="M-9.48324 8.6 A1.6 1.6 0 0 0 -8.6 9.48324" /><path d="M-8.6 9.48324 A1.6 1.6 0 0 0 -7.4 9.48324" /><path d="M-7.4 9.48324 A1.6 1.6 0 0 0 -6.51676 8.6" /><path d="M-6.51676 8.6 A1.6 1.6 0 0 0 -6.51676 7.4" /><path d="M-6.51676 7.4 A1.6 1.6 0 0 0 -7.4 6.51676" /><path d="M-7.4 6.51676 A1.6 1.6 0 0 0 -8.6 6.51676" /><path d="M-8.6 6.51676 A1.6 1.6 0 0 0 -9.48324 7.4" /><path d="M-9.48324 7.4 A1.6 1.6 0 0 0 -9.6 8" /><path d=" M -0.1 0.1 L -0.1 15.9 " />
+<path d=" M -0.1 0.1 L -31.9 0.1 " />
+<path d=" M -0.1 15.9 L -31.9 15.9 " />
+<path d=" M -31.9 0.1 L -31.9 15.9 " />
+<path d=" M -1.4 1.4 L -30.6 1.4 " />
+<path d=" M -30.6 1.4 L -30.6 14.6 " />
+<path d=" M -30.6 14.6 L -1.4 14.6 " />
+<path d=" M -1.4 14.6 L -1.4 1.4 " />
+<path d="M-30.6, 1.4 L-30.4, 1.6 " /><path d=" M -1.6 1.6 L -7.4 1.6 " />
+<path d=" M -8.6 1.6 L -15.4 1.6 " />
+<path d=" M -16.6 1.6 L -23.4 1.6 " />
+<path d=" M -24.6 1.6 L -30.4 1.6 " />
+<path d="M-1.4, 1.4 L-1.6, 1.6 " /><path d="M-30.6, 14.6 L-30.4, 14.4 " /><path d=" M -30.4 1.6 L -30.4 7.4 " />
+<path d=" M -30.4 8.6 L -30.4 14.4 " />
+<path d="M-1.4, 14.6 L-1.6, 14.4 " /><path d=" M -30.4 14.4 L -24.6 14.4 " />
+<path d=" M -23.4 14.4 L -16.6 14.4 " />
+<path d=" M -15.4 14.4 L -8.6 14.4 " />
+<path d=" M -7.4 14.4 L -1.6 14.4 " />
+<path d=" M -1.6 14.4 L -1.6 8.6 " />
+<path d=" M -1.6 7.4 L -1.6 1.6 " />
+<path d=" M -7.4 1.6 L -8.6 1.6 " />
+<path d=" M -15.4 1.6 L -16.6 1.6 " />
+<path d=" M -23.4 1.6 L -24.6 1.6 " />
+<path d=" M -30.4 7.4 L -30.4 8.6 " />
+<path d=" M -23.4 14.4 L -24.6 14.4 " />
+<path d=" M -15.4 14.4 L -16.6 14.4 " />
+<path d=" M -7.4 14.4 L -8.6 14.4 " />
+<path d=" M -1.6 7.4 L -1.6 8.6 " />
+<path d=" M -7.4 1.6 L -7.4 5.00261 " />
+<path d=" M -8.6 1.6 L -8.6 5.00261 " />
+<path d=" M -15.4 1.6 L -15.4 5.00261 " />
+<path d=" M -16.6 1.6 L -16.6 5.00261 " />
+<path d=" M -23.4 1.6 L -23.4 5.00261 " />
+<path d=" M -24.6 1.6 L -24.6 5.00261 " />
+<path d=" M -26.9974 7.4 L -30.4 7.4 " />
+<path d=" M -26.9974 8.6 L -30.4 8.6 " />
+<path d=" M -24.6 10.9974 L -24.6 14.4 " />
+<path d=" M -23.4 10.9974 L -23.4 14.4 " />
+<path d=" M -16.6 10.9974 L -16.6 14.4 " />
+<path d=" M -15.4 10.9974 L -15.4 14.4 " />
+<path d=" M -8.6 10.9974 L -8.6 14.4 " />
+<path d=" M -7.4 10.9974 L -7.4 14.4 " />
+<path d=" M -1.6 8.6 L -5.00261 8.6 " />
+<path d=" M -1.6 7.4 L -5.00261 7.4 " />
+<path d="M-4.79889 7.4 A3.25685 3.25685 0 0 0 -7.4 4.79889" /><path d="M-5.00261 7.4 A3.05685 3.05685 0 0 0 -7.4 5.00261" /><path d="M-8.6 4.79889 A3.25685 3.25685 0 0 0 -11.2011 7.4" /><path d="M-8.6 5.00261 A3.05685 3.05685 0 0 0 -10.9974 7.4" /><path d="M-12.7989 7.4 A3.25685 3.25685 0 0 0 -15.4 4.79889" /><path d="M-13.0026 7.4 A3.05685 3.05685 0 0 0 -15.4 5.00261" /><path d=" M -10.9974 7.4 L -13.0026 7.4 " />
+<path d="M-16.6 4.79889 A3.25685 3.25685 0 0 0 -19.2011 7.4" /><path d="M-16.6 5.00261 A3.05685 3.05685 0 0 0 -18.9974 7.4" /><path d="M-20.7989 7.4 A3.25685 3.25685 0 0 0 -23.4 4.79889" /><path d="M-21.0026 7.4 A3.05685 3.05685 0 0 0 -23.4 5.00261" /><path d=" M -18.9974 7.4 L -21.0026 7.4 " />
+<path d="M-24.6 4.79889 A3.25685 3.25685 0 0 0 -27.2011 7.4" /><path d="M-24.6 5.00261 A3.05685 3.05685 0 0 0 -26.9974 7.4" /><path d="M-27.2011 8.6 A3.25685 3.25685 0 0 0 -24.6 11.2011" /><path d="M-26.9974 8.6 A3.05685 3.05685 0 0 0 -24.6 10.9974" /><path d="M-23.4 11.2011 A3.25685 3.25685 0 0 0 -20.7989 8.6" /><path d="M-23.4 10.9974 A3.05685 3.05685 0 0 0 -21.0026 8.6" /><path d=" M -18.9974 8.6 L -21.0026 8.6 " />
+<path d="M-19.2011 8.6 A3.25685 3.25685 0 0 0 -16.6 11.2011" /><path d="M-18.9974 8.6 A3.05685 3.05685 0 0 0 -16.6 10.9974" /><path d="M-15.4 11.2011 A3.25685 3.25685 0 0 0 -12.7989 8.6" /><path d="M-15.4 10.9974 A3.05685 3.05685 0 0 0 -13.0026 8.6" /><path d=" M -10.9974 8.6 L -13.0026 8.6 " />
+<path d="M-11.2011 8.6 A3.25685 3.25685 0 0 0 -8.6 11.2011" /><path d="M-10.9974 8.6 A3.05685 3.05685 0 0 0 -8.6 10.9974" /><path d="M-7.4 11.2011 A3.25685 3.25685 0 0 0 -4.79889 8.6" /><path d="M-7.4 10.9974 A3.05685 3.05685 0 0 0 -5.00261 8.6" /></g>
+</g><text x="908" y="196" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Kind: female_coupon</text><text x="908" y="219" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">STL: FIT-F-CP00.stl</text><text x="908" y="242" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">STL units: mm / scale 100%</text><text x="908" y="265" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Grid: 4 x 2 @ 8.00</text><text x="908" y="288" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Body height: 9.60</text><text x="908" y="311" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Female radial c: +0.00</text><text x="908" y="334" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Outer wall: 1.50</text><text x="908" y="357" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Tube bore: 3.20 (not accessory fit)</text><text x="908" y="380" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Roof ribs: 1.20; bridge gap &lt;=6.80</text><line x1="42" y1="801" x2="1158" y2="801" stroke="#c5d3df" stroke-width="1"/><text x="42" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#587085" font-weight="normal" text-anchor="start">UNITS mm | Fixed 8 mm pitch | Physical fit / strength / stability NOT tested</text><text x="1158" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#587085" font-weight="normal" text-anchor="end">Do not scale STL. Calibrate male + female coupons first.</text></svg>

@@ -188,26 +188,11 @@ def main():
     verify_invariants()
     c = json.loads((ROOT / "design/catalog.json").read_text())
     pair_cache = {}
-    baseline = json.loads((ROOT / "design/revision3-invariants.json").read_text())
-    report = json.loads(subprocess.check_output([
-        "git", "show", f"{baseline['original_commit']}:validation/cad.json"], cwd=ROOT))
-    assert report["status"] == "PASS_DIGITAL_ONLY"
-    assert all(item["maximum_intersection_mm3"] < 1e-5 for item in report["models"])
-    for model in c["models"]:
-        face = [item for item in model["placements"] if item.get("role") == "face"]
-        for index, item in enumerate(face):
-            assert c["parts"][item["part"]]["sha256"] == baseline["unchanged_stl_sha256"][item["part"]]
-            for previous in face[:index]:
-                key = (item["part"], previous["part"], tuple(item["rotation"]), tuple(previous["rotation"]),
-                       tuple(round(a - b, 6) for a, b in zip(item["position"], previous["position"])))
-                pair_cache[key] = 0.0
-    reused_face_configurations = len(pair_cache)
     results = [verify_model(model, c, pair_cache) for model in c["models"]]
     write_json(ROOT / "validation/cad.json", {
         "status": "PASS_DIGITAL_ONLY", "parameters_sha256": c["parameters_sha256"],
         "freecad": App.Version(), "models": results,
-        "unchanged_face_pair_configurations_reused": reused_face_configurations,
-        "reuse_basis": "Accepted prior native audit plus byte-identical face meshes and invariant relative poses; revision3-invariants.json is checked separately.",
+        "reuse_basis": "Within-run cache only: identical part IDs, rotations and relative translations. No private historical report is required.",
         "not_claimed": ["physical clutch", "FDM strength", "sliced time/mass",
                         "toy safety", "commercial compatibility certification"],
     })

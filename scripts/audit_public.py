@@ -19,6 +19,8 @@ PATTERNS = [
 
 
 def inspect(data, name, depth=0):
+    if "/.private/" in f"/{name}" or "private-manifest.json" in name or "route-check-output" in name:
+        raise ValueError(f"Private generation output must not be distributed: {name}")
     for pattern in PATTERNS:
         if pattern.search(data):
             raise ValueError(f"Private material detected in {name}; not safe to publish")

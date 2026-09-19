@@ -1,0 +1,3407 @@
+{
+  "status": "PASS_DIGITAL_ONLY",
+  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "freecad": [
+    "1",
+    "1",
+    "3",
+    "20260725 (Git shallow)",
+    "Unknown",
+    "2026/07/25 04:52:02",
+    "grafted,grafted",
+    "145529fe741292ff0b3977a01195bf0247425794"
+  ],
+  "models": [
+    {
+      "model": "A",
+      "native_reopened_instances": 91,
+      "step_reopened_solids": 91,
+      "units": "mm",
+      "actual_mm": [
+        143.8,
+        63.8,
+        187.4
+      ],
+      "appearance_saved": true,
+      "connected_components": 1,
+      "stud_engagement_edges": 119,
+      "card_connection": "Independent base-front text/logo dovetails with two text keepers and one logo keeper; physical fit untested.",
+      "brep_boolean_pairs": 135,
+      "maximum_intersection_mm3": 0.0,
+      "new_unique_boolean_evaluations": 89,
+      "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
+      "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
+      "cad_material_center_projection_margin_mm": 30.4864,
+      "physical_fit_and_stability": "NOT TESTED",
+      "fcstd_sha256": "2b17c49b972c5cf13d0f867ce6ced157056e4e532bb82ec48352e00b2a30ba09",
+      "step_sha256": "b2c835d1770ea31c383d9f9a65d87230230b4af5a75439c6330948cecc8e3772",
+      "contacts": [
+        {
+          "lower": "A-001",
+          "upper": "A-002",
+          "studs": 42
+        },
+        {
+          "lower": "A-001",
+          "upper": "A-003",
+          "studs": 42
+        },
+        {
+          "lower": "A-001",
+          "upper": "A-004",
+          "studs": 42
+        },
+        {
+          "lower": "A-002",
+          "upper": "A-005",
+          "studs": 21
+        },
+        {
+          "lower": "A-002",
+          "upper": "A-006",
+          "studs": 21
+        },
+        {
+          "lower": "A-003",
+          "upper": "A-006",
+          "studs": 21
+        },
+        {
+          "lower": "A-003",
+          "upper": "A-007",
+          "studs": 21
+        },
+        {
+          "lower": "A-004",
+          "upper": "A-007",
+          "studs": 21
+        },
+        {
+          "lower": "A-004",
+          "upper": "A-008",
+          "studs": 21
+        },
+        {
+          "lower": "A-005",
+          "upper": "A-009",
+          "studs": 21
+        },
+        {
+          "lower": "A-006",
+          "upper": "A-009",
+          "studs": 21
+        },
+        {
+          "lower": "A-006",
+          "upper": "A-010",
+          "studs": 21
+        },
+        {
+          "lower": "A-007",
+          "upper": "A-010",
+          "studs": 21
+        },
+        {
+          "lower": "A-007",
+          "upper": "A-011",
+          "studs": 21
+        },
+        {
+          "lower": "A-008",
+          "upper": "A-011",
+          "studs": 21
+        },
+        {
+          "lower": "A-009",
+          "upper": "A-012",
+          "studs": 21
+        },
+        {
+          "lower": "A-009",
+          "upper": "A-013",
+          "studs": 21
+        },
+        {
+          "lower": "A-010",
+          "upper": "A-013",
+          "studs": 21
+        },
+        {
+          "lower": "A-010",
+          "upper": "A-014",
+          "studs": 21
+        },
+        {
+          "lower": "A-011",
+          "upper": "A-014",
+          "studs": 21
+        },
+        {
+          "lower": "A-011",
+          "upper": "A-015",
+          "studs": 21
+        },
+        {
+          "lower": "A-012",
+          "upper": "A-018",
+          "studs": 2
+        },
+        {
+          "lower": "A-014",
+          "upper": "A-019",
+          "studs": 2
+        },
+        {
+          "lower": "A-014",
+          "upper": "A-020",
+          "studs": 1
+        },
+        {
+          "lower": "A-015",
+          "upper": "A-020",
+          "studs": 1
+        },
+        {
+          "lower": "A-013",
+          "upper": "A-021",
+          "studs": 8
+        },
+        {
+          "lower": "A-014",
+          "upper": "A-022",
+          "studs": 8
+        },
+        {
+          "lower": "A-021",
+          "upper": "A-023",
+          "studs": 2
+        },
+        {
+          "lower": "A-021",
+          "upper": "A-024",
+          "studs": 4
+        },
+        {
+          "lower": "A-021",
+          "upper": "A-025",
+          "studs": 2
+        },
+        {
+          "lower": "A-022",
+          "upper": "A-025",
+          "studs": 6
+        },
+        {
+          "lower": "A-022",
+          "upper": "A-026",
+          "studs": 2
+        },
+        {
+          "lower": "A-023",
+          "upper": "A-027",
+          "studs": 3
+        },
+        {
+          "lower": "A-023",
+          "upper": "A-028",
+          "studs": 2
+        },
+        {
+          "lower": "A-024",
+          "upper": "A-028",
+          "studs": 4
+        },
+        {
+          "lower": "A-025",
+          "upper": "A-028",
+          "studs": 2
+        },
+        {
+          "lower": "A-025",
+          "upper": "A-029",
+          "studs": 6
+        },
+        {
+          "lower": "A-026",
+          "upper": "A-029",
+          "studs": 2
+        },
+        {
+          "lower": "A-026",
+          "upper": "A-030",
+          "studs": 3
+        },
+        {
+          "lower": "A-027",
+          "upper": "A-031",
+          "studs": 3
+        },
+        {
+          "lower": "A-027",
+          "upper": "A-032",
+          "studs": 2
+        },
+        {
+          "lower": "A-028",
+          "upper": "A-032",
+          "studs": 4
+        },
+        {
+          "lower": "A-028",
+          "upper": "A-033",
+          "studs": 2
+        },
+        {
+          "lower": "A-028",
+          "upper": "A-034",
+          "studs": 2
+        },
+        {
+          "lower": "A-029",
+          "upper": "A-034",
+          "studs": 2
+        },
+        {
+          "lower": "A-029",
+          "upper": "A-035",
+          "studs": 2
+        },
+        {
+          "lower": "A-029",
+          "upper": "A-036",
+          "studs": 4
+        },
+        {
+          "lower": "A-030",
+          "upper": "A-036",
+          "studs": 2
+        },
+        {
+          "lower": "A-030",
+          "upper": "A-037",
+          "studs": 3
+        },
+        {
+          "lower": "A-031",
+          "upper": "A-038",
+          "studs": 6
+        },
+        {
+          "lower": "A-032",
+          "upper": "A-039",
+          "studs": 6
+        },
+        {
+          "lower": "A-033",
+          "upper": "A-040",
+          "studs": 2
+        },
+        {
+          "lower": "A-034",
+          "upper": "A-041",
+          "studs": 4
+        },
+        {
+          "lower": "A-035",
+          "upper": "A-042",
+          "studs": 2
+        },
+        {
+          "lower": "A-036",
+          "upper": "A-043",
+          "studs": 6
+        },
+        {
+          "lower": "A-037",
+          "upper": "A-044",
+          "studs": 6
+        },
+        {
+          "lower": "A-038",
+          "upper": "A-045",
+          "studs": 6
+        },
+        {
+          "lower": "A-039",
+          "upper": "A-046",
+          "studs": 6
+        },
+        {
+          "lower": "A-040",
+          "upper": "A-047",
+          "studs": 2
+        },
+        {
+          "lower": "A-041",
+          "upper": "A-048",
+          "studs": 4
+        },
+        {
+          "lower": "A-042",
+          "upper": "A-049",
+          "studs": 2
+        },
+        {
+          "lower": "A-043",
+          "upper": "A-050",
+          "studs": 6
+        },
+        {
+          "lower": "A-044",
+          "upper": "A-051",
+          "studs": 6
+        },
+        {
+          "lower": "A-045",
+          "upper": "A-052",
+          "studs": 6
+        },
+        {
+          "lower": "A-046",
+          "upper": "A-053",
+          "studs": 6
+        },
+        {
+          "lower": "A-047",
+          "upper": "A-053",
+          "studs": 2
+        },
+        {
+          "lower": "A-048",
+          "upper": "A-054",
+          "studs": 4
+        },
+        {
+          "lower": "A-049",
+          "upper": "A-054",
+          "studs": 2
+        },
+        {
+          "lower": "A-050",
+          "upper": "A-054",
+          "studs": 2
+        },
+        {
+          "lower": "A-050",
+          "upper": "A-055",
+          "studs": 4
+        },
+        {
+          "lower": "A-051",
+          "upper": "A-056",
+          "studs": 6
+        },
+        {
+          "lower": "A-052",
+          "upper": "A-057",
+          "studs": 6
+        },
+        {
+          "lower": "A-053",
+          "upper": "A-058",
+          "studs": 8
+        },
+        {
+          "lower": "A-054",
+          "upper": "A-059",
+          "studs": 8
+        },
+        {
+          "lower": "A-055",
+          "upper": "A-060",
+          "studs": 4
+        },
+        {
+          "lower": "A-056",
+          "upper": "A-060",
+          "studs": 6
+        },
+        {
+          "lower": "A-057",
+          "upper": "A-061",
+          "studs": 6
+        },
+        {
+          "lower": "A-058",
+          "upper": "A-062",
+          "studs": 8
+        },
+        {
+          "lower": "A-059",
+          "upper": "A-063",
+          "studs": 6
+        },
+        {
+          "lower": "A-059",
+          "upper": "A-064",
+          "studs": 4
+        },
+        {
+          "lower": "A-060",
+          "upper": "A-064",
+          "studs": 4
+        },
+        {
+          "lower": "A-060",
+          "upper": "A-065",
+          "studs": 6
+        },
+        {
+          "lower": "A-061",
+          "upper": "A-066",
+          "studs": 6
+        },
+        {
+          "lower": "A-062",
+          "upper": "A-067",
+          "studs": 4
+        },
+        {
+          "lower": "A-062",
+          "upper": "A-068",
+          "studs": 4
+        },
+        {
+          "lower": "A-063",
+          "upper": "A-069",
+          "studs": 6
+        },
+        {
+          "lower": "A-064",
+          "upper": "A-070",
+          "studs": 4
+        },
+        {
+          "lower": "A-064",
+          "upper": "A-071",
+          "studs": 4
+        },
+        {
+          "lower": "A-065",
+          "upper": "A-072",
+          "studs": 6
+        },
+        {
+          "lower": "A-066",
+          "upper": "A-073",
+          "studs": 6
+        },
+        {
+          "lower": "A-067",
+          "upper": "A-074",
+          "studs": 4
+        },
+        {
+          "lower": "A-068",
+          "upper": "A-074",
+          "studs": 4
+        },
+        {
+          "lower": "A-069",
+          "upper": "A-075",
+          "studs": 6
+        },
+        {
+          "lower": "A-070",
+          "upper": "A-076",
+          "studs": 4
+        },
+        {
+          "lower": "A-071",
+          "upper": "A-076",
+          "studs": 4
+        },
+        {
+          "lower": "A-072",
+          "upper": "A-077",
+          "studs": 6
+        },
+        {
+          "lower": "A-073",
+          "upper": "A-078",
+          "studs": 6
+        },
+        {
+          "lower": "A-074",
+          "upper": "A-079",
+          "studs": 4
+        },
+        {
+          "lower": "A-074",
+          "upper": "A-080",
+          "studs": 4
+        },
+        {
+          "lower": "A-075",
+          "upper": "A-081",
+          "studs": 6
+        },
+        {
+          "lower": "A-076",
+          "upper": "A-082",
+          "studs": 4
+        },
+        {
+          "lower": "A-076",
+          "upper": "A-083",
+          "studs": 4
+        },
+        {
+          "lower": "A-077",
+          "upper": "A-084",
+          "studs": 6
+        },
+        {
+          "lower": "A-078",
+          "upper": "A-085",
+          "studs": 3
+        },
+        {
+          "lower": "A-079",
+          "upper": "A-085",
+          "studs": 4
+        },
+        {
+          "lower": "A-080",
+          "upper": "A-085",
+          "studs": 2
+        },
+        {
+          "lower": "A-080",
+          "upper": "A-086",
+          "studs": 2
+        },
+        {
+          "lower": "A-081",
+          "upper": "A-086",
+          "studs": 6
+        },
+        {
+          "lower": "A-082",
+          "upper": "A-086",
+          "studs": 2
+        },
+        {
+          "lower": "A-082",
+          "upper": "A-087",
+          "studs": 2
+        },
+        {
+          "lower": "A-083",
+          "upper": "A-087",
+          "studs": 4
+        },
+        {
+          "lower": "A-084",
+          "upper": "A-087",
+          "studs": 3
+        },
+        {
+          "lower": "A-085",
+          "upper": "A-088",
+          "studs": 6
+        },
+        {
+          "lower": "A-085",
+          "upper": "A-089",
+          "studs": 3
+        },
+        {
+          "lower": "A-086",
+          "upper": "A-089",
+          "studs": 9
+        },
+        {
+          "lower": "A-086",
+          "upper": "A-090",
+          "studs": 3
+        },
+        {
+          "lower": "A-087",
+          "upper": "A-090",
+          "studs": 9
+        },
+        {
+          "lower": "A-089",
+          "upper": "A-091",
+          "studs": 6
+        },
+        {
+          "lower": "A-090",
+          "upper": "A-091",
+          "studs": 2
+        }
+      ]
+    },
+    {
+      "model": "B",
+      "native_reopened_instances": 150,
+      "step_reopened_solids": 150,
+      "units": "mm",
+      "actual_mm": [
+        191.8,
+        79.8,
+        238.6
+      ],
+      "appearance_saved": true,
+      "connected_components": 1,
+      "stud_engagement_edges": 208,
+      "card_connection": "Independent base-front text/logo dovetails with two text keepers and one logo keeper; physical fit untested.",
+      "brep_boolean_pairs": 224,
+      "maximum_intersection_mm3": 0.0,
+      "new_unique_boolean_evaluations": 111,
+      "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
+      "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
+      "cad_material_center_projection_margin_mm": 38.8401,
+      "physical_fit_and_stability": "NOT TESTED",
+      "fcstd_sha256": "cf07d2d2ecfecafb3cbd2f8897a026c1c32d8fb2d7ae1b0ae14aa1fd789e1750",
+      "step_sha256": "5b17eae7d8d040a25deeda8a0337889dbd5db83884f7e91cd1ca9e496e1d8f8a",
+      "contacts": [
+        {
+          "lower": "B-001",
+          "upper": "B-002",
+          "studs": 54
+        },
+        {
+          "lower": "B-001",
+          "upper": "B-003",
+          "studs": 54
+        },
+        {
+          "lower": "B-001",
+          "upper": "B-004",
+          "studs": 54
+        },
+        {
+          "lower": "B-001",
+          "upper": "B-005",
+          "studs": 54
+        },
+        {
+          "lower": "B-002",
+          "upper": "B-006",
+          "studs": 27
+        },
+        {
+          "lower": "B-002",
+          "upper": "B-007",
+          "studs": 27
+        },
+        {
+          "lower": "B-003",
+          "upper": "B-007",
+          "studs": 27
+        },
+        {
+          "lower": "B-003",
+          "upper": "B-008",
+          "studs": 27
+        },
+        {
+          "lower": "B-004",
+          "upper": "B-008",
+          "studs": 27
+        },
+        {
+          "lower": "B-004",
+          "upper": "B-009",
+          "studs": 27
+        },
+        {
+          "lower": "B-005",
+          "upper": "B-009",
+          "studs": 27
+        },
+        {
+          "lower": "B-005",
+          "upper": "B-010",
+          "studs": 27
+        },
+        {
+          "lower": "B-006",
+          "upper": "B-011",
+          "studs": 27
+        },
+        {
+          "lower": "B-007",
+          "upper": "B-011",
+          "studs": 27
+        },
+        {
+          "lower": "B-007",
+          "upper": "B-012",
+          "studs": 27
+        },
+        {
+          "lower": "B-008",
+          "upper": "B-012",
+          "studs": 27
+        },
+        {
+          "lower": "B-008",
+          "upper": "B-013",
+          "studs": 27
+        },
+        {
+          "lower": "B-009",
+          "upper": "B-013",
+          "studs": 27
+        },
+        {
+          "lower": "B-009",
+          "upper": "B-014",
+          "studs": 27
+        },
+        {
+          "lower": "B-010",
+          "upper": "B-014",
+          "studs": 27
+        },
+        {
+          "lower": "B-011",
+          "upper": "B-015",
+          "studs": 27
+        },
+        {
+          "lower": "B-011",
+          "upper": "B-016",
+          "studs": 27
+        },
+        {
+          "lower": "B-012",
+          "upper": "B-016",
+          "studs": 27
+        },
+        {
+          "lower": "B-012",
+          "upper": "B-017",
+          "studs": 27
+        },
+        {
+          "lower": "B-013",
+          "upper": "B-017",
+          "studs": 27
+        },
+        {
+          "lower": "B-013",
+          "upper": "B-018",
+          "studs": 27
+        },
+        {
+          "lower": "B-014",
+          "upper": "B-018",
+          "studs": 27
+        },
+        {
+          "lower": "B-014",
+          "upper": "B-019",
+          "studs": 27
+        },
+        {
+          "lower": "B-015",
+          "upper": "B-022",
+          "studs": 2
+        },
+        {
+          "lower": "B-018",
+          "upper": "B-023",
+          "studs": 2
+        },
+        {
+          "lower": "B-018",
+          "upper": "B-024",
+          "studs": 1
+        },
+        {
+          "lower": "B-019",
+          "upper": "B-024",
+          "studs": 1
+        },
+        {
+          "lower": "B-016",
+          "upper": "B-025",
+          "studs": 8
+        },
+        {
+          "lower": "B-017",
+          "upper": "B-025",
+          "studs": 8
+        },
+        {
+          "lower": "B-017",
+          "upper": "B-026",
+          "studs": 16
+        },
+        {
+          "lower": "B-018",
+          "upper": "B-027",
+          "studs": 8
+        },
+        {
+          "lower": "B-025",
+          "upper": "B-028",
+          "studs": 4
+        },
+        {
+          "lower": "B-025",
+          "upper": "B-029",
+          "studs": 8
+        },
+        {
+          "lower": "B-025",
+          "upper": "B-030",
+          "studs": 4
+        },
+        {
+          "lower": "B-026",
+          "upper": "B-030",
+          "studs": 12
+        },
+        {
+          "lower": "B-026",
+          "upper": "B-031",
+          "studs": 4
+        },
+        {
+          "lower": "B-027",
+          "upper": "B-031",
+          "studs": 4
+        },
+        {
+          "lower": "B-027",
+          "upper": "B-032",
+          "studs": 4
+        },
+        {
+          "lower": "B-028",
+          "upper": "B-033",
+          "studs": 6
+        },
+        {
+          "lower": "B-028",
+          "upper": "B-034",
+          "studs": 4
+        },
+        {
+          "lower": "B-029",
+          "upper": "B-034",
+          "studs": 8
+        },
+        {
+          "lower": "B-030",
+          "upper": "B-034",
+          "studs": 4
+        },
+        {
+          "lower": "B-030",
+          "upper": "B-035",
+          "studs": 12
+        },
+        {
+          "lower": "B-031",
+          "upper": "B-035",
+          "studs": 4
+        },
+        {
+          "lower": "B-031",
+          "upper": "B-036",
+          "studs": 4
+        },
+        {
+          "lower": "B-032",
+          "upper": "B-036",
+          "studs": 4
+        },
+        {
+          "lower": "B-032",
+          "upper": "B-037",
+          "studs": 6
+        },
+        {
+          "lower": "B-033",
+          "upper": "B-038",
+          "studs": 6
+        },
+        {
+          "lower": "B-033",
+          "upper": "B-039",
+          "studs": 4
+        },
+        {
+          "lower": "B-034",
+          "upper": "B-039",
+          "studs": 4
+        },
+        {
+          "lower": "B-034",
+          "upper": "B-040",
+          "studs": 12
+        },
+        {
+          "lower": "B-035",
+          "upper": "B-040",
+          "studs": 4
+        },
+        {
+          "lower": "B-035",
+          "upper": "B-041",
+          "studs": 12
+        },
+        {
+          "lower": "B-036",
+          "upper": "B-041",
+          "studs": 4
+        },
+        {
+          "lower": "B-036",
+          "upper": "B-042",
+          "studs": 4
+        },
+        {
+          "lower": "B-037",
+          "upper": "B-042",
+          "studs": 4
+        },
+        {
+          "lower": "B-037",
+          "upper": "B-043",
+          "studs": 6
+        },
+        {
+          "lower": "B-038",
+          "upper": "B-044",
+          "studs": 6
+        },
+        {
+          "lower": "B-038",
+          "upper": "B-045",
+          "studs": 4
+        },
+        {
+          "lower": "B-039",
+          "upper": "B-045",
+          "studs": 8
+        },
+        {
+          "lower": "B-040",
+          "upper": "B-045",
+          "studs": 4
+        },
+        {
+          "lower": "B-040",
+          "upper": "B-046",
+          "studs": 4
+        },
+        {
+          "lower": "B-040",
+          "upper": "B-047",
+          "studs": 8
+        },
+        {
+          "lower": "B-041",
+          "upper": "B-047",
+          "studs": 8
+        },
+        {
+          "lower": "B-041",
+          "upper": "B-048",
+          "studs": 4
+        },
+        {
+          "lower": "B-041",
+          "upper": "B-049",
+          "studs": 4
+        },
+        {
+          "lower": "B-042",
+          "upper": "B-049",
+          "studs": 8
+        },
+        {
+          "lower": "B-043",
+          "upper": "B-049",
+          "studs": 4
+        },
+        {
+          "lower": "B-043",
+          "upper": "B-050",
+          "studs": 6
+        },
+        {
+          "lower": "B-044",
+          "upper": "B-051",
+          "studs": 6
+        },
+        {
+          "lower": "B-044",
+          "upper": "B-052",
+          "studs": 4
+        },
+        {
+          "lower": "B-045",
+          "upper": "B-052",
+          "studs": 4
+        },
+        {
+          "lower": "B-045",
+          "upper": "B-053",
+          "studs": 12
+        },
+        {
+          "lower": "B-046",
+          "upper": "B-054",
+          "studs": 4
+        },
+        {
+          "lower": "B-047",
+          "upper": "B-055",
+          "studs": 8
+        },
+        {
+          "lower": "B-047",
+          "upper": "B-056",
+          "studs": 8
+        },
+        {
+          "lower": "B-048",
+          "upper": "B-057",
+          "studs": 4
+        },
+        {
+          "lower": "B-049",
+          "upper": "B-058",
+          "studs": 8
+        },
+        {
+          "lower": "B-049",
+          "upper": "B-059",
+          "studs": 8
+        },
+        {
+          "lower": "B-050",
+          "upper": "B-059",
+          "studs": 4
+        },
+        {
+          "lower": "B-050",
+          "upper": "B-060",
+          "studs": 6
+        },
+        {
+          "lower": "B-051",
+          "upper": "B-061",
+          "studs": 12
+        },
+        {
+          "lower": "B-052",
+          "upper": "B-062",
+          "studs": 8
+        },
+        {
+          "lower": "B-053",
+          "upper": "B-062",
+          "studs": 12
+        },
+        {
+          "lower": "B-054",
+          "upper": "B-063",
+          "studs": 4
+        },
+        {
+          "lower": "B-055",
+          "upper": "B-064",
+          "studs": 8
+        },
+        {
+          "lower": "B-056",
+          "upper": "B-064",
+          "studs": 8
+        },
+        {
+          "lower": "B-057",
+          "upper": "B-065",
+          "studs": 4
+        },
+        {
+          "lower": "B-058",
+          "upper": "B-066",
+          "studs": 8
+        },
+        {
+          "lower": "B-059",
+          "upper": "B-066",
+          "studs": 12
+        },
+        {
+          "lower": "B-060",
+          "upper": "B-067",
+          "studs": 12
+        },
+        {
+          "lower": "B-061",
+          "upper": "B-068",
+          "studs": 12
+        },
+        {
+          "lower": "B-062",
+          "upper": "B-069",
+          "studs": 8
+        },
+        {
+          "lower": "B-062",
+          "upper": "B-070",
+          "studs": 12
+        },
+        {
+          "lower": "B-063",
+          "upper": "B-071",
+          "studs": 4
+        },
+        {
+          "lower": "B-064",
+          "upper": "B-072",
+          "studs": 8
+        },
+        {
+          "lower": "B-064",
+          "upper": "B-073",
+          "studs": 8
+        },
+        {
+          "lower": "B-065",
+          "upper": "B-074",
+          "studs": 4
+        },
+        {
+          "lower": "B-066",
+          "upper": "B-075",
+          "studs": 8
+        },
+        {
+          "lower": "B-066",
+          "upper": "B-076",
+          "studs": 12
+        },
+        {
+          "lower": "B-067",
+          "upper": "B-077",
+          "studs": 12
+        },
+        {
+          "lower": "B-068",
+          "upper": "B-078",
+          "studs": 12
+        },
+        {
+          "lower": "B-069",
+          "upper": "B-079",
+          "studs": 8
+        },
+        {
+          "lower": "B-070",
+          "upper": "B-079",
+          "studs": 8
+        },
+        {
+          "lower": "B-070",
+          "upper": "B-080",
+          "studs": 4
+        },
+        {
+          "lower": "B-071",
+          "upper": "B-080",
+          "studs": 4
+        },
+        {
+          "lower": "B-072",
+          "upper": "B-080",
+          "studs": 8
+        },
+        {
+          "lower": "B-073",
+          "upper": "B-081",
+          "studs": 8
+        },
+        {
+          "lower": "B-074",
+          "upper": "B-081",
+          "studs": 4
+        },
+        {
+          "lower": "B-075",
+          "upper": "B-081",
+          "studs": 4
+        },
+        {
+          "lower": "B-075",
+          "upper": "B-082",
+          "studs": 4
+        },
+        {
+          "lower": "B-076",
+          "upper": "B-082",
+          "studs": 12
+        },
+        {
+          "lower": "B-077",
+          "upper": "B-083",
+          "studs": 12
+        },
+        {
+          "lower": "B-078",
+          "upper": "B-084",
+          "studs": 10
+        },
+        {
+          "lower": "B-079",
+          "upper": "B-085",
+          "studs": 16
+        },
+        {
+          "lower": "B-080",
+          "upper": "B-086",
+          "studs": 16
+        },
+        {
+          "lower": "B-081",
+          "upper": "B-087",
+          "studs": 16
+        },
+        {
+          "lower": "B-082",
+          "upper": "B-088",
+          "studs": 16
+        },
+        {
+          "lower": "B-083",
+          "upper": "B-089",
+          "studs": 10
+        },
+        {
+          "lower": "B-084",
+          "upper": "B-090",
+          "studs": 10
+        },
+        {
+          "lower": "B-085",
+          "upper": "B-091",
+          "studs": 16
+        },
+        {
+          "lower": "B-086",
+          "upper": "B-092",
+          "studs": 12
+        },
+        {
+          "lower": "B-086",
+          "upper": "B-093",
+          "studs": 5
+        },
+        {
+          "lower": "B-087",
+          "upper": "B-093",
+          "studs": 5
+        },
+        {
+          "lower": "B-087",
+          "upper": "B-094",
+          "studs": 12
+        },
+        {
+          "lower": "B-088",
+          "upper": "B-094",
+          "studs": 4
+        },
+        {
+          "lower": "B-088",
+          "upper": "B-095",
+          "studs": 12
+        },
+        {
+          "lower": "B-089",
+          "upper": "B-096",
+          "studs": 10
+        },
+        {
+          "lower": "B-090",
+          "upper": "B-097",
+          "studs": 10
+        },
+        {
+          "lower": "B-091",
+          "upper": "B-098",
+          "studs": 8
+        },
+        {
+          "lower": "B-091",
+          "upper": "B-099",
+          "studs": 8
+        },
+        {
+          "lower": "B-092",
+          "upper": "B-099",
+          "studs": 12
+        },
+        {
+          "lower": "B-093",
+          "upper": "B-100",
+          "studs": 10
+        },
+        {
+          "lower": "B-094",
+          "upper": "B-101",
+          "studs": 8
+        },
+        {
+          "lower": "B-094",
+          "upper": "B-102",
+          "studs": 8
+        },
+        {
+          "lower": "B-095",
+          "upper": "B-102",
+          "studs": 12
+        },
+        {
+          "lower": "B-096",
+          "upper": "B-103",
+          "studs": 10
+        },
+        {
+          "lower": "B-097",
+          "upper": "B-104",
+          "studs": 10
+        },
+        {
+          "lower": "B-098",
+          "upper": "B-105",
+          "studs": 8
+        },
+        {
+          "lower": "B-099",
+          "upper": "B-105",
+          "studs": 8
+        },
+        {
+          "lower": "B-099",
+          "upper": "B-106",
+          "studs": 12
+        },
+        {
+          "lower": "B-100",
+          "upper": "B-107",
+          "studs": 10
+        },
+        {
+          "lower": "B-101",
+          "upper": "B-108",
+          "studs": 8
+        },
+        {
+          "lower": "B-102",
+          "upper": "B-108",
+          "studs": 8
+        },
+        {
+          "lower": "B-102",
+          "upper": "B-109",
+          "studs": 12
+        },
+        {
+          "lower": "B-103",
+          "upper": "B-110",
+          "studs": 10
+        },
+        {
+          "lower": "B-104",
+          "upper": "B-111",
+          "studs": 10
+        },
+        {
+          "lower": "B-105",
+          "upper": "B-112",
+          "studs": 8
+        },
+        {
+          "lower": "B-105",
+          "upper": "B-113",
+          "studs": 8
+        },
+        {
+          "lower": "B-106",
+          "upper": "B-113",
+          "studs": 12
+        },
+        {
+          "lower": "B-107",
+          "upper": "B-114",
+          "studs": 10
+        },
+        {
+          "lower": "B-108",
+          "upper": "B-115",
+          "studs": 8
+        },
+        {
+          "lower": "B-108",
+          "upper": "B-116",
+          "studs": 8
+        },
+        {
+          "lower": "B-109",
+          "upper": "B-116",
+          "studs": 12
+        },
+        {
+          "lower": "B-110",
+          "upper": "B-117",
+          "studs": 10
+        },
+        {
+          "lower": "B-111",
+          "upper": "B-118",
+          "studs": 10
+        },
+        {
+          "lower": "B-112",
+          "upper": "B-119",
+          "studs": 8
+        },
+        {
+          "lower": "B-113",
+          "upper": "B-119",
+          "studs": 8
+        },
+        {
+          "lower": "B-113",
+          "upper": "B-120",
+          "studs": 12
+        },
+        {
+          "lower": "B-114",
+          "upper": "B-121",
+          "studs": 10
+        },
+        {
+          "lower": "B-115",
+          "upper": "B-122",
+          "studs": 8
+        },
+        {
+          "lower": "B-116",
+          "upper": "B-122",
+          "studs": 8
+        },
+        {
+          "lower": "B-116",
+          "upper": "B-123",
+          "studs": 12
+        },
+        {
+          "lower": "B-117",
+          "upper": "B-124",
+          "studs": 10
+        },
+        {
+          "lower": "B-118",
+          "upper": "B-125",
+          "studs": 10
+        },
+        {
+          "lower": "B-119",
+          "upper": "B-126",
+          "studs": 8
+        },
+        {
+          "lower": "B-119",
+          "upper": "B-127",
+          "studs": 8
+        },
+        {
+          "lower": "B-120",
+          "upper": "B-127",
+          "studs": 12
+        },
+        {
+          "lower": "B-121",
+          "upper": "B-128",
+          "studs": 10
+        },
+        {
+          "lower": "B-122",
+          "upper": "B-129",
+          "studs": 8
+        },
+        {
+          "lower": "B-122",
+          "upper": "B-130",
+          "studs": 8
+        },
+        {
+          "lower": "B-123",
+          "upper": "B-130",
+          "studs": 12
+        },
+        {
+          "lower": "B-124",
+          "upper": "B-131",
+          "studs": 10
+        },
+        {
+          "lower": "B-125",
+          "upper": "B-132",
+          "studs": 10
+        },
+        {
+          "lower": "B-126",
+          "upper": "B-133",
+          "studs": 8
+        },
+        {
+          "lower": "B-127",
+          "upper": "B-133",
+          "studs": 8
+        },
+        {
+          "lower": "B-127",
+          "upper": "B-134",
+          "studs": 12
+        },
+        {
+          "lower": "B-128",
+          "upper": "B-135",
+          "studs": 10
+        },
+        {
+          "lower": "B-129",
+          "upper": "B-136",
+          "studs": 8
+        },
+        {
+          "lower": "B-130",
+          "upper": "B-136",
+          "studs": 8
+        },
+        {
+          "lower": "B-130",
+          "upper": "B-137",
+          "studs": 12
+        },
+        {
+          "lower": "B-131",
+          "upper": "B-138",
+          "studs": 10
+        },
+        {
+          "lower": "B-132",
+          "upper": "B-139",
+          "studs": 5
+        },
+        {
+          "lower": "B-133",
+          "upper": "B-139",
+          "studs": 4
+        },
+        {
+          "lower": "B-133",
+          "upper": "B-140",
+          "studs": 12
+        },
+        {
+          "lower": "B-134",
+          "upper": "B-140",
+          "studs": 4
+        },
+        {
+          "lower": "B-134",
+          "upper": "B-141",
+          "studs": 8
+        },
+        {
+          "lower": "B-135",
+          "upper": "B-141",
+          "studs": 10
+        },
+        {
+          "lower": "B-136",
+          "upper": "B-142",
+          "studs": 16
+        },
+        {
+          "lower": "B-137",
+          "upper": "B-143",
+          "studs": 12
+        },
+        {
+          "lower": "B-138",
+          "upper": "B-143",
+          "studs": 5
+        },
+        {
+          "lower": "B-139",
+          "upper": "B-144",
+          "studs": 5
+        },
+        {
+          "lower": "B-140",
+          "upper": "B-144",
+          "studs": 15
+        },
+        {
+          "lower": "B-140",
+          "upper": "B-145",
+          "studs": 5
+        },
+        {
+          "lower": "B-141",
+          "upper": "B-145",
+          "studs": 15
+        },
+        {
+          "lower": "B-141",
+          "upper": "B-146",
+          "studs": 5
+        },
+        {
+          "lower": "B-142",
+          "upper": "B-146",
+          "studs": 15
+        },
+        {
+          "lower": "B-142",
+          "upper": "B-147",
+          "studs": 5
+        },
+        {
+          "lower": "B-143",
+          "upper": "B-147",
+          "studs": 15
+        },
+        {
+          "lower": "B-145",
+          "upper": "B-148",
+          "studs": 8
+        },
+        {
+          "lower": "B-145",
+          "upper": "B-149",
+          "studs": 8
+        },
+        {
+          "lower": "B-146",
+          "upper": "B-149",
+          "studs": 8
+        },
+        {
+          "lower": "B-146",
+          "upper": "B-150",
+          "studs": 8
+        }
+      ]
+    },
+    {
+      "model": "C",
+      "native_reopened_instances": 228,
+      "step_reopened_solids": 228,
+      "units": "mm",
+      "actual_mm": [
+        239.8,
+        111.8,
+        286.6
+      ],
+      "appearance_saved": true,
+      "connected_components": 1,
+      "stud_engagement_edges": 334,
+      "card_connection": "Independent base-front text/logo dovetails with two text keepers and one logo keeper; physical fit untested.",
+      "brep_boolean_pairs": 353,
+      "maximum_intersection_mm3": 0.0,
+      "new_unique_boolean_evaluations": 110,
+      "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
+      "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
+      "cad_material_center_projection_margin_mm": 53.1575,
+      "physical_fit_and_stability": "NOT TESTED",
+      "fcstd_sha256": "0d33157315c52900f250792595f2b6c6ea58a888557ba25674a05deeeaf7f371",
+      "step_sha256": "3f016ae01db71f52494dc0c090674ec96a1cb6e41c61fff888e69f254c638533",
+      "contacts": [
+        {
+          "lower": "C-001",
+          "upper": "C-003",
+          "studs": 78
+        },
+        {
+          "lower": "C-001",
+          "upper": "C-004",
+          "studs": 78
+        },
+        {
+          "lower": "C-001",
+          "upper": "C-005",
+          "studs": 39
+        },
+        {
+          "lower": "C-002",
+          "upper": "C-005",
+          "studs": 39
+        },
+        {
+          "lower": "C-002",
+          "upper": "C-006",
+          "studs": 78
+        },
+        {
+          "lower": "C-002",
+          "upper": "C-007",
+          "studs": 78
+        },
+        {
+          "lower": "C-003",
+          "upper": "C-008",
+          "studs": 39
+        },
+        {
+          "lower": "C-003",
+          "upper": "C-009",
+          "studs": 39
+        },
+        {
+          "lower": "C-004",
+          "upper": "C-009",
+          "studs": 39
+        },
+        {
+          "lower": "C-004",
+          "upper": "C-010",
+          "studs": 39
+        },
+        {
+          "lower": "C-005",
+          "upper": "C-010",
+          "studs": 39
+        },
+        {
+          "lower": "C-005",
+          "upper": "C-011",
+          "studs": 39
+        },
+        {
+          "lower": "C-006",
+          "upper": "C-011",
+          "studs": 39
+        },
+        {
+          "lower": "C-006",
+          "upper": "C-012",
+          "studs": 39
+        },
+        {
+          "lower": "C-007",
+          "upper": "C-012",
+          "studs": 39
+        },
+        {
+          "lower": "C-007",
+          "upper": "C-013",
+          "studs": 39
+        },
+        {
+          "lower": "C-008",
+          "upper": "C-014",
+          "studs": 39
+        },
+        {
+          "lower": "C-009",
+          "upper": "C-014",
+          "studs": 39
+        },
+        {
+          "lower": "C-009",
+          "upper": "C-015",
+          "studs": 39
+        },
+        {
+          "lower": "C-010",
+          "upper": "C-015",
+          "studs": 39
+        },
+        {
+          "lower": "C-010",
+          "upper": "C-016",
+          "studs": 39
+        },
+        {
+          "lower": "C-011",
+          "upper": "C-016",
+          "studs": 39
+        },
+        {
+          "lower": "C-011",
+          "upper": "C-017",
+          "studs": 39
+        },
+        {
+          "lower": "C-012",
+          "upper": "C-017",
+          "studs": 39
+        },
+        {
+          "lower": "C-012",
+          "upper": "C-018",
+          "studs": 39
+        },
+        {
+          "lower": "C-013",
+          "upper": "C-018",
+          "studs": 39
+        },
+        {
+          "lower": "C-014",
+          "upper": "C-019",
+          "studs": 39
+        },
+        {
+          "lower": "C-014",
+          "upper": "C-020",
+          "studs": 39
+        },
+        {
+          "lower": "C-015",
+          "upper": "C-020",
+          "studs": 39
+        },
+        {
+          "lower": "C-015",
+          "upper": "C-021",
+          "studs": 39
+        },
+        {
+          "lower": "C-016",
+          "upper": "C-021",
+          "studs": 39
+        },
+        {
+          "lower": "C-016",
+          "upper": "C-022",
+          "studs": 39
+        },
+        {
+          "lower": "C-017",
+          "upper": "C-022",
+          "studs": 39
+        },
+        {
+          "lower": "C-017",
+          "upper": "C-023",
+          "studs": 39
+        },
+        {
+          "lower": "C-018",
+          "upper": "C-023",
+          "studs": 39
+        },
+        {
+          "lower": "C-018",
+          "upper": "C-024",
+          "studs": 39
+        },
+        {
+          "lower": "C-019",
+          "upper": "C-027",
+          "studs": 2
+        },
+        {
+          "lower": "C-023",
+          "upper": "C-028",
+          "studs": 2
+        },
+        {
+          "lower": "C-023",
+          "upper": "C-029",
+          "studs": 2
+        },
+        {
+          "lower": "C-020",
+          "upper": "C-030",
+          "studs": 7
+        },
+        {
+          "lower": "C-021",
+          "upper": "C-030",
+          "studs": 21
+        },
+        {
+          "lower": "C-021",
+          "upper": "C-031",
+          "studs": 21
+        },
+        {
+          "lower": "C-022",
+          "upper": "C-031",
+          "studs": 7
+        },
+        {
+          "lower": "C-022",
+          "upper": "C-032",
+          "studs": 28
+        },
+        {
+          "lower": "C-022",
+          "upper": "C-033",
+          "studs": 7
+        },
+        {
+          "lower": "C-023",
+          "upper": "C-033",
+          "studs": 7
+        },
+        {
+          "lower": "C-030",
+          "upper": "C-034",
+          "studs": 7
+        },
+        {
+          "lower": "C-030",
+          "upper": "C-035",
+          "studs": 12
+        },
+        {
+          "lower": "C-030",
+          "upper": "C-036",
+          "studs": 6
+        },
+        {
+          "lower": "C-031",
+          "upper": "C-036",
+          "studs": 18
+        },
+        {
+          "lower": "C-031",
+          "upper": "C-037",
+          "studs": 6
+        },
+        {
+          "lower": "C-032",
+          "upper": "C-037",
+          "studs": 18
+        },
+        {
+          "lower": "C-032",
+          "upper": "C-038",
+          "studs": 6
+        },
+        {
+          "lower": "C-033",
+          "upper": "C-038",
+          "studs": 6
+        },
+        {
+          "lower": "C-033",
+          "upper": "C-039",
+          "studs": 7
+        },
+        {
+          "lower": "C-034",
+          "upper": "C-040",
+          "studs": 10
+        },
+        {
+          "lower": "C-034",
+          "upper": "C-041",
+          "studs": 6
+        },
+        {
+          "lower": "C-035",
+          "upper": "C-041",
+          "studs": 12
+        },
+        {
+          "lower": "C-036",
+          "upper": "C-041",
+          "studs": 6
+        },
+        {
+          "lower": "C-036",
+          "upper": "C-042",
+          "studs": 18
+        },
+        {
+          "lower": "C-037",
+          "upper": "C-042",
+          "studs": 6
+        },
+        {
+          "lower": "C-037",
+          "upper": "C-043",
+          "studs": 18
+        },
+        {
+          "lower": "C-038",
+          "upper": "C-043",
+          "studs": 6
+        },
+        {
+          "lower": "C-038",
+          "upper": "C-044",
+          "studs": 6
+        },
+        {
+          "lower": "C-039",
+          "upper": "C-044",
+          "studs": 6
+        },
+        {
+          "lower": "C-039",
+          "upper": "C-045",
+          "studs": 10
+        },
+        {
+          "lower": "C-040",
+          "upper": "C-046",
+          "studs": 10
+        },
+        {
+          "lower": "C-040",
+          "upper": "C-047",
+          "studs": 6
+        },
+        {
+          "lower": "C-041",
+          "upper": "C-047",
+          "studs": 6
+        },
+        {
+          "lower": "C-041",
+          "upper": "C-048",
+          "studs": 18
+        },
+        {
+          "lower": "C-042",
+          "upper": "C-048",
+          "studs": 6
+        },
+        {
+          "lower": "C-042",
+          "upper": "C-049",
+          "studs": 18
+        },
+        {
+          "lower": "C-043",
+          "upper": "C-049",
+          "studs": 6
+        },
+        {
+          "lower": "C-043",
+          "upper": "C-050",
+          "studs": 18
+        },
+        {
+          "lower": "C-044",
+          "upper": "C-050",
+          "studs": 6
+        },
+        {
+          "lower": "C-044",
+          "upper": "C-051",
+          "studs": 6
+        },
+        {
+          "lower": "C-045",
+          "upper": "C-051",
+          "studs": 6
+        },
+        {
+          "lower": "C-045",
+          "upper": "C-052",
+          "studs": 10
+        },
+        {
+          "lower": "C-046",
+          "upper": "C-053",
+          "studs": 10
+        },
+        {
+          "lower": "C-046",
+          "upper": "C-054",
+          "studs": 6
+        },
+        {
+          "lower": "C-047",
+          "upper": "C-054",
+          "studs": 12
+        },
+        {
+          "lower": "C-048",
+          "upper": "C-054",
+          "studs": 6
+        },
+        {
+          "lower": "C-048",
+          "upper": "C-055",
+          "studs": 18
+        },
+        {
+          "lower": "C-049",
+          "upper": "C-055",
+          "studs": 6
+        },
+        {
+          "lower": "C-049",
+          "upper": "C-056",
+          "studs": 18
+        },
+        {
+          "lower": "C-050",
+          "upper": "C-056",
+          "studs": 6
+        },
+        {
+          "lower": "C-050",
+          "upper": "C-057",
+          "studs": 18
+        },
+        {
+          "lower": "C-051",
+          "upper": "C-057",
+          "studs": 6
+        },
+        {
+          "lower": "C-051",
+          "upper": "C-058",
+          "studs": 6
+        },
+        {
+          "lower": "C-052",
+          "upper": "C-058",
+          "studs": 6
+        },
+        {
+          "lower": "C-052",
+          "upper": "C-059",
+          "studs": 10
+        },
+        {
+          "lower": "C-053",
+          "upper": "C-060",
+          "studs": 10
+        },
+        {
+          "lower": "C-053",
+          "upper": "C-061",
+          "studs": 6
+        },
+        {
+          "lower": "C-054",
+          "upper": "C-061",
+          "studs": 6
+        },
+        {
+          "lower": "C-054",
+          "upper": "C-062",
+          "studs": 18
+        },
+        {
+          "lower": "C-055",
+          "upper": "C-062",
+          "studs": 6
+        },
+        {
+          "lower": "C-055",
+          "upper": "C-063",
+          "studs": 18
+        },
+        {
+          "lower": "C-056",
+          "upper": "C-063",
+          "studs": 6
+        },
+        {
+          "lower": "C-056",
+          "upper": "C-064",
+          "studs": 18
+        },
+        {
+          "lower": "C-057",
+          "upper": "C-064",
+          "studs": 6
+        },
+        {
+          "lower": "C-057",
+          "upper": "C-065",
+          "studs": 18
+        },
+        {
+          "lower": "C-058",
+          "upper": "C-065",
+          "studs": 6
+        },
+        {
+          "lower": "C-058",
+          "upper": "C-066",
+          "studs": 6
+        },
+        {
+          "lower": "C-059",
+          "upper": "C-066",
+          "studs": 6
+        },
+        {
+          "lower": "C-059",
+          "upper": "C-067",
+          "studs": 10
+        },
+        {
+          "lower": "C-060",
+          "upper": "C-068",
+          "studs": 10
+        },
+        {
+          "lower": "C-060",
+          "upper": "C-069",
+          "studs": 6
+        },
+        {
+          "lower": "C-061",
+          "upper": "C-069",
+          "studs": 12
+        },
+        {
+          "lower": "C-062",
+          "upper": "C-069",
+          "studs": 6
+        },
+        {
+          "lower": "C-062",
+          "upper": "C-070",
+          "studs": 18
+        },
+        {
+          "lower": "C-063",
+          "upper": "C-071",
+          "studs": 6
+        },
+        {
+          "lower": "C-063",
+          "upper": "C-072",
+          "studs": 18
+        },
+        {
+          "lower": "C-064",
+          "upper": "C-072",
+          "studs": 6
+        },
+        {
+          "lower": "C-064",
+          "upper": "C-073",
+          "studs": 12
+        },
+        {
+          "lower": "C-064",
+          "upper": "C-074",
+          "studs": 6
+        },
+        {
+          "lower": "C-065",
+          "upper": "C-075",
+          "studs": 24
+        },
+        {
+          "lower": "C-066",
+          "upper": "C-076",
+          "studs": 12
+        },
+        {
+          "lower": "C-067",
+          "upper": "C-076",
+          "studs": 6
+        },
+        {
+          "lower": "C-067",
+          "upper": "C-077",
+          "studs": 10
+        },
+        {
+          "lower": "C-068",
+          "upper": "C-078",
+          "studs": 20
+        },
+        {
+          "lower": "C-069",
+          "upper": "C-079",
+          "studs": 12
+        },
+        {
+          "lower": "C-069",
+          "upper": "C-080",
+          "studs": 12
+        },
+        {
+          "lower": "C-070",
+          "upper": "C-080",
+          "studs": 18
+        },
+        {
+          "lower": "C-071",
+          "upper": "C-081",
+          "studs": 6
+        },
+        {
+          "lower": "C-072",
+          "upper": "C-082",
+          "studs": 12
+        },
+        {
+          "lower": "C-072",
+          "upper": "C-083",
+          "studs": 12
+        },
+        {
+          "lower": "C-073",
+          "upper": "C-083",
+          "studs": 12
+        },
+        {
+          "lower": "C-074",
+          "upper": "C-084",
+          "studs": 6
+        },
+        {
+          "lower": "C-075",
+          "upper": "C-085",
+          "studs": 12
+        },
+        {
+          "lower": "C-075",
+          "upper": "C-086",
+          "studs": 12
+        },
+        {
+          "lower": "C-076",
+          "upper": "C-086",
+          "studs": 18
+        },
+        {
+          "lower": "C-077",
+          "upper": "C-087",
+          "studs": 20
+        },
+        {
+          "lower": "C-078",
+          "upper": "C-088",
+          "studs": 20
+        },
+        {
+          "lower": "C-079",
+          "upper": "C-089",
+          "studs": 12
+        },
+        {
+          "lower": "C-080",
+          "upper": "C-089",
+          "studs": 12
+        },
+        {
+          "lower": "C-080",
+          "upper": "C-090",
+          "studs": 18
+        },
+        {
+          "lower": "C-081",
+          "upper": "C-091",
+          "studs": 6
+        },
+        {
+          "lower": "C-082",
+          "upper": "C-092",
+          "studs": 12
+        },
+        {
+          "lower": "C-083",
+          "upper": "C-092",
+          "studs": 12
+        },
+        {
+          "lower": "C-083",
+          "upper": "C-093",
+          "studs": 12
+        },
+        {
+          "lower": "C-084",
+          "upper": "C-094",
+          "studs": 6
+        },
+        {
+          "lower": "C-085",
+          "upper": "C-095",
+          "studs": 12
+        },
+        {
+          "lower": "C-086",
+          "upper": "C-095",
+          "studs": 12
+        },
+        {
+          "lower": "C-086",
+          "upper": "C-096",
+          "studs": 18
+        },
+        {
+          "lower": "C-087",
+          "upper": "C-097",
+          "studs": 20
+        },
+        {
+          "lower": "C-088",
+          "upper": "C-098",
+          "studs": 20
+        },
+        {
+          "lower": "C-089",
+          "upper": "C-099",
+          "studs": 12
+        },
+        {
+          "lower": "C-089",
+          "upper": "C-100",
+          "studs": 12
+        },
+        {
+          "lower": "C-090",
+          "upper": "C-100",
+          "studs": 18
+        },
+        {
+          "lower": "C-091",
+          "upper": "C-101",
+          "studs": 6
+        },
+        {
+          "lower": "C-092",
+          "upper": "C-102",
+          "studs": 12
+        },
+        {
+          "lower": "C-092",
+          "upper": "C-103",
+          "studs": 12
+        },
+        {
+          "lower": "C-093",
+          "upper": "C-103",
+          "studs": 12
+        },
+        {
+          "lower": "C-094",
+          "upper": "C-104",
+          "studs": 6
+        },
+        {
+          "lower": "C-095",
+          "upper": "C-105",
+          "studs": 12
+        },
+        {
+          "lower": "C-095",
+          "upper": "C-106",
+          "studs": 12
+        },
+        {
+          "lower": "C-096",
+          "upper": "C-106",
+          "studs": 18
+        },
+        {
+          "lower": "C-097",
+          "upper": "C-107",
+          "studs": 20
+        },
+        {
+          "lower": "C-098",
+          "upper": "C-108",
+          "studs": 20
+        },
+        {
+          "lower": "C-099",
+          "upper": "C-109",
+          "studs": 12
+        },
+        {
+          "lower": "C-100",
+          "upper": "C-109",
+          "studs": 12
+        },
+        {
+          "lower": "C-100",
+          "upper": "C-110",
+          "studs": 18
+        },
+        {
+          "lower": "C-101",
+          "upper": "C-111",
+          "studs": 6
+        },
+        {
+          "lower": "C-102",
+          "upper": "C-112",
+          "studs": 12
+        },
+        {
+          "lower": "C-103",
+          "upper": "C-112",
+          "studs": 12
+        },
+        {
+          "lower": "C-103",
+          "upper": "C-113",
+          "studs": 12
+        },
+        {
+          "lower": "C-104",
+          "upper": "C-114",
+          "studs": 6
+        },
+        {
+          "lower": "C-105",
+          "upper": "C-115",
+          "studs": 12
+        },
+        {
+          "lower": "C-106",
+          "upper": "C-115",
+          "studs": 12
+        },
+        {
+          "lower": "C-106",
+          "upper": "C-116",
+          "studs": 18
+        },
+        {
+          "lower": "C-107",
+          "upper": "C-117",
+          "studs": 20
+        },
+        {
+          "lower": "C-108",
+          "upper": "C-118",
+          "studs": 20
+        },
+        {
+          "lower": "C-109",
+          "upper": "C-119",
+          "studs": 12
+        },
+        {
+          "lower": "C-109",
+          "upper": "C-120",
+          "studs": 12
+        },
+        {
+          "lower": "C-110",
+          "upper": "C-120",
+          "studs": 12
+        },
+        {
+          "lower": "C-110",
+          "upper": "C-121",
+          "studs": 6
+        },
+        {
+          "lower": "C-111",
+          "upper": "C-121",
+          "studs": 6
+        },
+        {
+          "lower": "C-112",
+          "upper": "C-121",
+          "studs": 12
+        },
+        {
+          "lower": "C-112",
+          "upper": "C-122",
+          "studs": 12
+        },
+        {
+          "lower": "C-113",
+          "upper": "C-122",
+          "studs": 12
+        },
+        {
+          "lower": "C-114",
+          "upper": "C-123",
+          "studs": 6
+        },
+        {
+          "lower": "C-115",
+          "upper": "C-123",
+          "studs": 18
+        },
+        {
+          "lower": "C-115",
+          "upper": "C-124",
+          "studs": 6
+        },
+        {
+          "lower": "C-116",
+          "upper": "C-124",
+          "studs": 18
+        },
+        {
+          "lower": "C-117",
+          "upper": "C-125",
+          "studs": 20
+        },
+        {
+          "lower": "C-118",
+          "upper": "C-126",
+          "studs": 16
+        },
+        {
+          "lower": "C-119",
+          "upper": "C-126",
+          "studs": 12
+        },
+        {
+          "lower": "C-120",
+          "upper": "C-127",
+          "studs": 24
+        },
+        {
+          "lower": "C-121",
+          "upper": "C-128",
+          "studs": 24
+        },
+        {
+          "lower": "C-122",
+          "upper": "C-129",
+          "studs": 24
+        },
+        {
+          "lower": "C-123",
+          "upper": "C-130",
+          "studs": 24
+        },
+        {
+          "lower": "C-124",
+          "upper": "C-131",
+          "studs": 24
+        },
+        {
+          "lower": "C-125",
+          "upper": "C-132",
+          "studs": 16
+        },
+        {
+          "lower": "C-126",
+          "upper": "C-133",
+          "studs": 16
+        },
+        {
+          "lower": "C-126",
+          "upper": "C-134",
+          "studs": 12
+        },
+        {
+          "lower": "C-127",
+          "upper": "C-135",
+          "studs": 24
+        },
+        {
+          "lower": "C-128",
+          "upper": "C-136",
+          "studs": 24
+        },
+        {
+          "lower": "C-129",
+          "upper": "C-137",
+          "studs": 16
+        },
+        {
+          "lower": "C-129",
+          "upper": "C-138",
+          "studs": 12
+        },
+        {
+          "lower": "C-130",
+          "upper": "C-139",
+          "studs": 24
+        },
+        {
+          "lower": "C-131",
+          "upper": "C-140",
+          "studs": 24
+        },
+        {
+          "lower": "C-132",
+          "upper": "C-141",
+          "studs": 16
+        },
+        {
+          "lower": "C-133",
+          "upper": "C-142",
+          "studs": 16
+        },
+        {
+          "lower": "C-134",
+          "upper": "C-143",
+          "studs": 12
+        },
+        {
+          "lower": "C-135",
+          "upper": "C-143",
+          "studs": 12
+        },
+        {
+          "lower": "C-135",
+          "upper": "C-144",
+          "studs": 12
+        },
+        {
+          "lower": "C-136",
+          "upper": "C-144",
+          "studs": 12
+        },
+        {
+          "lower": "C-136",
+          "upper": "C-145",
+          "studs": 12
+        },
+        {
+          "lower": "C-137",
+          "upper": "C-146",
+          "studs": 16
+        },
+        {
+          "lower": "C-138",
+          "upper": "C-147",
+          "studs": 12
+        },
+        {
+          "lower": "C-139",
+          "upper": "C-147",
+          "studs": 12
+        },
+        {
+          "lower": "C-139",
+          "upper": "C-148",
+          "studs": 12
+        },
+        {
+          "lower": "C-140",
+          "upper": "C-148",
+          "studs": 12
+        },
+        {
+          "lower": "C-140",
+          "upper": "C-149",
+          "studs": 12
+        },
+        {
+          "lower": "C-141",
+          "upper": "C-150",
+          "studs": 16
+        },
+        {
+          "lower": "C-142",
+          "upper": "C-151",
+          "studs": 16
+        },
+        {
+          "lower": "C-143",
+          "upper": "C-152",
+          "studs": 12
+        },
+        {
+          "lower": "C-143",
+          "upper": "C-153",
+          "studs": 12
+        },
+        {
+          "lower": "C-144",
+          "upper": "C-153",
+          "studs": 12
+        },
+        {
+          "lower": "C-144",
+          "upper": "C-154",
+          "studs": 12
+        },
+        {
+          "lower": "C-145",
+          "upper": "C-154",
+          "studs": 12
+        },
+        {
+          "lower": "C-146",
+          "upper": "C-155",
+          "studs": 16
+        },
+        {
+          "lower": "C-147",
+          "upper": "C-156",
+          "studs": 12
+        },
+        {
+          "lower": "C-147",
+          "upper": "C-157",
+          "studs": 12
+        },
+        {
+          "lower": "C-148",
+          "upper": "C-157",
+          "studs": 12
+        },
+        {
+          "lower": "C-148",
+          "upper": "C-158",
+          "studs": 12
+        },
+        {
+          "lower": "C-149",
+          "upper": "C-158",
+          "studs": 12
+        },
+        {
+          "lower": "C-150",
+          "upper": "C-159",
+          "studs": 16
+        },
+        {
+          "lower": "C-151",
+          "upper": "C-160",
+          "studs": 16
+        },
+        {
+          "lower": "C-152",
+          "upper": "C-161",
+          "studs": 12
+        },
+        {
+          "lower": "C-153",
+          "upper": "C-161",
+          "studs": 12
+        },
+        {
+          "lower": "C-153",
+          "upper": "C-162",
+          "studs": 12
+        },
+        {
+          "lower": "C-154",
+          "upper": "C-162",
+          "studs": 12
+        },
+        {
+          "lower": "C-154",
+          "upper": "C-163",
+          "studs": 12
+        },
+        {
+          "lower": "C-155",
+          "upper": "C-164",
+          "studs": 16
+        },
+        {
+          "lower": "C-156",
+          "upper": "C-165",
+          "studs": 12
+        },
+        {
+          "lower": "C-157",
+          "upper": "C-165",
+          "studs": 12
+        },
+        {
+          "lower": "C-157",
+          "upper": "C-166",
+          "studs": 12
+        },
+        {
+          "lower": "C-158",
+          "upper": "C-166",
+          "studs": 12
+        },
+        {
+          "lower": "C-158",
+          "upper": "C-167",
+          "studs": 12
+        },
+        {
+          "lower": "C-159",
+          "upper": "C-168",
+          "studs": 16
+        },
+        {
+          "lower": "C-160",
+          "upper": "C-169",
+          "studs": 16
+        },
+        {
+          "lower": "C-161",
+          "upper": "C-170",
+          "studs": 12
+        },
+        {
+          "lower": "C-161",
+          "upper": "C-171",
+          "studs": 12
+        },
+        {
+          "lower": "C-162",
+          "upper": "C-171",
+          "studs": 12
+        },
+        {
+          "lower": "C-162",
+          "upper": "C-172",
+          "studs": 12
+        },
+        {
+          "lower": "C-163",
+          "upper": "C-172",
+          "studs": 12
+        },
+        {
+          "lower": "C-164",
+          "upper": "C-173",
+          "studs": 16
+        },
+        {
+          "lower": "C-165",
+          "upper": "C-174",
+          "studs": 12
+        },
+        {
+          "lower": "C-165",
+          "upper": "C-175",
+          "studs": 12
+        },
+        {
+          "lower": "C-166",
+          "upper": "C-175",
+          "studs": 12
+        },
+        {
+          "lower": "C-166",
+          "upper": "C-176",
+          "studs": 12
+        },
+        {
+          "lower": "C-167",
+          "upper": "C-176",
+          "studs": 12
+        },
+        {
+          "lower": "C-168",
+          "upper": "C-177",
+          "studs": 16
+        },
+        {
+          "lower": "C-169",
+          "upper": "C-178",
+          "studs": 16
+        },
+        {
+          "lower": "C-170",
+          "upper": "C-179",
+          "studs": 12
+        },
+        {
+          "lower": "C-171",
+          "upper": "C-179",
+          "studs": 12
+        },
+        {
+          "lower": "C-171",
+          "upper": "C-180",
+          "studs": 12
+        },
+        {
+          "lower": "C-172",
+          "upper": "C-180",
+          "studs": 12
+        },
+        {
+          "lower": "C-172",
+          "upper": "C-181",
+          "studs": 12
+        },
+        {
+          "lower": "C-173",
+          "upper": "C-182",
+          "studs": 16
+        },
+        {
+          "lower": "C-174",
+          "upper": "C-183",
+          "studs": 12
+        },
+        {
+          "lower": "C-175",
+          "upper": "C-183",
+          "studs": 12
+        },
+        {
+          "lower": "C-175",
+          "upper": "C-184",
+          "studs": 12
+        },
+        {
+          "lower": "C-176",
+          "upper": "C-184",
+          "studs": 12
+        },
+        {
+          "lower": "C-176",
+          "upper": "C-185",
+          "studs": 12
+        },
+        {
+          "lower": "C-177",
+          "upper": "C-186",
+          "studs": 16
+        },
+        {
+          "lower": "C-178",
+          "upper": "C-187",
+          "studs": 16
+        },
+        {
+          "lower": "C-179",
+          "upper": "C-188",
+          "studs": 12
+        },
+        {
+          "lower": "C-179",
+          "upper": "C-189",
+          "studs": 12
+        },
+        {
+          "lower": "C-180",
+          "upper": "C-189",
+          "studs": 12
+        },
+        {
+          "lower": "C-180",
+          "upper": "C-190",
+          "studs": 12
+        },
+        {
+          "lower": "C-181",
+          "upper": "C-190",
+          "studs": 12
+        },
+        {
+          "lower": "C-182",
+          "upper": "C-191",
+          "studs": 16
+        },
+        {
+          "lower": "C-183",
+          "upper": "C-192",
+          "studs": 12
+        },
+        {
+          "lower": "C-183",
+          "upper": "C-193",
+          "studs": 12
+        },
+        {
+          "lower": "C-184",
+          "upper": "C-193",
+          "studs": 12
+        },
+        {
+          "lower": "C-184",
+          "upper": "C-194",
+          "studs": 12
+        },
+        {
+          "lower": "C-185",
+          "upper": "C-194",
+          "studs": 12
+        },
+        {
+          "lower": "C-186",
+          "upper": "C-195",
+          "studs": 16
+        },
+        {
+          "lower": "C-187",
+          "upper": "C-196",
+          "studs": 16
+        },
+        {
+          "lower": "C-188",
+          "upper": "C-197",
+          "studs": 12
+        },
+        {
+          "lower": "C-189",
+          "upper": "C-197",
+          "studs": 12
+        },
+        {
+          "lower": "C-189",
+          "upper": "C-198",
+          "studs": 12
+        },
+        {
+          "lower": "C-190",
+          "upper": "C-198",
+          "studs": 12
+        },
+        {
+          "lower": "C-190",
+          "upper": "C-199",
+          "studs": 12
+        },
+        {
+          "lower": "C-191",
+          "upper": "C-200",
+          "studs": 16
+        },
+        {
+          "lower": "C-192",
+          "upper": "C-201",
+          "studs": 12
+        },
+        {
+          "lower": "C-193",
+          "upper": "C-201",
+          "studs": 12
+        },
+        {
+          "lower": "C-193",
+          "upper": "C-202",
+          "studs": 12
+        },
+        {
+          "lower": "C-194",
+          "upper": "C-202",
+          "studs": 12
+        },
+        {
+          "lower": "C-194",
+          "upper": "C-203",
+          "studs": 12
+        },
+        {
+          "lower": "C-195",
+          "upper": "C-204",
+          "studs": 16
+        },
+        {
+          "lower": "C-196",
+          "upper": "C-205",
+          "studs": 16
+        },
+        {
+          "lower": "C-197",
+          "upper": "C-206",
+          "studs": 12
+        },
+        {
+          "lower": "C-197",
+          "upper": "C-207",
+          "studs": 12
+        },
+        {
+          "lower": "C-198",
+          "upper": "C-207",
+          "studs": 12
+        },
+        {
+          "lower": "C-198",
+          "upper": "C-208",
+          "studs": 12
+        },
+        {
+          "lower": "C-199",
+          "upper": "C-208",
+          "studs": 12
+        },
+        {
+          "lower": "C-200",
+          "upper": "C-209",
+          "studs": 16
+        },
+        {
+          "lower": "C-201",
+          "upper": "C-210",
+          "studs": 12
+        },
+        {
+          "lower": "C-201",
+          "upper": "C-211",
+          "studs": 12
+        },
+        {
+          "lower": "C-202",
+          "upper": "C-211",
+          "studs": 12
+        },
+        {
+          "lower": "C-202",
+          "upper": "C-212",
+          "studs": 12
+        },
+        {
+          "lower": "C-203",
+          "upper": "C-212",
+          "studs": 12
+        },
+        {
+          "lower": "C-204",
+          "upper": "C-213",
+          "studs": 16
+        },
+        {
+          "lower": "C-205",
+          "upper": "C-214",
+          "studs": 8
+        },
+        {
+          "lower": "C-206",
+          "upper": "C-214",
+          "studs": 12
+        },
+        {
+          "lower": "C-207",
+          "upper": "C-214",
+          "studs": 6
+        },
+        {
+          "lower": "C-207",
+          "upper": "C-215",
+          "studs": 18
+        },
+        {
+          "lower": "C-208",
+          "upper": "C-215",
+          "studs": 6
+        },
+        {
+          "lower": "C-208",
+          "upper": "C-216",
+          "studs": 18
+        },
+        {
+          "lower": "C-209",
+          "upper": "C-216",
+          "studs": 8
+        },
+        {
+          "lower": "C-209",
+          "upper": "C-217",
+          "studs": 8
+        },
+        {
+          "lower": "C-210",
+          "upper": "C-217",
+          "studs": 12
+        },
+        {
+          "lower": "C-211",
+          "upper": "C-217",
+          "studs": 6
+        },
+        {
+          "lower": "C-211",
+          "upper": "C-218",
+          "studs": 18
+        },
+        {
+          "lower": "C-212",
+          "upper": "C-218",
+          "studs": 6
+        },
+        {
+          "lower": "C-212",
+          "upper": "C-219",
+          "studs": 18
+        },
+        {
+          "lower": "C-213",
+          "upper": "C-219",
+          "studs": 8
+        },
+        {
+          "lower": "C-214",
+          "upper": "C-220",
+          "studs": 16
+        },
+        {
+          "lower": "C-214",
+          "upper": "C-221",
+          "studs": 8
+        },
+        {
+          "lower": "C-215",
+          "upper": "C-221",
+          "studs": 24
+        },
+        {
+          "lower": "C-215",
+          "upper": "C-222",
+          "studs": 8
+        },
+        {
+          "lower": "C-216",
+          "upper": "C-222",
+          "studs": 24
+        },
+        {
+          "lower": "C-216",
+          "upper": "C-223",
+          "studs": 8
+        },
+        {
+          "lower": "C-217",
+          "upper": "C-223",
+          "studs": 24
+        },
+        {
+          "lower": "C-217",
+          "upper": "C-224",
+          "studs": 8
+        },
+        {
+          "lower": "C-218",
+          "upper": "C-224",
+          "studs": 24
+        },
+        {
+          "lower": "C-218",
+          "upper": "C-225",
+          "studs": 8
+        },
+        {
+          "lower": "C-219",
+          "upper": "C-225",
+          "studs": 24
+        },
+        {
+          "lower": "C-222",
+          "upper": "C-226",
+          "studs": 24
+        },
+        {
+          "lower": "C-223",
+          "upper": "C-227",
+          "studs": 24
+        },
+        {
+          "lower": "C-224",
+          "upper": "C-228",
+          "studs": 12
+        }
+      ]
+    }
+  ],
+  "reuse_basis": "Within-run cache only: identical part IDs, rotations and relative translations. No private historical report is required.",
+  "not_claimed": [
+    "physical clutch",
+    "FDM strength",
+    "sliced time/mass",
+    "toy safety",
+    "commercial compatibility certification"
+  ]
+}

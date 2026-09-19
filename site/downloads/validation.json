@@ -1,0 +1,6630 @@
+{
+  "scope": "A/B/C five-course bases, enlarged front text, independent right logos and vertical exploded display",
+  "revision": "4.0-public-template",
+  "publication_mode": "generic",
+  "digital_checks_passed": true,
+  "digital_checks_scope": "Native, mesh, package and software-output checks; browser execution is recorded separately.",
+  "publication_ready": false,
+  "physical_testing": "NOT_PERFORMED",
+  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "mechanical_source_sha256": "2a97d70c72fea83d387fb1eb2fc9bcb99a05c672b185ab7b60c69e8ae0beb0b3",
+  "parts": 71,
+  "mesh_checks": {
+    "status": "PASS_DIGITAL_ONLY",
+    "library": "trimesh 4.7.4",
+    "units": "mm (STL has no intrinsic unit tag; catalogue and header specify mm)",
+    "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+    "parts": [
+      {
+        "part": "NP3-KEEPER",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 680.9307,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            15.899999618530273,
+            3.200000047683716
+          ]
+        ],
+        "triangles": 414,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "BASE3-18x08-B-a4853c",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 52982.7694,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            143.89999389648438,
+            63.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 116938,
+        "bed_envelope_with_6mm_brim_mm": [
+          155.79999389499426,
+          75.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-06x08-T-b8aa05",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 17044.2919,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            63.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 36082,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          75.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-06x08-T-9cb610",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 16885.2039,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            3.5,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            63.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 36316,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          72.4000015258789
+        ]
+      },
+      {
+        "part": "BASE3-06x08-T-7f51dc",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 17064.3399,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            63.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 36370,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          75.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-03x08-T-48de52",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 8627.062,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            23.899999618530273,
+            63.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 16078,
+        "bed_envelope_with_6mm_brim_mm": [
+          35.79999961704016,
+          75.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-06x08-T-7532db",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 16975.4438,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            63.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 36352,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          75.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-03x08-T-80e081",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 8557.598,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            23.899999618530273,
+            63.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 16204,
+        "bed_envelope_with_6mm_brim_mm": [
+          35.79999961704016,
+          75.80000152438879
+        ]
+      },
+      {
+        "part": "NP3-TEXT-A",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 9776.2642,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            102.0,
+            40.0,
+            3.200000047683716
+          ]
+        ],
+        "triangles": 60666,
+        "bed_envelope_with_6mm_brim_mm": [
+          114.0,
+          52.0
+        ]
+      },
+      {
+        "part": "NP3-LOGO-A",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 3231.6261,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            32.0,
+            40.0,
+            3.5999999046325684
+          ]
+        ],
+        "triangles": 1652,
+        "bed_envelope_with_6mm_brim_mm": [
+          44.0,
+          52.0
+        ]
+      },
+      {
+        "part": "BR-04x02-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2966.5599,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 4860,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "BR-02x03-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2241.0919,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            23.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 3504,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          35.79999961704016
+        ]
+      },
+      {
+        "part": "BR-02x02-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 1515.624,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            15.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 2148,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "BR-03x02-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2241.0919,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            23.899999618530273,
+            15.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 3504,
+        "bed_envelope_with_6mm_brim_mm": [
+          35.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "BR-01x02-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 821.8339,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            7.900000095367432,
+            15.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 1144,
+        "bed_envelope_with_6mm_brim_mm": [
+          19.800000093877316,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "BR-04x03-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 4412.6669,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            23.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 8148,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          35.79999961704016
+        ]
+      },
+      {
+        "part": "BR-04x02-H032",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 1280.3194,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            5.0
+          ]
+        ],
+        "triangles": 4860,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "BASE3-24x10-B-562406",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 87857.1192,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            191.89999389648438,
+            79.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 202406,
+        "bed_envelope_with_6mm_brim_mm": [
+          203.79999389499426,
+          91.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-06x10-T-e1945a",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 21377.7604,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            79.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 46450,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          91.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-06x10-T-838259",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 21218.6951,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            3.5,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            79.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 46756,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          88.4000015258789
+        ]
+      },
+      {
+        "part": "BASE3-06x10-T-3f87ac",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 21218.6951,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            3.5,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            79.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 46756,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          88.4000015258789
+        ]
+      },
+      {
+        "part": "BASE3-06x10-T-6e100f",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 21367.1112,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            79.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 46810,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          91.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-03x10-T-aa77a9",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 10798.6247,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            23.899999618530273,
+            79.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 20686,
+        "bed_envelope_with_6mm_brim_mm": [
+          35.79999961704016,
+          91.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-06x10-T-6159e6",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 21278.2151,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            79.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 46792,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          91.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-03x10-T-d79875",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 10729.1721,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            23.899999618530273,
+            79.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 20848,
+        "bed_envelope_with_6mm_brim_mm": [
+          35.79999961704016,
+          91.80000152438879
+        ]
+      },
+      {
+        "part": "NP3-TEXT-B",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 13777.9799,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            142.0,
+            40.0,
+            3.200000047683716
+          ]
+        ],
+        "triangles": 59472,
+        "bed_envelope_with_6mm_brim_mm": [
+          154.0,
+          52.0
+        ]
+      },
+      {
+        "part": "NP3-LOGO-B",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 4275.2515,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            40.0,
+            40.0,
+            3.5999999046325684
+          ]
+        ],
+        "triangles": 1694,
+        "bed_envelope_with_6mm_brim_mm": [
+          52.0,
+          52.0
+        ]
+      },
+      {
+        "part": "BR-04x04-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 5858.774,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            31.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 11436,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          43.79999961704016
+        ]
+      },
+      {
+        "part": "BR-02x04-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2966.5599,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            31.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 4860,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          43.79999961704016
+        ]
+      },
+      {
+        "part": "BR-02x06-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 4417.4961,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            47.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 7572,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          59.80000152438879
+        ]
+      },
+      {
+        "part": "BR-01x04-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 1615.4864,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            7.900000095367432,
+            31.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 2628,
+        "bed_envelope_with_6mm_brim_mm": [
+          19.800000093877316,
+          43.79999961704016
+        ]
+      },
+      {
+        "part": "BR-03x04-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 4412.6669,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            23.899999618530273,
+            31.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 8148,
+        "bed_envelope_with_6mm_brim_mm": [
+          35.79999961704016,
+          43.79999961704016
+        ]
+      },
+      {
+        "part": "BR-05x04-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 7304.8821,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            39.900001525878906,
+            31.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 14724,
+        "bed_envelope_with_6mm_brim_mm": [
+          51.80000152438879,
+          43.79999961704016
+        ]
+      },
+      {
+        "part": "BR-02x05-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 3692.0283,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            39.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 6216,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          51.80000152438879
+        ]
+      },
+      {
+        "part": "BR-04x05-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 7304.8821,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            39.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 14724,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          51.80000152438879
+        ]
+      },
+      {
+        "part": "BR-02x04-H064",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2202.5452,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            31.899999618530273,
+            8.199999809265137
+          ]
+        ],
+        "triangles": 4860,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          43.79999961704016
+        ]
+      },
+      {
+        "part": "BR-04x04-H064",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 4364.6412,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            31.899999618530273,
+            8.199999809265137
+          ]
+        ],
+        "triangles": 11436,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          43.79999961704016
+        ]
+      },
+      {
+        "part": "BASE3-15x14-B-2f9fc1",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 76558.1361,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            119.9000015258789,
+            111.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 180220,
+        "bed_envelope_with_6mm_brim_mm": [
+          131.8000015243888,
+          123.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-15x14-B-65597c",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 76526.3523,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            119.9000015258789,
+            111.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 180272,
+        "bed_envelope_with_6mm_brim_mm": [
+          131.8000015243888,
+          123.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-06x14-T-72d551",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 30044.6998,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            111.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 67186,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          123.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-06x14-T-f6d8b7",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 29885.6801,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            3.5,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            111.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 67636,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          120.4000015258789
+        ]
+      },
+      {
+        "part": "BASE3-06x14-T-afd244",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 30006.64,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            111.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 67672,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          123.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-06x14-T-26e6b0",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 29883.1841,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            111.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 67654,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          123.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-03x14-T-08700f",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 15141.7513,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            23.899999618530273,
+            111.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 29902,
+        "bed_envelope_with_6mm_brim_mm": [
+          35.79999961704016,
+          123.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-06x14-T-5258a8",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 29914.48,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            47.900001525878906,
+            111.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 67672,
+        "bed_envelope_with_6mm_brim_mm": [
+          59.80000152438879,
+          123.80000152438879
+        ]
+      },
+      {
+        "part": "BASE3-03x14-T-d96cba",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 15072.3214,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            23.899999618530273,
+            111.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 30136,
+        "bed_envelope_with_6mm_brim_mm": [
+          35.79999961704016,
+          123.80000152438879
+        ]
+      },
+      {
+        "part": "NP3-TEXT-C",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 17880.9806,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            182.0,
+            40.0,
+            3.200000047683716
+          ]
+        ],
+        "triangles": 59392,
+        "bed_envelope_with_6mm_brim_mm": [
+          194.0,
+          52.0
+        ]
+      },
+      {
+        "part": "NP3-LOGO-C",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 5194.421,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            48.0,
+            40.0,
+            3.5999999046325684
+          ]
+        ],
+        "triangles": 1706,
+        "bed_envelope_with_6mm_brim_mm": [
+          60.0,
+          52.0
+        ]
+      },
+      {
+        "part": "BR-04x07-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 10197.0958,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            55.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 21300,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          67.80000152438879
+        ]
+      },
+      {
+        "part": "BR-02x07-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 5142.9639,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            55.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 8928,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          67.80000152438879
+        ]
+      },
+      {
+        "part": "BR-02x10-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 7319.367,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            79.9000015258789,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 12996,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          91.80000152438879
+        ]
+      },
+      {
+        "part": "BR-04x06-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 8750.9889,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            47.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 18012,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          59.80000152438879
+        ]
+      },
+      {
+        "part": "BR-03x06-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 6584.2423,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            23.899999618530273,
+            47.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 12792,
+        "bed_envelope_with_6mm_brim_mm": [
+          35.79999961704016,
+          59.80000152438879
+        ]
+      },
+      {
+        "part": "BR-01x06-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2409.1391,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            7.900000095367432,
+            47.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 4112,
+        "bed_envelope_with_6mm_brim_mm": [
+          19.800000093877316,
+          59.80000152438879
+        ]
+      },
+      {
+        "part": "BR-05x06-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 10917.7368,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            39.900001525878906,
+            47.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 23232,
+        "bed_envelope_with_6mm_brim_mm": [
+          51.80000152438879,
+          59.80000152438879
+        ]
+      },
+      {
+        "part": "BR-04x08-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 11643.2027,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            63.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 24588,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          75.80000152438879
+        ]
+      },
+      {
+        "part": "BR-02x08-H096",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 5868.4317,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            63.900001525878906,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 10284,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          75.80000152438879
+        ]
+      },
+      {
+        "part": "BR-04x06-H064",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 6526.7376,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            47.900001525878906,
+            8.199999809265137
+          ]
+        ],
+        "triangles": 18012,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          59.80000152438879
+        ]
+      },
+      {
+        "part": "BR-02x06-H064",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 3285.4536,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            15.899999618530273,
+            47.900001525878906,
+            8.199999809265137
+          ]
+        ],
+        "triangles": 7572,
+        "bed_envelope_with_6mm_brim_mm": [
+          27.799999617040157,
+          59.80000152438879
+        ]
+      },
+      {
+        "part": "FIT-M-D470",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 1853.6443,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            5.0
+          ]
+        ],
+        "triangles": 2940,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "FIT-M-D480",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 1864.2911,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            5.0
+          ]
+        ],
+        "triangles": 2940,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "FIT-M-D490",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 1875.1638,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            5.0
+          ]
+        ],
+        "triangles": 2940,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "FIT-F-CM04",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2787.1022,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            9.600000381469727
+          ]
+        ],
+        "triangles": 1932,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "FIT-F-CP00",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2748.5202,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            9.600000381469727
+          ]
+        ],
+        "triangles": 1932,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "FIT-F-CP04",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2710.0769,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            9.600000381469727
+          ]
+        ],
+        "triangles": 1932,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "FIT-F-CP08",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2671.7726,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            9.600000381469727
+          ]
+        ],
+        "triangles": 1932,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "FIT-F-CP12",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2633.6069,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            9.600000381469727
+          ]
+        ],
+        "triangles": 1932,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "NP3-FIT-PLAQUE",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 399.1467,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            24.0,
+            9.199999809265137,
+            2.4000000953674316
+          ]
+        ],
+        "triangles": 60,
+        "bed_envelope_with_6mm_brim_mm": [
+          36.0,
+          21.199999809265137
+        ]
+      },
+      {
+        "part": "NP3-FIT-SOCKET-C15",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2991.8055,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 3210,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "NP3-FIT-SOCKET-C20",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2978.8554,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 3212,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      },
+      {
+        "part": "NP3-FIT-SOCKET-C25",
+        "watertight": true,
+        "winding_consistent": true,
+        "connected_bodies": 1,
+        "positive_volume_mm3": 2965.8233,
+        "vertex_manifold": true,
+        "bounds_mm": [
+          [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.0
+          ],
+          [
+            31.899999618530273,
+            15.899999618530273,
+            11.399999618530273
+          ]
+        ],
+        "triangles": 3214,
+        "bed_envelope_with_6mm_brim_mm": [
+          43.79999961704016,
+          27.799999617040157
+        ]
+      }
+    ]
+  },
+  "models": [
+    {
+      "model": "A",
+      "cad": {
+        "model": "A",
+        "native_reopened_instances": 91,
+        "step_reopened_solids": 91,
+        "units": "mm",
+        "actual_mm": [
+          143.8,
+          63.8,
+          187.4
+        ],
+        "appearance_saved": true,
+        "connected_components": 1,
+        "stud_engagement_edges": 119,
+        "card_connection": "Independent base-front text/logo dovetails with two text keepers and one logo keeper; physical fit untested.",
+        "brep_boolean_pairs": 135,
+        "maximum_intersection_mm3": 0.0,
+        "new_unique_boolean_evaluations": 89,
+        "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
+        "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
+        "cad_material_center_projection_margin_mm": 30.4864,
+        "physical_fit_and_stability": "NOT TESTED",
+        "fcstd_sha256": "2b17c49b972c5cf13d0f867ce6ced157056e4e532bb82ec48352e00b2a30ba09",
+        "step_sha256": "b2c835d1770ea31c383d9f9a65d87230230b4af5a75439c6330948cecc8e3772",
+        "contacts": [
+          {
+            "lower": "A-001",
+            "upper": "A-002",
+            "studs": 42
+          },
+          {
+            "lower": "A-001",
+            "upper": "A-003",
+            "studs": 42
+          },
+          {
+            "lower": "A-001",
+            "upper": "A-004",
+            "studs": 42
+          },
+          {
+            "lower": "A-002",
+            "upper": "A-005",
+            "studs": 21
+          },
+          {
+            "lower": "A-002",
+            "upper": "A-006",
+            "studs": 21
+          },
+          {
+            "lower": "A-003",
+            "upper": "A-006",
+            "studs": 21
+          },
+          {
+            "lower": "A-003",
+            "upper": "A-007",
+            "studs": 21
+          },
+          {
+            "lower": "A-004",
+            "upper": "A-007",
+            "studs": 21
+          },
+          {
+            "lower": "A-004",
+            "upper": "A-008",
+            "studs": 21
+          },
+          {
+            "lower": "A-005",
+            "upper": "A-009",
+            "studs": 21
+          },
+          {
+            "lower": "A-006",
+            "upper": "A-009",
+            "studs": 21
+          },
+          {
+            "lower": "A-006",
+            "upper": "A-010",
+            "studs": 21
+          },
+          {
+            "lower": "A-007",
+            "upper": "A-010",
+            "studs": 21
+          },
+          {
+            "lower": "A-007",
+            "upper": "A-011",
+            "studs": 21
+          },
+          {
+            "lower": "A-008",
+            "upper": "A-011",
+            "studs": 21
+          },
+          {
+            "lower": "A-009",
+            "upper": "A-012",
+            "studs": 21
+          },
+          {
+            "lower": "A-009",
+            "upper": "A-013",
+            "studs": 21
+          },
+          {
+            "lower": "A-010",
+            "upper": "A-013",
+            "studs": 21
+          },
+          {
+            "lower": "A-010",
+            "upper": "A-014",
+            "studs": 21
+          },
+          {
+            "lower": "A-011",
+            "upper": "A-014",
+            "studs": 21
+          },
+          {
+            "lower": "A-011",
+            "upper": "A-015",
+            "studs": 21
+          },
+          {
+            "lower": "A-012",
+            "upper": "A-018",
+            "studs": 2
+          },
+          {
+            "lower": "A-014",
+            "upper": "A-019",
+            "studs": 2
+          },
+          {
+            "lower": "A-014",
+            "upper": "A-020",
+            "studs": 1
+          },
+          {
+            "lower": "A-015",
+            "upper": "A-020",
+            "studs": 1
+          },
+          {
+            "lower": "A-013",
+            "upper": "A-021",
+            "studs": 8
+          },
+          {
+            "lower": "A-014",
+            "upper": "A-022",
+            "studs": 8
+          },
+          {
+            "lower": "A-021",
+            "upper": "A-023",
+            "studs": 2
+          },
+          {
+            "lower": "A-021",
+            "upper": "A-024",
+            "studs": 4
+          },
+          {
+            "lower": "A-021",
+            "upper": "A-025",
+            "studs": 2
+          },
+          {
+            "lower": "A-022",
+            "upper": "A-025",
+            "studs": 6
+          },
+          {
+            "lower": "A-022",
+            "upper": "A-026",
+            "studs": 2
+          },
+          {
+            "lower": "A-023",
+            "upper": "A-027",
+            "studs": 3
+          },
+          {
+            "lower": "A-023",
+            "upper": "A-028",
+            "studs": 2
+          },
+          {
+            "lower": "A-024",
+            "upper": "A-028",
+            "studs": 4
+          },
+          {
+            "lower": "A-025",
+            "upper": "A-028",
+            "studs": 2
+          },
+          {
+            "lower": "A-025",
+            "upper": "A-029",
+            "studs": 6
+          },
+          {
+            "lower": "A-026",
+            "upper": "A-029",
+            "studs": 2
+          },
+          {
+            "lower": "A-026",
+            "upper": "A-030",
+            "studs": 3
+          },
+          {
+            "lower": "A-027",
+            "upper": "A-031",
+            "studs": 3
+          },
+          {
+            "lower": "A-027",
+            "upper": "A-032",
+            "studs": 2
+          },
+          {
+            "lower": "A-028",
+            "upper": "A-032",
+            "studs": 4
+          },
+          {
+            "lower": "A-028",
+            "upper": "A-033",
+            "studs": 2
+          },
+          {
+            "lower": "A-028",
+            "upper": "A-034",
+            "studs": 2
+          },
+          {
+            "lower": "A-029",
+            "upper": "A-034",
+            "studs": 2
+          },
+          {
+            "lower": "A-029",
+            "upper": "A-035",
+            "studs": 2
+          },
+          {
+            "lower": "A-029",
+            "upper": "A-036",
+            "studs": 4
+          },
+          {
+            "lower": "A-030",
+            "upper": "A-036",
+            "studs": 2
+          },
+          {
+            "lower": "A-030",
+            "upper": "A-037",
+            "studs": 3
+          },
+          {
+            "lower": "A-031",
+            "upper": "A-038",
+            "studs": 6
+          },
+          {
+            "lower": "A-032",
+            "upper": "A-039",
+            "studs": 6
+          },
+          {
+            "lower": "A-033",
+            "upper": "A-040",
+            "studs": 2
+          },
+          {
+            "lower": "A-034",
+            "upper": "A-041",
+            "studs": 4
+          },
+          {
+            "lower": "A-035",
+            "upper": "A-042",
+            "studs": 2
+          },
+          {
+            "lower": "A-036",
+            "upper": "A-043",
+            "studs": 6
+          },
+          {
+            "lower": "A-037",
+            "upper": "A-044",
+            "studs": 6
+          },
+          {
+            "lower": "A-038",
+            "upper": "A-045",
+            "studs": 6
+          },
+          {
+            "lower": "A-039",
+            "upper": "A-046",
+            "studs": 6
+          },
+          {
+            "lower": "A-040",
+            "upper": "A-047",
+            "studs": 2
+          },
+          {
+            "lower": "A-041",
+            "upper": "A-048",
+            "studs": 4
+          },
+          {
+            "lower": "A-042",
+            "upper": "A-049",
+            "studs": 2
+          },
+          {
+            "lower": "A-043",
+            "upper": "A-050",
+            "studs": 6
+          },
+          {
+            "lower": "A-044",
+            "upper": "A-051",
+            "studs": 6
+          },
+          {
+            "lower": "A-045",
+            "upper": "A-052",
+            "studs": 6
+          },
+          {
+            "lower": "A-046",
+            "upper": "A-053",
+            "studs": 6
+          },
+          {
+            "lower": "A-047",
+            "upper": "A-053",
+            "studs": 2
+          },
+          {
+            "lower": "A-048",
+            "upper": "A-054",
+            "studs": 4
+          },
+          {
+            "lower": "A-049",
+            "upper": "A-054",
+            "studs": 2
+          },
+          {
+            "lower": "A-050",
+            "upper": "A-054",
+            "studs": 2
+          },
+          {
+            "lower": "A-050",
+            "upper": "A-055",
+            "studs": 4
+          },
+          {
+            "lower": "A-051",
+            "upper": "A-056",
+            "studs": 6
+          },
+          {
+            "lower": "A-052",
+            "upper": "A-057",
+            "studs": 6
+          },
+          {
+            "lower": "A-053",
+            "upper": "A-058",
+            "studs": 8
+          },
+          {
+            "lower": "A-054",
+            "upper": "A-059",
+            "studs": 8
+          },
+          {
+            "lower": "A-055",
+            "upper": "A-060",
+            "studs": 4
+          },
+          {
+            "lower": "A-056",
+            "upper": "A-060",
+            "studs": 6
+          },
+          {
+            "lower": "A-057",
+            "upper": "A-061",
+            "studs": 6
+          },
+          {
+            "lower": "A-058",
+            "upper": "A-062",
+            "studs": 8
+          },
+          {
+            "lower": "A-059",
+            "upper": "A-063",
+            "studs": 6
+          },
+          {
+            "lower": "A-059",
+            "upper": "A-064",
+            "studs": 4
+          },
+          {
+            "lower": "A-060",
+            "upper": "A-064",
+            "studs": 4
+          },
+          {
+            "lower": "A-060",
+            "upper": "A-065",
+            "studs": 6
+          },
+          {
+            "lower": "A-061",
+            "upper": "A-066",
+            "studs": 6
+          },
+          {
+            "lower": "A-062",
+            "upper": "A-067",
+            "studs": 4
+          },
+          {
+            "lower": "A-062",
+            "upper": "A-068",
+            "studs": 4
+          },
+          {
+            "lower": "A-063",
+            "upper": "A-069",
+            "studs": 6
+          },
+          {
+            "lower": "A-064",
+            "upper": "A-070",
+            "studs": 4
+          },
+          {
+            "lower": "A-064",
+            "upper": "A-071",
+            "studs": 4
+          },
+          {
+            "lower": "A-065",
+            "upper": "A-072",
+            "studs": 6
+          },
+          {
+            "lower": "A-066",
+            "upper": "A-073",
+            "studs": 6
+          },
+          {
+            "lower": "A-067",
+            "upper": "A-074",
+            "studs": 4
+          },
+          {
+            "lower": "A-068",
+            "upper": "A-074",
+            "studs": 4
+          },
+          {
+            "lower": "A-069",
+            "upper": "A-075",
+            "studs": 6
+          },
+          {
+            "lower": "A-070",
+            "upper": "A-076",
+            "studs": 4
+          },
+          {
+            "lower": "A-071",
+            "upper": "A-076",
+            "studs": 4
+          },
+          {
+            "lower": "A-072",
+            "upper": "A-077",
+            "studs": 6
+          },
+          {
+            "lower": "A-073",
+            "upper": "A-078",
+            "studs": 6
+          },
+          {
+            "lower": "A-074",
+            "upper": "A-079",
+            "studs": 4
+          },
+          {
+            "lower": "A-074",
+            "upper": "A-080",
+            "studs": 4
+          },
+          {
+            "lower": "A-075",
+            "upper": "A-081",
+            "studs": 6
+          },
+          {
+            "lower": "A-076",
+            "upper": "A-082",
+            "studs": 4
+          },
+          {
+            "lower": "A-076",
+            "upper": "A-083",
+            "studs": 4
+          },
+          {
+            "lower": "A-077",
+            "upper": "A-084",
+            "studs": 6
+          },
+          {
+            "lower": "A-078",
+            "upper": "A-085",
+            "studs": 3
+          },
+          {
+            "lower": "A-079",
+            "upper": "A-085",
+            "studs": 4
+          },
+          {
+            "lower": "A-080",
+            "upper": "A-085",
+            "studs": 2
+          },
+          {
+            "lower": "A-080",
+            "upper": "A-086",
+            "studs": 2
+          },
+          {
+            "lower": "A-081",
+            "upper": "A-086",
+            "studs": 6
+          },
+          {
+            "lower": "A-082",
+            "upper": "A-086",
+            "studs": 2
+          },
+          {
+            "lower": "A-082",
+            "upper": "A-087",
+            "studs": 2
+          },
+          {
+            "lower": "A-083",
+            "upper": "A-087",
+            "studs": 4
+          },
+          {
+            "lower": "A-084",
+            "upper": "A-087",
+            "studs": 3
+          },
+          {
+            "lower": "A-085",
+            "upper": "A-088",
+            "studs": 6
+          },
+          {
+            "lower": "A-085",
+            "upper": "A-089",
+            "studs": 3
+          },
+          {
+            "lower": "A-086",
+            "upper": "A-089",
+            "studs": 9
+          },
+          {
+            "lower": "A-086",
+            "upper": "A-090",
+            "studs": 3
+          },
+          {
+            "lower": "A-087",
+            "upper": "A-090",
+            "studs": 9
+          },
+          {
+            "lower": "A-089",
+            "upper": "A-091",
+            "studs": 6
+          },
+          {
+            "lower": "A-090",
+            "upper": "A-091",
+            "studs": 2
+          }
+        ]
+      },
+      "blender": {
+        "model": "A",
+        "status": "PASS_NATIVE_REOPEN",
+        "blender_version": "5.1.1",
+        "instances": 91,
+        "assembly_stages": 23,
+        "frames": 286,
+        "fps": 20,
+        "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+        "native_sha256": "41d08df877aeafdef7c8e28e4e02decdf550be2798085ee2b93a9b51be6f379c",
+        "geometry": "same delivered STL; local bounds, units, IDs, colors and final transforms checked",
+        "no_orphan_or_hidden_mesh_data": true,
+        "animation": "all numbered stages checked after fresh native reopen",
+        "physics": "not simulated; physical fit and stability untested"
+      },
+      "video": {
+        "status": "PASS_ACTUAL_RENDER_ENCODE_DECODE",
+        "model": "A",
+        "source": "downloads/A/A.blend",
+        "renderer": "Blender Workbench",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 720,
+              "height": 800,
+              "pix_fmt": "yuv420p",
+              "r_frame_rate": "20/1",
+              "nb_read_frames": "286"
+            }
+          ],
+          "format": {
+            "duration": "14.300000"
+          }
+        },
+        "faststart": true,
+        "full_decode": true,
+        "sha256": "cccdbc311ed6b81e05375721643cd01a32d3ae293892b440b1d2a9b626761076"
+      },
+      "drawings_pdf_pages": 45,
+      "privacy": {
+        "model": "A",
+        "native_private_path_scan": "PASS",
+        "png_metadata_removed": [
+          "A-base-front.png",
+          "A-hero.png",
+          "A-compare.png"
+        ],
+        "geometry_and_pixels": "unchanged; native must be reopened after metadata normalization"
+      }
+    },
+    {
+      "model": "B",
+      "cad": {
+        "model": "B",
+        "native_reopened_instances": 150,
+        "step_reopened_solids": 150,
+        "units": "mm",
+        "actual_mm": [
+          191.8,
+          79.8,
+          238.6
+        ],
+        "appearance_saved": true,
+        "connected_components": 1,
+        "stud_engagement_edges": 208,
+        "card_connection": "Independent base-front text/logo dovetails with two text keepers and one logo keeper; physical fit untested.",
+        "brep_boolean_pairs": 224,
+        "maximum_intersection_mm3": 0.0,
+        "new_unique_boolean_evaluations": 111,
+        "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
+        "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
+        "cad_material_center_projection_margin_mm": 38.8401,
+        "physical_fit_and_stability": "NOT TESTED",
+        "fcstd_sha256": "cf07d2d2ecfecafb3cbd2f8897a026c1c32d8fb2d7ae1b0ae14aa1fd789e1750",
+        "step_sha256": "5b17eae7d8d040a25deeda8a0337889dbd5db83884f7e91cd1ca9e496e1d8f8a",
+        "contacts": [
+          {
+            "lower": "B-001",
+            "upper": "B-002",
+            "studs": 54
+          },
+          {
+            "lower": "B-001",
+            "upper": "B-003",
+            "studs": 54
+          },
+          {
+            "lower": "B-001",
+            "upper": "B-004",
+            "studs": 54
+          },
+          {
+            "lower": "B-001",
+            "upper": "B-005",
+            "studs": 54
+          },
+          {
+            "lower": "B-002",
+            "upper": "B-006",
+            "studs": 27
+          },
+          {
+            "lower": "B-002",
+            "upper": "B-007",
+            "studs": 27
+          },
+          {
+            "lower": "B-003",
+            "upper": "B-007",
+            "studs": 27
+          },
+          {
+            "lower": "B-003",
+            "upper": "B-008",
+            "studs": 27
+          },
+          {
+            "lower": "B-004",
+            "upper": "B-008",
+            "studs": 27
+          },
+          {
+            "lower": "B-004",
+            "upper": "B-009",
+            "studs": 27
+          },
+          {
+            "lower": "B-005",
+            "upper": "B-009",
+            "studs": 27
+          },
+          {
+            "lower": "B-005",
+            "upper": "B-010",
+            "studs": 27
+          },
+          {
+            "lower": "B-006",
+            "upper": "B-011",
+            "studs": 27
+          },
+          {
+            "lower": "B-007",
+            "upper": "B-011",
+            "studs": 27
+          },
+          {
+            "lower": "B-007",
+            "upper": "B-012",
+            "studs": 27
+          },
+          {
+            "lower": "B-008",
+            "upper": "B-012",
+            "studs": 27
+          },
+          {
+            "lower": "B-008",
+            "upper": "B-013",
+            "studs": 27
+          },
+          {
+            "lower": "B-009",
+            "upper": "B-013",
+            "studs": 27
+          },
+          {
+            "lower": "B-009",
+            "upper": "B-014",
+            "studs": 27
+          },
+          {
+            "lower": "B-010",
+            "upper": "B-014",
+            "studs": 27
+          },
+          {
+            "lower": "B-011",
+            "upper": "B-015",
+            "studs": 27
+          },
+          {
+            "lower": "B-011",
+            "upper": "B-016",
+            "studs": 27
+          },
+          {
+            "lower": "B-012",
+            "upper": "B-016",
+            "studs": 27
+          },
+          {
+            "lower": "B-012",
+            "upper": "B-017",
+            "studs": 27
+          },
+          {
+            "lower": "B-013",
+            "upper": "B-017",
+            "studs": 27
+          },
+          {
+            "lower": "B-013",
+            "upper": "B-018",
+            "studs": 27
+          },
+          {
+            "lower": "B-014",
+            "upper": "B-018",
+            "studs": 27
+          },
+          {
+            "lower": "B-014",
+            "upper": "B-019",
+            "studs": 27
+          },
+          {
+            "lower": "B-015",
+            "upper": "B-022",
+            "studs": 2
+          },
+          {
+            "lower": "B-018",
+            "upper": "B-023",
+            "studs": 2
+          },
+          {
+            "lower": "B-018",
+            "upper": "B-024",
+            "studs": 1
+          },
+          {
+            "lower": "B-019",
+            "upper": "B-024",
+            "studs": 1
+          },
+          {
+            "lower": "B-016",
+            "upper": "B-025",
+            "studs": 8
+          },
+          {
+            "lower": "B-017",
+            "upper": "B-025",
+            "studs": 8
+          },
+          {
+            "lower": "B-017",
+            "upper": "B-026",
+            "studs": 16
+          },
+          {
+            "lower": "B-018",
+            "upper": "B-027",
+            "studs": 8
+          },
+          {
+            "lower": "B-025",
+            "upper": "B-028",
+            "studs": 4
+          },
+          {
+            "lower": "B-025",
+            "upper": "B-029",
+            "studs": 8
+          },
+          {
+            "lower": "B-025",
+            "upper": "B-030",
+            "studs": 4
+          },
+          {
+            "lower": "B-026",
+            "upper": "B-030",
+            "studs": 12
+          },
+          {
+            "lower": "B-026",
+            "upper": "B-031",
+            "studs": 4
+          },
+          {
+            "lower": "B-027",
+            "upper": "B-031",
+            "studs": 4
+          },
+          {
+            "lower": "B-027",
+            "upper": "B-032",
+            "studs": 4
+          },
+          {
+            "lower": "B-028",
+            "upper": "B-033",
+            "studs": 6
+          },
+          {
+            "lower": "B-028",
+            "upper": "B-034",
+            "studs": 4
+          },
+          {
+            "lower": "B-029",
+            "upper": "B-034",
+            "studs": 8
+          },
+          {
+            "lower": "B-030",
+            "upper": "B-034",
+            "studs": 4
+          },
+          {
+            "lower": "B-030",
+            "upper": "B-035",
+            "studs": 12
+          },
+          {
+            "lower": "B-031",
+            "upper": "B-035",
+            "studs": 4
+          },
+          {
+            "lower": "B-031",
+            "upper": "B-036",
+            "studs": 4
+          },
+          {
+            "lower": "B-032",
+            "upper": "B-036",
+            "studs": 4
+          },
+          {
+            "lower": "B-032",
+            "upper": "B-037",
+            "studs": 6
+          },
+          {
+            "lower": "B-033",
+            "upper": "B-038",
+            "studs": 6
+          },
+          {
+            "lower": "B-033",
+            "upper": "B-039",
+            "studs": 4
+          },
+          {
+            "lower": "B-034",
+            "upper": "B-039",
+            "studs": 4
+          },
+          {
+            "lower": "B-034",
+            "upper": "B-040",
+            "studs": 12
+          },
+          {
+            "lower": "B-035",
+            "upper": "B-040",
+            "studs": 4
+          },
+          {
+            "lower": "B-035",
+            "upper": "B-041",
+            "studs": 12
+          },
+          {
+            "lower": "B-036",
+            "upper": "B-041",
+            "studs": 4
+          },
+          {
+            "lower": "B-036",
+            "upper": "B-042",
+            "studs": 4
+          },
+          {
+            "lower": "B-037",
+            "upper": "B-042",
+            "studs": 4
+          },
+          {
+            "lower": "B-037",
+            "upper": "B-043",
+            "studs": 6
+          },
+          {
+            "lower": "B-038",
+            "upper": "B-044",
+            "studs": 6
+          },
+          {
+            "lower": "B-038",
+            "upper": "B-045",
+            "studs": 4
+          },
+          {
+            "lower": "B-039",
+            "upper": "B-045",
+            "studs": 8
+          },
+          {
+            "lower": "B-040",
+            "upper": "B-045",
+            "studs": 4
+          },
+          {
+            "lower": "B-040",
+            "upper": "B-046",
+            "studs": 4
+          },
+          {
+            "lower": "B-040",
+            "upper": "B-047",
+            "studs": 8
+          },
+          {
+            "lower": "B-041",
+            "upper": "B-047",
+            "studs": 8
+          },
+          {
+            "lower": "B-041",
+            "upper": "B-048",
+            "studs": 4
+          },
+          {
+            "lower": "B-041",
+            "upper": "B-049",
+            "studs": 4
+          },
+          {
+            "lower": "B-042",
+            "upper": "B-049",
+            "studs": 8
+          },
+          {
+            "lower": "B-043",
+            "upper": "B-049",
+            "studs": 4
+          },
+          {
+            "lower": "B-043",
+            "upper": "B-050",
+            "studs": 6
+          },
+          {
+            "lower": "B-044",
+            "upper": "B-051",
+            "studs": 6
+          },
+          {
+            "lower": "B-044",
+            "upper": "B-052",
+            "studs": 4
+          },
+          {
+            "lower": "B-045",
+            "upper": "B-052",
+            "studs": 4
+          },
+          {
+            "lower": "B-045",
+            "upper": "B-053",
+            "studs": 12
+          },
+          {
+            "lower": "B-046",
+            "upper": "B-054",
+            "studs": 4
+          },
+          {
+            "lower": "B-047",
+            "upper": "B-055",
+            "studs": 8
+          },
+          {
+            "lower": "B-047",
+            "upper": "B-056",
+            "studs": 8
+          },
+          {
+            "lower": "B-048",
+            "upper": "B-057",
+            "studs": 4
+          },
+          {
+            "lower": "B-049",
+            "upper": "B-058",
+            "studs": 8
+          },
+          {
+            "lower": "B-049",
+            "upper": "B-059",
+            "studs": 8
+          },
+          {
+            "lower": "B-050",
+            "upper": "B-059",
+            "studs": 4
+          },
+          {
+            "lower": "B-050",
+            "upper": "B-060",
+            "studs": 6
+          },
+          {
+            "lower": "B-051",
+            "upper": "B-061",
+            "studs": 12
+          },
+          {
+            "lower": "B-052",
+            "upper": "B-062",
+            "studs": 8
+          },
+          {
+            "lower": "B-053",
+            "upper": "B-062",
+            "studs": 12
+          },
+          {
+            "lower": "B-054",
+            "upper": "B-063",
+            "studs": 4
+          },
+          {
+            "lower": "B-055",
+            "upper": "B-064",
+            "studs": 8
+          },
+          {
+            "lower": "B-056",
+            "upper": "B-064",
+            "studs": 8
+          },
+          {
+            "lower": "B-057",
+            "upper": "B-065",
+            "studs": 4
+          },
+          {
+            "lower": "B-058",
+            "upper": "B-066",
+            "studs": 8
+          },
+          {
+            "lower": "B-059",
+            "upper": "B-066",
+            "studs": 12
+          },
+          {
+            "lower": "B-060",
+            "upper": "B-067",
+            "studs": 12
+          },
+          {
+            "lower": "B-061",
+            "upper": "B-068",
+            "studs": 12
+          },
+          {
+            "lower": "B-062",
+            "upper": "B-069",
+            "studs": 8
+          },
+          {
+            "lower": "B-062",
+            "upper": "B-070",
+            "studs": 12
+          },
+          {
+            "lower": "B-063",
+            "upper": "B-071",
+            "studs": 4
+          },
+          {
+            "lower": "B-064",
+            "upper": "B-072",
+            "studs": 8
+          },
+          {
+            "lower": "B-064",
+            "upper": "B-073",
+            "studs": 8
+          },
+          {
+            "lower": "B-065",
+            "upper": "B-074",
+            "studs": 4
+          },
+          {
+            "lower": "B-066",
+            "upper": "B-075",
+            "studs": 8
+          },
+          {
+            "lower": "B-066",
+            "upper": "B-076",
+            "studs": 12
+          },
+          {
+            "lower": "B-067",
+            "upper": "B-077",
+            "studs": 12
+          },
+          {
+            "lower": "B-068",
+            "upper": "B-078",
+            "studs": 12
+          },
+          {
+            "lower": "B-069",
+            "upper": "B-079",
+            "studs": 8
+          },
+          {
+            "lower": "B-070",
+            "upper": "B-079",
+            "studs": 8
+          },
+          {
+            "lower": "B-070",
+            "upper": "B-080",
+            "studs": 4
+          },
+          {
+            "lower": "B-071",
+            "upper": "B-080",
+            "studs": 4
+          },
+          {
+            "lower": "B-072",
+            "upper": "B-080",
+            "studs": 8
+          },
+          {
+            "lower": "B-073",
+            "upper": "B-081",
+            "studs": 8
+          },
+          {
+            "lower": "B-074",
+            "upper": "B-081",
+            "studs": 4
+          },
+          {
+            "lower": "B-075",
+            "upper": "B-081",
+            "studs": 4
+          },
+          {
+            "lower": "B-075",
+            "upper": "B-082",
+            "studs": 4
+          },
+          {
+            "lower": "B-076",
+            "upper": "B-082",
+            "studs": 12
+          },
+          {
+            "lower": "B-077",
+            "upper": "B-083",
+            "studs": 12
+          },
+          {
+            "lower": "B-078",
+            "upper": "B-084",
+            "studs": 10
+          },
+          {
+            "lower": "B-079",
+            "upper": "B-085",
+            "studs": 16
+          },
+          {
+            "lower": "B-080",
+            "upper": "B-086",
+            "studs": 16
+          },
+          {
+            "lower": "B-081",
+            "upper": "B-087",
+            "studs": 16
+          },
+          {
+            "lower": "B-082",
+            "upper": "B-088",
+            "studs": 16
+          },
+          {
+            "lower": "B-083",
+            "upper": "B-089",
+            "studs": 10
+          },
+          {
+            "lower": "B-084",
+            "upper": "B-090",
+            "studs": 10
+          },
+          {
+            "lower": "B-085",
+            "upper": "B-091",
+            "studs": 16
+          },
+          {
+            "lower": "B-086",
+            "upper": "B-092",
+            "studs": 12
+          },
+          {
+            "lower": "B-086",
+            "upper": "B-093",
+            "studs": 5
+          },
+          {
+            "lower": "B-087",
+            "upper": "B-093",
+            "studs": 5
+          },
+          {
+            "lower": "B-087",
+            "upper": "B-094",
+            "studs": 12
+          },
+          {
+            "lower": "B-088",
+            "upper": "B-094",
+            "studs": 4
+          },
+          {
+            "lower": "B-088",
+            "upper": "B-095",
+            "studs": 12
+          },
+          {
+            "lower": "B-089",
+            "upper": "B-096",
+            "studs": 10
+          },
+          {
+            "lower": "B-090",
+            "upper": "B-097",
+            "studs": 10
+          },
+          {
+            "lower": "B-091",
+            "upper": "B-098",
+            "studs": 8
+          },
+          {
+            "lower": "B-091",
+            "upper": "B-099",
+            "studs": 8
+          },
+          {
+            "lower": "B-092",
+            "upper": "B-099",
+            "studs": 12
+          },
+          {
+            "lower": "B-093",
+            "upper": "B-100",
+            "studs": 10
+          },
+          {
+            "lower": "B-094",
+            "upper": "B-101",
+            "studs": 8
+          },
+          {
+            "lower": "B-094",
+            "upper": "B-102",
+            "studs": 8
+          },
+          {
+            "lower": "B-095",
+            "upper": "B-102",
+            "studs": 12
+          },
+          {
+            "lower": "B-096",
+            "upper": "B-103",
+            "studs": 10
+          },
+          {
+            "lower": "B-097",
+            "upper": "B-104",
+            "studs": 10
+          },
+          {
+            "lower": "B-098",
+            "upper": "B-105",
+            "studs": 8
+          },
+          {
+            "lower": "B-099",
+            "upper": "B-105",
+            "studs": 8
+          },
+          {
+            "lower": "B-099",
+            "upper": "B-106",
+            "studs": 12
+          },
+          {
+            "lower": "B-100",
+            "upper": "B-107",
+            "studs": 10
+          },
+          {
+            "lower": "B-101",
+            "upper": "B-108",
+            "studs": 8
+          },
+          {
+            "lower": "B-102",
+            "upper": "B-108",
+            "studs": 8
+          },
+          {
+            "lower": "B-102",
+            "upper": "B-109",
+            "studs": 12
+          },
+          {
+            "lower": "B-103",
+            "upper": "B-110",
+            "studs": 10
+          },
+          {
+            "lower": "B-104",
+            "upper": "B-111",
+            "studs": 10
+          },
+          {
+            "lower": "B-105",
+            "upper": "B-112",
+            "studs": 8
+          },
+          {
+            "lower": "B-105",
+            "upper": "B-113",
+            "studs": 8
+          },
+          {
+            "lower": "B-106",
+            "upper": "B-113",
+            "studs": 12
+          },
+          {
+            "lower": "B-107",
+            "upper": "B-114",
+            "studs": 10
+          },
+          {
+            "lower": "B-108",
+            "upper": "B-115",
+            "studs": 8
+          },
+          {
+            "lower": "B-108",
+            "upper": "B-116",
+            "studs": 8
+          },
+          {
+            "lower": "B-109",
+            "upper": "B-116",
+            "studs": 12
+          },
+          {
+            "lower": "B-110",
+            "upper": "B-117",
+            "studs": 10
+          },
+          {
+            "lower": "B-111",
+            "upper": "B-118",
+            "studs": 10
+          },
+          {
+            "lower": "B-112",
+            "upper": "B-119",
+            "studs": 8
+          },
+          {
+            "lower": "B-113",
+            "upper": "B-119",
+            "studs": 8
+          },
+          {
+            "lower": "B-113",
+            "upper": "B-120",
+            "studs": 12
+          },
+          {
+            "lower": "B-114",
+            "upper": "B-121",
+            "studs": 10
+          },
+          {
+            "lower": "B-115",
+            "upper": "B-122",
+            "studs": 8
+          },
+          {
+            "lower": "B-116",
+            "upper": "B-122",
+            "studs": 8
+          },
+          {
+            "lower": "B-116",
+            "upper": "B-123",
+            "studs": 12
+          },
+          {
+            "lower": "B-117",
+            "upper": "B-124",
+            "studs": 10
+          },
+          {
+            "lower": "B-118",
+            "upper": "B-125",
+            "studs": 10
+          },
+          {
+            "lower": "B-119",
+            "upper": "B-126",
+            "studs": 8
+          },
+          {
+            "lower": "B-119",
+            "upper": "B-127",
+            "studs": 8
+          },
+          {
+            "lower": "B-120",
+            "upper": "B-127",
+            "studs": 12
+          },
+          {
+            "lower": "B-121",
+            "upper": "B-128",
+            "studs": 10
+          },
+          {
+            "lower": "B-122",
+            "upper": "B-129",
+            "studs": 8
+          },
+          {
+            "lower": "B-122",
+            "upper": "B-130",
+            "studs": 8
+          },
+          {
+            "lower": "B-123",
+            "upper": "B-130",
+            "studs": 12
+          },
+          {
+            "lower": "B-124",
+            "upper": "B-131",
+            "studs": 10
+          },
+          {
+            "lower": "B-125",
+            "upper": "B-132",
+            "studs": 10
+          },
+          {
+            "lower": "B-126",
+            "upper": "B-133",
+            "studs": 8
+          },
+          {
+            "lower": "B-127",
+            "upper": "B-133",
+            "studs": 8
+          },
+          {
+            "lower": "B-127",
+            "upper": "B-134",
+            "studs": 12
+          },
+          {
+            "lower": "B-128",
+            "upper": "B-135",
+            "studs": 10
+          },
+          {
+            "lower": "B-129",
+            "upper": "B-136",
+            "studs": 8
+          },
+          {
+            "lower": "B-130",
+            "upper": "B-136",
+            "studs": 8
+          },
+          {
+            "lower": "B-130",
+            "upper": "B-137",
+            "studs": 12
+          },
+          {
+            "lower": "B-131",
+            "upper": "B-138",
+            "studs": 10
+          },
+          {
+            "lower": "B-132",
+            "upper": "B-139",
+            "studs": 5
+          },
+          {
+            "lower": "B-133",
+            "upper": "B-139",
+            "studs": 4
+          },
+          {
+            "lower": "B-133",
+            "upper": "B-140",
+            "studs": 12
+          },
+          {
+            "lower": "B-134",
+            "upper": "B-140",
+            "studs": 4
+          },
+          {
+            "lower": "B-134",
+            "upper": "B-141",
+            "studs": 8
+          },
+          {
+            "lower": "B-135",
+            "upper": "B-141",
+            "studs": 10
+          },
+          {
+            "lower": "B-136",
+            "upper": "B-142",
+            "studs": 16
+          },
+          {
+            "lower": "B-137",
+            "upper": "B-143",
+            "studs": 12
+          },
+          {
+            "lower": "B-138",
+            "upper": "B-143",
+            "studs": 5
+          },
+          {
+            "lower": "B-139",
+            "upper": "B-144",
+            "studs": 5
+          },
+          {
+            "lower": "B-140",
+            "upper": "B-144",
+            "studs": 15
+          },
+          {
+            "lower": "B-140",
+            "upper": "B-145",
+            "studs": 5
+          },
+          {
+            "lower": "B-141",
+            "upper": "B-145",
+            "studs": 15
+          },
+          {
+            "lower": "B-141",
+            "upper": "B-146",
+            "studs": 5
+          },
+          {
+            "lower": "B-142",
+            "upper": "B-146",
+            "studs": 15
+          },
+          {
+            "lower": "B-142",
+            "upper": "B-147",
+            "studs": 5
+          },
+          {
+            "lower": "B-143",
+            "upper": "B-147",
+            "studs": 15
+          },
+          {
+            "lower": "B-145",
+            "upper": "B-148",
+            "studs": 8
+          },
+          {
+            "lower": "B-145",
+            "upper": "B-149",
+            "studs": 8
+          },
+          {
+            "lower": "B-146",
+            "upper": "B-149",
+            "studs": 8
+          },
+          {
+            "lower": "B-146",
+            "upper": "B-150",
+            "studs": 8
+          }
+        ]
+      },
+      "blender": {
+        "model": "B",
+        "status": "PASS_NATIVE_REOPEN",
+        "blender_version": "5.1.1",
+        "instances": 150,
+        "assembly_stages": 28,
+        "frames": 326,
+        "fps": 20,
+        "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+        "native_sha256": "61ab055e292e4fee25db6ee812729a58a3dd00f138a30b6c5c235a4f75d3a977",
+        "geometry": "same delivered STL; local bounds, units, IDs, colors and final transforms checked",
+        "no_orphan_or_hidden_mesh_data": true,
+        "animation": "all numbered stages checked after fresh native reopen",
+        "physics": "not simulated; physical fit and stability untested"
+      },
+      "video": {
+        "status": "PASS_ACTUAL_RENDER_ENCODE_DECODE",
+        "model": "B",
+        "source": "downloads/B/B.blend",
+        "renderer": "Blender Workbench",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 720,
+              "height": 800,
+              "pix_fmt": "yuv420p",
+              "r_frame_rate": "20/1",
+              "nb_read_frames": "326"
+            }
+          ],
+          "format": {
+            "duration": "16.300000"
+          }
+        },
+        "faststart": true,
+        "full_decode": true,
+        "sha256": "ed117b814a98f4281477d5b269e0c321a4d60743ae495f82cd768cb07a4e6fd1"
+      },
+      "drawings_pdf_pages": 54,
+      "privacy": {
+        "model": "B",
+        "native_private_path_scan": "PASS",
+        "png_metadata_removed": [
+          "B-compare.png",
+          "B-base-front.png",
+          "B-hero.png"
+        ],
+        "geometry_and_pixels": "unchanged; native must be reopened after metadata normalization"
+      }
+    },
+    {
+      "model": "C",
+      "cad": {
+        "model": "C",
+        "native_reopened_instances": 228,
+        "step_reopened_solids": 228,
+        "units": "mm",
+        "actual_mm": [
+          239.8,
+          111.8,
+          286.6
+        ],
+        "appearance_saved": true,
+        "connected_components": 1,
+        "stud_engagement_edges": 334,
+        "card_connection": "Independent base-front text/logo dovetails with two text keepers and one logo keeper; physical fit untested.",
+        "brep_boolean_pairs": 353,
+        "maximum_intersection_mm3": 0.0,
+        "new_unique_boolean_evaluations": 110,
+        "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
+        "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
+        "cad_material_center_projection_margin_mm": 53.1575,
+        "physical_fit_and_stability": "NOT TESTED",
+        "fcstd_sha256": "0d33157315c52900f250792595f2b6c6ea58a888557ba25674a05deeeaf7f371",
+        "step_sha256": "3f016ae01db71f52494dc0c090674ec96a1cb6e41c61fff888e69f254c638533",
+        "contacts": [
+          {
+            "lower": "C-001",
+            "upper": "C-003",
+            "studs": 78
+          },
+          {
+            "lower": "C-001",
+            "upper": "C-004",
+            "studs": 78
+          },
+          {
+            "lower": "C-001",
+            "upper": "C-005",
+            "studs": 39
+          },
+          {
+            "lower": "C-002",
+            "upper": "C-005",
+            "studs": 39
+          },
+          {
+            "lower": "C-002",
+            "upper": "C-006",
+            "studs": 78
+          },
+          {
+            "lower": "C-002",
+            "upper": "C-007",
+            "studs": 78
+          },
+          {
+            "lower": "C-003",
+            "upper": "C-008",
+            "studs": 39
+          },
+          {
+            "lower": "C-003",
+            "upper": "C-009",
+            "studs": 39
+          },
+          {
+            "lower": "C-004",
+            "upper": "C-009",
+            "studs": 39
+          },
+          {
+            "lower": "C-004",
+            "upper": "C-010",
+            "studs": 39
+          },
+          {
+            "lower": "C-005",
+            "upper": "C-010",
+            "studs": 39
+          },
+          {
+            "lower": "C-005",
+            "upper": "C-011",
+            "studs": 39
+          },
+          {
+            "lower": "C-006",
+            "upper": "C-011",
+            "studs": 39
+          },
+          {
+            "lower": "C-006",
+            "upper": "C-012",
+            "studs": 39
+          },
+          {
+            "lower": "C-007",
+            "upper": "C-012",
+            "studs": 39
+          },
+          {
+            "lower": "C-007",
+            "upper": "C-013",
+            "studs": 39
+          },
+          {
+            "lower": "C-008",
+            "upper": "C-014",
+            "studs": 39
+          },
+          {
+            "lower": "C-009",
+            "upper": "C-014",
+            "studs": 39
+          },
+          {
+            "lower": "C-009",
+            "upper": "C-015",
+            "studs": 39
+          },
+          {
+            "lower": "C-010",
+            "upper": "C-015",
+            "studs": 39
+          },
+          {
+            "lower": "C-010",
+            "upper": "C-016",
+            "studs": 39
+          },
+          {
+            "lower": "C-011",
+            "upper": "C-016",
+            "studs": 39
+          },
+          {
+            "lower": "C-011",
+            "upper": "C-017",
+            "studs": 39
+          },
+          {
+            "lower": "C-012",
+            "upper": "C-017",
+            "studs": 39
+          },
+          {
+            "lower": "C-012",
+            "upper": "C-018",
+            "studs": 39
+          },
+          {
+            "lower": "C-013",
+            "upper": "C-018",
+            "studs": 39
+          },
+          {
+            "lower": "C-014",
+            "upper": "C-019",
+            "studs": 39
+          },
+          {
+            "lower": "C-014",
+            "upper": "C-020",
+            "studs": 39
+          },
+          {
+            "lower": "C-015",
+            "upper": "C-020",
+            "studs": 39
+          },
+          {
+            "lower": "C-015",
+            "upper": "C-021",
+            "studs": 39
+          },
+          {
+            "lower": "C-016",
+            "upper": "C-021",
+            "studs": 39
+          },
+          {
+            "lower": "C-016",
+            "upper": "C-022",
+            "studs": 39
+          },
+          {
+            "lower": "C-017",
+            "upper": "C-022",
+            "studs": 39
+          },
+          {
+            "lower": "C-017",
+            "upper": "C-023",
+            "studs": 39
+          },
+          {
+            "lower": "C-018",
+            "upper": "C-023",
+            "studs": 39
+          },
+          {
+            "lower": "C-018",
+            "upper": "C-024",
+            "studs": 39
+          },
+          {
+            "lower": "C-019",
+            "upper": "C-027",
+            "studs": 2
+          },
+          {
+            "lower": "C-023",
+            "upper": "C-028",
+            "studs": 2
+          },
+          {
+            "lower": "C-023",
+            "upper": "C-029",
+            "studs": 2
+          },
+          {
+            "lower": "C-020",
+            "upper": "C-030",
+            "studs": 7
+          },
+          {
+            "lower": "C-021",
+            "upper": "C-030",
+            "studs": 21
+          },
+          {
+            "lower": "C-021",
+            "upper": "C-031",
+            "studs": 21
+          },
+          {
+            "lower": "C-022",
+            "upper": "C-031",
+            "studs": 7
+          },
+          {
+            "lower": "C-022",
+            "upper": "C-032",
+            "studs": 28
+          },
+          {
+            "lower": "C-022",
+            "upper": "C-033",
+            "studs": 7
+          },
+          {
+            "lower": "C-023",
+            "upper": "C-033",
+            "studs": 7
+          },
+          {
+            "lower": "C-030",
+            "upper": "C-034",
+            "studs": 7
+          },
+          {
+            "lower": "C-030",
+            "upper": "C-035",
+            "studs": 12
+          },
+          {
+            "lower": "C-030",
+            "upper": "C-036",
+            "studs": 6
+          },
+          {
+            "lower": "C-031",
+            "upper": "C-036",
+            "studs": 18
+          },
+          {
+            "lower": "C-031",
+            "upper": "C-037",
+            "studs": 6
+          },
+          {
+            "lower": "C-032",
+            "upper": "C-037",
+            "studs": 18
+          },
+          {
+            "lower": "C-032",
+            "upper": "C-038",
+            "studs": 6
+          },
+          {
+            "lower": "C-033",
+            "upper": "C-038",
+            "studs": 6
+          },
+          {
+            "lower": "C-033",
+            "upper": "C-039",
+            "studs": 7
+          },
+          {
+            "lower": "C-034",
+            "upper": "C-040",
+            "studs": 10
+          },
+          {
+            "lower": "C-034",
+            "upper": "C-041",
+            "studs": 6
+          },
+          {
+            "lower": "C-035",
+            "upper": "C-041",
+            "studs": 12
+          },
+          {
+            "lower": "C-036",
+            "upper": "C-041",
+            "studs": 6
+          },
+          {
+            "lower": "C-036",
+            "upper": "C-042",
+            "studs": 18
+          },
+          {
+            "lower": "C-037",
+            "upper": "C-042",
+            "studs": 6
+          },
+          {
+            "lower": "C-037",
+            "upper": "C-043",
+            "studs": 18
+          },
+          {
+            "lower": "C-038",
+            "upper": "C-043",
+            "studs": 6
+          },
+          {
+            "lower": "C-038",
+            "upper": "C-044",
+            "studs": 6
+          },
+          {
+            "lower": "C-039",
+            "upper": "C-044",
+            "studs": 6
+          },
+          {
+            "lower": "C-039",
+            "upper": "C-045",
+            "studs": 10
+          },
+          {
+            "lower": "C-040",
+            "upper": "C-046",
+            "studs": 10
+          },
+          {
+            "lower": "C-040",
+            "upper": "C-047",
+            "studs": 6
+          },
+          {
+            "lower": "C-041",
+            "upper": "C-047",
+            "studs": 6
+          },
+          {
+            "lower": "C-041",
+            "upper": "C-048",
+            "studs": 18
+          },
+          {
+            "lower": "C-042",
+            "upper": "C-048",
+            "studs": 6
+          },
+          {
+            "lower": "C-042",
+            "upper": "C-049",
+            "studs": 18
+          },
+          {
+            "lower": "C-043",
+            "upper": "C-049",
+            "studs": 6
+          },
+          {
+            "lower": "C-043",
+            "upper": "C-050",
+            "studs": 18
+          },
+          {
+            "lower": "C-044",
+            "upper": "C-050",
+            "studs": 6
+          },
+          {
+            "lower": "C-044",
+            "upper": "C-051",
+            "studs": 6
+          },
+          {
+            "lower": "C-045",
+            "upper": "C-051",
+            "studs": 6
+          },
+          {
+            "lower": "C-045",
+            "upper": "C-052",
+            "studs": 10
+          },
+          {
+            "lower": "C-046",
+            "upper": "C-053",
+            "studs": 10
+          },
+          {
+            "lower": "C-046",
+            "upper": "C-054",
+            "studs": 6
+          },
+          {
+            "lower": "C-047",
+            "upper": "C-054",
+            "studs": 12
+          },
+          {
+            "lower": "C-048",
+            "upper": "C-054",
+            "studs": 6
+          },
+          {
+            "lower": "C-048",
+            "upper": "C-055",
+            "studs": 18
+          },
+          {
+            "lower": "C-049",
+            "upper": "C-055",
+            "studs": 6
+          },
+          {
+            "lower": "C-049",
+            "upper": "C-056",
+            "studs": 18
+          },
+          {
+            "lower": "C-050",
+            "upper": "C-056",
+            "studs": 6
+          },
+          {
+            "lower": "C-050",
+            "upper": "C-057",
+            "studs": 18
+          },
+          {
+            "lower": "C-051",
+            "upper": "C-057",
+            "studs": 6
+          },
+          {
+            "lower": "C-051",
+            "upper": "C-058",
+            "studs": 6
+          },
+          {
+            "lower": "C-052",
+            "upper": "C-058",
+            "studs": 6
+          },
+          {
+            "lower": "C-052",
+            "upper": "C-059",
+            "studs": 10
+          },
+          {
+            "lower": "C-053",
+            "upper": "C-060",
+            "studs": 10
+          },
+          {
+            "lower": "C-053",
+            "upper": "C-061",
+            "studs": 6
+          },
+          {
+            "lower": "C-054",
+            "upper": "C-061",
+            "studs": 6
+          },
+          {
+            "lower": "C-054",
+            "upper": "C-062",
+            "studs": 18
+          },
+          {
+            "lower": "C-055",
+            "upper": "C-062",
+            "studs": 6
+          },
+          {
+            "lower": "C-055",
+            "upper": "C-063",
+            "studs": 18
+          },
+          {
+            "lower": "C-056",
+            "upper": "C-063",
+            "studs": 6
+          },
+          {
+            "lower": "C-056",
+            "upper": "C-064",
+            "studs": 18
+          },
+          {
+            "lower": "C-057",
+            "upper": "C-064",
+            "studs": 6
+          },
+          {
+            "lower": "C-057",
+            "upper": "C-065",
+            "studs": 18
+          },
+          {
+            "lower": "C-058",
+            "upper": "C-065",
+            "studs": 6
+          },
+          {
+            "lower": "C-058",
+            "upper": "C-066",
+            "studs": 6
+          },
+          {
+            "lower": "C-059",
+            "upper": "C-066",
+            "studs": 6
+          },
+          {
+            "lower": "C-059",
+            "upper": "C-067",
+            "studs": 10
+          },
+          {
+            "lower": "C-060",
+            "upper": "C-068",
+            "studs": 10
+          },
+          {
+            "lower": "C-060",
+            "upper": "C-069",
+            "studs": 6
+          },
+          {
+            "lower": "C-061",
+            "upper": "C-069",
+            "studs": 12
+          },
+          {
+            "lower": "C-062",
+            "upper": "C-069",
+            "studs": 6
+          },
+          {
+            "lower": "C-062",
+            "upper": "C-070",
+            "studs": 18
+          },
+          {
+            "lower": "C-063",
+            "upper": "C-071",
+            "studs": 6
+          },
+          {
+            "lower": "C-063",
+            "upper": "C-072",
+            "studs": 18
+          },
+          {
+            "lower": "C-064",
+            "upper": "C-072",
+            "studs": 6
+          },
+          {
+            "lower": "C-064",
+            "upper": "C-073",
+            "studs": 12
+          },
+          {
+            "lower": "C-064",
+            "upper": "C-074",
+            "studs": 6
+          },
+          {
+            "lower": "C-065",
+            "upper": "C-075",
+            "studs": 24
+          },
+          {
+            "lower": "C-066",
+            "upper": "C-076",
+            "studs": 12
+          },
+          {
+            "lower": "C-067",
+            "upper": "C-076",
+            "studs": 6
+          },
+          {
+            "lower": "C-067",
+            "upper": "C-077",
+            "studs": 10
+          },
+          {
+            "lower": "C-068",
+            "upper": "C-078",
+            "studs": 20
+          },
+          {
+            "lower": "C-069",
+            "upper": "C-079",
+            "studs": 12
+          },
+          {
+            "lower": "C-069",
+            "upper": "C-080",
+            "studs": 12
+          },
+          {
+            "lower": "C-070",
+            "upper": "C-080",
+            "studs": 18
+          },
+          {
+            "lower": "C-071",
+            "upper": "C-081",
+            "studs": 6
+          },
+          {
+            "lower": "C-072",
+            "upper": "C-082",
+            "studs": 12
+          },
+          {
+            "lower": "C-072",
+            "upper": "C-083",
+            "studs": 12
+          },
+          {
+            "lower": "C-073",
+            "upper": "C-083",
+            "studs": 12
+          },
+          {
+            "lower": "C-074",
+            "upper": "C-084",
+            "studs": 6
+          },
+          {
+            "lower": "C-075",
+            "upper": "C-085",
+            "studs": 12
+          },
+          {
+            "lower": "C-075",
+            "upper": "C-086",
+            "studs": 12
+          },
+          {
+            "lower": "C-076",
+            "upper": "C-086",
+            "studs": 18
+          },
+          {
+            "lower": "C-077",
+            "upper": "C-087",
+            "studs": 20
+          },
+          {
+            "lower": "C-078",
+            "upper": "C-088",
+            "studs": 20
+          },
+          {
+            "lower": "C-079",
+            "upper": "C-089",
+            "studs": 12
+          },
+          {
+            "lower": "C-080",
+            "upper": "C-089",
+            "studs": 12
+          },
+          {
+            "lower": "C-080",
+            "upper": "C-090",
+            "studs": 18
+          },
+          {
+            "lower": "C-081",
+            "upper": "C-091",
+            "studs": 6
+          },
+          {
+            "lower": "C-082",
+            "upper": "C-092",
+            "studs": 12
+          },
+          {
+            "lower": "C-083",
+            "upper": "C-092",
+            "studs": 12
+          },
+          {
+            "lower": "C-083",
+            "upper": "C-093",
+            "studs": 12
+          },
+          {
+            "lower": "C-084",
+            "upper": "C-094",
+            "studs": 6
+          },
+          {
+            "lower": "C-085",
+            "upper": "C-095",
+            "studs": 12
+          },
+          {
+            "lower": "C-086",
+            "upper": "C-095",
+            "studs": 12
+          },
+          {
+            "lower": "C-086",
+            "upper": "C-096",
+            "studs": 18
+          },
+          {
+            "lower": "C-087",
+            "upper": "C-097",
+            "studs": 20
+          },
+          {
+            "lower": "C-088",
+            "upper": "C-098",
+            "studs": 20
+          },
+          {
+            "lower": "C-089",
+            "upper": "C-099",
+            "studs": 12
+          },
+          {
+            "lower": "C-089",
+            "upper": "C-100",
+            "studs": 12
+          },
+          {
+            "lower": "C-090",
+            "upper": "C-100",
+            "studs": 18
+          },
+          {
+            "lower": "C-091",
+            "upper": "C-101",
+            "studs": 6
+          },
+          {
+            "lower": "C-092",
+            "upper": "C-102",
+            "studs": 12
+          },
+          {
+            "lower": "C-092",
+            "upper": "C-103",
+            "studs": 12
+          },
+          {
+            "lower": "C-093",
+            "upper": "C-103",
+            "studs": 12
+          },
+          {
+            "lower": "C-094",
+            "upper": "C-104",
+            "studs": 6
+          },
+          {
+            "lower": "C-095",
+            "upper": "C-105",
+            "studs": 12
+          },
+          {
+            "lower": "C-095",
+            "upper": "C-106",
+            "studs": 12
+          },
+          {
+            "lower": "C-096",
+            "upper": "C-106",
+            "studs": 18
+          },
+          {
+            "lower": "C-097",
+            "upper": "C-107",
+            "studs": 20
+          },
+          {
+            "lower": "C-098",
+            "upper": "C-108",
+            "studs": 20
+          },
+          {
+            "lower": "C-099",
+            "upper": "C-109",
+            "studs": 12
+          },
+          {
+            "lower": "C-100",
+            "upper": "C-109",
+            "studs": 12
+          },
+          {
+            "lower": "C-100",
+            "upper": "C-110",
+            "studs": 18
+          },
+          {
+            "lower": "C-101",
+            "upper": "C-111",
+            "studs": 6
+          },
+          {
+            "lower": "C-102",
+            "upper": "C-112",
+            "studs": 12
+          },
+          {
+            "lower": "C-103",
+            "upper": "C-112",
+            "studs": 12
+          },
+          {
+            "lower": "C-103",
+            "upper": "C-113",
+            "studs": 12
+          },
+          {
+            "lower": "C-104",
+            "upper": "C-114",
+            "studs": 6
+          },
+          {
+            "lower": "C-105",
+            "upper": "C-115",
+            "studs": 12
+          },
+          {
+            "lower": "C-106",
+            "upper": "C-115",
+            "studs": 12
+          },
+          {
+            "lower": "C-106",
+            "upper": "C-116",
+            "studs": 18
+          },
+          {
+            "lower": "C-107",
+            "upper": "C-117",
+            "studs": 20
+          },
+          {
+            "lower": "C-108",
+            "upper": "C-118",
+            "studs": 20
+          },
+          {
+            "lower": "C-109",
+            "upper": "C-119",
+            "studs": 12
+          },
+          {
+            "lower": "C-109",
+            "upper": "C-120",
+            "studs": 12
+          },
+          {
+            "lower": "C-110",
+            "upper": "C-120",
+            "studs": 12
+          },
+          {
+            "lower": "C-110",
+            "upper": "C-121",
+            "studs": 6
+          },
+          {
+            "lower": "C-111",
+            "upper": "C-121",
+            "studs": 6
+          },
+          {
+            "lower": "C-112",
+            "upper": "C-121",
+            "studs": 12
+          },
+          {
+            "lower": "C-112",
+            "upper": "C-122",
+            "studs": 12
+          },
+          {
+            "lower": "C-113",
+            "upper": "C-122",
+            "studs": 12
+          },
+          {
+            "lower": "C-114",
+            "upper": "C-123",
+            "studs": 6
+          },
+          {
+            "lower": "C-115",
+            "upper": "C-123",
+            "studs": 18
+          },
+          {
+            "lower": "C-115",
+            "upper": "C-124",
+            "studs": 6
+          },
+          {
+            "lower": "C-116",
+            "upper": "C-124",
+            "studs": 18
+          },
+          {
+            "lower": "C-117",
+            "upper": "C-125",
+            "studs": 20
+          },
+          {
+            "lower": "C-118",
+            "upper": "C-126",
+            "studs": 16
+          },
+          {
+            "lower": "C-119",
+            "upper": "C-126",
+            "studs": 12
+          },
+          {
+            "lower": "C-120",
+            "upper": "C-127",
+            "studs": 24
+          },
+          {
+            "lower": "C-121",
+            "upper": "C-128",
+            "studs": 24
+          },
+          {
+            "lower": "C-122",
+            "upper": "C-129",
+            "studs": 24
+          },
+          {
+            "lower": "C-123",
+            "upper": "C-130",
+            "studs": 24
+          },
+          {
+            "lower": "C-124",
+            "upper": "C-131",
+            "studs": 24
+          },
+          {
+            "lower": "C-125",
+            "upper": "C-132",
+            "studs": 16
+          },
+          {
+            "lower": "C-126",
+            "upper": "C-133",
+            "studs": 16
+          },
+          {
+            "lower": "C-126",
+            "upper": "C-134",
+            "studs": 12
+          },
+          {
+            "lower": "C-127",
+            "upper": "C-135",
+            "studs": 24
+          },
+          {
+            "lower": "C-128",
+            "upper": "C-136",
+            "studs": 24
+          },
+          {
+            "lower": "C-129",
+            "upper": "C-137",
+            "studs": 16
+          },
+          {
+            "lower": "C-129",
+            "upper": "C-138",
+            "studs": 12
+          },
+          {
+            "lower": "C-130",
+            "upper": "C-139",
+            "studs": 24
+          },
+          {
+            "lower": "C-131",
+            "upper": "C-140",
+            "studs": 24
+          },
+          {
+            "lower": "C-132",
+            "upper": "C-141",
+            "studs": 16
+          },
+          {
+            "lower": "C-133",
+            "upper": "C-142",
+            "studs": 16
+          },
+          {
+            "lower": "C-134",
+            "upper": "C-143",
+            "studs": 12
+          },
+          {
+            "lower": "C-135",
+            "upper": "C-143",
+            "studs": 12
+          },
+          {
+            "lower": "C-135",
+            "upper": "C-144",
+            "studs": 12
+          },
+          {
+            "lower": "C-136",
+            "upper": "C-144",
+            "studs": 12
+          },
+          {
+            "lower": "C-136",
+            "upper": "C-145",
+            "studs": 12
+          },
+          {
+            "lower": "C-137",
+            "upper": "C-146",
+            "studs": 16
+          },
+          {
+            "lower": "C-138",
+            "upper": "C-147",
+            "studs": 12
+          },
+          {
+            "lower": "C-139",
+            "upper": "C-147",
+            "studs": 12
+          },
+          {
+            "lower": "C-139",
+            "upper": "C-148",
+            "studs": 12
+          },
+          {
+            "lower": "C-140",
+            "upper": "C-148",
+            "studs": 12
+          },
+          {
+            "lower": "C-140",
+            "upper": "C-149",
+            "studs": 12
+          },
+          {
+            "lower": "C-141",
+            "upper": "C-150",
+            "studs": 16
+          },
+          {
+            "lower": "C-142",
+            "upper": "C-151",
+            "studs": 16
+          },
+          {
+            "lower": "C-143",
+            "upper": "C-152",
+            "studs": 12
+          },
+          {
+            "lower": "C-143",
+            "upper": "C-153",
+            "studs": 12
+          },
+          {
+            "lower": "C-144",
+            "upper": "C-153",
+            "studs": 12
+          },
+          {
+            "lower": "C-144",
+            "upper": "C-154",
+            "studs": 12
+          },
+          {
+            "lower": "C-145",
+            "upper": "C-154",
+            "studs": 12
+          },
+          {
+            "lower": "C-146",
+            "upper": "C-155",
+            "studs": 16
+          },
+          {
+            "lower": "C-147",
+            "upper": "C-156",
+            "studs": 12
+          },
+          {
+            "lower": "C-147",
+            "upper": "C-157",
+            "studs": 12
+          },
+          {
+            "lower": "C-148",
+            "upper": "C-157",
+            "studs": 12
+          },
+          {
+            "lower": "C-148",
+            "upper": "C-158",
+            "studs": 12
+          },
+          {
+            "lower": "C-149",
+            "upper": "C-158",
+            "studs": 12
+          },
+          {
+            "lower": "C-150",
+            "upper": "C-159",
+            "studs": 16
+          },
+          {
+            "lower": "C-151",
+            "upper": "C-160",
+            "studs": 16
+          },
+          {
+            "lower": "C-152",
+            "upper": "C-161",
+            "studs": 12
+          },
+          {
+            "lower": "C-153",
+            "upper": "C-161",
+            "studs": 12
+          },
+          {
+            "lower": "C-153",
+            "upper": "C-162",
+            "studs": 12
+          },
+          {
+            "lower": "C-154",
+            "upper": "C-162",
+            "studs": 12
+          },
+          {
+            "lower": "C-154",
+            "upper": "C-163",
+            "studs": 12
+          },
+          {
+            "lower": "C-155",
+            "upper": "C-164",
+            "studs": 16
+          },
+          {
+            "lower": "C-156",
+            "upper": "C-165",
+            "studs": 12
+          },
+          {
+            "lower": "C-157",
+            "upper": "C-165",
+            "studs": 12
+          },
+          {
+            "lower": "C-157",
+            "upper": "C-166",
+            "studs": 12
+          },
+          {
+            "lower": "C-158",
+            "upper": "C-166",
+            "studs": 12
+          },
+          {
+            "lower": "C-158",
+            "upper": "C-167",
+            "studs": 12
+          },
+          {
+            "lower": "C-159",
+            "upper": "C-168",
+            "studs": 16
+          },
+          {
+            "lower": "C-160",
+            "upper": "C-169",
+            "studs": 16
+          },
+          {
+            "lower": "C-161",
+            "upper": "C-170",
+            "studs": 12
+          },
+          {
+            "lower": "C-161",
+            "upper": "C-171",
+            "studs": 12
+          },
+          {
+            "lower": "C-162",
+            "upper": "C-171",
+            "studs": 12
+          },
+          {
+            "lower": "C-162",
+            "upper": "C-172",
+            "studs": 12
+          },
+          {
+            "lower": "C-163",
+            "upper": "C-172",
+            "studs": 12
+          },
+          {
+            "lower": "C-164",
+            "upper": "C-173",
+            "studs": 16
+          },
+          {
+            "lower": "C-165",
+            "upper": "C-174",
+            "studs": 12
+          },
+          {
+            "lower": "C-165",
+            "upper": "C-175",
+            "studs": 12
+          },
+          {
+            "lower": "C-166",
+            "upper": "C-175",
+            "studs": 12
+          },
+          {
+            "lower": "C-166",
+            "upper": "C-176",
+            "studs": 12
+          },
+          {
+            "lower": "C-167",
+            "upper": "C-176",
+            "studs": 12
+          },
+          {
+            "lower": "C-168",
+            "upper": "C-177",
+            "studs": 16
+          },
+          {
+            "lower": "C-169",
+            "upper": "C-178",
+            "studs": 16
+          },
+          {
+            "lower": "C-170",
+            "upper": "C-179",
+            "studs": 12
+          },
+          {
+            "lower": "C-171",
+            "upper": "C-179",
+            "studs": 12
+          },
+          {
+            "lower": "C-171",
+            "upper": "C-180",
+            "studs": 12
+          },
+          {
+            "lower": "C-172",
+            "upper": "C-180",
+            "studs": 12
+          },
+          {
+            "lower": "C-172",
+            "upper": "C-181",
+            "studs": 12
+          },
+          {
+            "lower": "C-173",
+            "upper": "C-182",
+            "studs": 16
+          },
+          {
+            "lower": "C-174",
+            "upper": "C-183",
+            "studs": 12
+          },
+          {
+            "lower": "C-175",
+            "upper": "C-183",
+            "studs": 12
+          },
+          {
+            "lower": "C-175",
+            "upper": "C-184",
+            "studs": 12
+          },
+          {
+            "lower": "C-176",
+            "upper": "C-184",
+            "studs": 12
+          },
+          {
+            "lower": "C-176",
+            "upper": "C-185",
+            "studs": 12
+          },
+          {
+            "lower": "C-177",
+            "upper": "C-186",
+            "studs": 16
+          },
+          {
+            "lower": "C-178",
+            "upper": "C-187",
+            "studs": 16
+          },
+          {
+            "lower": "C-179",
+            "upper": "C-188",
+            "studs": 12
+          },
+          {
+            "lower": "C-179",
+            "upper": "C-189",
+            "studs": 12
+          },
+          {
+            "lower": "C-180",
+            "upper": "C-189",
+            "studs": 12
+          },
+          {
+            "lower": "C-180",
+            "upper": "C-190",
+            "studs": 12
+          },
+          {
+            "lower": "C-181",
+            "upper": "C-190",
+            "studs": 12
+          },
+          {
+            "lower": "C-182",
+            "upper": "C-191",
+            "studs": 16
+          },
+          {
+            "lower": "C-183",
+            "upper": "C-192",
+            "studs": 12
+          },
+          {
+            "lower": "C-183",
+            "upper": "C-193",
+            "studs": 12
+          },
+          {
+            "lower": "C-184",
+            "upper": "C-193",
+            "studs": 12
+          },
+          {
+            "lower": "C-184",
+            "upper": "C-194",
+            "studs": 12
+          },
+          {
+            "lower": "C-185",
+            "upper": "C-194",
+            "studs": 12
+          },
+          {
+            "lower": "C-186",
+            "upper": "C-195",
+            "studs": 16
+          },
+          {
+            "lower": "C-187",
+            "upper": "C-196",
+            "studs": 16
+          },
+          {
+            "lower": "C-188",
+            "upper": "C-197",
+            "studs": 12
+          },
+          {
+            "lower": "C-189",
+            "upper": "C-197",
+            "studs": 12
+          },
+          {
+            "lower": "C-189",
+            "upper": "C-198",
+            "studs": 12
+          },
+          {
+            "lower": "C-190",
+            "upper": "C-198",
+            "studs": 12
+          },
+          {
+            "lower": "C-190",
+            "upper": "C-199",
+            "studs": 12
+          },
+          {
+            "lower": "C-191",
+            "upper": "C-200",
+            "studs": 16
+          },
+          {
+            "lower": "C-192",
+            "upper": "C-201",
+            "studs": 12
+          },
+          {
+            "lower": "C-193",
+            "upper": "C-201",
+            "studs": 12
+          },
+          {
+            "lower": "C-193",
+            "upper": "C-202",
+            "studs": 12
+          },
+          {
+            "lower": "C-194",
+            "upper": "C-202",
+            "studs": 12
+          },
+          {
+            "lower": "C-194",
+            "upper": "C-203",
+            "studs": 12
+          },
+          {
+            "lower": "C-195",
+            "upper": "C-204",
+            "studs": 16
+          },
+          {
+            "lower": "C-196",
+            "upper": "C-205",
+            "studs": 16
+          },
+          {
+            "lower": "C-197",
+            "upper": "C-206",
+            "studs": 12
+          },
+          {
+            "lower": "C-197",
+            "upper": "C-207",
+            "studs": 12
+          },
+          {
+            "lower": "C-198",
+            "upper": "C-207",
+            "studs": 12
+          },
+          {
+            "lower": "C-198",
+            "upper": "C-208",
+            "studs": 12
+          },
+          {
+            "lower": "C-199",
+            "upper": "C-208",
+            "studs": 12
+          },
+          {
+            "lower": "C-200",
+            "upper": "C-209",
+            "studs": 16
+          },
+          {
+            "lower": "C-201",
+            "upper": "C-210",
+            "studs": 12
+          },
+          {
+            "lower": "C-201",
+            "upper": "C-211",
+            "studs": 12
+          },
+          {
+            "lower": "C-202",
+            "upper": "C-211",
+            "studs": 12
+          },
+          {
+            "lower": "C-202",
+            "upper": "C-212",
+            "studs": 12
+          },
+          {
+            "lower": "C-203",
+            "upper": "C-212",
+            "studs": 12
+          },
+          {
+            "lower": "C-204",
+            "upper": "C-213",
+            "studs": 16
+          },
+          {
+            "lower": "C-205",
+            "upper": "C-214",
+            "studs": 8
+          },
+          {
+            "lower": "C-206",
+            "upper": "C-214",
+            "studs": 12
+          },
+          {
+            "lower": "C-207",
+            "upper": "C-214",
+            "studs": 6
+          },
+          {
+            "lower": "C-207",
+            "upper": "C-215",
+            "studs": 18
+          },
+          {
+            "lower": "C-208",
+            "upper": "C-215",
+            "studs": 6
+          },
+          {
+            "lower": "C-208",
+            "upper": "C-216",
+            "studs": 18
+          },
+          {
+            "lower": "C-209",
+            "upper": "C-216",
+            "studs": 8
+          },
+          {
+            "lower": "C-209",
+            "upper": "C-217",
+            "studs": 8
+          },
+          {
+            "lower": "C-210",
+            "upper": "C-217",
+            "studs": 12
+          },
+          {
+            "lower": "C-211",
+            "upper": "C-217",
+            "studs": 6
+          },
+          {
+            "lower": "C-211",
+            "upper": "C-218",
+            "studs": 18
+          },
+          {
+            "lower": "C-212",
+            "upper": "C-218",
+            "studs": 6
+          },
+          {
+            "lower": "C-212",
+            "upper": "C-219",
+            "studs": 18
+          },
+          {
+            "lower": "C-213",
+            "upper": "C-219",
+            "studs": 8
+          },
+          {
+            "lower": "C-214",
+            "upper": "C-220",
+            "studs": 16
+          },
+          {
+            "lower": "C-214",
+            "upper": "C-221",
+            "studs": 8
+          },
+          {
+            "lower": "C-215",
+            "upper": "C-221",
+            "studs": 24
+          },
+          {
+            "lower": "C-215",
+            "upper": "C-222",
+            "studs": 8
+          },
+          {
+            "lower": "C-216",
+            "upper": "C-222",
+            "studs": 24
+          },
+          {
+            "lower": "C-216",
+            "upper": "C-223",
+            "studs": 8
+          },
+          {
+            "lower": "C-217",
+            "upper": "C-223",
+            "studs": 24
+          },
+          {
+            "lower": "C-217",
+            "upper": "C-224",
+            "studs": 8
+          },
+          {
+            "lower": "C-218",
+            "upper": "C-224",
+            "studs": 24
+          },
+          {
+            "lower": "C-218",
+            "upper": "C-225",
+            "studs": 8
+          },
+          {
+            "lower": "C-219",
+            "upper": "C-225",
+            "studs": 24
+          },
+          {
+            "lower": "C-222",
+            "upper": "C-226",
+            "studs": 24
+          },
+          {
+            "lower": "C-223",
+            "upper": "C-227",
+            "studs": 24
+          },
+          {
+            "lower": "C-224",
+            "upper": "C-228",
+            "studs": 12
+          }
+        ]
+      },
+      "blender": {
+        "model": "C",
+        "status": "PASS_NATIVE_REOPEN",
+        "blender_version": "5.1.1",
+        "instances": 228,
+        "assembly_stages": 33,
+        "frames": 366,
+        "fps": 20,
+        "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+        "native_sha256": "324d342af68fb4d0ef670def30e46c7feb63e4a174efe3229d00a377e44e2bb4",
+        "geometry": "same delivered STL; local bounds, units, IDs, colors and final transforms checked",
+        "no_orphan_or_hidden_mesh_data": true,
+        "animation": "all numbered stages checked after fresh native reopen",
+        "physics": "not simulated; physical fit and stability untested"
+      },
+      "video": {
+        "status": "PASS_ACTUAL_RENDER_ENCODE_DECODE",
+        "model": "C",
+        "source": "downloads/C/C.blend",
+        "renderer": "Blender Workbench",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 720,
+              "height": 800,
+              "pix_fmt": "yuv420p",
+              "r_frame_rate": "20/1",
+              "nb_read_frames": "366"
+            }
+          ],
+          "format": {
+            "duration": "18.300000"
+          }
+        },
+        "faststart": true,
+        "full_decode": true,
+        "sha256": "4f68f431500cf4df6fb4c6e3ca95c39bec3432e4ba079dbd9d6bede29a1a8b14"
+      },
+      "drawings_pdf_pages": 62,
+      "privacy": {
+        "model": "C",
+        "native_private_path_scan": "PASS",
+        "png_metadata_removed": [
+          "C-base-front.png",
+          "C-compare.png",
+          "C-hero.png"
+        ],
+        "geometry_and_pixels": "unchanged; native must be reopened after metadata normalization"
+      }
+    }
+  ],
+  "print_packages": {
+    "status": "PASS_GEOMETRY_AND_QUANTITIES_ONLY",
+    "sliced": false,
+    "models": [
+      {
+        "model": "A",
+        "plates": 9,
+        "instances": 91,
+        "bom_exact": true,
+        "all_6mm_brim_envelopes_inside_16_to_240_mm": true
+      },
+      {
+        "model": "B",
+        "plates": 14,
+        "instances": 150,
+        "bom_exact": true,
+        "all_6mm_brim_envelopes_inside_16_to_240_mm": true
+      },
+      {
+        "model": "C",
+        "plates": 27,
+        "instances": 228,
+        "bom_exact": true,
+        "all_6mm_brim_envelopes_inside_16_to_240_mm": true
+      }
+    ]
+  },
+  "three_mf_reopen": {
+    "status": "PASS_INDEPENDENT_3MF_REOPEN",
+    "reader": "trimesh 4.7.4",
+    "sliced": false,
+    "models": [
+      {
+        "model": "A",
+        "plate_count": 9,
+        "instances": 91,
+        "files": [
+          {
+            "file": "A-black-01.3mf",
+            "instances": 8,
+            "bounds_mm": [
+              [
+                28.5,
+                57.2,
+                0.0
+              ],
+              [
+                227.500002,
+                198.800002,
+                11.4
+              ]
+            ],
+            "sha256": "8ef15967f06910eab626e3cf61c95e2976cd8f9c6b5a038d9fb6c1baeec57384"
+          },
+          {
+            "file": "A-black-02.3mf",
+            "instances": 4,
+            "bounds_mm": [
+              [
+                25.200000000000003,
+                57.2,
+                0.0
+              ],
+              [
+                230.800002,
+                198.800002,
+                11.4
+              ]
+            ],
+            "sha256": "1b9d856edb9213a6a6e796ae2253022858be63d38e46020fdc461e15341eb845"
+          },
+          {
+            "file": "A-black-03.3mf",
+            "instances": 32,
+            "bounds_mm": [
+              [
+                22.700000000000003,
+                23.3,
+                0.0
+              ],
+              [
+                233.3,
+                232.70000000000002,
+                11.4
+              ]
+            ],
+            "sha256": "9eee12b56efa7bdbf025816d0f2e100fba1927a620f8de066a4c9f6883969102"
+          },
+          {
+            "file": "A-black-04.3mf",
+            "instances": 2,
+            "bounds_mm": [
+              [
+                105.19999999999999,
+                120.1,
+                0.0
+              ],
+              [
+                150.8,
+                135.9,
+                3.2
+              ]
+            ],
+            "sha256": "947e7b93616e80e064501b57823b61c8058b8a9dde2769dc171f3f083b6c8471"
+          },
+          {
+            "file": "A-green-01.3mf",
+            "instances": 6,
+            "bounds_mm": [
+              [
+                69.6,
+                120.1,
+                0.0
+              ],
+              [
+                186.4,
+                135.9,
+                11.4
+              ]
+            ],
+            "sha256": "28ce48f0f799d17b3a0655885822cce80e118ac06bf6284341b1a5315ae17f39"
+          },
+          {
+            "file": "A-cyan-01.3mf",
+            "instances": 22,
+            "bounds_mm": [
+              [
+                30.700000000000003,
+                59.4,
+                0.0
+              ],
+              [
+                225.3,
+                196.6,
+                11.4
+              ]
+            ],
+            "sha256": "edee84e287e830db8f6454ac7d53ea9e29aa229d6858c141b77778532058cd65"
+          },
+          {
+            "file": "A-magenta-01.3mf",
+            "instances": 15,
+            "bounds_mm": [
+              [
+                30.700000000000003,
+                82.3,
+                0.0
+              ],
+              [
+                225.3,
+                173.70000000000002,
+                11.4
+              ]
+            ],
+            "sha256": "86089734cd30214772a9cfa11afc45f19cdec7df2aac4a773dae81e1894483b1"
+          },
+          {
+            "file": "A-black-to-white-z2p8-01.3mf",
+            "instances": 1,
+            "bounds_mm": [
+              [
+                112.0,
+                108.0,
+                0.0
+              ],
+              [
+                144.0,
+                148.0,
+                3.6
+              ]
+            ],
+            "sha256": "72742321d78b543bbd5285b12741e688cdd6d5b2fcd790260302aa4d0072594f"
+          },
+          {
+            "file": "A-black-to-white-z2p4-01.3mf",
+            "instances": 1,
+            "bounds_mm": [
+              [
+                77.0,
+                108.0,
+                0.0
+              ],
+              [
+                179.0,
+                148.0,
+                3.2
+              ]
+            ],
+            "sha256": "9379350bc3d32673c43bd3488af25ca21caf4b176b8116993bd7f4cf5181ea29"
+          }
+        ]
+      },
+      {
+        "model": "B",
+        "plate_count": 14,
+        "instances": 150,
+        "files": [
+          {
+            "file": "B-black-01.3mf",
+            "instances": 8,
+            "bounds_mm": [
+              [
+                28.5,
+                41.2,
+                0.0
+              ],
+              [
+                227.500002,
+                214.800002,
+                11.4
+              ]
+            ],
+            "sha256": "957b19685a7e5c7973e2b8ac62952a976cadefdf23e18d56fe0a075ebe1de101"
+          },
+          {
+            "file": "B-black-02.3mf",
+            "instances": 3,
+            "bounds_mm": [
+              [
+                32.1,
+                41.2,
+                0.0
+              ],
+              [
+                223.899994,
+                214.800002,
+                11.4
+              ]
+            ],
+            "sha256": "865ca3cfeb098702b4992561c017ff5b91aaccbf2b403a32aa6f99cdab2548ce"
+          },
+          {
+            "file": "B-black-03.3mf",
+            "instances": 6,
+            "bounds_mm": [
+              [
+                42.300000000000004,
+                44.6,
+                0.0
+              ],
+              [
+                213.700002,
+                211.400002,
+                11.4
+              ]
+            ],
+            "sha256": "57cbdbf4347abf6312957f078e18ed74470fd8c283e5eaff4500ef68227cdae2"
+          },
+          {
+            "file": "B-black-04.3mf",
+            "instances": 19,
+            "bounds_mm": [
+              [
+                28.5,
+                44.0,
+                0.0
+              ],
+              [
+                227.5,
+                212.0,
+                11.4
+              ]
+            ],
+            "sha256": "c7a46d0cb2c6474639e227b14a64c6365d930e36a49650f6964f386d33a0cedc"
+          },
+          {
+            "file": "B-black-05.3mf",
+            "instances": 20,
+            "bounds_mm": [
+              [
+                29.6,
+                43.4,
+                0.0
+              ],
+              [
+                226.4,
+                212.6,
+                11.4
+              ]
+            ],
+            "sha256": "2fe039f0aaa4cc5c84397fb2ad6a372c6af60531b06277e09ad24b1c7c2a67f5"
+          },
+          {
+            "file": "B-black-06.3mf",
+            "instances": 16,
+            "bounds_mm": [
+              [
+                39.4,
+                43.4,
+                0.0
+              ],
+              [
+                216.600002,
+                212.6,
+                11.4
+              ]
+            ],
+            "sha256": "9d070e009fd94904c4d560167fe21c63df5a2f3ccfb19c7152294154c3ccc2ab"
+          },
+          {
+            "file": "B-black-07.3mf",
+            "instances": 10,
+            "bounds_mm": [
+              [
+                24.5,
+                74.3,
+                0.0
+              ],
+              [
+                231.5,
+                181.70000000000002,
+                11.4
+              ]
+            ],
+            "sha256": "182a2966bad178edf77f265a104817a22b599075df32cb15d8cd6f1de8ef4369"
+          },
+          {
+            "file": "B-green-01.3mf",
+            "instances": 8,
+            "bounds_mm": [
+              [
+                47.800000000000004,
+                112.1,
+                0.0
+              ],
+              [
+                208.20000000000002,
+                143.9,
+                11.4
+              ]
+            ],
+            "sha256": "b3f3cc461a57327878a7951a21fe35a7791ad342bc6b3536080c21eef5753c78"
+          },
+          {
+            "file": "B-magenta-01.3mf",
+            "instances": 20,
+            "bounds_mm": [
+              [
+                30.700000000000003,
+                42.300000000000004,
+                0.0
+              ],
+              [
+                225.3,
+                213.700002,
+                11.4
+              ]
+            ],
+            "sha256": "fdc528860447cce5a2623649da3469c971967f6b4962e4bc61c5599fbedb4e37"
+          },
+          {
+            "file": "B-magenta-02.3mf",
+            "instances": 2,
+            "bounds_mm": [
+              [
+                89.19999999999999,
+                112.1,
+                0.0
+              ],
+              [
+                166.8,
+                143.9,
+                11.4
+              ]
+            ],
+            "sha256": "62e828fc57ce0698ef68e9e82324782f453c10b9cd4ed3eaf25d6b7ba7156418"
+          },
+          {
+            "file": "B-cyan-01.3mf",
+            "instances": 26,
+            "bounds_mm": [
+              [
+                30.700000000000003,
+                27.400000000000002,
+                0.0
+              ],
+              [
+                225.3,
+                228.600002,
+                11.4
+              ]
+            ],
+            "sha256": "a4e4f92fbc6b103d98db0fe4de40368fcc496239af946ed6cad22a8f314b867f"
+          },
+          {
+            "file": "B-cyan-02.3mf",
+            "instances": 10,
+            "bounds_mm": [
+              [
+                43.4,
+                54.300000000000004,
+                0.0
+              ],
+              [
+                212.6,
+                201.700002,
+                11.4
+              ]
+            ],
+            "sha256": "0c55ba28ce790e5404afff3723c3b96e4160104dde8577dcb4d9c08efc61d898"
+          },
+          {
+            "file": "B-black-to-white-z2p8-01.3mf",
+            "instances": 1,
+            "bounds_mm": [
+              [
+                108.0,
+                108.0,
+                0.0
+              ],
+              [
+                148.0,
+                148.0,
+                3.6
+              ]
+            ],
+            "sha256": "36b88a7b0b499d4346974e79307cdeea02d72963be3f0c727c792be7eb0e62ff"
+          },
+          {
+            "file": "B-black-to-white-z2p4-01.3mf",
+            "instances": 1,
+            "bounds_mm": [
+              [
+                57.0,
+                108.0,
+                0.0
+              ],
+              [
+                199.0,
+                148.0,
+                3.2
+              ]
+            ],
+            "sha256": "8a215ab8f52ff9ca5ff1896028ce4558c9f0cc46d7e92e1aa71ac95b3706acc8"
+          }
+        ]
+      },
+      {
+        "model": "C",
+        "plate_count": 27,
+        "instances": 228,
+        "files": [
+          {
+            "file": "C-black-01.3mf",
+            "instances": 5,
+            "bounds_mm": [
+              [
+                28.5,
+                72.1,
+                0.0
+              ],
+              [
+                227.500002,
+                183.900002,
+                11.4
+              ]
+            ],
+            "sha256": "86fd886c6a55cafa63f5301c3991f51e5fcefe1ec57919a0198a1e4630443f2d"
+          },
+          {
+            "file": "C-black-02.3mf",
+            "instances": 3,
+            "bounds_mm": [
+              [
+                42.300000000000004,
+                72.1,
+                0.0
+              ],
+              [
+                213.700002,
+                183.900002,
+                11.4
+              ]
+            ],
+            "sha256": "2c1500377f9ff497559d45e1d8339b349ab51ae59319bd65e03753908fc5770f"
+          },
+          {
+            "file": "C-black-03.3mf",
+            "instances": 3,
+            "bounds_mm": [
+              [
+                42.300000000000004,
+                72.1,
+                0.0
+              ],
+              [
+                213.700002,
+                183.900002,
+                11.4
+              ]
+            ],
+            "sha256": "524c13cf9148dd4bcef71422b191053a1d628e834a50bc741d847a778903f13c"
+          },
+          {
+            "file": "C-black-04.3mf",
+            "instances": 2,
+            "bounds_mm": [
+              [
+                37.2,
+                72.1,
+                0.0
+              ],
+              [
+                218.800002,
+                183.900002,
+                11.4
+              ]
+            ],
+            "sha256": "a09155feb0428661e6fd40c871bc13def3a6aa7a85f3bfc03b430a8c87d72cf1"
+          },
+          {
+            "file": "C-black-05.3mf",
+            "instances": 2,
+            "bounds_mm": [
+              [
+                37.2,
+                72.1,
+                0.0
+              ],
+              [
+                218.800002,
+                183.900002,
+                11.4
+              ]
+            ],
+            "sha256": "81101cb5ce1d2c72990d8d0705664dbe1a85e413dfad2073af22a681d2520692"
+          },
+          {
+            "file": "C-black-06.3mf",
+            "instances": 3,
+            "bounds_mm": [
+              [
+                42.300000000000004,
+                73.8,
+                0.0
+              ],
+              [
+                213.700002,
+                182.20000199999998,
+                11.4
+              ]
+            ],
+            "sha256": "ca5a176f8674b6eebc6639a058c937be5d579ca244cf37eecfb9e22592ec8f33"
+          },
+          {
+            "file": "C-black-07.3mf",
+            "instances": 3,
+            "bounds_mm": [
+              [
+                42.300000000000004,
+                73.8,
+                0.0
+              ],
+              [
+                213.700002,
+                182.20000199999998,
+                11.4
+              ]
+            ],
+            "sha256": "7d6f0082a95193643fd178b0d4033101c8eb88c3e1df38bed10060169ac4915e"
+          },
+          {
+            "file": "C-black-08.3mf",
+            "instances": 11,
+            "bounds_mm": [
+              [
+                27.400000000000002,
+                42.9,
+                0.0
+              ],
+              [
+                228.6,
+                213.100002,
+                11.4
+              ]
+            ],
+            "sha256": "6a320e5503476782e0d2c536838375895f3bd097c1e52cb0ec0259b9dad6f97f"
+          },
+          {
+            "file": "C-black-09.3mf",
+            "instances": 21,
+            "bounds_mm": [
+              [
+                30.700000000000003,
+                42.300000000000004,
+                0.0
+              ],
+              [
+                225.3,
+                213.700002,
+                11.4
+              ]
+            ],
+            "sha256": "5e2e737b20cc6123c24711c9b5d7ba11d5fdeb5140f16938c3d1711458c03ae6"
+          },
+          {
+            "file": "C-black-10.3mf",
+            "instances": 17,
+            "bounds_mm": [
+              [
+                24.5,
+                42.300000000000004,
+                0.0
+              ],
+              [
+                231.5,
+                213.700002,
+                11.4
+              ]
+            ],
+            "sha256": "d92602514a3ec970b24064d9584cdab15265c06ab4c0f4befca3311d25de662e"
+          },
+          {
+            "file": "C-black-11.3mf",
+            "instances": 12,
+            "bounds_mm": [
+              [
+                43.4,
+                42.300000000000004,
+                0.0
+              ],
+              [
+                212.6,
+                213.700002,
+                11.4
+              ]
+            ],
+            "sha256": "7601b609812443d1bc4247ced73d952cf1467f072a25c7835a516443902cef0a"
+          },
+          {
+            "file": "C-black-12.3mf",
+            "instances": 12,
+            "bounds_mm": [
+              [
+                43.4,
+                42.300000000000004,
+                0.0
+              ],
+              [
+                212.6,
+                213.700002,
+                11.4
+              ]
+            ],
+            "sha256": "1ec0ad3ce366d467fcadc9da7c8a32ec73a84483e42c1727c55ed63c523bd072"
+          },
+          {
+            "file": "C-black-13.3mf",
+            "instances": 12,
+            "bounds_mm": [
+              [
+                43.4,
+                42.300000000000004,
+                0.0
+              ],
+              [
+                212.6,
+                213.700002,
+                11.4
+              ]
+            ],
+            "sha256": "f7238c6229c595ab7739fd3a954591f90cb52509a42fbe8f079cea2bed9c83e4"
+          },
+          {
+            "file": "C-black-14.3mf",
+            "instances": 12,
+            "bounds_mm": [
+              [
+                43.4,
+                42.300000000000004,
+                0.0
+              ],
+              [
+                212.6,
+                213.700002,
+                11.4
+              ]
+            ],
+            "sha256": "1d25ec5f89fef66727c91de9155aca4206ef885aed1e0b6d051bb39b0bd8f182"
+          },
+          {
+            "file": "C-black-15.3mf",
+            "instances": 12,
+            "bounds_mm": [
+              [
+                43.4,
+                42.300000000000004,
+                0.0
+              ],
+              [
+                212.6,
+                213.700002,
+                11.4
+              ]
+            ],
+            "sha256": "7b5e624859cd10ca76223b8d17896ed538671233b036baf0479741c0eb1a6baf"
+          },
+          {
+            "file": "C-black-16.3mf",
+            "instances": 11,
+            "bounds_mm": [
+              [
+                27.400000000000002,
+                58.300000000000004,
+                0.0
+              ],
+              [
+                228.600002,
+                197.70000000000002,
+                11.4
+              ]
+            ],
+            "sha256": "d8a342adccec25bdc47071ff322118e5ce78dded11e581a84e507afe58e76af9"
+          },
+          {
+            "file": "C-green-01.3mf",
+            "instances": 10,
+            "bounds_mm": [
+              [
+                26.0,
+                104.1,
+                0.0
+              ],
+              [
+                230.0,
+                151.900002,
+                11.4
+              ]
+            ],
+            "sha256": "1a302f3dbf64efaf075c5f7aea6fba4df513f3b6f668b35c923e157fa47c6af2"
+          },
+          {
+            "file": "C-magenta-01.3mf",
+            "instances": 14,
+            "bounds_mm": [
+              [
+                30.700000000000003,
+                41.2,
+                0.0
+              ],
+              [
+                225.3,
+                214.800002,
+                11.4
+              ]
+            ],
+            "sha256": "5251a8d4ea2c849b6d6886ea8d4f980fbf28bb43b358054b0b38e2d8b314a7f5"
+          },
+          {
+            "file": "C-magenta-02.3mf",
+            "instances": 12,
+            "bounds_mm": [
+              [
+                30.700000000000003,
+                41.2,
+                0.0
+              ],
+              [
+                225.3,
+                214.800002,
+                11.4
+              ]
+            ],
+            "sha256": "dd2fb57eca6ce3979c24fe469ec84992924bc5163f352daefe4969cc341f7f61"
+          },
+          {
+            "file": "C-magenta-03.3mf",
+            "instances": 3,
+            "bounds_mm": [
+              [
+                74.3,
+                104.1,
+                0.0
+              ],
+              [
+                181.70000000000002,
+                151.900002,
+                8.2
+              ]
+            ],
+            "sha256": "2ac8699d31ef7697bfb4352a06a1d2bb51f76df92fab14d47ef769ca4d4e6600"
+          },
+          {
+            "file": "C-cyan-01.3mf",
+            "instances": 14,
+            "bounds_mm": [
+              [
+                30.700000000000003,
+                57.2,
+                0.0
+              ],
+              [
+                225.3,
+                198.800002,
+                11.4
+              ]
+            ],
+            "sha256": "4a9044b7bee82d83b9301c414502ac3ba9fb4d90f2145398fc23ec2a88bfbce2"
+          },
+          {
+            "file": "C-cyan-02.3mf",
+            "instances": 14,
+            "bounds_mm": [
+              [
+                30.700000000000003,
+                57.2,
+                0.0
+              ],
+              [
+                225.3,
+                198.800002,
+                11.4
+              ]
+            ],
+            "sha256": "813998e4ea1e6acb0f3577a43c1a1bc28d7aa9339e4c579f79d815374627e1ac"
+          },
+          {
+            "file": "C-cyan-03.3mf",
+            "instances": 9,
+            "bounds_mm": [
+              [
+                28.5,
+                57.2,
+                0.0
+              ],
+              [
+                227.5,
+                198.800002,
+                11.4
+              ]
+            ],
+            "sha256": "7354520059fc506f81b3825ea24ebe5af522c615f05808f7bf5a077d8eb1aab8"
+          },
+          {
+            "file": "C-cyan-04.3mf",
+            "instances": 8,
+            "bounds_mm": [
+              [
+                43.4,
+                57.2,
+                0.0
+              ],
+              [
+                212.6,
+                198.800002,
+                11.4
+              ]
+            ],
+            "sha256": "29822aace5387dda272252b68f08849939c18b957c1713f90f26d051b3acc450"
+          },
+          {
+            "file": "C-cyan-05.3mf",
+            "instances": 1,
+            "bounds_mm": [
+              [
+                112.1,
+                96.1,
+                0.0
+              ],
+              [
+                143.9,
+                159.900002,
+                11.4
+              ]
+            ],
+            "sha256": "661859916e6d6334ac5c795ab209423ed6043d3b6b4e94b713c09376582979fc"
+          },
+          {
+            "file": "C-black-to-white-z2p8-01.3mf",
+            "instances": 1,
+            "bounds_mm": [
+              [
+                104.0,
+                108.0,
+                0.0
+              ],
+              [
+                152.0,
+                148.0,
+                3.6
+              ]
+            ],
+            "sha256": "811af2385113ddf89b245a425fb902bae7b1a241c1fd9284658a0b87abbc4503"
+          },
+          {
+            "file": "C-black-to-white-z2p4-01.3mf",
+            "instances": 1,
+            "bounds_mm": [
+              [
+                37.0,
+                108.0,
+                0.0
+              ],
+              [
+                219.0,
+                148.0,
+                3.2
+              ]
+            ],
+            "sha256": "d80fc681b01e9c8a8a7bfa1f0d4627283856f35c5ab47188aab32eb780fa7f64"
+          }
+        ]
+      }
+    ],
+    "note": "Reader, transforms and counts verified; no printer profile, sliced paths, print mass or time validated."
+  },
+  "browser": {
+    "status": "PENDING_CURRENT_REVISION_CI",
+    "required_revision": "4.0-public-template",
+    "prior_browser_result_not_reused": true,
+    "note": "The bounded Linux full-Chrome gate must test this revision before deployment."
+  },
+  "explosion_motion": {
+    "status": "PASS_REAL_NATIVE_MOTION_CHECK",
+    "revision": "4.0-public-template",
+    "models": [
+      {
+        "model": "A",
+        "checked_front_pairs": 1105,
+        "maximum_intersection_mm3": 0,
+        "regression_old_20mm_keeper_escape_overlap_mm3": 88.39550532704949,
+        "release_phases": "keeper up6, forward32 (16mm depth +14mm module travel +2mm gap); modules up45, forward14; then centered course spread",
+        "body_proof": "Each unchanged course moves rigidly; order preserved and axial gaps only increase."
+      },
+      {
+        "model": "B",
+        "checked_front_pairs": 1365,
+        "maximum_intersection_mm3": 0,
+        "regression_old_20mm_keeper_escape_overlap_mm3": 99.8098879454255,
+        "release_phases": "keeper up6, forward32 (16mm depth +14mm module travel +2mm gap); modules up45, forward14; then centered course spread",
+        "body_proof": "Each unchanged course moves rigidly; order preserved and axial gaps only increase."
+      },
+      {
+        "model": "C",
+        "checked_front_pairs": 1690,
+        "maximum_intersection_mm3": 0,
+        "regression_old_20mm_keeper_escape_overlap_mm3": 103.5241206814279,
+        "release_phases": "keeper up6, forward32 (16mm depth +14mm module travel +2mm gap); modules up45, forward14; then centered course spread",
+        "body_proof": "Each unchanged course moves rigidly; order preserved and axial gaps only increase."
+      }
+    ],
+    "motion_source": "site/assembly-motion.js executed by tests/motion.mjs",
+    "physical_simulation": false
+  },
+  "front_modules": {
+    "revision": "4.0-public-template",
+    "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+    "status": "PASS_NATIVE_FRONT_CAPTURE_AND_EXTRACTION",
+    "models": [
+      {
+        "model": "A",
+        "native_instances": 91,
+        "base_courses": 5,
+        "base_body_height_mm": 48,
+        "modules_inside_base_front": true,
+        "modules": [
+          {
+            "module": "text",
+            "part": "NP3-TEXT-A",
+            "bounds_mm": [
+              [
+                4.0,
+                0.1,
+                4.0
+              ],
+              [
+                106.0,
+                3.3,
+                44.0
+              ]
+            ],
+            "blocked_translation_volume_mm3": {
+              "front": 66.81024024698274,
+              "rear": 804.7840010379058,
+              "left": 27.647999997874724,
+              "right": 27.64799999787496,
+              "down": 48.00000000108224,
+              "up_with_keepers": 2.7571358024591093
+            },
+            "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+          },
+          {
+            "module": "logo",
+            "part": "NP3-LOGO-A",
+            "bounds_mm": [
+              [
+                108.0,
+                0.1,
+                4.0
+              ],
+              [
+                140.0,
+                3.7,
+                44.0
+              ]
+            ],
+            "blocked_translation_volume_mm3": {
+              "front": 66.81023999756425,
+              "rear": 251.0800002973185,
+              "left": 28.110230654705383,
+              "right": 28.110230654715807,
+              "down": 14.3999999998635,
+              "up_with_keepers": 1.6853333334359963
+            },
+            "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+          }
+        ],
+        "lines": [
+          {
+            "text": "Same icon, New adventures",
+            "width_mm": 93.58125000000001,
+            "height_mm": 10.0,
+            "assembled_z_range_mm": [
+              26.0,
+              36.0
+            ]
+          },
+          {
+            "text": "github.com/YOUR-USERNAME",
+            "width_mm": 78.26326599999999,
+            "height_mm": 7.0,
+            "assembled_z_range_mm": [
+              12.0,
+              19.0
+            ]
+          }
+        ],
+        "minimum_actual_parallel_straight_stroke_mm": 1.1751946987293334,
+        "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
+        "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
+        "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
+        "physical_fit_clutch_strength": "NOT_TESTED"
+      },
+      {
+        "model": "B",
+        "native_instances": 150,
+        "base_courses": 5,
+        "base_body_height_mm": 48,
+        "modules_inside_base_front": true,
+        "modules": [
+          {
+            "module": "text",
+            "part": "NP3-TEXT-B",
+            "bounds_mm": [
+              [
+                4.0,
+                0.1,
+                4.0
+              ],
+              [
+                146.0,
+                3.3,
+                44.0
+              ]
+            ],
+            "blocked_translation_volume_mm3": {
+              "front": 66.81024057441238,
+              "rear": 1121.0560011146292,
+              "left": 27.648000000026613,
+              "right": 27.648000000027817,
+              "down": 67.19999999891573,
+              "up_with_keepers": 2.7571358024613133
+            },
+            "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+          },
+          {
+            "module": "logo",
+            "part": "NP3-LOGO-B",
+            "bounds_mm": [
+              [
+                148.0,
+                0.1,
+                4.0
+              ],
+              [
+                188.0,
+                3.7,
+                44.0
+              ]
+            ],
+            "blocked_translation_volume_mm3": {
+              "front": 66.8102398303269,
+              "rear": 314.6000003655926,
+              "left": 28.17249716078471,
+              "right": 28.172497160794926,
+              "down": 18.239999999793465,
+              "up_with_keepers": 1.6853333333977898
+            },
+            "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+          }
+        ],
+        "lines": [
+          {
+            "text": "Same icon, New adventures",
+            "width_mm": 133.6875,
+            "height_mm": 12.0,
+            "assembled_z_range_mm": [
+              26.0,
+              38.0
+            ]
+          },
+          {
+            "text": "github.com/YOUR-USERNAME",
+            "width_mm": 89.443734,
+            "height_mm": 8.0,
+            "assembled_z_range_mm": [
+              12.0,
+              20.0
+            ]
+          }
+        ],
+        "minimum_actual_parallel_straight_stroke_mm": 1.3430796556906675,
+        "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
+        "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
+        "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
+        "physical_fit_clutch_strength": "NOT_TESTED"
+      },
+      {
+        "model": "C",
+        "native_instances": 228,
+        "base_courses": 5,
+        "base_body_height_mm": 48,
+        "modules_inside_base_front": true,
+        "modules": [
+          {
+            "module": "text",
+            "part": "NP3-TEXT-C",
+            "bounds_mm": [
+              [
+                4.0,
+                0.1,
+                4.0
+              ],
+              [
+                186.0,
+                3.3,
+                44.0
+              ]
+            ],
+            "blocked_translation_volume_mm3": {
+              "front": 66.81024102204717,
+              "rear": 1437.8359751738415,
+              "left": 27.647999998677278,
+              "right": 27.647999998678007,
+              "down": 86.30399999915727,
+              "up_with_keepers": 2.7571358024642634
+            },
+            "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+          },
+          {
+            "module": "logo",
+            "part": "NP3-LOGO-C",
+            "bounds_mm": [
+              [
+                188.0,
+                0.1,
+                4.0
+              ],
+              [
+                236.0,
+                3.7,
+                44.0
+              ]
+            ],
+            "blocked_translation_volume_mm3": {
+              "front": 66.81023992809611,
+              "rear": 377.57333915562344,
+              "left": 27.64800002056391,
+              "right": 27.64800002056463,
+              "down": 22.360530457905202,
+              "up_with_keepers": 2.5358442975769004
+            },
+            "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+          }
+        ],
+        "lines": [
+          {
+            "text": "Same icon, New adventures",
+            "width_mm": 173.79375,
+            "height_mm": 14.5,
+            "assembled_z_range_mm": [
+              26.0,
+              40.5
+            ]
+          },
+          {
+            "text": "github.com/YOUR-USERNAME",
+            "width_mm": 100.62419999999999,
+            "height_mm": 9.0,
+            "assembled_z_range_mm": [
+              12.0,
+              21.0
+            ]
+          }
+        ],
+        "minimum_actual_parallel_straight_stroke_mm": 1.5109646126520033,
+        "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
+        "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
+        "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
+        "physical_fit_clutch_strength": "NOT_TESTED"
+      }
+    ],
+    "frozen_tribute": "separate BRICK-8-MSG-SLOT-1; no source or public asset changed"
+  },
+  "revision_invariants": {
+    "status": "PASS_PUBLIC_TEMPLATE_GEOMETRY_BOUNDARIES",
+    "revision": "4.0-public-template",
+    "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+    "unchanged_nontext_masters": 68,
+    "model_dimensions_and_poses_preserved": true,
+    "public_mode": "generic",
+    "unselected_individual_variant": "not_distributed",
+    "physical_validation": "NOT_PERFORMED"
+  },
+  "final_browser_recheck": {
+    "status": "PENDING_CURRENT_REVISION_CI",
+    "revision": "4.0-public-template",
+    "local_browser_retry": "not attempted; known environment limitation"
+  },
+  "unselected_individual_variant": "withheld from public distribution",
+  "private_personalization_route": {
+    "status": "PASS_PRIVATE_OUTPUT_BOUNDARY_AND_NATIVE_REOPEN",
+    "fixture": "documented placeholders only; no real private values used",
+    "model": "B",
+    "private_native_plate_solids": 1,
+    "private_assembly_instances": 150,
+    "public_native_message_and_volume_unchanged": true,
+    "native_step_reopened": true,
+    "overlong_text_explicitly_rejected": true,
+    "private_values_echoed_or_published": false,
+    "physical_fit_tested": false,
+    "scope": "This proves the software path for the placeholder fixture, not arbitrary lettering printability or physical fit."
+  },
+  "privacy_cleanup": {
+    "schema_version": 1,
+    "status": "MANAGED_REACHABLE_HISTORY_CLEANED_SERVER_RETENTION_REMAINS",
+    "scope": "This repository only; no repository deletion, visibility change, or unrelated repository modification.",
+    "private_original_preserved": true,
+    "private_preservation_location_distributed": false,
+    "inventory": {
+      "public_branches": 2,
+      "forks": 0,
+      "pull_requests": 0,
+      "tags": 0,
+      "releases": 0
+    },
+    "history_filter": {
+      "tool": "git-filter-repo 2.47.0",
+      "isolated_mirror": true,
+      "exact_leases_and_atomic_scoped_push": true,
+      "blind_mirror_overwrite": false,
+      "commits_before": 29,
+      "commits_after_filter": 25,
+      "identifying_generated_paths_removed": 184,
+      "filtered_unique_blobs_audited": 967,
+      "retained_archives_audited": 74,
+      "ordinary_unrelated_source_and_meshes_preserved": true
+    },
+    "service_artifacts_removed": {
+      "identified_old_workflow_runs_and_logs": 10,
+      "identified_old_artifacts": 13,
+      "new_clean_maintenance_deployment_preserved": true
+    },
+    "residual": {
+      "status": "OWNER_INTERVENTION_OR_SERVICE_RETENTION_LIMITATION",
+      "old_unreferenced_commit_api_still_responded": true,
+      "known_old_render_first_4096_bytes_accessible": true,
+      "method": "Unauthenticated ranged GET; image/png; returned bytes matched the corresponding privately preserved original range.",
+      "full_old_image_redownload_claimed": false,
+      "all_external_copies_erased": false,
+      "support_request_sent": false,
+      "private_bilingual_draft_prepared": true,
+      "support_guaranteed": false,
+      "note": "This concerns public account information, not leaked credentials. GitHub may decline non-sensitive-data removal. Original values, withdrawn paths and old-SHA URLs are retained privately and are not reproduced here."
+    },
+    "physical_manufacturing_qualification": "NOT_PERFORMED"
+  },
+  "review_boundary": "Current digital output checks are not physical qualification. Historical personal review records are preserved privately, not republished as generic evidence.",
+  "not_claimed": [
+    "Commercial compatibility guarantee",
+    "Physical clutch/strength/tip testing",
+    "Slicer-measured print mass/time",
+    "Toy safety or manufacturing certification",
+    "Official LEGO/GitHub/Bambu product"
+  ]
+}

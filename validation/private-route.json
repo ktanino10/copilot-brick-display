@@ -1,0 +1,13 @@
+{
+  "status": "PASS_PRIVATE_OUTPUT_BOUNDARY_AND_NATIVE_REOPEN",
+  "fixture": "documented placeholders only; no real private values used",
+  "model": "B",
+  "private_native_plate_solids": 1,
+  "private_assembly_instances": 150,
+  "public_native_message_and_volume_unchanged": true,
+  "native_step_reopened": true,
+  "overlong_text_explicitly_rejected": true,
+  "private_values_echoed_or_published": false,
+  "physical_fit_tested": false,
+  "scope": "This proves the software path for the placeholder fixture, not arbitrary lettering printability or physical fit."
+}

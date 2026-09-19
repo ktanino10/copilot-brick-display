@@ -1,0 +1,1783 @@
+{
+  "status": "PASS_DIGITAL_ONLY",
+  "library": "trimesh 4.7.4",
+  "units": "mm (STL has no intrinsic unit tag; catalogue and header specify mm)",
+  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "parts": [
+    {
+      "part": "NP3-KEEPER",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 680.9307,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          15.899999618530273,
+          3.200000047683716
+        ]
+      ],
+      "triangles": 414,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "BASE3-18x08-B-a4853c",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 52982.7694,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          143.89999389648438,
+          63.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 116938,
+      "bed_envelope_with_6mm_brim_mm": [
+        155.79999389499426,
+        75.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-06x08-T-b8aa05",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 17044.2919,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          63.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 36082,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        75.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-06x08-T-9cb610",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 16885.2039,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          3.5,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          63.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 36316,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        72.4000015258789
+      ]
+    },
+    {
+      "part": "BASE3-06x08-T-7f51dc",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 17064.3399,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          63.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 36370,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        75.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-03x08-T-48de52",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 8627.062,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          63.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 16078,
+      "bed_envelope_with_6mm_brim_mm": [
+        35.79999961704016,
+        75.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-06x08-T-7532db",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 16975.4438,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          63.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 36352,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        75.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-03x08-T-80e081",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 8557.598,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          63.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 16204,
+      "bed_envelope_with_6mm_brim_mm": [
+        35.79999961704016,
+        75.80000152438879
+      ]
+    },
+    {
+      "part": "NP3-TEXT-A",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 9776.2642,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          102.0,
+          40.0,
+          3.200000047683716
+        ]
+      ],
+      "triangles": 60666,
+      "bed_envelope_with_6mm_brim_mm": [
+        114.0,
+        52.0
+      ]
+    },
+    {
+      "part": "NP3-LOGO-A",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 3231.6261,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          32.0,
+          40.0,
+          3.5999999046325684
+        ]
+      ],
+      "triangles": 1652,
+      "bed_envelope_with_6mm_brim_mm": [
+        44.0,
+        52.0
+      ]
+    },
+    {
+      "part": "BR-04x02-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2966.5599,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 4860,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "BR-02x03-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2241.0919,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          23.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 3504,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        35.79999961704016
+      ]
+    },
+    {
+      "part": "BR-02x02-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 1515.624,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          15.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 2148,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "BR-03x02-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2241.0919,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          15.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 3504,
+      "bed_envelope_with_6mm_brim_mm": [
+        35.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "BR-01x02-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 821.8339,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          7.900000095367432,
+          15.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 1144,
+      "bed_envelope_with_6mm_brim_mm": [
+        19.800000093877316,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "BR-04x03-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 4412.6669,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          23.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 8148,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        35.79999961704016
+      ]
+    },
+    {
+      "part": "BR-04x02-H032",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 1280.3194,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          5.0
+        ]
+      ],
+      "triangles": 4860,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "BASE3-24x10-B-562406",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 87857.1192,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          191.89999389648438,
+          79.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 202406,
+      "bed_envelope_with_6mm_brim_mm": [
+        203.79999389499426,
+        91.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-06x10-T-e1945a",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 21377.7604,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          79.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 46450,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        91.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-06x10-T-838259",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 21218.6951,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          3.5,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          79.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 46756,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        88.4000015258789
+      ]
+    },
+    {
+      "part": "BASE3-06x10-T-3f87ac",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 21218.6951,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          3.5,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          79.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 46756,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        88.4000015258789
+      ]
+    },
+    {
+      "part": "BASE3-06x10-T-6e100f",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 21367.1112,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          79.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 46810,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        91.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-03x10-T-aa77a9",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 10798.6247,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          79.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 20686,
+      "bed_envelope_with_6mm_brim_mm": [
+        35.79999961704016,
+        91.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-06x10-T-6159e6",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 21278.2151,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          79.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 46792,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        91.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-03x10-T-d79875",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 10729.1721,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          79.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 20848,
+      "bed_envelope_with_6mm_brim_mm": [
+        35.79999961704016,
+        91.80000152438879
+      ]
+    },
+    {
+      "part": "NP3-TEXT-B",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 13777.9799,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          142.0,
+          40.0,
+          3.200000047683716
+        ]
+      ],
+      "triangles": 59472,
+      "bed_envelope_with_6mm_brim_mm": [
+        154.0,
+        52.0
+      ]
+    },
+    {
+      "part": "NP3-LOGO-B",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 4275.2515,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          40.0,
+          40.0,
+          3.5999999046325684
+        ]
+      ],
+      "triangles": 1694,
+      "bed_envelope_with_6mm_brim_mm": [
+        52.0,
+        52.0
+      ]
+    },
+    {
+      "part": "BR-04x04-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 5858.774,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          31.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 11436,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        43.79999961704016
+      ]
+    },
+    {
+      "part": "BR-02x04-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2966.5599,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          31.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 4860,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        43.79999961704016
+      ]
+    },
+    {
+      "part": "BR-02x06-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 4417.4961,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          47.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 7572,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        59.80000152438879
+      ]
+    },
+    {
+      "part": "BR-01x04-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 1615.4864,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          7.900000095367432,
+          31.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 2628,
+      "bed_envelope_with_6mm_brim_mm": [
+        19.800000093877316,
+        43.79999961704016
+      ]
+    },
+    {
+      "part": "BR-03x04-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 4412.6669,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          31.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 8148,
+      "bed_envelope_with_6mm_brim_mm": [
+        35.79999961704016,
+        43.79999961704016
+      ]
+    },
+    {
+      "part": "BR-05x04-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 7304.8821,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          39.900001525878906,
+          31.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 14724,
+      "bed_envelope_with_6mm_brim_mm": [
+        51.80000152438879,
+        43.79999961704016
+      ]
+    },
+    {
+      "part": "BR-02x05-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 3692.0283,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          39.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 6216,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        51.80000152438879
+      ]
+    },
+    {
+      "part": "BR-04x05-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 7304.8821,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          39.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 14724,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        51.80000152438879
+      ]
+    },
+    {
+      "part": "BR-02x04-H064",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2202.5452,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          31.899999618530273,
+          8.199999809265137
+        ]
+      ],
+      "triangles": 4860,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        43.79999961704016
+      ]
+    },
+    {
+      "part": "BR-04x04-H064",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 4364.6412,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          31.899999618530273,
+          8.199999809265137
+        ]
+      ],
+      "triangles": 11436,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        43.79999961704016
+      ]
+    },
+    {
+      "part": "BASE3-15x14-B-2f9fc1",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 76558.1361,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          119.9000015258789,
+          111.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 180220,
+      "bed_envelope_with_6mm_brim_mm": [
+        131.8000015243888,
+        123.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-15x14-B-65597c",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 76526.3523,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          119.9000015258789,
+          111.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 180272,
+      "bed_envelope_with_6mm_brim_mm": [
+        131.8000015243888,
+        123.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-06x14-T-72d551",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 30044.6998,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          111.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 67186,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        123.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-06x14-T-f6d8b7",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 29885.6801,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          3.5,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          111.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 67636,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        120.4000015258789
+      ]
+    },
+    {
+      "part": "BASE3-06x14-T-afd244",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 30006.64,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          111.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 67672,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        123.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-06x14-T-26e6b0",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 29883.1841,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          111.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 67654,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        123.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-03x14-T-08700f",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 15141.7513,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          111.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 29902,
+      "bed_envelope_with_6mm_brim_mm": [
+        35.79999961704016,
+        123.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-06x14-T-5258a8",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 29914.48,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          47.900001525878906,
+          111.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 67672,
+      "bed_envelope_with_6mm_brim_mm": [
+        59.80000152438879,
+        123.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-03x14-T-d96cba",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 15072.3214,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          111.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 30136,
+      "bed_envelope_with_6mm_brim_mm": [
+        35.79999961704016,
+        123.80000152438879
+      ]
+    },
+    {
+      "part": "NP3-TEXT-C",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 17880.9806,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          182.0,
+          40.0,
+          3.200000047683716
+        ]
+      ],
+      "triangles": 59392,
+      "bed_envelope_with_6mm_brim_mm": [
+        194.0,
+        52.0
+      ]
+    },
+    {
+      "part": "NP3-LOGO-C",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 5194.421,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          40.0,
+          3.5999999046325684
+        ]
+      ],
+      "triangles": 1706,
+      "bed_envelope_with_6mm_brim_mm": [
+        60.0,
+        52.0
+      ]
+    },
+    {
+      "part": "BR-04x07-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 10197.0958,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          55.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 21300,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        67.80000152438879
+      ]
+    },
+    {
+      "part": "BR-02x07-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 5142.9639,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          55.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 8928,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        67.80000152438879
+      ]
+    },
+    {
+      "part": "BR-02x10-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 7319.367,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          79.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 12996,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        91.80000152438879
+      ]
+    },
+    {
+      "part": "BR-04x06-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 8750.9889,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          47.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 18012,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        59.80000152438879
+      ]
+    },
+    {
+      "part": "BR-03x06-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 6584.2423,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          47.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 12792,
+      "bed_envelope_with_6mm_brim_mm": [
+        35.79999961704016,
+        59.80000152438879
+      ]
+    },
+    {
+      "part": "BR-01x06-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2409.1391,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          7.900000095367432,
+          47.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 4112,
+      "bed_envelope_with_6mm_brim_mm": [
+        19.800000093877316,
+        59.80000152438879
+      ]
+    },
+    {
+      "part": "BR-05x06-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 10917.7368,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          39.900001525878906,
+          47.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 23232,
+      "bed_envelope_with_6mm_brim_mm": [
+        51.80000152438879,
+        59.80000152438879
+      ]
+    },
+    {
+      "part": "BR-04x08-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 11643.2027,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          63.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 24588,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        75.80000152438879
+      ]
+    },
+    {
+      "part": "BR-02x08-H096",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 5868.4317,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          63.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 10284,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        75.80000152438879
+      ]
+    },
+    {
+      "part": "BR-04x06-H064",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 6526.7376,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          47.900001525878906,
+          8.199999809265137
+        ]
+      ],
+      "triangles": 18012,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        59.80000152438879
+      ]
+    },
+    {
+      "part": "BR-02x06-H064",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 3285.4536,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          47.900001525878906,
+          8.199999809265137
+        ]
+      ],
+      "triangles": 7572,
+      "bed_envelope_with_6mm_brim_mm": [
+        27.799999617040157,
+        59.80000152438879
+      ]
+    },
+    {
+      "part": "FIT-M-D470",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 1853.6443,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          5.0
+        ]
+      ],
+      "triangles": 2940,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "FIT-M-D480",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 1864.2911,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          5.0
+        ]
+      ],
+      "triangles": 2940,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "FIT-M-D490",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 1875.1638,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          5.0
+        ]
+      ],
+      "triangles": 2940,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "FIT-F-CM04",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2787.1022,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          9.600000381469727
+        ]
+      ],
+      "triangles": 1932,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "FIT-F-CP00",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2748.5202,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          9.600000381469727
+        ]
+      ],
+      "triangles": 1932,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "FIT-F-CP04",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2710.0769,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          9.600000381469727
+        ]
+      ],
+      "triangles": 1932,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "FIT-F-CP08",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2671.7726,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          9.600000381469727
+        ]
+      ],
+      "triangles": 1932,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "FIT-F-CP12",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2633.6069,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          9.600000381469727
+        ]
+      ],
+      "triangles": 1932,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "NP3-FIT-PLAQUE",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 399.1467,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          24.0,
+          9.199999809265137,
+          2.4000000953674316
+        ]
+      ],
+      "triangles": 60,
+      "bed_envelope_with_6mm_brim_mm": [
+        36.0,
+        21.199999809265137
+      ]
+    },
+    {
+      "part": "NP3-FIT-SOCKET-C15",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2991.8055,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 3210,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "NP3-FIT-SOCKET-C20",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2978.8554,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 3212,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "NP3-FIT-SOCKET-C25",
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 2965.8233,
+      "vertex_manifold": true,
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          31.899999618530273,
+          15.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "triangles": 3214,
+      "bed_envelope_with_6mm_brim_mm": [
+        43.79999961704016,
+        27.799999617040157
+      ]
+    }
+  ]
+}

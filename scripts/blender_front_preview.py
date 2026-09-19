@@ -9,7 +9,7 @@ from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
-parser.add_argument("--label", default="new")
+parser.add_argument("--label", default="public-template")
 args = parser.parse_args(sys.argv[sys.argv.index("--") + 1:])
 scene = bpy.context.scene
 scene.frame_set(scene.frame_end)

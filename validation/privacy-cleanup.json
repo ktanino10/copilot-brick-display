@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "MANAGED_REACHABLE_HISTORY_CLEANED_SERVER_RETENTION_REMAINS",
+  "scope": "This repository only; no repository deletion, visibility change, or unrelated repository modification.",
+  "private_original_preserved": true,
+  "private_preservation_location_distributed": false,
+  "inventory": {
+    "public_branches": 2,
+    "forks": 0,
+    "pull_requests": 0,
+    "tags": 0,
+    "releases": 0
+  },
+  "history_filter": {
+    "tool": "git-filter-repo 2.47.0",
+    "isolated_mirror": true,
+    "exact_leases_and_atomic_scoped_push": true,
+    "blind_mirror_overwrite": false,
+    "commits_before": 29,
+    "commits_after_filter": 25,
+    "identifying_generated_paths_removed": 184,
+    "filtered_unique_blobs_audited": 967,
+    "retained_archives_audited": 74,
+    "ordinary_unrelated_source_and_meshes_preserved": true
+  },
+  "service_artifacts_removed": {
+    "identified_old_workflow_runs_and_logs": 10,
+    "identified_old_artifacts": 13,
+    "new_clean_maintenance_deployment_preserved": true
+  },
+  "residual": {
+    "status": "OWNER_INTERVENTION_OR_SERVICE_RETENTION_LIMITATION",
+    "old_unreferenced_commit_api_still_responded": true,
+    "known_old_render_first_4096_bytes_accessible": true,
+    "method": "Unauthenticated ranged GET; image/png; returned bytes matched the corresponding privately preserved original range.",
+    "full_old_image_redownload_claimed": false,
+    "all_external_copies_erased": false,
+    "support_request_sent": false,
+    "private_bilingual_draft_prepared": true,
+    "support_guaranteed": false,
+    "note": "This concerns public account information, not leaked credentials. GitHub may decline non-sensitive-data removal. Original values, withdrawn paths and old-SHA URLs are retained privately and are not reproduced here."
+  },
+  "physical_manufacturing_qualification": "NOT_PERFORMED"
+}

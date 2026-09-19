@@ -11,10 +11,18 @@ const catalog = await json('design/catalog.json');
 assert.deepEqual(await json('site/assets/catalog.json'), catalog);
 assert.equal(catalog.units, 'mm');
 assert.equal(catalog.parameters_sha256, digest(await readFile('design/parameters.json')));
-assert.deepEqual(catalog.message.lines, ['Same icon, New adventures', 'github.com/YOUR-USERNAME']);
+const policy = await json('design/publication-policy.json');
+if (policy.mode === 'generic') {
+  assert.ok(['Same icon, New adventures', 'YOUR MESSAGE HERE', 'YOUR DISPLAY NAME'].includes(catalog.message.lines[0]), 'Public generic first line must be an explicit placeholder/default.');
+  assert.ok(catalog.message.lines[1] === 'github.com/YOUR-USERNAME', 'Public generic account line must remain a placeholder.');
+  assert.equal(policy.public_text_approved, false);
+} else {
+  assert.equal(policy.mode, 'public_personalization');
+  assert.equal(policy.public_text_approved, true, 'A public fork must explicitly approve public display values.');
+}
 assert.equal(catalog.message.interface_id, 'BASE-FRONT-NP3');
 const required = [
-  'index.html', 'guide.html', 'technical.html', 'rebuild.html', 'notices.html',
+  'index.html', 'guide.html', 'technical.html', 'rebuild.html', 'notices.html', 'customize.html', 'privacy.html', 'trial.html',
   'drawings/interface.svg', 'downloads/interface.pdf', 'downloads/fit-coupons.zip',
   'downloads/part-drawings.pdf', 'downloads/validation.json',
   'vendor/THREE-LICENSE.txt', 'vendor/B612-OFL.txt',
@@ -51,12 +59,9 @@ for (const part of Object.values(catalog.parts)) {
   assert.ok(part.volume_mm3 > 0 && part.bounds[0][2] >= 0, part.id);
   required.push(`drawings/parts/${part.id}.svg`);
 }
-const invariants = await json('design/revision3-invariants.json');
-for (const [relative, expected] of Object.entries(invariants.frozen_tribute)) {
-  assert.equal(digest(await readFile(relative)), expected, `Frozen tribute changed: ${relative}`);
-}
-for (const file of ['site/index.html', 'site/guide.html', 'site/technical.html', 'site/assets/catalog.json']) {
-  assert.ok(!(await readFile(file, 'utf8')).includes('@YOUR-USERNAME'), `Obsolete handle in current normal-model content: ${file}`);
+const invariants = await json('design/public-template-invariants.json');
+for (const [part, expected] of Object.entries(invariants.unchanged_nontext_stl_sha256)) {
+  assert.equal(catalog.parts[part].sha256, expected, `Non-text mechanical master changed: ${part}`);
 }
 for (const file of required) assert.ok((await stat(path.join(site, file))).size > 0, file);
 
@@ -99,12 +104,8 @@ const evidence = await json('site/downloads/validation.json');
 assert.equal(evidence.parameters_sha256, catalog.parameters_sha256);
 assert.equal(evidence.physical_testing, 'NOT_PERFORMED');
 assert.ok(evidence.digital_checks_passed);
-const tributeState = await json('validation/tribute-mirror.json');
-if (tributeState.status === 'WITHDRAWN_REJECTED_ADHESIVE_DESIGN') {
-  const tributeFiles = await walk(path.join(site, 'tribute'));
-  assert.deepEqual(tributeFiles.map((file) => path.relative(path.join(site, 'tribute'), file)), ['index.html']);
-  const notice = await readFile(path.join(site, 'tribute/index.html'), 'utf8');
-  assert.match(notice, /接着案は不採用/);
-  assert.match(notice, /すべて取り外せる構造/);
-}
+const withheldFiles = await walk(path.join(site, 'tribute'));
+assert.deepEqual(withheldFiles.map((file) => path.relative(path.join(site, 'tribute'), file)), ['index.html']);
+assert.match(await readFile(path.join(site, 'tribute/index.html'), 'utf8'), /公開配布していません/);
+assert.equal(evidence.publication_mode, policy.mode);
 console.log(`PASS: ${catalog.models.length} models, ${Object.keys(catalog.parts).length} unique STL hashes, ${links} static links, native signatures, MP4 containers, and privacy scan.`);

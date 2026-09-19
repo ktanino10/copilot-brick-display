@@ -3,18 +3,120 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="publication-state" content="privacy-maintenance">
-  <title>Brick Portrait — 公開テンプレートへ更新中</title>
-  <style>body{margin:0;background:#edf3f8;color:#142c41;font:16px/1.9 system-ui,sans-serif}main{max-width:760px;margin:8vh auto;padding:32px}h1{font-size:30px;line-height:1.4}.note{background:white;border-left:5px solid #2952a6;padding:20px}a{color:#2952a6}small{color:#526b80}</style>
+  <meta name="theme-color" content="#edf3f8">
+  <meta name="design-revision" content="4.0-public-template">
+  <meta name="description" content="同じ顔を、3つのサイズと立体感で。8 mmピッチの自作ブロック模型、FreeCAD、印刷STL、組立動画と日本語の作り方。">
+  <title>Brick Portrait — 組んで飾る、次の冒険。</title>
+  <link rel="stylesheet" href="style.css?rev=4.0-public-template">
+  <link rel="icon" href="icon.svg?rev=4.0-public-template" type="image/svg+xml">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
 </head>
-<body><main>
-  <p>BRICK PORTRAIT / PRIVACY UPDATE</p>
-  <h1>個人向け配布を一時停止し、<br>汎用テンプレートへ更新しています。</h1>
-  <div class="note"><p>従来の個別メッセージを含むCAD・画像・動画・ダウンロードは、現在の公開サイトから取り下げました。</p>
-  <p>公開デフォルトを <code>YOUR-USERNAME</code> などの明確な仮表示へ変更し、個人設定は公開データと分離します。
-  ソース、実際のCAD形状、描画、配布物の一致を確認してから再公開します。</p></div>
-  <p>既存のフォーク、ダウンロード済みコピー、外部キャッシュまで消去できる保証はありません。
-  現行版と、管理できる公開履歴・配布面を対象に清掃しています。</p>
-  <p><small>試し印刷の経験を反映した少量試作手順は保存しています。造形・嵌合・保持力・強度の実物合格を意味する更新ではありません。</small></p>
-</main></body>
+<body>
+  <a class="skip-link" href="#workbench">模型を選ぶ</a>
+  <header class="site-header">
+    <a class="brand" href="./?rev=4.0-public-template" aria-label="Brick Portrait ホーム"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>BRICK<br>PORTRAIT</span></a>
+    <nav aria-label="メインナビゲーション">
+      <a href="#compare">3案を比べる</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="customize.html?rev=4.0-public-template">文字を変える</a><a href="#downloads">ダウンロード</a>
+      <a class="repo-link" href="https://github.com/ktanino10/copilot-brick-display" aria-label="GitHubのソースと全成果物">SOURCE ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <div><p class="eyebrow">REV 3 · FIVE-COURSE BASE · ZERO ELECTRONICS</p><h1 id="title">組んで飾る、<br><span>次の冒険。</span></h1></div>
+      <div class="intro-note"><span class="mini-stud" aria-hidden="true"></span><p>同じ顔を、3つのサイズと立体感で。<br>プリントして、一段ずつ組み立てる<br>あなたの机の小さな相棒。</p><p class="muted">P1S / PLA / 0.4 &amp; 0.2 mm · AMS不要</p></div>
+    </section>
+
+    <section id="workbench" class="workbench" aria-label="模型の選択と3D作業台">
+      <aside class="model-rail">
+        <p class="eyebrow">CHOOSE YOUR PORTRAIT</p>
+        <div class="model-tabs" role="group" aria-label="デザインを選ぶ">
+          <button class="model-tab" data-model="A" aria-pressed="false"><span class="model-letter">A</span><span><strong>MINI RELIEF</strong><small>薄く、小さく飾る</small></span><span class="tab-arrow">↗</span></button>
+          <button class="model-tab active" data-model="B" aria-pressed="true"><span class="model-letter">B</span><span><strong>DESK CLASSIC</strong><small>輪郭と厚みの標準型 <em>おすすめ</em></small></span><span class="tab-arrow">↗</span></button>
+          <button class="model-tab" data-model="C" aria-pressed="false"><span class="model-letter">C</span><span><strong>DISPLAY SCULPT</strong><small>横顔まで立体に</small></span><span class="tab-arrow">↗</span></button>
+        </div>
+        <div class="model-spec">
+          <p id="model-description">32 mm厚の顔、段差のあるゴーグル。写真の印象に近い推奨標準型。</p>
+          <dl><div><dt>完成寸法 / W × D × H</dt><dd id="model-dimensions">191.8 × 79.8 × 238.6 <span>mm</span></dd></div>
+          <div class="spec-pair"><div><dt>組立部品</dt><dd id="part-count">150 <span>点</span></dd></div><div><dt>組立工程</dt><dd id="step-count">28 <span>工程</span></dd></div></div></dl>
+          <p id="target-dimensions" class="fine">黒台座は5段・48 mm。顔を変えず38.4 mm上へ。実寸は上端スタッド込み。</p>
+        </div>
+        <a class="primary-link model-print-link" href="downloads/B/print-kit.zip?rev=4.0-public-template">Bの印刷セット <span>↓</span></a>
+        <a class="text-link model-guide-link" href="guide.html?model=B&rev=4.0-public-template">初めての方は、作り方から →</a>
+        <div class="fit-warning"><span aria-hidden="true">!</span><p><strong>本体の前に、嵌合テスト。</strong>市販品との接続は未実物検証です。小さなオス・メス片を先に試し、無理に押し込まないでください。</p></div>
+      </aside>
+      <div class="viewer-column">
+        <div class="viewer-topline"><span class="eyebrow">LIVE ASSEMBLY / <b id="viewer-model">B</b></span><span class="viewer-hint">ドラッグで回転 · スクロールで拡大</span></div>
+        <div class="viewport" id="viewport" aria-label="3D模型。下の部品メニューでも部品を選べます。">
+          <img id="viewer-fallback" class="viewer-fallback" src="media/B-hero.png?rev=4.0-public-template" alt="Bの完成模型。Blenderで実際のCAD形状をレンダリング。">
+          <canvas id="scene" tabindex="0" aria-label="回転可能な3D模型"></canvas>
+          <div class="loading-state" id="loading" role="status"><span class="loading-studs" aria-hidden="true"><i></i><i></i><i></i></span><p>本物の印刷形状を読み込んでいます</p></div>
+          <p class="viewer-error" id="viewer-error" role="alert" hidden></p>
+          <div class="view-buttons" role="group" aria-label="見る方向"><button data-view="iso" aria-pressed="true">立体</button><button data-view="front" aria-pressed="false">正面</button><button data-view="side" aria-pressed="false">側面</button><button data-view="top" aria-pressed="false">上面</button></div>
+          <label class="bounds-control"><input id="bounds" type="checkbox"> 表示範囲の枠</label>
+          <div class="viewport-stamp"><span>mm / 1:1 DATA</span><span>CAD → STL → VIEW</span></div>
+        </div>
+        <div class="viewer-controls">
+          <div class="slider-control"><label for="explode">上下に大きく分解 <output id="explode-value">0%</output></label><input id="explode" type="range" min="0" max="100" value="0" aria-describedby="explosion-note"></div>
+          <div class="slider-control assembly-control"><label for="assembly">組み立てる <output id="assembly-value">完成</output></label><div><button id="play" aria-label="組立を再生">▶</button><input id="assembly" type="range" min="0" max="23" value="23"></div></div>
+        </div>
+        <p class="step-caption" id="step-caption">完成形。部品をクリックして寸法と印刷ファイルを確認できます。</p>
+        <p class="fine explosion-note" id="explosion-note">0%は実CAD配置。100%は上下両方向へ開き、段間の空隙18.2 mm以上。銘板・右ロゴを先に解除する説明表示で、物理シミュレーションではありません。</p>
+      </div>
+    </section>
+
+    <section class="inspector" aria-labelledby="part-heading">
+      <div class="inspector-copy"><p class="eyebrow">PART INSPECTOR</p><h2 id="part-heading">ひとつずつ、<br>確かめる。</h2><label for="part-select">部品を選択</label><select id="part-select"><option value="">3Dの部品をクリック、またはここから選択</option></select><div id="part-details" aria-live="polite"><p class="muted">選んだ部品の形状ID・色・寸法・三面図がここに表示されます。</p></div></div>
+      <div class="part-drawing"><div id="part-empty"><span class="socket-symbol" aria-hidden="true"><i></i><i></i></span><p>見えない裏側にも、<br>接続のための形があります。</p></div><img id="part-drawing" hidden alt="選択部品のCAD由来の寸法付き三面図"></div>
+    </section>
+
+    <section id="compare" class="compare" aria-labelledby="compare-heading">
+      <div class="section-heading"><div><p class="eyebrow">SAME PITCH. DIFFERENT PRESENCE.</p><h2 id="compare-heading">大きさだけでは、ありません。</h2></div><p>すべて8 mmピッチ。<br>STLの拡大ではなく、配置と奥行きの違いです。</p></div>
+      <div class="comparison-grid">
+        <article><a href="?model=A#workbench" data-switch="A"><div class="comparison-image"><img src="media/A-compare.png?rev=4.0-public-template" loading="lazy" alt="A MINI RELIEF。同じ撮影倍率の実Blenderレンダー"></div><h3><span>A</span> MINI RELIEF</h3></a><p>顔は16 mm厚の浅いレリーフ。<br>幅を抑えた5段台座。</p><dl><dt>実寸 / mm</dt><dd>143.8 × 63.8 × 187.4</dd><dt>組込部品 / 顔＋台座</dt><dd>91点 / 14＋5段</dd></dl></article>
+        <article><a href="?model=B#workbench" data-switch="B"><div class="comparison-image"><img src="media/B-compare.png?rev=4.0-public-template" loading="lazy" alt="B DESK CLASSIC。同じ撮影倍率の実Blenderレンダー"></div><h3><span>B</span> DESK CLASSIC</h3></a><p>顔は32 mm厚。段差のあるゴーグルと<br>大きい2行・正面右ロゴの標準型。</p><dl><dt>実寸 / mm</dt><dd>191.8 × 79.8 × 238.6</dd><dt>組込部品 / 顔＋台座</dt><dd>150点 / 19＋5段</dd></dl></article>
+        <article><a href="?model=C#workbench" data-switch="C"><div class="comparison-image"><img src="media/C-compare.png?rev=4.0-public-template" loading="lazy" alt="C DISPLAY SCULPT。同じ撮影倍率の実Blenderレンダー"></div><h3><span>C</span> DISPLAY SCULPT</h3></a><p>顔は48 mm、側面は80 mm厚。<br>5段台座の最下段は2分割。</p><dl><dt>実寸 / mm</dt><dd>239.8 × 111.8 × 286.6</dd><dt>組込部品 / 顔＋台座</dt><dd>228点 / 24＋5段</dd></dl></article>
+      </div>
+      <p class="fine">顔の奥行きは名目値です。実寸は最上部スタッド込み、部品数は前面銘板・右ロゴ・キーパー込みです。完成Cは256 mmより高いですが、分割した各印刷部品はP1S内に収まります。</p>
+    </section>
+
+    <section class="message-section" aria-labelledby="message-heading">
+      <div><p class="eyebrow">ON THE BASE. MADE TO BE READ.</p><h2 id="message-heading">台座の正面に、大きく。</h2><p>黒いブロックを5段積んだ、48 mmの台座。<br>左の2行銘板と右のロゴを、独立して交換できます。</p><p class="fine">本体前の立看板ではなく、台座高の内側へ。<br>キー溝＋3個の上止め。無接着で上へ抜き取れます。<br>0.2 mm推奨・黒から白へ手動色替え・AMS不要。</p></div>
+      <div class="message-card-preview" aria-label="台座前面の汎用2行と右ロゴ"><img id="base-front-preview" src="media/B-base-front.png?rev=4.0-public-template" alt="実CAD由来の汎用B台座。右ロゴと仮表示YOUR-USERNAME"><strong id="message-line-1">Same icon, New adventures</strong><span id="message-line-2" class="placeholder-profile">github.com/YOUR-USERNAME</span><span id="message-privacy-note">PLACEHOLDER / 実在の個人プロフィールではありません</span></div>
+    </section>
+
+    <section class="film-section" aria-labelledby="film-heading">
+      <div class="section-heading"><div><p class="eyebrow">WATCH THE BUILD</p><h2 id="film-heading">一段ずつ、顔になる。</h2></div><p>選択中の<span id="film-model">B</span>の実Blenderレンダー。<br>工程順の組立と、完成形のターンテーブル。</p></div>
+      <div class="film-grid"><video id="assembly-video" controls playsinline preload="metadata" poster="media/B-hero.png?rev=4.0-public-template"><source src="media/B-assembly.mp4?rev=4.0-public-template" type="video/mp4"><track src="media/B-assembly.vtt?rev=4.0-public-template" kind="captions" srclang="ja" label="日本語の組立工程">MP4をダウンロードして再生してください。</video><div><p class="eyebrow">THE ACTUAL PARTS</p><h3>見せる模型と、<br>刷る模型を、同じに。</h3><p>FreeCADの形状から書き出したSTLを、そのままBlenderと3D表示にも使っています。部品番号、色、配置、組立順は共通です。</p><p class="fine">動画は組立順を伝えるものです。重力・保持力のシミュレーションや実物の嵌合試験ではありません。</p><a id="video-download" href="media/B-assembly.mp4?rev=4.0-public-template" download>MP4を保存 ↓</a><a id="blend-download" href="downloads/B/B.blend?rev=4.0-public-template" download>編集できるBlenderシーン ↓</a></div></div>
+    </section>
+
+    <section id="make" class="make-section" aria-labelledby="make-heading">
+      <div class="section-heading"><div><p class="eyebrow">PRINT SMALL. THEN BUILD.</p><h2 id="make-heading">迷わないための、最初の4歩。</h2></div><a href="guide.html?rev=4.0-public-template" class="text-link">全工程の作り方を読む →</a></div>
+      <ol class="build-route">
+        <li><span>01</span><h3>選ぶ・そろえる</h3><p>A/B/Cと5色のPLA、ノギス、プリンタを用意。STLはmm・100%で読み込みます。</p></li>
+        <li><span>02</span><h3>入口を見て、少量から</h3><p>既存couponの次は、現行実部品7個を段階的に。穴が塞がる・つかめない・座らない場合は、全数印刷を止めます。</p><a href="trial.html?guidance=trial-2026-09-19&rev=4.0-public-template">7個の段階試作へ →</a></li>
+        <li><span>03</span><h3>色別に印刷</h3><p>0.4 mmが基本。文字は0.2 mmを推奨。冷まして外し、BOMどおりトレーへ並べます。</p></li>
+        <li><span>04</span><h3>下から組み立てる</h3><p>台座5段→銘板・右ロゴ→上止め→顔→頭頂。最後に保持と転倒を確認します。</p></li>
+      </ol>
+      <div class="make-note"><strong>デジタル確認済み ≠ 実物検証済み</strong><p>PLAの割れ、印刷誤差、屋根の垂れ、保持力、転倒しにくさは実物で確認が必要です。接続を強制しない・頭を持って運ばない・小部品を子どもに渡さない。成人向けの屋内装飾品です。</p></div>
+    </section>
+
+    <section id="downloads" class="downloads" aria-labelledby="download-heading">
+      <div class="section-heading"><div><p class="eyebrow">THE COMPLETE WORKSHOP</p><h2 id="download-heading">図面から、編集元まで。</h2></div><p>表示中：<strong id="download-model">B / DESK CLASSIC</strong><br>ネイティブファイルは別プロセスで再読込しています。</p></div>
+      <div class="download-grid" id="download-links">
+        <a href="downloads/B/print-kit.zip?rev=4.0-public-template"><span>PRINT</span><strong>印刷セット</strong><small>STL・BOM・配置 / ZIP</small><b>↓</b></a>
+        <a href="downloads/B/B.FCStd?rev=4.0-public-template"><span>EDIT</span><strong>FreeCAD</strong><small>部品ID・色・配置を保持</small><b>↓</b></a>
+        <a href="downloads/B/B.step?rev=4.0-public-template"><span>EXCHANGE</span><strong>STEP</strong><small>mm単位の実体CAD</small><b>↓</b></a>
+        <a href="downloads/B/drawings.pdf?rev=4.0-public-template"><span>DRAW</span><strong>寸法・組立図</strong><small>三面図・分解・番号付き工程 / PDF</small><b>↓</b></a>
+        <a href="downloads/B/bom.csv?rev=4.0-public-template"><span>COUNT</span><strong>色別部品表</strong><small>形状ID × 色 × 数量 / CSV</small><b>↓</b></a>
+        <a href="downloads/B/plates.zip?rev=4.0-public-template"><span>LAYOUT</span><strong>色別プレート</strong><small>汎用3MF / 要スライサー確認</small><b>↓</b></a>
+      </div>
+      <div class="common-downloads"><a href="downloads/trial-subset.zip?guidance=trial-2026-09-19&rev=4.0-public-template">現行実部品7個の選択セット</a><a href="trial.html?guidance=trial-2026-09-19&rev=4.0-public-template">段階試作・停止条件</a><a href="downloads/fit-coupons.zip?rev=4.0-public-template">共通の嵌合試験片</a><a href="drawings/interface.svg?rev=4.0-public-template">接続断面と寸法</a><a href="downloads/part-drawings.pdf?rev=4.0-public-template">全印刷部品の寸法図</a><a href="downloads/fit-log.csv?guidance=trial-2026-09-19&rev=4.0-public-template">条件・観察記録シート</a><a href="technical.html?rev=4.0-public-template">寸法の根拠と未確認事項</a><a href="rebuild.html?rev=4.0-public-template">編集・再生成の手順</a><a href="downloads/validation.json?rev=4.0-public-template">デジタル検証記録</a></div>
+      <details class="all-downloads"><summary>他の案を直接ダウンロード</summary><p><a href="downloads/A/print-kit.zip?rev=4.0-public-template">A 印刷セット</a> · <a href="downloads/A/A.FCStd?rev=4.0-public-template">A FreeCAD</a> · <a href="downloads/A/drawings.pdf?rev=4.0-public-template">A 図面</a></p><p><a href="downloads/B/print-kit.zip?rev=4.0-public-template">B 印刷セット</a> · <a href="downloads/B/B.FCStd?rev=4.0-public-template">B FreeCAD</a> · <a href="downloads/B/drawings.pdf?rev=4.0-public-template">B 図面</a></p><p><a href="downloads/C/print-kit.zip?rev=4.0-public-template">C 印刷セット</a> · <a href="downloads/C/C.FCStd?rev=4.0-public-template">C FreeCAD</a> · <a href="downloads/C/drawings.pdf?rev=4.0-public-template">C 図面</a></p></details>
+      <div class="make-note"><strong>自分の文字へ / 公開範囲を先に選ぶ</strong><p><a href="customize.html?rev=4.0-public-template">Fork → Issue → AI → PRの具体的な手順 →</a><br>公開forkには公開してよい値だけ。非公開の名前やhandleはgitignoreされたローカル入力へ分けます。未選択の個別バリエーションは公開配布していません。<a href="privacy.html?rev=4.0-public-template">清掃範囲と残存限界</a></p></div>
+    </section>
+    <noscript><style>#loading,#scene{display:none}</style><p class="noscript-note">3D操作にはJavaScriptが必要です。完成画像、作り方、上記の各案のダウンロードはJavaScriptなしでも利用できます。</p></noscript>
+  </main>
+  <footer class="site-footer"><div class="brand">BRICK PORTRAIT<br><small id="published-revision">4.0-public-template</small></div><p>非公式の自作モデルです。LEGO・GitHub・Bambu Labの公式商品ではありません。<br>実物との互換性・製造安全性を保証しません。元の写真は公開していません。</p><div><a href="notices.html?rev=4.0-public-template">権利・依存ライブラリ</a><a href="https://github.com/ktanino10/copilot-brick-display">Source ↗</a></div></footer>
+  <script type="module" src="app.js?rev=4.0-public-template"></script>
+</body>
 </html>

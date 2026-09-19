@@ -42,7 +42,7 @@ def sheet(title, subtitle, content):
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297.5mm" viewBox="0 0 {WIDTH} {HEIGHT}">'
         '<rect width="1200" height="850" fill="white"/>'
-        + text(42, 42, "BRICK PORTRAIT / REV3 / 5-COURSE BASE / DIGITAL PROTOTYPE", 12, GRAY)
+        + text(42, 42, "BRICK PORTRAIT / PUBLIC TEMPLATE / 5-COURSE BASE / DIGITAL PROTOTYPE", 12, GRAY)
         + text(42, 79, title, 27, weight="bold")
         + text(42, 107, subtitle, 13, GRAY)
         + line(42, 127, 1158, 127, "#c5d3df")

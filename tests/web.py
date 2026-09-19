@@ -6,7 +6,6 @@ from pathlib import Path
 
 from PIL import Image
 from playwright.sync_api import sync_playwright, expect
-from tribute_browser import verify_tribute
 from exploded_browser import verify_exploded
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,7 +55,8 @@ with sync_playwright() as playwright:
     expect(page.locator("#viewport")).to_have_attribute("data-model", "B")
     expect(page.locator("#viewport")).to_have_attribute("data-instances", str(catalog["models"][1]["part_count"]))
     expect(page.locator("#published-revision")).to_have_text(catalog["revision"])
-    assert "@YOUR-USERNAME" not in page.locator("body").inner_text()
+    expect(page.locator("#message-line-1")).to_have_text(catalog["message"]["lines"][0])
+    expect(page.locator("#message-line-2")).to_have_text(catalog["message"]["lines"][1])
     page.locator('[data-view="front"]').click()
     page.wait_for_timeout(600)
     page.locator("#viewport").screenshot(path=str(OUT / "B-front.png"))
@@ -130,6 +130,14 @@ with sync_playwright() as playwright:
     for width in (1440, 375):
         page.set_viewport_size({"width": width, "height": 950})
         check_no_overflow(page)
+    for document in ("customize.html", "privacy.html"):
+        page.goto(BASE + document, wait_until="networkidle")
+        expect(page.get_by_role("heading", level=1)).to_have_count(1)
+        check_no_overflow(page)
+    page.goto(BASE + "customize.html", wait_until="networkidle")
+    expect(page.locator("body")).to_contain_text("scripts/personalize_plate.py")
+    expect(page.locator("body")).to_contain_text("Assignees")
+    expect(page.locator("body")).to_contain_text("private repo")
     context.close()
     print("MOBILE_BEGIN", flush=True)
     mobile = browser.new_context(viewport={"width": 375, "height": 844}, device_scale_factor=1, reduced_motion="reduce")
@@ -149,7 +157,6 @@ with sync_playwright() as playwright:
         expect(mobile_page.locator("#viewport")).to_have_attribute("data-model", model["id"], timeout=180000)
         explosion_records.append(verify_exploded(mobile_page, model, OUT, mobile=True))
     mobile.close()
-    verify_tribute(browser, ROOT, BASE, OUT)
     assert not errors, errors
     assert not failures, failures
     report = {
@@ -157,6 +164,8 @@ with sync_playwright() as playwright:
         "repository_prefix": "/copilot-brick-display/",
         "models": ["A", "B", "C"], "native_webgl_geometry_visible": colors,
         "revision": catalog["revision"], "vertical_explosion": explosion_records,
+        "public_template_policy": catalog["publication"],
+        "public_private_customization_guides_opened": True,
         "checks": ["model changes", "four camera views", "part selection + CAD sheet", "bounds",
                    "explosion", "stage seek + play/pause", "all three MP4 decoded in browser",
                    "Japanese guide stage deep link", "desktop/mobile overflow", "reduced motion", "zero page errors/404s"],

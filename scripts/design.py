@@ -12,7 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def load_parameters():
-    return json.loads((ROOT / "design/parameters.json").read_text())
+    from personalization import validate_public
+    return validate_public(json.loads((ROOT / "design/parameters.json").read_text()))
 
 
 def digest(path):
@@ -242,6 +243,10 @@ def build_catalog(p):
         }
     return {
         "schema_version": 1, "revision": p["revision"], "units": "mm",
+        "publication": {
+            key: value for key, value in json.loads((ROOT / "design/publication-policy.json").read_text()).items()
+            if key in ("mode", "public_text_approved")
+        },
         "parameters_sha256": digest(ROOT / "design/parameters.json"),
         "interface": p["interface"], "message": p["message"], "logo": p["logo"], "colors": p["colors"],
         "parts": parts, "models": models,
@@ -256,7 +261,7 @@ def interface_contract(p):
                      for v in p["variants"]],
         "note": "Design candidates, not a LEGO specification or compatibility certification.",
         "insertion": "Independent downward dovetail slides into the five-course base front; 2 text keepers and 1 logo keeper prevent upward escape.",
-        "legacy": "BRICK-8-MSG-SLOT-1 remains pinned at WITHDRAWN-PRIVACY-REVISION for the frozen tribute; no change to its outputs.",
+        "legacy": "Unselected individual variant is preserved privately and is not part of the public template.",
     }
 
 

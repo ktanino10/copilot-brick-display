@@ -17,6 +17,7 @@ def links(value):
         "build.ja.md": "guide.html", "design.md": "technical.html",
         "rebuild.md": "rebuild.html", "licensing.md": "notices.html",
         "trial.ja.md": "trial.html",
+        "customize.ja.md": "customize.html", "privacy.md": "privacy.html",
     }
     def replace(match):
         url = match.group(1)
@@ -35,6 +36,8 @@ def main():
         ("rebuild.md", "rebuild.html", "編集・再生成"),
         ("licensing.md", "notices.html", "権利・依存ライブラリ"),
         ("trial.ja.md", "trial.html", "7個の段階試作・閉塞を先に確認"),
+        ("customize.ja.md", "customize.html", "Fork・Issue・AIで表示文字を変更"),
+        ("privacy.md", "privacy.html", "公開テンプレートとプライバシーの境界"),
     ]:
         body = links(markdown.markdown((ROOT / "docs" / source).read_text(),
                                       extensions=["tables", "fenced_code", "toc"]))
@@ -53,14 +56,14 @@ def main():
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title} — Brick Portrait</title><link rel="stylesheet" href="style.css"><link rel="icon" href="icon.svg"></head>
 <body><header class="site-header"><a class="brand" href="./">BRICK<br>PORTRAIT</a>
-<nav><a href="./#workbench">3Dとダウンロード</a><a href="guide.html">作り方</a><a href="technical.html">設計</a></nav></header>
+<nav><a href="./#workbench">3Dとダウンロード</a><a href="guide.html">作り方</a><a href="customize.html">文字を変える</a></nav></header>
 <main class="document"><div class="doc-nav"><a href="./">← 模型のページへ</a><a href="guide.html">作り方</a><a href="rebuild.html">再生成</a></div>
 {guide}{body}</main><footer class="site-footer"><a class="brand" href="./">BRICK PORTRAIT</a>
 <p>非公式・成人向け卓上オブジェ。実物の嵌合、保持力、耐久性、転倒は未検証です。</p>
 <a href="notices.html">権利・依存ライブラリ</a></footer>
 {"<script type='module' src='guide.js'></script>" if guide else ""}</body></html>'''
         (ROOT / "site" / target).write_text(page)
-    for name in ["parameters.json", "interface.json", "sources.json", "revision3-approval.json", "revision3-invariants.json"]:
+    for name in ["parameters.json", "interface.json", "sources.json", "publication-policy.json", "public-template-invariants.json", "personalization.private.example.json"]:
         shutil.copyfile(ROOT / "design" / name, ROOT / "site/downloads" / name)
     shutil.copyfile(ROOT / "resources/fonts/barlow-condensed/OFL.txt", ROOT / "site/vendor/Barlow-OFL.txt")
     from stamp_release import main as stamp

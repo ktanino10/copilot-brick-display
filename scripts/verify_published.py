@@ -48,16 +48,10 @@ def main():
                   f"media/{key}-assembly.mp4", f"media/{key}-base-front.png",
                   f"downloads/parts/NP3-TEXT-{key}.stl", f"downloads/parts/NP3-LOGO-{key}.stl"]
     files.update(f"downloads/{part['stl']}" for part in c["parts"].values())
-    tribute_path = ROOT / "site/tribute/manifest.json"
-    if tribute_path.exists():
-        tribute = json.loads(tribute_path.read_text())
-        assert tribute["adhesive_required"] is False and tribute["all_parts_removable"] is True
-        assert tribute["independent_retention_review"] == "accepted_digital_only"
-        files.add("tribute/manifest.json")
-        files.update(f"tribute/{item['url']}" for item in tribute["assets"])
-        exact += ["tribute/manifest.json", "tribute/native/character-tribute.FCStd",
-                  "tribute/media/assembly.mp4", "tribute/media/disassembly.mp4",
-                  "tribute/docs/bom.csv", "tribute/downloads/print-pack.zip"]
+    assert not (ROOT / "site/tribute/manifest.json").exists(), "The private individual variant must not be distributed."
+    files.update(("customize.html", "privacy.html", "trial.html", "downloads/trial-subset.zip"))
+    exact += ["customize.html", "privacy.html", "trial.html", "downloads/trial-subset.zip",
+              "downloads/trial-subset/manifest.json", "downloads/fit-log.csv"]
     def check(relative):
         headers = fetch(base + quote(relative), head=True).decode("latin1")
         assert "200" in headers or "206" in headers, relative

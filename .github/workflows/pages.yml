@@ -40,15 +40,12 @@ jobs:
         run: |
           python -m pip install -r requirements.txt
           python -m playwright install --with-deps chromium --only-shell
-      - name: Check the additional publication source contract
+      - name: Check public and private personalization boundaries
         if: steps.mode.outputs.maintenance != 'true'
-        run: |
-          python projects/character-tribute/scripts/test_site.py --source-only
-          python projects/character-tribute/scripts/check_release.py
+        run: python -m unittest discover -s tests -p test_personalization.py -v
       - name: Verify staged trial selection without changing geometry
         if: steps.mode.outputs.maintenance != 'true'
         run: |
-          git fetch --quiet --no-tags --depth=1 origin "$(python -c "import json; print(json.load(open('design/trial-subset.json'))['geometry_baseline_commit'])")"
           python -m unittest discover -s tests -p test_trial_subset.py -v
           python scripts/verify_trial_subset.py
       - name: Verify real browser behavior before deployment
@@ -61,7 +58,7 @@ jobs:
       - name: Bind current browser evidence to the public release
         if: steps.mode.outputs.maintenance != 'true'
         run: |
-          python scripts/finalize_evidence.py
+          python scripts/finalize_evidence.py --require-browser
           python scripts/verify_revision_invariants.py
           node tests/static.mjs
       - name: Preserve browser evidence
@@ -71,7 +68,6 @@ jobs:
           name: browser-validation
           path: |
             validation/web.json
-            validation/tribute-web-ci.json
             site/downloads/validation.json
             build/screenshots/
           if-no-files-found: warn

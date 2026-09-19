@@ -26,6 +26,10 @@ def main():
     bpy.context.view_layer.update()
     objects = {obj["instance_id"]: obj for obj in bpy.data.objects if "instance_id" in obj}
     assert set(objects) == {item["id"] for item in model["placements"]}
+    used_meshes = {obj.data for obj in objects.values()}
+    assert set(bpy.data.meshes) == used_meshes, "Unexpected orphan or hidden mesh data in the public native scene."
+    allowed_hashes = {catalog["parts"][item["part"]]["sha256"] for item in model["placements"]}
+    assert all(mesh.get("source_stl_sha256") in allowed_hashes for mesh in used_meshes)
     for item in model["placements"]:
         obj = objects[item["id"]]
         assert obj["part_id"] == item["part"] and obj["color_name"] == item["color"]
@@ -58,6 +62,7 @@ def main():
         "parameters_sha256": catalog["parameters_sha256"],
         "native_sha256": hashlib.sha256(Path(bpy.data.filepath).read_bytes()).hexdigest(),
         "geometry": "same delivered STL; local bounds, units, IDs, colors and final transforms checked",
+        "no_orphan_or_hidden_mesh_data": True,
         "animation": "all numbered stages checked after fresh native reopen",
         "physics": "not simulated; physical fit and stability untested",
     }, indent=2) + "\n")

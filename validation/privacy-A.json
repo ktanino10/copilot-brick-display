@@ -1,0 +1,10 @@
+{
+  "model": "A",
+  "native_private_path_scan": "PASS",
+  "png_metadata_removed": [
+    "A-base-front.png",
+    "A-hero.png",
+    "A-compare.png"
+  ],
+  "geometry_and_pixels": "unchanged; native must be reopened after metadata normalization"
+}

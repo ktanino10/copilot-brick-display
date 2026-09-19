@@ -1,0 +1,26 @@
+{
+  "status": "PASS_ACTUAL_RENDER_ENCODE_DECODE",
+  "model": "A",
+  "source": "downloads/A/A.blend",
+  "renderer": "Blender Workbench",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 720,
+        "height": 800,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "20/1",
+        "nb_read_frames": "286"
+      }
+    ],
+    "format": {
+      "duration": "14.300000"
+    }
+  },
+  "faststart": true,
+  "full_decode": true,
+  "sha256": "cccdbc311ed6b81e05375721643cd01a32d3ae293892b440b1d2a9b626761076"
+}

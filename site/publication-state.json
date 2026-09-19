@@ -1,7 +1,10 @@
 {
-  "status": "privacy-maintenance",
-  "model_downloads": false,
-  "reason": "Recipient-specific distribution withdrawn while generic native outputs and public history are cleaned.",
-  "history_cleanup": "in_progress",
-  "external_copies_or_caches": "not_guaranteed_erased"
+  "status": "public-template",
+  "model_downloads": true,
+  "revision": "4.0-public-template",
+  "public_default": "explicit placeholders; no real recipient profile",
+  "private_input_route": "ignored local JSON and ignored generated files",
+  "history_cleanup": "managed reachable branches and identified artifacts cleaned",
+  "external_copies_or_caches": "server-retained old bytes remain; not guaranteed erased",
+  "physical_fit_and_strength": "not tested"
 }

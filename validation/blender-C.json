@@ -1,0 +1,15 @@
+{
+  "model": "C",
+  "status": "PASS_NATIVE_REOPEN",
+  "blender_version": "5.1.1",
+  "instances": 228,
+  "assembly_stages": 33,
+  "frames": 366,
+  "fps": 20,
+  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "native_sha256": "324d342af68fb4d0ef670def30e46c7feb63e4a174efe3229d00a377e44e2bb4",
+  "geometry": "same delivered STL; local bounds, units, IDs, colors and final transforms checked",
+  "no_orphan_or_hidden_mesh_data": true,
+  "animation": "all numbered stages checked after fresh native reopen",
+  "physics": "not simulated; physical fit and stability untested"
+}

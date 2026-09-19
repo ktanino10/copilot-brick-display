@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fork・Issue・AIで表示文字を変更 — Brick Portrait</title><link rel="stylesheet" href="style.css?rev=4.0-public-template"><link rel="icon" href="icon.svg?rev=4.0-public-template"></head>
+<body><header class="site-header"><a class="brand" href="./?rev=4.0-public-template">BRICK<br>PORTRAIT</a>
+<nav><a href="./?rev=4.0-public-template#workbench">3Dとダウンロード</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="customize.html?rev=4.0-public-template">文字を変える</a></nav></header>
+<main class="document"><div class="doc-nav"><a href="./?rev=4.0-public-template">← 模型のページへ</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="rebuild.html?rev=4.0-public-template">再生成</a></div>
+<h1 id="fork-issue-ai-pr">自分用の文字へ変更する — Fork → Issue → AI → PR</h1>
+<p>公開デフォルトの <code>github.com/YOUR-USERNAME</code> は仮表示です。実在する相手のプロフィールとしてリンクしていません。
+通常A/B/Cの5段台座、右ロゴ、8 mmピッチ、無接着の交換構造を保ち、文字銘板だけを変更することから始めます。</p>
+<p><strong>公開してよい文字かどうかを先に決めてください。</strong>
+公開Issue・コメント・PR・commit・CAD・画像・動画・Actions artifact・Pagesへ入れた名前やhandleは公開され得ます。
+GitHub Actionsのsecretに入れても、生成した文字形状や画像、ログ、PRまで隠れるわけではありません。</p>
+<h2 id="1">1. 公開ルートと非公開ルート</h2>
+<table>
+<thead>
+<tr>
+<th>目的</th>
+<th>選ぶ方法</th>
+<th>実値を置く場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本人の同意等があり、表示を公開してよい</td>
+<td>自分のpublic forkでIssue／PRを使う</td>
+<td>公開になると理解した上で、forkの設定とIssueへ</td>
+</tr>
+<tr>
+<td>氏名・handleを公開したくない</td>
+<td>ローカルのgit管理外入力、または権利・条件を守った独立private repo</td>
+<td><code>.private/personalization.json</code>など。公開Issueにはplaceholderだけ</td>
+</tr>
+</tbody>
+</table>
+<p><strong>公開repoのforkは公開で、forkだけをprivateへ変更することはできません。</strong>
+private repoであっても、そのPagesが公開になる場合があります。repoとサイトの公開範囲は別々に確認してください。
+モデル・フォント・ロゴの権利条件を確認し、未設定の包括ライセンスを勝手に補いません。</p>
+<h2 id="2-fork">2. 自分のforkを準備する</h2>
+<p>GitHubで <strong>Fork → Owner／名前 → 必要ならdefault branch only → Create fork</strong> を選びます。
+自分のforkをcloneし、IssueとPRの対象も自分のforkにします。個別カスタムをupstreamへ勝手にPRしません。
+IssuesタブやActionsが使えない場合は、自分のrepo設定・権限・組織policyを確認します。</p>
+<p>Copilot cloud agentを使うには、対象repoへのwrite accessと、そのrepoでの有効化が必要です。
+対象の有料Copilotプラン、Business／Enterpriseの管理者policy、repoのopt-outを確認してください。
+実行にはActions minutesとAI creditsが使われます。ここで新しいAppや外部サービスを自動インストールする必要はありません。</p>
+<h2 id="3-issue">3. コピペできるIssue本文</h2>
+<p>Issueフォーム「表示文字のカスタマイズ」も利用できます。以下はすべて仮の値です。
+公開が許されない実名・個人handleは、この本文へ入れないでください。</p>
+<pre><code class="language-text">目的:
+自分のfork内で、通常モデルの交換銘板を変更する。
+
+対象モデル: B（A / B / Cから選ぶ）
+表示行1: YOUR DISPLAY NAME
+表示行2: github.com/YOUR-USERNAME
+任意のhandle: 必要なら行1または行2に明示する。自動で3行目を追加しない。
+公開区分: placeholderのみ / 公開してよい値 / 実値は非公開入力
+
+公開してよい値の場合:
+- 本文・commit・PR・CAD・描画・Actions artifact・Pagesにも表示されると理解している。
+- 自分のforkのdesign/parameters.jsonのmessage.linesだけを入力正本として変更する。
+- design/publication-policy.jsonをpublic_personalizationにし、
+  public_text_approved:trueとするのは、公開が許された場合だけ。
+
+非公開入力の場合:
+- 公開Issueはplaceholderのままにする。
+- 実値はローカルの.private/personalization.jsonで扱い、
+  private出力を公開branch/PR/artifact/Pagesへ入れない。
+
+変更しないもの:
+5段黒台座、右ロゴ、8 mmピッチ、取付け寸法、無接着保持、
+顔の形・色、上下分解の完成配置。
+
+必須:
+- 入力はコードではなく文字列データとして検査する。
+- 不明glyph、長すぎる行、最小stroke不足、領域超過は明示停止する。
+  無音切捨てや、横方向を押し潰す縮小で無理に収めない。
+- 通常は銘板だけを再生成。取付け寸法を変える必要があれば理由とpreviewを示して相談。
+- FreeCAD/Blender/ffmpegをpreflightし、実行したものだけ実行済みと記載。
+- 公開カスタムでは、その変更が見えるnative/STEP/STL/図面/BOM/ZIP/
+  Blender画像・動画/Web表示を同じ入力・配置へ一致させる。
+- 実CAD由来の正面／拡大preview、保存後の再読込、mesh・文字・保持経路・リンクを確認。
+- 既存の未変更部品をhash確認して再利用し、不要な全形状再設計をしない。
+- 実物の嵌合・保持・強度・転倒は未試験のまま。試験片を先に刷る手順を保つ。
+- 自分のforkのmain宛にPRを作る。reviewとmerge前に勝手にPagesを更新しない。
+</code></pre>
+<h2 id="4-copilot">4. Copilotへ割り当てる</h2>
+<p>Issueの <strong>Assignees → Copilot</strong> を選び、必要なら <strong>Optional prompt</strong> を追加します。
+対象repoとbase branchは、write accessがある自分のforkのmainを選びます。
+タイトル・本文・割当時点までのコメント・追加指示が入力として扱われます。</p>
+<p><strong>割当後にIssueへ追記しても、自動で追加作業が始まるとは限りません。</strong>
+作成されたPRへ <code>@copilot</code> を付けて追加指示を伝えます。
+個人値の公開範囲が変わる場合は、その前に止めて確認してください。</p>
+<h2 id="5-ai">5. 他のAIへ同じ依頼を渡す</h2>
+<p>GitHub統合済みのClaude／Codex等は、account／organizationのpolicyで有効になっていて
+UIに表示される場合に、Issue割当・Agents UI・PR mentionを使用できます。提供状態はpublic previewを含みます。
+partner-built Agent Appsは、owner側へのApp導入・agent機能有効化・該当policy・初回OAuth等が前提です。</p>
+<p><strong>任意のbot名をAssigneesへ入力すれば動く、とは限りません。</strong>
+未統合のAIやローカルIDE assistantには、上のIssue本文とこのrepoの再生成手順を渡し、
+自分のforkでbranchを作成してPRへ戻すよう依頼します。private値を扱う場合は、利用先のデータ管理policyも確認します。</p>
+<h2 id="6">6. ローカルで非公開の銘板を実際に生成する</h2>
+<p>公開repoのままでも、入力と出力をgitignore対象の<code>.private/</code>へ置けます。</p>
+<pre><code class="language-bash">mkdir -p .private
+cp design/personalization.private.example.json .private/personalization.json
+</code></pre>
+<p>このローカルJSONだけを編集します。厳密なschemaは<code>schema_version</code>、<code>visibility</code>、<code>model</code>、<code>lines</code>です。
+<code>visibility</code>は<code>private</code>、modelはA/B/C、linesは正確な2行です。
+現在の文字セットは英字・数字と指定された基本記号です。日本語など未対応glyphは勝手な代替や脱落にせず停止します。
+必要ならフォントと字形の対応を別途検討してください。</p>
+<p>FreeCADに対応するPython executableとmodule directoryを自分の環境で指定して実行します。
+実際のパスを公開Issueへ貼る必要はありません。</p>
+<pre><code class="language-bash">FREECAD_USER_HOME=&quot;$PWD/.private/freecad-profile&quot; QT_QPA_PLATFORM=offscreen \
+  PYTHONPATH=&quot;$FREECAD_LIB:scripts&quot; \
+  &quot;$FREECAD_PYTHON&quot; scripts/personalize_plate.py \
+  --config .private/personalization.json --output .private/generated
+</code></pre>
+<p>実際の<code>plate.FCStd</code>、<code>plate.step</code>、mm単位<code>plate.stl</code>、CAD由来<code>plate.svg</code>、
+private manifestが<code>.private/generated/B/</code>などに保存されます。
+既存出力があれば上書きせず停止します。別の値を試すときは新しいprivate出力先を指定します。
+公開済みの形状や入力正本は変更しません。</p>
+<p>既存のgenericな完成FCStdがローカルにあれば、<code>--assembly</code>で銘板だけを差し替えたprivateな完成FCStd／STEPも保存できます。
+<strong>privateコマンドは公開Web画像・動画を個人化しません。</strong> それらは引き続きgenericな表示です。
+private生成物をGitHubへ添付した時点で秘密が保たれるとは限らないため、public PRへ持ち込まないでください。</p>
+<h2 id="7">7. 公開カスタムの再生成と、環境が足りない場合</h2>
+<p>公開が承認されたforkでは、<code>design/parameters.json</code>の<code>message.lines</code>と
+<code>design/publication-policy.json</code>の明示承認を入力にします。
+<a href="rebuild.html?rev=4.0-public-template">再生成手順</a>のFreeCAD → STL/図面 → Blender → 文書/パッケージ → 検査を実行します。
+最初に変更した銘板の実幅・高さ・strokeと正面previewを確認します。</p>
+<p>cloud agentはGitHub Actions基盤の一時環境で動きますが、FreeCAD／Blenderが存在する保証はありません。
+ツールがなければ <strong>BLOCKED: native regeneration not executed</strong> と明記し、
+必要なコード・入力・実行手順をPRに残します。承認済みのローカル環境で上の実生成を行い、
+保存／再読込／動画decodeの証拠とともにPRへ戻してください。
+拡張子だけのnative、未実行generator、別レンダラーの絵を実成果物として納品しません。</p>
+<h2 id="8-prpages">8. PRを確認し、自分のPagesへ</h2>
+<p>文字の正確さ、公開してよいデータだけか、0%完成形と分解経路、実寸、
+CAD・STL・画像・動画・ZIPの一致、試験片と未検証事項を人が確認します。
+PRは自分のforkのmainへmergeします。個人カスタムをupstreamへ勝手に送らないでください。</p>
+<p>既存workflowを利用する場合は、forkの <strong>Settings → Pages → Build and deployment → Source = GitHub Actions</strong> を選びます。
+一律に<code>/docs</code>や別branch sourceへ変更する手順ではありません。
+Actionsの有効化・deployment permissions・環境policy・fork自身のrepo URLとPages subpathを確認し、
+<code>scripts/verify_published.py --base https://YOUR-OWNER.github.io/YOUR-REPOSITORY/</code>で実公開ファイルを照合します。
+履歴・画像・CADに実値を残したくない場合は、ここでpublic Pagesへ進みません。</p>
+<h2 id="2026-09-19">公式文書（2026-09-19確認）</h2>
+<ul>
+<li><a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-on-github#assigning-an-issue-to-copilot">IssueをCopilotへ割り当てる</a></li>
+<li><a href="https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent">cloud agentの利用条件・実行環境</a></li>
+<li><a href="https://docs.github.com/en/copilot/concepts/agents/about-third-party-coding-agents">GitHub統合の第三者coding agents</a></li>
+<li><a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-agent-apps">Agent Appsの前提条件</a></li>
+<li><a href="https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo">Forkの作成</a>／<a href="https://docs.github.com/en/pull-requests/reference/forks">Forkの公開範囲</a></li>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Pagesの公開元設定</a></li>
+</ul></main><footer class="site-footer"><a class="brand" href="./?rev=4.0-public-template">BRICK PORTRAIT</a>
+<p>非公式・成人向け卓上オブジェ。実物の嵌合、保持力、耐久性、転倒は未検証です。</p>
+<a href="notices.html?rev=4.0-public-template">権利・依存ライブラリ</a></footer>
+</body></html>

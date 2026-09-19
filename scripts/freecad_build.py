@@ -67,16 +67,32 @@ def brick_functions(source):
             for node in tree.body if isinstance(node, ast.FunctionDef) and node.name in names}
 
 
+def front_geometry_functions(source):
+    tree = ast.parse(source)
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Raise) and isinstance(node.exc, ast.Call):
+            node.exc.args = [ast.Constant(value="diagnostic message")]
+    return [ast.dump(node, include_attributes=False) for node in tree.body if isinstance(node, ast.FunctionDef)]
+
+
+def front_geometry_parameters(parameters):
+    message = {key: value for key, value in parameters["message"].items()
+               if key not in {"lines", "frozen_legacy_interface", "legacy_variant_distribution"}}
+    return {"interface": parameters["interface"], "message": message, "logo": parameters.get("logo")}
+
+
 def generate_part(spec, p, cache, output, reuse):
     cache_path = cache / f"{spec['id']}.brep"
     previous = reuse.get("parts", {}).get(spec["id"])
-    if previous and reuse["brick_unchanged"] and spec["kind"] in ("brick", "male_coupon", "female_coupon"):
-        geometry_keys = ("id", "kind", "studs", "height", "top_studs", "socket",
-                         "male_correction", "female_clearance")
+    reusable = (reuse["brick_unchanged"] and spec["kind"] in ("brick", "male_coupon", "female_coupon")) or (
+        reuse.get("front_unchanged") and spec["kind"] in
+        ("front_base", "front_logo", "front_keeper", "front_fit_socket", "front_fit_plaque"))
+    if previous and reusable:
+        geometry_keys = tuple(key for key in spec if key not in MEASURED_FIELDS)
         if all(spec.get(key) == previous.get(key) for key in geometry_keys):
             old_brep = reuse["cache"] / f"{spec['id']}.brep"
             filename = output / spec["stl"]
-            source_mesh = filename if filename.is_file() else ROOT / "site/downloads" / spec["stl"]
+            source_mesh = filename if filename.is_file() else reuse.get("meshes", ROOT / "site/downloads") / spec["stl"]
             if old_brep.exists() and source_mesh.exists() and hashlib.sha256(source_mesh.read_bytes()).hexdigest() == previous["sha256"]:
                 if old_brep != cache_path:
                     shutil.copyfile(old_brep, cache_path)
@@ -295,10 +311,14 @@ def main():
         previous_build = json.loads((ROOT / "build/freecad-build.json").read_text())
         reuse.update({
             "parts": previous_catalog["parts"],
+            "meshes": old / "site/downloads" if (old / "site/downloads").exists() else ROOT / "site/downloads",
             "cache": args.baseline_cache or ROOT / "build/brep" / previous_build["cache_fingerprint"],
             "brick_unchanged": old_parameters["interface"] == p["interface"] and
                 brick_functions((old / "scripts/freecad_geometry.py").read_text()) ==
                 brick_functions((ROOT / "scripts/freecad_geometry.py").read_text()),
+            "front_unchanged": front_geometry_parameters(old_parameters) == front_geometry_parameters(p) and
+                front_geometry_functions((old / "scripts/front_nameplate.py").read_text()) ==
+                front_geometry_functions((ROOT / "scripts/front_nameplate.py").read_text()),
         })
     if args.reuse_preview:
         previous_catalog = json.loads((args.reuse_preview / "catalog.json").read_text())

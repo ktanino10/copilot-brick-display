@@ -71,18 +71,13 @@ class TrialSubsetTests(unittest.TestCase):
                 self.assertEqual(sum(int(row["quantity"]) for row in rows), 7)
 
     def test_geometry_and_other_product_are_unchanged(self):
-        baseline = self.config["geometry_baseline_commit"]
-        frozen = ["design/parameters.json", "design/interface.json", "design/catalog.json",
-                  "scripts/design.py", "scripts/freecad_geometry.py", "scripts/front_nameplate.py",
-                  "resources/github-mark-relief.json"]
-        media_suffixes = {".FCStd", ".step", ".stl", ".blend", ".mp4", ".png", ".svg", ".3mf", ".pdf"}
-        for folder in ("site/downloads", "site/media", "site/drawings"):
-            frozen.extend(str(path.relative_to(ROOT)) for path in (ROOT / folder).rglob("*")
-                          if path.is_file() and path.suffix in media_suffixes)
-        changed = subprocess.check_output(
-            ["git", "diff", "--name-only", baseline, "--", *frozen,
-             "projects/character-tribute", "site/tribute"], cwd=ROOT, text=True)
-        self.assertEqual(changed, "", "This is a manufacturing-guidance update, not a geometry/media change.")
+        for part, digest in self.config["unchanged_master_sha256"].items():
+            self.assertEqual(self.catalog["parts"][part]["sha256"], digest)
+            data = (ROOT / "site/downloads" / self.catalog["parts"][part]["stl"]).read_bytes()
+            self.assertEqual(hashlib.sha256(data).hexdigest(), digest)
+        self.assertEqual(set(self.config["unchanged_master_sha256"]),
+                         {part["id"] for part in self.manifest["parts"]})
+        self.assertFalse((ROOT / "site/tribute/manifest.json").exists(), "The unselected individual variant must remain undistributed.")
 
     def test_documents_and_empty_log_keep_failure_boundary(self):
         trial = (ROOT / "docs/trial.ja.md").read_text()

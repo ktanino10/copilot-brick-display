@@ -1,0 +1,260 @@
+{
+  "revision": "4.0-public-template",
+  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "status": "PASS_NATIVE_FRONT_CAPTURE_AND_EXTRACTION",
+  "models": [
+    {
+      "model": "A",
+      "native_instances": 91,
+      "base_courses": 5,
+      "base_body_height_mm": 48,
+      "modules_inside_base_front": true,
+      "modules": [
+        {
+          "module": "text",
+          "part": "NP3-TEXT-A",
+          "bounds_mm": [
+            [
+              4.0,
+              0.1,
+              4.0
+            ],
+            [
+              106.0,
+              3.3,
+              44.0
+            ]
+          ],
+          "blocked_translation_volume_mm3": {
+            "front": 66.81024024698274,
+            "rear": 804.7840010379058,
+            "left": 27.647999997874724,
+            "right": 27.64799999787496,
+            "down": 48.00000000108224,
+            "up_with_keepers": 2.7571358024591093
+          },
+          "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+        },
+        {
+          "module": "logo",
+          "part": "NP3-LOGO-A",
+          "bounds_mm": [
+            [
+              108.0,
+              0.1,
+              4.0
+            ],
+            [
+              140.0,
+              3.7,
+              44.0
+            ]
+          ],
+          "blocked_translation_volume_mm3": {
+            "front": 66.81023999756425,
+            "rear": 251.0800002973185,
+            "left": 28.110230654705383,
+            "right": 28.110230654715807,
+            "down": 14.3999999998635,
+            "up_with_keepers": 1.6853333334359963
+          },
+          "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+        }
+      ],
+      "lines": [
+        {
+          "text": "Same icon, New adventures",
+          "width_mm": 93.58125000000001,
+          "height_mm": 10.0,
+          "assembled_z_range_mm": [
+            26.0,
+            36.0
+          ]
+        },
+        {
+          "text": "github.com/YOUR-USERNAME",
+          "width_mm": 78.26326599999999,
+          "height_mm": 7.0,
+          "assembled_z_range_mm": [
+            12.0,
+            19.0
+          ]
+        }
+      ],
+      "minimum_actual_parallel_straight_stroke_mm": 1.1751946987293334,
+      "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
+      "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
+      "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
+      "physical_fit_clutch_strength": "NOT_TESTED"
+    },
+    {
+      "model": "B",
+      "native_instances": 150,
+      "base_courses": 5,
+      "base_body_height_mm": 48,
+      "modules_inside_base_front": true,
+      "modules": [
+        {
+          "module": "text",
+          "part": "NP3-TEXT-B",
+          "bounds_mm": [
+            [
+              4.0,
+              0.1,
+              4.0
+            ],
+            [
+              146.0,
+              3.3,
+              44.0
+            ]
+          ],
+          "blocked_translation_volume_mm3": {
+            "front": 66.81024057441238,
+            "rear": 1121.0560011146292,
+            "left": 27.648000000026613,
+            "right": 27.648000000027817,
+            "down": 67.19999999891573,
+            "up_with_keepers": 2.7571358024613133
+          },
+          "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+        },
+        {
+          "module": "logo",
+          "part": "NP3-LOGO-B",
+          "bounds_mm": [
+            [
+              148.0,
+              0.1,
+              4.0
+            ],
+            [
+              188.0,
+              3.7,
+              44.0
+            ]
+          ],
+          "blocked_translation_volume_mm3": {
+            "front": 66.8102398303269,
+            "rear": 314.6000003655926,
+            "left": 28.17249716078471,
+            "right": 28.172497160794926,
+            "down": 18.239999999793465,
+            "up_with_keepers": 1.6853333333977898
+          },
+          "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+        }
+      ],
+      "lines": [
+        {
+          "text": "Same icon, New adventures",
+          "width_mm": 133.6875,
+          "height_mm": 12.0,
+          "assembled_z_range_mm": [
+            26.0,
+            38.0
+          ]
+        },
+        {
+          "text": "github.com/YOUR-USERNAME",
+          "width_mm": 89.443734,
+          "height_mm": 8.0,
+          "assembled_z_range_mm": [
+            12.0,
+            20.0
+          ]
+        }
+      ],
+      "minimum_actual_parallel_straight_stroke_mm": 1.3430796556906675,
+      "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
+      "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
+      "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
+      "physical_fit_clutch_strength": "NOT_TESTED"
+    },
+    {
+      "model": "C",
+      "native_instances": 228,
+      "base_courses": 5,
+      "base_body_height_mm": 48,
+      "modules_inside_base_front": true,
+      "modules": [
+        {
+          "module": "text",
+          "part": "NP3-TEXT-C",
+          "bounds_mm": [
+            [
+              4.0,
+              0.1,
+              4.0
+            ],
+            [
+              186.0,
+              3.3,
+              44.0
+            ]
+          ],
+          "blocked_translation_volume_mm3": {
+            "front": 66.81024102204717,
+            "rear": 1437.8359751738415,
+            "left": 27.647999998677278,
+            "right": 27.647999998678007,
+            "down": 86.30399999915727,
+            "up_with_keepers": 2.7571358024642634
+          },
+          "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+        },
+        {
+          "module": "logo",
+          "part": "NP3-LOGO-C",
+          "bounds_mm": [
+            [
+              188.0,
+              0.1,
+              4.0
+            ],
+            [
+              236.0,
+              3.7,
+              44.0
+            ]
+          ],
+          "blocked_translation_volume_mm3": {
+            "front": 66.81023992809611,
+            "rear": 377.57333915562344,
+            "left": 27.64800002056391,
+            "right": 27.64800002056463,
+            "down": 22.360530457905202,
+            "up_with_keepers": 2.5358442975769004
+          },
+          "keeper_removed_vertical_extraction_max_overlap_mm3": 0
+        }
+      ],
+      "lines": [
+        {
+          "text": "Same icon, New adventures",
+          "width_mm": 173.79375,
+          "height_mm": 14.5,
+          "assembled_z_range_mm": [
+            26.0,
+            40.5
+          ]
+        },
+        {
+          "text": "github.com/YOUR-USERNAME",
+          "width_mm": 100.62419999999999,
+          "height_mm": 9.0,
+          "assembled_z_range_mm": [
+            12.0,
+            21.0
+          ]
+        }
+      ],
+      "minimum_actual_parallel_straight_stroke_mm": 1.5109646126520033,
+      "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
+      "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
+      "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
+      "physical_fit_clutch_strength": "NOT_TESTED"
+    }
+  ],
+  "frozen_tribute": "separate BRICK-8-MSG-SLOT-1; no source or public asset changed"
+}

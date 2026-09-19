@@ -10,7 +10,6 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 (root / "validation/web.json").unlink(missing_ok=True)
-(root / "validation/tribute-web-ci.json").unlink(missing_ok=True)
 port = 8877
 base = f"http://127.0.0.1:{port}/copilot-brick-display/"
 server = subprocess.Popen([sys.executable, "scripts/serve.py", "--port", str(port)], cwd=root,

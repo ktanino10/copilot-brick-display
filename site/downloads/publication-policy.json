@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "mode": "generic",
+  "public_text_approved": false,
+  "generic_lines": ["Same icon, New adventures", "github.com/YOUR-USERNAME"],
+  "private_input": ".private/personalization.json",
+  "private_output": ".private/generated",
+  "warning": "Public forks, Issues, PRs, renderings, downloads and Pages can expose their text. A secret does not make generated output private."
+}

@@ -1,6 +1,6 @@
 # Revision 3 / Five-course base and independent front modules
 
-Current normal-model revision: **`3.0-five-course-front`**.
+Current normal-model revision: **`4.0-public-template`**.
 
 **Manufacturing guidance update `trial-2026-09-19`: no geometry change.**
 A [separate public 4 mm trial report](https://github.com/ktanino10/octoprints-brick-kit-downloads/blob/be956ae14d2aac1601a4a2a87f2e49675a36979e/feedback/2026-09-19/README.md)
@@ -13,11 +13,11 @@ parts still need layer-preview and real handling checks.
 reuses existing fit coupons, and stops bulk printing on obstruction, poor grip or failed seating.
 The existing 0.4/0.2 mm recommendations remain untested baselines.
 
-The user approved the actual B front/oblique/close-up preview. This approval covers appearance
-and design intent only, not physical fit, strength, production qualification or independent review.
-The approval and unchanged-geometry constraints are recorded in
-[revision3-approval.json](../design/revision3-approval.json) and
-[revision3-invariants.json](../design/revision3-invariants.json).
+The five-course layout is retained, but public message geometry now uses explicit placeholders.
+No historical personal preview is republished as evidence for the generic text.
+The non-text shape and placement contract is recorded in
+[public-template-invariants.json](../design/public-template-invariants.json).
+It is not a physical fit, strength or production qualification.
 
 ## One geometric source
 
@@ -36,10 +36,9 @@ The source/cache recipes and B preview parts are reused instead of recalculating
 The five-course base is visible throughout the assembly sequence, so affected scenes, drawings
 and movie frames are genuinely regenerated from the revised placements.
 
-The unselected tribute product is frozen, including its old message and public artifacts.
-It remains pinned to `BRICK-8-MSG-SLOT-1` at commit `WITHDRAWN-PRIVACY-REVISION`. Normal A/B/C use the separate
-**`BASE-FRONT-NP3`** interface. The locked historical helper remains available; it is not silently
-reinterpreted as the new module.
+The unselected individual variant is preserved privately and is not distributed or regenerated.
+Normal A/B/C use **`BASE-FRONT-NP3`**. Private historical interfaces and personal inputs are not
+fetched from withdrawn revisions to rebuild this public template.
 
 ## Nominal references versus design choices
 
@@ -111,9 +110,9 @@ relief, entirely inside the five-course base at **Z=4..44 mm**.
 Barlow Condensed Black (SIL OFL, notice bundled) is shaped to the selected height without
 thinning it horizontally. Actual parallel straight strokes in the raised cap faces are measured;
 the design rejects gauges below 0.84 mm. Mathematical curve terminals are not represented as
-uniform-width manufactured walls. In the approved B, the main line is 133.6875 mm wide and
-the URL approximately 67.9915 mm; the smallest measured paired straight stroke is approximately
-1.4747 mm.
+uniform-width manufactured walls. In the generic B, the main line is 133.6875 mm wide and the placeholder URL is approximately
+89.444 mm wide. Exact cap-face stroke measurements are recorded for the generated native model;
+they are not measurements of a physical print.
 
 The mark is vectorized from the user-provided black-circle/white silhouette image. Only the
 derived normalized outline coordinates and solid relief are published, not the input raster

@@ -15,9 +15,10 @@ class DesignTests(unittest.TestCase):
         cls.p = load_parameters()
         cls.c = build_catalog(cls.p)
 
-    def test_exact_approved_message(self):
-        self.assertEqual(self.p["message"]["lines"], [
-            "Same icon, New adventures", "github.com/YOUR-USERNAME"])
+    def test_exact_configured_public_message(self):
+        from personalization import validate_public
+        validate_public(self.p)
+        self.assertEqual(self.c["message"]["lines"], self.p["message"]["lines"])
         self.assertNotIn("MSG-CARD", self.c["parts"])
         self.assertNotIn("MSG-DOCK", self.c["parts"])
 

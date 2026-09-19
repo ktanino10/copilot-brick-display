@@ -58,7 +58,7 @@ def measure(model, catalog, downloads):
                         "blocked_translation_volume_mm3": retained,
                         "keeper_removed_vertical_extraction_max_overlap_mm3": maximum_removal})
     text_obj = next(by_id[item["id"]] for item in modules if item["module"] == "text")
-    assert json.loads(text_obj.MessageLines) == ["Same icon, New adventures", "github.com/YOUR-USERNAME"]
+    assert json.loads(text_obj.MessageLines) == catalog["message"]["lines"]
     local = text_obj.Shape.copy()
     local.Placement = App.Placement()
     cap_z = catalog["message"]["thickness"] + catalog["message"]["relief"]
@@ -98,7 +98,7 @@ def main():
     write_json(ROOT / "validation/front-nameplate.json", {
         "revision": catalog["revision"], "parameters_sha256": catalog["parameters_sha256"],
         "status": "PASS_NATIVE_FRONT_CAPTURE_AND_EXTRACTION",
-        "models": records, "frozen_tribute": "separate BRICK-8-MSG-SLOT-1; no source or public asset changed",
+        "models": records,         "unselected_variant": "not part of the public distribution",
     })
 
 

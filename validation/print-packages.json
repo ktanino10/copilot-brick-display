@@ -1,0 +1,27 @@
+{
+  "status": "PASS_GEOMETRY_AND_QUANTITIES_ONLY",
+  "sliced": false,
+  "models": [
+    {
+      "model": "A",
+      "plates": 9,
+      "instances": 91,
+      "bom_exact": true,
+      "all_6mm_brim_envelopes_inside_16_to_240_mm": true
+    },
+    {
+      "model": "B",
+      "plates": 14,
+      "instances": 150,
+      "bom_exact": true,
+      "all_6mm_brim_envelopes_inside_16_to_240_mm": true
+    },
+    {
+      "model": "C",
+      "plates": 27,
+      "instances": 228,
+      "bom_exact": true,
+      "all_6mm_brim_envelopes_inside_16_to_240_mm": true
+    }
+  ]
+}

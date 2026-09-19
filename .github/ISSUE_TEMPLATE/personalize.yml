@@ -1,0 +1,73 @@
+name: 表示文字のカスタマイズ
+description: 自分のforkで、公開してよい文字またはplaceholderだけを使って依頼します。
+title: "Customize the removable message plate"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **このIssueの公開範囲を先に確認してください。**
+        公開repoのfork・Issue・PR・CAD・画像・動画・Actions artifact・Pagesは公開され得ます。
+        非公開の名前やhandleは書かず、YOUR-USERNAME等のplaceholderにしてください。
+        実値はローカルの`.private/personalization.json`、または別の独立private repoで扱います。
+        公開forkを後からprivateに変更できる、secretに入れれば出力も隠れる、とは考えないでください。
+  - type: dropdown
+    id: model
+    attributes:
+      label: モデル
+      options: ["B", "A", "C"]
+    validations:
+      required: true
+  - type: dropdown
+    id: visibility
+    attributes:
+      label: 公開区分
+      options:
+        - placeholderだけを使用する
+        - 公開してよい表示文字を使用する
+        - 実値は非公開入力で扱う（このIssueはplaceholderだけ）
+    validations:
+      required: true
+  - type: input
+    id: line1
+    attributes:
+      label: 表示文字1
+      value: YOUR DISPLAY NAME
+      description: 正確な1行。非公開にしたい実値を書かないでください。
+    validations:
+      required: true
+  - type: input
+    id: line2
+    attributes:
+      label: 表示文字2
+      value: github.com/YOUR-USERNAME
+    validations:
+      required: true
+  - type: input
+    id: handle
+    attributes:
+      label: 任意のhandleの表記
+      placeholder: 必要なら表示文字1または2へ含める。自動で3行目を増やさない。
+      description: 非公開のhandleは記入しません。上の2行と矛盾する場合は生成前に相談します。
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: 変更範囲と公開前確認
+      options:
+        - label: 自分のforkを対象にし、個別カスタムをupstreamへ勝手にPRしません。
+          required: true
+        - label: 5段台座・右ロゴ・8 mmピッチ・無接着保持を維持し、長すぎる文字や未対応glyphは停止して確認します。
+          required: true
+        - label: 実native・印刷STL・図面・BOM・画像・動画・ZIPの整合を確認し、ツール未実行を実行済みとは記載しません。
+          required: true
+        - label: private値を公開ログや生成物へ出しません。公開モードを使う場合は実値が公開されることを理解しています。
+          required: true
+        - label: PRのpreviewを確認してからmergeし、実物の嵌合・強度・保持・転倒は別の未検証事項として扱います。
+          required: true
+  - type: markdown
+    attributes:
+      value: |
+        Copilotが利用可能ならAssigneesから選び、対象repo/base branchを自分のforkにします。
+        割当後の追加指示は作成されたPRで`@copilot`へ伝えます。
+        他AIは統合・policy・App権限が整ってUIに表示される場合だけ割当を使います。
+        未統合AIには同じ本文をローカルassistantへ渡し、branch/PRへ戻します。
+        詳細と実コマンド: `docs/customize.ja.md`

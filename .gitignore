@@ -9,3 +9,7 @@ build/
 *.blend1
 *.log
 site/.cache/
+.private/
+personalization.local.json
+.env
+.env.*

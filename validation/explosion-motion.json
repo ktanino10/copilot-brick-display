@@ -1,0 +1,32 @@
+{
+  "status": "PASS_REAL_NATIVE_MOTION_CHECK",
+  "revision": "4.0-public-template",
+  "models": [
+    {
+      "model": "A",
+      "checked_front_pairs": 1105,
+      "maximum_intersection_mm3": 0,
+      "regression_old_20mm_keeper_escape_overlap_mm3": 88.39550532704949,
+      "release_phases": "keeper up6, forward32 (16mm depth +14mm module travel +2mm gap); modules up45, forward14; then centered course spread",
+      "body_proof": "Each unchanged course moves rigidly; order preserved and axial gaps only increase."
+    },
+    {
+      "model": "B",
+      "checked_front_pairs": 1365,
+      "maximum_intersection_mm3": 0,
+      "regression_old_20mm_keeper_escape_overlap_mm3": 99.8098879454255,
+      "release_phases": "keeper up6, forward32 (16mm depth +14mm module travel +2mm gap); modules up45, forward14; then centered course spread",
+      "body_proof": "Each unchanged course moves rigidly; order preserved and axial gaps only increase."
+    },
+    {
+      "model": "C",
+      "checked_front_pairs": 1690,
+      "maximum_intersection_mm3": 0,
+      "regression_old_20mm_keeper_escape_overlap_mm3": 103.5241206814279,
+      "release_phases": "keeper up6, forward32 (16mm depth +14mm module travel +2mm gap); modules up45, forward14; then centered course spread",
+      "body_proof": "Each unchanged course moves rigidly; order preserved and axial gaps only increase."
+    }
+  ],
+  "motion_source": "site/assembly-motion.js executed by tests/motion.mjs",
+  "physical_simulation": false
+}
