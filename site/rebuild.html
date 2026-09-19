@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>編集・再生成 — Brick Portrait</title><link rel="stylesheet" href="style.css"><link rel="icon" href="icon.svg"></head>
+<body><header class="site-header"><a class="brand" href="./">BRICK<br>PORTRAIT</a>
+<nav><a href="./#workbench">3Dとダウンロード</a><a href="guide.html">作り方</a><a href="technical.html">設計</a></nav></header>
+<main class="document"><div class="doc-nav"><a href="./">← 模型のページへ</a><a href="guide.html">作り方</a><a href="rebuild.html">再生成</a></div>
+<h1 id="rebuild">Rebuild / 再生成</h1>
+<h2 id="inputs-and-tools">Inputs and tools</h2>
+<ul>
+<li><code>design/parameters.json</code>: edit this for fit candidates, message or layout dimensions.</li>
+<li><code>scripts/design.py</code>: discrete A/B/C layout and ID/step rules.</li>
+<li><code>scripts/freecad_geometry.py</code>: the only source for mechanical solids.</li>
+<li>Real FreeCAD 1.1.3, Blender 5.1.1 and ffmpeg 8.1 were used for the delivered native files.</li>
+<li>Python 3.11 with <code>requirements.txt</code>, and Node.js with <code>package-lock.json</code>.</li>
+<li>The bundled B612 Mono Bold font is under SIL OFL; its notice is next to the font.</li>
+</ul>
+<p>FreeCAD must expose its <code>FreeCAD</code>, <code>Part</code>, <code>MeshPart</code>, <code>TechDraw</code> and <code>FreeCADGui</code> modules
+to the <strong>matching embedded Python</strong>, not an unrelated system Python.
+Set <code>FREECAD_PYTHON</code> to that executable and <code>FREECAD_LIB</code> to its module directory on your installation.
+No personal machine path is hardcoded in this repository.
+On a desktop, use a separate headless process rather than taking over an already open document.</p>
+<pre><code class="language-bash">python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+npm ci
+npm run vendor
+
+python3 scripts/design.py
+.venv/bin/python -m unittest discover -s tests -v
+
+FREECAD_USER_HOME=&quot;$PWD/build/freecad-profile&quot; QT_QPA_PLATFORM=offscreen OMP_NUM_THREADS=2 \
+  PYTHONPATH=&quot;$FREECAD_LIB:scripts&quot; \
+  &quot;$FREECAD_PYTHON&quot; scripts/freecad_build.py
+
+PYTHONPATH=&quot;$FREECAD_LIB:scripts&quot; \
+  &quot;$FREECAD_PYTHON&quot; scripts/verify_cad.py
+.venv/bin/python scripts/verify_meshes.py
+PYTHONPATH=&quot;$FREECAD_LIB:scripts&quot; \
+  &quot;$FREECAD_PYTHON&quot; scripts/freecad_details.py
+.venv/bin/python scripts/build_drawings.py
+.venv/bin/python scripts/package_prints.py
+</code></pre>
+<p><code>freecad_build.py</code> saves genuine FCStd files with view colors, STEP, per-part binary STL,
+and hidden-line CAD projections. It uses Qt's offscreen backend, not the user's interactive CAD
+document. On the tested macOS package Qt warns that offscreen OpenGL widgets are unsupported;
+solid generation, TechDraw projections, native appearance serialization and subsequent reopen
+are verified separately. No screenshot is substituted for a native model.</p>
+<p>Intermediate BREP caches and render frames live under ignored <code>build/</code>. A cache key includes
+the mechanical source and parameter hashes. A changed fit value requires regenerating the full
+affected set, not mixing an old STL with new documentation.</p>
+<h2 id="blender-and-media">Blender and media</h2>
+<pre><code class="language-bash">blender --background --factory-startup --threads 2 \
+  --python scripts/blender_scene.py -- --model A
+blender --background --factory-startup --threads 2 site/downloads/A/A.blend \
+  --python scripts/blender_verify.py -- --model A
+python3 scripts/render_movies.py --model A
+.venv/bin/python scripts/sanitize_artifacts.py --model A
+blender --background --factory-startup --threads 2 site/downloads/A/A.blend \
+  --python scripts/blender_verify.py -- --model A
+</code></pre>
+<p>Repeat sequentially for B and C; do not launch multiple high-CPU renders.
+The scene contains the actual delivered STL meshes, original instance IDs and catalogue transforms.
+Geometry is converted from millimetres to metres explicitly; the Blender scene uses metric units.
+Blender Workbench is used as an actual studio renderer, not a physics simulation.
+Objects arrive in the numbered assembly order, followed by a completed-object turntable.
+The still and frames are rendered by Blender. ffmpeg encodes H.264/yuv420p MP4 with faststart.
+The native <code>.blend</code> and every movie are reopened/decoded independently.</p>
+<p>The card is shown with a manual color change at 2.0 mm (cyan then black). This is an optional
+print finish, not an extra shape or an AMS requirement.</p>
+<h2 id="static-site">Static site</h2>
+<pre><code class="language-bash">python3 -m http.server 8000 --directory site
+npm test
+BASE_URL=http://127.0.0.1:8000/ npm run test:web
+</code></pre>
+<p>For a repository-subpath check, serve the parent directory with a <code>copilot-brick-display</code>
+mapping or use the local prefix server in <code>scripts/serve.py</code>.
+The Playwright test can use <code>BROWSER_PATH</code> to select an installed browser, otherwise install its
+matching Chromium using <code>npx playwright install chromium</code>.
+The runtime Three.js files and MIT notice are vendored: the public viewer does not need a CDN.</p>
+<p>GitHub Pages deploys only <code>site/</code> using the checked-in workflow. Source, native files, drawings,
+media, messages and notices are public; original photos, personal paths and session history are not.
+Do not commit <code>build/</code>, virtual environments, dependencies, generated frame sequences, or credentials.</p>
+<h2 id="after-a-design-edit">After a design edit</h2>
+<ol>
+<li>Regenerate layout and geometry; run unit, BREP, mesh and assembly checks.</li>
+<li>Rebuild projections, PDFs, BOM/print bundles, 3MF layouts, Blender scenes and videos.</li>
+<li>Confirm catalogue/mesh hashes, color/quantity/placement correspondence and reachable assembly.</li>
+<li>Request independent review of the fixed changed snapshot. A previous review is not blanket approval.</li>
+<li>Audit the public package and deploy. <strong>Print calibration coupons again before printing the object.</strong></li>
+</ol></main><footer class="site-footer"><a class="brand" href="./">BRICK PORTRAIT</a>
+<p>非公式・成人向け卓上オブジェ。実物の嵌合、保持力、耐久性、転倒は未検証です。</p>
+<a href="notices.html">権利・依存ライブラリ</a></footer>
+</body></html>

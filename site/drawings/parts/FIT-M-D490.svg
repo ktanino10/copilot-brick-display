@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297.5mm" viewBox="0 0 1200 850"><rect width="1200" height="850" fill="white"/><text x="42" y="42" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#587085" font-weight="normal" text-anchor="start">BRICK PORTRAIT / DIGITAL PROTOTYPE</text><text x="42" y="79" font-family="Helvetica,Arial,sans-serif" font-size="27" fill="#142c41" font-weight="bold" text-anchor="start">FIT-M-D490</text><text x="42" y="107" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#587085" font-weight="normal" text-anchor="start">Three orthographic views + underside from the actual solid. Exterior heights include studs / text.</text><line x1="42" y1="127" x2="1158" y2="127" stroke="#c5d3df" stroke-width="1"/><text x="95" y="171" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#142c41" font-weight="bold" text-anchor="start">FRONT</text><g transform="translate(109.2,440) scale(8) rotate(90)"><g   fill="none"
+   stroke="#142c41"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-width="0.18"
+   transform="scale(1, -1)"
+  >
+<path d=" M -3.2 1.55 L -4.75 1.55 " />
+<path d=" M -3.2 9.55 L -4.75 9.55 " />
+<path d=" M -3.2 17.55 L -4.75 17.55 " />
+<path d=" M -3.2 25.55 L -4.75 25.55 " />
+<path d=" M -5 1.8 L -4.75 1.55 " />
+<path d=" M -5 9.8 L -4.75 9.55 " />
+<path d=" M -5 17.8 L -4.75 17.55 " />
+<path d=" M -5 25.8 L -4.75 25.55 " />
+</g>
+<g   fill="none"
+   stroke="#142c41"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-width="0.18"
+   transform="scale(1, -1)"
+  >
+<path d=" M 0 0.1 L -3.2 0.1 " />
+<path d=" M 0 0.1 L 0 31.9 " />
+<path d=" M 0 31.9 L -3.2 31.9 " />
+<path d=" M -3.2 0.1 L -3.2 31.9 " />
+<path d="M-4.75, 1.55 L-4.75, 1.61143  L-4.75, 1.79263  L-4.75, 2.08451  L-4.75, 2.47245  L-4.75, 2.93698  L-4.75, 3.45482  L-4.75, 4  L-4.75, 4.54518  L-4.75, 5.06302  L-4.75, 5.52755  L-4.75, 5.91549  L-4.75, 6.20737  L-4.75, 6.38857  L-4.75, 6.45 " /><path d=" M -3.2 6.45 L -4.75 6.45 " />
+<path d="M-4.75, 9.55 L-4.75, 9.61143  L-4.75, 9.79263  L-4.75, 10.0845  L-4.75, 10.4724  L-4.75, 10.937  L-4.75, 11.4548  L-4.75, 12  L-4.75, 12.5452  L-4.75, 13.063  L-4.75, 13.5276  L-4.75, 13.9155  L-4.75, 14.2074  L-4.75, 14.3886  L-4.75, 14.45 " /><path d=" M -3.2 14.45 L -4.75 14.45 " />
+<path d="M-4.75, 17.55 L-4.75, 17.6114  L-4.75, 17.7926  L-4.75, 18.0845  L-4.75, 18.4724  L-4.75, 18.937  L-4.75, 19.4548  L-4.75, 20  L-4.75, 20.5452  L-4.75, 21.063  L-4.75, 21.5276  L-4.75, 21.9155  L-4.75, 22.2074  L-4.75, 22.3886  L-4.75, 22.45 " /><path d=" M -3.2 22.45 L -4.75 22.45 " />
+<path d="M-4.75, 25.55 L-4.75, 25.6114  L-4.75, 25.7926  L-4.75, 26.0845  L-4.75, 26.4724  L-4.75, 26.937  L-4.75, 27.4548  L-4.75, 28  L-4.75, 28.5452  L-4.75, 29.063  L-4.75, 29.5276  L-4.75, 29.9155  L-4.75, 30.2074  L-4.75, 30.3886  L-4.75, 30.45 " /><path d=" M -3.2 30.45 L -4.75 30.45 " />
+<path d="M-5, 1.8 L-5, 1.85516  L-5, 2.01787  L-5, 2.27997  L-5, 2.62832  L-5, 3.04546  L-5, 3.51045  L-5, 4  L-5, 4.48955  L-5, 4.95454  L-5, 5.37168  L-5, 5.72003  L-5, 5.98213  L-5, 6.14484  L-5, 6.2 " /><path d=" M -4.75 6.45 L -5 6.2 " />
+<path d="M-5, 9.8 L-5, 9.85516  L-5, 10.0179  L-5, 10.28  L-5, 10.6283  L-5, 11.0455  L-5, 11.5105  L-5, 12  L-5, 12.4895  L-5, 12.9545  L-5, 13.3717  L-5, 13.72  L-5, 13.9821  L-5, 14.1448  L-5, 14.2 " /><path d=" M -4.75 14.45 L -5 14.2 " />
+<path d="M-5, 17.8 L-5, 17.8552  L-5, 18.0179  L-5, 18.28  L-5, 18.6283  L-5, 19.0455  L-5, 19.5105  L-5, 20  L-5, 20.4895  L-5, 20.9545  L-5, 21.3717  L-5, 21.72  L-5, 21.9821  L-5, 22.1448  L-5, 22.2 " /><path d=" M -4.75 22.45 L -5 22.2 " />
+<path d="M-5, 25.8 L-5, 25.8552  L-5, 26.0179  L-5, 26.28  L-5, 26.6283  L-5, 27.0455  L-5, 27.5105  L-5, 28  L-5, 28.4895  L-5, 28.9545  L-5, 29.3717  L-5, 29.72  L-5, 29.9821  L-5, 30.1448  L-5, 30.2 " /><path d=" M -4.75 30.45 L -5 30.2 " />
+</g>
+</g><line x1="110" y1="475" x2="364.4" y2="475" stroke="#2952a6" stroke-width="1"/><line x1="110" y1="470" x2="110" y2="480" stroke="#2952a6" stroke-width="1"/><line x1="364.4" y1="470" x2="364.4" y2="480" stroke="#2952a6" stroke-width="1"/><text x="237.2" y="466" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#2952a6" font-weight="normal" text-anchor="middle">31.80</text><line x1="78" y1="400.0" x2="78" y2="440" stroke="#2952a6" stroke-width="1"/><line x1="73" y1="400.0" x2="83" y2="400.0" stroke="#2952a6" stroke-width="1"/><line x1="73" y1="440" x2="83" y2="440" stroke="#2952a6" stroke-width="1"/><text x="70" y="420.0" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#2952a6" font-weight="normal" text-anchor="end">5.00</text><text x="570" y="171" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#142c41" font-weight="bold" text-anchor="start">SIDE</text><g transform="translate(584.2,440) scale(8) rotate(-90)"><g   fill="none"
+   stroke="#142c41"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-width="0.18"
+   transform="scale(1, -1)"
+  >
+<path d=" M 3.2 -6.45 L 4.75 -6.45 " />
+<path d=" M 3.2 -1.55 L 4.75 -1.55 " />
+<path d=" M 3.2 -14.45 L 4.75 -14.45 " />
+<path d=" M 3.2 -9.55 L 4.75 -9.55 " />
+<path d=" M 5 -6.2 L 4.75 -6.45 " />
+<path d=" M 5 -1.8 L 4.75 -1.55 " />
+<path d=" M 5 -14.2 L 4.75 -14.45 " />
+<path d=" M 5 -9.8 L 4.75 -9.55 " />
+</g>
+<g   fill="none"
+   stroke="#142c41"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-width="0.18"
+   transform="scale(1, -1)"
+  >
+<path d=" M 0 -0.1 L 3.2 -0.1 " />
+<path d=" M 3.2 -0.1 L 3.2 -15.9 " />
+<path d=" M 0 -15.9 L 3.2 -15.9 " />
+<path d=" M 0 -0.1 L 0 -15.9 " />
+<path d="M4.75, -4 Q4.75, -4.13716 4.75, -4.27431  Q4.75, -4.5471 4.75, -4.80918  Q4.75, -4.9361 4.75, -5.06302  Q4.75, -5.18325 4.75, -5.30348  Q4.75, -5.41551 4.75, -5.52755  Q4.75, -5.62998 4.75, -5.73241  Q4.75, -5.82395 4.75, -5.91549  Q4.75, -5.99498 4.75, -6.07447  Q4.75, -6.14092 4.75, -6.20737  Q4.75, -6.25994 4.75, -6.31251  Q4.75, -6.35054 4.75, -6.38857  Q4.75, -6.41158 4.75, -6.43459  Q4.75, -6.4423 4.75, -6.45 " /><path d="M4.75, -1.55 Q4.75, -1.5577 4.75, -1.56541  Q4.75, -1.58842 4.75, -1.61143  Q4.75, -1.64946 4.75, -1.68749  Q4.75, -1.74006 4.75, -1.79263  Q4.75, -1.85908 4.75, -1.92553  Q4.75, -2.00502 4.75, -2.08451  Q4.75, -2.17605 4.75, -2.26759  Q4.75, -2.37002 4.75, -2.47245  Q4.75, -2.58449 4.75, -2.69652  Q4.75, -2.81675 4.75, -2.93698  Q4.75, -3.0639 4.75, -3.19082  Q4.75, -3.4529 4.75, -3.72569  Q4.75, -3.86284 4.75, -4 " /><path d="M4.75, -12 Q4.75, -12.1372 4.75, -12.2743  Q4.75, -12.5471 4.75, -12.8092  Q4.75, -12.9361 4.75, -13.063  Q4.75, -13.1832 4.75, -13.3035  Q4.75, -13.4155 4.75, -13.5276  Q4.75, -13.63 4.75, -13.7324  Q4.75, -13.8239 4.75, -13.9155  Q4.75, -13.995 4.75, -14.0745  Q4.75, -14.1409 4.75, -14.2074  Q4.75, -14.2599 4.75, -14.3125  Q4.75, -14.3505 4.75, -14.3886  Q4.75, -14.4116 4.75, -14.4346  Q4.75, -14.4423 4.75, -14.45 " /><path d="M4.75, -9.55 Q4.75, -9.5577 4.75, -9.56541  Q4.75, -9.58842 4.75, -9.61143  Q4.75, -9.64946 4.75, -9.68749  Q4.75, -9.74006 4.75, -9.79263  Q4.75, -9.85908 4.75, -9.92553  Q4.75, -10.005 4.75, -10.0845  Q4.75, -10.1761 4.75, -10.2676  Q4.75, -10.37 4.75, -10.4724  Q4.75, -10.5845 4.75, -10.6965  Q4.75, -10.8168 4.75, -10.937  Q4.75, -11.0639 4.75, -11.1908  Q4.75, -11.4529 4.75, -11.7257  Q4.75, -11.8628 4.75, -12 " /><path d="M5, -4 Q5, -4.12316 5, -4.24632  Q5, -4.49127 5, -4.72661  Q5, -4.84058 5, -4.95454  Q5, -5.06251 5, -5.17047  Q5, -5.27107 5, -5.37168  Q5, -5.46366 5, -5.55563  Q5, -5.63783 5, -5.72003  Q5, -5.79141 5, -5.86279  Q5, -5.92246 5, -5.98213  Q5, -6.02934 5, -6.07654  Q5, -6.11069 5, -6.14484  Q5, -6.1655 5, -6.18617  Q5, -6.19308 5, -6.2 " /><path d="M5, -1.8 Q5, -1.80692 5, -1.81383  Q5, -1.8345 5, -1.85516  Q5, -1.88931 5, -1.92346  Q5, -1.97066 5, -2.01787  Q5, -2.07754 5, -2.13721  Q5, -2.20859 5, -2.27997  Q5, -2.36217 5, -2.44437  Q5, -2.53634 5, -2.62832  Q5, -2.72893 5, -2.82953  Q5, -2.93749 5, -3.04546  Q5, -3.15942 5, -3.27339  Q5, -3.50873 5, -3.75368  Q5, -3.87684 5, -4 " /><path d="M5, -12 Q5, -12.1232 5, -12.2463  Q5, -12.4913 5, -12.7266  Q5, -12.8406 5, -12.9545  Q5, -13.0625 5, -13.1705  Q5, -13.2711 5, -13.3717  Q5, -13.4637 5, -13.5556  Q5, -13.6378 5, -13.72  Q5, -13.7914 5, -13.8628  Q5, -13.9225 5, -13.9821  Q5, -14.0293 5, -14.0765  Q5, -14.1107 5, -14.1448  Q5, -14.1655 5, -14.1862  Q5, -14.1931 5, -14.2 " /><path d="M5, -9.8 Q5, -9.80692 5, -9.81383  Q5, -9.8345 5, -9.85516  Q5, -9.88931 5, -9.92346  Q5, -9.97066 5, -10.0179  Q5, -10.0775 5, -10.1372  Q5, -10.2086 5, -10.28  Q5, -10.3622 5, -10.4444  Q5, -10.5363 5, -10.6283  Q5, -10.7289 5, -10.8295  Q5, -10.9375 5, -11.0455  Q5, -11.1594 5, -11.2734  Q5, -11.5087 5, -11.7537  Q5, -11.8768 5, -12 " /></g>
+</g><line x1="585" y1="475" x2="711.4" y2="475" stroke="#2952a6" stroke-width="1"/><line x1="585" y1="470" x2="585" y2="480" stroke="#2952a6" stroke-width="1"/><line x1="711.4" y1="470" x2="711.4" y2="480" stroke="#2952a6" stroke-width="1"/><text x="648.2" y="466" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#2952a6" font-weight="normal" text-anchor="middle">15.80</text><text x="95" y="525" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#142c41" font-weight="bold" text-anchor="start">TOP / PRINT ORIENTATION</text><g transform="translate(109.3,772) scale(7) "><g   fill="none"
+   stroke="#142c41"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-width="0.18"
+   transform="scale(1, -1)"
+  >
+<path d=" M 0.1 0.1 L 0.1 15.9 " />
+<path d=" M 0.1 0.1 L 31.9 0.1 " />
+<path d=" M 0.1 15.9 L 31.9 15.9 " />
+<path d=" M 31.9 0.1 L 31.9 15.9 " />
+<circle cx ="4" cy ="4" r ="2.45" /><circle cx ="12" cy ="4" r ="2.45" /><circle cx ="20" cy ="4" r ="2.45" /><circle cx ="28" cy ="4" r ="2.45" /><circle cx ="4" cy ="12" r ="2.45" /><circle cx ="12" cy ="12" r ="2.45" /><circle cx ="20" cy ="12" r ="2.45" /><circle cx ="28" cy ="12" r ="2.45" /><circle cx ="4" cy ="4" r ="2.2" /><circle cx ="12" cy ="4" r ="2.2" /><circle cx ="20" cy ="4" r ="2.2" /><circle cx ="28" cy ="4" r ="2.2" /><circle cx ="4" cy ="12" r ="2.2" /><circle cx ="12" cy ="12" r ="2.2" /><circle cx ="20" cy ="12" r ="2.2" /><circle cx ="28" cy ="12" r ="2.2" /></g>
+</g><text x="585" y="526" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#142c41" font-weight="bold" text-anchor="start">BOTTOM / REAL CAVITIES</text><g transform="translate(599.3,772) scale(7) scale(-1,1)"><g   fill="none"
+   stroke="#142c41"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-width="0.18"
+   transform="scale(1, -1)"
+  >
+<path d=" M -0.1 0.1 L -0.1 15.9 " />
+<path d=" M -0.1 0.1 L -31.9 0.1 " />
+<path d=" M -0.1 15.9 L -31.9 15.9 " />
+<path d=" M -31.9 0.1 L -31.9 15.9 " />
+</g>
+</g><text x="908" y="196" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Kind: male_coupon</text><text x="908" y="219" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">STL: FIT-M-D490.stl</text><text x="908" y="242" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">STL units: mm / scale 100%</text><text x="908" y="265" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Grid: 4 x 2 @ 8.00</text><text x="908" y="288" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Body height: 3.20</text><text x="908" y="311" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Stud: dia 4.90 x 1.80 high</text><text x="908" y="334" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#587085" font-weight="normal" text-anchor="start">Tip lead-in: 0.25 high / radial</text><line x1="42" y1="801" x2="1158" y2="801" stroke="#c5d3df" stroke-width="1"/><text x="42" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#587085" font-weight="normal" text-anchor="start">UNITS mm | Fixed 8 mm pitch | Physical fit / strength / stability NOT tested</text><text x="1158" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#587085" font-weight="normal" text-anchor="end">Do not scale STL. Calibrate male + female coupons first.</text></svg>

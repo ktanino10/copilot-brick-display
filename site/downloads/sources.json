@@ -1,0 +1,47 @@
+{
+  "retrieved": "2026-09-19",
+  "sources": [
+    {
+      "id": "DIM-PATENT",
+      "url": "https://patents.google.com/patent/WO2019106129A1/en",
+      "title": "LEGO AS patent WO2019106129A1",
+      "section": "Detailed description: LEGO-size 4 x 2 knob brick",
+      "level": "manufacturer patent; approximate nominal example, not a tolerance standard",
+      "facts": {"four_by_two_body_nominal_mm": [32, 16, 9.6], "stud_diameter_about_mm": 4.8},
+      "limitation": "The patent's approximately/at-most-1-percent language is not this project's FDM tolerance or clutch requirement."
+    },
+    {
+      "id": "DIM-MUSEUM",
+      "url": "https://www.brightontoymuseum.co.uk/index/Lego_dimensions",
+      "title": "Brighton Toy and Model Museum: Lego dimensions",
+      "level": "community/museum; secondary reference and reported measurements",
+      "facts": {"grid_mm": 8, "plate_height_mm": 3.2, "brick_height_mm": 9.6, "stud_height_reported_mm": 1.6, "stud_diameter_measured_range_mm": [4.87, 4.9]},
+      "limitation": "Nominal, reported measurements, and print compensation are distinct."
+    },
+    {
+      "id": "DIM-ORION",
+      "url": "https://orionrobots.co.uk/wiki/lego_specifications.html",
+      "title": "Orionrobots: Lego specifications",
+      "level": "community; secondary",
+      "facts": {"pitch_mm": 8, "plate_height_mm": 3.2, "brick_height_mm": 9.6, "stud_diameter_reported_mm": 5, "stud_height_reported_mm": 1.7},
+      "limitation": "Disagrees with other stud values. Not treated as an official specification."
+    },
+    {
+      "id": "PRINTER-P1S",
+      "url": "https://store.bblcdn.com/s7/default/9e9c1948dd61491199a52c3f1497b9c7/bambu-lab-P1S-tech-specs.pdf",
+      "discovery_url": "https://jp.store.bambulab.com/products/p1s",
+      "title": "Bambu Lab P1S",
+      "section": "Page 1: Body / Toolhead / Supported Filament / Software",
+      "level": "manufacturer technical specification; no printed revision/date found",
+      "facts": {"build_volume_mm": [256, 256, 256], "included_nozzle_mm": 0.4, "optional_nozzles_mm": [0.2, 0.6, 0.8], "PLA_classification": "Ideal", "slicer": "Bambu Studio"},
+      "limitation": "Nominal volume is not an assertion about a particular plate's exclusion regions, brims, toolhead clearance, or actual settings."
+    }
+  ],
+  "project_choices_not_source_facts": {
+    "stud_height_mm": 1.8,
+    "external_body_gap_mm": 0.2,
+    "female_radial_clearance_mm": 0.04,
+    "tube_inner_diameter_mm": 3.2,
+    "note": "These are editable design candidates. Stud height was deliberately chosen for engagement and is not asserted to be the proprietary commercial specification. Tube bores are not an accessory connection."
+  }
+}

@@ -5,6 +5,7 @@ __pycache__/
 node_modules/
 build/
 *.FCStd1
+*.FCBak
 *.blend1
 *.log
 site/.cache/
