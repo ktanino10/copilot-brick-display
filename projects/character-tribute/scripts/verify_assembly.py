@@ -88,6 +88,20 @@ def main():
     text = check_text(catalog)
     doc = App.openDocument(str(ROOT / "native/character-tribute.FCStd"))
     shapes = {obj.InstanceID: obj.Shape for obj in doc.Objects if hasattr(obj, "InstanceID")}
+    ejector=Part.Shape()
+    ejector.read(str(ROOT/"native/parts/EJECTOR.step"))
+    ejector_origin=next(p["print_origin_mm"] for p in catalog["parts"] if p["id"]=="EJECTOR")
+    ejector.translate(App.Vector(*ejector_origin))
+    def tool_at(item,push):
+        tool=ejector.copy()
+        tool.rotate(App.Vector(),App.Vector(1,0,0),-90)
+        tool.translate(App.Vector(0,-1.2,0))
+        tool.rotate(App.Vector(),App.Vector(0,0,1),item["tool_tip_rotation_deg"])
+        x,y=item["tool_target_xy"]
+        tool.translate(App.Vector(x,y,item["front_z"]+36-push))
+        tool.rotate(App.Vector(),App.Vector(1,0,0),90)
+        tool.translate(App.Vector(0,params["board"]["back_y"],params["board"]["bottom_z"]))
+        return tool
     pairs = 0
     ids = list(shapes)
     for index, name in enumerate(ids):
@@ -145,6 +159,7 @@ def main():
     sequence = [next(i for i in catalog["instances"] if i["id"]=="back-cover")]
     sequence += sorted(colored,key=lambda i:-i["step"])
     release = []
+    overstroke_regression=None
     distances = [.2,1,4,12,24]
     for item in sequence:
         shape = remaining.pop(item["id"])
@@ -160,6 +175,18 @@ def main():
             for name, fixed in remaining.items():
                 if intersection_volume(tip,fixed)>TOLERANCE:
                     raise ValueError(f"Tool target blocked: {item['id']}/{name}")
+            for push in (0,.5,1,2,3.5):
+                full_tool=tool_at(item,push)
+                for name,fixed in remaining.items():
+                    if intersection_volume(full_tool,fixed)>TOLERANCE:
+                        raise ValueError(f"Full ejector initial stroke blocked: {item['id']}/{name}/{push}")
+            if item["id"]=="eye-left-pupil":
+                overstroke=intersection_volume(tool_at(item,9.5),remaining["eye-left-iris"])
+                if overstroke<=TOLERANCE:
+                    raise ValueError("Known unsafe full-push regression was not reproduced")
+                overstroke_regression={"pupil":"eye-left-pupil","push_mm":9.5,
+                                       "iris_intersection_mm3":overstroke,
+                                       "instruction":"Do not push this far. Stop at3.5mm and pull the exposed flange."}
         for distance in distances:
             moved = shape.copy()
             moved.translate(App.Vector(0,distance,0))
@@ -168,7 +195,9 @@ def main():
                     raise ValueError(f"Rear removal blocked: {item['id']}/{name}/{distance}")
         release.append({"instance":item["id"],"direction_world":"+Y rearward","offsets_mm":distances,
                         "front_tool_target_xy":item.get("tool_target_xy"),
-                        "tool_tip_rotation_deg":item.get("tool_tip_rotation_deg")})
+                        "tool_tip_rotation_deg":item.get("tool_tip_rotation_deg"),
+                        "max_initial_tool_push_mm":params["release_tool"]["max_initial_push_mm"],
+                        "then_grip_rear_flange":True})
     plaque_ids = [name for name in shapes if name not in ("stand","message-dock","message-card")]
     plaque = Part.makeCompound([shapes[name] for name in plaque_ids])
     for distance in (.2,1,8,32.2,40,160):
@@ -226,10 +255,13 @@ def main():
         raise ValueError("Uniform-solid center of mass is outside the support polygon")
     print("ASSEMBLY_FIT_FACES_PASS", flush=True)
     report = {
-        "status": "pass", "revision":"T2","adhesive_required":False,"all_parts_removable":True,
+        "status": "pass", "revision":"T2","manufacturing_revision":params["manufacturing_revision"],
+        "adhesive_required":False,"all_parts_removable":True,
         "brep_pair_checks": pairs, "maximum_allowed_intersection_mm3": TOLERANCE,
         "positive_capture": capture, "coarse_screw_retention_and_release":screw_results,
         "reverse_order_removal_and_tool_access":release,
+        "ejector_full_shape_validated_pushes_mm":[0,.5,1,2,3.5],
+        "unsafe_overstroke_regression":overstroke_regression,
         "message_card_upward_removal_offsets_mm":card_path,
         "insertion_path": {"sampled_offsets_mm": distances,"reverse_paths_provide_assembly":True,
                            "finished_plaque_upward_removal_also_checked": True,

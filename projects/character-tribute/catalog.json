@@ -39,6 +39,7 @@
       "hex": "#9AD69E"
     }
   },
+  "manufacturing_revision": "T2-R1",
   "parts": [
     {
       "name_ja": "台座・背板ソケット・共通24スタッド",
@@ -51,6 +52,12 @@
         -48.0,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         176.0,
         96.0,
@@ -86,6 +93,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         63.6,
         7.6,
@@ -121,6 +134,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.6,
         7.6,
@@ -156,6 +175,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.6,
         7.6,
@@ -191,6 +216,12 @@
         -3.8000000999999997,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.600000199999999,
         7.600000199999999,
@@ -226,6 +257,12 @@
         -7.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6,
         15.6,
@@ -261,6 +298,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6,
         7.6,
@@ -296,6 +339,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6,
         7.6,
@@ -331,6 +380,12 @@
         -15.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6,
         31.6,
@@ -366,6 +421,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6,
         7.6,
@@ -401,6 +462,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.6,
         7.6,
@@ -436,6 +503,12 @@
         -15.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.6,
         31.6,
@@ -471,6 +544,12 @@
         -11.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.6,
         23.6,
@@ -506,6 +585,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         23.6,
         7.6,
@@ -541,6 +626,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.6,
         7.6,
@@ -576,6 +667,12 @@
         -7.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6,
         15.6,
@@ -611,6 +708,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6,
         7.6,
@@ -646,6 +749,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.6,
         7.6,
@@ -681,6 +790,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.6,
         7.6,
@@ -716,6 +831,12 @@
         -7.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.6,
         15.6,
@@ -751,6 +872,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.6,
         7.6,
@@ -786,6 +913,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         23.6,
         7.6,
@@ -821,6 +954,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6,
         7.6,
@@ -856,6 +995,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         39.6,
         7.6,
@@ -891,6 +1036,12 @@
         -11.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.6,
         23.6,
@@ -926,6 +1077,12 @@
         -11.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6,
         23.6,
@@ -961,6 +1118,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.6,
         7.6,
@@ -996,6 +1159,12 @@
         -7.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.6,
         15.6,
@@ -1031,6 +1200,12 @@
         -7.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         7.6,
         15.6,
@@ -1066,6 +1241,12 @@
         -7.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         63.6,
         15.6,
@@ -1101,6 +1282,12 @@
         -3.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         47.6,
         7.6,
@@ -1136,6 +1323,12 @@
         -7.8,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.6,
         15.6,
@@ -1159,6 +1352,12 @@
         -11.8000001,
         -1e-07
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6000002,
         23.6000002,
@@ -1182,6 +1381,12 @@
         -8.8000001,
         -2.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         11.2000002,
         17.6000002,
@@ -1205,6 +1410,12 @@
         -5.6,
         -4.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         6.4,
         11.2,
@@ -1228,6 +1439,12 @@
         -7.8000001,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         15.6000002,
         15.6000002,
@@ -1251,6 +1468,12 @@
         -6.0,
         -2.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         12.0,
         12.0,
@@ -1270,15 +1493,21 @@
       "id": "T02",
       "print_origin_mm": [
         -80.0000001,
-        -32.0000001,
-        -8.0000001
+        -160.0000001,
+        -6.400000100000004
       ],
+      "print_rotation_deg_xyz": [
+        180,
+        0,
+        0
+      ],
+      "print_orientation": "front_face_on_bed",
       "bounds_mm": [
         160.0000002,
         192.0000002,
-        14.400000200000001
+        14.400000200000022
       ],
-      "cad_volume_mm3": 110507.60667017286,
+      "cad_volume_mm3": 110507.60667017289,
       "facets": 15632,
       "mesh": "meshes/T02.stl",
       "step": "native/parts/T02.step",
@@ -1295,6 +1524,12 @@
         0.0,
         -11.2
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         152.0,
         160.0,
@@ -1317,6 +1552,12 @@
         -6.928203330275509,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         16.0000002,
         13.85640666055102,
@@ -1340,6 +1581,12 @@
         -12.0000001,
         -1.0000000052402433e-07
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         24.0000002,
         24.0000002,
@@ -1363,6 +1610,12 @@
         -12.0000001,
         -1.0000000030392405e-07
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         24.0000002,
         24.0000002,
@@ -1386,6 +1639,12 @@
         -12.0000001,
         -1.0000000017204994e-07
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         24.0000002,
         24.0000002,
@@ -1407,12 +1666,18 @@
       "print_origin_mm": [
         -24.0,
         -12.0,
-        -8.0000001
+        -6.400000000000002
       ],
+      "print_rotation_deg_xyz": [
+        180,
+        0,
+        0
+      ],
+      "print_orientation": "front_face_on_bed",
       "bounds_mm": [
         48.0,
         24.0,
-        14.4000001
+        14.400000100000003
       ],
       "cad_volume_mm3": 8114.162258030814,
       "facets": 2850,
@@ -1432,6 +1697,12 @@
         -12.0,
         -11.2
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         48.0,
         24.0,
@@ -1451,10 +1722,16 @@
       "source": "parameters.json#retention",
       "id": "EJECTOR",
       "print_origin_mm": [
-        -4.0,
+        -4.000000000000001,
         0.0,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         8.0,
         36.0,
@@ -1478,6 +1755,12 @@
         -56.0,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         16.0,
         112.0,
@@ -1513,6 +1796,12 @@
         0.1,
         -1e-07
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         95.8,
         15.8,
@@ -1550,6 +1839,12 @@
         -1e-07,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         88.00000019999999,
         24.000000200000002,
@@ -1586,6 +1881,12 @@
         0.1,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.8,
         15.8,
@@ -1622,6 +1923,12 @@
         0.1,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.8,
         15.8,
@@ -1658,6 +1965,12 @@
         0.1,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.8,
         15.8,
@@ -1694,6 +2007,12 @@
         0.1,
         -1e-07
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.8,
         15.8,
@@ -1730,6 +2049,12 @@
         0.1,
         -1e-07
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.8,
         15.8,
@@ -1766,6 +2091,12 @@
         0.1,
         -1e-07
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.8,
         15.8,
@@ -1802,6 +2133,12 @@
         0.1,
         -1e-07
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.8,
         15.8,
@@ -1838,6 +2175,12 @@
         0.1,
         -1e-07
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         31.8,
         15.8,
@@ -1860,6 +2203,12 @@
         0.0,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         64.0,
         24.0,
@@ -1882,6 +2231,12 @@
         0.0,
         0.0
       ],
+      "print_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
+      "print_orientation": "flat_base_as_exported",
       "bounds_mm": [
         14.0,
         24.0,
@@ -1906,6 +2261,16 @@
         0.0
       ],
       "rotation_x_deg": 0,
+      "raw_position_mm": [
+        0,
+        0,
+        0
+      ],
+      "raw_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         0,
         0,
@@ -1924,12 +2289,22 @@
       "step": 1,
       "position_mm": [
         -80.0000001,
-        20.80000009999999,
-        9.5999999
+        6.399999900000032,
+        201.6000001
       ],
       "rotation_x_deg": 90,
-      "rotation_deg_xyz": [
+      "raw_position_mm": [
+        0,
+        12.8,
+        41.6
+      ],
+      "raw_rotation_deg_xyz": [
         90,
+        0,
+        0
+      ],
+      "rotation_deg_xyz": [
+        -90,
         0,
         0
       ]
@@ -1961,12 +2336,23 @@
         4.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -47.8,
         12.8,
         41.800000000000004
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -16.0,
+        12.8,
+        45.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2000,12 +2386,23 @@
         4.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         16.2,
         12.8,
         41.800000000000004
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        32.0,
+        12.8,
+        45.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2039,12 +2436,23 @@
         12.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -55.8,
         12.8,
         49.800000000000004
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -52.0,
+        12.8,
+        53.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2078,12 +2486,23 @@
         12.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -47.8000001,
         12.8,
         49.7999999
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -44.0,
+        12.8,
+        53.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2117,12 +2536,23 @@
         16.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -39.8,
         12.799999999999999,
         49.800000000000004
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -32.0,
+        12.8,
+        57.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2156,12 +2586,23 @@
         12.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -23.8000001,
         12.8,
         49.7999999
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -20.0,
+        12.8,
+        53.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2195,12 +2636,23 @@
         12.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -15.8,
         12.8,
         49.800000000000004
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        0.0,
+        12.8,
+        53.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2234,12 +2686,23 @@
         12.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         16.1999999,
         12.8,
         49.7999999
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        20.0,
+        12.8,
+        53.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2273,12 +2736,23 @@
         16.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         24.2,
         12.799999999999999,
         49.800000000000004
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        32.0,
+        12.8,
+        57.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2312,12 +2786,23 @@
         12.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         40.1999999,
         12.8,
         49.7999999
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        44.0,
+        12.8,
+        53.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2351,12 +2836,23 @@
         12.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         48.2,
         12.8,
         49.800000000000004
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        52.0,
+        12.8,
+        53.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2390,12 +2886,23 @@
         20.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -23.8,
         12.8,
         57.800000000000004
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -16.0,
+        12.8,
+        61.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2429,12 +2936,23 @@
         20.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -7.8,
         12.8,
         57.800000000000004
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        0.0,
+        12.8,
+        61.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2468,12 +2986,23 @@
         20.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         8.2,
         12.8,
         57.800000000000004
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        16.0,
+        12.8,
+        61.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2507,12 +3036,23 @@
         40.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -23.8,
         12.799999999999997,
         65.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -16.0,
+        12.8,
+        81.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2546,12 +3086,23 @@
         40.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         8.2,
         12.799999999999997,
         65.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        16.0,
+        12.8,
+        81.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2585,12 +3136,23 @@
         28.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         24.2,
         12.8,
         65.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        32.0,
+        12.8,
+        69.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2624,12 +3186,23 @@
         36.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         24.2,
         12.8,
         73.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        28.0,
+        12.8,
+        77.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2663,12 +3236,23 @@
         48.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         32.2,
         12.799999999999997,
         73.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        36.0,
+        12.8,
+        89.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2702,12 +3286,23 @@
         56.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -7.8,
         12.799999999999997,
         81.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        0.0,
+        12.8,
+        97.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2741,12 +3336,23 @@
         52.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         24.2,
         12.799999999999999,
         81.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        28.0,
+        12.8,
+        93.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2780,12 +3386,23 @@
         60.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -47.8,
         12.8,
         97.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -36.0,
+        12.8,
+        101.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2819,12 +3436,23 @@
         60.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -23.8,
         12.8,
         97.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -20.0,
+        12.8,
+        101.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2858,12 +3486,23 @@
         60.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -15.8,
         12.8,
         97.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -12.0,
+        12.8,
+        101.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2897,12 +3536,23 @@
         60.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         8.2,
         12.8,
         97.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        12.0,
+        12.8,
+        101.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2936,12 +3586,23 @@
         60.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         16.2,
         12.8,
         97.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        20.0,
+        12.8,
+        101.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -2975,12 +3636,23 @@
         72.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -55.8,
         12.799999999999999,
         105.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -48.0,
+        12.8,
+        113.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3014,12 +3686,23 @@
         68.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -31.8,
         12.8,
         105.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -24.0,
+        12.8,
+        109.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3053,12 +3736,23 @@
         68.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -15.8,
         12.8,
         105.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -12.0,
+        12.8,
+        109.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3092,12 +3786,23 @@
         68.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         8.2,
         12.8,
         105.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        12.0,
+        12.8,
+        109.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3131,12 +3836,23 @@
         68.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         16.2,
         12.8,
         105.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        20.0,
+        12.8,
+        109.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3170,12 +3886,23 @@
         76.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -15.8,
         12.8,
         113.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        0.0,
+        12.8,
+        117.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3209,12 +3936,23 @@
         88.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -71.8,
         12.799999999999999,
         121.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -56.0,
+        12.8,
+        129.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3248,12 +3986,23 @@
         84.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -39.8,
         12.8,
         121.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -36.0,
+        12.8,
+        125.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3287,12 +4036,23 @@
         84.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -31.8,
         12.8,
         121.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -20.0,
+        12.8,
+        125.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3326,12 +4086,23 @@
         84.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -7.8,
         12.8,
         121.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        0.0,
+        12.8,
+        125.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3365,12 +4136,23 @@
         84.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         8.2,
         12.8,
         121.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        20.0,
+        12.8,
+        125.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3404,12 +4186,23 @@
         84.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         32.2,
         12.8,
         121.8
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        52.0,
+        12.8,
+        125.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3443,12 +4236,23 @@
         100.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -39.8,
         12.799999999999999,
         129.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -36.0,
+        12.8,
+        141.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3482,12 +4286,23 @@
         92.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -15.8,
         12.8,
         129.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -12.0,
+        12.8,
+        133.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3521,12 +4336,23 @@
         100.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -7.8,
         12.799999999999999,
         129.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        0.0,
+        12.8,
+        141.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3560,12 +4386,23 @@
         92.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         8.2,
         12.8,
         129.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        12.0,
+        12.8,
+        133.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3599,12 +4436,23 @@
         100.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         32.2,
         12.799999999999999,
         129.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        36.0,
+        12.8,
+        141.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3638,12 +4486,23 @@
         92.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         40.2,
         12.8,
         129.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        56.0,
+        12.8,
+        133.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3677,12 +4536,23 @@
         104.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -55.8,
         12.799999999999999,
         137.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -52.0,
+        12.8,
+        145.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3716,12 +4586,23 @@
         104.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -47.8,
         12.799999999999999,
         137.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -44.0,
+        12.8,
+        145.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3755,12 +4636,23 @@
         104.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -15.8,
         12.799999999999999,
         137.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -12.0,
+        12.8,
+        145.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3794,12 +4686,23 @@
         104.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         8.2,
         12.799999999999999,
         137.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        12.0,
+        12.8,
+        145.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3833,12 +4736,23 @@
         104.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         40.2,
         12.799999999999999,
         137.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        44.0,
+        12.8,
+        145.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3872,12 +4786,23 @@
         104.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         48.2,
         12.799999999999999,
         137.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        52.0,
+        12.8,
+        145.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3911,12 +4836,23 @@
         120.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -63.8,
         12.799999999999999,
         153.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -32.0,
+        12.8,
+        161.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3950,12 +4886,23 @@
         120.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         0.1999999999999993,
         12.799999999999999,
         153.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        32.0,
+        12.8,
+        161.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -3989,12 +4936,23 @@
         132.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -55.8,
         12.8,
         169.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -32.0,
+        12.8,
+        173.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4028,12 +4986,23 @@
         136.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         8.2,
         12.799999999999999,
         169.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        24.0,
+        12.8,
+        177.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4067,12 +5036,23 @@
         132.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         40.2,
         12.8,
         169.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        48.0,
+        12.8,
+        173.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4106,12 +5086,23 @@
         144.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -47.8,
         12.799999999999999,
         177.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -44.0,
+        12.8,
+        185.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4145,12 +5136,23 @@
         140.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -39.8,
         12.8,
         177.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -24.0,
+        12.8,
+        181.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4184,12 +5186,23 @@
         144.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         40.2,
         12.799999999999999,
         177.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        44.0,
+        12.8,
+        185.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4223,12 +5236,23 @@
         148.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -39.8,
         12.8,
         185.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -36.0,
+        12.8,
+        189.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4262,12 +5286,23 @@
         148.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -23.8,
         12.8,
         185.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        0.0,
+        12.8,
+        189.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4301,12 +5336,23 @@
         148.0
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         32.2,
         12.8,
         185.79999999999998
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        36.0,
+        12.8,
+        189.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4333,12 +5379,23 @@
         100
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -31.8000001,
         12.800000099999998,
         129.7999999
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -24,
+        12.8,
+        141.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4365,12 +5422,23 @@
         95
       ],
       "tool_tip_rotation_deg": 90,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -29.6000001,
         14.799999999999999,
         132.7999999
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -24,
+        12.8,
+        141.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4397,12 +5465,23 @@
         100
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -27.2,
         16.8,
         136.0
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -24,
+        12.8,
+        141.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4429,12 +5508,23 @@
         100
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         16.1999999,
         12.800000099999998,
         129.7999999
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        24,
+        12.8,
+        141.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4461,12 +5551,23 @@
         95
       ],
       "tool_tip_rotation_deg": 90,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         18.3999999,
         14.799999999999999,
         132.7999999
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        24,
+        12.8,
+        141.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4493,12 +5594,23 @@
         100
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         20.8,
         16.8,
         136.0
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        24,
+        12.8,
+        141.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4525,12 +5637,23 @@
         130.6
       ],
       "tool_tip_rotation_deg": 90,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -7.8000001,
         12.799999999999999,
         169.7999999
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        0,
+        12.8,
+        177.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4557,12 +5680,23 @@
         136
       ],
       "tool_tip_rotation_deg": 0,
+      "max_tool_push_mm": 3.5,
       "position_mm": [
         -6.0,
         14.799999999999999,
         171.6
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        0,
+        12.8,
+        177.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4585,6 +5719,16 @@
         41.6
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        0,
+        12.8,
+        41.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4609,6 +5753,16 @@
         50.67179666972449
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -68,
+        28.8,
+        57.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4633,6 +5787,16 @@
         50.67179666972449
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        68,
+        28.8,
+        57.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4657,6 +5821,16 @@
         178.67179666972447
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -68,
+        28.8,
+        185.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4681,6 +5855,16 @@
         178.67179666972447
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        68,
+        28.8,
+        185.6
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,
@@ -4698,6 +5882,16 @@
         9.5999999
       ],
       "rotation_x_deg": 0,
+      "raw_position_mm": [
+        -48.0,
+        -36.0,
+        9.6
+      ],
+      "raw_rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         0,
         0,
@@ -4715,6 +5909,16 @@
         14.3999999
       ],
       "rotation_x_deg": 90,
+      "raw_position_mm": [
+        -44.0,
+        -31.0,
+        14.399999999999999
+      ],
+      "raw_rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ],
       "rotation_deg_xyz": [
         90,
         0,

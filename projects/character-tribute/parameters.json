@@ -7,6 +7,9 @@
   "nominal_pitch": 8.0,
   "adhesive_required": false,
   "all_parts_removable": true,
+  "manufacturing_revision": "T2-R1",
+  "print_orientations": {"T02":[180,0,0],"CAPTURE-FRAME":[180,0,0]},
+  "release_tool": {"max_initial_push_mm":3.5,"then_grip_rear_flange":true},
   "manufacturing_decision": "Adhesive design rejected; user selected a fully removable mechanical assembly.",
   "stand": {
     "width": 176.0, "depth": 96.0, "height": 9.6,

@@ -25,6 +25,10 @@ def export_artifacts(root, data, specs, raw_shapes, instance_specs):
     for part_id, raw_shape in raw_shapes.items():
         print(f"CAD_EXPORT_PART {part_id}", flush=True)
         shape = raw_shape.copy()
+        print_rotation = data.get("print_orientations",{}).get(part_id,[0,0,0])
+        if print_rotation[1:] != [0,0]:
+            raise ValueError("This print-pose exporter supports explicit X-axis flips only")
+        shape.rotate(App.Vector(),App.Vector(1,0,0),print_rotation[0])
         b = shape.optimalBoundingBox(False, False)
         origin = [b.XMin, b.YMin, b.ZMin]
         shape.translate(-App.Vector(*origin))
@@ -44,6 +48,8 @@ def export_artifacts(root, data, specs, raw_shapes, instance_specs):
         print_shapes[part_id] = shape
         parts.append({
             **specs[part_id], "id": part_id, "print_origin_mm": origin,
+            "print_rotation_deg_xyz":print_rotation,
+            "print_orientation": "front_face_on_bed" if print_rotation[0]==180 else "flat_base_as_exported",
             "bounds_mm": [b.XLength, b.YLength, b.ZLength],
             "cad_volume_mm3": shape.Volume, "facets": mesh.CountFacets,
             "mesh": f"meshes/{part_id}.stl", "step": f"native/parts/{part_id}.step",
@@ -58,7 +64,8 @@ def export_artifacts(root, data, specs, raw_shapes, instance_specs):
     instances, objects = [], []
     for item in instance_specs:
         part = catalog_parts[item["part"]]
-        rotation = App.Rotation(App.Vector(1, 0, 0), item.get("rotation_x_deg", 0))
+        assembled_x = item.get("rotation_x_deg",0)-part["print_rotation_deg_xyz"][0]
+        rotation = App.Rotation(App.Vector(1, 0, 0), assembled_x)
         translation = App.Vector(*item["position_mm"])
         translation += rotation.multVec(App.Vector(*part["print_origin_mm"]))
         placement = App.Placement(translation, rotation)
@@ -76,8 +83,10 @@ def export_artifacts(root, data, specs, raw_shapes, instance_specs):
         obj.ViewObject.LineColor = (0.1, 0.12, 0.14)
         assembly.addObject(obj)
         objects.append(obj)
-        instances.append({**item, "position_mm": list(translation),
-                          "rotation_deg_xyz": [item.get("rotation_x_deg", 0), 0, 0]})
+        instances.append({**item, "raw_position_mm":item["position_mm"],
+                          "raw_rotation_deg_xyz":[item.get("rotation_x_deg",0),0,0],
+                          "position_mm": list(translation),
+                          "rotation_deg_xyz": [assembled_x,0,0]})
     doc.recompute()
     print("CAD_SAVE_NATIVE", flush=True)
     doc.saveAs(str(root / "native/character-tribute.FCStd"))
@@ -88,6 +97,7 @@ def export_artifacts(root, data, specs, raw_shapes, instance_specs):
     catalog = {"schema_version": 1, "project": data["project"], "revision": data["revision"],
                "units": "mm", "axes": "X right, Y rear, Z up; front camera looks toward +Y",
                "message": data["message"], "colors": data["colors"],
+               "manufacturing_revision":data.get("manufacturing_revision",data["revision"]),
                "parts": parts, "instances": instances,
                "native_reopened": False, "native_instance_count": len(objects)}
     (root / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n")

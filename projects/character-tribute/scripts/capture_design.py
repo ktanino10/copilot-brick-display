@@ -190,4 +190,7 @@ def build_capture(data):
     for pid, shape in shapes.items():
         if not shape.isValid() or len(shape.Solids) != 1 or shape.Volume <= 0:
             raise ValueError(f"T2 capture part is not one valid positive-volume solid: {pid}")
+    for item in instances:
+        if "tool_target_xy" in item:
+            item["max_tool_push_mm"]=data["release_tool"]["max_initial_push_mm"]
     return specs, shapes, instances
