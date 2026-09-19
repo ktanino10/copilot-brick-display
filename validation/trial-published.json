@@ -1,0 +1,86 @@
+{
+  "status": "PASS_LIVE_TRIAL_GUIDANCE",
+  "guidance_revision": "trial-2026-09-19",
+  "geometry_revision": "4.0-public-template",
+  "exact_published_files": [
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/index.html",
+      "bytes": 18450,
+      "sha256": "3d4e14702b4b61423201d41ea1f51dc7c250df3e129fc62fdebd622e8ae51eb4"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/guide.html",
+      "bytes": 24397,
+      "sha256": "74a3947c48d5c0417e073aa87dbcfd5631eebb3a046834ba025dc0f160544707"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/trial.html",
+      "bytes": 13917,
+      "sha256": "aae750f4277dde7e309bc17d1bfa3aeae5efd65f6b519577ba0f159adbb48421"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/technical.html",
+      "bytes": 13918,
+      "sha256": "6e9ab71671fdfd0f5afb63befadef4a06d7cb3ab054f3907c045bba103e55bef"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/assets/catalog.json",
+      "bytes": 264190,
+      "sha256": "e0370bc2d7bbef1c8bc6a77f95879001513c17f07f5787f5cb0348f4f0d04b30"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/downloads/trial-subset.zip",
+      "bytes": 701621,
+      "sha256": "c4c8f46b904047c60d3c9aaf47b0a8162c40fa0ecc5af29fc9936e16a0c2b9a6"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/downloads/trial-subset/manifest.json",
+      "bytes": 10002,
+      "sha256": "fa8aba71d7e9221377fd4df20ab817be12d5f4f7dd6c32213288ba57420dfddc"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/downloads/trial-subset/bom-A.csv",
+      "bytes": 750,
+      "sha256": "b0b221738b7edc4f217ee1e4ca4edc197878212af6b3a19a8bba24db4bd34b2b"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/downloads/trial-subset/bom-B.csv",
+      "bytes": 750,
+      "sha256": "6db87a28a5d1e6b9e83e3ecf9e3a9eae12d7d431b70f375acc18453e89c294ee"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/downloads/trial-subset/bom-C.csv",
+      "bytes": 751,
+      "sha256": "f654b85057a7734d28417e66ec5d6128d16316c0abcc42b3e66dc2f21a83d2c2"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/downloads/fit-log.csv",
+      "bytes": 869,
+      "sha256": "13bc3ca1c0da0a43dbc74fd70ff22a2f534834a6a79c1641c4146324e6c37f5b"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/downloads/fit-coupons.zip",
+      "bytes": 308479,
+      "sha256": "d77b8d40987b8d72b5b9dabab62bf3fe5751c3aa37397025e2d69ce4bb1e83fb"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/downloads/A/print-kit.zip",
+      "bytes": 5110577,
+      "sha256": "46e3e7bbc3e016e7fbd88106f8d24834b461ec2bad7690dce1d44b20e961e875"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/downloads/B/print-kit.zip",
+      "bytes": 7799377,
+      "sha256": "8396bd70514e0a121b014bdbebfe89820259a09b15fa7101ac2e83fc8525b0d5"
+    },
+    {
+      "url": "https://ktanino10.github.io/copilot-brick-display/downloads/C/print-kit.zip",
+      "bytes": 11626989,
+      "sha256": "111af8a9d26347c5cfb278dc5eb17bbc1ddc7abd54d19bf453a813c10eed01ac"
+    }
+  ],
+  "public_trial_url": "https://ktanino10.github.io/copilot-brick-display/trial.html?guidance=trial-2026-09-19",
+  "geometry_changed": false,
+  "sliced": false,
+  "physical_trial_performed": false
+}

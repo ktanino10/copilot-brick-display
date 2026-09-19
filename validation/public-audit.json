@@ -2,7 +2,7 @@
   "status": "PASS_RECURSIVE_PUBLIC_ARTIFACT_AUDIT",
   "expanded_entries": 2766,
   "public_files": 378,
-  "site_bytes": 414264501,
+  "site_bytes": 414291462,
   "files": [
     {
       "path": "app.js",
@@ -846,8 +846,8 @@
     },
     {
       "path": "downloads/validation.json",
-      "bytes": 161764,
-      "sha256": "23ab45f57d6e2ed328b4a72e4690178d27e819ee1dbfdbb506d703ae23d0ef7f"
+      "bytes": 188725,
+      "sha256": "97bdcd6c2fba4668e1da7baba495cd982454c945a359762944057528f0f5e831"
     },
     {
       "path": "drawings/A/bom-1.svg",

@@ -40,5 +40,18 @@
     "support_guaranteed": false,
     "note": "This concerns public account information, not leaked credentials. GitHub may decline non-sensitive-data removal. Original values, withdrawn paths and old-SHA URLs are retained privately and are not reproduced here."
   },
-  "physical_manufacturing_qualification": "NOT_PERFORMED"
+  "physical_manufacturing_qualification": "NOT_PERFORMED",
+  "generic_publication": {
+    "revision": "4.0-public-template",
+    "commit": "ae7827458c9448a4c206c2719eb1f7bf9df3b52a",
+    "actions_run": "https://github.com/ktanino10/copilot-brick-display/actions/runs/35448357879",
+    "current_and_reachable_history_audit": "PASS_GENERIC_CURRENT_AND_ALL_REACHABLE_HISTORY",
+    "public_refs": 2,
+    "reachable_commits": 26,
+    "unique_blobs": 1303,
+    "expanded_entries": 3912,
+    "old_identifying_objects_reintroduced": 0,
+    "byte_identical_nonidentifying_summaries": 4,
+    "note": "The four re-created summaries contain only model letters, counts, pass flags and neutral image filenames; no recipient text or geometry."
+  }
 }
