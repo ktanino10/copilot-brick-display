@@ -3,6 +3,12 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      publish:
+        description: "Deploy after validation (leave false for a review-branch browser preview)"
+        required: false
+        default: false
+        type: boolean
 permissions:
   contents: read
   pages: write
@@ -11,12 +17,9 @@ concurrency:
   group: pages
   cancel-in-progress: false
 jobs:
-  deploy:
+  validate:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - name: Verify the already-generated public package
@@ -38,6 +41,11 @@ jobs:
         run: |
           google-chrome --version
           python tests/run_web.py
+      - name: Bind current browser evidence to the public release
+        run: |
+          python scripts/finalize_evidence.py
+          python scripts/verify_revision_invariants.py
+          node tests/static.mjs
       - name: Preserve browser evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -46,12 +54,23 @@ jobs:
           path: |
             validation/web.json
             validation/tribute-web-ci.json
+            site/downloads/validation.json
             build/screenshots/
           if-no-files-found: warn
       - uses: actions/configure-pages@v5
+        if: github.event_name == 'push' || inputs.publish
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name == 'push' || inputs.publish
         with:
           path: site
+  deploy:
+    if: github.event_name == 'push' || inputs.publish
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Publish GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

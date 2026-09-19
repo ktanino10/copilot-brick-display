@@ -11,7 +11,8 @@ const catalog = await json('design/catalog.json');
 assert.deepEqual(await json('site/assets/catalog.json'), catalog);
 assert.equal(catalog.units, 'mm');
 assert.equal(catalog.parameters_sha256, digest(await readFile('design/parameters.json')));
-assert.deepEqual(catalog.message.lines, ['@YOUR-USERNAME', 'Same icon, New adventures', 'github.com/YOUR-USERNAME']);
+assert.deepEqual(catalog.message.lines, ['Same icon, New adventures', 'github.com/YOUR-USERNAME']);
+assert.equal(catalog.message.interface_id, 'BASE-FRONT-NP3');
 const required = [
   'index.html', 'guide.html', 'technical.html', 'rebuild.html', 'notices.html',
   'drawings/interface.svg', 'downloads/interface.pdf', 'downloads/fit-coupons.zip',
@@ -49,6 +50,13 @@ for (const part of Object.values(catalog.parts)) {
   assert.equal(buffer.length, 84 + buffer.readUInt32LE(80) * 50, part.id);
   assert.ok(part.volume_mm3 > 0 && part.bounds[0][2] >= 0, part.id);
   required.push(`drawings/parts/${part.id}.svg`);
+}
+const invariants = await json('design/revision3-invariants.json');
+for (const [relative, expected] of Object.entries(invariants.frozen_tribute)) {
+  assert.equal(digest(await readFile(relative)), expected, `Frozen tribute changed: ${relative}`);
+}
+for (const file of ['site/index.html', 'site/guide.html', 'site/technical.html', 'site/assets/catalog.json']) {
+  assert.ok(!(await readFile(file, 'utf8')).includes('@YOUR-USERNAME'), `Obsolete handle in current normal-model content: ${file}`);
 }
 for (const file of required) assert.ok((await stat(path.join(site, file))).size > 0, file);
 

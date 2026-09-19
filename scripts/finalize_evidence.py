@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import zipfile
 from pathlib import Path
 
 from pypdf import PdfReader
@@ -29,8 +30,18 @@ def main():
     assert packages["status"] == "PASS_GEOMETRY_AND_QUANTITIES_ONLY"
     assert three_mf["status"] == "PASS_INDEPENDENT_3MF_REOPEN"
     assert motion["status"] == "PASS_REAL_NATIVE_MOTION_CHECK"
-    assert all(item["fixed_maximum_overlap_mm3"] < 1e-5 for item in motion["models"])
+    assert all(item["maximum_intersection_mm3"] < 1e-5 for item in motion["models"])
+    revision = read("validation/revision3-invariants.json")
+    front = read("validation/front-nameplate.json")
+    assert revision["status"] == "PASS_APPROVED_B_AND_UNCHANGED_FACES_TRIBUTE"
+    assert front["status"] == "PASS_NATIVE_FRONT_CAPTURE_AND_EXTRACTION"
     assert web["status"] == "PASS_REAL_BROWSER"
+    current_browser = web.get("revision") == c["revision"]
+    browser_record = web if current_browser else {
+        "status": "PENDING_CURRENT_REVISION_CI", "required_revision": c["revision"],
+        "prior_browser_result_not_reused": True,
+        "note": "The bounded Linux full-Chrome gate must test this revision before deployment.",
+    }
     assert cad["parameters_sha256"] == mesh["parameters_sha256"] == c["parameters_sha256"]
     records = []
     for model in c["models"]:
@@ -50,27 +61,41 @@ def main():
         assert native["step_sha256"] == sha(folder / f"{key}.step")
         reader = PdfReader(folder / "drawings.pdf")
         assert len(reader.pages) >= len(model["steps"]) + 3
-        assert all(page.extract_text().strip() for page in reader.pages)
+        assert all("REV3 / 5-COURSE BASE" in page.extract_text() for page in reader.pages)
+        text = "\n".join(page.extract_text() for page in reader.pages)
+        assert all(value in text for value in c["message"]["lines"])
+        assert "@YOUR-USERNAME" not in text
+        with zipfile.ZipFile(folder / "print-kit.zip") as archive:
+            assert archive.read("bom.csv") == (folder / "bom.csv").read_bytes()
+            assert archive.read("drawings.pdf") == (folder / "drawings.pdf").read_bytes()
+            expected_stls = {c["parts"][item["part"]]["stl"] for item in model["placements"]}
+            assert {name for name in archive.namelist() if name.endswith(".stl")} == expected_stls
+            for name in expected_stls:
+                assert hashlib.sha256(archive.read(name)).hexdigest() == sha(ROOT / "site/downloads" / name)
         records.append({
             "model": key, "cad": native, "blender": scene, "video": video,
             "drawings_pdf_pages": len(reader.pages), "privacy": privacy,
         })
     part_pdf = PdfReader(ROOT / "site/downloads/part-drawings.pdf")
     assert len(part_pdf.pages) == len(c["parts"])
-    review = ROOT / "validation/mechanical-review.md"
+    assert all("REV3 / 5-COURSE BASE" in page.extract_text() for page in part_pdf.pages)
+    review = ROOT / "validation/revision3-review.md"
     assert review.is_file(), "Independent review must be persisted before publication"
     result = {
-        "scope": "A/B/C original brick portraits and common message module",
+        "scope": "A/B/C five-course bases, enlarged front text, independent right logos and vertical exploded display",
+        "revision": c["revision"],
         "digital_checks_passed": True,
         "physical_testing": "NOT_PERFORMED",
         "parameters_sha256": c["parameters_sha256"],
         "mechanical_source_sha256": sha(ROOT / "scripts/freecad_geometry.py"),
         "parts": len(c["parts"]), "mesh_checks": mesh,
-        "models": records, "print_packages": packages, "three_mf_reopen": three_mf, "browser": web,
+        "models": records, "print_packages": packages, "three_mf_reopen": three_mf, "browser": browser_record,
         "explosion_motion": motion,
-        "final_browser_recheck": read("validation/browser-recheck.json"),
+        "front_modules": front, "revision_invariants": revision,
+        "final_browser_recheck": {"status": "PASS_CURRENT_REVISION_CI" if current_browser else "PENDING_CURRENT_REVISION_CI",
+                                  "revision": c["revision"], "local_browser_retry": "not attempted; known environment limitation"},
         "additional_project": read("validation/tribute-mirror.json"),
-        "independent_review": "See repository validation/mechanical-review.md; physical gates remain open.",
+        "independent_review": "See repository validation/revision3-review.md; physical gates remain open.",
         "not_claimed": ["Commercial compatibility guarantee", "Physical clutch/strength/tip testing",
                         "Slicer-measured print mass/time", "Toy safety or manufacturing certification",
                         "Official LEGO/GitHub/Bambu product"],

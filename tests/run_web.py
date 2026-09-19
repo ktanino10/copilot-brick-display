@@ -30,7 +30,7 @@ try:
     if not ready:
         raise TimeoutError("Temporary preview server did not become ready")
     env = {**os.environ, "BASE_URL": base}
-    subprocess.run([sys.executable, "-u", "tests/web.py"], cwd=root, env=env, check=True, timeout=600)
+    subprocess.run([sys.executable, "-u", "tests/web.py"], cwd=root, env=env, check=True, timeout=900)
 finally:
     server.terminate()
     try:

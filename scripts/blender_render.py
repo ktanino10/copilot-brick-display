@@ -30,15 +30,28 @@ w, d, _ = [value * .001 for value in model["actual_mm"]]
 original_camera = scene.camera
 comparison = bpy.data.objects.new("Common-scale comparison camera", original_camera.data.copy())
 scene.collection.objects.link(comparison)
-target = Vector((w / 2, d / 2, .124))
+target = Vector((w / 2, d / 2, .1433))
 comparison.location = target + Vector((.21, -.54, .255))
 comparison.rotation_euler = (target - comparison.location).to_track_quat("-Z", "Y").to_euler()
-comparison.data.ortho_scale = .38
+comparison.data.ortho_scale = .44
 scene.camera = comparison
 scene.render.filepath = str(folder / f"{args.model}-compare.png")
 bpy.ops.render.render(write_still=True)
 scene.camera = original_camera
 bpy.data.objects.remove(comparison, do_unlink=True)
+front = bpy.data.objects.new("Actual base-front detail", original_camera.data.copy())
+scene.collection.objects.link(front)
+target = Vector((w / 2, 0, .024))
+front.location = target + Vector((0, -.6, 0))
+front.rotation_euler = (target - front.location).to_track_quat("-Z", "Y").to_euler()
+front.data.ortho_scale = w * 1.05
+scene.camera = front
+scene.render.resolution_x, scene.render.resolution_y = 1600, 480
+scene.render.filepath = str(folder / f"{args.model}-base-front.png")
+bpy.ops.render.render(write_still=True)
+scene.camera = original_camera
+bpy.data.objects.remove(front, do_unlink=True)
+scene.render.resolution_x, scene.render.resolution_y = 720, 800
 if not args.probe:
     frames = ROOT / "build/frames" / args.model
     frames.mkdir(parents=True, exist_ok=True)

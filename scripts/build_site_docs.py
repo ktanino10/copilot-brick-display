@@ -55,8 +55,11 @@ def main():
 <a href="notices.html">権利・依存ライブラリ</a></footer>
 {"<script type='module' src='guide.js'></script>" if guide else ""}</body></html>'''
         (ROOT / "site" / target).write_text(page)
-    for name in ["parameters.json", "interface.json", "sources.json"]:
+    for name in ["parameters.json", "interface.json", "sources.json", "revision3-approval.json", "revision3-invariants.json"]:
         shutil.copyfile(ROOT / "design" / name, ROOT / "site/downloads" / name)
+    shutil.copyfile(ROOT / "resources/fonts/barlow-condensed/OFL.txt", ROOT / "site/vendor/Barlow-OFL.txt")
+    from stamp_release import main as stamp
+    stamp()
     print("Published Japanese guide, technical design, rebuild instructions, and rights notices.")
 
 

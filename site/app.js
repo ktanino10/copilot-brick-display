@@ -1,9 +1,11 @@
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/OrbitControls.js';
 import { STLLoader } from './vendor/STLLoader.js';
-import { explosionOffset } from './assembly-motion.js';
+import { explosionOffset } from './assembly-motion.js?rev=3.0-five-course-front';
 
 const $ = (selector) => document.querySelector(selector);
+const REVISION = $('meta[name="design-revision"]').content;
+const asset = (relative) => `${relative}?rev=${encodeURIComponent(REVISION)}`;
 const format = (values) => values.map((n) => Number(n.toFixed(2))).join(' × ');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const state = { catalog: null, model: null, token: 0, stage: 0, explosion: 0, playing: false, selected: null };
@@ -19,7 +21,7 @@ function showError(message) {
 
 async function getGeometry(part) {
   if (!geometryCache.has(part.id)) {
-    const promise = new STLLoader().loadAsync(`downloads/${part.stl}`).then((geometry) => {
+    const promise = new STLLoader().loadAsync(asset(`downloads/${part.stl}`)).then((geometry) => {
       geometry.computeBoundingBox();
       if (!Number.isFinite(geometry.boundingBox.max.x) || geometry.boundingBox.isEmpty()) {
         throw new Error(`空の形状: ${part.id}`);
@@ -51,7 +53,14 @@ class PortraitViewer {
     this.controls.minZoom = .35;
     this.controls.maxZoom = 5;
     this.controls.maxPolarAngle = Math.PI * .96;
-    this.controls.addEventListener('change', () => { this.dirty = true; });
+    this.lastCameraRotation = new THREE.Quaternion();
+    this.controls.addEventListener('change', () => {
+      if (this.lastCameraRotation.angleTo(this.camera.quaternion) > .00001) {
+        this.projectionDirty = true;
+        this.lastCameraRotation.copy(this.camera.quaternion);
+      }
+      this.dirty = true;
+    });
     this.scene.add(new THREE.HemisphereLight(0xe5f4ff, 0x657283, 2.3));
     const key = new THREE.DirectionalLight(0xffffff, 3.2);
     key.position.set(-220, -350, 550);
@@ -67,12 +76,15 @@ class PortraitViewer {
     this.scene.add(fill);
     this.content = new THREE.Group();
     this.scene.add(this.content);
-    this.selection = new THREE.BoxHelper(new THREE.Object3D(), 0xc42eaa);
+    this.selection = new THREE.Box3Helper(new THREE.Box3(), 0xc42eaa);
     this.selection.visible = false;
     this.scene.add(this.selection);
     this.raycaster = new THREE.Raycaster();
     this.materials = new Map();
     this.meshes = [];
+    this.visibleBounds = new THREE.Box3();
+    this.lastFitCenter = null;
+    this.cornerScratch = new THREE.Vector3();
     this.dirty = true;
     this.lastStageTime = 0;
     new ResizeObserver(() => this.resize()).observe($('#viewport'));
@@ -131,15 +143,16 @@ class PortraitViewer {
     for (const instance of model.placements) {
       const geometry = geometries.get(instance.part);
       let material = this.material(instance.color);
-      if (instance.part === 'MSG-CARD') {
+      const partSpec = state.catalog.parts[instance.part];
+      if (partSpec.kind === 'front_plaque' || partSpec.kind === 'front_logo') {
         if (!geometry.getAttribute('color')) {
           const colors = new Float32Array(geometry.getAttribute('position').count * 3);
-          const cyan = new THREE.Color(state.catalog.colors.cyan.hex);
+          const light = new THREE.Color(state.catalog.colors[partSpec.letter_color].hex);
           const black = new THREE.Color(state.catalog.colors.black.hex);
           const position = geometry.getAttribute('position');
           for (let triangle = 0; triangle < position.count; triangle += 3) {
             const middle = (position.getZ(triangle) + position.getZ(triangle + 1) + position.getZ(triangle + 2)) / 3;
-            const color = middle > 2.001 ? black : cyan;
+            const color = middle > partSpec.optional_color_change_z + .001 ? light : black;
             for (let vertex = triangle; vertex < triangle + 3; vertex++) color.toArray(colors, vertex * 3);
           }
           geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
@@ -151,6 +164,11 @@ class PortraitViewer {
       mesh.name = instance.id;
       mesh.position.fromArray(instance.position);
       mesh.rotation.set(...instance.rotation.map(THREE.MathUtils.degToRad));
+      mesh.updateMatrix();
+      mesh.userData.rotatedBounds = geometry.boundingBox.clone().applyMatrix4(
+        new THREE.Matrix4().makeRotationFromEuler(mesh.rotation),
+      );
+      mesh.userData.displayBounds = new THREE.Box3();
       mesh.castShadow = true;
       mesh.receiveShadow = true;
       mesh.userData.instance = instance;
@@ -165,6 +183,7 @@ class PortraitViewer {
     grid.material.transparent = true;
     grid.material.opacity = .46;
     grid.userData.disposable = true;
+    this.grid = grid;
     this.content.add(grid);
     const floor = new THREE.Mesh(
       new THREE.PlaneGeometry(gridSize * 2, gridSize * 2),
@@ -173,6 +192,7 @@ class PortraitViewer {
     floor.position.set(w / 2, d / 2, -.3);
     floor.receiveShadow = true;
     floor.userData.disposable = true;
+    this.floor = floor;
     this.content.add(floor);
     this.bounds = new THREE.Box3Helper(
       new THREE.Box3(new THREE.Vector3(...model.bounds[0]), new THREE.Vector3(...model.bounds[1])),
@@ -181,8 +201,8 @@ class PortraitViewer {
     this.bounds.visible = $('#bounds').checked;
     this.bounds.userData.disposable = true;
     this.content.add(this.bounds);
-    this.view('iso');
     this.update();
+    this.view('iso');
     $('#viewport').dataset.instances = String(this.meshes.length);
     $('#viewport').dataset.model = model.id;
   }
@@ -190,8 +210,10 @@ class PortraitViewer {
   view(name) {
     if (!state.model) return;
     this.currentView = name;
-    const [w, d, h] = state.model.actual_mm;
-    const center = new THREE.Vector3(w / 2, d / 2, h * .48);
+    const [w, , h] = state.model.actual_mm;
+    const center = this.visibleBounds.isEmpty()
+      ? new THREE.Vector3(...state.model.bounds[0]).add(new THREE.Vector3(...state.model.bounds[1])).multiplyScalar(.5)
+      : this.visibleBounds.getCenter(new THREE.Vector3());
     const offsets = {
       iso: new THREE.Vector3(.7, -1.8, .85),
       front: new THREE.Vector3(0, -2, 0),
@@ -199,6 +221,7 @@ class PortraitViewer {
       top: new THREE.Vector3(0, -.0001, 2),
     };
     this.controls.target.copy(center);
+    this.lastFitCenter = center.clone();
     this.camera.position.copy(center).add(offsets[name].multiplyScalar(Math.max(w, h) * 2));
     this.camera.zoom = 1;
     this.camera.lookAt(center);
@@ -211,30 +234,112 @@ class PortraitViewer {
     const { width, height } = $('#viewport').getBoundingClientRect();
     if (!width || !height) return;
     this.renderer.setSize(width, height, false);
-    const [w, d, h] = state.model?.actual_mm || [200, 100, 200];
-    const expansion = state.explosion * (state.model?.steps.length || 23) * 3;
-    const extent = this.currentView === 'top' ? Math.max(d * 1.7, w / (width / height) * 1.35)
-      : Math.max(h * 1.28 + expansion, w / (width / height) * 1.45);
-    this.camera.left = -extent * width / height / 2;
-    this.camera.right = extent * width / height / 2;
-    this.camera.top = extent / 2;
-    this.camera.bottom = -extent / 2;
+    this.fitProjection();
+    this.dirty = true;
+  }
+
+  fitProjection() {
+    if (this.visibleBounds.isEmpty()) return;
+    const { width, height } = $('#viewport').getBoundingClientRect();
+    if (!width || !height) return;
+    this.camera.updateMatrixWorld(true);
+    let horizontal = 0;
+    let vertical = 0;
+    for (const x of [this.visibleBounds.min.x, this.visibleBounds.max.x]) {
+      for (const y of [this.visibleBounds.min.y, this.visibleBounds.max.y]) {
+        for (const z of [this.visibleBounds.min.z, this.visibleBounds.max.z]) {
+          this.cornerScratch.set(x, y, z).applyMatrix4(this.camera.matrixWorldInverse);
+          horizontal = Math.max(horizontal, Math.abs(this.cornerScratch.x));
+          vertical = Math.max(vertical, Math.abs(this.cornerScratch.y));
+        }
+      }
+    }
+    const halfHeight = Math.max(vertical, horizontal * height / width, 15) * 1.22;
+    this.camera.left = -halfHeight * width / height;
+    this.camera.right = halfHeight * width / height;
+    this.camera.top = halfHeight;
+    this.camera.bottom = -halfHeight;
     this.camera.updateProjectionMatrix();
+    this.projectionDirty = false;
+    $('#viewport').dataset.displayBounds = JSON.stringify([this.visibleBounds.min.toArray(), this.visibleBounds.max.toArray()]);
+    $('#viewport').dataset.cameraTarget = JSON.stringify(this.controls.target.toArray());
+    $('#viewport').dataset.cameraDirection = JSON.stringify(this.camera.getWorldDirection(new THREE.Vector3()).toArray());
+    let maxClip = 0;
+    for (const x of [this.visibleBounds.min.x, this.visibleBounds.max.x]) {
+      for (const y of [this.visibleBounds.min.y, this.visibleBounds.max.y]) {
+        for (const z of [this.visibleBounds.min.z, this.visibleBounds.max.z]) {
+          this.cornerScratch.set(x, y, z).project(this.camera);
+          maxClip = Math.max(maxClip, Math.abs(this.cornerScratch.x), Math.abs(this.cornerScratch.y), Math.abs(this.cornerScratch.z));
+        }
+      }
+    }
+    $('#viewport').dataset.maxClipCoordinate = String(maxClip);
     this.dirty = true;
   }
 
   update() {
+    this.visibleBounds.makeEmpty();
+    const layers = new Map();
+    let zeroError = 0;
+    const moduleBounds = {};
+    let lowestOffset = Infinity;
+    let highestOffset = -Infinity;
     for (const mesh of this.meshes) {
       const item = mesh.userData.instance;
       mesh.visible = item.step <= state.stage;
       mesh.position.fromArray(item.position);
       const offset = explosionOffset(item, state.model, state.catalog.message, state.explosion);
       mesh.position.add(new THREE.Vector3(...offset));
+      mesh.userData.displayBounds.copy(mesh.userData.rotatedBounds).translate(mesh.position);
+      if (mesh.visible) this.visibleBounds.union(mesh.userData.displayBounds);
+      zeroError = Math.max(zeroError, ...mesh.position.toArray().map((value, axis) => Math.abs(value - item.position[axis])));
+      if (mesh.visible && (item.role === 'face' || item.role === 'base_course')) {
+        const layer = Math.round(item.position[2] / 9.6);
+        const range = layers.get(layer) || [Infinity, -Infinity];
+        layers.set(layer, [Math.min(range[0], mesh.userData.displayBounds.min.z),
+          Math.max(range[1], mesh.userData.displayBounds.max.z)]);
+        lowestOffset = Math.min(lowestOffset, offset[2]);
+        highestOffset = Math.max(highestOffset, offset[2]);
+      }
+      if (item.role === 'front_module') {
+        moduleBounds[item.module] = [mesh.userData.displayBounds.min.toArray(), mesh.userData.displayBounds.max.toArray()];
+      }
     }
     const selected = this.meshes.find((mesh) => mesh.name === state.selected);
     this.selection.visible = !!selected?.visible;
-    if (selected?.visible) this.selection.setFromObject(selected);
-    if (this.bounds) this.bounds.visible = $('#bounds').checked && state.explosion === 0;
+    if (selected?.visible) this.selection.box.copy(selected.userData.displayBounds);
+    if (this.bounds) {
+      this.bounds.visible = $('#bounds').checked && !this.visibleBounds.isEmpty();
+      this.bounds.box.copy(this.visibleBounds);
+    }
+    if (this.grid) this.grid.visible = state.explosion === 0 && state.stage > 0;
+    if (this.floor) this.floor.visible = state.explosion === 0 && state.stage > 0;
+    if (!this.visibleBounds.isEmpty()) {
+      const center = this.visibleBounds.getCenter(new THREE.Vector3());
+      if (this.lastFitCenter) {
+        const delta = center.clone().sub(this.lastFitCenter);
+        this.controls.target.add(delta);
+        this.camera.position.add(delta);
+      }
+      this.lastFitCenter = center;
+      const diagonal = this.visibleBounds.getSize(new THREE.Vector3()).length();
+      const direction = this.camera.position.clone().sub(this.controls.target).normalize();
+      const distance = Math.max(this.camera.position.distanceTo(this.controls.target), diagonal * 2 + 100);
+      this.camera.position.copy(this.controls.target).addScaledVector(direction, distance);
+      this.camera.near = Math.max(.1, distance - diagonal * 2);
+      this.camera.far = distance + diagonal * 3 + 100;
+      this.controls.update();
+      this.fitProjection();
+    }
+    $('#viewport').dataset.visibleInstances = String(this.meshes.filter((mesh) => mesh.visible).length);
+    const courseKeys = [...layers.keys()].sort((a, b) => a - b);
+    const gaps = courseKeys.slice(1).filter((layer) => layers.has(layer - 1))
+      .map((layer) => layers.get(layer)[0] - layers.get(layer - 1)[1]);
+    $('#viewport').dataset.courseGapMm = String(gaps.length ? Math.min(...gaps) : 0);
+    $('#viewport').dataset.zeroPoseError = String(zeroError);
+    $('#viewport').dataset.frontModuleBounds = JSON.stringify(moduleBounds);
+    $('#viewport').dataset.verticalOffsets = JSON.stringify([Number.isFinite(lowestOffset) ? lowestOffset : 0,
+      Number.isFinite(highestOffset) ? highestOffset : 0]);
     this.dirty = true;
   }
 
@@ -246,6 +351,7 @@ class PortraitViewer {
       if (state.stage >= state.model.steps.length) setPlaying(false);
     }
     this.controls.update();
+    if (this.projectionDirty) this.fitProjection();
     if (this.dirty) {
       this.renderer.render(this.scene, this.camera);
       this.dirty = false;
@@ -255,21 +361,22 @@ class PortraitViewer {
 
 function updateLinks(model) {
   const id = model.id;
-  $('.model-print-link').href = `downloads/${id}/print-kit.zip`;
+  $('.model-print-link').href = asset(`downloads/${id}/print-kit.zip`);
   $('.model-print-link').innerHTML = `${id}の印刷セット <span>↓</span>`;
   $('.model-guide-link').href = `guide.html?model=${id}`;
   $('#download-model').textContent = `${id} / ${model.name}`;
   const files = ['print-kit.zip', `${id}.FCStd`, `${id}.step`, 'drawings.pdf', 'bom.csv', 'plates.zip'];
-  [...$('#download-links').children].forEach((link, index) => { link.href = `downloads/${id}/${files[index]}`; });
+  [...$('#download-links').children].forEach((link, index) => { link.href = asset(`downloads/${id}/${files[index]}`); });
   const video = $('#assembly-video');
   video.pause();
-  video.poster = `media/${id}-hero.png`;
-  video.querySelector('source').src = `media/${id}-assembly.mp4`;
-  video.querySelector('track').src = `media/${id}-assembly.vtt`;
+  video.poster = asset(`media/${id}-hero.png`);
+  video.querySelector('source').src = asset(`media/${id}-assembly.mp4`);
+  video.querySelector('track').src = asset(`media/${id}-assembly.vtt`);
+  $('#base-front-preview').src = asset(`media/${id}-base-front.png`);
   video.load();
   $('#film-model').textContent = id;
-  $('#video-download').href = `media/${id}-assembly.mp4`;
-  $('#blend-download').href = `downloads/${id}/${id}.blend`;
+  $('#video-download').href = asset(`media/${id}-assembly.mp4`);
+  $('#blend-download').href = asset(`downloads/${id}/${id}.blend`);
 }
 
 function setPlaying(value) {
@@ -321,7 +428,8 @@ function selectPart(id) {
     details.append(dl);
     const note = document.createElement('p');
     note.className = 'fine';
-    note.textContent = item.part === 'MSG-CARD' ? '文字のブラックは2.0 mm層後の任意の色替えです。単色でも使えます。'
+    note.textContent = part.optional_color_change_z
+      ? `黒い前面モジュール。${part.optional_color_change_z} mm層後に白へ手動色替え。5段台座の正面内に収まります。`
       : '外形はスタッド込み。形状IDのHはスタッドを除く本体高さです。';
     details.append(note);
     for (const [label, href] of [
@@ -330,11 +438,11 @@ function selectPart(id) {
       ['この工程の配置図 ↗', `drawings/${state.model.id}/step-${String(item.step).padStart(2, '0')}.svg`],
     ]) {
       const link = document.createElement('a');
-      link.href = href;
+      link.href = asset(href);
       link.textContent = label;
       details.append(link);
     }
-    $('#part-drawing').src = `drawings/parts/${item.part}.svg`;
+    $('#part-drawing').src = asset(`drawings/parts/${item.part}.svg`);
     $('#part-drawing').alt = `${item.part}のCAD由来の三面図と印刷外形寸法`;
   } else {
     details.textContent = '選んだ部品の形状ID・色・寸法・三面図がここに表示されます。';
@@ -359,9 +467,9 @@ async function chooseModel(id) {
   $('#model-dimensions').innerHTML = `${format(model.actual_mm)} <span>mm</span>`;
   $('#part-count').innerHTML = `${model.part_count} <span>点</span>`;
   $('#step-count').innerHTML = `${model.steps.length} <span>工程</span>`;
-  $('#target-dimensions').textContent = `目標：${model.target_mm[0]} × ${model.target_mm[1]} × 約${model.target_mm[2]} mm。実寸は上端のスタッドを含みます。`;
+  $('#target-dimensions').textContent = `黒い台座は5段・本体高48 mm。顔は同じ形状のまま38.4 mm上へ。完成高は最上部スタッド込みです。`;
   $('#viewer-model').textContent = id;
-  $('#viewer-fallback').src = `media/${id}-hero.png`;
+  $('#viewer-fallback').src = asset(`media/${id}-hero.png`);
   $('#viewer-fallback').alt = `${id}の完成形。実Blenderレンダー。`;
   $('#assembly').max = String(model.steps.length);
   const select = $('#part-select');
@@ -402,9 +510,10 @@ async function chooseModel(id) {
 }
 
 async function boot() {
-  const response = await fetch('assets/catalog.json');
+  const response = await fetch(asset('assets/catalog.json'));
   if (!response.ok) throw new Error(`設計データ HTTP ${response.status}`);
   state.catalog = await response.json();
+  if (state.catalog.revision !== REVISION) throw new Error('公開revisionと設計データが一致しません。キャッシュを更新して再読込してください。');
   try {
     viewer = new PortraitViewer();
   } catch (error) {
@@ -422,8 +531,13 @@ async function boot() {
   });
   document.querySelectorAll('[data-view]').forEach((button) => button.addEventListener('click', () => viewer?.view(button.dataset.view)));
   $('#explode').addEventListener('input', (event) => {
+    const previous = state.explosion;
     state.explosion = Number(event.target.value) / 100;
     $('#explode-value').textContent = `${event.target.value}%`;
+    if (viewer) {
+      if (previous === 0 && state.explosion > 0) viewer.restZoom = viewer.camera.zoom;
+      viewer.camera.zoom = state.explosion === 0 ? viewer.restZoom || 1 : 1;
+    }
     viewer?.update();
     viewer?.resize();
   });

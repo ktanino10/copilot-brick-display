@@ -18,11 +18,14 @@ SCALE = 0.001
 def arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", choices=["A", "B", "C"], required=True)
+    parser.add_argument("--reuse-scene", action="store_true")
+    parser.add_argument("--catalog", type=Path, default=ROOT / "design/catalog.json")
+    parser.add_argument("--downloads", type=Path, default=ROOT / "site/downloads")
     return parser.parse_args(sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else [])
 
 
-def mesh_from_stl(part, colors):
-    data = (ROOT / "site/downloads" / part["stl"]).read_bytes()
+def mesh_from_stl(part, colors, downloads):
+    data = (downloads / part["stl"]).read_bytes()
     assert hashlib.sha256(data).hexdigest() == part["sha256"]
     count = struct.unpack_from("<I", data, 80)[0]
     vertices, faces, lookup = [], [], {}
@@ -42,11 +45,11 @@ def mesh_from_stl(part, colors):
     mesh["source_stl_sha256"] = part["sha256"]
     mesh["source_units"] = "mm"
     mesh["conversion_to_metres"] = SCALE
-    mesh.materials.append(colors["cyan"] if part["id"] == "MSG-CARD" else colors["black"])
-    if part["id"] == "MSG-CARD":
-        mesh.materials.append(colors["black"])
+    mesh.materials.append(colors["black"])
+    if part["kind"] in ("front_plaque", "front_logo"):
+        mesh.materials.append(colors[part["letter_color"]])
         for polygon in mesh.polygons:
-            if polygon.center.z > 0.002001:
+            if polygon.center.z > (part["optional_color_change_z"] + .001) * SCALE:
                 polygon.material_index = 1
     return mesh
 
@@ -76,8 +79,10 @@ def key_visibility(obj, start):
 
 def main():
     args = arguments()
-    catalog = json.loads((ROOT / "design/catalog.json").read_text())
+    catalog = json.loads(args.catalog.read_text())
     model = next(m for m in catalog["models"] if m["id"] == args.model)
+    previous_meshes = {mesh.name: mesh for mesh in bpy.data.meshes
+                       if mesh.get("source_stl_sha256")} if args.reuse_scene else {}
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.object.delete(use_global=False)
     scene = bpy.context.scene
@@ -113,16 +118,18 @@ def main():
     scene["parameters_sha256"] = catalog["parameters_sha256"]
     scene["source_catalog"] = "design/catalog.json"
     scene["physical_simulation"] = False
-    scene["color_finish"] = "Optional cyan-to-black manual filament change at card z=2mm"
+    scene["color_finish"] = "Black message / logo modules; manual white filament change at each part's documented layer."
     scene["assembly_step_frames"] = 8
     colors = {key: material(key, spec["hex"]) for key, spec in catalog["colors"].items()}
     collection = bpy.data.collections.new(f"CAD / {args.model}")
     scene.collection.children.link(collection)
-    cache = {}
+    cache = {key: mesh for key, mesh in previous_meshes.items()
+             if key in catalog["parts"] and mesh["source_stl_sha256"] == catalog["parts"][key]["sha256"]}
+    scene["unchanged_meshes_reused"] = sorted(cache)
     for item in model["placements"]:
         key = item["part"]
         if key not in cache:
-            cache[key] = mesh_from_stl(catalog["parts"][key], colors)
+            cache[key] = mesh_from_stl(catalog["parts"][key], colors, args.downloads)
         obj = bpy.data.objects.new(item["id"], cache[key])
         collection.objects.link(obj)
         obj["instance_id"] = item["id"]
@@ -132,13 +139,14 @@ def main():
         obj["final_position_mm"] = item["position"]
         obj["final_rotation_degrees"] = item["rotation"]
         obj.rotation_euler = [math.radians(v) for v in item["rotation"]]
-        if key != "MSG-CARD":
+        if catalog["parts"][key]["kind"] not in ("front_plaque", "front_logo"):
             obj.material_slots[0].link = "OBJECT"
             obj.material_slots[0].material = colors[item["color"]]
         position = Vector(tuple(v * SCALE for v in item["position"]))
         start = 2 + (item["step"] - 1) * 8
         key_visibility(obj, start)
-        obj.location = position + Vector((0, 0, 0.035))
+        lift = .046 if item.get("role") == "front_module" else .035
+        obj.location = position + Vector((0, 0, lift))
         obj.keyframe_insert("location", frame=start)
         obj.location = position
         obj.keyframe_insert("location", frame=start + 5)
@@ -170,6 +178,9 @@ def main():
     orbit.rotation_euler.z = 2 * math.pi
     orbit.keyframe_insert("rotation_euler", frame=scene.frame_end)
     scene.frame_set(scene.frame_end)
+    for mesh in list(bpy.data.meshes):
+        if mesh.users == 0:
+            bpy.data.meshes.remove(mesh)
     # A saved native scene always opens on the complete model, not the empty first frame.
     scene.render.filepath = "//frames/"
     bpy.context.preferences.filepaths.save_version = 0
@@ -178,7 +189,7 @@ def main():
             for space in area.spaces:
                 if space.type == "FILE_BROWSER" and space.params:
                     space.params.directory = b"//"
-    output = ROOT / "site/downloads" / args.model / f"{args.model}.blend"
+    output = args.downloads / args.model / f"{args.model}.blend"
     bpy.ops.wm.save_as_mainfile(filepath=str(output), check_existing=False, compress=False)
     print(f"SAVED_NATIVE {args.model} {len(model['placements'])} instances {scene.frame_end} frames")
 

@@ -7,13 +7,14 @@ from pathlib import Path
 from PIL import Image
 from playwright.sync_api import sync_playwright, expect
 from tribute_browser import verify_tribute
+from exploded_browser import verify_exploded
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = os.environ.get("BASE_URL", "http://127.0.0.1:8766/copilot-brick-display/")
 OUT = ROOT / "build/screenshots"
 OUT.mkdir(parents=True, exist_ok=True)
 catalog = json.loads((ROOT / "design/catalog.json").read_text())
-errors, failures = [], []
+errors, failures, explosion_records = [], [], []
 
 
 def check_no_overflow(page):
@@ -53,7 +54,9 @@ with sync_playwright() as playwright:
         page.screenshot(path=str(OUT / "viewer-failure.png"), full_page=True)
         raise
     expect(page.locator("#viewport")).to_have_attribute("data-model", "B")
-    expect(page.locator("#viewport")).to_have_attribute("data-instances", "129")
+    expect(page.locator("#viewport")).to_have_attribute("data-instances", str(catalog["models"][1]["part_count"]))
+    expect(page.locator("#published-revision")).to_have_text(catalog["revision"])
+    assert "@YOUR-USERNAME" not in page.locator("body").inner_text()
     page.locator('[data-view="front"]').click()
     page.wait_for_timeout(600)
     page.locator("#viewport").screenshot(path=str(OUT / "B-front.png"))
@@ -66,6 +69,7 @@ with sync_playwright() as playwright:
         expect(page.locator("#viewport")).to_have_attribute("data-model", model["id"], timeout=180000)
         expect(page.locator("#viewport")).to_have_attribute("data-instances", str(model["part_count"]))
         expect(page.locator("#part-count")).to_contain_text(str(model["part_count"]))
+        explosion_records.append(verify_exploded(page, model, OUT))
         page.locator("#part-select").select_option(model["placements"][0]["id"])
         expect(page.locator("#part-details")).to_contain_text(model["placements"][0]["part"])
         expect(page.locator("#part-drawing")).to_be_visible()
@@ -112,10 +116,11 @@ with sync_playwright() as playwright:
     page.screenshot(path=str(OUT / "C-inspector.png"), full_page=True)
     page.goto(BASE + "guide.html?model=C", wait_until="networkidle")
     expect(page.locator("#guide-model")).to_have_value("C")
-    expect(page.locator("#guide-step option")).to_have_count(28)
-    page.locator("#guide-step").select_option("28")
+    c_steps = len(catalog["models"][2]["steps"])
+    expect(page.locator("#guide-step option")).to_have_count(c_steps)
+    page.locator("#guide-step").select_option(str(c_steps))
     page.wait_for_function("document.querySelector('#guide-drawing').complete && document.querySelector('#guide-drawing').naturalWidth > 0")
-    expect(page.locator("#guide-drawing")).to_have_attribute("src", "drawings/C/step-28.svg")
+    expect(page.locator("#guide-drawing")).to_have_attribute("src", f"drawings/C/step-{c_steps:02}.svg?rev={catalog['revision']}")
     check_no_overflow(page)
     context.close()
     print("MOBILE_BEGIN", flush=True)
@@ -131,6 +136,10 @@ with sync_playwright() as playwright:
         raise
     mobile_page.screenshot(path=str(OUT / "mobile.png"), full_page=True)
     check_no_overflow(mobile_page)
+    for model in catalog["models"]:
+        mobile_page.locator(f'[data-model="{model["id"]}"]').click()
+        expect(mobile_page.locator("#viewport")).to_have_attribute("data-model", model["id"], timeout=180000)
+        explosion_records.append(verify_exploded(mobile_page, model, OUT, mobile=True))
     mobile.close()
     verify_tribute(browser, ROOT, BASE, OUT)
     assert not errors, errors
@@ -139,6 +148,7 @@ with sync_playwright() as playwright:
         "status": "PASS_REAL_BROWSER", "browser": browser.version,
         "repository_prefix": "/copilot-brick-display/",
         "models": ["A", "B", "C"], "native_webgl_geometry_visible": colors,
+        "revision": catalog["revision"], "vertical_explosion": explosion_records,
         "checks": ["model changes", "four camera views", "part selection + CAD sheet", "bounds",
                    "explosion", "stage seek + play/pause", "all three MP4 decoded in browser",
                    "Japanese guide stage deep link", "desktop/mobile overflow", "reduced motion", "zero page errors/404s"],

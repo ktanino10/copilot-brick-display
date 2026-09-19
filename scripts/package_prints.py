@@ -50,12 +50,14 @@ def pack(items, c):
     return plates
 
 
-def write_3mf(path, color, plate, c, cache):
+def write_3mf(path, color, plate, c, cache, finish=None):
     model = ET.Element(tag("model"), {"unit": "millimeter", "xml:lang": "en-US"})
     ET.SubElement(model, tag("metadata"), {"name": "Title"}).text = path.stem
     ET.SubElement(model, tag("metadata"), {"name": "Description"}).text = (
         "Unsliced geometry, single color. Not a validated printer profile or G-code. "
-        "6 mm brim envelope reserved; verify exclusions, toolpaths, fit and settings in your slicer.")
+        "6 mm brim envelope reserved; verify exclusions, toolpaths, fit and settings in your slicer. " +
+        (f"Dedicated finish plate: start {color}, manually change to {finish[0]} after {finish[1]:g}mm. No other black parts on this plate."
+         if finish else "No filament change on this plate."))
     resources = ET.SubElement(model, tag("resources"))
     bases = ET.SubElement(resources, tag("basematerials"), {"id": "1"})
     ET.SubElement(bases, tag("base"), {"name": color, "displaycolor": c["colors"][color]["hex"].upper() + "FF"})
@@ -96,6 +98,7 @@ def write_3mf(path, color, plate, c, cache):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--plates-only", action="store_true")
+    parser.add_argument("--reuse-plates", action="store_true")
     args = parser.parse_args()
     c = json.loads((ROOT / "design/catalog.json").read_text())
     downloads = ROOT / "site/downloads"
@@ -103,7 +106,7 @@ def main():
     read_first = read_first.replace("(../site/", "(https://ktanino10.github.io/copilot-brick-display/")
     read_first = read_first.replace("(../design/", "(https://github.com/ktanino10/copilot-brick-display/blob/main/design/")
     read_first = read_first.replace("(rebuild.md)", "(https://ktanino10.github.io/copilot-brick-display/rebuild.html)")
-    coupons = sorted(key for key in c["parts"] if key.startswith("FIT-"))
+    coupons = sorted(key for key in c["parts"] if key.startswith(("FIT-", "NP3-FIT-")))
     if not args.plates_only:
         with zipfile.ZipFile(downloads / "fit-coupons.zip", "w", zipfile.ZIP_DEFLATED) as archive:
             for key in coupons:
@@ -124,13 +127,32 @@ def main():
                 archive.write(downloads / "fit-coupons.zip", "fit-coupons.zip")
         plates_path = folder / "plates"
         plates_path.mkdir(exist_ok=True)
+        if args.reuse_plates:
+            manifest = json.loads((plates_path / "manifest.json").read_text())["plates"]
+            counts = Counter((item["part"], plate["color"]) for plate in manifest for item in plate["items"])
+            expected = Counter({(row["part"], row["color"]): row["quantity"] for row in model["bom"]})
+            assert counts == expected, "Cached print layout no longer matches the current BOM"
+            report = json.loads((ROOT / "validation/3mf.json").read_text())
+            verified = next(item for item in report["models"] if item["model"] == model["id"])
+            import hashlib
+            for item in verified["files"]:
+                assert hashlib.sha256((plates_path / item["file"]).read_bytes()).hexdigest() == item["sha256"]
+            results.append({"model": model["id"], "plates": len(manifest), "instances": sum(counts.values()),
+                            "bom_exact": True, "all_6mm_brim_envelopes_inside_16_to_240_mm": True})
+            print(f"{model['id']}: rebuilt print ZIP; reused {len(manifest)} independently verified 3MF plates")
+            continue
         manifest = []
         actual_counts = Counter()
-        for color in c["colors"]:
-            parts = [row["part"] for row in model["bom"] if row["color"] == color for _ in range(row["quantity"])]
+        groups = defaultdict(list)
+        for row in model["bom"]:
+            groups[(row["color"], row.get("finish_color", ""), row.get("color_change_z_mm", ""))].extend(
+                [row["part"]] * row["quantity"])
+        for (color, finish_color, change_z), parts in groups.items():
+            finish = (finish_color, float(change_z)) if finish_color else None
             for index, plate in enumerate(pack(parts, c), 1):
-                filename = f"{model['id']}-{color}-{index:02}.3mf"
-                write_3mf(plates_path / filename, color, plate, c, cache)
+                suffix = f"-to-{finish_color}-z{str(change_z).replace('.', 'p')}" if finish else ""
+                filename = f"{model['id']}-{color}{suffix}-{index:02}.3mf"
+                write_3mf(plates_path / filename, color, plate, c, cache, finish)
                 for i, item in enumerate(plate):
                     actual_counts[(item["part"], color)] += 1
                     x1, y1, x2, y2 = item["brim_box"]
@@ -138,7 +160,8 @@ def main():
                     for previous in plate[:i]:
                         a1, b1, a2, b2 = previous["brim_box"]
                         assert min(x2, a2) <= max(x1, a1) or min(y2, b2) <= max(y1, b1)
-                manifest.append({"file": filename, "color": color, "items": plate})
+                manifest.append({"file": filename, "color": color, "items": plate,
+                                 "finish_color": finish_color, "manual_change_after_z_mm": change_z})
         expected = Counter({(row["part"], row["color"]): row["quantity"] for row in model["bom"]})
         assert actual_counts == expected
         write_json(plates_path / "manifest.json", {
@@ -147,6 +170,10 @@ def main():
             "note": "Generic 3MF. Confirm real exclusions, orientation, bridge paths and nozzle profile. Print by layer, not sequential by object.",
             "plates": manifest,
         })
+        expected_files = {item["file"] for item in manifest} | {"manifest.json"}
+        for stale in plates_path.iterdir():
+            if stale.is_file() and stale.name not in expected_files and stale.suffix == ".3mf":
+                stale.unlink()
         with zipfile.ZipFile(folder / "plates.zip", "w", zipfile.ZIP_DEFLATED) as archive:
             for path in sorted(plates_path.iterdir()):
                 archive.write(path, path.name)

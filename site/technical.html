@@ -1,222 +1,227 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>寸法の根拠と設計 — Brick Portrait</title><link rel="stylesheet" href="style.css"><link rel="icon" href="icon.svg"></head>
+<title>寸法の根拠と設計 — Brick Portrait</title><link rel="stylesheet" href="style.css?rev=3.0-five-course-front"><link rel="icon" href="icon.svg?rev=3.0-five-course-front"></head>
 <body><header class="site-header"><a class="brand" href="./">BRICK<br>PORTRAIT</a>
 <nav><a href="./#workbench">3Dとダウンロード</a><a href="guide.html">作り方</a><a href="technical.html">設計</a></nav></header>
 <main class="document"><div class="doc-nav"><a href="./">← 模型のページへ</a><a href="guide.html">作り方</a><a href="rebuild.html">再生成</a></div>
-<h1 id="design-contract">Design contract / 設計の正本</h1>
-<h2 id="data-flow-and-ownership">Data flow and ownership</h2>
-<p><code>design/parameters.json</code> and <code>scripts/design.py</code> define the fixed grid, three discrete layouts,
-exact message, instance IDs, colors, quantities and numbered steps. <code>design/catalog.json</code>
-is generated from them, then enriched with measurements from real FreeCAD solids.
-<code>scripts/freecad_geometry.py</code> is the sole mechanical shape generator.</p>
-<p>FreeCAD BREP → native FCStd / STEP / print STL → the same STL meshes in Blender and the web viewer.
-FreeCAD TechDraw hidden-line projections form the manufacturing views. Instruction plan views
-are placement diagrams from catalogue bounds, explicitly distinct from section/manufacturing views.
-No original photograph is included. There are no electrical parts.</p>
-<p>One mechanical owner integrates changes. A separate manufacturing engineer provided bounded
-process advice; a separate mechanical reviewer reviews a fixed snapshot. These are distinct
-from a physical prototype, a license from a brand owner, and a safety certification.
-The role separation is inspired by the public
-<a href="https://github.com/ktanino10/ai-hardware-engineering-team/blob/main/docs/architecture.md">AI Hardware Engineering Team architecture</a>.
-No other project's circuit, run ledger, assembly, or safety status is inherited.</p>
-<h2 id="nominal-dimensions-sources-and-choices">Nominal dimensions, sources, and choices</h2>
-<p>The manufacturer-filed patent <a href="https://patents.google.com/patent/WO2019106129A1/en">WO2019106129A1</a>
-describes an <strong>approximately</strong> 32×16×9.6 mm four-by-two brick and an approximately 4.8 mm stud.
-It is not an FDM manufacturing standard. The 8 mm grid / 3.2 mm plate convention is also
-reported by the museum and community references in <a href="downloads/sources.json">sources.json</a>.
-Those references disagree on stud measurements and stud height. We do not turn those
-measurements into a claim about all commercial bricks.</p>
-<p>The following are <strong>our adjustable design candidates</strong>, not an official LEGO specification:
-stud height 1.8 mm; total body gap 0.2 mm; 0.04 mm default radial female clearance;
-1.6 mm roof (1.0 mm on a 3.2 mm plate); 3.2 mm tube inner bore; 1.2 mm roof-support ribs.
-All regular <code>BR-*</code> parts and the underside of <code>MSG-DOCK</code> target standard stud-grid connections.
-<code>MSG-CARD</code> uses the separate slot below. Tube internal bores are <strong>not</strong> an accessory interface.</p>
-<h3 id="connection-equations-mm">Connection equations (mm)</h3>
-<p>Let <code>p=8</code>, reference stud radius <code>r=4.8/2</code>, total body gap <code>g=0.2</code>, and radial clearance <code>c</code>.
-Local nominal grid origin is <code>(0,0)</code>.</p>
+<h1 id="revision-3-five-course-base-and-independent-front-modules">Revision 3 / Five-course base and independent front modules</h1>
+<p>Current normal-model revision: <strong><code>3.0-five-course-front</code></strong>.
+The user approved the actual B front/oblique/close-up preview. This approval covers appearance
+and design intent only, not physical fit, strength, production qualification or independent review.
+The approval and unchanged-geometry constraints are recorded in
+<a href="downloads/revision3-approval.json?rev=3.0-five-course-front">revision3-approval.json</a> and
+<a href="downloads/revision3-invariants.json?rev=3.0-five-course-front">revision3-invariants.json</a>.</p>
+<h2 id="one-geometric-source">One geometric source</h2>
+<p><code>design/parameters.json</code> and <code>scripts/design.py</code> define pitch, courses, unique part IDs,
+colors/finishes, quantities, placements and numbered steps. <code>design/catalog.json</code> is generated
+and populated with actual FreeCAD measurements. <code>scripts/freecad_geometry.py</code> owns the unchanged
+brick family; <code>scripts/front_nameplate.py</code> owns the new front interfaces and reliefs.</p>
+<p>Actual FreeCAD BREP → FCStd / STEP / mm STL → the same meshes in Blender and the WebGL viewer.
+TechDraw projections and planar sections are used for manufacturing drawings. Numbered plan
+views are explicitly placement diagrams from the same catalogue. No raster-only or texture-only
+lettering/logo substitutes for the delivered solid geometry.</p>
+<p>Unchanged face/crest parts keep their original STL hashes and move only <strong>+38.4 mm in Z</strong>.
+The source/cache recipes and B preview parts are reused instead of recalculating unchanged solids.
+The five-course base is visible throughout the assembly sequence, so affected scenes, drawings
+and movie frames are genuinely regenerated from the revised placements.</p>
+<p>The unselected tribute product is frozen, including its old message and public artifacts.
+It remains pinned to <code>BRICK-8-MSG-SLOT-1</code> at commit <code>WITHDRAWN-PRIVACY-REVISION</code>. Normal A/B/C use the separate
+<strong><code>BASE-FRONT-NP3</code></strong> interface. The locked historical helper remains available; it is not silently
+reinterpreted as the new module.</p>
+<h2 id="nominal-references-versus-design-choices">Nominal references versus design choices</h2>
+<p>The LEGO-filed patent <a href="https://patents.google.com/patent/WO2019106129A1/en">WO2019106129A1</a>
+describes an approximate 32×16×9.6 mm four-by-two brick and approximate 4.8 mm knobs.
+It does not specify this project's FDM tolerances. Museum and community references in
+<a href="downloads/sources.json?rev=3.0-five-course-front">sources.json</a> support the 8 mm grid / 3.2 mm plate convention
+but disagree about some measured stud dimensions.</p>
+<p>Our adjustable candidates remain: 1.8 mm stud height, 0.2 mm total body gap, default female
+radial clearance +0.04 mm, usual roof 1.6 mm, thin-plate roof 1.0 mm, internal tube bore
+3.2 mm and roof ribs 1.2 mm. Internal bores are not a claimed commercial accessory interface.</p>
 <table>
 <thead>
 <tr>
 <th>Feature</th>
-<th>Equation</th>
-<th>Default example</th>
+<th>Constraint / default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Outer faces</td>
-<td><code>g/2 .. n*p-g/2</code></td>
-<td>2-wide body 15.8 mm</td>
+<td>Body sides</td>
+<td><code>0.1 .. 8*n−0.1</code>; stud centers <code>4+8*i</code></td>
 </tr>
 <tr>
-<td>Stud centers</td>
-<td><code>((i+0.5)*p, (j+0.5)*p)</code></td>
-<td>4, 12, 20…</td>
+<td>Inside-wall coordinate</td>
+<td><code>4−2.4−c = 1.56 mm</code>; physical outer wall 1.46 mm</td>
 </tr>
 <tr>
-<td>Printed male diameter</td>
-<td><code>4.8 + stud_diameter_correction</code></td>
-<td>4.8 mm</td>
+<td>Multi-row tube outside radius</td>
+<td><code>8/sqrt(2)−2.4−c = 3.216854 mm</code></td>
 </tr>
 <tr>
-<td>Inside wall coordinate</td>
-<td><code>p/2-r-c</code></td>
-<td>1.56 mm from nominal edge</td>
+<td>One-row post radius</td>
+<td><code>4−2.4−c = 1.56 mm</code></td>
 </tr>
 <tr>
-<td>Physical outer wall thickness</td>
-<td><code>p/2-r-c-g/2</code></td>
-<td>1.46 mm</td>
-</tr>
-<tr>
-<td>Multi-row tube outer radius</td>
-<td><code>p/sqrt(2)-r-c</code></td>
-<td>3.216854 mm</td>
-</tr>
-<tr>
-<td>One-row central-post radius</td>
-<td><code>p/2-r-c</code></td>
-<td>1.56 mm</td>
-</tr>
-<tr>
-<td>Tube wall, radial</td>
-<td><code>tube_radius - 3.2/2</code></td>
+<td>Tube radial wall</td>
 <td>1.616854 mm</td>
 </tr>
 <tr>
-<td>Rib locations / width</td>
-<td><code>x=i*p</code>, <code>y=j*p</code> / 1.2 mm</td>
-<td>nominal-stud clearance ≥1.0 mm</td>
+<td>Grid ribs</td>
+<td>1.2 mm at nominal row/column boundaries; reference stud clearance ≥1.0 mm</td>
 </tr>
 <tr>
-<td>Normal roof headroom over stud</td>
-<td><code>9.6-1.6-1.8</code></td>
-<td>6.2 mm</td>
+<td>Orthogonal roof span</td>
+<td>≤6.8 mm between ribs; tube bores 3.2 mm</td>
 </tr>
 <tr>
-<td>Thin-plate / dock headroom</td>
-<td><code>2.2-1.8</code></td>
-<td>0.4 mm</td>
+<td>Thin plate headroom</td>
+<td><code>3.2−1.0−1.8 = 0.4 mm</code></td>
 </tr>
 </tbody>
 </table>
-<p>The tube formula is derived from the diagonal distance between an interstitial tube and the
-four surrounding studs. It is not chosen independently of the stud grid.
-The default female surfaces have a positive gap to an ideal 4.8 mm reference stud.
-<strong>Nominal tangency/gap does not prove clutch</strong>: print roughness, actual commercial diameter,
-material elasticity, cooling, wear and printer compensation matter. Negative-clearance coupons
-deliberately test interference and are not a mandate to force a fit.</p>
-<p>The stud has a 0.25 mm high radial lead-in at the tip; female outer-wall openings and tube/post
-tips have a 0.20 mm radial entry relief over 0.30 mm. The grid ribs already clear a reference
-stud by at least 1.0 mm and do not rely on an entry chamfer for insertion.
-No pitch or placement is scaled for different model sizes.</p>
-<h2 id="the-three-layouts">The three layouts</h2>
+<p>An ideal reference stud has nominal positive clearance at the default setting. This does not
+prove frictional clutch. Independent male-diameter and female-clearance coupons must be printed
+and tested with actual commercial and printed mates. PLA is not ABS; do not force, lever or hammer.</p>
+<h2 id="real-five-course-bases">Real five-course bases</h2>
 <table>
 <thead>
 <tr>
 <th>Model</th>
-<th>Target envelope</th>
-<th>CAD envelope including top studs</th>
-<th>Face / goggle / side depth</th>
-<th>Parts</th>
+<th>Actual W×D×H, mm</th>
+<th>Installed parts</th>
+<th>Base blocks / courses</th>
+<th>Unchanged face courses</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>A</td>
-<td>144×64×~150</td>
-<td>143.8×63.8×149.0 mm</td>
-<td>16 / 24 / 24 mm nominal grid</td>
-<td>74</td>
+<td>143.8 × 63.8 × 187.4</td>
+<td>91</td>
+<td>15 / 5</td>
+<td>14</td>
 </tr>
 <tr>
 <td>B</td>
-<td>192×80×~200</td>
-<td>191.8×79.8×200.2 mm</td>
-<td>32 / 40 / 48 mm nominal grid</td>
-<td>129</td>
+<td>191.8 × 79.8 × 238.6</td>
+<td>150</td>
+<td>19 / 5</td>
+<td>19</td>
 </tr>
 <tr>
 <td>C</td>
-<td>240×112×~250</td>
-<td>239.8×111.8×248.2 mm</td>
-<td>48 / 64 / 80 mm nominal grid</td>
-<td>203</td>
+<td>239.8 × 111.8 × 286.6</td>
+<td>228</td>
+<td>24 / 5</td>
+<td>24</td>
 </tr>
 </tbody>
 </table>
-<p>Nominal depth entries are grid lengths; a single body's outside length is 0.2 mm less.
-A has 14 body courses and a 3.2 mm crest; B has 19 courses and a 6.4 mm crest;
-C has 24 courses and a 6.4 mm crest. The silhouettes, green-bar locations, forward relief,
-side thicknesses, course partitions and base layout differ.</p>
-<p>Runs use 2/4-stud alternating joint starts (with a 5-stud run where necessary to avoid a tiny
-end cantilever). A part spans its full designed depth, avoiding continuous unconnected
-front/back walls. Newly widening rim runs retain support from the previous course.
-Final graph checks include both C base halves, all body parts, the front dock and the card.
-The two C base halves are tied across their seam by the front dock and a first-course body brick.</p>
-<h2 id="shared-external-message-module">Shared external message module</h2>
-<p>Contract ID: <code>BRICK-8-MSG-SLOT-1</code>, in <a href="downloads/interface.json">interface.json</a>.</p>
-<ul>
-<li><code>MSG-DOCK</code>: nominal 12×2 studs; actual body 95.8×15.8×9.6 mm; 24 underside positions,
-  no upper studs; 2.2 mm deep underside cavity.</li>
-<li>Slot: 88.4×2.4 mm, depth 4.8; local <code>x=3.8..92.2</code>, <code>y=2.8..5.2</code>, <code>z=4.8..9.6</code>.</li>
-<li><code>MSG-CARD</code>: print orientation <code>x=0..88</code>, <code>y=0..24</code>, <code>z=0..2</code>, letters to <code>z=2.6</code>.
-  Its first 4.8 mm in local Y is smooth.</li>
-<li>Assembled card relative to dock: translation <code>(4,5,4.8)</code> mm, rotation +90° around X.
-  This gives 0.4 mm total width and length clearance. It is a loose gravity slot, not a snap fit.</li>
-<li>The final card slides up without the goggles obstructing it. Install the dock before the body.
-  Neither component is a handle.</li>
-</ul>
-<p>The card is independent from the main object, printed flat, and can be replaced.
-Exactly three lines are used, with no added year count, thanks, or period:
-<code>@YOUR-USERNAME</code> / <code>Same icon, New adventures</code> / <code>github.com/YOUR-USERNAME</code>.
-The optional color change after z=2.0 mm gives the cyan/black appearance shown in the media.</p>
-<h2 id="manufacturing-dispositions">Manufacturing dispositions</h2>
+<p>The base body is <strong>48 mm = 5×9.6 mm</strong>, with independent, printable, separable blocks—not one
+large solid box with drawn seams. Upper courses alternate six-stud runs and half-offset
+three/six-stud runs. C retains two 15×14-stud bottom halves; subsequent courses span their seam.
+Each block spans its designed depth, so front and rear are not unrelated thin skins.</p>
+<p>The first front 8 mm row is deliberately reserved for the two vertical channels:
+its top studs are removed and its underside is reinforced rather than a commercial socket.
+Rows starting at Y=12 mm keep the fixed grid. The lowest face parts start at Z=48 mm behind
+the front interfaces. Neither the face nor the block pitch is scaled.</p>
+<p>C's assembled height exceeding the printer's 256 mm nominal volume is not a printing violation:
+only individual parts are printed. The largest B footprint plus 6 mm external brim is
+203.8×91.8 mm; each C bottom half plus brim is 131.8×123.8 mm. Actual plate exclusions,
+toolpaths, warping and first layers still require a slicer and real print check.</p>
+<h2 id="two-line-message-and-right-hand-logo">Two-line message and right-hand logo</h2>
+<p>The exact text is:</p>
+<blockquote>
+<p>Same icon, New adventures<br>
+github.com/YOUR-USERNAME</p>
+</blockquote>
+<p>There is no handle line on the normal models. The standalone raised cyan sign and its old dock
+are removed from A/B/C. The current message and logo are black-backed front inserts with white
+relief, entirely inside the five-course base at <strong>Z=4..44 mm</strong>.</p>
 <table>
 <thead>
 <tr>
-<th>Raised issue</th>
-<th>Design disposition</th>
-<th>Still unverified physically</th>
+<th>Model</th>
+<th>Message backing W×H</th>
+<th>Main / URL actual cap height</th>
+<th>Logo disc / backing width</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Tubes alone leave long unsupported roof corridors</td>
-<td>1.2 mm grid ribs added; straight roof spans bounded to 6.8 mm; bores 3.2 mm</td>
-<td>Actual bridge sag and toolpaths</td>
+<td>A</td>
+<td>102×40 mm</td>
+<td>10 / 7 mm</td>
+<td>28 / 32 mm</td>
 </tr>
 <tr>
-<td>0.2 mm roof headroom on thin plates is fragile</td>
-<td>Thin roof 1.0 mm and dock cavity 2.2 mm give 0.4 mm nominal headroom</td>
-<td>Printed flatness and seating</td>
+<td>B</td>
+<td>142×40 mm</td>
+<td>12 / 8 mm</td>
+<td>36 / 40 mm</td>
 </tr>
 <tr>
-<td>A 240 mm single base plus brim is too near bed limits</td>
-<td>C base split into identical 15×14-stud halves</td>
-<td>Warping, plate exclusions, seam rigidity</td>
-</tr>
-<tr>
-<td>Male and female fit need independent calibration</td>
-<td>Separate diameter and radial-clearance sweeps</td>
-<td>Clutch, force, repeatability</td>
-</tr>
-<tr>
-<td>Dense small plaque letters do not print well vertically</td>
-<td>Separate flat-printed card; 0.2 mm recommendation; optional manual color swap</td>
-<td>Actual letter fidelity and slot fit</td>
+<td>C</td>
+<td>182×40 mm</td>
+<td>14.5 / 9 mm</td>
+<td>40 / 48 mm</td>
 </tr>
 </tbody>
 </table>
-<h2 id="evidence-boundary">Evidence boundary</h2>
-<p>Boolean zero-interference, watertight meshes, native-file reopen, a connected nominal stud graph,
-and assembly animations are digital checks. The material centroid calculation assumes fully
-solid CAD material, not a sliced infill distribution. It only checks whether the projection is
-inside the base footprint; it is not a tipping-force or strength result.</p>
-<p>Physical fit, friction/retention, fatigue, PLA strength, finished mass, printing time, heat resistance,
-and the assembled object's tip behavior remain <strong>unverified</strong>. No G-code or blanket production
-approval is issued. See <a href="guide.html">the beginner workflow</a> before printing.</p></main><footer class="site-footer"><a class="brand" href="./">BRICK PORTRAIT</a>
+<p>Barlow Condensed Black (SIL OFL, notice bundled) is shaped to the selected height without
+thinning it horizontally. Actual parallel straight strokes in the raised cap faces are measured;
+the design rejects gauges below 0.84 mm. Mathematical curve terminals are not represented as
+uniform-width manufactured walls. In the approved B, the main line is 133.6875 mm wide and
+the URL approximately 67.9915 mm; the smallest measured paired straight stroke is approximately
+1.4747 mm.</p>
+<p>The mark is vectorized from the user-provided black-circle/white silhouette image. Only the
+derived normalized outline coordinates and solid relief are published, not the input raster
+or its private path. A black carrier supports the black circular pad and all white relief,
+including the tail and ears. This is an unofficial personal model, not an endorsed product.</p>
+<p>Print both modules rear-face-down. The message carrier is 2.4 mm thick with 0.8 mm raised text.
+The logo adds a 0.4 mm black disc before its 0.8 mm white relief. Manual black-to-white changes
+occur after <strong>2.4 mm</strong> for text and <strong>2.8 mm</strong> for the logo. These are separate print plates;
+do not mix other black blocks into a plate that will change to white. AMS is not required.</p>
+<h2 id="positive-geometry-and-removal">Positive geometry and removal</h2>
+<p>Each module has a wider rear face and a front face narrowed by 2 mm per X side.
+The default receiver side allowance is 0.2 mm; small C15/C20/C25 receiver coupons are provided.
+The back-to-front transition is 2.4 mm deep, with a 0.8 mm initial flat back and 1.2 mm vertical
+edge relief. The printable widening slope is no steeper than 45° to vertical.</p>
+<p>The matching dovetail channels run vertically through the five aligned courses. Shaped bottom
+seats stop downward motion. Their side geometry blocks frontward and lateral pulling;
+<strong>two message keepers and one separate logo keeper</strong> block upward escape. Keepers engage the
+second stud row. Their physical clutch is a calibration requirement, not an assumed certified force.</p>
+<p>For replacement, lift the relevant keeper(s) approximately 6 mm, move them at least 32 mm forward and set them aside,
+then slide that module straight up at least 45 mm before taking it forward. The other front
+module can remain installed. Face parts are behind this path, with nominal Y clearance.
+Never lift the entire object by a module, keeper, head or goggles.</p>
+<p>Digital checks test final solids, blocked translations, released vertical samples, and the
+staged viewer route. They do not prove arbitrary forced motion, elastic deformation, wear,
+human grip strength, clutch force or printed durability.</p>
+<h2 id="strong-vertical-exploded-view">Strong vertical exploded view</h2>
+<p>0% is exactly the completed catalogue pose. The initial slider phases first lift the keepers,
+move them forward, then lift and move both front modules clear. The forward distance is computed
+as at least the keeper's 16 mm nominal depth plus the module's 14 mm forward travel plus a 2 mm
+display clearance: 32 mm. The requested minimum <code>keeper_forward_mm</code> cannot override that safety envelope. The remaining range separates
+courses around a central reference: lower courses move down and upper courses move up.</p>
+<p>At 100%, each neighboring body/base course receives 20 mm relative display displacement.
+The resulting clear gap, including 1.8 mm studs, is at least <strong>18.2 mm</strong>. All five base courses
+participate. Small front modules are displayed below the base only after the safe initial
+clearance route. This is explanatory movement, not an instruction to pull the whole model apart
+simultaneously or a physical simulation.</p>
+<p>Cached local bounds are rotated once and translated per update; no full-vertex scan or new
+geometry is created every frame. Camera target, orthographic frustum and clipping use visible
+exploded bounds while preserving the current view direction. Actual desktop/mobile 0/50/100%
+screenshots, gap checks, return-to-zero, selection and assembly-control checks are release gates.</p>
+<h2 id="review-and-physical-boundary">Review and physical boundary</h2>
+<p>One mechanical owner integrates the change; the same separate mechanical reviewer reviews a
+fixed changed snapshot and its final presentations. Native reopen, STEP/STL consistency,
+watertight meshes, contact/retention geometry, body hashes, BOM/steps, actual Blender scenes,
+video decode and public download hashes are recorded separately.</p>
+<p>The material centroid is a uniform solid-CAD proxy, not sliced mass or a measured tipping load.
+The increased height requires a fresh real-world stability check on a low, flat, safe surface.
+Physical fit, printed-thread or stud wear, PLA strength, clutch, heat resistance, print time/mass,
+tip resistance and toy safety remain <strong>unverified</strong>. Print the calibration pieces first.</p></main><footer class="site-footer"><a class="brand" href="./">BRICK PORTRAIT</a>
 <p>非公式・成人向け卓上オブジェ。実物の嵌合、保持力、耐久性、転倒は未検証です。</p>
 <a href="notices.html">権利・依存ライブラリ</a></footer>
 </body></html>

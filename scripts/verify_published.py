@@ -42,8 +42,11 @@ def main():
         files.add(f"drawings/{key}/overview.svg")
         files.add(f"drawings/{key}/exploded.svg")
         files.update(f"drawings/{key}/step-{step['number']:02d}.svg" for step in model["steps"])
-        exact += [f"downloads/{key}/{key}.FCStd", f"downloads/{key}/bom.csv",
-                  f"media/{key}-assembly.mp4"]
+        exact += [f"downloads/{key}/{key}.FCStd", f"downloads/{key}/{key}.step",
+                  f"downloads/{key}/{key}.blend", f"downloads/{key}/bom.csv",
+                  f"downloads/{key}/drawings.pdf", f"downloads/{key}/print-kit.zip",
+                  f"media/{key}-assembly.mp4", f"media/{key}-base-front.png",
+                  f"downloads/parts/NP3-TEXT-{key}.stl", f"downloads/parts/NP3-LOGO-{key}.stl"]
     files.update(f"downloads/{part['stl']}" for part in c["parts"].values())
     tribute_path = ROOT / "site/tribute/manifest.json"
     if tribute_path.exists():
@@ -63,7 +66,7 @@ def main():
         reached = list(pool.map(check, sorted(files)))
     hashes = {}
     for relative in exact:
-        remote = fetch(base + quote(relative))
+        remote = fetch(base + quote(relative) + "?rev=" + quote(c["revision"]))
         local = (ROOT / "site" / relative).read_bytes()
         assert remote == local, f"Published bytes differ: {relative}"
         hashes[relative] = hashlib.sha256(remote).hexdigest()
@@ -76,7 +79,8 @@ def main():
             assert downloaded.startswith(magic), relative
             prefixes[relative] = "download prefix matches native format"
     write_json(ROOT / "validation/published.json", {
-        "status": "PASS_LIVE_GITHUB_PAGES", "base_url": base, "reachable_urls": reached,
+        "status": "PASS_LIVE_GITHUB_PAGES", "base_url": base, "revision": c["revision"],
+        "cache_identifying_url": base + "?rev=" + quote(c["revision"]), "reachable_urls": reached,
         "exact_published_hashes": hashes, "native_range_downloads": prefixes,
         "source_photos": "not published", "physical_testing": "NOT_PERFORMED",
     })

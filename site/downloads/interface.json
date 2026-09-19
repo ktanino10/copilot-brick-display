@@ -1,6 +1,6 @@
 {
-  "id": "BRICK-8-MSG-SLOT-1",
-  "revision": "1.0",
+  "id": "BASE-FRONT-NP3",
+  "revision": "3.0-five-course-front",
   "units": "mm",
   "status": "digital_prototype_physical_fit_unverified",
   "brick": {
@@ -21,37 +21,68 @@
     "roof_support_rib_width": 1.2
   },
   "message": {
+    "interface_id": "BASE-FRONT-NP3",
     "lines": [
-      "@YOUR-USERNAME",
       "Same icon, New adventures",
       "github.com/YOUR-USERNAME"
     ],
-    "dock_studs": [
-      12,
-      2
+    "height": 40.0,
+    "thickness": 2.4,
+    "relief": 0.8,
+    "minimum_straight_stroke": 0.84,
+    "font": "resources/fonts/barlow-condensed/BarlowCondensed-Black.ttf",
+    "line_bottoms": [
+      22.0,
+      8.0
     ],
-    "dock_height": 9.6,
-    "dock_socket_depth": 2.2,
-    "slot_length": 88.4,
-    "slot_width": 2.4,
-    "slot_depth": 4.8,
-    "slot_center_y": 4.0,
-    "card_width": 88.0,
-    "card_height": 24.0,
-    "card_thickness": 2.0,
-    "text_relief": 0.6,
-    "font": "resources/fonts/B612Mono-Bold.ttf",
-    "text_sizes": [
-      4.0,
-      3.3,
-      2.9
-    ],
-    "text_baselines": [
-      17.6,
-      11.8,
-      6.3
-    ]
+    "side_taper": 2.0,
+    "rear_vertical_margin": 1.2,
+    "rear_flat_thickness": 0.8,
+    "clearance": 0.2,
+    "back_y": 3.3,
+    "bottom_z": 4.0,
+    "front_beam_depth": 5.6,
+    "base_color": "black",
+    "letter_color": "white",
+    "base_courses": 5,
+    "x": 4.0,
+    "retention": "Vertical dovetail slide; two removable stud-mounted top keepers.",
+    "frozen_legacy_interface": "BRICK-8-MSG-SLOT-1 at WITHDRAWN-PRIVACY-REVISION; tribute unchanged."
   },
+  "logo": {
+    "outline": "resources/github-mark-relief.json",
+    "disc_height": 0.4,
+    "relief": 0.8,
+    "back_y": 3.7,
+    "base_color": "black",
+    "relief_color": "white",
+    "finish_color_change_z": 2.8,
+    "provenance": "Printable relief derived from user-provided artwork; no original raster distributed."
+  },
+  "variants": [
+    {
+      "id": "A",
+      "message_width": 102.0,
+      "logo_x": 108.0,
+      "logo_module_width": 32.0,
+      "logo_diameter": 28.0
+    },
+    {
+      "id": "B",
+      "message_width": 142.0,
+      "logo_x": 148.0,
+      "logo_module_width": 40.0,
+      "logo_diameter": 36.0
+    },
+    {
+      "id": "C",
+      "message_width": 182.0,
+      "logo_x": 188.0,
+      "logo_module_width": 48.0,
+      "logo_diameter": 40.0
+    }
+  ],
   "note": "Design candidates, not a LEGO specification or compatibility certification.",
-  "insertion": "Vertical downward; card slides freely into gravity-retained slot."
+  "insertion": "Independent downward dovetail slides into the five-course base front; 2 text keepers and 1 logo keeper prevent upward escape.",
+  "legacy": "BRICK-8-MSG-SLOT-1 remains pinned at WITHDRAWN-PRIVACY-REVISION for the frozen tribute; no change to its outputs."
 }
