@@ -5,6 +5,7 @@ from html import escape
 import json
 import math
 from pathlib import Path
+import sys
 
 from mesh_audit import read_stl
 
@@ -242,10 +243,30 @@ def expanded_views(geometry, catalog, meshes):
     return sheets
 
 
+def write_bom(catalog):
+    colors=catalog["colors"]
+    with (ROOT/"docs/bom.csv").open("w",encoding="utf-8-sig",newline="") as output:
+        writer=csv.writer(output,lineterminator="\n")
+        writer.writerow(["Part ID","部品名","色","分類","完成品組込数","試験用推奨数","工具数","最大X mm","最大Y mm","最大Z mm",
+                         "組立工程","配置ID","STL","STEP"])
+        for part in catalog["parts"]:
+            instances=[item for item in catalog["instances"] if item["part"]==part["id"]]
+            tools=part["tool_quantity"] if part["category"]=="tool" else 0
+            writer.writerow([part["id"],part["name_ja"],colors[part["color"]]["name_ja"],part["category"],part["quantity"],
+                             part.get("test_quantity",1) if part["category"]=="coupon" else 0,tools,
+                             *[round(v,3) for v in part["bounds_mm"]],
+                             ",".join(map(str,sorted({item["step"] for item in instances}))) or "0 試験",
+                             ",".join(item["id"] for item in instances),part["mesh"],part["step"]])
+
+
 def main():
     (ROOT / "drawings").mkdir(exist_ok=True)
     (ROOT / "docs").mkdir(exist_ok=True)
     catalog = json.loads((ROOT / "catalog.json").read_text())
+    if "--bom-only" in sys.argv:
+        write_bom(catalog)
+        print("BOM_GENERATED_FROM_CANONICAL_CATEGORIES")
+        return
     colors = catalog["colors"]
     geometry, meshes = load_geometry(catalog)
     front, _, fb = projection(geometry, (0, -1, 0), 14, 109, .7, colors)
@@ -281,17 +302,7 @@ def main():
             {"file":"three-views.svg","title":"三面図","subtitle":"FRONT / TOP / RIGHT"}]
     sheets+=expanded_views(geometry,catalog,meshes)
     (ROOT/"drawings/index.json").write_text(json.dumps({"revision":"T2","sheets":sheets},ensure_ascii=False,indent=2)+"\n")
-    with (ROOT / "docs/bom.csv").open("w", encoding="utf-8-sig", newline="") as output:
-        writer = csv.writer(output, lineterminator="\n")
-        writer.writerow(["Part ID", "部品名", "色", "分類", "完成品組込数", "試験用推奨数", "工具数", "最大X mm", "最大Y mm", "最大Z mm",
-                         "組立工程", "配置ID", "STL", "STEP"])
-        for part in catalog["parts"]:
-            instances = [item for item in catalog["instances"] if item["part"] == part["id"]]
-            writer.writerow([part["id"], part["name_ja"], colors[part["color"]]["name_ja"],part["category"],part["quantity"],
-                             1 if part["category"] == "coupon" else 0,part.get("tool_quantity",0),
-                             *[round(v, 3) for v in part["bounds_mm"]],
-                             ",".join(map(str, sorted({item["step"] for item in instances}))) or "0 試験",
-                             ",".join(item["id"] for item in instances), part["mesh"], part["step"]])
+    write_bom(catalog)
     print("DRAWINGS_AND_BOM_GENERATED")
 
 

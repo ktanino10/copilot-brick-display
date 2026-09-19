@@ -94,7 +94,14 @@ def main():
         scene.render.threads = 1
         scene.display.render_aa = "8"
         scene.render.filepath = str(folder / "frame_")
-        bpy.ops.render.render(animation=True,scene=name)
+        if "--transfer-only" in sys.argv:
+            first,last=(384,441) if name=="Assembly" else (136,193)
+            for frame in range(first,last+1):
+                scene.frame_set(frame)
+                scene.render.filepath=str(folder/f"frame_{frame:04d}.png")
+                bpy.ops.render.render(write_still=True,scene=name)
+        else:
+            bpy.ops.render.render(animation=True,scene=name)
     print("BLENDER_ANIMATION_RENDER_PASS", flush=True)
 
 

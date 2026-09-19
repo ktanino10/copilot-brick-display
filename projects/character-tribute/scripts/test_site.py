@@ -54,6 +54,38 @@ class PublicationSourceTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             catalog_counts(changed)
 
+    def test_non_tool_categories_cannot_leak_tool_quantity(self):
+        from publish import catalog_counts
+        changed=deepcopy(self.catalog)
+        next(p for p in changed["parts"] if p["category"]=="coupon")["tool_quantity"]=1
+        with self.assertRaises(ValueError):
+            catalog_counts(changed)
+
+    def test_bom_tool_column_matches_each_category_and_total(self):
+        from check_release import validate_bom_categories
+        content=(ROOT/"docs/bom.csv").read_bytes()
+        self.assertEqual(validate_bom_categories(self.catalog,content),3)
+        import csv,io
+        rows=list(csv.DictReader(io.StringIO(content.decode("utf-8-sig"))))
+        next(row for row in rows if row["分類"]=="coupon")["工具数"]="1"
+        stream=io.StringIO()
+        writer=csv.DictWriter(stream,fieldnames=list(rows[0]),lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+        with self.assertRaises(ValueError):
+            validate_bom_categories(self.catalog,stream.getvalue().encode("utf-8-sig"))
+
+    def test_detail_tool_table_uses_the_canonical_angles(self):
+        from check_release import validate_guide_tool_angles
+        text=(ROOT/"docs/howto.ja.md").read_text()
+        validate_guide_tool_angles(self.catalog,text)
+        lines=text.splitlines()
+        for index,line in enumerate(lines):
+            if line.startswith("| BADGE-W |"):
+                lines[index]=line.replace("90°","0°")
+        with self.assertRaises(ValueError):
+            validate_guide_tool_angles(self.catalog,"\n".join(lines))
+
     def test_additional_tool_is_counted_without_an_assembly_instance(self):
         from publish import catalog_counts
         changed = deepcopy(self.catalog)

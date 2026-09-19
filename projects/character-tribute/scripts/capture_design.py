@@ -9,6 +9,19 @@ from retention_geometry import coarse_thread, insert_body, insert_cutter, screw,
 V = App.Vector
 
 
+def auxiliary_specs():
+    result={}
+    for pid,name in [("CAPTURE-FRAME","一枠のフランジ捕捉・ねじ試験台"),
+                     ("CAPTURE-COVER","捕捉試験台の着脱裏蓋"),("EJECTOR","短い剛性先端の取り出し押し棒"),
+                     ("ASSEMBLY-REST","前面を保護する組立用支持台")]:
+        is_tool=pid in ("EJECTOR","ASSEMBLY-REST")
+        result[pid]={"name_ja":name,"color":"charcoal","category":"tool" if is_tool else "coupon",
+                     "source":"parameters.json#retention"}
+        if is_tool:
+            result[pid]["tool_quantity"]=2 if pid=="ASSEMBLY-REST" else 1
+    return result
+
+
 def box(width, height, z, thickness):
     return Part.makeBox(width, height, thickness, V(-width/2, -height/2, z))
 
@@ -181,12 +194,7 @@ def build_capture(data):
     shapes["EJECTOR"] = prism([[-4,0],[4,0],[4,26],[.8,30],[.8,36],[-.8,36],[-.8,30],[-4,26]],2.4)
     shapes["ASSEMBLY-REST"] = Part.makeBox(16,112,2.4,V(-8,-56,0)).fuse(
         Part.makeBox(8,112,9.6,V(-4,-56,2.4))).removeSplitter()
-    for pid, name in [("CAPTURE-FRAME","一枠のフランジ捕捉・ねじ試験台"),
-                      ("CAPTURE-COVER","捕捉試験台の着脱裏蓋"),("EJECTOR","短い剛性先端の取り出し押し棒"),
-                      ("ASSEMBLY-REST","前面を保護する組立用支持台")]:
-        specs[pid] = {"name_ja":name,"color":"charcoal","category":"tool" if pid in ("EJECTOR","ASSEMBLY-REST") else "coupon",
-                      "tool_quantity":2 if pid=="ASSEMBLY-REST" else 1,
-                      "source":"parameters.json#retention"}
+    specs.update(auxiliary_specs())
     for pid, shape in shapes.items():
         if not shape.isValid() or len(shape.Solids) != 1 or shape.Volume <= 0:
             raise ValueError(f"T2 capture part is not one valid positive-volume solid: {pid}")

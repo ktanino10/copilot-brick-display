@@ -101,6 +101,11 @@ T02とCAPTURE-FRAMEだけをX軸180°回転した印刷マスターへ変更し�
 
 /Applications/Blender.app/Contents/MacOS/Blender \
   --background --factory-startup --threads 1 --python-exit-code 1 \
+  --python projects/character-tribute/scripts/sample_transfer_motion.py
+"$FREECAD_RESOURCES/bin/python" projects/character-tribute/scripts/verify_transfer_motion.py
+
+/Applications/Blender.app/Contents/MacOS/Blender \
+  --background --factory-startup --threads 1 --python-exit-code 1 \
   --python projects/character-tribute/scripts/render_frames.py
 
 python3 projects/character-tribute/scripts/encode_video.py
@@ -119,9 +124,24 @@ python3 projects/character-tribute/scripts/encode_video.py
 分解はねじを回して抜く→裏蓋→瞳／虹彩／白目、M／白バッジなど、実際に先行部品を除く順を表します。
 ねじは軸移動だけでなく回転を連動させます。動画で立てた姿勢を使う場合は、
 実作業は2個のASSEMBLY-RESTで前面を保護して前面下向きで行うことを字幕で明示します。
+台座は水平な机上でのみ横移動し、その間は舌をソケット側壁より十分高く保ちます。
+正対して台座が静止した後、閉じたレリーフ全体を共通の線形Z移動で挿入します。
+`sample_transfer_motion.py`は保存nativeから実際の位置・補間制御点を読み、
+`verify_transfer_motion.py`が報告フレームと境界／小数フレーム、連続的な高さ余裕と舌の垂直掃引を検査します。
 両動画・字幕とtool-access図には、初動押し最大3.5 mm→工具を止める→フランジをつまんで残りを引き抜く、
 という区別を明示します。押し棒を全行程の取り外し工具として描写しません。
 再読込・完成配置・組立と分解の進行を確認してから、各シーンの範囲に従ってPNGをレンダーします。
+
+### MR-T2-03の差分render
+
+この是正snapshotでは完成CAD/STEP/STLを再生成せず、Blender nativeの経路だけを更新します。
+`blender_scene.py -- --no-still`で静止画の再描画も省略できます。
+既存の検査済み両MP4に対して `partial_video_update.py --prepare` を実行し、
+`render_frames.py -- --transfer-only` でAssembly384..441、Disassembly136..193のみを再描画します。
+`partial_video_update.py` で範囲外のdecode画像が変わらないことを確認してから、
+`encode_video.py --partial-transfer` で両動画を再encode・全decode検査します。
+初回の全生成にはこの差分モードを使いません。
+
 動画と字幕は `media/assembly.mp4` / `media/assembly.ja.vtt`、
 `media/disassembly.mp4` / `media/disassembly.ja.vtt` に分けます。片方の映像を両方のファイル名で配布しません。
 

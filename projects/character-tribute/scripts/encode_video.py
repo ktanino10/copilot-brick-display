@@ -4,11 +4,12 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def encode(name,scene,ffmpeg,ffprobe):
+def encode(name,scene,ffmpeg,ffprobe,partial=False):
     count,fps=scene["frame_count"],scene["fps"]
     frames = sorted((ROOT / "media/frames" / name).glob("frame_*.png"))
     if len(frames) != count or any(p.name != f"frame_{i:04d}.png" for i, p in enumerate(frames, 1)):
@@ -47,6 +48,16 @@ def encode(name,scene,ffmpeg,ffprobe):
               "japanese_captions": f"media/{name}.ja.vtt",
               "caption_mode": "Default Japanese mov_text track plus WebVTT sidecar; not burned in (local FFmpeg has no drawtext filter).",
               "note": "Animation time is not manufacturing time; real retention and thread durability are untested."}
+    patch=ROOT/"validation/transfer-video-update.json"
+    if partial:
+        evidence=json.loads(patch.read_text())
+        if evidence.get("status")!="pass":
+            raise ValueError("Partial rerender scope was not verified")
+        if evidence["updated_blend_sha256"]!=hashlib.sha256((ROOT/"media/character-assembly.blend").read_bytes()).hexdigest():
+            raise ValueError("Partial rerender evidence is for a different native scene")
+        report["source"]="Prior validated CGI renders decoded to PNG outside the changed interval; changed transfer frames rerendered from the updated native scene."
+        report["partial_rerender_evidence"]="validation/transfer-video-update.json"
+        report["rerendered_frame_range_inclusive"]=evidence["videos"][name]["rerendered_frame_range_inclusive"]
     print("VIDEO_ENCODE_DECODE_PASS",name,stream,flush=True)
     return report
 
@@ -56,9 +67,10 @@ def main():
     if not ffmpeg or not ffprobe:
         raise RuntimeError("ffmpeg and ffprobe are required")
     scenes=json.loads((ROOT/"validation/blender.json").read_text())["scenes"]
-    result=encode("assembly",scenes["Assembly"],ffmpeg,ffprobe)
+    partial="--partial-transfer" in sys.argv
+    result=encode("assembly",scenes["Assembly"],ffmpeg,ffprobe,partial)
     result["revision"]="T2"
-    result["disassembly"]=encode("disassembly",scenes["Disassembly"],ffmpeg,ffprobe)
+    result["disassembly"]=encode("disassembly",scenes["Disassembly"],ffmpeg,ffprobe,partial)
     (ROOT/"validation/video.json").write_text(json.dumps(result,indent=2)+"\n")
 
 

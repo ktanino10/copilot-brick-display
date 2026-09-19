@@ -1,5 +1,7 @@
 """Check the T2 contract, evidence, relative links, archive contents and privacy."""
 import hashlib
+import csv
+import io
 from html import unescape
 from html.parser import HTMLParser
 import json
@@ -29,6 +31,57 @@ class Links(HTMLParser):
         for key in ("href", "src", "poster"):
             if key in values:
                 self.links.append(values[key])
+
+
+def validate_bom_categories(catalog,content):
+    rows=list(csv.DictReader(io.StringIO(content.decode("utf-8-sig"))))
+    expected={part["id"]:part for part in catalog["parts"]}
+    if len(rows)!=len(expected) or {row["Part ID"] for row in rows}!=set(expected):
+        raise ValueError("BOM part IDs differ from the canonical catalog")
+    total=0
+    for row in rows:
+        part=expected[row["Part ID"]]
+        tools=part["tool_quantity"] if part["category"]=="tool" else 0
+        if row["分類"]!=part["category"] or int(row["工具数"])!=tools:
+            raise ValueError(f"BOM tool/category mismatch: {part['id']}")
+        if int(row["完成品組込数"])!=part["quantity"]:
+            raise ValueError(f"BOM assembly quantity mismatch: {part['id']}")
+        total+=int(row["工具数"])
+    if total!=catalog_counts(catalog)["tool_print_quantity"]:
+        raise ValueError("BOM tool total differs from canonical tool quantities")
+    return total
+
+
+def validate_guide_tool_angles(catalog,text):
+    expected={}
+    for instance in catalog["instances"]:
+        if instance["part"].startswith(("EYE-","BADGE-")):
+            angle=instance["tool_tip_rotation_deg"]
+            previous=expected.setdefault(instance["part"],angle)
+            if previous!=angle:
+                raise ValueError("Shared detail part has inconsistent tool orientations")
+    if "<tr" in text:
+        rows=[[re.sub(r"<[^>]+>","",unescape(c)).strip() for c in
+               re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>",row,re.S)]
+              for row in re.findall(r"<tr[^>]*>(.*?)</tr>",text,re.S)]
+    else:
+        rows=[[cell.strip() for cell in line.split("|")[1:-1]]
+              for line in text.splitlines() if line.startswith("|")]
+    found=set()
+    for row in rows:
+        if len(row)<3:
+            continue
+        pid=row[0].split(" ")[0]
+        if pid not in expected:
+            continue
+        match=re.search(r"(-?\d+)°",row[2])
+        if match is None:
+            continue
+        if int(match.group(1))!=expected[pid]:
+            raise ValueError(f"Guide tool angle differs from canonical {pid}: {row[2]}")
+        found.add(pid)
+    if found!=set(expected):
+        raise ValueError("The guide is missing a canonical detail-tool angle")
 
 
 def assert_no_active_adhesive(text, label):
@@ -237,6 +290,14 @@ def main():
     if len(actual_assets) != len(manifest["assets"]) or actual_assets != expected_assets:
         raise ValueError("Manifest must cover every catalog part, indexed drawing, preview, guide and evidence file")
     asset_bytes = sum(verify_asset(item) for item in manifest["assets"])
+    transfer=json.loads((ROOT/"validation/transfer-motion.json").read_text())
+    if (transfer.get("status")!="pass" or transfer.get("sampled_max_intersection_mm3",1)>1e-5
+            or transfer.get("source_blend_sha256")!=hashlib.sha256((ROOT/"media/character-assembly.blend").read_bytes()).hexdigest()
+            or transfer["continuous_conditions"]["vertical_tongue_sweep_intersection_mm3"]>1e-5):
+        raise ValueError("Transfer-path evidence is stale or reports an animated collision")
+    bom_tool_total=validate_bom_categories(catalog,(ROOT/"docs/bom.csv").read_bytes())
+    for suffix in ("md","html"):
+        validate_guide_tool_angles(catalog,(ROOT/f"docs/howto.ja.{suffix}").read_text())
     html_files = [ROOT / "index.html"] + [ROOT / f"docs/{name}.html" for name in GUIDE_NAMES]
     prose_files = html_files + [ROOT / "README.md", ROOT / "templates/index.html"]
     prose_files += [ROOT / spec["captions"] for spec in VIDEO_ASSETS.values()]
@@ -274,6 +335,8 @@ def main():
     if not (ROOT / "media/character-assembly.blend").read_bytes().startswith(b"BLENDER"):
         raise ValueError("The Blender artifact has an invalid native header")
     with zipfile.ZipFile(ROOT / "downloads/print-pack.zip") as archive:
+        if validate_bom_categories(catalog,archive.read("docs/bom.csv"))!=bom_tool_total:
+            raise ValueError("ZIP and published BOM tool quantities differ")
         files = {part["mesh"] for part in catalog["parts"]} | {"docs/bom.csv"}
         if set(archive.namelist()) != files | {"PRINT-README.txt"} or len(archive.namelist()) != len(files) + 1:
             raise ValueError("Print pack does not contain exactly the current masters, BOM and instructions")
@@ -305,6 +368,8 @@ def main():
               "html_local_links_checked": checked_links, "public_files_privacy_scanned": scanned,
               "native_file_signatures": True, "archive_stl_count": len(catalog["parts"]),
               "all_asset_hashes_match": True, "source_photo_distributed": False,
+              "bom_tool_column_total":bom_tool_total,"guide_tool_angles_match_catalog":True,
+              "native_transfer_path_verified":True,
               "adhesive_required": False, "all_parts_removable": True,
               "independent_retention_review": manifest["independent_retention_review"],
               "physical_fit_tested": False, "thread_durability_tested": False, "tipping_tested": False,

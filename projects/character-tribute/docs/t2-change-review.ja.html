@@ -96,6 +96,25 @@ T2では前後の正の止め面を持つフランジ捕捉に変更し、消耗
 印刷接地・逆配置の不変性・全工具の初動上限の証拠も、同じ製造是正版へそろえます。
 動画の尺・フレーム数・fpsは各々の検査メタデータから取得し、ソースへ固定値を転記しません。
 T1の証拠や別スナップショットのメディアを混ぜません。全対数は現行78個なら3003組です。</p>
+<h2 id="mr-t2-03-04-05">最終整合の追加是正 MR-T2-03 / 04 / 05</h2>
+<ul>
+<li><strong>動画の台座移動。</strong> 旧nativeのAssembly392 / Disassembly185で約263.892 mm³の重なりを
+  <a href="../validation/transfer-regression.json">再現</a>しました。台座の不要な上向き移動を除き、
+  舌を50 mm持ち上げたまま机上で台座を横移動し、正対・静止後に全レリーフを同じ線形Z移動で挿入します。
+  実nativeの整数・小数フレーム検査と、水平区間の18 mm高さ余裕・直線舌掃引による
+  <a href="../validation/transfer-motion.json">連続幾何条件</a>を確認します。</li>
+<li><strong>工具角度。</strong> BADGE-Wの作り方を正本の90°に合わせ、Markdown/HTMLの工具表をカタログと照合します。</li>
+<li><strong>工具数。</strong> couponから誤った<code>tool_quantity</code>を除き、CSVの工具数はcategory=toolだけに記載します。
+  工具合計3、couponの工具欄0を、公開CSVと印刷ZIP内CSVへ同じassertで適用します。</li>
+</ul>
+<p>完成FreeCAD/STEP/STL、静的GLB、完成画像は46c7661のbyteを維持します。
+動画の再描画は境界を含むAssembly384..441、Disassembly136..193の各58フレームだけです。
+各動画の残り518フレームは前版の検証済みCGI動画からdecodeした同じ画像を再利用し、
+最終の両MP4は全576フレームを再decode検査します。
+範囲と入力hashは <a href="../validation/transfer-video-update.json">差分render記録</a>、
+媒体全体は <a href="../validation/video.json">動画検査</a> に記載します。全renderをやり直したとの主張はしません。
+<a href="../validation/review-corrections.json">統合ガード</a> は完成CAD/印刷マスターなど122ファイルのbyte不変、
+工具角度90°、CSV/ZIPの工具合計3、差分描画の範囲を確認します。</p>
 <h2 id="_4">承認権限と未検証範囲</h2>
 <p><strong>統合担当だけが、共通部品と元の3案を扱った同じ独立レビュアーによる確認後、
 <code>independent_retention_review: accepted_digital_only</code> を設定できます。</strong>

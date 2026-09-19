@@ -1660,7 +1660,6 @@
       "name_ja": "一枠のフランジ捕捉・ねじ試験台",
       "color": "charcoal",
       "category": "coupon",
-      "tool_quantity": 1,
       "source": "parameters.json#retention",
       "id": "CAPTURE-FRAME",
       "print_origin_mm": [
@@ -1689,7 +1688,6 @@
       "name_ja": "捕捉試験台の着脱裏蓋",
       "color": "charcoal",
       "category": "coupon",
-      "tool_quantity": 1,
       "source": "parameters.json#retention",
       "id": "CAPTURE-COVER",
       "print_origin_mm": [
@@ -1718,7 +1716,6 @@
       "name_ja": "短い剛性先端の取り出し押し棒",
       "color": "charcoal",
       "category": "tool",
-      "tool_quantity": 1,
       "source": "parameters.json#retention",
       "id": "EJECTOR",
       "print_origin_mm": [
@@ -1741,13 +1738,13 @@
       "facets": 28,
       "mesh": "meshes/EJECTOR.stl",
       "step": "native/parts/EJECTOR.step",
-      "quantity": 0
+      "quantity": 0,
+      "tool_quantity": 1
     },
     {
       "name_ja": "前面を保護する組立用支持台",
       "color": "charcoal",
       "category": "tool",
-      "tool_quantity": 2,
       "source": "parameters.json#retention",
       "id": "ASSEMBLY-REST",
       "print_origin_mm": [
@@ -1770,7 +1767,8 @@
       "facets": 28,
       "mesh": "meshes/ASSEMBLY-REST.stl",
       "step": "native/parts/ASSEMBLY-REST.step",
-      "quantity": 0
+      "quantity": 0,
+      "tool_quantity": 2
     },
     {
       "name_ja": "共通メッセージドック",

@@ -7,7 +7,7 @@ import sys
 import FreeCAD as App
 
 from export_artifacts import export_artifacts
-from capture_design import build_capture
+from capture_design import auxiliary_specs, build_capture
 from shared_source import load_shared
 from stand_geometry import custom_coupons, stand_body
 
@@ -66,6 +66,16 @@ def build_shapes(data):
 
 
 def main():
+    if "--metadata-only" in sys.argv:
+        catalog=json.loads((ROOT/"catalog.json").read_text())
+        corrections=auxiliary_specs()
+        for part in catalog["parts"]:
+            if part["id"] in corrections:
+                part.pop("tool_quantity",None)
+                part.update(corrections[part["id"]])
+        (ROOT/"catalog.json").write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+"\n")
+        print("CATALOG_METADATA_REFRESHED_WITHOUT_GEOMETRY_EXPORT")
+        return
     from PySide6 import QtWidgets
     import FreeCADGui as Gui
     application = QtWidgets.QApplication.instance() or QtWidgets.QApplication([])

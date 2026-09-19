@@ -1182,7 +1182,6 @@
         24.0,
         14.400000100000003
       ],
-      "tool_quantity": 1,
       "print_origin_mm": [
         -24.0,
         -12.0,
@@ -1208,7 +1207,6 @@
         24.0,
         11.0
       ],
-      "tool_quantity": 1,
       "print_origin_mm": [
         -24.0,
         -12.0,
@@ -1592,7 +1590,7 @@
       "url": "media/character-assembly.blend",
       "role": "download",
       "bytes": 5904992,
-      "sha256": "32e8a9aa1d8e5664bc3505389265d956bcf37104ffb84cb4da89ce3e82c5bb17"
+      "sha256": "394089c1965a6f98a1ed350208f9172c07380b161338f387fa25471ee1ed9f12"
     },
     {
       "url": "media/model.glb",
@@ -1603,20 +1601,20 @@
     {
       "url": "media/assembly.mp4",
       "role": "download",
-      "bytes": 808497,
-      "sha256": "f7772a2e4da29e1ed899c0ade9476a9eab87a4a6f36a1a7c9202a87e5b2d2c33"
+      "bytes": 747452,
+      "sha256": "96b68dbf36dbcbe28414826c3e9d001013c1e5e1c5bc9f63ab4eb6a20bcf8e6d"
     },
     {
       "url": "media/disassembly.mp4",
       "role": "download",
-      "bytes": 688511,
-      "sha256": "4318bc1176d23651a2cd988e35f18fe28654512107c56b4d3669901c47eaa2ee"
+      "bytes": 700902,
+      "sha256": "112ab7d5897a1e746a06c724d35437cffba2888a00308b9946cbb86235cddb19"
     },
     {
       "url": "downloads/print-pack.zip",
       "role": "download",
-      "bytes": 1446929,
-      "sha256": "d54f00ac3a053839b1692a2c7ed1c215024dd0c3cc4350e05b2dc225e455970d"
+      "bytes": 1446928,
+      "sha256": "6f1054dd4117ff7f85a34c8b4b9d96677b9d0df55386e8bf11c4dfb3f06da5f0"
     },
     {
       "url": "drawings/assembly-isometric.svg",
@@ -1741,50 +1739,50 @@
     {
       "url": "docs/howto.ja.html",
       "role": "guide",
-      "bytes": 23688,
-      "sha256": "e94bb0465ca721e7a29c84dfd7096e803f7b19e8d3537d89227e3080733a00d7"
+      "bytes": 24126,
+      "sha256": "dc309d73c764b1edd668393163fae64368221e812651d8335cbeb4c2216eae25"
     },
     {
       "url": "docs/validation.ja.html",
       "role": "guide",
-      "bytes": 12251,
-      "sha256": "0eaf0efe6fb5e9296d3c1b5f9af66a27c8b878a659df0a7a935c5ef98429e8b5"
+      "bytes": 13363,
+      "sha256": "fa2dd64a994d8886c35da33ff7f73c930a6953fa58b9d1b4418b479b89328222"
     },
     {
       "url": "docs/reproduce.ja.html",
       "role": "guide",
-      "bytes": 19394,
-      "sha256": "973e397ba7a95dd7862a0327159c66144b1a3a50005b7e47665ac037b223b696"
+      "bytes": 20964,
+      "sha256": "09cbaa5caadf3a1c45179a2b40380dca54e06117d8c7f016ceb5fef0c26431d6"
     },
     {
       "url": "docs/t2-change-review.ja.html",
       "role": "guide",
-      "bytes": 8593,
-      "sha256": "d659963a1f31c922d2be01a76a96e6ff86b1ab1935dcef4ac39070386e2bacbc"
+      "bytes": 10555,
+      "sha256": "6cb0618bc84effcd8d67fbf6c9b67f8631634998c8573f1b09297f733f221d4f"
     },
     {
       "url": "docs/howto.ja.md",
       "role": "guide_source",
-      "bytes": 20539,
-      "sha256": "1d64069edc2fa8c7991741bac46adb71d7659c4d3c0ec32a92e406ae03601e46"
+      "bytes": 20971,
+      "sha256": "303d03dcf7910b19e114d5d086d09ef85eb65f6428f28f668b55d4fd31bf7e0f"
     },
     {
       "url": "docs/validation.ja.md",
       "role": "guide_source",
-      "bytes": 10557,
-      "sha256": "96cb627cfa122a0dd6b75dd4965260eedfdf7876e8a09d7578c450cd32d40354"
+      "bytes": 11611,
+      "sha256": "19cc3237946eb3c151b8c3887f153ff489f17106dca06f22699263a4050a26d1"
     },
     {
       "url": "docs/reproduce.ja.md",
       "role": "guide_source",
-      "bytes": 17338,
-      "sha256": "1ed13a81df46ec648c84577cb7ef4c2226bcaf2d7cbedcb05c4e6c721abf28ae"
+      "bytes": 18785,
+      "sha256": "29e618483928a9ff1793d765543b9cf5b37f909b62115276d3c28df2e2cf35ac"
     },
     {
       "url": "docs/t2-change-review.ja.md",
       "role": "guide_source",
-      "bytes": 7334,
-      "sha256": "54c0800ac2b7c282fbdb33bd93192e513925915cd4f987367641d22427318fc7"
+      "bytes": 9129,
+      "sha256": "7263fe8ac2b0a87e114706f844ff53b4b5aad875f92f81e675048b9906c9f0fc"
     },
     {
       "url": "drawings/index.json",
@@ -1808,13 +1806,13 @@
       "url": "docs/bom.csv",
       "role": "bom",
       "bytes": 8596,
-      "sha256": "7387b060f7f25844559b93be45fdc3250240644d16e0e878e033d7a5a7103b4c"
+      "sha256": "c39cfeef0c81c190b88f2e758fb521ad95c4f849f717e8f7093aeeb9be42db97"
     },
     {
       "url": "catalog.json",
       "role": "canonical_catalog",
-      "bytes": 118799,
-      "sha256": "3af34898dacd560fc1284727233afeac0efbc5618cc18fef4c27e72628e8d0c6"
+      "bytes": 118747,
+      "sha256": "52d87af023f82aa3f2340cb0ddf851118f3bada7609bfabb159fdf02c9ed9dca"
     },
     {
       "url": "parameters.json",
@@ -1838,7 +1836,7 @@
       "url": "index.html",
       "role": "entry",
       "bytes": 42619,
-      "sha256": "58b57b6064b11ef658fb71fe2876fb680a0bd390ceda946228c1ed54ef521198"
+      "sha256": "0c14cabf129502cba4fc1ef86f793a5f3579ab026a19eb5a87f9dee16921e651"
     },
     {
       "url": "site.css",
@@ -2570,13 +2568,13 @@
       "url": "media/assembly.ja.vtt",
       "role": "captions",
       "bytes": 1477,
-      "sha256": "6c35e12e1448c955d28b97e072aead613ee73ce7701dcdf5b70b1e14acc351d5"
+      "sha256": "f12fecb5272f0f244c194a5f6466c1e2b34cf928e3ca2c2a33231a221dc23898"
     },
     {
       "url": "media/disassembly.ja.vtt",
       "role": "captions",
-      "bytes": 1416,
-      "sha256": "20af2d805f7fac9051b1b92b80455bfa38b35ca7f12bc5a4c592365972928c4e"
+      "bytes": 1464,
+      "sha256": "033533a147dc38a69202cb7f7142d3b3d1c950ce5cbbcbfc8d6ac2aac32d439a"
     },
     {
       "url": "validation/native.json",
@@ -2618,13 +2616,13 @@
       "url": "validation/blender.json",
       "role": "evidence",
       "bytes": 1584,
-      "sha256": "197b45471b5cc8ce47d27be426599db01afb325132a25bd5654bbb92bad8945a"
+      "sha256": "7602b2b5b8032482ed039d293ac73dc94b1d0e82efab5de0b1999cf174b48c77"
     },
     {
       "url": "validation/video.json",
       "role": "evidence",
-      "bytes": 1574,
-      "sha256": "9fe5fc5d8c9b10582ce7a0fe510e2a779740f7eded08d09717fb346b2d7bb671"
+      "bytes": 2001,
+      "sha256": "6a26e82ceace1437f9a4698fb96b3af6552a4ddb5142cfadb0c9c5e6dfaa50a7"
     },
     {
       "url": "validation/glb.json",
@@ -2657,10 +2655,70 @@
       "sha256": "411cfa3656437d846f6ab94dae0cd38311710a63ce470c2ad351a6d6d1fff556"
     },
     {
+      "url": "validation/transfer-before.json",
+      "role": "evidence",
+      "bytes": 1892631,
+      "sha256": "b26ccd67f19c7e652ddbee38e401204d3d57ddfccf0e1c66a967387299232b95"
+    },
+    {
+      "url": "validation/transfer-regression.json",
+      "role": "evidence",
+      "bytes": 352,
+      "sha256": "f2d1750fe0031e801c1704144592c12bda2f2fb73602b37f5dd792fc09cef34d"
+    },
+    {
+      "url": "validation/transfer-samples.json",
+      "role": "evidence",
+      "bytes": 2072043,
+      "sha256": "83fbb9d780c7558ccb2ae5b04ff89b29b9c7f4922312c8672608a2eea460346e"
+    },
+    {
+      "url": "validation/transfer-motion.json",
+      "role": "evidence",
+      "bytes": 12328,
+      "sha256": "185547ff49324745ed13ccdf1110fdb1684fcd88f4ea2ee539d43577a6bbfa55"
+    },
+    {
+      "url": "validation/transfer-video-update.json",
+      "role": "evidence",
+      "bytes": 96415,
+      "sha256": "678b6e60e085f144d4ccde3a5eb58a951fdc8253992d04cddd589731b796f3b0"
+    },
+    {
+      "url": "validation/review-corrections.json",
+      "role": "evidence",
+      "bytes": 13070,
+      "sha256": "329850aed786dea394bb63294291a3b0807242eb69467eac1cafd73ef6f83c14"
+    },
+    {
+      "url": "scripts/sample_transfer_motion.py",
+      "role": "evidence_source",
+      "bytes": 3285,
+      "sha256": "c64c193492c6312dde08faca7ba820b8ba100ffe31a4e4f0b074adce57f6d292"
+    },
+    {
+      "url": "scripts/verify_transfer_motion.py",
+      "role": "evidence_source",
+      "bytes": 6952,
+      "sha256": "8b1fbaa024be2e424beb62da4e99271caf5d79932e6e6e713b9073270f9bf6ad"
+    },
+    {
+      "url": "scripts/partial_video_update.py",
+      "role": "evidence_source",
+      "bytes": 2899,
+      "sha256": "20a1be3684be6c1cb0e6b2194b4ad8655a997deddf1eaaeef35310eede004bcf"
+    },
+    {
+      "url": "scripts/check_review_corrections.py",
+      "role": "evidence_source",
+      "bytes": 3419,
+      "sha256": "baa99fe342fd0d2b670d5fc7fca5dcab90a586d98226a011f3f6b21be8491cef"
+    },
+    {
       "url": "validation/web.json",
       "role": "browser_evidence",
       "bytes": 854,
-      "sha256": "1d65dd753815aec873f6cf06cd1301f685b4aa5662f3b83ef92aa774f8eb9fbd"
+      "sha256": "c2780945f31672d1cad722ed7e1354765dfb704b785d33d285e482b03db08a89"
     },
     {
       "url": "validation/drawing-previews.json",

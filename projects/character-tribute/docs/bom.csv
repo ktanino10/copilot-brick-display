@@ -42,8 +42,8 @@ T04,交換可能な印刷粗ねじ,黒,assembly,4,0,0,16.0,13.856,17.6,7,"screw-
 THREAD-C20,粗ねじ雌側クリアランス 0.20 試験片,黒,coupon,0,1,0,24.0,24.0,9.6,0 試験,,meshes/THREAD-C20.stl,native/parts/THREAD-C20.step
 THREAD-C30,粗ねじ雌側クリアランス 0.30 試験片,黒,coupon,0,1,0,24.0,24.0,9.6,0 試験,,meshes/THREAD-C30.stl,native/parts/THREAD-C30.step
 THREAD-C40,粗ねじ雌側クリアランス 0.40 試験片,黒,coupon,0,1,0,24.0,24.0,9.6,0 試験,,meshes/THREAD-C40.stl,native/parts/THREAD-C40.step
-CAPTURE-FRAME,一枠のフランジ捕捉・ねじ試験台,黒,coupon,0,1,1,48.0,24.0,14.4,0 試験,,meshes/CAPTURE-FRAME.stl,native/parts/CAPTURE-FRAME.step
-CAPTURE-COVER,捕捉試験台の着脱裏蓋,黒,coupon,0,1,1,48.0,24.0,11.0,0 試験,,meshes/CAPTURE-COVER.stl,native/parts/CAPTURE-COVER.step
+CAPTURE-FRAME,一枠のフランジ捕捉・ねじ試験台,黒,coupon,0,1,0,48.0,24.0,14.4,0 試験,,meshes/CAPTURE-FRAME.stl,native/parts/CAPTURE-FRAME.step
+CAPTURE-COVER,捕捉試験台の着脱裏蓋,黒,coupon,0,1,0,48.0,24.0,11.0,0 試験,,meshes/CAPTURE-COVER.stl,native/parts/CAPTURE-COVER.step
 EJECTOR,短い剛性先端の取り出し押し棒,黒,tool,0,0,1,8.0,36.0,2.4,0 試験,,meshes/EJECTOR.stl,native/parts/EJECTOR.step
 ASSEMBLY-REST,前面を保護する組立用支持台,黒,tool,0,0,2,16.0,112.0,12.0,0 試験,,meshes/ASSEMBLY-REST.stl,native/parts/ASSEMBLY-REST.step
 MSG-DOCK,共通メッセージドック,黒,assembly,1,0,0,95.8,15.8,9.6,9,message-dock,meshes/MSG-DOCK.stl,native/parts/MSG-DOCK.step

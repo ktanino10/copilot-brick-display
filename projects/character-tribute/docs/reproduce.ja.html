@@ -81,6 +81,11 @@ EJECTORは <code>release_tool.max_initial_push_mm</code> の初動上限3.5 mm�
 
 /Applications/Blender.app/Contents/MacOS/Blender \
   --background --factory-startup --threads 1 --python-exit-code 1 \
+  --python projects/character-tribute/scripts/sample_transfer_motion.py
+&quot;$FREECAD_RESOURCES/bin/python&quot; projects/character-tribute/scripts/verify_transfer_motion.py
+
+/Applications/Blender.app/Contents/MacOS/Blender \
+  --background --factory-startup --threads 1 --python-exit-code 1 \
   --python projects/character-tribute/scripts/render_frames.py
 
 python3 projects/character-tribute/scripts/encode_video.py
@@ -98,10 +103,22 @@ python3 projects/character-tribute/scripts/encode_video.py
 分解はねじを回して抜く→裏蓋→瞳／虹彩／白目、M／白バッジなど、実際に先行部品を除く順を表します。
 ねじは軸移動だけでなく回転を連動させます。動画で立てた姿勢を使う場合は、
 実作業は2個のASSEMBLY-RESTで前面を保護して前面下向きで行うことを字幕で明示します。
+台座は水平な机上でのみ横移動し、その間は舌をソケット側壁より十分高く保ちます。
+正対して台座が静止した後、閉じたレリーフ全体を共通の線形Z移動で挿入します。
+<code>sample_transfer_motion.py</code>は保存nativeから実際の位置・補間制御点を読み、
+<code>verify_transfer_motion.py</code>が報告フレームと境界／小数フレーム、連続的な高さ余裕と舌の垂直掃引を検査します。
 両動画・字幕とtool-access図には、初動押し最大3.5 mm→工具を止める→フランジをつまんで残りを引き抜く、
 という区別を明示します。押し棒を全行程の取り外し工具として描写しません。
-再読込・完成配置・組立と分解の進行を確認してから、各シーンの範囲に従ってPNGをレンダーします。
-動画と字幕は <code>media/assembly.mp4</code> / <code>media/assembly.ja.vtt</code>、
+再読込・完成配置・組立と分解の進行を確認してから、各シーンの範囲に従ってPNGをレンダーします。</p>
+<h3 id="mr-t2-03render">MR-T2-03の差分render</h3>
+<p>この是正snapshotでは完成CAD/STEP/STLを再生成せず、Blender nativeの経路だけを更新します。
+<code>blender_scene.py -- --no-still</code>で静止画の再描画も省略できます。
+既存の検査済み両MP4に対して <code>partial_video_update.py --prepare</code> を実行し、
+<code>render_frames.py -- --transfer-only</code> でAssembly384..441、Disassembly136..193のみを再描画します。
+<code>partial_video_update.py</code> で範囲外のdecode画像が変わらないことを確認してから、
+<code>encode_video.py --partial-transfer</code> で両動画を再encode・全decode検査します。
+初回の全生成にはこの差分モードを使いません。</p>
+<p>動画と字幕は <code>media/assembly.mp4</code> / <code>media/assembly.ja.vtt</code>、
 <code>media/disassembly.mp4</code> / <code>media/disassembly.ja.vtt</code> に分けます。片方の映像を両方のファイル名で配布しません。</p>
 <p>動画は全フレームをdecodeし、異なる組立・分解状態を持つことも確認します。
 <strong>尺・fps・解像度・フレーム数は固定しません。</strong> 公開処理は <code>validation/video.json</code> の

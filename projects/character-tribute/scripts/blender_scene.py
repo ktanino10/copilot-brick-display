@@ -126,7 +126,7 @@ STAGES = [
     (5,245,272,"REMOVABLE PUPILS","瞳を最後に差し込みます。小部品にも接着剤は使いません。"),
     (6,273,312,"REMOVABLE BACK COVER","裏蓋の段差が各フランジを後ろから支持し、後方への抜けを止めます。"),
     (7,313,384,"PRINTED COARSE SCREWS","交換可能な印刷粗ねじ4本を手で締めます。ねじは回転と送りを対応させます。"),
-    (8,385,440,"STAND","閉じたレリーフを台座へ。動画は説明用姿勢で、実際の重力・作業速度の再現ではありません。"),
+    (8,385,440,"STAND","舌を十分高く保ち、台座を机上で水平移動して正対。台座が静止してから垂直に差し込みます。"),
     (9,441,464,"COMMON DOCK","共通8mmピッチのドックを装着。無理押ししません。"),
     (10,465,496,"REMOVABLE MESSAGE","固定の交換カードを差し込みます。黒文字は任意の手動色替え表示例です。"),
     (11,497,576,"T2 COMPLETE","全パーツ無接着・取り外し可能な設計候補。実物保持・ねじ耐久・転倒は試作待ちです。")
@@ -142,6 +142,34 @@ def apply_track(obj, records):
         for field in ("hide_render","hide_viewport"):
             setattr(obj,field,hidden)
             obj.keyframe_insert(data_path=field,frame=frame)
+
+
+def animation_curves(obj):
+    animation=obj.animation_data
+    for layer in animation.action.layers:
+        for strip in layer.strips:
+            bag=strip.channelbag(animation.action_slot)
+            if bag:
+                yield from bag.fcurves
+
+
+def enforce_rigid_transfer(scene):
+    start=408 if scene.name=="Assembly" else 137
+    for obj in scene.objects:
+        identifier=obj.get("instance_id")
+        if not identifier or identifier in ("message-dock","message-card"):
+            continue
+        for curve in animation_curves(obj):
+            if curve.data_path!="location" or curve.array_index!=2:
+                continue
+            for point in curve.keyframe_points:
+                if identifier=="stand":
+                    point.co.y=0
+                    point.handle_left.y=0
+                    point.handle_right.y=0
+                elif abs(point.co.x-start)<1e-7:
+                    point.interpolation="LINEAR"
+            curve.update()
 
 
 def write_captions(name, stages, fps):
@@ -212,7 +240,7 @@ def disassembly_scene(source, objects, tracks, camera_track, catalog):
         "分解は支持できる場所で。まずカードとドックを取り外します。",
         "カードを上へ抜きます。",
         "ドックを外します。無理にこじりません。",
-        "閉じたレリーフを台座から持ち上げ、支持台と受け皿を用意します。",
+        "先に舌を垂直に十分高く抜き、その高さを保って台座を水平に外します。支持台と受け皿を用意します。",
         "背面から見て反時計回りに4本を外します。ねじは同じ部品へ交換できます。",
         "裏蓋を後ろへ外します。色部品をこぼさないよう支持します。",
         "瞳：工具の初期押出は最大3.5mmで停止。次に背面フランジを指でつかみ、残りを引き抜きます。",
@@ -246,7 +274,7 @@ def animate(scene, catalog, objects):
         spin=0
         if instance["id"] == "stand":
             end=408
-            initial = final + Vector((-.10, 0, .03))
+            initial = final + Vector((-.10, 0, 0))
         elif instance["id"] in ("message-dock", "message-card"):
             initial = final + Vector((0, 0, .065))
         elif instance.get("motion")=="helical":
@@ -284,7 +312,9 @@ def animate(scene, catalog, objects):
     scene.frame_set(scene.frame_end)
     timeline=write_captions("assembly",STAGES,scene.render.fps)
     (ROOT / "media/animation-timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=2) + "\n")
-    disassembly_scene(scene,objects,tracks,camera_track,catalog)
+    reverse=disassembly_scene(scene,objects,tracks,camera_track,catalog)
+    enforce_rigid_transfer(scene)
+    enforce_rigid_transfer(reverse)
     bpy.context.window.scene=scene
     scene.frame_set(scene.frame_end)
 
@@ -295,9 +325,10 @@ def main():
     animate(scene, catalog, objects)
     sanitize_blender_metadata(bpy)
     bpy.ops.wm.save_as_mainfile(filepath=str(ROOT / "media/character-assembly.blend"), compress=False)
-    bpy.ops.render.render(write_still=True)
-    strip_png_text(ROOT / "media/finished.png")
-    print(f"BLENDER_STILL_SAVED {len(objects)} CAD instances", flush=True)
+    if "--no-still" not in sys.argv:
+        bpy.ops.render.render(write_still=True)
+        strip_png_text(ROOT / "media/finished.png")
+    print(f"BLENDER_NATIVE_SAVED {len(objects)} CAD instances", flush=True)
 
 
 if __name__ == "__main__":

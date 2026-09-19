@@ -1,11 +1,21 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>検証範囲と残る物理試験 / T2</title><link rel="stylesheet" href="../site.css"></head><body><main class="guide"><nav class="guide-nav" aria-label="パンくず"><a href="../index.html">← @YOUR-USERNAME 製作ページ</a></nav><h1 id="t2">検証範囲と残る物理試験 / T2</h1>
+<h2 id="_1">動画・手順・部品表の追加整合</h2>
+<p>MR-T2-03は旧保存nativeのAssembly392 / Disassembly185で約263.892 mm³を再現し、
+完成CADを変更せず動画の移動経路を是正しました。
+<a href="../validation/transfer-motion.json">実native経路検査</a> は、整数・小数フレームの最大干渉0、
+水平移動中の高さ余裕18 mm、正対後の垂直舌掃引干渉0を記録します。
+閉じたレリーフ全体は同じZ補間で剛体移動し、台座は机上から浮かせません。
+<a href="../validation/transfer-regression.json">旧問題の再現</a> と <a href="../validation/transfer-video-update.json">差分render範囲</a> も保存します。</p>
+<p>BADGE-Wの工具角度はカタログと同じ90°です。Markdown/HTMLの工具表を正本と比較します。
+BOMの工具数列はcategory=toolだけを数え、couponは0、合計3を公開CSVとZIP内CSVへ共通のassertで確認します。
+これらの一致も、実物試験や最終独立受入を代替するものではありません。と残る物理試験 / T2</p>
 <p>これは無接着・全パーツ着脱可能な<strong>デジタル試作</strong>の検証範囲です。
 ユーザーによる方式の選択は確認済みで、T1の接着方式は却下しました。
 実機の製造承認、独立レビューへの合格、玩具認証、互換性保証とは別です。</p>
 <p>部品・色・数量・配置・工程は <a href="../catalog.json">catalog.json</a> が唯一の正本です。
 現行T2の集計は組立42種類・78個、試験片15種類、治具2種類、合計59マスターです。
 EJECTORは1個、ASSEMBLY-RESTは2個で、試験片・治具を完成品の78個へ足しません。</p>
-<h2 id="_1">証拠の読み方</h2>
+<h2 id="_2">証拠の読み方</h2>
 <p>下表はT2公開時に照合する検査項目です。生成途中のフォルダーでは過去版のJSON・動画・図面が残る場合があります。
 <strong>同じT2のカタログ、配置数、ファイルhashに一致しない検査結果を合格証として流用しません。</strong>
 <code>check_release.py</code> は数量・全対数・メディアhash・図面目録・公開ファイルhashの不一致をエラーにします。
@@ -120,7 +130,7 @@ EJECTORは1個、ASSEMBLY-RESTは2個で、試験片・治具を完成品の78�
 動画・図面・公開データなどが再生成中である間は、この幾何検査だけを根拠に「全公開検査完了」としません。
 <code>validation/video.json</code> の主レコードが組立、<code>disassembly</code> が分解です。双方の全フレームdecodeとMP4のhashが必要です。
 図面のページ数は固定しません。<a href="../drawings/index.json">drawings/index.json</a> に基本6枚と追加ページを列挙します。</p>
-<h2 id="_2">デジタル検証の限界</h2>
+<h2 id="_3">デジタル検証の限界</h2>
 <p>CADはプリンターの誤差、PLAの弾性、ねじ山の積層強度・摩耗、手指の動きを再現していません。
 0.2 mmの遊びと前後の止め面を持つ捕捉は摩擦保持の仮定ではありませんが、
 名目形状で捕捉できることと、印刷物が軽い力で外せることは別です。
@@ -138,7 +148,7 @@ EJECTORは1個、ASSEMBLY-RESTは2個で、試験片・治具を完成品の78�
 過去版の重心や転倒余裕の数値はT2へ転記しません。
 測定した重量・印刷時間・保持力・繰り返し寿命・転倒角の値はありません。
 造形範囲内でも、スライサーの除外領域・サポート・実際のプレート配置は別途確認が必要です。</p>
-<h2 id="_3">実物で残る確認</h2>
+<h2 id="_4">実物で残る確認</h2>
 <ol>
 <li>本番と同じPLA・色・ノズル・層高・温度・補正を記録し、THREAD-C40から実物T04で試験。</li>
 <li>CAPTURE-FRAME/COVERと実物IN-W-1x1・T04で保持、意図した解除、再組立を確認。</li>
@@ -150,7 +160,7 @@ EJECTORは1個、ASSEMBLY-RESTは2個で、試験片・治具を完成品の78�
 <p>公開メタデータは <code>adhesive_required: false</code>、<code>all_parts_removable: true</code>、
 <code>physical_fit_tested: false</code>、<code>thread_durability_tested: false</code>、<code>tipping_tested: false</code> とします。
 0.4/0.2 mmのPLA設定は未印刷の出発点であり、自動プリンター操作は行いません。</p>
-<h2 id="_4">独立保持レビュー</h2>
+<h2 id="_5">独立保持レビュー</h2>
 <p>既定値は <strong><code>independent_retention_review: pending_coordinated_review</code></strong> です。
 統合担当だけが、共通部品・元の3案と調整した<strong>同じ独立レビュアー</strong>によるT2の確認後、
 <code>accepted_digital_only</code> を設定できます。公開ジェネレーターやこの文書は承認を付与しません。

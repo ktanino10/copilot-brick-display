@@ -73,7 +73,7 @@ def print_quantity(part):
     if category == "assembly":
         quantity = part["quantity"]
     elif category == "coupon":
-        quantity = part.get("test_quantity", part.get("tool_quantity", 1))
+        quantity = part.get("test_quantity", 1)
     elif category == "tool":
         quantity = part["tool_quantity"]
     else:
@@ -92,6 +92,8 @@ def catalog_counts(catalog):
     if set(actual) - set(by_id):
         raise ValueError("Assembly instance references an unknown print master")
     for part in parts:
+        if part["category"] != "tool" and part.get("tool_quantity",0) != 0:
+            raise ValueError(f"Tool quantity is invalid for a non-tool category: {part['id']}")
         print_quantity(part)
         if part["color"] not in catalog["colors"]:
             raise ValueError(f"Unknown catalog color: {part['id']}")
@@ -350,6 +352,11 @@ def publication_urls(catalog, drawings, videos):
                           "blender", "video", "glb")]
     urls += [(f"scripts/{name}.py", "evidence_source")
              for name in ("verify_fixture", "verify_print_pose", "verify_print_invariance", "render_drawing_previews")]
+    urls += [(f"validation/{name}.json","evidence") for name in
+             ("transfer-before","transfer-regression","transfer-samples","transfer-motion","transfer-video-update",
+              "review-corrections")]
+    urls += [(f"scripts/{name}.py","evidence_source") for name in
+             ("sample_transfer_motion","verify_transfer_motion","partial_video_update","check_review_corrections")]
     urls += [("validation/web.json", "browser_evidence"),
              ("validation/drawing-previews.json", "drawing_preview_evidence")]
     return urls
