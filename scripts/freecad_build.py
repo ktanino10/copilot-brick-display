@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import faulthandler
 import hashlib
 import json
 import math
@@ -19,6 +20,10 @@ import TechDraw
 
 from design import ROOT, build_catalog, load_parameters, write_json
 from freecad_geometry import bounds_list, placement_for, shape_for
+
+
+def log(*values):
+    print(*values, file=sys.__stdout__, flush=True)
 
 
 def stl_write(mesh, path):
@@ -41,8 +46,12 @@ def html_color(hex_value):
 
 def setup_gui():
     import FreeCADGui as Gui
+    App.ParamGet("User parameter:BaseApp/Preferences/Document").SetBool("SaveThumbnail", False)
+    App.ParamGet("User parameter:BaseApp/Preferences/General").SetString("AutoloadModule", "PartWorkbench")
+    log("GUI_INIT")
     Gui.showMainWindow()
     Gui.getMainWindow().hide()
+    log("GUI_READY")
     return Gui
 
 
@@ -65,15 +74,17 @@ def generate_part(spec, p, cache, output):
         "bounds": bounds_list(shape), "volume_mm3": round(shape.Volume, 6),
         "mesh_triangles": triangles, "mesh_linear_deflection_mm": 0.025,
         "sha256": hashlib.sha256(filename.read_bytes()).hexdigest(),
+        "local_center_mm": list(shape.Solids[0].CenterOfMass),
     })
     return shape
 
 
 def save_assembly(model, c, shapes, output, gui):
     import Import
+    log("NATIVE_BEGIN", model["id"])
     document = App.newDocument(f"BrickPortrait_{model['id']}")
     document.Label = f"{model['id']} / {model['name']}"
-    document.Author = "Copilot Brick Display contributors"
+    document.Meta = {"Author": "Copilot Brick Display contributors"}
     document.Comment = "Digital prototype. Commercial and printed physical fit is unverified."
     root = document.addObject("App::DocumentObjectGroup", "Design")
     root.addProperty("App::PropertyString", "ParametersSHA256")
@@ -114,19 +125,38 @@ def save_assembly(model, c, shapes, output, gui):
         objects.append(obj)
         assembled.append(obj.Shape.copy())
     document.recompute()
+    # View commands require an active GUI window and can open a modal dialog offscreen.
+    # Saving real geometry/view-provider colors does not require them; use V,F on open.
     folder = output / model["id"]
     folder.mkdir(parents=True, exist_ok=True)
     document.saveAs(str(folder / f"{model['id']}.FCStd"))
+    log("FCSTD_SAVED", model["id"])
     Import.export(objects, str(folder / f"{model['id']}.step"))
+    log("STEP_SAVED", model["id"])
+    log(f"NATIVE {model['id']} {model['actual_mm']} / {model['part_count']} parts")
+
+
+def measure_assembly(model, c, shapes, output):
+    assembled, centers, volumes = [], [], []
+    for item in model["placements"]:
+        shape = shapes[item["part"]].copy()
+        transform = placement_for(item)
+        shape.Placement = transform
+        assembled.append(shape)
+        part = c["parts"][item["part"]]
+        centers.append(transform.multVec(App.Vector(*part["local_center_mm"])))
+        volumes.append(part["volume_mm3"])
     compound = Part.makeCompound(assembled)
     model["bounds"] = bounds_list(compound)
     model["actual_mm"] = [round(high - low, 3) for low, high in zip(*model["bounds"])]
-    model["cad_solid_volume_mm3"] = round(sum(s.Volume for s in assembled), 3)
+    model["cad_solid_volume_mm3"] = round(sum(volumes), 3)
     model["center_of_material_mm"] = [
-        round(sum(s.Volume * tuple(s.CenterOfMass)[axis] for s in assembled) /
-              sum(s.Volume for s in assembled), 4) for axis in range(3)
+        round(sum(volume * tuple(center)[axis] for volume, center in zip(volumes, centers)) /
+              sum(volumes), 4) for axis in range(3)
     ]
     model["center_note"] = "Uniform solid-CAD material only; not sliced mass or proven stability."
+    folder = output / model["id"]
+    folder.mkdir(parents=True, exist_ok=True)
     with (folder / "bom.csv").open("w", newline="") as stream:
         writer = csv.DictWriter(stream, ["part", "color", "quantity", "stl"])
         writer.writeheader()
@@ -135,20 +165,13 @@ def save_assembly(model, c, shapes, output, gui):
         "model": model["id"], "units": "mm", "bounds": model["bounds"],
         "placements": model["placements"], "steps": model["steps"], "bom": model["bom"],
     })
-    projections = ROOT / "build/projections" / model["id"]
-    projections.mkdir(parents=True, exist_ok=True)
-    for name, vector in (("front", App.Vector(0, -1, 0)),
-                         ("side", App.Vector(1, 0, 0)),
-                         ("top", App.Vector(0, 0, 1))):
-        svg = TechDraw.projectToSVG(compound, vector)
-        (projections / f"{name}.svg").write_text(svg)
-    App.closeDocument(document.Name)
-    print(f"NATIVE {model['id']} {model['actual_mm']} / {model['part_count']} parts", flush=True)
+    log("MEASURED", model["id"], model["actual_mm"])
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--parts", nargs="*", help="Generate only named parts; no assemblies.")
+    parser.add_argument("--native-only", action="store_true", help="Use measured catalogue and BREP cache to save native files.")
     args = parser.parse_args()
     p = load_parameters()
     c = build_catalog(p)
@@ -159,21 +182,32 @@ def main():
     cache = ROOT / "build/brep" / fingerprint
     cache.mkdir(parents=True, exist_ok=True)
     shapes = {}
+    if args.native_only:
+        c = json.loads((ROOT / "design/catalog.json").read_text())
+        assert c["parameters_sha256"] == build_catalog(p)["parameters_sha256"]
     for key, spec in c["parts"].items():
         if args.parts and key not in args.parts:
             continue
-        print(f"PART {key}", flush=True)
-        shapes[key] = generate_part(spec, p, cache, output)
+        log(f"PART {key}")
+        if args.native_only:
+            shapes[key] = Part.Shape()
+            shapes[key].read(str(cache / f"{key}.brep"))
+            assert shapes[key].isValid()
+        else:
+            shapes[key] = generate_part(spec, p, cache, output)
     if args.parts:
         write_json(ROOT / "build/interface-proof.json",
                    {key: c["parts"][key] for key in shapes})
         return
-    gui = setup_gui()
-    for model in c["models"]:
-        save_assembly(model, c, shapes, output, gui)
+    if not args.native_only:
+        for model in c["models"]:
+            measure_assembly(model, c, shapes, output)
     write_json(ROOT / "design/catalog.json", c)
     write_json(ROOT / "site/assets/catalog.json", c)
     write_json(ROOT / "site/downloads/parameters.json", p)
+    gui = setup_gui()
+    for model in c["models"]:
+        save_assembly(model, c, shapes, output, gui)
     write_json(ROOT / "build/freecad-build.json", {
         "freecad_version": App.Version(), "parameters_sha256": c["parameters_sha256"],
         "part_count": len(shapes), "models": [x["id"] for x in c["models"]],
@@ -182,7 +216,9 @@ def main():
 
 
 if __name__ == "__main__":
+    faulthandler.dump_traceback_later(180, repeat=True)
     main()
+    faulthandler.cancel_dump_traceback_later()
     sys.stdout.flush()
     sys.stderr.flush()
     # Offscreen Qt has no OpenGL teardown surface; all files are synchronously saved above.

@@ -1,0 +1,16 @@
+part,color,quantity,stl
+BR-01x04-H096,green,8,parts/BR-01x04-H096.stl
+BR-02x04-H064,magenta,2,parts/BR-02x04-H064.stl
+BR-02x04-H096,black,19,parts/BR-02x04-H096.stl
+BR-02x04-H096,magenta,1,parts/BR-02x04-H096.stl
+BR-02x05-H096,cyan,24,parts/BR-02x05-H096.stl
+BR-02x06-H096,magenta,16,parts/BR-02x06-H096.stl
+BR-03x04-H096,black,12,parts/BR-03x04-H096.stl
+BR-04x04-H064,magenta,1,parts/BR-04x04-H064.stl
+BR-04x04-H096,black,21,parts/BR-04x04-H096.stl
+BR-04x04-H096,magenta,2,parts/BR-04x04-H096.stl
+BR-04x05-H096,cyan,12,parts/BR-04x05-H096.stl
+BR-05x04-H096,black,8,parts/BR-05x04-H096.stl
+BR-24x10-H096,black,1,parts/BR-24x10-H096.stl
+MSG-CARD,cyan,1,parts/MSG-CARD.stl
+MSG-DOCK,black,1,parts/MSG-DOCK.stl

@@ -1,0 +1,16 @@
+{
+  "scope": "Three original brick portraits and shared removable message module",
+  "status": "digital deliverables; physical prototype gates remain open",
+  "requirements": [
+    {"id": "R01", "requirement": "All three distinct fixed-grid layouts; no uniform STL scaling", "source": "User-approved A/B/C", "evidence": ["parameters.json", "catalog.json", "../tests/test_design.py"]},
+    {"id": "R02", "requirement": "Real stud/underside connections; male and female calibration first", "source": "User decision; approximate nominal references in sources.json", "evidence": ["interface.json", "../docs/build.ja.md", "../site/drawings/interface.svg"], "physical_status": "NOT TESTED"},
+    {"id": "R03", "requirement": "P1S, PLA, 0.4/0.2 mm guidance; no AMS or electronics required", "source": "User equipment; PRINTER-P1S", "evidence": ["../docs/build.ja.md", "../validation/print-packages.json"]},
+    {"id": "R04", "requirement": "Genuine editable/regenerable FreeCAD, STEP and every unique print STL", "evidence": ["../scripts/freecad_build.py", "../validation/cad.json", "../validation/meshes.json"]},
+    {"id": "R05", "requirement": "CAD-derived orthographic, exploded, dimensional/section drawings; exact BOM and steps", "evidence": ["../scripts/freecad_details.py", "../scripts/build_drawings.py", "catalog.json"]},
+    {"id": "R06", "requirement": "Actual Blender native scenes, rendered stills and assembly MP4 for every model", "evidence": ["../scripts/blender_scene.py", "../scripts/blender_verify.py", "../scripts/render_movies.py"]},
+    {"id": "R07", "requirement": "Beginner Japanese preparation, calibration, printing, assembly, stability check and troubleshooting", "evidence": ["../docs/build.ja.md", "../site/guide.html"]},
+    {"id": "R08", "requirement": "External interchangeable message, exact approved wording and profile URL", "evidence": ["parameters.json", "interface.json", "../tests/test_design.py"]},
+    {"id": "R09", "requirement": "Independent mechanical review with high-severity corrections; no self-certification", "evidence": ["../validation/mechanical-review.md"], "physical_status": "No real fit, load or toy-safety qualification"},
+    {"id": "R10", "requirement": "Public repository and Pages with interactive 3D and complete downloads; no private photos, paths or history", "evidence": ["../tests/static.mjs", "../tests/web.py", "../.github/workflows/pages.yml", "../docs/licensing.md"]}
+  ]
+}
