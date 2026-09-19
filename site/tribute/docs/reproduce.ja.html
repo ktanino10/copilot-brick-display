@@ -1,0 +1,77 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>再生成とソースの扱い</title><link rel="stylesheet" href="../site.css"></head><body><main class="guide"><nav class="guide-nav" aria-label="パンくず"><a href="../index.html">← @YOUR-USERNAME 製作ページ</a></nav><h1 id="_1">再生成とソースの扱い</h1>
+<h2 id="_2">入力・出力の関係</h2>
+<p><code>parameters.json</code> が自作レリーフ・台座の入力です。<code>shared-lock.json</code> は共通コネクター・カード・試験片の固定参照です。
+<code>scripts/build.py</code> は実FreeCAD/OpenCASCADEを使い、FCStd、STEP、印刷用STL、<code>catalog.json</code> を出力します。
+カタログの部品ID・色・個数・配置・工程から、部品表、図、Blender、サイト用manifestを生成します。
+生成済みのカタログだけを編集してSTLと食い違わせないでください。</p>
+<p>共有ファイルは、同じリポジトリ内の正本をSHA256照合して使用します。
+まだ正本が統合されていない作業ブランチでは、同じリポジトリの固定Gitオブジェクトを読みます。
+別の作業フォルダーを読んだり実行したりしません。どちらも無ければ明示的に失敗します。
+共有ジオメトリーを自作の近似コネクターで置き換えません。</p>
+<h2 id="_3">実行確認した環境</h2>
+<p>FreeCAD 1.1.3、Blender 5.1.1、FFmpeg/ffprobe 8.1、macOS。
+異なる版ではネイティブAPI・フォント・メッシュの差を再確認してください。
+Qt offscreenではOpenGLビュー操作を行わず、保存後のネイティブ再読込は別の純Appプロセスで行います。
+画面上のプレビューがなくても、保存・再読込した実BRepを検査しています。</p>
+<p>以下はリポジトリのルートで実行します。実行ファイルの場所は自分のインストールに合わせてください。
+別の長時間レンダーが動いている場合は、時間帯を分けます。他人のプロセスは終了しません。</p>
+<h2 id="cadstl">CAD・STL・検査</h2>
+<pre><code class="language-bash">export FREECAD_RESOURCES=/Applications/FreeCAD.app/Contents/Resources
+export PYTHONPATH=&quot;$FREECAD_RESOURCES/lib&quot;
+export QT_QPA_PLATFORM=offscreen
+export PYTHONDONTWRITEBYTECODE=1
+
+&quot;$FREECAD_RESOURCES/bin/python&quot; projects/character-tribute/scripts/test_relief.py
+&quot;$FREECAD_RESOURCES/bin/python&quot; projects/character-tribute/scripts/build.py
+python3 projects/character-tribute/scripts/mesh_audit.py
+&quot;$FREECAD_RESOURCES/bin/python&quot; projects/character-tribute/scripts/verify_assembly.py
+python3 projects/character-tribute/scripts/drawings.py
+</code></pre>
+<p><code>build.py</code> はFCStdと組立STEPを保存した後、<code>verify_native.py</code> を別プロセスで実行します。
+メッシュ検査はFreeCADの判定だけでなく、独立したbinary STLパーサーで各辺・頂点link・向き・体積を検査します。
+文字検査はフォントを別作品へ置き換えず、実カードSTEPの浮き出し文字の頂面を測ります。</p>
+<h2 id="blender">Blenderと動画</h2>
+<pre><code class="language-bash">/Applications/Blender.app/Contents/MacOS/Blender \
+  --background --factory-startup --threads 1 --python-exit-code 1 \
+  --python projects/character-tribute/scripts/blender_scene.py
+
+/Applications/Blender.app/Contents/MacOS/Blender \
+  --background --factory-startup --threads 1 --python-exit-code 1 \
+  --python projects/character-tribute/scripts/render_frames.py
+
+python3 projects/character-tribute/scripts/encode_video.py
+
+/Applications/Blender.app/Contents/MacOS/Blender \
+  --background --factory-startup --threads 1 --python-exit-code 1 \
+  --python projects/character-tribute/scripts/export_glb.py
+</code></pre>
+<p><code>blender_scene.py</code> はSTLを実寸で読み、mmからBlenderのmへ単位換算するだけです。
+これは印刷用STLのスケール変更ではありません。カタログの配置と色を共有します。
+保存する.blendには実際の位置・表示キーフレームと工程マーカーがあります。
+再読込・完成時の全配置・アニメーション進行を確認した後、504枚のPNGをレンダーします。</p>
+<p>動画はH.264 640×640 / 24fps / 21秒です。全フレームをdecodeし、異なる組立状態を持つことも確認します。
+日本語はMP4の既定mov_text字幕とWebVTTで提供します。
+この実行環境のFFmpegはdrawtextフィルターを持たないため、焼き込み字幕とはしていません。</p>
+<p>GLBは完成フレームを明示して出力する標準3Dプレビューです。Y-up・m単位で、印刷用STLの代用品ではありません。
+BlenderのPythonエラーが終了コード0にならないよう、実行時に<code>--python-exit-code 1</code>を付けます。</p>
+<p>BlenderがUI用に保存するFile BrowserのローカルディレクトリーはAPIで相対化します。
+PNGは文字メタデータだけを取り除き、画素を変更しません。
+バイナリのネイティブ形状を偽物へ置き換える処理ではありません。</p>
+<h2 id="htmlmanifest">ガイドHTML・manifest</h2>
+<p>HTML変換だけにPython-Markdownを使用します。ルートの依存関係は変更しません。</p>
+<pre><code class="language-bash">python3 -m venv projects/character-tribute/.venv-docs
+projects/character-tribute/.venv-docs/bin/pip install \
+  -r projects/character-tribute/requirements-docs.txt
+projects/character-tribute/.venv-docs/bin/python \
+  projects/character-tribute/scripts/publish.py
+python3 projects/character-tribute/scripts/check_release.py
+</code></pre>
+<p>ガイド本文の正本はMarkdownです。HTMLを直接編集しないでください。
+図面のPNGプレビューを更新する場合は、同じ専用環境へ <code>requirements-test.txt</code> をインストールし、
+<code>scripts/test_site.py --drawings-only</code> を実行してから <code>publish.py</code> を再実行します。
+この処理は既存のChromeをheadlessで使用します。必要なら環境変数<code>CHROME</code>で実行ファイルを指定できます。
+ブラウザーを追加ダウンロードしたり、普段使うブラウザープロファイルを操作したりしません。
+公開ページには軽いPNGプレビューを使い、寸法入りの元SVGへリンクしています。</p>
+<p>サイトのファイル参照は相対URLのみで、各種データはこのプロジェクトフォルダー内にあります。
+統合担当はフォルダー全体をPagesの同じ相対配置に置き、入口<code>index.html</code>へリンクできます。
+ソース写真、私有の絶対パス、セッション履歴、認証情報、試し書きのログは公開しません。</p></main></body></html>
