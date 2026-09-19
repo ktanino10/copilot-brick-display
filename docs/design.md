@@ -1,6 +1,18 @@
 # Revision 3 / Five-course base and independent front modules
 
 Current normal-model revision: **`3.0-five-course-front`**.
+
+**Manufacturing guidance update `trial-2026-09-19`: no geometry change.**
+A [separate public 4 mm trial report](https://github.com/ktanino10/octoprints-brick-kit-downloads/blob/be956ae14d2aac1601a4a2a87f2e49675a36979e/feedback/2026-09-19/README.md)
+describes handling difficulty and plastic-obstructed holes. Its actual sliced input/settings and
+root cause were not established. This is failure evidence for another design, not a physical
+pass for A/B/C or a reason to import its clearance values, media, geometry or license.
+Our normal 8 mm stud/tube blocks, shallow keeper sockets and reserved-front-row base/keyway
+parts still need layer-preview and real handling checks.
+[The staged seven-piece selection](trial.ja.md) adds only unchanged current STL and small BOMs,
+reuses existing fit coupons, and stops bulk printing on obstruction, poor grip or failed seating.
+The existing 0.4/0.2 mm recommendations remain untested baselines.
+
 The user approved the actual B front/oblique/close-up preview. This approval covers appearance
 and design intent only, not physical fit, strength, production qualification or independent review.
 The approval and unchanged-geometry constraints are recorded in

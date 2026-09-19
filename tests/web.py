@@ -122,6 +122,14 @@ with sync_playwright() as playwright:
     page.wait_for_function("document.querySelector('#guide-drawing').complete && document.querySelector('#guide-drawing').naturalWidth > 0")
     expect(page.locator("#guide-drawing")).to_have_attribute("src", f"drawings/C/step-{c_steps:02}.svg?rev={catalog['revision']}")
     check_no_overflow(page)
+    page.goto(BASE + "trial.html", wait_until="networkidle")
+    expect(page.get_by_role("heading", name="7個だけ、段階を分けて試す", exact=True)).to_have_count(1)
+    expect(page.locator("body")).to_contain_text("7個の確認は、5段完成品")
+    expect(page.locator("body")).to_contain_text("全数印刷を止めます")
+    expect(page.locator('a[href*="downloads/trial-subset.zip"]')).to_have_count(1)
+    for width in (1440, 375):
+        page.set_viewport_size({"width": width, "height": 950})
+        check_no_overflow(page)
     context.close()
     print("MOBILE_BEGIN", flush=True)
     mobile = browser.new_context(viewport={"width": 375, "height": 844}, device_scale_factor=1, reduced_motion="reduce")
@@ -152,6 +160,9 @@ with sync_playwright() as playwright:
         "checks": ["model changes", "four camera views", "part selection + CAD sheet", "bounds",
                    "explosion", "stage seek + play/pause", "all three MP4 decoded in browser",
                    "Japanese guide stage deep link", "desktop/mobile overflow", "reduced motion", "zero page errors/404s"],
+        "staged_trial_guidance": {"guidance_revision": "trial-2026-09-19",
+                                  "geometry_revision": catalog["revision"], "page_widths_px": [1440, 375],
+                                  "physical_trial_performed": False},
         "screenshots": ["desktop.png", "B-front.png", "C-inspector.png", "mobile.png"],
     }
     (ROOT / "validation/web.json").write_text(json.dumps(report, indent=2) + "\n")

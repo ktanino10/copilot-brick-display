@@ -22,32 +22,50 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - name: Select explicit publication mode
+        id: mode
+        run: node scripts/publication_mode.mjs
+      - name: Verify privacy maintenance distribution
+        if: steps.mode.outputs.maintenance == 'true'
+        run: node tests/maintenance.mjs
       - name: Verify the already-generated public package
+        if: steps.mode.outputs.maintenance != 'true'
         run: node tests/motion.mjs && node tests/static.mjs
       - uses: actions/setup-python@v5
+        if: steps.mode.outputs.maintenance != 'true'
         with:
           python-version: "3.11"
       - name: Install declared browser-validation dependencies
+        if: steps.mode.outputs.maintenance != 'true'
         run: |
           python -m pip install -r requirements.txt
           python -m playwright install --with-deps chromium --only-shell
       - name: Check the additional publication source contract
+        if: steps.mode.outputs.maintenance != 'true'
         run: |
           python projects/character-tribute/scripts/test_site.py --source-only
           python projects/character-tribute/scripts/check_release.py
+      - name: Verify staged trial selection without changing geometry
+        if: steps.mode.outputs.maintenance != 'true'
+        run: |
+          git fetch --quiet --no-tags --depth=1 origin "$(python -c "import json; print(json.load(open('design/trial-subset.json'))['geometry_baseline_commit'])")"
+          python -m unittest discover -s tests -p test_trial_subset.py -v
+          python scripts/verify_trial_subset.py
       - name: Verify real browser behavior before deployment
+        if: steps.mode.outputs.maintenance != 'true'
         env:
           BROWSER_PATH: /usr/bin/google-chrome
         run: |
           google-chrome --version
           python tests/run_web.py
       - name: Bind current browser evidence to the public release
+        if: steps.mode.outputs.maintenance != 'true'
         run: |
           python scripts/finalize_evidence.py
           python scripts/verify_revision_invariants.py
           node tests/static.mjs
       - name: Preserve browser evidence
-        if: always()
+        if: always() && steps.mode.outputs.maintenance != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: browser-validation

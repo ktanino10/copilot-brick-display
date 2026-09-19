@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "guidance_revision": "trial-2026-09-19",
+  "geometry_revision": "3.0-five-course-front",
+  "geometry_baseline_commit": "WITHDRAWN-PRIVACY-REVISION",
+  "units": "mm",
+  "sliced": false,
+  "physical_trial_performed": false,
+  "source_observation": {
+    "repository": "ktanino10/octoprints-brick-kit-downloads",
+    "commit": "be956ae14d2aac1601a4a2a87f2e49675a36979e",
+    "report_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/blob/be956ae14d2aac1601a4a2a87f2e49675a36979e/feedback/2026-09-19/README.md",
+    "report_blob_sha": "cfc12acc88c12e722150abc81740e8af32b7182a",
+    "report_bytes": 6116,
+    "overview_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/blob/be956ae14d2aac1601a4a2a87f2e49675a36979e/README.md",
+    "overview_blob_sha": "b19ce196d25fb3877cfd77cc5fc092dcc5e244f3",
+    "summary": "A separate 4mm small pin/receiver trial was difficult to handle and some holes were reported blocked by plastic. The cause, actual sliced input and successful correction values were not established.",
+    "unknowns": ["actual Bambu Studio project/profile", "sliced input hash", "layer height", "filament brand/color", "plate", "support/brim settings", "condition-specific seating and retention results"],
+    "reuse_boundary": "Observations only. No source photographs, videos, geometry, private history or model license is copied or transferred."
+  },
+  "existing_coupon_package": "downloads/fit-coupons.zip",
+  "stages": [
+    {"id": "existing-coupons", "package": "fit-coupons.zip", "gate": "Use the existing male/female and NP3 keyway trials first; do not print every clearance candidate together."},
+    {"id": "real-blocks", "gate": "Print only the two 2x2 and two 2x4 blocks; stop for obstruction, handling difficulty, failed seating or damage."},
+    {"id": "keeper-base", "gate": "After the real-block gate passes, print one keeper and two identical left-end base blocks for ONE selected variant."},
+    {"id": "selected-base-front", "gate": "Only after these screens pass, test the selected real five-course base, its own full-size message/logo and all three keepers before the face."}
+  ],
+  "common": [
+    {"part": "BR-02x02-H096", "quantity": 2, "color": "black", "stage": "real-blocks"},
+    {"part": "BR-02x04-H096", "quantity": 2, "color": "black", "stage": "real-blocks"},
+    {"part": "NP3-KEEPER", "quantity": 1, "color": "black", "stage": "keeper-base"}
+  ],
+  "variants": [
+    {"id": "A", "base_part": "BASE3-03x08-T-48de52", "base_quantity": 2},
+    {"id": "B", "base_part": "BASE3-03x10-T-aa77a9", "base_quantity": 2},
+    {"id": "C", "base_part": "BASE3-03x14-T-08700f", "base_quantity": 2}
+  ],
+  "quantity_per_selected_variant": 7,
+  "not_qualified": [
+    "Actual handling, open cavities, seating or clutch before printing",
+    "Complete five-course alignment, full-width module capture or three-keeper retention",
+    "Long-part warping, strength, tip resistance, print time or mass",
+    "Commercial compatibility guarantee, toy safety or manufacturing certification"
+  ]
+}

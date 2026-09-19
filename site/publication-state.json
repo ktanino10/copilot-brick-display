@@ -1,0 +1,7 @@
+{
+  "status": "privacy-maintenance",
+  "model_downloads": false,
+  "reason": "Recipient-specific distribution withdrawn while generic native outputs and public history are cleaned.",
+  "history_cleanup": "in_progress",
+  "external_copies_or_caches": "not_guaranteed_erased"
+}

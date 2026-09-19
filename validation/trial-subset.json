@@ -1,0 +1,192 @@
+{
+  "status": "PASS_UNCHANGED_SELECTION_AND_DIGITAL_SECTION_SAMPLES",
+  "geometry_revision": "3.0-five-course-front",
+  "guidance_revision": "trial-2026-09-19",
+  "selected_masters": 6,
+  "quantity_per_one_selected_variant": 7,
+  "sliced": false,
+  "physical_trial_performed": false,
+  "interpretation": "A few digital section points distinguish modeled cavities from roofs. They do not prove all toolpaths, first-layer openings, physical grip, fit or printing success.",
+  "records": [
+    {
+      "part": "BR-02x02-H096",
+      "stl_sha256": "16726dd1b4b1e1a44bc8c0871ab681cf12c200643be356c5f1903c0017395d30",
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          15.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "orientation": "underside_on_bed_studs_up",
+      "positive_mesh_volume_mm3": 1515.6239540635518,
+      "watertight": true,
+      "reference_xy_mm": [
+        4.01,
+        4.01
+      ],
+      "z0p2_sample_is_void": true,
+      "roof_sample_z_mm": 8.2,
+      "roof_sample_is_material": true,
+      "individual_footprint_with_6mm_external_brim_mm": [
+        27.799999617040157,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "BR-02x04-H096",
+      "stl_sha256": "31b61fbf103450546cda92dfe50bfc24393e776bbe62a45d24d6084cb0c7a269",
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          31.899999618530273,
+          11.399999618530273
+        ]
+      ],
+      "orientation": "underside_on_bed_studs_up",
+      "positive_mesh_volume_mm3": 2966.5598816521083,
+      "watertight": true,
+      "reference_xy_mm": [
+        4.01,
+        4.01
+      ],
+      "z0p2_sample_is_void": true,
+      "roof_sample_z_mm": 8.2,
+      "roof_sample_is_material": true,
+      "individual_footprint_with_6mm_external_brim_mm": [
+        27.799999617040157,
+        43.79999961704016
+      ]
+    },
+    {
+      "part": "NP3-KEEPER",
+      "stl_sha256": "b523f99637728aa9e51b4025ec778016f0c9d78f9959aa7823abb71ce691978f",
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          15.899999618530273,
+          15.899999618530273,
+          3.200000047683716
+        ]
+      ],
+      "orientation": "flat_front_pad_and_socket_down",
+      "positive_mesh_volume_mm3": 680.9307331572066,
+      "watertight": true,
+      "reference_xy_mm": [
+        4.01,
+        12.01
+      ],
+      "z0p2_sample_is_void": true,
+      "roof_sample_z_mm": 2.4,
+      "roof_sample_is_material": true,
+      "individual_footprint_with_6mm_external_brim_mm": [
+        27.799999617040157,
+        27.799999617040157
+      ]
+    },
+    {
+      "part": "BASE3-03x08-T-48de52",
+      "stl_sha256": "0196383cb2b4a181c563b625920c00703dcc6d2a900c0ac1e437584201eca493",
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          63.900001525878906,
+          11.399999618530273
+        ]
+      ],
+      "orientation": "underside_on_bed_studs_up",
+      "positive_mesh_volume_mm3": 8627.062001927972,
+      "watertight": true,
+      "reference_xy_mm": [
+        4.01,
+        12.01
+      ],
+      "z0p2_sample_is_void": true,
+      "roof_sample_z_mm": 8.2,
+      "roof_sample_is_material": true,
+      "individual_footprint_with_6mm_external_brim_mm": [
+        35.79999961704016,
+        75.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-03x10-T-aa77a9",
+      "stl_sha256": "0eedec766e01cdbef5539540873c80f90309018d6958a6b77b19516be633f18e",
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          79.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "orientation": "underside_on_bed_studs_up",
+      "positive_mesh_volume_mm3": 10798.62474468409,
+      "watertight": true,
+      "reference_xy_mm": [
+        4.01,
+        12.01
+      ],
+      "z0p2_sample_is_void": true,
+      "roof_sample_z_mm": 8.2,
+      "roof_sample_is_material": true,
+      "individual_footprint_with_6mm_external_brim_mm": [
+        35.79999961704016,
+        91.80000152438879
+      ]
+    },
+    {
+      "part": "BASE3-03x14-T-08700f",
+      "stl_sha256": "129459fe8c96ce8d8e80f183f0bbe2b4249d376a729fe9b916088f86ddd6b24a",
+      "bounds_mm": [
+        [
+          0.10000000149011612,
+          0.10000000149011612,
+          0.0
+        ],
+        [
+          23.899999618530273,
+          111.9000015258789,
+          11.399999618530273
+        ]
+      ],
+      "orientation": "underside_on_bed_studs_up",
+      "positive_mesh_volume_mm3": 15141.751340315068,
+      "watertight": true,
+      "reference_xy_mm": [
+        4.01,
+        12.01
+      ],
+      "z0p2_sample_is_void": true,
+      "roof_sample_z_mm": 8.2,
+      "roof_sample_is_material": true,
+      "individual_footprint_with_6mm_external_brim_mm": [
+        35.79999961704016,
+        123.80000152438879
+      ]
+    }
+  ]
+}

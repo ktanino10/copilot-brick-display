@@ -16,6 +16,7 @@ def links(value):
         "../site/": "", "../design/": "downloads/",
         "build.ja.md": "guide.html", "design.md": "technical.html",
         "rebuild.md": "rebuild.html", "licensing.md": "notices.html",
+        "trial.ja.md": "trial.html",
     }
     def replace(match):
         url = match.group(1)
@@ -33,12 +34,16 @@ def main():
         ("design.md", "technical.html", "寸法の根拠と設計"),
         ("rebuild.md", "rebuild.html", "編集・再生成"),
         ("licensing.md", "notices.html", "権利・依存ライブラリ"),
+        ("trial.ja.md", "trial.html", "7個の段階試作・閉塞を先に確認"),
     ]:
         body = links(markdown.markdown((ROOT / "docs" / source).read_text(),
                                       extensions=["tables", "fenced_code", "toc"]))
         guide = ""
         if target == "guide.html":
-            guide = ('<section class="stage-guide" aria-label="各案の番号付き組立図">'
+            guide = ('<p class="doc-note"><strong>全数印刷の前に。</strong> '
+                     '<a href="trial.html?guidance=trial-2026-09-19">既存coupon → 7個の実部品 → 選択案の台座・前面へ</a>。'
+                     '閉塞・つかみにくさ・着座不良があれば止めます。7個は完成品の合格試験ではありません。</p>'
+                     '<section class="stage-guide" aria-label="各案の番号付き組立図">'
                      '<h2>選んだ案の工程図</h2><p>各図の配置番号はBOM・3D・動画と共通です。手前は図の下です。</p>'
                      '<label for="guide-model">案を選ぶ</label><select id="guide-model"><option>A</option><option selected>B</option><option>C</option></select>'
                      '<label for="guide-step">工程を選ぶ</label><select id="guide-step"></select>'
@@ -60,7 +65,7 @@ def main():
     shutil.copyfile(ROOT / "resources/fonts/barlow-condensed/OFL.txt", ROOT / "site/vendor/Barlow-OFL.txt")
     from stamp_release import main as stamp
     stamp()
-    print("Published Japanese guide, technical design, rebuild instructions, and rights notices.")
+    print("Published maintained guides, staged trial instructions, technical design and notices.")
 
 
 if __name__ == "__main__":
