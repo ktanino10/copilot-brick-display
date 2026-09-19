@@ -91,4 +91,12 @@ const evidence = await json('site/downloads/validation.json');
 assert.equal(evidence.parameters_sha256, catalog.parameters_sha256);
 assert.equal(evidence.physical_testing, 'NOT_PERFORMED');
 assert.ok(evidence.digital_checks_passed);
+const tributeState = await json('validation/tribute-mirror.json');
+if (tributeState.status === 'WITHDRAWN_REJECTED_ADHESIVE_DESIGN') {
+  const tributeFiles = await walk(path.join(site, 'tribute'));
+  assert.deepEqual(tributeFiles.map((file) => path.relative(path.join(site, 'tribute'), file)), ['index.html']);
+  const notice = await readFile(path.join(site, 'tribute/index.html'), 'utf8');
+  assert.match(notice, /接着案は不採用/);
+  assert.match(notice, /すべて取り外せる構造/);
+}
 console.log(`PASS: ${catalog.models.length} models, ${Object.keys(catalog.parts).length} unique STL hashes, ${links} static links, native signatures, MP4 containers, and privacy scan.`);

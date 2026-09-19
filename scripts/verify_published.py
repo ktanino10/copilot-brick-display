@@ -30,8 +30,7 @@ def main():
     files = {"index.html", "guide.html", "technical.html", "rebuild.html", "notices.html",
              "assets/catalog.json", "app.js", "style.css", "vendor/three.module.js",
              "downloads/validation.json", "downloads/fit-coupons.zip", "downloads/interface.pdf",
-             "downloads/part-drawings.pdf", "drawings/interface.svg", "tribute/index.html",
-             "tribute/media/assembly.mp4", "tribute/native/character-tribute.FCStd"}
+             "downloads/part-drawings.pdf", "drawings/interface.svg", "tribute/index.html"}
     exact = ["index.html", "guide.html", "assets/catalog.json"]
     for model in c["models"]:
         key = model["id"]

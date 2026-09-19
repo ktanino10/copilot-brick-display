@@ -23,10 +23,13 @@ def main():
     mesh = read("validation/meshes.json")
     packages = read("validation/print-packages.json")
     three_mf = read("validation/3mf.json")
+    motion = read("validation/explosion-motion.json")
     web = read("validation/web.json")
     assert cad["status"] == mesh["status"] == "PASS_DIGITAL_ONLY"
     assert packages["status"] == "PASS_GEOMETRY_AND_QUANTITIES_ONLY"
     assert three_mf["status"] == "PASS_INDEPENDENT_3MF_REOPEN"
+    assert motion["status"] == "PASS_REAL_NATIVE_MOTION_CHECK"
+    assert all(item["fixed_maximum_overlap_mm3"] < 1e-5 for item in motion["models"])
     assert web["status"] == "PASS_REAL_BROWSER"
     assert cad["parameters_sha256"] == mesh["parameters_sha256"] == c["parameters_sha256"]
     records = []
@@ -64,6 +67,9 @@ def main():
         "mechanical_source_sha256": sha(ROOT / "scripts/freecad_geometry.py"),
         "parts": len(c["parts"]), "mesh_checks": mesh,
         "models": records, "print_packages": packages, "three_mf_reopen": three_mf, "browser": web,
+        "explosion_motion": motion,
+        "final_browser_recheck": read("validation/browser-recheck.json"),
+        "additional_project": read("validation/tribute-mirror.json"),
         "independent_review": "See repository validation/mechanical-review.md; physical gates remain open.",
         "not_claimed": ["Commercial compatibility guarantee", "Physical clutch/strength/tip testing",
                         "Slicer-measured print mass/time", "Toy safety or manufacturing certification",

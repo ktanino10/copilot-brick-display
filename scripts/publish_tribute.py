@@ -1,5 +1,6 @@
 """Mirror only the addition's declared public artifacts, preserving verified bytes."""
 
+import argparse
 import hashlib
 import json
 import shutil
@@ -10,13 +11,39 @@ from design import ROOT, write_json
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--release", action="store_true", help="Publish a reviewed, adhesive-free replacement snapshot.")
+    args = parser.parse_args()
     source = ROOT / "projects/character-tribute"
     destination = ROOT / "site/tribute"
+    if not args.release:
+        prior = ROOT / "validation/tribute-mirror.json"
+        if prior.exists():
+            record = json.loads(prior.read_text())
+            owned = set(record.get("copied", []) + record.get("linked_rebuild_sources", []) + ["manifest.json", "index.html"])
+            for relative in owned:
+                path = (destination / relative).resolve()
+                if not path.is_relative_to(destination.resolve()):
+                    raise ValueError("Unsafe prior mirror path")
+                if path.is_file():
+                    path.unlink()
+        destination.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(ROOT / "resources/tribute-status.html", destination / "index.html")
+        write_json(prior, {
+            "status": "WITHDRAWN_REJECTED_ADHESIVE_DESIGN",
+            "entry": "tribute/index.html", "assets": 0, "copied": ["index.html"],
+            "manufacturing_downloads": "REMOVED",
+            "user_requirement": "No adhesive; every part, including small colored reliefs, must be removable.",
+            "replacement": "redesign and independent review pending",
+        })
+        print("Withdrew obsolete adhesive-design downloads; published redesign status only.")
+        return
     manifest = json.loads((source / "manifest.json").read_text())
     assert manifest["physical_fit_tested"] is False
-    assert "awaits" in manifest["adhesive_design_status"]
+    assert manifest.get("adhesive_required") is False
+    assert manifest.get("all_parts_removable") is True
+    assert manifest.get("independent_retention_review") == "accepted_digital_only"
     entry = (source / manifest["entry"]).read_text()
-    assert "製作リリース保留" in entry, "Pending adhesive authorization must be visible, not just metadata"
     copied = []
     for asset in manifest["assets"]:
         relative = Path(asset["url"])
@@ -49,9 +76,9 @@ def main():
         "entry": "tribute/index.html", "assets": len(copied), "copied": copied,
         "linked_rebuild_sources": source_files,
         "geometry": "unchanged separate product", "physical_fit": "NOT_TESTED",
-        "manufacturing_release": "HELD_PENDING_ADHESIVE_AUTHORIZATION",
+        "manufacturing_release": "digital_prototype_physical_tests_required",
     })
-    print(f"Mirrored {len(copied)} verified candidate artifacts; manufacturing-release hold preserved")
+    print(f"Mirrored {len(copied)} verified removable-design artifacts; physical testing remains open")
 
 
 if __name__ == "__main__":
