@@ -6,6 +6,7 @@ import hashlib
 import json
 import math
 import struct
+import subprocess
 import time
 import xml.etree.ElementTree as ET
 import zipfile
@@ -33,13 +34,16 @@ def studs(item, spec, pitch):
     nx, ny = spec["studs"]
     x, y, _ = item["position"]
     return {(round(x + (a + 0.5) * pitch, 6), round(y + (b + 0.5) * pitch, 6))
-            for a in range(nx) for b in range(ny)}
+            for a in range(nx) for b in range(ny) if b not in spec.get("reserved_rows", [])}
 
 
 def socket_grid(item, spec, pitch):
     if not spec.get("socket"):
         return set()
-    return studs(item, {**spec, "top_studs": True}, pitch)
+    dx, dy = spec.get("socket_grid_offset", [0, 0])
+    translated = {**item, "position": [item["position"][0] + dx,
+                                       item["position"][1] + dy, item["position"][2]]}
+    return studs(translated, {**spec, "top_studs": True}, pitch)
 
 
 def verify_model(model, c, pair_cache):
@@ -65,6 +69,7 @@ def verify_model(model, c, pair_cache):
         assert max(abs(a - b) for left, right in zip(bounds_list(local), expected_bounds)
                    for a, b in zip(left, right)) < 1e-5
         shapes[key] = obj.Shape.copy()
+    boxes = {key: shape.optimalBoundingBox(False, False) for key, shape in shapes.items()}
     with zipfile.ZipFile(path) as archive:
         assert "GuiDocument.xml" in archive.namelist(), "Native colors were not saved"
         gui = archive.read("GuiDocument.xml")
@@ -81,8 +86,9 @@ def verify_model(model, c, pair_cache):
             palette = {struct.unpack_from("<I", data, 8 + 24 * n)[0] for n in range(count)}
             color = (int(c["colors"][item["color"]]["hex"][1:], 16) << 8) | 255
             expected_palette = {color}
-            if item["part"] == "MSG-CARD":
-                expected_palette.add((int(c["colors"]["black"]["hex"][1:], 16) << 8) | 255)
+            finish = c["parts"][item["part"]].get("letter_color")
+            if finish:
+                expected_palette.add((int(c["colors"][finish]["hex"][1:], 16) << 8) | 255)
             assert palette == expected_palette, f"Wrong saved native appearance: {key}"
         for name in archive.namelist():
             content = archive.read(name)
@@ -105,10 +111,13 @@ def verify_model(model, c, pair_cache):
                 graph[upper["id"]].add(lower["id"])
                 graph[lower["id"]].add(upper["id"])
                 contacts.append({"lower": lower["id"], "upper": upper["id"], "studs": len(engaged)})
-    dock = next(i for i in ordered if i["part"] == "MSG-DOCK")
-    card = next(i for i in ordered if i["part"] == "MSG-CARD")
-    graph[dock["id"]].add(card["id"])
-    graph[card["id"]].add(dock["id"])
+    modules = [i for i in ordered if i.get("role") == "front_module"]
+    bases = [i for i in ordered if i.get("role") == "base_course"]
+    for module in modules:
+        for base in bases:
+            if overlap_xyz(boxes[module["id"]], boxes[base["id"]]):
+                graph[base["id"]].add(module["id"])
+                graph[module["id"]].add(base["id"])
     visited, todo = set(), [ordered[0]["id"]]
     while todo:
         key = todo.pop()
@@ -123,7 +132,7 @@ def verify_model(model, c, pair_cache):
         shape = shapes[item["id"]]
         for previous in ordered[:index]:
             other = shapes[previous["id"]]
-            if overlap_xyz(shape.BoundBox, other.BoundBox):
+            if overlap_xyz(boxes[item["id"]], boxes[previous["id"]]):
                 cache_key = (
                     item["part"], previous["part"], tuple(item["rotation"]), tuple(previous["rotation"]),
                     tuple(round(a - b, 6) for a, b in zip(item["position"], previous["position"])),
@@ -136,10 +145,10 @@ def verify_model(model, c, pair_cache):
                 max_intersection = max(max_intersection, common)
                 assert common < 1e-5, f"Interference {previous['id']}/{item['id']}: {common}"
             # Earlier tall items may block a downward approach, even without final overlap.
-            if previous["id"] == dock["id"] and item["id"] == card["id"]:
+            if previous in bases and item in modules:
                 continue
-            if overlap_xy(shape.BoundBox, other.BoundBox):
-                assert (other.BoundBox.ZMax <= shape.BoundBox.ZMin +
+            if overlap_xy(boxes[item["id"]], boxes[previous["id"]]):
+                assert (boxes[previous["id"]].ZMax <= boxes[item["id"]].ZMin +
                         c["interface"]["stud_height"] + 1e-6), (
                             f"Vertical insertion obstruction: {previous['id']} -> {item['id']}")
     step_path = path.with_suffix(".step")
@@ -158,7 +167,7 @@ def verify_model(model, c, pair_cache):
         "step_reopened_solids": len(reopened_step.Solids), "units": "mm",
         "actual_mm": model["actual_mm"], "appearance_saved": True,
         "connected_components": 1, "stud_engagement_edges": len(contacts),
-        "card_connection": "gravity slot; not clutch or structural retention",
+        "card_connection": "Independent base-front text/logo dovetails with two text keepers and one logo keeper; physical fit untested.",
         "brep_boolean_pairs": checked_pairs, "maximum_intersection_mm3": max_intersection,
         "new_unique_boolean_evaluations": unique_booleans,
         "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
@@ -175,12 +184,30 @@ def verify_model(model, c, pair_cache):
 
 
 def main():
+    from verify_revision_invariants import main as verify_invariants
+    verify_invariants()
     c = json.loads((ROOT / "design/catalog.json").read_text())
     pair_cache = {}
+    baseline = json.loads((ROOT / "design/revision3-invariants.json").read_text())
+    report = json.loads(subprocess.check_output([
+        "git", "show", f"{baseline['original_commit']}:validation/cad.json"], cwd=ROOT))
+    assert report["status"] == "PASS_DIGITAL_ONLY"
+    assert all(item["maximum_intersection_mm3"] < 1e-5 for item in report["models"])
+    for model in c["models"]:
+        face = [item for item in model["placements"] if item.get("role") == "face"]
+        for index, item in enumerate(face):
+            assert c["parts"][item["part"]]["sha256"] == baseline["unchanged_stl_sha256"][item["part"]]
+            for previous in face[:index]:
+                key = (item["part"], previous["part"], tuple(item["rotation"]), tuple(previous["rotation"]),
+                       tuple(round(a - b, 6) for a, b in zip(item["position"], previous["position"])))
+                pair_cache[key] = 0.0
+    reused_face_configurations = len(pair_cache)
     results = [verify_model(model, c, pair_cache) for model in c["models"]]
     write_json(ROOT / "validation/cad.json", {
         "status": "PASS_DIGITAL_ONLY", "parameters_sha256": c["parameters_sha256"],
         "freecad": App.Version(), "models": results,
+        "unchanged_face_pair_configurations_reused": reused_face_configurations,
+        "reuse_basis": "Accepted prior native audit plus byte-identical face meshes and invariant relative poses; revision3-invariants.json is checked separately.",
         "not_claimed": ["physical clutch", "FDM strength", "sliced time/mass",
                         "toy safety", "commercial compatibility certification"],
     })

@@ -86,16 +86,10 @@ def build_catalog(p):
         }
         return key
 
-    parts["MSG-DOCK"] = {
-        "id": "MSG-DOCK", "kind": "dock", "studs": message["dock_studs"],
-        "height": message["dock_height"], "top_studs": False, "socket": True,
-        "stl": "parts/MSG-DOCK.stl", "orientation": "sockets_on_bed_slot_up",
-    }
-    parts["MSG-CARD"] = {
-        "id": "MSG-CARD", "kind": "card", "top_studs": False, "socket": False,
-        "stl": "parts/MSG-CARD.stl", "orientation": "flat_back_on_bed_text_up",
-        "text": message["lines"],
-        "optional_color_change_z": message["card_thickness"],
+    parts["NP3-KEEPER"] = {
+        "id": "NP3-KEEPER", "kind": "front_keeper", "studs": [2, 1], "height": 3.2,
+        "top_studs": False, "socket": True, "socket_grid_offset": [0, 8],
+        "stl": "parts/NP3-KEEPER.stl", "orientation": "flat_front_pad_and_socket_down",
     }
     for v in p["variants"]:
         placements = []
@@ -106,27 +100,80 @@ def build_catalog(p):
             steps.append({"number": index, "title": title, "instances": []})
             return index
 
-        def place(part, color, xyz, number, rotation=(0, 0, 0)):
+        def place(part, color, xyz, number, rotation=(0, 0, 0), **extra):
             instance = f'{v["id"]}-{len(placements) + 1:03d}'
             placements.append({
                 "id": instance, "part": part, "color": color,
                 "position": [round(n, 6) for n in xyz], "rotation": list(rotation),
                 "step": number,
+                **extra,
             })
             steps[number - 1]["instances"].append(instance)
 
         bw, bd = v["base_studs"]
-        number = step("台座を水平な机に置く")
-        base_x = 0
-        for segment in v["base_segments_x"]:
-            place(register(segment, bd, height), "black", [base_x * pitch, 0, 0], number)
-            base_x += segment
-        if base_x != bw:
-            raise ValueError("Base segments must exactly fill the nominal width")
-        number = step("前側の予約スタッドにメッセージドックを載せる")
-        dock_x = (bw - message["dock_studs"][0]) * pitch / 2
-        dock_y = pitch
-        place("MSG-DOCK", "black", [dock_x, dock_y, height], number)
+        modules = [
+            {"x": message["x"], "width": v["message_width"], "back_y": message["back_y"]},
+            {"x": v["logo_x"], "width": v["logo_module_width"], "back_y": p["logo"]["back_y"]},
+        ]
+        for base_course in range(message["base_courses"]):
+            number = step(f"黒い台座 {base_course + 1} / 5段目を積む（縦の継ぎ目をずらす）")
+            segments = (v["base_segments_x"] if base_course == 0 else
+                        ([6] * (bw // 6) if base_course % 2 else [3] + [6] * (bw // 6 - 1) + [3]))
+            base_x = 0
+            for segment in segments:
+                slots = []
+                segment_width = segment * pitch
+                margin = message["side_taper"] + message["clearance"] + 1
+                for module in modules:
+                    left = module["x"] - base_x * pitch
+                    right = left + module["width"]
+                    if right < -margin or left > segment_width + margin:
+                        continue
+                    left, right = max(left, -margin), min(right, segment_width + margin)
+                    slots.append({"x": round(left, 6), "width": round(right - left, 6),
+                                  "back_y": module["back_y"]})
+                geometry = {"studs": [segment, bd], "height": height, "slots": slots,
+                            "bottom_course": base_course == 0}
+                suffix = hashlib.sha256(json.dumps(geometry, sort_keys=True).encode()).hexdigest()[:6]
+                key = f"BASE3-{segment:02}x{bd:02}-{'B' if base_course == 0 else 'T'}-{suffix}"
+                parts[key] = {
+                    **geometry, "id": key, "kind": "front_base", "top_studs": True,
+                    "socket": True, "reserved_rows": [0], "source_brick": brick_id(segment, bd, height),
+                    "stl": f"parts/{key}.stl", "orientation": "underside_on_bed_studs_up",
+                }
+                place(key, "black", [base_x * pitch, 0, base_course * height], number,
+                      role="base_course", course=base_course)
+                base_x += segment
+            if base_x != bw:
+                raise ValueError("Every base course must exactly fill the nominal width")
+        text_id, logo_id = f"NP3-TEXT-{v['id']}", f"NP3-LOGO-{v['id']}"
+        parts[text_id] = {
+            "id": text_id, "kind": "front_plaque", "width": v["message_width"],
+            "text_sizes": v["text_sizes"], "text_heights": v["text_heights"], "text": message["lines"],
+            "top_studs": False, "socket": False, "stl": f"parts/{text_id}.stl",
+            "orientation": "flat_rear_on_bed_letters_up", "optional_color_change_z": message["thickness"],
+            "letter_color": message["letter_color"],
+        }
+        parts[logo_id] = {
+            "id": logo_id, "kind": "front_logo", "width": v["logo_module_width"],
+            "diameter": v["logo_diameter"], "top_studs": False, "socket": False,
+            "stl": f"parts/{logo_id}.stl", "orientation": "flat_rear_on_bed_relief_up",
+            "optional_color_change_z": p["logo"]["finish_color_change_z"], "letter_color": "white",
+        }
+        number = step("大きい2行銘板と、その右隣のロゴを別々に前面の溝へ差し込む")
+        place(text_id, "black", [message["x"], message["back_y"], message["bottom_z"]],
+              number, (90, 0, 0), role="front_module", module="text")
+        place(logo_id, "black", [v["logo_x"], p["logo"]["back_y"], message["bottom_z"]],
+              number, (90, 0, 0), role="front_module", module="logo")
+        number = step("銘板用2個・ロゴ用1個の黒いキーパーを2列目のスタッドに載せる")
+        keeper_locations = [
+            (0, "text"),
+            (int((message["x"] + v["message_width"] - 16) // pitch) * pitch, "text"),
+            (int((v["logo_x"] + v["logo_module_width"] / 2 - 8) // pitch) * pitch, "logo"),
+        ]
+        for x, module in keeper_locations:
+            place("NP3-KEEPER", "black", [x, 0, message["base_courses"] * height], number,
+                  role="keeper", module=module)
         offset_x = (bw - v["body_width"]) // 2
         for course in range(v["body_courses"]):
             number = step(f"本体 {course + 1} 段目を左から載せる")
@@ -141,7 +188,7 @@ def build_catalog(p):
                     for start, length in split_run(x, end, course):
                         place(register(length, y1 - y0, height), color,
                               [(offset_x + start) * pitch, y0 * pitch,
-                               (course + 1) * height], number)
+                               (course + message["base_courses"]) * height], number, role="face")
                 x = end
         number = step("頭頂のマゼンタのプレートを載せる")
         crest_start = (bw - v["crest_width"]) // 2
@@ -149,19 +196,17 @@ def build_catalog(p):
             place(register(length, v["face_y"][1] - v["face_y"][0],
                            v["crest_height"]), "magenta",
                   [(crest_start + x) * pitch, v["face_y"][0] * pitch,
-                   (v["body_courses"] + 1) * height], number)
-        number = step("文字カードをドックへ上から差し込み、転倒と保持を確認する")
-        place("MSG-CARD", "cyan", [
-            dock_x + (message["dock_studs"][0] * pitch - message["card_width"]) / 2,
-            dock_y + message["slot_center_y"] + message["card_thickness"] / 2,
-            height + message["dock_height"] - message["slot_depth"],
-        ], number, (90, 0, 0))
+                   (v["body_courses"] + message["base_courses"]) * height], number, role="face")
+        step("2行と右ロゴが5段台座の正面内に収まること、保持と転倒を確認する")
         quantities = Counter((i["part"], i["color"]) for i in placements)
         bom = [{"part": key, "color": color, "quantity": n,
-                "stl": parts[key]["stl"]}
+                "stl": parts[key]["stl"], "finish_color": parts[key].get("letter_color", ""),
+                "color_change_z_mm": parts[key].get("optional_color_change_z", "")}
                for (key, color), n in sorted(quantities.items())]
         models.append({
             **v, "placements": placements, "steps": steps, "bom": bom,
+            "presentation": p["presentation"],
+            "base_courses": message["base_courses"], "base_body_height_mm": message["base_courses"] * height,
             "part_count": len(placements), "unique_prints": len({i["part"] for i in placements}),
         })
     for correction in p["fit_candidates"]["male_diameter_corrections"]:
@@ -180,11 +225,38 @@ def build_catalog(p):
             "top_studs": False, "socket": True, "female_clearance": clearance,
             "stl": f"parts/{key}.stl", "orientation": "socket_down",
         }
+    parts["NP3-FIT-PLAQUE"] = {
+        "id": "NP3-FIT-PLAQUE", "kind": "front_fit_plaque", "width": 24,
+        "top_studs": False, "socket": False, "stl": "parts/NP3-FIT-PLAQUE.stl",
+        "orientation": "flat_rear_on_bed",
+    }
+    for clearance in (.15, .20, .25):
+        key = f"NP3-FIT-SOCKET-C{round(clearance * 100):02}"
+        parts[key] = {
+            "id": key, "kind": "front_fit_socket", "studs": [4, 2], "height": 9.6,
+            "bottom_course": True, "reserved_rows": [0],
+            "slots": [{"width": 24, "x": 4, "clearance": clearance,
+                       "back_y": message["back_y"], "bottom_z": .2}],
+            "top_studs": True, "socket": True, "stl": f"parts/{key}.stl",
+            "orientation": "underside_on_bed_studs_up",
+        }
     return {
         "schema_version": 1, "revision": p["revision"], "units": "mm",
         "parameters_sha256": digest(ROOT / "design/parameters.json"),
-        "interface": p["interface"], "message": p["message"], "colors": p["colors"],
+        "interface": p["interface"], "message": p["message"], "logo": p["logo"], "colors": p["colors"],
         "parts": parts, "models": models,
+    }
+
+
+def interface_contract(p):
+    return {
+        "id": "BASE-FRONT-NP3", "revision": p["revision"], "units": "mm",
+        "status": p["status"], "brick": p["interface"], "message": p["message"], "logo": p["logo"],
+        "variants": [{key: v[key] for key in ("id", "message_width", "logo_x", "logo_module_width", "logo_diameter")}
+                     for v in p["variants"]],
+        "note": "Design candidates, not a LEGO specification or compatibility certification.",
+        "insertion": "Independent downward dovetail slides into the five-course base front; 2 text keepers and 1 logo keeper prevent upward escape.",
+        "legacy": "BRICK-8-MSG-SLOT-1 remains pinned at WITHDRAWN-PRIVACY-REVISION for the frozen tribute; no change to its outputs.",
     }
 
 
@@ -195,12 +267,7 @@ def main():
     p = load_parameters()
     catalog = build_catalog(p)
     write_json(ROOT / args.output, catalog)
-    write_json(ROOT / "design/interface.json", {
-        "id": "BRICK-8-MSG-SLOT-1", "revision": p["revision"], "units": "mm",
-        "status": p["status"], "brick": p["interface"], "message": p["message"],
-        "note": "Design candidates, not a LEGO specification or compatibility certification.",
-        "insertion": "Vertical downward; card slides freely into gravity-retained slot.",
-    })
+    write_json(ROOT / "design/interface.json", interface_contract(p))
     for model in catalog["models"]:
         print(model["id"], model["part_count"], "parts,", len(model["steps"]), "steps")
 

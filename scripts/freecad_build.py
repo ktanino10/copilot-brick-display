@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import ast
 import csv
 import faulthandler
 import hashlib
 import json
 import math
 import os
+import shutil
 import struct
 import sys
 from pathlib import Path
@@ -18,8 +20,8 @@ import MeshPart
 import Part
 import TechDraw
 
-from design import ROOT, build_catalog, load_parameters, write_json
-from freecad_geometry import bounds_list, placement_for, shape_for
+from design import ROOT, build_catalog, interface_contract, load_parameters, write_json
+from freecad_geometry import bounds_list, build_brick, placement_for, shape_for
 
 
 def log(*values):
@@ -55,20 +57,62 @@ def setup_gui():
     return Gui
 
 
-def generate_part(spec, p, cache, output):
+MEASURED_FIELDS = ("bounds", "volume_mm3", "mesh_triangles", "mesh_linear_deflection_mm", "sha256", "local_center_mm")
+
+
+def brick_functions(source):
+    tree = ast.parse(source)
+    names = {"socket_cutter", "supports", "stud_shape", "build_brick"}
+    return {node.name: ast.dump(node, include_attributes=False)
+            for node in tree.body if isinstance(node, ast.FunctionDef) and node.name in names}
+
+
+def generate_part(spec, p, cache, output, reuse):
     cache_path = cache / f"{spec['id']}.brep"
+    previous = reuse.get("parts", {}).get(spec["id"])
+    if previous and reuse["brick_unchanged"] and spec["kind"] in ("brick", "male_coupon", "female_coupon"):
+        geometry_keys = ("id", "kind", "studs", "height", "top_studs", "socket",
+                         "male_correction", "female_clearance")
+        if all(spec.get(key) == previous.get(key) for key in geometry_keys):
+            old_brep = reuse["cache"] / f"{spec['id']}.brep"
+            filename = output / spec["stl"]
+            source_mesh = filename if filename.is_file() else ROOT / "site/downloads" / spec["stl"]
+            if old_brep.exists() and source_mesh.exists() and hashlib.sha256(source_mesh.read_bytes()).hexdigest() == previous["sha256"]:
+                if old_brep != cache_path:
+                    shutil.copyfile(old_brep, cache_path)
+                filename.parent.mkdir(parents=True, exist_ok=True)
+                if source_mesh != filename:
+                    shutil.copyfile(source_mesh, filename)
+                shape = Part.Shape()
+                shape.read(str(cache_path))
+                spec.update({key: previous[key] for key in MEASURED_FIELDS})
+                reuse["reused"].append(spec["id"])
+                return shape
     if cache_path.exists():
         shape = Part.Shape()
         shape.read(str(cache_path))
     else:
-        shape = shape_for(spec, p, ROOT)
+        if spec["kind"].startswith("front_"):
+            from front_nameplate import shape_for_front
+            shape = shape_for_front(spec, p, lambda raw, parameters: cached_brick(raw, parameters, reuse))
+        else:
+            shape = shape_for(spec, p, ROOT)
         shape.exportBrep(str(cache_path))
     if not shape.isValid() or len(shape.Solids) != 1 or shape.Volume <= 0:
         raise ValueError(f"Invalid cached solid: {spec['id']}")
-    mesh = MeshPart.meshFromShape(Shape=shape, LinearDeflection=0.025,
-                                  AngularDeflection=math.radians(12), Relative=False)
+    cached_stl, cached_meta = cache / f"{spec['id']}.stl", cache / f"{spec['id']}.json"
     filename = output / spec["stl"]
     filename.parent.mkdir(parents=True, exist_ok=True)
+    if cached_stl.is_file() and cached_meta.is_file():
+        metadata = json.loads(cached_meta.read_text())
+        if hashlib.sha256(cached_stl.read_bytes()).hexdigest() != metadata["sha256"]:
+            raise ValueError(f"Corrupt cached mesh: {spec['id']}")
+        shutil.copyfile(cached_stl, filename)
+        spec.update(metadata)
+        reuse["reused"].append(spec["id"])
+        return shape
+    mesh = MeshPart.meshFromShape(Shape=shape, LinearDeflection=0.025,
+                                  AngularDeflection=math.radians(12), Relative=False)
     triangles = stl_write(mesh, filename)
     spec.update({
         "bounds": bounds_list(shape), "volume_mm3": round(shape.Volume, 6),
@@ -76,6 +120,31 @@ def generate_part(spec, p, cache, output):
         "sha256": hashlib.sha256(filename.read_bytes()).hexdigest(),
         "local_center_mm": list(shape.Solids[0].CenterOfMass),
     })
+    shutil.copyfile(filename, cached_stl)
+    write_json(cached_meta, {key: spec[key] for key in MEASURED_FIELDS})
+    return shape
+
+
+def cached_brick(spec, parameters, reuse):
+    recipe = {"interface": parameters["interface"], "functions": brick_functions((ROOT / "scripts/freecad_geometry.py").read_text())}
+    folder = ROOT / "build/brick-primitives" / hashlib.sha256(json.dumps(recipe, sort_keys=True).encode()).hexdigest()[:16]
+    folder.mkdir(parents=True, exist_ok=True)
+    nx, ny = spec["studs"]
+    key = f"BR-{nx:02}x{ny:02}-H{round(spec['height'] * 10):03}"
+    identity = {field: spec[field] for field in ("studs", "height", "top_studs", "socket")}
+    identity["id"] = key
+    path = folder / (hashlib.sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest()[:16] + ".brep")
+    if path.is_file():
+        shape = Part.Shape()
+        shape.read(str(path))
+        return shape
+    old = reuse.get("cache", folder) / f"{key}.brep"
+    if reuse.get("brick_unchanged") and spec["top_studs"] and spec["socket"] and old.is_file():
+        shape = Part.Shape()
+        shape.read(str(old))
+    else:
+        shape = build_brick(spec, parameters)
+    shape.exportBrep(str(path))
     return shape
 
 
@@ -114,12 +183,16 @@ def save_assembly(model, c, shapes, output, gui):
         obj.AssemblyStep = item["step"]
         obj.ViewObject.ShapeColor = html_color(c["colors"][item["color"]]["hex"])
         obj.ViewObject.LineColor = (0.1, 0.15, 0.2)
-        if item["part"] == "MSG-CARD":
-            base_color = html_color(c["colors"]["cyan"]["hex"])
-            text_color = html_color(c["colors"]["black"]["hex"])
+        part_spec = c["parts"][item["part"]]
+        if part_spec["kind"] in ("front_plaque", "front_logo"):
+            if part_spec["kind"] == "front_plaque":
+                obj.addProperty("App::PropertyString", "MessageLines")
+                obj.MessageLines = json.dumps(c["message"]["lines"])
+            base_color = html_color(c["colors"]["black"]["hex"])
+            text_color = html_color(c["colors"][part_spec["letter_color"]]["hex"])
             obj.ViewObject.DiffuseColor = [
-                text_color if face.CenterOfMass.z > c["message"]["card_thickness"] + 0.001
-                else base_color for face in shapes["MSG-CARD"].Faces
+                text_color if face.CenterOfMass.z > part_spec["optional_color_change_z"] + 0.001
+                else base_color for face in shapes[item["part"]].Faces
             ]
         groups[item["step"]].addObject(obj)
         objects.append(obj)
@@ -158,7 +231,7 @@ def measure_assembly(model, c, shapes, output):
     folder = output / model["id"]
     folder.mkdir(parents=True, exist_ok=True)
     with (folder / "bom.csv").open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, ["part", "color", "quantity", "stl"])
+        writer = csv.DictWriter(stream, ["part", "color", "quantity", "stl", "finish_color", "color_change_z_mm"])
         writer.writeheader()
         writer.writerows(model["bom"])
     write_json(folder / "assembly.json", {
@@ -172,20 +245,84 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--parts", nargs="*", help="Generate only named parts; no assemblies.")
     parser.add_argument("--native-only", action="store_true", help="Use measured catalogue and BREP cache to save native files.")
+    parser.add_argument("--models", nargs="+", choices=["A", "B", "C"], default=["A", "B", "C"])
+    parser.add_argument("--reuse-baseline", type=Path, help="Frozen original source/catalog folder for verified unchanged-part reuse.")
+    parser.add_argument("--baseline-cache", type=Path)
+    parser.add_argument("--preview-model", choices=["A", "B", "C"])
+    parser.add_argument("--reuse-preview", type=Path, help="Reuse byte-verified parts from a matching native prototype.")
+    parser.add_argument("--reuse-measured-cache", action="store_true",
+                        help="Reuse the last measured cache for metadata/presentation-only changes with identical geometry inputs.")
     args = parser.parse_args()
     p = load_parameters()
     c = build_catalog(p)
-    output = ROOT / "site/downloads"
-    fingerprint = hashlib.sha256(
-        (ROOT / "design/parameters.json").read_bytes() +
-        (ROOT / "scripts/freecad_geometry.py").read_bytes()).hexdigest()[:16]
+    part_inputs = c["parts"]
+    output_root = ROOT / "build/np3-preview" if args.preview_model else ROOT
+    output = output_root / "downloads" if args.preview_model else ROOT / "site/downloads"
+    if args.preview_model:
+        c["models"] = [model for model in c["models"] if model["id"] == args.preview_model]
+        needed = {item["part"] for model in c["models"] for item in model["placements"]}
+        c["parts"] = {key: spec for key, spec in c["parts"].items() if key in needed}
+    fingerprint = hashlib.sha256(json.dumps(
+        {"recipe": geometry_recipe(p), "part_inputs": part_inputs, "logo": p["logo"]},
+        sort_keys=True).encode()).hexdigest()[:16]
     cache = ROOT / "build/brep" / fingerprint
     cache.mkdir(parents=True, exist_ok=True)
     shapes = {}
+    reuse = {"reused": [], "brick_unchanged": False}
+    if args.reuse_measured_cache:
+        previous_catalog = json.loads((ROOT / "design/catalog.json").read_text())
+        previous_build = json.loads((ROOT / "build/freecad-build.json").read_text())
+        assert previous_catalog["interface"] == p["interface"]
+        assert previous_catalog["message"] == p["message"]
+        assert previous_build["geometry_recipe"] == geometry_recipe(p), "Mechanical code changed; regenerate affected solids."
+        old_cache = ROOT / "build/brep" / previous_build["cache_fingerprint"]
+        for key, spec in c["parts"].items():
+            old_part = previous_catalog["parts"][key]
+            assert all(spec.get(k) == old_part.get(k) for k in spec if k not in MEASURED_FIELDS)
+            target = cache / f"{key}.brep"
+            if old_cache != cache:
+                shutil.copyfile(old_cache / f"{key}.brep", target)
+            shapes[key] = Part.Shape()
+            shapes[key].read(str(target))
+            assert hashlib.sha256((output / spec["stl"]).read_bytes()).hexdigest() == old_part["sha256"]
+            spec.update({field: old_part[field] for field in MEASURED_FIELDS})
+            spec["bounds"] = bounds_list(shapes[key])
+            reuse["reused"].append(key)
+    if args.reuse_baseline:
+        old = args.reuse_baseline
+        old_parameters = json.loads((old / "design/parameters.json").read_text())
+        previous_catalog = json.loads((old / "design/catalog.json").read_text())
+        previous_build = json.loads((ROOT / "build/freecad-build.json").read_text())
+        reuse.update({
+            "parts": previous_catalog["parts"],
+            "cache": args.baseline_cache or ROOT / "build/brep" / previous_build["cache_fingerprint"],
+            "brick_unchanged": old_parameters["interface"] == p["interface"] and
+                brick_functions((old / "scripts/freecad_geometry.py").read_text()) ==
+                brick_functions((ROOT / "scripts/freecad_geometry.py").read_text()),
+        })
+    if args.reuse_preview:
+        previous_catalog = json.loads((args.reuse_preview / "catalog.json").read_text())
+        previous_build = json.loads((args.reuse_preview / "freecad-build.json").read_text())
+        assert previous_build["geometry_recipe"] == geometry_recipe(p)
+        assert previous_catalog["logo"] == p["logo"]
+        for key, old_part in previous_catalog["parts"].items():
+            if key not in c["parts"]:
+                continue
+            spec = c["parts"][key]
+            assert all(spec.get(field) == old_part.get(field) for field in spec if field not in MEASURED_FIELDS)
+            source_mesh = args.reuse_preview / "downloads" / old_part["stl"]
+            assert hashlib.sha256(source_mesh.read_bytes()).hexdigest() == old_part["sha256"]
+            source_brep = ROOT / "build/brep" / previous_build["cache_fingerprint"] / f"{key}.brep"
+            if source_brep != cache / f"{key}.brep":
+                shutil.copyfile(source_brep, cache / f"{key}.brep")
+            shutil.copyfile(source_mesh, cache / f"{key}.stl")
+            write_json(cache / f"{key}.json", {field: old_part[field] for field in MEASURED_FIELDS})
     if args.native_only:
         c = json.loads((ROOT / "design/catalog.json").read_text())
         assert c["parameters_sha256"] == build_catalog(p)["parameters_sha256"]
     for key, spec in c["parts"].items():
+        if key in shapes:
+            continue
         if args.parts and key not in args.parts:
             continue
         log(f"PART {key}")
@@ -194,7 +331,7 @@ def main():
             shapes[key].read(str(cache / f"{key}.brep"))
             assert shapes[key].isValid()
         else:
-            shapes[key] = generate_part(spec, p, cache, output)
+            shapes[key] = generate_part(spec, p, cache, output, reuse)
     if args.parts:
         write_json(ROOT / "build/interface-proof.json",
                    {key: c["parts"][key] for key in shapes})
@@ -202,17 +339,33 @@ def main():
     if not args.native_only:
         for model in c["models"]:
             measure_assembly(model, c, shapes, output)
-    write_json(ROOT / "design/catalog.json", c)
-    write_json(ROOT / "site/assets/catalog.json", c)
-    write_json(ROOT / "site/downloads/parameters.json", p)
+    write_json(output_root / "catalog.json" if args.preview_model else ROOT / "design/catalog.json", c)
+    if not args.preview_model:
+        write_json(ROOT / "design/interface.json", interface_contract(p))
+        write_json(ROOT / "site/assets/catalog.json", c)
+        write_json(ROOT / "site/downloads/parameters.json", p)
     gui = setup_gui()
     for model in c["models"]:
-        save_assembly(model, c, shapes, output, gui)
-    write_json(ROOT / "build/freecad-build.json", {
+        if model["id"] in args.models:
+            save_assembly(model, c, shapes, output, gui)
+    write_json(output_root / "freecad-build.json" if args.preview_model else ROOT / "build/freecad-build.json", {
         "freecad_version": App.Version(), "parameters_sha256": c["parameters_sha256"],
         "part_count": len(shapes), "models": [x["id"] for x in c["models"]],
         "cache_fingerprint": fingerprint, "status": "native_saved_not_yet_independently_reopened",
+        "unchanged_parts_reused_without_meshing": reuse["reused"],
+        "brick_function_ast_and_interface_equal": reuse["brick_unchanged"],
+        "geometry_recipe": geometry_recipe(p),
     })
+
+
+def geometry_recipe(parameters):
+    return {
+        "interface": parameters["interface"], "message": parameters["message"],
+        "brick_functions": brick_functions((ROOT / "scripts/freecad_geometry.py").read_text()),
+        "front_geometry_sha256": hashlib.sha256((ROOT / "scripts/front_nameplate.py").read_bytes()).hexdigest(),
+        "font_sha256": hashlib.sha256((ROOT / parameters["message"]["font"]).read_bytes()).hexdigest(),
+        "logo_sha256": hashlib.sha256((ROOT / parameters["logo"]["outline"]).read_bytes()).hexdigest(),
+    }
 
 
 if __name__ == "__main__":

@@ -138,7 +138,11 @@ def build_card(parameters, root):
 
 
 def shape_for(spec, parameters, root):
-    shape = build_card(parameters, root) if spec["kind"] == "card" else build_brick(spec, parameters)
+    if spec["kind"].startswith("front_"):
+        from front_nameplate import shape_for_front
+        shape = shape_for_front(spec, parameters, build_brick)
+    else:
+        shape = build_card(parameters, root) if spec["kind"] == "card" else build_brick(spec, parameters)
     if not shape.isValid() or len(shape.Solids) != 1 or shape.Volume <= 0:
         raise ValueError(f"Invalid printable solid: {spec['id']}")
     return shape
@@ -152,6 +156,6 @@ def placement_for(instance):
 
 
 def bounds_list(shape):
-    b = shape.BoundBox
+    b = shape.optimalBoundingBox(False, False)
     return [[round(b.XMin, 6), round(b.YMin, 6), round(b.ZMin, 6)],
             [round(b.XMax, 6), round(b.YMax, 6), round(b.ZMax, 6)]]

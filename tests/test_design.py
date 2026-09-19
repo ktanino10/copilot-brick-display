@@ -17,7 +17,9 @@ class DesignTests(unittest.TestCase):
 
     def test_exact_approved_message(self):
         self.assertEqual(self.p["message"]["lines"], [
-            "@YOUR-USERNAME", "Same icon, New adventures", "github.com/YOUR-USERNAME"])
+            "Same icon, New adventures", "github.com/YOUR-USERNAME"])
+        self.assertNotIn("MSG-CARD", self.c["parts"])
+        self.assertNotIn("MSG-DOCK", self.c["parts"])
 
     def test_distinct_fixed_grid_layouts(self):
         self.assertEqual([v["base_studs"] for v in self.c["models"]],
@@ -45,7 +47,7 @@ class DesignTests(unittest.TestCase):
             occupied = set()
             for item in model["placements"]:
                 spec = self.c["parts"][item["part"]]
-                if spec["kind"] != "brick":
+                if spec["kind"] not in ("brick", "front_base"):
                     continue
                 x, y, z = item["position"]
                 nx, ny = spec["studs"]
@@ -58,6 +60,9 @@ class DesignTests(unittest.TestCase):
                 self.assertFalse(keys & occupied, item["id"])
                 occupied |= keys
                 top_studs[round(z + spec["height"], 6)] |= cells
+                for row in spec.get("reserved_rows", []):
+                    top_studs[round(z + spec["height"], 6)] -= {
+                        (round(x / 8) + a, round(y / 8) + row) for a in range(nx)}
 
     def test_grid_ribs_clear_reference_studs(self):
         i = self.p["interface"]
@@ -66,14 +71,24 @@ class DesignTests(unittest.TestCase):
         tube_r = i["pitch"] / math.sqrt(2) - i["reference_stud_diameter"] / 2 - i["female_radial_clearance"]
         self.assertGreater(tube_r - i["tube_inner_diameter"] / 2, 1.2)
 
-    def test_thin_plate_headroom_and_message_slot(self):
+    def test_thin_plate_headroom_and_base_front_message(self):
         i, m = self.p["interface"], self.p["message"]
         self.assertGreaterEqual(i["plate_height"] - i["thin_plate_roof"] - i["stud_height"], 0.39)
-        self.assertGreaterEqual(m["dock_socket_depth"] - i["stud_height"], 0.39)
-        self.assertGreater(m["slot_width"], m["card_thickness"])
-        self.assertGreater(m["slot_length"], m["card_width"])
-        self.assertGreater(min(m["text_baselines"]), m["slot_depth"])
+        self.assertGreater(m["minimum_straight_stroke"], .8)
+        self.assertGreaterEqual(m["bottom_z"], 0)
+        self.assertLessEqual(m["bottom_z"] + m["height"], 48)
+        self.assertGreaterEqual(m["back_y"] - m["thickness"] - m["relief"], .099)
         for model in self.c["models"]:
+            plaque = next(x for x in model["placements"] if x.get("module") == "text" and x.get("role") == "front_module")
+            self.assertEqual(plaque["rotation"], [90, 0, 0])
+            self.assertEqual(plaque["color"], "black")
+            self.assertEqual(plaque["position"][2], m["bottom_z"])
+            self.assertEqual(model["base_courses"], 5)
+            self.assertEqual(model["base_body_height_mm"], 48)
+            self.assertEqual(len([x for x in model["placements"] if x["part"] == "NP3-KEEPER"]), 3)
+            for bottom, height in zip(m["line_bottoms"], model["text_heights"]):
+                self.assertGreaterEqual(bottom, 2)
+                self.assertLessEqual(bottom + height, m["height"] - 2)
             self.assertLessEqual(max(model["base_segments_x"]) * 8 - i["body_gap"] + 12, 256)
             self.assertLessEqual(model["base_studs"][1] * 8 - i["body_gap"] + 12, 256)
 
