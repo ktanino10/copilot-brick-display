@@ -37,6 +37,17 @@ def main():
     assert front["status"] == "PASS_NATIVE_FRONT_CAPTURE_AND_EXTRACTION"
     assert web["status"] == "PASS_REAL_BROWSER"
     current_browser = web.get("revision") == c["revision"]
+    if current_browser:
+        views = web["vertical_explosion"]
+        expected_views = {(model["id"], viewport) for model in c["models"] for viewport in ("desktop", "mobile")}
+        assert {(view["model"], view["viewport"]) for view in views} == expected_views
+        for view in views:
+            if view["viewport"] == "mobile":
+                assert view.get("viewport_width_px") == 375, "Current phone evidence must be measured at375px."
+            assert [state["percent"] for state in view["states"]] == [0, 50, 100]
+            assert view["states"][0]["error"] < 1e-7
+            assert view["states"][-1]["gap"] >= 9.6
+            assert all(state["clip"] <= 1.001 for state in view["states"])
     browser_record = web if current_browser else {
         "status": "PENDING_CURRENT_REVISION_CI", "required_revision": c["revision"],
         "prior_browser_result_not_reused": True,
@@ -81,6 +92,9 @@ def main():
     assert all("REV3 / 5-COURSE BASE" in page.extract_text() for page in part_pdf.pages)
     review = ROOT / "validation/revision3-review.md"
     assert review.is_file(), "Independent review must be persisted before publication"
+    final_review = ROOT / "validation/revision3-final-review.md"
+    assert final_review.is_file(), "Independent final-presentation acceptance must be persisted before publication"
+    assert "**Decision:** **`accepted_digital_only`" in final_review.read_text(), "Final presentation review has not accepted the package"
     result = {
         "scope": "A/B/C five-course bases, enlarged front text, independent right logos and vertical exploded display",
         "revision": c["revision"],
@@ -95,7 +109,14 @@ def main():
         "final_browser_recheck": {"status": "PASS_CURRENT_REVISION_CI" if current_browser else "PENDING_CURRENT_REVISION_CI",
                                   "revision": c["revision"], "local_browser_retry": "not attempted; known environment limitation"},
         "additional_project": read("validation/tribute-mirror.json"),
-        "independent_review": "See repository validation/revision3-review.md; physical gates remain open.",
+        "independent_review": {
+            "mechanical_record": "validation/revision3-review.md",
+            "mechanical_record_sha256": sha(review),
+            "final_presentation_record": "validation/revision3-final-review.md",
+            "final_presentation_record_sha256": sha(final_review),
+            "decision": "accepted_digital_only",
+            "physical_gates": "OPEN",
+        },
         "not_claimed": ["Commercial compatibility guarantee", "Physical clutch/strength/tip testing",
                         "Slicer-measured print mass/time", "Toy safety or manufacturing certification",
                         "Official LEGO/GitHub/Bambu product"],
