@@ -48,6 +48,9 @@ jobs:
         run: |
           python -m unittest discover -s tests -p test_trial_subset.py -v
           python scripts/verify_trial_subset.py
+      - name: Verify cross-PC color printing instructions
+        if: steps.mode.outputs.maintenance != 'true'
+        run: python -m unittest discover -s tests -p test_cross_pc_guide.py -v
       - name: Verify real browser behavior before deployment
         if: steps.mode.outputs.maintenance != 'true'
         env:

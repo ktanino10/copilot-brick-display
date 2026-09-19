@@ -9,6 +9,9 @@
 [既存の嵌合試験片](https://ktanino10.github.io/copilot-brick-display/downloads/fit-coupons.zip) ·
 [条件・観察記録CSV](https://ktanino10.github.io/copilot-brick-display/downloads/fit-log.csv) · [全体の作り方](https://ktanino10.github.io/copilot-brick-display/guide.html)
 
+別PCへの保存・Bambu Studioでのファイル選択・本体の色別バッチと白文字／白ロゴの手動色替えは、
+[「別PCで、色別に印刷する」](https://ktanino10.github.io/copilot-brick-display/guide.html#print-another-pc)を参照してください。公開の汎用版だけを使用します。
+
 ## 何を参考にしたか
 
 別の4 mm小型ピン／受け試験で、部品が小さく扱いにくく、一部の穴が樹脂で塞がったという実使用の報告がありました。

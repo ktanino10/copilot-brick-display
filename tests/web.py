@@ -115,12 +115,17 @@ with sync_playwright() as playwright:
         print("MODEL_PASS", model["id"], flush=True)
     page.screenshot(path=str(OUT / "C-inspector.png"), full_page=True)
     page.goto(BASE + "guide.html?model=C", wait_until="networkidle")
+    expect(page.get_by_role("heading", name="別PCで、色別に印刷する", exact=True)).to_have_count(1)
+    expect(page.locator('a[href="#print-another-pc"]')).to_have_count(1)
+    expect(page.locator("body")).to_contain_text("一時停止（Pause）も色替え命令も自動設定されていません")
     expect(page.locator("#guide-model")).to_have_value("C")
     c_steps = len(catalog["models"][2]["steps"])
     expect(page.locator("#guide-step option")).to_have_count(c_steps)
     page.locator("#guide-step").select_option(str(c_steps))
     page.wait_for_function("document.querySelector('#guide-drawing').complete && document.querySelector('#guide-drawing').naturalWidth > 0")
     expect(page.locator("#guide-drawing")).to_have_attribute("src", f"drawings/C/step-{c_steps:02}.svg?rev={catalog['revision']}")
+    check_no_overflow(page)
+    page.set_viewport_size({"width": 375, "height": 950})
     check_no_overflow(page)
     page.goto(BASE + "trial.html", wait_until="networkidle")
     expect(page.get_by_role("heading", name="7個だけ、段階を分けて試す", exact=True)).to_have_count(1)
@@ -166,6 +171,7 @@ with sync_playwright() as playwright:
         "revision": catalog["revision"], "vertical_explosion": explosion_records,
         "public_template_policy": catalog["publication"],
         "public_private_customization_guides_opened": True,
+        "cross_pc_color_printing_guidance": "separate-color-2026-09-19; direct model downloads and manually configured pause boundaries checked",
         "checks": ["model changes", "four camera views", "part selection + CAD sheet", "bounds",
                    "explosion", "stage seek + play/pause", "all three MP4 decoded in browser",
                    "Japanese guide stage deep link", "desktop/mobile overflow", "reduced motion", "zero page errors/404s"],

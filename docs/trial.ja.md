@@ -9,6 +9,9 @@
 [既存の嵌合試験片](../site/downloads/fit-coupons.zip) ·
 [条件・観察記録CSV](../site/downloads/fit-log.csv) · [全体の作り方](build.ja.md)
 
+別PCへの保存・Bambu Studioでのファイル選択・本体の色別バッチと白文字／白ロゴの手動色替えは、
+[「別PCで、色別に印刷する」](build.ja.md#print-another-pc)を参照してください。公開の汎用版だけを使用します。
+
 ## 何を参考にしたか
 
 別の4 mm小型ピン／受け試験で、部品が小さく扱いにくく、一部の穴が樹脂で塞がったという実使用の報告がありました。

@@ -4,7 +4,7 @@
 <body><header class="site-header"><a class="brand" href="./?rev=4.0-public-template">BRICK<br>PORTRAIT</a>
 <nav><a href="./?rev=4.0-public-template#workbench">3Dとダウンロード</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="customize.html?rev=4.0-public-template">文字を変える</a></nav></header>
 <main class="document"><div class="doc-nav"><a href="./?rev=4.0-public-template">← 模型のページへ</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="rebuild.html?rev=4.0-public-template">再生成</a></div>
-<p class="doc-note"><strong>全数印刷の前に。</strong> <a href="trial.html?guidance=trial-2026-09-19&rev=4.0-public-template">既存coupon → 7個の実部品 → 選択案の台座・前面へ</a>。閉塞・つかみにくさ・着座不良があれば止めます。7個は完成品の合格試験ではありません。</p><section class="stage-guide" aria-label="各案の番号付き組立図"><h2>選んだ案の工程図</h2><p>各図の配置番号はBOM・3D・動画と共通です。手前は図の下です。</p><label for="guide-model">案を選ぶ</label><select id="guide-model"><option>A</option><option selected>B</option><option>C</option></select><label for="guide-step">工程を選ぶ</label><select id="guide-step"></select><figure><img id="guide-drawing" alt="選択工程の配置図" src="drawings/B/step-01.svg?rev=4.0-public-template"></figure><p><a id="guide-pdf" href="downloads/B/drawings.pdf?rev=4.0-public-template">全工程のPDFを保存 ↓</a></p></section><h1 id="_1">作り方 — まず小さく試してから、本体へ</h1>
+<p class="doc-note"><strong>別PCで、色別に印刷する方へ。</strong> <a href="#print-another-pc">A/B/Cの保存先・色ごとの3MF・黒→白の手動交換を順に確認</a>。1案だけ選びます。公開データは汎用placeholderで、個人用ファイルは含みません。</p><p class="doc-note"><strong>全数印刷の前に。</strong> <a href="trial.html?guidance=trial-2026-09-19&rev=4.0-public-template">既存coupon → 7個の実部品 → 選択案の台座・前面へ</a>。閉塞・つかみにくさ・着座不良があれば止めます。7個は完成品の合格試験ではありません。</p><section class="stage-guide" aria-label="各案の番号付き組立図"><h2>選んだ案の工程図</h2><p>各図の配置番号はBOM・3D・動画と共通です。手前は図の下です。</p><label for="guide-model">案を選ぶ</label><select id="guide-model"><option>A</option><option selected>B</option><option>C</option></select><label for="guide-step">工程を選ぶ</label><select id="guide-step"></select><figure><img id="guide-drawing" alt="選択工程の配置図" src="drawings/B/step-01.svg?rev=4.0-public-template"></figure><p><a id="guide-pdf" href="downloads/B/drawings.pdf?rev=4.0-public-template">全工程のPDFを保存 ↓</a></p></section><h1 id="_1">作り方 — まず小さく試してから、本体へ</h1>
 <p>これは成人向けの屋内用卓上オブジェです。電子部品、モーター、電池、配線、接着剤は使いません。
 <strong>デジタル設計は用意されていますが、実物の嵌合・保持力・耐久性・転倒しにくさは未試験です。</strong>
 市販LEGOへの互換保証、玩具の安全認証、Bambu Labによる認定を意味しません。</p>
@@ -12,6 +12,190 @@
 原因や補正値は未確定で、この模型の成功例ではありません。
 まず<a href="trial.html?rev=4.0-public-template">7個の現行実部品を段階的に試す手順</a>へ進み、入口・屋根のレイヤープレビューと手での着脱を確認してください。
 <strong>閉塞・つかみにくさ・着座不良があれば全数印刷を止めます。</strong> 既存形状・8 mmピッチ・承認済み外観は変更していません。</p>
+<p><a id="print-another-pc"></a></p>
+<h2 id="pc">別PCで、色別に印刷する</h2>
+<p><strong>手順更新：<code>separate-color-2026-09-19</code>。対象は公開の汎用版 <code>4.0-public-template</code> です。</strong>
+A/B/Cのどれを印刷するかは、ここで<strong>1案だけ選んでください</strong>。サイトで最初にBが表示されても、Bを選択済みという意味ではありません。
+公開の銘板は<code>YOUR-USERNAME</code>という仮表示です。個人宛の銘板ファイルをこの公開セットへ混ぜません。
+個人ファイルの転送・一時公開は別に判断する事項です。削除後も履歴・cache・第三者コピーに残る可能性があり、
+この手順のために個人データを公開し直す必要はありません。</p>
+<h3 id="1pc">1案のファイルを、別PCへダウンロード</h3>
+<p>別PCのブラウザで<a href="https://ktanino10.github.io/copilot-brick-display/?rev=4.0-public-template">公開サイト</a>を開き、
+選んだ行のファイルを保存します。まず試験片だけでよく、本体の全ファイルを印刷し始める必要はありません。</p>
+<table>
+<thead>
+<tr>
+<th>案</th>
+<th>完成形を確認</th>
+<th>印刷STLと案内</th>
+<th>色別の配置データ</th>
+<th>色・個数</th>
+<th>寸法・組立手順</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><a href="index.html?model=A&rev=4.0-public-template">Aを見る</a></td>
+<td><a href="downloads/A/print-kit.zip?rev=4.0-public-template">A/print-kit.zip</a></td>
+<td><a href="downloads/A/plates.zip?rev=4.0-public-template">A/plates.zip</a></td>
+<td><a href="downloads/A/bom.csv?rev=4.0-public-template">A/bom.csv</a></td>
+<td><a href="downloads/A/drawings.pdf?rev=4.0-public-template">A/drawings.pdf</a></td>
+</tr>
+<tr>
+<td>B</td>
+<td><a href="index.html?model=B&rev=4.0-public-template">Bを見る</a></td>
+<td><a href="downloads/B/print-kit.zip?rev=4.0-public-template">B/print-kit.zip</a></td>
+<td><a href="downloads/B/plates.zip?rev=4.0-public-template">B/plates.zip</a></td>
+<td><a href="downloads/B/bom.csv?rev=4.0-public-template">B/bom.csv</a></td>
+<td><a href="downloads/B/drawings.pdf?rev=4.0-public-template">B/drawings.pdf</a></td>
+</tr>
+<tr>
+<td>C</td>
+<td><a href="index.html?model=C&rev=4.0-public-template">Cを見る</a></td>
+<td><a href="downloads/C/print-kit.zip?rev=4.0-public-template">C/print-kit.zip</a></td>
+<td><a href="downloads/C/plates.zip?rev=4.0-public-template">C/plates.zip</a></td>
+<td><a href="downloads/C/bom.csv?rev=4.0-public-template">C/bom.csv</a></td>
+<td><a href="downloads/C/drawings.pdf?rev=4.0-public-template">C/drawings.pdf</a></td>
+</tr>
+</tbody>
+</table>
+<p>共通の最初の試験には<a href="downloads/fit-coupons.zip?rev=4.0-public-template">fit-coupons.zip</a>、
+次の実部品には<a href="downloads/trial-subset.zip?rev=4.0-public-template">trial-subset.zip</a>を使います。
+7個の試作は完成品の合格試験ではありません。</p>
+<p>ZIPを保存したら、エクスプローラー／Finder等で<strong>展開</strong>し、案名とrevisionが分かるフォルダへ置きます。
+GitHubのファイル画面を「ページとして保存」して<code>.stl</code>と改名しないでください。
+上の直接ダウンロードを使うか、GitHubのファイル画面では <strong>Download raw file</strong> を使い、
+実際の拡張子が<code>.zip</code>／<code>.3mf</code>／<code>.stl</code>であることを確認します。HTMLなら印刷データではありません。</p>
+<p><code>print-kit.zip</code>にはunique STLの<code>parts/</code>、<code>bom.csv</code>、<code>assembly.json</code>、<code>drawings.pdf</code>、
+<code>READ-FIRST-ja.md</code>と既存の<code>fit-coupons.zip</code>が入っています。
+<strong>STLが1ファイルあることと必要数が1個であることは別です。</strong> 手配置ならBOMの色別数量を使います。
+<code>plates.zip</code>には<code>manifest.json</code>と複数の汎用3MFが入り、<strong>各3MFが1回分の候補配置</strong>です。
+配布の<code>plates.zip</code>そのものをスライサーへ読み込むのではなく、展開した3MFを1つずつ使います。</p>
+<p><strong>3MFは形状・配置だけです。NOT_SLICEDで、P1S設定入りBambu StudioプロジェクトでもG-codeでもありません。</strong>
+STL方式と3MF方式は代替です。<strong>同じ部品の3MFとSTLを両方読み込むと二重配置</strong>になります。
+別案のSTLや、別案・別プレートの3MFを同じプレートへまとめて足さないでください。</p>
+<h3 id="_2">実機の設定を合わせる</h3>
+<ol>
+<li>Bambu Studioで、実際に使う <strong>Bambu Lab P1S／装着済みノズル径</strong> に合うプリンタプリセットを選びます。
+   0.2 mmを装着しているのに0.4 mm設定を使う等の不一致があれば止めます。合う設定がない場合も別機種で代用しません。</li>
+<li>実際のPLAの銘柄・色、プレート種類、処理プロファイルを選びます。この配布物から実機の設定を推測しません。
+   下記の0.4 mm本体／0.2 mm文字という案内は未検証のbaselineで、今回の実スライス成功値ではありません。</li>
+<li>最初は<code>FIT-M-D470.stl</code>と<code>FIT-F-CP12.stl</code>を<strong>各1個</strong>読み込みます。
+   mm・倍率100%、提供された印刷方向、個数、ベッドへの接地を確認します。通常受けは穴側を下、スタッドは上です。</li>
+<li>実機設定でスライスし、初層の穴入口、内部ブリム／サポート、屋根のブリッジとリブ、細い突起の経路を
+   <a href="trial.html?rev=4.0-public-template">段階試作のプレビュー手順</a>に沿って確認します。入口の閉塞や欠落、分からない警告があれば印刷しません。</li>
+<li>使った設定を配布物と別名のローカルBambu Studioプロジェクトへ保存します。
+   時間・フィラメント量はこの実スライスの表示結果だけを記録します。設定入りの実プロジェクトは、まだこちらでは受領・照合していません。</li>
+<li>プレビューと実機条件を確認してから、Bambu Studioまたはプリンタの通常の操作で印刷します。
+   本プロジェクトはプリンタへ自動送信したり、未確認のG-codeを提供したりしません。</li>
+</ol>
+<p>試験がうまくいかなければ先へ進みません。<strong>0.2 mmノズルにするだけで穴詰まりが解消するとは限りません。</strong>
+初層・支持材・流量・温度・穴径を原因不明のまま一律変更せず、現物とスライスを照合し、1条件ずつ記録します。</p>
+<h3 id="_3">色ごとに選ぶファイル</h3>
+<p>本体の4色はそれぞれ単色で印刷できます。表の範囲は<strong>選んだ案の全プレート数</strong>で、1つの3MFを開くたびに
+新しい空のプレート／プロジェクトから始め、前の配置を残して重ねないでください。
+スライス時は<strong>層ごと</strong>の印刷を使い、ヘッドの干渉確認なしに「オブジェクトごと」の順次印刷へ変えません。</p>
+<table>
+<thead>
+<tr>
+<th>案</th>
+<th>ブラック単色</th>
+<th>シアン単色</th>
+<th>マゼンタ単色</th>
+<th>グリーン単色</th>
+<th>別扱いの黒→白</th>
+<th style="text-align: right;">合計</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><code>A-black-01.3mf</code>〜<code>A-black-04.3mf</code>（4枚）</td>
+<td><code>A-cyan-01.3mf</code>（1枚）</td>
+<td><code>A-magenta-01.3mf</code>（1枚）</td>
+<td><code>A-green-01.3mf</code>（1枚）</td>
+<td>銘板1枚＋ロゴ1枚</td>
+<td style="text-align: right;">9枚</td>
+</tr>
+<tr>
+<td>B</td>
+<td><code>B-black-01.3mf</code>〜<code>B-black-07.3mf</code>（7枚）</td>
+<td><code>B-cyan-01.3mf</code>〜<code>B-cyan-02.3mf</code>（2枚）</td>
+<td><code>B-magenta-01.3mf</code>〜<code>B-magenta-02.3mf</code>（2枚）</td>
+<td><code>B-green-01.3mf</code>（1枚）</td>
+<td>銘板1枚＋ロゴ1枚</td>
+<td style="text-align: right;">14枚</td>
+</tr>
+<tr>
+<td>C</td>
+<td><code>C-black-01.3mf</code>〜<code>C-black-16.3mf</code>（16枚）</td>
+<td><code>C-cyan-01.3mf</code>〜<code>C-cyan-05.3mf</code>（5枚）</td>
+<td><code>C-magenta-01.3mf</code>〜<code>C-magenta-03.3mf</code>（3枚）</td>
+<td><code>C-green-01.3mf</code>（1枚）</td>
+<td>銘板1枚＋ロゴ1枚</td>
+<td style="text-align: right;">27枚</td>
+</tr>
+</tbody>
+</table>
+<p>同じ色でもプレートごとに違う部品・数量です。完了したファイル名と数量を記録し、案名・色・部品IDでトレーを分けます。
+白い仕上げは通常の黒単色プレートとは混ぜません。</p>
+<h3 id="_4">白い文字・白いロゴは「別の白部品」ではない</h3>
+<p><strong>文字とロゴは、黒い支持体に白い盛上りがつながった一体のSTLです。白部分だけを別体で刷って組む方式ではありません。</strong>
+色別に本体を印刷しても、この2部品には途中の黒→白切替が必要です。AMSなしで行う場合は手動交換を設定します。</p>
+<table>
+<thead>
+<tr>
+<th>選択案</th>
+<th>銘板：黒→白の専用3MF</th>
+<th>ロゴ：黒→白の専用3MF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><code>A-black-to-white-z2p4-01.3mf</code>（<code>NP3-TEXT-A</code>×1）</td>
+<td><code>A-black-to-white-z2p8-01.3mf</code>（<code>NP3-LOGO-A</code>×1）</td>
+</tr>
+<tr>
+<td>B</td>
+<td><code>B-black-to-white-z2p4-01.3mf</code>（<code>NP3-TEXT-B</code>×1）</td>
+<td><code>B-black-to-white-z2p8-01.3mf</code>（<code>NP3-LOGO-B</code>×1）</td>
+</tr>
+<tr>
+<td>C</td>
+<td><code>C-black-to-white-z2p4-01.3mf</code>（<code>NP3-TEXT-C</code>×1）</td>
+<td><code>C-black-to-white-z2p8-01.3mf</code>（<code>NP3-LOGO-C</code>×1）</td>
+</tr>
+</tbody>
+</table>
+<p>この汎用3MFには<strong>一時停止（Pause）も色替え命令も自動設定されていません</strong>。
+ファイル名とmanifestの高さは、設定すべき位置を示す案内です。開くだけで二色にはなりません。</p>
+<ol>
+<li>銘板またはロゴの専用3MFを1つ開き、平らな裏面をベッド、文字／図柄を上にしたまま黒PLAで始めます。
+   倍率100%、部品Z=0を保ち、他の黒部品を同じプレートへ加えません。</li>
+<li>Bambu Studioで実ノズル・PLA・プレートを選びスライスします。文字・図柄には0.2 mmを推奨しますが、線の連続性はプレビューで確認します。</li>
+<li><strong>銘板はZ=2.4 mmまでの黒い支持体が終わった直後、次の白い文字層を出す前</strong>に止めます。
+   <strong>ロゴはZ=2.8 mmまでの黒い支持体＋円形パッドが終わった直後、次の白い図柄層を出す前</strong>に止めます。
+   固定の「何層目」ではなく、選択した層高と初層からプレビュー上の高さ・最初の盛上り経路を見て決めます。</li>
+<li>プレビューのレイヤースライダーで、その<strong>次の盛上り開始層の直前</strong>へ一時停止を追加します。
+   Bambu Studioのバージョンに応じたメニュー（通常は対象レイヤーの右クリックから「一時停止を追加／Add pause」）を使い、
+   一時停止が実際に挿入され、白い経路より前で止まることを再確認します。位置や操作が分からなければ開始しません。</li>
+<li>印刷がその位置で停止したら、プリンタの通常のフィラメントunload／load手順に従って黒から白へ交換し、
+   残った黒が混ざらないよう排出を確認してから再開します。プレートや造形物を動かさず、高温部へ触れず、
+   自動動作前には手や工具を退避します。未確認の手書きG-codeは使いません。</li>
+<li>白いレリーフは0.8 mm高です。最後まで印刷して十分冷めてから外し、欠け・文字欠落・裏面の反りを確認します。</li>
+</ol>
+<p><strong>途中の色替えなしで白文字／白ロゴも完全別体にしたい場合は設計変更です。</strong>
+現状データを勝手に分割したり、塗装前提へ読み替えたりせず、別途相談してください。</p>
+<h3 id="_5">印刷する順番と、個人向けファイルの扱い</h3>
+<p><code>FIT-M-D470</code>×1＋<code>FIT-F-CP12</code>×1 → 必要な<code>NP3-FIT</code> → 実ブロック4個 →
+keeper1個＋選択案の同一台座端部2個 → 選択案の5段台座と前面 → 顔の少量バッチ、の順です。
+色ごとの本体プレートを一気に全部刷る前に、各段階で入口・つかみやすさ・着座・保持を確認します。
+閉塞、強い力、つかめない、割れや白化があれば止めます。7個試作を全体合格とは扱いません。</p>
+<p>ここで配布するのは汎用版だけです。<strong>個人宛のファイルを一時的にpublicへ置く操作は、この手順には含めていません。</strong>
+個人用入力・生成物はprivateのまま保管し、転送方法と残存リスクを確認してから別に扱います。
+公開Issueの例にも実recipient名を入れません。</p>
 <h2 id="1">1. 用意するもの</h2>
 <ul>
 <li>Bambu Lab P1S、選択したノズルに合うBambu Studioのプリンタ設定。</li>
@@ -107,14 +291,14 @@ STLは単位情報を持たない形式なので、Bambu Studioでは<strong>mm�
 </ol>
 <p>測定表を<a href="downloads/fit-log.csv?rev=4.0-public-template">fit-log.csv</a>に残します。機器の精度・測定のばらつきが候補の差より大きいときは、
 「0.04 mm違うからよくなった」と結論しません。</p>
-<h3 id="_2">銘板・ロゴのキー溝も別に試す</h3>
+<h3 id="_6">銘板・ロゴのキー溝も別に試す</h3>
 <p><code>NP3-FIT-PLAQUE</code>と<code>NP3-FIT-SOCKET-C25</code>から始め、C20、C15へ段階的に比較します。
 これは本番と同じ裏側の広がり・2.4 mm厚・角度・座面を使った短い試験片です。
 銘板とロゴは上から入れ、前・横・下へは形状で抜け止めします。試験片が滑っても、
 5段の溝の位置合わせと幅の長い部品の反りは別問題なので、採用した設定で本体用銘板・ロゴを1個ずつ試します。
 台座の最前列8 mm帯はこの溝のためにスタッドと底面接続を予約・除外しています。
 市販品との接続試験は通常ブロックや台座の2列目以降で行い、前面モジュールを市販品へ無理に接続しません。</p>
-<h3 id="_3">次へ進む目安（未検証のスクリーニング条件）</h3>
+<h3 id="_7">次へ進む目安（未検証のスクリーニング条件）</h3>
 <ul>
 <li>軽い指の力で最後まで座り、見える段間の隙間が約0.10 mm以下。ぐらつかないこと。</li>
 <li>小さな組合せを布の上で10秒そっと反転しても外れず、10回の穏やかな着脱で白化・ひび・欠けがないこと。</li>
@@ -291,7 +475,7 @@ github.com/YOUR-USERNAME</p>
 文字とロゴは別々に交換できます。本体は後ろにあり抜去経路をふさぎませんが、実物でも軽い力で確認します。
 全部分解するときは前面モジュールを外し、顔を上から逆順に、最後に台座を上段から外します。
 完成品を持つときは<strong>台座を両手で支えます</strong>。頭、ゴーグル、銘板、ロゴ、キーパーを持ち手にしません。</p>
-<h3 id="_4">サイトの大きい上下分解表示</h3>
+<h3 id="_8">サイトの大きい上下分解表示</h3>
 <p>0%は実CADの完成配置です。初めにキーパーを解除してモジュールを上抜き・前へ分離し、
 100%では下段を下へ、上段を上へ広げます。台座5段も対象で、各段の空隙は18.2 mm以上です。
 表示中の外接範囲に合わせてカメラを調整し、向きは保ちます。これは説明用の移動で、物理的な分解保証や寸法変更ではありません。

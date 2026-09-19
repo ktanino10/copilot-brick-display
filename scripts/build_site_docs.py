@@ -43,7 +43,10 @@ def main():
                                       extensions=["tables", "fenced_code", "toc"]))
         guide = ""
         if target == "guide.html":
-            guide = ('<p class="doc-note"><strong>全数印刷の前に。</strong> '
+            guide = ('<p class="doc-note"><strong>別PCで、色別に印刷する方へ。</strong> '
+                     '<a href="#print-another-pc">A/B/Cの保存先・色ごとの3MF・黒→白の手動交換を順に確認</a>。'
+                     '1案だけ選びます。公開データは汎用placeholderで、個人用ファイルは含みません。</p>'
+                     '<p class="doc-note"><strong>全数印刷の前に。</strong> '
                      '<a href="trial.html?guidance=trial-2026-09-19">既存coupon → 7個の実部品 → 選択案の台座・前面へ</a>。'
                      '閉塞・つかみにくさ・着座不良があれば止めます。7個は完成品の合格試験ではありません。</p>'
                      '<section class="stage-guide" aria-label="各案の番号付き組立図">'

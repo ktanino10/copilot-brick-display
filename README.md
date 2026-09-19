@@ -3,6 +3,9 @@
 **[3案を回して見る・ダウンロード](https://ktanino10.github.io/copilot-brick-display/?rev=4.0-public-template)**
  · **[作り方](docs/build.ja.md)** · **[Fork → Issue → AI → PRで文字を変える](docs/customize.ja.md)**
 
+**別PCで印刷する方へ：[色別ファイルの選び方と、黒→白の手動色替え](https://ktanino10.github.io/copilot-brick-display/guide.html?guide=separate-color-2026-09-19#print-another-pc)**
+— A/B/Cを1案だけ選び、最初は試験片から。銘板・右ロゴの白い部分は一体レリーフで、途中の色替えが必要です。
+
 公開リビジョンは **`4.0-public-template`**。黒い台座5段、大きい2行、正面右のロゴ、
 無接着で交換できる前面部品を持つ非公式の卓上オブジェです。
 公開の銘板は実際のCAD形状として次の仮表示を使います。実在の個人プロフィールではありません。
