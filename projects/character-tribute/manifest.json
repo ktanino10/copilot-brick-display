@@ -572,8 +572,8 @@
     {
       "url": "docs/howto.ja.html",
       "role": "guide",
-      "bytes": 18944,
-      "sha256": "4bbff25286b7efa0e7992c4e46860681f820141ad1ba81b1d04a86e6d8c74f3e"
+      "bytes": 19195,
+      "sha256": "6bac18c91ea03853521427240371f2a7f94333f8d39c12bf81f0e5ee03a0d7fe"
     },
     {
       "url": "docs/validation.ja.html",
@@ -632,8 +632,8 @@
     {
       "url": "index.html",
       "role": "entry",
-      "bytes": 21170,
-      "sha256": "9208ae454679a26cd35649526f61685f01ee346425ea996e17a69b8f174d4cd0"
+      "bytes": 21376,
+      "sha256": "4948f72667760921122ca1bf2f8d5ef3ed208a50de6ec80952afc4ec6621911c"
     },
     {
       "url": "site.css",
