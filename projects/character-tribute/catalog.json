@@ -1,0 +1,1551 @@
+{
+  "schema_version": 1,
+  "project": "character-tribute",
+  "revision": "T1",
+  "units": "mm",
+  "axes": "X right, Y rear, Z up; front camera looks toward +Y",
+  "message": [
+    "@YOUR-USERNAME",
+    "Same icon, New adventures",
+    "github.com/YOUR-USERNAME"
+  ],
+  "colors": {
+    "charcoal": {
+      "name_ja": "黒",
+      "hex": "#202932"
+    },
+    "white": {
+      "name_ja": "白",
+      "hex": "#F3F0E4"
+    },
+    "skin": {
+      "name_ja": "肌色",
+      "hex": "#F4C59B"
+    },
+    "red": {
+      "name_ja": "赤",
+      "hex": "#DF303B"
+    },
+    "blue": {
+      "name_ja": "青",
+      "hex": "#187DD0"
+    },
+    "green": {
+      "name_ja": "緑",
+      "hex": "#269B5C"
+    },
+    "mint": {
+      "name_ja": "薄緑",
+      "hex": "#9AD69E"
+    }
+  },
+  "parts": [
+    {
+      "name_ja": "台座・背板ソケット・共通24スタッド",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json + shared stud_shape",
+      "id": "T01",
+      "print_origin_mm": [
+        -88.0,
+        -48.0,
+        0.0
+      ],
+      "bounds_mm": [
+        176.0,
+        96.0,
+        41.6
+      ],
+      "cad_volume_mm3": 188183.93174870725,
+      "facets": 10164,
+      "mesh": "meshes/T01.stl",
+      "step": "native/parts/T01.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "背板と差込舌",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T02",
+      "print_origin_mm": [
+        -80.0,
+        -32.0,
+        0.0
+      ],
+      "bounds_mm": [
+        160.0,
+        192.0,
+        7.4
+      ],
+      "cad_volume_mm3": 177033.60000000003,
+      "facets": 316,
+      "mesh": "meshes/T02.stl",
+      "step": "native/parts/T02.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "緑の足場",
+      "color": "green",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T03",
+      "print_origin_mm": [
+        -56.0,
+        4.0,
+        0.0
+      ],
+      "bounds_mm": [
+        112.0,
+        16.0,
+        3.2
+      ],
+      "cad_volume_mm3": 5101.184000000001,
+      "facets": 76,
+      "mesh": "meshes/T03.stl",
+      "step": "native/parts/T03.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "赤い服と腕",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T04",
+      "print_origin_mm": [
+        -48.0,
+        36.0,
+        0.0
+      ],
+      "bounds_mm": [
+        84.0,
+        44.0,
+        3.2
+      ],
+      "cad_volume_mm3": 4252.975999999998,
+      "facets": 140,
+      "mesh": "meshes/T04.stl",
+      "step": "native/parts/T04.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "青いつなぎ",
+      "color": "blue",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T05",
+      "print_origin_mm": [
+        -20.0,
+        28.0,
+        0.0
+      ],
+      "bounds_mm": [
+        40.0,
+        40.0,
+        4.8
+      ],
+      "cad_volume_mm3": 6422.975999999997,
+      "facets": 92,
+      "mesh": "meshes/T05.stl",
+      "step": "native/parts/T05.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "足",
+      "color": "skin",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T06",
+      "print_origin_mm": [
+        -8.0,
+        -4.0,
+        0.0
+      ],
+      "bounds_mm": [
+        16.0,
+        8.0,
+        3.2
+      ],
+      "cad_volume_mm3": 348.99199999999996,
+      "facets": 36,
+      "mesh": "meshes/T06.stl",
+      "step": "native/parts/T06.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "猫の耳・輪郭・支持付きひげ",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T07",
+      "print_origin_mm": [
+        -72.0,
+        80.0,
+        0.0
+      ],
+      "bounds_mm": [
+        144.0,
+        72.0,
+        4.2
+      ],
+      "cad_volume_mm3": 24412.736000000004,
+      "facets": 268,
+      "mesh": "meshes/T07.stl",
+      "step": "native/parts/T07.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "顔と鼻",
+      "color": "skin",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T08",
+      "print_origin_mm": [
+        -44.0,
+        84.0,
+        0.0
+      ],
+      "bounds_mm": [
+        88.0,
+        32.0,
+        5.6
+      ],
+      "cad_volume_mm3": 8363.903999999999,
+      "facets": 140,
+      "mesh": "meshes/T08.stl",
+      "step": "native/parts/T08.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "目の白い土台",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T09",
+      "print_origin_mm": [
+        -8.0,
+        -12.0,
+        0.0
+      ],
+      "bounds_mm": [
+        16.0,
+        24.0,
+        2.4
+      ],
+      "cad_volume_mm3": 714.4149473870883,
+      "facets": 368,
+      "mesh": "meshes/T09.stl",
+      "step": "native/parts/T09.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "青い虹彩",
+      "color": "blue",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T10",
+      "print_origin_mm": [
+        -4.0,
+        -7.0,
+        0.0
+      ],
+      "bounds_mm": [
+        8.0,
+        14.0,
+        1.6
+      ],
+      "cad_volume_mm3": 140.74335088082273,
+      "facets": 352,
+      "mesh": "meshes/T10.stl",
+      "step": "native/parts/T10.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "黒い瞳",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T11",
+      "print_origin_mm": [
+        -1.6,
+        -4.0,
+        0.0
+      ],
+      "bounds_mm": [
+        3.2,
+        8.0,
+        1.2
+      ],
+      "cad_volume_mm3": 30.720000000000002,
+      "facets": 12,
+      "mesh": "meshes/T11.stl",
+      "step": "native/parts/T11.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "口ひげ",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T12",
+      "print_origin_mm": [
+        -12.0,
+        84.0,
+        0.0
+      ],
+      "bounds_mm": [
+        24.0,
+        8.0,
+        1.6
+      ],
+      "cad_volume_mm3": 184.3200000000001,
+      "facets": 60,
+      "mesh": "meshes/T12.stl",
+      "step": "native/parts/T12.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "手",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T13",
+      "print_origin_mm": [
+        -6.0,
+        -6.0,
+        0.0
+      ],
+      "bounds_mm": [
+        12.0,
+        12.0,
+        3.2
+      ],
+      "cad_volume_mm3": 400.192,
+      "facets": 36,
+      "mesh": "meshes/T13.stl",
+      "step": "native/parts/T13.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "赤い段差帽子",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T14",
+      "print_origin_mm": [
+        -60.0,
+        116.0,
+        0.0
+      ],
+      "bounds_mm": [
+        120.0,
+        32.0,
+        4.800000000000001
+      ],
+      "cad_volume_mm3": 9756.736000000006,
+      "facets": 132,
+      "mesh": "meshes/T14.stl",
+      "step": "native/parts/T14.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "帽子の白い丸",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T15",
+      "print_origin_mm": [
+        -8.0,
+        -8.0,
+        0.0
+      ],
+      "bounds_mm": [
+        16.0,
+        16.0,
+        2.4
+      ],
+      "cad_volume_mm3": 473.1406315913922,
+      "facets": 332,
+      "mesh": "meshes/T15.stl",
+      "step": "native/parts/T15.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "帽子のM",
+      "color": "red",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T16",
+      "print_origin_mm": [
+        -5.0,
+        -5.0,
+        0.0
+      ],
+      "bounds_mm": [
+        10.0,
+        10.0,
+        1.6
+      ],
+      "cad_volume_mm3": 113.20000000000002,
+      "facets": 44,
+      "mesh": "meshes/T16.stl",
+      "step": "native/parts/T16.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "足場の丸タイル",
+      "color": "mint",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T17",
+      "print_origin_mm": [
+        -4.0,
+        -4.0,
+        0.0
+      ],
+      "bounds_mm": [
+        8.0,
+        8.0,
+        1.6
+      ],
+      "cad_volume_mm3": 80.4247719318987,
+      "facets": 308,
+      "mesh": "meshes/T17.stl",
+      "step": "native/parts/T17.step",
+      "quantity": 4
+    },
+    {
+      "name_ja": "つなぎのボタン",
+      "color": "white",
+      "category": "assembly",
+      "source": "parameters.json",
+      "id": "T18",
+      "print_origin_mm": [
+        -1.6,
+        -1.6,
+        0.0
+      ],
+      "bounds_mm": [
+        3.2,
+        3.2,
+        1.2
+      ],
+      "cad_volume_mm3": 9.650972631827845,
+      "facets": 284,
+      "mesh": "meshes/T18.stl",
+      "step": "native/parts/T18.step",
+      "quantity": 2
+    },
+    {
+      "name_ja": "共通メッセージドック",
+      "color": "charcoal",
+      "category": "assembly",
+      "source": "shared design/catalog.json#MSG-DOCK",
+      "shared_spec": {
+        "id": "MSG-DOCK",
+        "kind": "dock",
+        "studs": [
+          12,
+          2
+        ],
+        "height": 9.6,
+        "top_studs": false,
+        "socket": true,
+        "stl": "parts/MSG-DOCK.stl",
+        "orientation": "sockets_on_bed_slot_up"
+      },
+      "id": "MSG-DOCK",
+      "print_origin_mm": [
+        0.1,
+        0.1,
+        -3.552713678800501e-15
+      ],
+      "bounds_mm": [
+        95.8,
+        15.8,
+        9.600000000000003
+      ],
+      "cad_volume_mm3": 11709.281562372256,
+      "facets": 7864,
+      "mesh": "meshes/MSG-DOCK.stl",
+      "step": "native/parts/MSG-DOCK.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "交換文字カード",
+      "color": "white",
+      "category": "assembly",
+      "source": "shared design/catalog.json#MSG-CARD",
+      "shared_spec": {
+        "id": "MSG-CARD",
+        "kind": "card",
+        "top_studs": false,
+        "socket": false,
+        "stl": "parts/MSG-CARD.stl",
+        "orientation": "flat_back_on_bed_text_up",
+        "text": [
+          "@YOUR-USERNAME",
+          "Same icon, New adventures",
+          "github.com/YOUR-USERNAME"
+        ],
+        "optional_color_change_z": 2.0
+      },
+      "optional_color_change_z_mm": 2.0,
+      "id": "MSG-CARD",
+      "print_origin_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds_mm": [
+        88.0,
+        24.0,
+        2.6
+      ],
+      "cad_volume_mm3": 4324.262518266912,
+      "facets": 27854,
+      "mesh": "meshes/MSG-CARD.stl",
+      "step": "native/parts/MSG-CARD.step",
+      "quantity": 1
+    },
+    {
+      "name_ja": "共通嵌合試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "shared design/catalog.json#FIT-M-D470",
+      "shared_spec": {
+        "id": "FIT-M-D470",
+        "kind": "male_coupon",
+        "studs": [
+          4,
+          2
+        ],
+        "height": 3.2,
+        "top_studs": true,
+        "socket": false,
+        "male_correction": -0.1,
+        "stl": "parts/FIT-M-D470.stl",
+        "orientation": "flat_bottom_studs_up"
+      },
+      "id": "FIT-M-D470",
+      "print_origin_mm": [
+        0.1,
+        0.1,
+        0.0
+      ],
+      "bounds_mm": [
+        31.8,
+        15.8,
+        5.0
+      ],
+      "cad_volume_mm3": 1854.0795425100075,
+      "facets": 3372,
+      "mesh": "meshes/FIT-M-D470.stl",
+      "step": "native/parts/FIT-M-D470.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "共通嵌合試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "shared design/catalog.json#FIT-M-D480",
+      "shared_spec": {
+        "id": "FIT-M-D480",
+        "kind": "male_coupon",
+        "studs": [
+          4,
+          2
+        ],
+        "height": 3.2,
+        "top_studs": true,
+        "socket": false,
+        "male_correction": 0.0,
+        "stl": "parts/FIT-M-D480.stl",
+        "orientation": "flat_bottom_studs_up"
+      },
+      "id": "FIT-M-D480",
+      "print_origin_mm": [
+        0.1,
+        0.1,
+        0.0
+      ],
+      "bounds_mm": [
+        31.8,
+        15.8,
+        5.0
+      ],
+      "cad_volume_mm3": 1864.7452495689445,
+      "facets": 3372,
+      "mesh": "meshes/FIT-M-D480.stl",
+      "step": "native/parts/FIT-M-D480.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "共通嵌合試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "shared design/catalog.json#FIT-M-D490",
+      "shared_spec": {
+        "id": "FIT-M-D490",
+        "kind": "male_coupon",
+        "studs": [
+          4,
+          2
+        ],
+        "height": 3.2,
+        "top_studs": true,
+        "socket": false,
+        "male_correction": 0.1,
+        "stl": "parts/FIT-M-D490.stl",
+        "orientation": "flat_bottom_studs_up"
+      },
+      "id": "FIT-M-D490",
+      "print_origin_mm": [
+        0.1,
+        0.1,
+        0.0
+      ],
+      "bounds_mm": [
+        31.8,
+        15.8,
+        5.0
+      ],
+      "cad_volume_mm3": 1875.6371512989392,
+      "facets": 3372,
+      "mesh": "meshes/FIT-M-D490.stl",
+      "step": "native/parts/FIT-M-D490.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "共通嵌合試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "shared design/catalog.json#FIT-F-CM04",
+      "shared_spec": {
+        "id": "FIT-F-CM04",
+        "kind": "female_coupon",
+        "studs": [
+          4,
+          2
+        ],
+        "height": 9.6,
+        "top_studs": false,
+        "socket": true,
+        "female_clearance": -0.04,
+        "stl": "parts/FIT-F-CM04.stl",
+        "orientation": "socket_down"
+      },
+      "id": "FIT-F-CM04",
+      "print_origin_mm": [
+        0.1,
+        0.1,
+        -1.229785510308584e-15
+      ],
+      "bounds_mm": [
+        31.8,
+        15.8,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 2787.8423078393403,
+      "facets": 2184,
+      "mesh": "meshes/FIT-F-CM04.stl",
+      "step": "native/parts/FIT-F-CM04.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "共通嵌合試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "shared design/catalog.json#FIT-F-CP00",
+      "shared_spec": {
+        "id": "FIT-F-CP00",
+        "kind": "female_coupon",
+        "studs": [
+          4,
+          2
+        ],
+        "height": 9.6,
+        "top_studs": false,
+        "socket": true,
+        "female_clearance": 0.0,
+        "stl": "parts/FIT-F-CP00.stl",
+        "orientation": "socket_down"
+      },
+      "id": "FIT-F-CP00",
+      "print_origin_mm": [
+        0.1,
+        0.1,
+        -1.84467825630026e-15
+      ],
+      "bounds_mm": [
+        31.8,
+        15.8,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 2749.223218701332,
+      "facets": 2184,
+      "mesh": "meshes/FIT-F-CP00.stl",
+      "step": "native/parts/FIT-F-CP00.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "共通嵌合試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "shared design/catalog.json#FIT-F-CP04",
+      "shared_spec": {
+        "id": "FIT-F-CP04",
+        "kind": "female_coupon",
+        "studs": [
+          4,
+          2
+        ],
+        "height": 9.6,
+        "top_studs": false,
+        "socket": true,
+        "female_clearance": 0.04,
+        "stl": "parts/FIT-F-CP04.stl",
+        "orientation": "socket_down"
+      },
+      "id": "FIT-F-CP04",
+      "print_origin_mm": [
+        0.1,
+        0.1,
+        -3.552713678800501e-15
+      ],
+      "bounds_mm": [
+        31.8,
+        15.8,
+        9.600000000000003
+      ],
+      "cad_volume_mm3": 2710.7436669580993,
+      "facets": 2184,
+      "mesh": "meshes/FIT-F-CP04.stl",
+      "step": "native/parts/FIT-F-CP04.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "共通嵌合試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "shared design/catalog.json#FIT-F-CP08",
+      "shared_spec": {
+        "id": "FIT-F-CP08",
+        "kind": "female_coupon",
+        "studs": [
+          4,
+          2
+        ],
+        "height": 9.6,
+        "top_studs": false,
+        "socket": true,
+        "female_clearance": 0.08,
+        "stl": "parts/FIT-F-CP08.stl",
+        "orientation": "socket_down"
+      },
+      "id": "FIT-F-CP08",
+      "print_origin_mm": [
+        0.1,
+        0.1,
+        -2.6645352591003757e-15
+      ],
+      "bounds_mm": [
+        31.8,
+        15.8,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 2672.4036782367884,
+      "facets": 2160,
+      "mesh": "meshes/FIT-F-CP08.stl",
+      "step": "native/parts/FIT-F-CP08.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "共通嵌合試験片",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "shared design/catalog.json#FIT-F-CP12",
+      "shared_spec": {
+        "id": "FIT-F-CP12",
+        "kind": "female_coupon",
+        "studs": [
+          4,
+          2
+        ],
+        "height": 9.6,
+        "top_studs": false,
+        "socket": true,
+        "female_clearance": 0.12,
+        "stl": "parts/FIT-F-CP12.stl",
+        "orientation": "socket_down"
+      },
+      "id": "FIT-F-CP12",
+      "print_origin_mm": [
+        0.1,
+        0.1,
+        -1.84467825630026e-15
+      ],
+      "bounds_mm": [
+        31.8,
+        15.8,
+        9.600000000000001
+      ],
+      "cad_volume_mm3": 2634.203279509974,
+      "facets": 2160,
+      "mesh": "meshes/FIT-F-CP12.stl",
+      "step": "native/parts/FIT-F-CP12.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "背板ソケット試験片 A–D",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "parameters.json#custom_coupons",
+      "id": "T90",
+      "print_origin_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds_mm": [
+        64.0,
+        24.0,
+        12.8
+      ],
+      "cad_volume_mm3": 16892.927999999996,
+      "facets": 76,
+      "mesh": "meshes/T90.stl",
+      "step": "native/parts/T90.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "背板厚6.4の試験舌",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "parameters.json#custom_coupons",
+      "id": "T91",
+      "print_origin_mm": [
+        -2.0,
+        0.0,
+        0.0
+      ],
+      "bounds_mm": [
+        14.0,
+        24.0,
+        6.4
+      ],
+      "cad_volume_mm3": 1740.8000000000002,
+      "facets": 28,
+      "mesh": "meshes/T91.stl",
+      "step": "native/parts/T91.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "色タイル位置決め試験台",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "parameters.json#custom_coupons",
+      "id": "T92",
+      "print_origin_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds_mm": [
+        20.0,
+        12.0,
+        4.2
+      ],
+      "cad_volume_mm3": 773.7600000000001,
+      "facets": 28,
+      "mesh": "meshes/T92.stl",
+      "step": "native/parts/T92.step",
+      "quantity": 0
+    },
+    {
+      "name_ja": "色タイル試験蓋",
+      "color": "charcoal",
+      "category": "coupon",
+      "source": "parameters.json#custom_coupons",
+      "id": "T93",
+      "print_origin_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds_mm": [
+        20.0,
+        12.0,
+        2.4
+      ],
+      "cad_volume_mm3": 566.592,
+      "facets": 28,
+      "mesh": "meshes/T93.stl",
+      "step": "native/parts/T93.step",
+      "quantity": 0
+    }
+  ],
+  "instances": [
+    {
+      "id": "stand",
+      "part": "T01",
+      "parent": null,
+      "step": 1,
+      "position_mm": [
+        -88.0,
+        -48.0,
+        0.0
+      ],
+      "rotation_x_deg": 0,
+      "rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "board",
+      "part": "T02",
+      "xy": [
+        0,
+        0
+      ],
+      "parent": "stand",
+      "step": 2,
+      "position_mm": [
+        -80.0,
+        12.799999999999994,
+        9.600000000000001
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "ground",
+      "part": "T03",
+      "xy": [
+        0,
+        0
+      ],
+      "parent": "board",
+      "step": 3,
+      "position_mm": [
+        -56.0,
+        6.400000000000001,
+        45.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "jacket",
+      "part": "T04",
+      "xy": [
+        0,
+        0
+      ],
+      "parent": "board",
+      "step": 4,
+      "position_mm": [
+        -48.0,
+        6.400000000000008,
+        77.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "overalls",
+      "part": "T05",
+      "xy": [
+        0,
+        0
+      ],
+      "parent": "board",
+      "step": 4,
+      "position_mm": [
+        -20.0,
+        6.400000000000007,
+        69.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "foot-left",
+      "part": "T06",
+      "xy": [
+        -12,
+        24
+      ],
+      "parent": "board",
+      "step": 4,
+      "position_mm": [
+        -20.0,
+        6.3999999999999995,
+        61.599999999999994
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "foot-right",
+      "part": "T06",
+      "xy": [
+        12,
+        24
+      ],
+      "parent": "board",
+      "step": 4,
+      "position_mm": [
+        4.0,
+        6.3999999999999995,
+        61.599999999999994
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "head",
+      "part": "T07",
+      "xy": [
+        0,
+        0
+      ],
+      "parent": "board",
+      "step": 5,
+      "position_mm": [
+        -72.0,
+        6.400000000000018,
+        121.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "face",
+      "part": "T08",
+      "xy": [
+        0,
+        0
+      ],
+      "parent": "head",
+      "step": 6,
+      "position_mm": [
+        -44.0,
+        3.200000000000018,
+        125.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "eye-left",
+      "part": "T09",
+      "xy": [
+        -24,
+        100
+      ],
+      "parent": "face",
+      "step": 7,
+      "position_mm": [
+        -32.0,
+        -2.6645352591003757e-15,
+        129.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "eye-right",
+      "part": "T09",
+      "xy": [
+        24,
+        100
+      ],
+      "parent": "face",
+      "step": 7,
+      "position_mm": [
+        16.0,
+        -2.6645352591003757e-15,
+        129.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "iris-left",
+      "part": "T10",
+      "xy": [
+        -24,
+        100
+      ],
+      "parent": "eye-left",
+      "step": 7,
+      "position_mm": [
+        -28.0,
+        -2.400000000000002,
+        134.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "iris-right",
+      "part": "T10",
+      "xy": [
+        24,
+        100
+      ],
+      "parent": "eye-right",
+      "step": 7,
+      "position_mm": [
+        20.0,
+        -2.400000000000002,
+        134.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pupil-left",
+      "part": "T11",
+      "xy": [
+        -24,
+        100
+      ],
+      "parent": "iris-left",
+      "step": 7,
+      "position_mm": [
+        -25.6,
+        -4.000000000000001,
+        137.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pupil-right",
+      "part": "T11",
+      "xy": [
+        24,
+        100
+      ],
+      "parent": "iris-right",
+      "step": 7,
+      "position_mm": [
+        22.4,
+        -4.000000000000001,
+        137.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "moustache",
+      "part": "T12",
+      "xy": [
+        0,
+        0
+      ],
+      "parent": "face",
+      "step": 7,
+      "position_mm": [
+        -12.0,
+        1.865174681370263e-14,
+        125.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "hand-left",
+      "part": "T13",
+      "xy": [
+        -46,
+        70
+      ],
+      "parent": "board",
+      "step": 4,
+      "position_mm": [
+        -52.0,
+        6.399999999999999,
+        105.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "hand-right",
+      "part": "T13",
+      "xy": [
+        32,
+        30
+      ],
+      "parent": "board",
+      "step": 4,
+      "position_mm": [
+        26.0,
+        6.399999999999999,
+        65.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "hat",
+      "part": "T14",
+      "xy": [
+        0,
+        0
+      ],
+      "parent": "head",
+      "step": 8,
+      "position_mm": [
+        -60.0,
+        3.200000000000025,
+        157.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "badge",
+      "part": "T15",
+      "xy": [
+        0,
+        136
+      ],
+      "parent": "hat",
+      "step": 8,
+      "position_mm": [
+        -8.0,
+        -1.7763568394002505e-15,
+        169.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "letter-m",
+      "part": "T16",
+      "xy": [
+        0,
+        136
+      ],
+      "parent": "badge",
+      "step": 8,
+      "position_mm": [
+        -5.0,
+        -2.4000000000000012,
+        172.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "spot-left-outer",
+      "part": "T17",
+      "xy": [
+        -40,
+        12
+      ],
+      "parent": "ground",
+      "step": 3,
+      "position_mm": [
+        -44.0,
+        3.1999999999999984,
+        49.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "spot-left-inner",
+      "part": "T17",
+      "xy": [
+        -20,
+        8
+      ],
+      "parent": "ground",
+      "step": 3,
+      "position_mm": [
+        -24.0,
+        3.1999999999999984,
+        45.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "spot-right-inner",
+      "part": "T17",
+      "xy": [
+        20,
+        8
+      ],
+      "parent": "ground",
+      "step": 3,
+      "position_mm": [
+        16.0,
+        3.1999999999999984,
+        45.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "spot-right-outer",
+      "part": "T17",
+      "xy": [
+        40,
+        12
+      ],
+      "parent": "ground",
+      "step": 3,
+      "position_mm": [
+        36.0,
+        3.1999999999999984,
+        49.6
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "button-left",
+      "part": "T18",
+      "xy": [
+        -8,
+        60
+      ],
+      "parent": "overalls",
+      "step": 4,
+      "position_mm": [
+        -9.6,
+        1.600000000000001,
+        100.0
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "button-right",
+      "part": "T18",
+      "xy": [
+        8,
+        60
+      ],
+      "parent": "overalls",
+      "step": 4,
+      "position_mm": [
+        6.4,
+        1.600000000000001,
+        100.0
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "message-dock",
+      "part": "MSG-DOCK",
+      "parent": "stand",
+      "step": 9,
+      "position_mm": [
+        -47.9,
+        -35.9,
+        9.599999999999996
+      ],
+      "rotation_x_deg": 0,
+      "rotation_deg_xyz": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "message-card",
+      "part": "MSG-CARD",
+      "parent": "message-dock",
+      "step": 10,
+      "position_mm": [
+        -44.0,
+        -31.0,
+        14.399999999999999
+      ],
+      "rotation_x_deg": 90,
+      "rotation_deg_xyz": [
+        90,
+        0,
+        0
+      ]
+    }
+  ],
+  "native_reopened": true,
+  "native_instance_count": 29,
+  "shared_interface": {
+    "id": "BRICK-8-MSG-SLOT-1",
+    "revision": "1.0",
+    "units": "mm",
+    "status": "digital_prototype_physical_fit_unverified",
+    "brick": {
+      "pitch": 8.0,
+      "brick_height": 9.6,
+      "plate_height": 3.2,
+      "body_gap": 0.2,
+      "reference_stud_diameter": 4.8,
+      "stud_diameter_correction": 0.0,
+      "stud_height": 1.8,
+      "stud_lead_in": 0.25,
+      "female_radial_clearance": 0.04,
+      "socket_lead_in": 0.2,
+      "socket_lead_in_height": 0.3,
+      "roof": 1.6,
+      "thin_plate_roof": 1.0,
+      "tube_inner_diameter": 3.2,
+      "roof_support_rib_width": 1.2
+    },
+    "message": {
+      "lines": [
+        "@YOUR-USERNAME",
+        "Same icon, New adventures",
+        "github.com/YOUR-USERNAME"
+      ],
+      "dock_studs": [
+        12,
+        2
+      ],
+      "dock_height": 9.6,
+      "dock_socket_depth": 2.2,
+      "slot_length": 88.4,
+      "slot_width": 2.4,
+      "slot_depth": 4.8,
+      "slot_center_y": 4.0,
+      "card_width": 88.0,
+      "card_height": 24.0,
+      "card_thickness": 2.0,
+      "text_relief": 0.6,
+      "font": "resources/fonts/B612Mono-Bold.ttf",
+      "text_sizes": [
+        4.0,
+        3.3,
+        2.9
+      ],
+      "text_baselines": [
+        17.6,
+        11.8,
+        6.3
+      ]
+    },
+    "note": "Design candidates, not a LEGO specification or compatibility certification.",
+    "insertion": "Vertical downward; card slides freely into gravity-retained slot."
+  },
+  "assembly_size_mm": [
+    176.0,
+    96.0,
+    201.6
+  ]
+}

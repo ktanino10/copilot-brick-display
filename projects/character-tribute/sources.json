@@ -1,0 +1,50 @@
+{
+  "retrieved": "2026-09-19",
+  "sources": [
+    {
+      "id": "DIM-PATENT",
+      "url": "https://patents.google.com/patent/WO2019106129A1/en",
+      "title": "WO2019106129A1 — Toy building bricks made of biopolymeric material",
+      "location": "DETAILED DESCRIPTION OF THE INVENTION",
+      "class": "primary, approximate nominal dimensions, not an FDM fit specification",
+      "facts_mm": {"traditional_4x2_length_about": 32, "width_about": 16, "height_without_knobs_about": 9.6, "knob_diameter_about": 4.8},
+      "limitation": "The patent's 1% passage is not adopted as an acceptable printed tolerance."
+    },
+    {
+      "id": "DIM-MUSEUM",
+      "url": "https://www.brightontoymuseum.co.uk/index/Lego_dimensions",
+      "title": "Brighton Toy and Model Museum — Lego dimensions",
+      "class": "community reference and reported measurements",
+      "facts_mm": {"grid": 8, "plate": 3.2, "brick": 9.6, "stud_height": 1.6, "reported_stud_range": [4.87, 4.90]},
+      "limitation": "Not a current manufacturer's mating-interface tolerance drawing."
+    },
+    {
+      "id": "DIM-ORION",
+      "url": "https://orionrobots.co.uk/wiki/lego_specifications.html",
+      "title": "Orionrobots — Lego specifications",
+      "class": "community reference",
+      "facts_mm": {"pitch": 8, "stud_diameter": 5, "stud_height": 1.7},
+      "limitation": "Disagrees with the museum and patent on stud size; dimensions must not be averaged into a fit guarantee."
+    },
+    {
+      "id": "PRINTER-P1S",
+      "url": "https://store.bblcdn.com/s7/default/9e9c1948dd61491199a52c3f1497b9c7/bambu-lab-P1S-tech-specs.pdf",
+      "landing_url": "https://jp.store.bambulab.com/products/p1s",
+      "title": "Bambu Lab P1S",
+      "location": "page 1; linked by product FAQ 4",
+      "publication_version": "not stated",
+      "class": "manufacturer primary source, retrieved by coordinating researcher",
+      "facts": {"build_volume_mm": [256,256,256], "included_nozzle_mm": 0.4, "optional_nozzles_mm": [0.2,0.6,0.8], "PLA": "Ideal"},
+      "limitation": "Does not certify this design, its slicing settings, bed exclusion regions, or printed connections. PDF is not redistributed."
+    }
+  ],
+  "adoption_policy": {
+    "fixed_pitch_mm": 8,
+    "height_grid_mm": 3.2,
+    "commercial_connector": "Reuse the integration owner's pinned design/interface.json and scripts/freecad_geometry.py; never infer a replacement from these references.",
+    "print_compensation": "Tune candidate dimensions using coupons, a caliper, the actual filament/nozzle/profile and actual commercial bricks. Never scale the whole STL.",
+    "physical_fit": "NOT TESTED",
+    "artwork": "New original stepped relief based on the user-supplied character reference. The source photo, people, bag and private file paths are not distributed.",
+    "endorsement": "Unofficial personal keepsake; no Nintendo, LEGO or GitHub endorsement and no child-toy certification."
+  }
+}
