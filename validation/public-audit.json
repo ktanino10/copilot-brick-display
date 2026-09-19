@@ -2,7 +2,7 @@
   "status": "PASS_RECURSIVE_PUBLIC_ARTIFACT_AUDIT",
   "expanded_entries": 2766,
   "public_files": 378,
-  "site_bytes": 414331443,
+  "site_bytes": 414335389,
   "files": [
     {
       "path": "app.js",
@@ -111,8 +111,8 @@
     },
     {
       "path": "downloads/A/print-kit.zip",
-      "bytes": 5117733,
-      "sha256": "f86034b880e000aef8eeb67b259ce3621300a42369827cd54a5665a6ecfa798d"
+      "bytes": 5118520,
+      "sha256": "652a051c435cbf2c97060856fac6c227307324bd66f255232d89c5a3139cb811"
     },
     {
       "path": "downloads/B/B.FCStd",
@@ -226,8 +226,8 @@
     },
     {
       "path": "downloads/B/print-kit.zip",
-      "bytes": 7806533,
-      "sha256": "5363253301266cb8ef9fe7b0608720cce34adebdffb5f46bf766c1e3a4e727d7"
+      "bytes": 7807320,
+      "sha256": "533accafabe09d86d48cc9bf5fd5c1d3d9304a57e02872bbd6ed06aecff61cb5"
     },
     {
       "path": "downloads/C/C.FCStd",
@@ -406,13 +406,13 @@
     },
     {
       "path": "downloads/C/print-kit.zip",
-      "bytes": 11634145,
-      "sha256": "54790aac6f66be37e16e8672f9409c540eb5232861fbc720511a718ca3ffe02f"
+      "bytes": 11634932,
+      "sha256": "67e775b14af48ec3b3acb900b2de4c12e679b4359569a41af4bebabe617f5dde"
     },
     {
       "path": "downloads/fit-coupons.zip",
-      "bytes": 312061,
-      "sha256": "1bca83913bbb5c2e592a22214840e6103cf86d789b4715cd92fa614f5f887bc9"
+      "bytes": 312452,
+      "sha256": "43c2cd99c87e8ff009b58367dee0c336764cd93ae06c161883520f13599e116d"
     },
     {
       "path": "downloads/fit-log.csv",
@@ -1681,8 +1681,8 @@
     },
     {
       "path": "guide.html",
-      "bytes": 38274,
-      "sha256": "63033a9e3bca25aadf5c374d11ed820af3ec1e5a5d01a6deacece45b9c33c412"
+      "bytes": 39468,
+      "sha256": "76460e04443bacc22d9f2f4c4b5630261949770b0f7eb26d4121c18d0bbea818"
     },
     {
       "path": "guide.js",
