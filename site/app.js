@@ -363,7 +363,7 @@ function updateLinks(model) {
   const id = model.id;
   $('.model-print-link').href = asset(`downloads/${id}/print-kit.zip`);
   $('.model-print-link').innerHTML = `${id}の印刷セット <span>↓</span>`;
-  $('.model-guide-link').href = `guide.html?model=${id}`;
+  $('.model-guide-link').href = `guide.html?model=${id}&rev=${encodeURIComponent(REVISION)}`;
   $('#download-model').textContent = `${id} / ${model.name}`;
   const files = ['print-kit.zip', `${id}.FCStd`, `${id}.step`, 'drawings.pdf', 'bom.csv', 'plates.zip'];
   [...$('#download-links').children].forEach((link, index) => { link.href = asset(`downloads/${id}/${files[index]}`); });
@@ -459,7 +459,7 @@ async function chooseModel(id) {
   $('#explode').value = '0';
   $('#explode-value').textContent = '0%';
   setPlaying(false);
-  for (const button of document.querySelectorAll('[data-model]')) {
+  for (const button of document.querySelectorAll('button[data-model]')) {
     button.classList.toggle('active', button.dataset.model === id);
     button.setAttribute('aria-pressed', String(button.dataset.model === id));
   }
@@ -519,7 +519,7 @@ async function boot() {
   } catch (error) {
     showError(`この環境では3D表示を開始できません。完成画像と図面を表示します。${error.message}`);
   }
-  document.querySelectorAll('[data-model]').forEach((button) => {
+  document.querySelectorAll('button[data-model]').forEach((button) => {
     button.addEventListener('click', () => chooseModel(button.dataset.model));
   });
   document.querySelectorAll('[data-switch]').forEach((link) => {

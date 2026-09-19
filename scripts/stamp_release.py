@@ -10,12 +10,13 @@ from design import ROOT
 
 def main():
     revision = json.loads((ROOT / "design/parameters.json").read_text())["revision"]
-    suffixes = {".js", ".css", ".json", ".png", ".svg", ".mp4", ".vtt", ".pdf", ".zip",
+    suffixes = {".html", ".js", ".css", ".json", ".png", ".svg", ".mp4", ".vtt", ".pdf", ".zip",
                 ".csv", ".FCStd", ".step", ".stl", ".blend", ".3mf"}
     def version(match):
         attribute, quote, target = match.groups()
         url = urlsplit(target)
-        if url.scheme or url.netloc or url.path.startswith("tribute/") or Path(url.path).suffix not in suffixes:
+        if url.scheme or url.netloc or url.path.startswith("tribute/") or (
+                Path(url.path).suffix not in suffixes and url.path != "./"):
             return match.group()
         query = dict(parse_qsl(url.query))
         query["rev"] = revision

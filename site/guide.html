@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>作り方 — Brick Portrait</title><link rel="stylesheet" href="style.css?rev=3.0-five-course-front"><link rel="icon" href="icon.svg?rev=3.0-five-course-front"></head>
-<body><header class="site-header"><a class="brand" href="./">BRICK<br>PORTRAIT</a>
-<nav><a href="./#workbench">3Dとダウンロード</a><a href="guide.html">作り方</a><a href="technical.html">設計</a></nav></header>
-<main class="document"><div class="doc-nav"><a href="./">← 模型のページへ</a><a href="guide.html">作り方</a><a href="rebuild.html">再生成</a></div>
+<body><header class="site-header"><a class="brand" href="./?rev=3.0-five-course-front">BRICK<br>PORTRAIT</a>
+<nav><a href="./?rev=3.0-five-course-front#workbench">3Dとダウンロード</a><a href="guide.html?rev=3.0-five-course-front">作り方</a><a href="technical.html?rev=3.0-five-course-front">設計</a></nav></header>
+<main class="document"><div class="doc-nav"><a href="./?rev=3.0-five-course-front">← 模型のページへ</a><a href="guide.html?rev=3.0-five-course-front">作り方</a><a href="rebuild.html?rev=3.0-five-course-front">再生成</a></div>
 <section class="stage-guide" aria-label="各案の番号付き組立図"><h2>選んだ案の工程図</h2><p>各図の配置番号はBOM・3D・動画と共通です。手前は図の下です。</p><label for="guide-model">案を選ぶ</label><select id="guide-model"><option>A</option><option selected>B</option><option>C</option></select><label for="guide-step">工程を選ぶ</label><select id="guide-step"></select><figure><img id="guide-drawing" alt="選択工程の配置図" src="drawings/B/step-01.svg?rev=3.0-five-course-front"></figure><p><a id="guide-pdf" href="downloads/B/drawings.pdf?rev=3.0-five-course-front">全工程のPDFを保存 ↓</a></p></section><h1 id="_1">作り方 — まず小さく試してから、本体へ</h1>
 <p>これは成人向けの屋内用卓上オブジェです。電子部品、モーター、電池、配線、接着剤は使いません。
 <strong>デジタル設計は用意されていますが、実物の嵌合・保持力・耐久性・転倒しにくさは未試験です。</strong>
@@ -129,7 +129,7 @@ STLは単位情報を持たない形式なので、Bambu Studioでは<strong>mm�
 </ul>
 <p>値は<a href="downloads/parameters.json?rev=3.0-five-course-front">design/parameters.json</a>だけで変更します。
 たとえばメスの半径クリアランスを<code>0.04</code>から<code>0.08</code>へ変えることは、穴の直径を一律0.04 mm変える操作ではありません。
-内壁・チューブ・ポストを同じ拘束式で再計算します。<a href="rebuild.html">再生成手順</a>でCADから作り直し、
+内壁・チューブ・ポストを同じ拘束式で再計算します。<a href="rebuild.html?rev=3.0-five-course-front">再生成手順</a>でCADから作り直し、
 <strong>新しい試験片で再確認してから、同じリビジョンの本体を印刷</strong>します。古いSTLと混ぜないでください。</p>
 <h2 id="5-p1s-pla">5. P1S / PLAの印刷初期設定</h2>
 <p>以下は実機で検証していない出発点です。温度・冷却・流量は、実際のPLA銘柄と使用プレートに対応する
@@ -320,7 +320,7 @@ github.com/YOUR-USERNAME</p>
 </tr>
 </tbody>
 </table>
-<p>CAD・動画・自動チェックは、これらの実物確認を代行しません。</p></main><footer class="site-footer"><a class="brand" href="./">BRICK PORTRAIT</a>
+<p>CAD・動画・自動チェックは、これらの実物確認を代行しません。</p></main><footer class="site-footer"><a class="brand" href="./?rev=3.0-five-course-front">BRICK PORTRAIT</a>
 <p>非公式・成人向け卓上オブジェ。実物の嵌合、保持力、耐久性、転倒は未検証です。</p>
-<a href="notices.html">権利・依存ライブラリ</a></footer>
+<a href="notices.html?rev=3.0-five-course-front">権利・依存ライブラリ</a></footer>
 <script type='module' src='guide.js?rev=3.0-five-course-front'></script></body></html>

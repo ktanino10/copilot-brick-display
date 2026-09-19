@@ -65,7 +65,7 @@ with sync_playwright() as playwright:
     check_no_overflow(page)
     for model in catalog["models"]:
         print("MODEL_BEGIN", model["id"], flush=True)
-        page.locator(f'[data-model="{model["id"]}"]').click()
+        page.locator(f'button[data-model="{model["id"]}"]').click()
         expect(page.locator("#viewport")).to_have_attribute("data-model", model["id"], timeout=180000)
         expect(page.locator("#viewport")).to_have_attribute("data-instances", str(model["part_count"]))
         expect(page.locator("#part-count")).to_contain_text(str(model["part_count"]))
@@ -137,7 +137,7 @@ with sync_playwright() as playwright:
     mobile_page.screenshot(path=str(OUT / "mobile.png"), full_page=True)
     check_no_overflow(mobile_page)
     for model in catalog["models"]:
-        mobile_page.locator(f'[data-model="{model["id"]}"]').click()
+        mobile_page.locator(f'button[data-model="{model["id"]}"]').click()
         expect(mobile_page.locator("#viewport")).to_have_attribute("data-model", model["id"], timeout=180000)
         explosion_records.append(verify_exploded(mobile_page, model, OUT, mobile=True))
     mobile.close()
