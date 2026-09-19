@@ -14,7 +14,10 @@ export function explosionOffset(instance, model, message, amount) {
   if (instance.role === 'keeper') {
     const topCourseOffset = (model.base_courses - 1 - centerLayer)
       * presentation.exploded_course_gap_mm * spread;
-    return [0, -ramp(.08, .15) * presentation.keeper_forward_mm,
+    // Clear the entire two-stud keeper depth before the module's later forward travel.
+    const forward = Math.max(presentation.keeper_forward_mm,
+      16 + presentation.plaque_front_clearance_mm + 2);
+    return [0, -ramp(.08, .15) * forward,
       topCourseOffset + ramp(0, .08) * presentation.keeper_release_mm + spread * 18];
   }
   if (instance.role === 'front_module') {

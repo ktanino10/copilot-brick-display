@@ -5,6 +5,7 @@ import { explosionOffset } from '../site/assembly-motion.js';
 const catalog = JSON.parse(await readFile('design/catalog.json', 'utf8'));
 const samples = [];
 const displays = [];
+assert.ok(catalog.parts['NP3-KEEPER'].bounds[1][1] <= 16);
 function bounds(part, instance, offset) {
   const low = [Infinity, Infinity, Infinity], high = [-Infinity, -Infinity, -Infinity];
   for (const x of [part.bounds[0][0], part.bounds[1][0]]) {
@@ -33,6 +34,9 @@ for (const model of catalog.models) {
         if (percent <= 15) assert.equal(value[2], 0);
         if (percent <= 30) assert.ok(Math.abs(value[1]) < 1e-9);
         if (percent > 30 && percent <= 40) assert.ok(value[2] >= 45 - 1e-8);
+      }
+      if (instance.role === 'keeper' && percent >= 15) {
+        assert.ok(-value[1] >= 16 + model.presentation.plaque_front_clearance_mm + 2 - 1e-8);
       }
       offsets[instance.id] = value;
     }
