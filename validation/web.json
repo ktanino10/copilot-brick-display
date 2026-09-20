@@ -36,7 +36,7 @@
           "direction": [
             0,
             1,
-            4.440892098500626e-16
+            2.220446049250313e-16
           ],
           "modules": {
             "text": [
@@ -91,7 +91,7 @@
           "direction": [
             0,
             1,
-            2.220446049250313e-16
+            6.661338147750939e-16
           ],
           "modules": {
             "text": [
@@ -146,7 +146,7 @@
           "direction": [
             0,
             1,
-            4.440892098500626e-16
+            6.661338147750939e-16
           ],
           "modules": {
             "text": [
@@ -178,7 +178,7 @@
             -190,
             190
           ],
-          "clip": 0.819672131147541,
+          "clip": 0.8196721311475411,
           "gap": 18.200000381469636,
           "error": 246,
           "visible": 91,
@@ -616,7 +616,7 @@
           "direction": [
             0,
             1,
-            4.440892098500626e-16
+            6.661338147750939e-16
           ],
           "modules": {
             "text": [
@@ -671,7 +671,7 @@
           "direction": [
             0,
             1,
-            4.440892098500626e-16
+            6.661338147750939e-16
           ],
           "modules": {
             "text": [
@@ -703,7 +703,7 @@
             -190,
             190
           ],
-          "clip": 0.819672131147541,
+          "clip": 0.8196721311475411,
           "gap": 18.200000381469636,
           "error": 246,
           "visible": 91,
@@ -846,7 +846,7 @@
           "direction": [
             0,
             1,
-            -4.440892098500626e-16
+            -7.771561172376096e-16
           ],
           "modules": {
             "text": [
@@ -878,7 +878,7 @@
             -240,
             240
           ],
-          "clip": 0.8196721311475411,
+          "clip": 0.8196721311475409,
           "gap": 18.200000381469636,
           "error": 296,
           "visible": 150,
@@ -1070,6 +1070,7 @@
     "public_text_approved": false
   },
   "public_private_customization_guides_opened": true,
+  "cross_pc_color_printing_guidance": "separate-color-2026-09-19; direct model downloads and manually configured pause boundaries checked",
   "checks": [
     "model changes",
     "four camera views",

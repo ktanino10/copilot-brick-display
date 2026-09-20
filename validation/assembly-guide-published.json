@@ -1,0 +1,158 @@
+{
+  "status": "PASS_LIVE_PRINT_TO_PLACE_GUIDE",
+  "deployed_commit": "35ebc11234779424ebbda83b3f1b7d31d8518b24",
+  "run_url": "https://github.com/ktanino10/copilot-brick-display/actions/runs/35511150669",
+  "jobs": {
+    "validate": "success",
+    "deploy": "success"
+  },
+  "guide_revision": "print-to-place-1",
+  "entry_url": "https://ktanino10.github.io/copilot-brick-display/assembly-guide/B.html?commit=35ebc1123477",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 19205,
+      "sha256": "6bcd5f9624e0c0dd894796e29ac6af43a9fce663634d33ee350b0ae915496f63"
+    },
+    {
+      "path": "app.js",
+      "bytes": 26839,
+      "sha256": "33f5dc8204ebf178759291c1b85f25733f86c312cbc6a899196d45cd120d9a55"
+    },
+    {
+      "path": "guide.html",
+      "bytes": 40524,
+      "sha256": "e130e49a6b6acc6ecafdc20ecfd4363d21baadadf034dc98b3fb09918debd9d1"
+    },
+    {
+      "path": "assembly.html",
+      "bytes": 9621,
+      "sha256": "3c1a4768fcc1fdd02979cc5c9f762664c7bddc950e782b5088ddb27091410e86"
+    },
+    {
+      "path": "rebuild.html",
+      "bytes": 9618,
+      "sha256": "7a7c7cf88802cb6dd301a38295f6f258a3c0554ed818bd8b462e8d3263e2ca29"
+    },
+    {
+      "path": "assembly-guide/index.html",
+      "bytes": 2477,
+      "sha256": "148856096ccf47f393a6f1b4efb1941ea7a3979903bc81f751b9fbd8c296c67e"
+    },
+    {
+      "path": "assembly-guide/runtime.js",
+      "bytes": 544996,
+      "sha256": "6d64837a1f04d6ce37989dcfe08d655eeaf5319900629c111a11e05c49100c43"
+    },
+    {
+      "path": "assembly-guide/style.css",
+      "bytes": 8136,
+      "sha256": "a5169b93d2ee103006dd7ea8a5f25d2a24f795878521a434b91991d2730f6c39"
+    },
+    {
+      "path": "downloads/fit-coupons.zip",
+      "bytes": 312699,
+      "sha256": "316eb61c61ecca7158f0461925914ff08b209afe01d9e4e04c6344df26d4b288"
+    },
+    {
+      "path": "downloads/B/bom.csv",
+      "bytes": 1307,
+      "sha256": "98f9988e8ea58ac1414b348cbfdba479d5ff811da91aac7922083c0ee43ba889"
+    },
+    {
+      "path": "downloads/B/plates.zip",
+      "bytes": 6138593,
+      "sha256": "617e87d8075c0df5778c3f3738caec0d62bd61f20dd29b9a6753618bd33e7463"
+    },
+    {
+      "path": "assembly-guide/A.html",
+      "bytes": 5512487,
+      "sha256": "9ceb6661ae1a70148e9cf734a9dd9a905f99fd9eae94e9b9882bc464ed5fc722"
+    },
+    {
+      "path": "assembly-guide/A.mapping.json",
+      "bytes": 152945,
+      "sha256": "2c7c307c85eaa7ef45c8c868f2ff73d99ebc9444214e061e7b8081dd4d883869"
+    },
+    {
+      "path": "assembly-guide/A-offline.zip",
+      "bytes": 3981290,
+      "sha256": "946546123248a540c8e3a407997cfe43b1fdd91bf4b72dbbf3c470cf40bf99f3"
+    },
+    {
+      "path": "downloads/A/print-kit.zip",
+      "bytes": 5119010,
+      "sha256": "d4033df3f4f337eb506891314e0929313afc7f79cf090d0f75885f29fad7774e"
+    },
+    {
+      "path": "assembly-guide/B.html",
+      "bytes": 8683685,
+      "sha256": "9a6a8b4c3ec25e33902d941bf2dfc7f95ed7a3be0f7b2a24489e5adc1876cce1"
+    },
+    {
+      "path": "assembly-guide/B.mapping.json",
+      "bytes": 260865,
+      "sha256": "9720e2a4bc34b6e23e50cb653135adfdfcfb01aeeb22f07bee938f83363322db"
+    },
+    {
+      "path": "assembly-guide/B-offline.zip",
+      "bytes": 6117933,
+      "sha256": "8a4b573d019112c3c3f607a2b55ca8a7b355a678ebc8ffe9e72e8bfa5c61ff01"
+    },
+    {
+      "path": "downloads/B/print-kit.zip",
+      "bytes": 7807810,
+      "sha256": "00bc9b3e1ca4fc2a177c440e23cbc46491a52770cfeaf6dc489fa45c18da2bb2"
+    },
+    {
+      "path": "assembly-guide/C.html",
+      "bytes": 13108388,
+      "sha256": "124228f995092966a6c829e1d64dd87c97b07e16c76b0f95665faa93b3fc2a3c"
+    },
+    {
+      "path": "assembly-guide/C.mapping.json",
+      "bytes": 488336,
+      "sha256": "34202883be0ee76a4a2bda32ec78d04170701b0bfd0dcf8b38d322cd9fe04531"
+    },
+    {
+      "path": "assembly-guide/C-offline.zip",
+      "bytes": 9073706,
+      "sha256": "5b6d5197c4124953fa220fc27a54becc8abafd81dc4d80f50987aeefd83ea942"
+    },
+    {
+      "path": "downloads/C/print-kit.zip",
+      "bytes": 11635422,
+      "sha256": "b6d5d17a0a0ebf514e6494a6f890ff2d9fe16ab9a184451e54c48d9a1c8e47ba"
+    },
+    {
+      "path": "assembly-guide/media/B-first-base.png",
+      "bytes": 200517,
+      "sha256": "3d7e4f53717e517c85a4ab9c9fbada8b59f818364b26cab30dc82b0b4c46c335"
+    },
+    {
+      "path": "assembly-guide/media/B-black-01-sort.png",
+      "bytes": 253044,
+      "sha256": "d4b3c50ae6295f9d783af568b6686d934e0a6110ea64d1d50fdec62e35985fa5"
+    },
+    {
+      "path": "assembly-guide/media/B-black-04-base-parts.png",
+      "bytes": 254397,
+      "sha256": "14c630c89dac973a02906b669602a3ea810937437c1af09ade693772727169f4"
+    },
+    {
+      "path": "assembly-guide/media/B-first-seven-steps.gif",
+      "bytes": 2764185,
+      "sha256": "a13ea38245bdc0de935030bf2bd6f70f8b01dcb0a369eff5627e4b5638701d32"
+    },
+    {
+      "path": "assembly-guide/media/B-first-seven-steps.mp4",
+      "bytes": 714482,
+      "sha256": "23b54d6761f540a8c5ed499de89243b9c60a63aa7cc7a7e3686a72fa7880ae61"
+    }
+  ],
+  "generic_public_policy": true,
+  "manufacturing_inputs_changed": false,
+  "scope": "Listed current generic Pages/ZIP/tutorial files only; no private releases or retained history.",
+  "sliced": false,
+  "physical_fit_tested": false
+}

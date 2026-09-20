@@ -1,0 +1,31 @@
+{
+  "status": "PASS_REAL_PRINT_TO_PLACE_BROWSER",
+  "models": [
+    "B",
+    "A",
+    "C"
+  ],
+  "browser": "140.0.7339.16",
+  "file_protocol": false,
+  "external_requests": 0,
+  "widths_px": [
+    1440,
+    375
+  ],
+  "b_occurrences": 150,
+  "initial_plate": "B-black-02.3mf",
+  "initial_slot": 3,
+  "initial_placement": "B-001",
+  "all_interchangeable_sources_and_targets": true,
+  "manual_controls_and_replay": true,
+  "final_poses_exact": true,
+  "captured_motion_frames": 0,
+  "three_piece_fast_replay_seconds": 3.832,
+  "cpu_throttle": 1,
+  "playback_button_state_mismatches": 0,
+  "physical_fit_tested": false,
+  "sliced": false,
+  "entry_url": "https://ktanino10.github.io/copilot-brick-display/assembly-guide/B.html?commit=35ebc1123477",
+  "deployed_commit": "35ebc11234779424ebbda83b3f1b7d31d8518b24",
+  "runtime_sha256": "6d64837a1f04d6ce37989dcfe08d655eeaf5319900629c111a11e05c49100c43"
+}
