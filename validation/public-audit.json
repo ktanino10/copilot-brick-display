@@ -2,7 +2,7 @@
   "status": "PASS_RECURSIVE_PUBLIC_ARTIFACT_AUDIT",
   "expanded_entries": 2793,
   "public_files": 396,
-  "site_bytes": 466471045,
+  "site_bytes": 466471065,
   "files": [
     {
       "path": "app.js",
@@ -1786,8 +1786,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 19185,
-      "sha256": "35931365f9b1e1c652124e7fb6fbcdf0c99dde68bf7a925e6cb2aca4af7a36c3"
+      "bytes": 19205,
+      "sha256": "6bcd5f9624e0c0dd894796e29ac6af43a9fce663634d33ee350b0ae915496f63"
     },
     {
       "path": "media/A-assembly.mp4",
