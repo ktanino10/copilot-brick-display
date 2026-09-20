@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import time
 from urllib.parse import urlsplit
 
 from playwright.sync_api import sync_playwright, expect
@@ -85,10 +86,13 @@ def b_controls(page, output):
     page.locator("#step-select").select_option("7")
     assert snapshot(page)["cursor"] == 21 and snapshot(page)["activeId"] == "B-022"
     page.locator("#speed").select_option("700")
+    started = time.monotonic()
     page.locator("#replay-step").click()
     expect(page.locator("#assembly-cursor")).to_have_value("24", timeout=15000)
     expect(page.locator("#play")).to_have_attribute("aria-pressed", "false")
     assert snapshot(page)["seatedCount"] == 24
+    replay_seconds = time.monotonic() - started
+    assert replay_seconds < 15, f"Three-piece fast replay exceeded its existing time budget: {replay_seconds:.2f}s"
     for scene in ("plate", "assembly"):
         for direction in ("front", "side", "top", "back", "bottom", "iso"):
             page.locator(f'[data-scene="{scene}"] [data-view="{direction}"]').click()
@@ -113,6 +117,7 @@ def b_controls(page, output):
     page.locator("#next").click()
     page.locator("#capture-card").screenshot(path=str(output / "B-mobile-375.png"))
     page.set_viewport_size({"width": 1440, "height": 1100})
+    return replay_seconds
 
 
 def capture_media(page, output):
@@ -154,6 +159,7 @@ def main():
     parser.add_argument("--entry", default="site/assembly-guide/B.html", help="Local B HTML or http(s) URL.")
     parser.add_argument("--all-models", action="store_true")
     parser.add_argument("--capture-media", action="store_true")
+    parser.add_argument("--cpu-throttle", type=float, default=1, help="Chromium CPU slowdown for bounded animation checks.")
     parser.add_argument("--output", type=Path, default=ROOT / "build/assembly-guide-browser")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
@@ -176,9 +182,14 @@ def main():
             context.route("http://**/*", route_network)
             context.route("https://**/*", route_network)
             page = context.new_page()
+            if args.cpu_throttle < 1:
+                raise ValueError("CPU throttle must be at least 1")
+            if args.cpu_throttle > 1:
+                session = context.new_cdp_session(page)
+                session.send("Emulation.setCPUThrottlingRate", {"rate": args.cpu_throttle})
             page.on("pageerror", lambda e: errors.append(str(e)))
             ready(page, url)
-            b_controls(page, args.output)
+            replay_seconds = b_controls(page, args.output)
             frames = capture_media(page, args.output) if args.capture_media else 0
             models = ["B"]
             if args.all_models:
@@ -204,6 +215,7 @@ def main():
                 "widths_px": [1440, 375], "b_occurrences": 150, "initial_plate": "B-black-02.3mf",
                 "initial_slot": 3, "initial_placement": "B-001", "all_interchangeable_sources_and_targets": True,
                 "manual_controls_and_replay": True, "final_poses_exact": True, "captured_motion_frames": frames,
+                "three_piece_fast_replay_seconds": round(replay_seconds, 3), "cpu_throttle": args.cpu_throttle,
                 "physical_fit_tested": False, "sliced": False,
             }
             (args.output / "browser.json").write_text(json.dumps(report, indent=2) + "\n")

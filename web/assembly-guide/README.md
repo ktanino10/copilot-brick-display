@@ -107,6 +107,9 @@ The remaining capture/control API calls the same UI functions:
 `setCursor(n)`, `setProgress(0..1)`, `selectSlot(id)`, `selectPlacement(id)`,
 `setView(scene, direction)`, `play()`, `pause()`. A progress of 1 shows the final pose;
 advancing to the next piece is a separate action.
+Animation uses elapsed foreground time rather than assuming a minimum frame rate.
+Cached STL bounds frame the view; only the active mesh pose changes during a frame.
+Moving the document into the background pauses playback instead of silently skipping pieces.
 
 For automation under the CSP, use locator assertions and protocol `page.evaluate`.
 Playwright's string `wait_for_function` internally uses page `eval`, which the CSP forbids.

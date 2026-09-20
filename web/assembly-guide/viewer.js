@@ -38,6 +38,9 @@ function partMaterial(part, color) {
 }
 
 function styleMesh(mesh, ghost, selected) {
+  const style = `${ghost}:${selected}`;
+  if (mesh.userData.materialStyle === style) return;
+  mesh.userData.materialStyle = style;
   const part = data.parts[mesh.userData.part];
   const material = mesh.material;
   material.vertexColors = !ghost && Boolean(part.finish_color);
@@ -236,9 +239,9 @@ function updatePlate(fit = false) {
     const selected = mesh.userData.id === state.slot;
     mesh.visible = !isolate || selected;
     styleMesh(mesh, false, selected);
-    if (mesh.visible) bounds.expandByObject(mesh, true);
+    if (mesh.visible) bounds.expandByObject(mesh);
     if (selected) {
-      plateView.selection.box.setFromObject(mesh, true);
+      plateView.selection.box.setFromObject(mesh);
       plateView.selection.visible = true;
     }
   }
@@ -325,9 +328,9 @@ function updateAssembly(refit = false) {
     mesh.rotation.set(...pose.rotation.map(THREE.MathUtils.degToRad));
     const emphasized = state.mode === 'lookup' ? p.group === selected.group : p.id === active?.id;
     styleMesh(mesh, state.mode === 'lookup' ? !emphasized : state.ghost && p.index < state.cursor, emphasized);
-    if (mesh.visible) bounds.expandByObject(mesh, true);
+    if (mesh.visible) bounds.expandByObject(mesh);
     if (mesh.visible && p.id === state.target) {
-      assemblyView.selection.box.setFromObject(mesh, true);
+      assemblyView.selection.box.setFromObject(mesh);
       assemblyView.selection.visible = true;
     }
   }
@@ -337,7 +340,7 @@ function updateAssembly(refit = false) {
     target.geometry = geometries.get(active.part);
     target.position.fromArray(active.position);
     target.rotation.set(...active.rotation.map(THREE.MathUtils.degToRad));
-    bounds.expandByObject(target, true);
+    bounds.expandByObject(target);
   }
   if (state.mode === 'build' && active) {
     // Keep the entire insertion path framed, not a zoom that shrinks as the part descends.
@@ -360,6 +363,18 @@ function updateAssembly(refit = false) {
     label.node.style.display = (state.mode === 'lookup' ? p.group === selected.group : p.id === active?.id) ? '' : 'none';
   }
   if (refit) assemblyView.fit(true);
+  assemblyView.dirty = true;
+}
+
+function updateMotion() {
+  const active = activePlacement();
+  if (!active) return;
+  const mesh = assemblyView.meshes[active.index];
+  const pose = insertionPose(active, state.progress, data.motion);
+  mesh.position.fromArray(pose.position);
+  mesh.rotation.set(...pose.rotation.map(THREE.MathUtils.degToRad));
+  assemblyView.target.visible = state.progress < .99;
+  assemblyView.selection.box.setFromObject(mesh);
   assemblyView.dirty = true;
 }
 
@@ -518,6 +533,9 @@ async function main() {
   $('#next').addEventListener('click', () => setCursor(state.empty ? 0 : Math.min(data.part_count, state.cursor + 1)));
   $('#play').addEventListener('click', () => { if (state.playing) { pause(); updateText(); } else play(); });
   $('#replay-step').addEventListener('click', replayStep);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { pause(); updateText(); }
+  });
   for (const toolbar of document.querySelectorAll('.view-tools')) for (const btn of toolbar.querySelectorAll('button')) {
     btn.addEventListener('click', () => (toolbar.dataset.scene === 'plate' ? plateView : assemblyView).setView(btn.dataset.view));
   }
@@ -551,7 +569,7 @@ async function main() {
   $('#guide-app').dataset.ready = 'true';
   let last = performance.now();
   function frame(time) {
-    const elapsed = Math.min(time - last, 100);
+    const elapsed = Math.max(0, time - last);
     last = time;
     if (state.playing) {
       state.progress = Math.min(1, state.progress + elapsed / Number($('#speed').value));
@@ -561,7 +579,7 @@ async function main() {
         state.playUntil = until;
         state.playing = state.cursor < until;
       } else {
-        updateAssembly();
+        updateMotion();
         updateText();
       }
     }
