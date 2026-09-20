@@ -18,9 +18,10 @@
   "manual_controls_and_replay": true,
   "final_poses_exact": true,
   "captured_motion_frames": 0,
-  "three_piece_fast_replay_seconds": 3.914,
+  "three_piece_fast_replay_seconds": 3.748,
   "cpu_throttle": 4.0,
+  "playback_button_state_mismatches": 0,
   "physical_fit_tested": false,
   "sliced": false,
-  "runtime_sha256": "f8ba04cc9a65fe6bb3ea7fcd130c7fbf54a30bf90fccc60a6fe60d67311e0bd3"
+  "runtime_sha256": "6d64837a1f04d6ce37989dcfe08d655eeaf5319900629c111a11e05c49100c43"
 }

@@ -578,6 +578,7 @@ async function main() {
         setCursor(state.cursor + 1);
         state.playUntil = until;
         state.playing = state.cursor < until;
+        updateText();
       } else {
         updateMotion();
         updateText();

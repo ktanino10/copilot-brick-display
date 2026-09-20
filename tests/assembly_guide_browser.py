@@ -28,6 +28,22 @@ def ready(page, url):
 
 
 def b_controls(page, output):
+    page.evaluate("""() => {
+      window.__guideControlMismatches = [];
+      window.__guideControlObserver = new MutationObserver(() => {
+        const state = BrickAssemblyGuide.state();
+        const button = document.querySelector('#play');
+        if (button.getAttribute('aria-pressed') !== String(state.playing) ||
+            (state.playing && button.textContent !== '一時停止')) {
+          window.__guideControlMismatches.push({
+            cursor: state.cursor, playing: state.playing,
+            pressed: button.getAttribute('aria-pressed'), text: button.textContent
+          });
+        }
+      });
+      window.__guideControlObserver.observe(document.querySelector('#play'),
+        { attributes: true, attributeFilter: ['aria-pressed'], childList: true, subtree: true });
+    }""")
     initial = snapshot(page)
     assert initial["cursor"] == 0 and initial["completedIds"] == []
     assert initial["selectedSlot"] == "B-black-02.3mf#3" and initial["activeId"] is None
@@ -117,6 +133,9 @@ def b_controls(page, output):
     page.locator("#next").click()
     page.locator("#capture-card").screenshot(path=str(output / "B-mobile-375.png"))
     page.set_viewport_size({"width": 1440, "height": 1100})
+    mismatches = page.evaluate("window.__guideControlMismatches")
+    assert mismatches == [], f"Playback controls disagree with live state: {mismatches}"
+    page.evaluate("window.__guideControlObserver.disconnect()")
     return replay_seconds
 
 
@@ -216,6 +235,7 @@ def main():
                 "initial_slot": 3, "initial_placement": "B-001", "all_interchangeable_sources_and_targets": True,
                 "manual_controls_and_replay": True, "final_poses_exact": True, "captured_motion_frames": frames,
                 "three_piece_fast_replay_seconds": round(replay_seconds, 3), "cpu_throttle": args.cpu_throttle,
+                "playback_button_state_mismatches": 0,
                 "physical_fit_tested": False, "sliced": False,
             }
             (args.output / "browser.json").write_text(json.dumps(report, indent=2) + "\n")

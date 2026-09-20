@@ -2,7 +2,7 @@
   "status": "PASS_RECURSIVE_PUBLIC_ARTIFACT_AUDIT",
   "expanded_entries": 2793,
   "public_files": 396,
-  "site_bytes": 466471785,
+  "site_bytes": 466471806,
   "files": [
     {
       "path": "app.js",
@@ -11,8 +11,8 @@
     },
     {
       "path": "assembly-guide/A-offline.zip",
-      "bytes": 3981285,
-      "sha256": "fd24787bd66b2de53759d848cab54a0da7d14e27369cdc72da4d1e953c9cc30a"
+      "bytes": 3981290,
+      "sha256": "946546123248a540c8e3a407997cfe43b1fdd91bf4b72dbbf3c470cf40bf99f3"
     },
     {
       "path": "assembly-guide/A.html",
@@ -26,8 +26,8 @@
     },
     {
       "path": "assembly-guide/B-offline.zip",
-      "bytes": 6117928,
-      "sha256": "b1bd683106c6e4190b75cea4ad84d5f5b889e63ce91977b1c10b67e5b0c5585e"
+      "bytes": 6117933,
+      "sha256": "8a4b573d019112c3c3f607a2b55ca8a7b355a678ebc8ffe9e72e8bfa5c61ff01"
     },
     {
       "path": "assembly-guide/B.html",
@@ -41,8 +41,8 @@
     },
     {
       "path": "assembly-guide/C-offline.zip",
-      "bytes": 9073700,
-      "sha256": "191ab2057cdbaff129286c90981a11e1d9a474177bb8d63612f248fecbd3f47d"
+      "bytes": 9073706,
+      "sha256": "5b6d5197c4124953fa220fc27a54becc8abafd81dc4d80f50987aeefd83ea942"
     },
     {
       "path": "assembly-guide/C.html",
@@ -86,8 +86,8 @@
     },
     {
       "path": "assembly-guide/runtime.js",
-      "bytes": 544991,
-      "sha256": "f8ba04cc9a65fe6bb3ea7fcd130c7fbf54a30bf90fccc60a6fe60d67311e0bd3"
+      "bytes": 544996,
+      "sha256": "6d64837a1f04d6ce37989dcfe08d655eeaf5319900629c111a11e05c49100c43"
     },
     {
       "path": "assembly-guide/style.css",
