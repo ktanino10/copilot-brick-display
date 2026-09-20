@@ -1,0 +1,132 @@
+{
+  "status": "PASS_REAL_STL_3MF_PLACEMENT_MAPPING",
+  "guide_revision": "print-to-place-1",
+  "geometry_revision": "4.0-public-template",
+  "models": [
+    {
+      "model": "A",
+      "occurrences": 91,
+      "plates": 9,
+      "first_source": {
+        "plate": "A-black-02.3mf",
+        "slot": 3,
+        "slot_id": "A-black-02.3mf#3",
+        "suggested_placement": "A-001"
+      },
+      "base_source_files": [
+        "A-black-01.3mf",
+        "A-black-02.3mf",
+        "A-black-03.3mf"
+      ],
+      "mesh_hashes": {
+        "BASE3-03x08-T-48de52": "0196383cb2b4a181c563b625920c00703dcc6d2a900c0ac1e437584201eca493",
+        "BASE3-03x08-T-80e081": "8fbe097971c64d76ab024307d8561813356738f7975151a8b09cd19895f1999d",
+        "BASE3-06x08-T-7532db": "25d39921f450b5b13911b3a94c7b5f68abf6a52233a906296c950f4c034739b4",
+        "BASE3-06x08-T-7f51dc": "4cdfa89c2257b5318c22f3d99ee16525a7df8aa18b4f6dbed5d5e9eccc96af88",
+        "BASE3-06x08-T-9cb610": "7ac37fa9fcb36d3fc285a213143c5db9b5dd066f49cfa9556a02f6333550c9af",
+        "BASE3-06x08-T-b8aa05": "2f2227173c235f45db44c73c76537198889c8cf6cccbc0919a6255da51a8be6c",
+        "BASE3-18x08-B-a4853c": "7b261980c94944ab235041fccb1841b15804de5b57bf13ef3adf0dc27ebb63c8",
+        "BR-01x02-H096": "e9fef5860941b84610d27eb046a9b48b92b47022e447bb884179448c0c6b1d3c",
+        "BR-02x02-H096": "16726dd1b4b1e1a44bc8c0871ab681cf12c200643be356c5f1903c0017395d30",
+        "BR-02x03-H096": "ad912e2795bc29daf693dceede166b34ea93b6ece77ac5d3ca648a9e4d9cd29e",
+        "BR-03x02-H096": "212edb1a6e87844f785df00eac2f7c55e62fd156a4b11123278326481e70c7ad",
+        "BR-04x02-H032": "d93a74781042890d3ced275c342f1eb2086c284dd36a56e96a0e721e7aaf6fa6",
+        "BR-04x02-H096": "bc9bf9fe279add8ae02892d20c8c891029d382b69dbd05970035dcb9c77464dd",
+        "BR-04x03-H096": "fe22771af4e1dba42dd0856fa7d4767ce6729251ddfa0221a30406f4034e959b",
+        "NP3-KEEPER": "b523f99637728aa9e51b4025ec778016f0c9d78f9959aa7823abb71ce691978f",
+        "NP3-LOGO-A": "599c8417bf3e3cf65e9c976ae238d4b5a8f31ff3bc411c4074b7b3eb85571a90",
+        "NP3-TEXT-A": "44efd2b0919f795630ea0b22797fbb698b4accc5d6d1ff5ffbf4fcf711682369"
+      }
+    },
+    {
+      "model": "B",
+      "occurrences": 150,
+      "plates": 14,
+      "first_source": {
+        "plate": "B-black-02.3mf",
+        "slot": 3,
+        "slot_id": "B-black-02.3mf#3",
+        "suggested_placement": "B-001"
+      },
+      "base_source_files": [
+        "B-black-01.3mf",
+        "B-black-02.3mf",
+        "B-black-03.3mf",
+        "B-black-04.3mf"
+      ],
+      "mesh_hashes": {
+        "BASE3-03x10-T-aa77a9": "0eedec766e01cdbef5539540873c80f90309018d6958a6b77b19516be633f18e",
+        "BASE3-03x10-T-d79875": "a0fbfcb0972918c1e99392650ad64f4b674b7211fb0a1d1c94f74d892edc6415",
+        "BASE3-06x10-T-3f87ac": "a14b55f137996d1bf3fcaa7210e0c15a3dc034c6a28b2b3f1256a1439be2fc61",
+        "BASE3-06x10-T-6159e6": "ef3308e68f08ba88b8fa4fbeb067a16780fa958bf9b64b3922859d97e835d73f",
+        "BASE3-06x10-T-6e100f": "f782d20a7cef5f8ac290a0b8487a5334463b54b22aaa140fc82f895a17c0a5a3",
+        "BASE3-06x10-T-838259": "a14b55f137996d1bf3fcaa7210e0c15a3dc034c6a28b2b3f1256a1439be2fc61",
+        "BASE3-06x10-T-e1945a": "adf23aa19fd6aa1485d943e4b28c904b8e58a903d4e8b66279c12461b6627be7",
+        "BASE3-24x10-B-562406": "b5ba60b51926f20171f8238979d43b4331b451db7b3b87f6d51d56b5c75dba24",
+        "BR-01x04-H096": "4eeb53d6220950e593a63baa8a388498f41bc509ad26df642cbaffbca772a8f8",
+        "BR-02x04-H064": "743dcbaca56491a9be99b04f088ee6153fcbaf3234132d7e37f3b2c38a1c917f",
+        "BR-02x04-H096": "31b61fbf103450546cda92dfe50bfc24393e776bbe62a45d24d6084cb0c7a269",
+        "BR-02x05-H096": "121dd98b5c43f0e231eafa889dd696d3422f6d5b0b7fdeb27aec4cd0f2ad1014",
+        "BR-02x06-H096": "28bfad450343c1aa8cfce2091efedd9434d16262e32e4abe29df62330ea749d1",
+        "BR-03x04-H096": "8a1f560361a0e7792f9ddcb9315f45c521719eaa4dca9bd729e4a4c780079759",
+        "BR-04x04-H064": "b2c741f948af015929774e3ef9d73fb06271d1229676f86ea60a09e972bbb614",
+        "BR-04x04-H096": "20a7fe6e15bdfd5901d0776f55b5e5353feec8ca86817690276094c4564f74d7",
+        "BR-04x05-H096": "5f9273b6b55e39f4f019499b5914fbb40ab4aa78e7114454880b82526d570bf5",
+        "BR-05x04-H096": "db19a404e4b5dcbcdc0e80e13d3d775ba55c4667bb018b2a911f1e2c1d667b6a",
+        "NP3-KEEPER": "b523f99637728aa9e51b4025ec778016f0c9d78f9959aa7823abb71ce691978f",
+        "NP3-LOGO-B": "96135856f694c111da16975ad7d7948f20c9fa1c5c3ca11b102477df0a77a7e6",
+        "NP3-TEXT-B": "6cc71347e5eb73c8cb6ee5d1bf4be634c44f32bf76177862bfdd35548c0f49c5"
+      }
+    },
+    {
+      "model": "C",
+      "occurrences": 228,
+      "plates": 27,
+      "first_source": {
+        "plate": "C-black-04.3mf",
+        "slot": 2,
+        "slot_id": "C-black-04.3mf#2",
+        "suggested_placement": "C-001"
+      },
+      "base_source_files": [
+        "C-black-01.3mf",
+        "C-black-02.3mf",
+        "C-black-03.3mf",
+        "C-black-04.3mf",
+        "C-black-05.3mf",
+        "C-black-06.3mf",
+        "C-black-07.3mf",
+        "C-black-08.3mf"
+      ],
+      "mesh_hashes": {
+        "BASE3-03x14-T-08700f": "129459fe8c96ce8d8e80f183f0bbe2b4249d376a729fe9b916088f86ddd6b24a",
+        "BASE3-03x14-T-d96cba": "d9edb8d630dccf9cee0fedc9fed05cbdbbf287014753aa0eb5d5c6debc2b71b0",
+        "BASE3-06x14-T-26e6b0": "dc27940b283cae1af506e6fb0f91bb033300d54f9450485ee5e00ebeb89e479e",
+        "BASE3-06x14-T-5258a8": "0bc574cb3e53851c4878479c80d5ff5b75a9ced7e008a9c5da9f50015c2b52ba",
+        "BASE3-06x14-T-72d551": "d524cd89392bcc332442c5567cbeed5e9a032b507cbc1645f5f7717ad500a7ec",
+        "BASE3-06x14-T-afd244": "ae2d619b2a25090a99199fce15d0f66fb6061e9c35af016c0c7113815cbaf397",
+        "BASE3-06x14-T-f6d8b7": "8748f54d5b7a8cc88715d4cbebc6d1e21b10e050bf8ec8be08dc94d39c3617dc",
+        "BASE3-15x14-B-2f9fc1": "26a5a237df77df05c65d1bd4f081d53607c48261283234852585bc29cb6971b9",
+        "BASE3-15x14-B-65597c": "4ec4311e2c2c4a77e321cf51b611612169538b70540fd44d64e8e557bc6be0f6",
+        "BR-01x06-H096": "5dc200f05f9f55edf884a7dbc6ce742d8b6d4edc4a99e1dd43ba5e03dbbc4cf8",
+        "BR-02x06-H064": "cad20b76338a59ef47862b961e05e3c3e42cc4cd02b93f2980d2d59b730e6c47",
+        "BR-02x06-H096": "28bfad450343c1aa8cfce2091efedd9434d16262e32e4abe29df62330ea749d1",
+        "BR-02x07-H096": "41b9ed004ede7891fad3ef81084ace35fe2ff84598fe6d4c3031dcffe5569869",
+        "BR-02x08-H096": "db8cf96d22e4977b7591ed82917f926995d463c5bd8a70101da44f944b51f190",
+        "BR-02x10-H096": "8d5626663bcf61c38ad71ac7277ea732b3bd7092c85ce2276bb3ca65c59403ca",
+        "BR-03x06-H096": "9785ac3054a9ed4c8c69c45bf56bfaf62b3672e592b893c81449121a5e135768",
+        "BR-04x06-H064": "c4f3c7165c56f9942027906620dbbf3f6ed6cf0dc66b16ff1a0b1a4292206dee",
+        "BR-04x06-H096": "fc74e9622aca1bc69e017330a58be96268fd24ab7a5a3c5b413827273792724c",
+        "BR-04x07-H096": "e2ab9c3264e77f3f8584fe568fc177355d1957a544e744852823650ec777a1e1",
+        "BR-04x08-H096": "30b870820b187ef09acf309beab1afba72692e43433985b73b8eb9d1af338544",
+        "BR-05x06-H096": "3270c039829a9f0ffc163af994e269d924a5029b020003799a52ae1467dad248",
+        "NP3-KEEPER": "b523f99637728aa9e51b4025ec778016f0c9d78f9959aa7823abb71ce691978f",
+        "NP3-LOGO-C": "1f757d7f64f646c2f1e0085153dd3693b3953ef4dcc06a11a901f9898c2d6963",
+        "NP3-TEXT-C": "285e3dd21cc6d204fbf812b57908c9d1d2b3f35e87c9df3c77d7a156038e2e6d"
+      }
+    }
+  ],
+  "manufacturing_inputs_changed": false,
+  "sliced": false,
+  "physical_fit_tested": false
+}

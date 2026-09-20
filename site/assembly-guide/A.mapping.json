@@ -1,0 +1,7065 @@
+{
+  "schema_version": 1,
+  "guide_revision": "print-to-place-1",
+  "geometry_revision": "4.0-public-template",
+  "model": "A",
+  "title": "A / 印刷ファイルから組み立てる3Dガイド",
+  "units": "mm",
+  "sliced": false,
+  "physical_fit_tested": false,
+  "slot_numbers_are_physical_markings": false,
+  "assignment": "Stable guide-only assignment; identical part+color copies are interchangeable.",
+  "bed_mm": [
+    256,
+    256
+  ],
+  "bounds": [
+    [
+      0.1,
+      0.1,
+      -0.0
+    ],
+    [
+      143.9,
+      63.9,
+      187.4
+    ]
+  ],
+  "part_count": 91,
+  "colors": {
+    "black": {
+      "hex": "#171d28",
+      "name": "ブラック"
+    },
+    "cyan": {
+      "hex": "#21bdd6",
+      "name": "シアン"
+    },
+    "magenta": {
+      "hex": "#c42eaa",
+      "name": "マゼンタ"
+    },
+    "green": {
+      "hex": "#42df83",
+      "name": "グリーン"
+    },
+    "white": {
+      "hex": "#f5f3eb",
+      "name": "ホワイト"
+    }
+  },
+  "parts": {
+    "BASE3-03x08-T-48de52": {
+      "id": "BASE3-03x08-T-48de52",
+      "kind": "front_base",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          -0.0
+        ],
+        [
+          23.9,
+          63.9,
+          11.4
+        ]
+      ],
+      "sha256": "0196383cb2b4a181c563b625920c00703dcc6d2a900c0ac1e437584201eca493",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        23.8,
+        63.8,
+        11.4
+      ]
+    },
+    "BASE3-03x08-T-80e081": {
+      "id": "BASE3-03x08-T-80e081",
+      "kind": "front_base",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          -0.0
+        ],
+        [
+          23.9,
+          63.9,
+          11.4
+        ]
+      ],
+      "sha256": "8fbe097971c64d76ab024307d8561813356738f7975151a8b09cd19895f1999d",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        23.8,
+        63.8,
+        11.4
+      ]
+    },
+    "BASE3-06x08-T-7532db": {
+      "id": "BASE3-06x08-T-7532db",
+      "kind": "front_base",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          -0.0
+        ],
+        [
+          47.9,
+          63.9,
+          11.4
+        ]
+      ],
+      "sha256": "25d39921f450b5b13911b3a94c7b5f68abf6a52233a906296c950f4c034739b4",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        47.8,
+        63.8,
+        11.4
+      ]
+    },
+    "BASE3-06x08-T-7f51dc": {
+      "id": "BASE3-06x08-T-7f51dc",
+      "kind": "front_base",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          -0.0
+        ],
+        [
+          47.9,
+          63.9,
+          11.4
+        ]
+      ],
+      "sha256": "4cdfa89c2257b5318c22f3d99ee16525a7df8aa18b4f6dbed5d5e9eccc96af88",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        47.8,
+        63.8,
+        11.4
+      ]
+    },
+    "BASE3-06x08-T-9cb610": {
+      "id": "BASE3-06x08-T-9cb610",
+      "kind": "front_base",
+      "bounds": [
+        [
+          0.1,
+          3.5,
+          -0.0
+        ],
+        [
+          47.9,
+          63.9,
+          11.4
+        ]
+      ],
+      "sha256": "7ac37fa9fcb36d3fc285a213143c5db9b5dd066f49cfa9556a02f6333550c9af",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        47.8,
+        60.4,
+        11.4
+      ]
+    },
+    "BASE3-06x08-T-b8aa05": {
+      "id": "BASE3-06x08-T-b8aa05",
+      "kind": "front_base",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          -0.0
+        ],
+        [
+          47.9,
+          63.9,
+          11.4
+        ]
+      ],
+      "sha256": "2f2227173c235f45db44c73c76537198889c8cf6cccbc0919a6255da51a8be6c",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        47.8,
+        63.8,
+        11.4
+      ]
+    },
+    "BASE3-18x08-B-a4853c": {
+      "id": "BASE3-18x08-B-a4853c",
+      "kind": "front_base",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          -0.0
+        ],
+        [
+          143.9,
+          63.9,
+          11.4
+        ]
+      ],
+      "sha256": "7b261980c94944ab235041fccb1841b15804de5b57bf13ef3adf0dc27ebb63c8",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        143.8,
+        63.8,
+        11.4
+      ]
+    },
+    "BR-01x02-H096": {
+      "id": "BR-01x02-H096",
+      "kind": "brick",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          0.0
+        ],
+        [
+          7.9,
+          15.9,
+          11.4
+        ]
+      ],
+      "sha256": "e9fef5860941b84610d27eb046a9b48b92b47022e447bb884179448c0c6b1d3c",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        7.8,
+        15.8,
+        11.4
+      ]
+    },
+    "BR-02x02-H096": {
+      "id": "BR-02x02-H096",
+      "kind": "brick",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          0.0
+        ],
+        [
+          15.9,
+          15.9,
+          11.4
+        ]
+      ],
+      "sha256": "16726dd1b4b1e1a44bc8c0871ab681cf12c200643be356c5f1903c0017395d30",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        15.8,
+        15.8,
+        11.4
+      ]
+    },
+    "BR-02x03-H096": {
+      "id": "BR-02x03-H096",
+      "kind": "brick",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          0.0
+        ],
+        [
+          15.9,
+          23.9,
+          11.4
+        ]
+      ],
+      "sha256": "ad912e2795bc29daf693dceede166b34ea93b6ece77ac5d3ca648a9e4d9cd29e",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        15.8,
+        23.8,
+        11.4
+      ]
+    },
+    "BR-03x02-H096": {
+      "id": "BR-03x02-H096",
+      "kind": "brick",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          0.0
+        ],
+        [
+          23.9,
+          15.9,
+          11.4
+        ]
+      ],
+      "sha256": "212edb1a6e87844f785df00eac2f7c55e62fd156a4b11123278326481e70c7ad",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        23.8,
+        15.8,
+        11.4
+      ]
+    },
+    "BR-04x02-H032": {
+      "id": "BR-04x02-H032",
+      "kind": "brick",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          0.0
+        ],
+        [
+          31.9,
+          15.9,
+          5.0
+        ]
+      ],
+      "sha256": "d93a74781042890d3ced275c342f1eb2086c284dd36a56e96a0e721e7aaf6fa6",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        31.8,
+        15.8,
+        5.0
+      ]
+    },
+    "BR-04x02-H096": {
+      "id": "BR-04x02-H096",
+      "kind": "brick",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          0.0
+        ],
+        [
+          31.9,
+          15.9,
+          11.4
+        ]
+      ],
+      "sha256": "bc9bf9fe279add8ae02892d20c8c891029d382b69dbd05970035dcb9c77464dd",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        31.8,
+        15.8,
+        11.4
+      ]
+    },
+    "BR-04x03-H096": {
+      "id": "BR-04x03-H096",
+      "kind": "brick",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          0.0
+        ],
+        [
+          31.9,
+          23.9,
+          11.4
+        ]
+      ],
+      "sha256": "fe22771af4e1dba42dd0856fa7d4767ce6729251ddfa0221a30406f4034e959b",
+      "orientation": "underside_on_bed_studs_up",
+      "dimensions": [
+        31.8,
+        23.8,
+        11.4
+      ]
+    },
+    "NP3-KEEPER": {
+      "id": "NP3-KEEPER",
+      "kind": "front_keeper",
+      "bounds": [
+        [
+          0.1,
+          0.1,
+          -0.0
+        ],
+        [
+          15.9,
+          15.9,
+          3.2
+        ]
+      ],
+      "sha256": "b523f99637728aa9e51b4025ec778016f0c9d78f9959aa7823abb71ce691978f",
+      "orientation": "flat_front_pad_and_socket_down",
+      "dimensions": [
+        15.8,
+        15.8,
+        3.2
+      ]
+    },
+    "NP3-LOGO-A": {
+      "id": "NP3-LOGO-A",
+      "kind": "front_logo",
+      "bounds": [
+        [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          32.0,
+          40.0,
+          3.6
+        ]
+      ],
+      "sha256": "599c8417bf3e3cf65e9c976ae238d4b5a8f31ff3bc411c4074b7b3eb85571a90",
+      "orientation": "flat_rear_on_bed_relief_up",
+      "dimensions": [
+        32.0,
+        40.0,
+        3.6
+      ],
+      "finish_color": "white",
+      "color_change_z_mm": 2.8
+    },
+    "NP3-TEXT-A": {
+      "id": "NP3-TEXT-A",
+      "kind": "front_plaque",
+      "bounds": [
+        [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          102.0,
+          40.0,
+          3.2
+        ]
+      ],
+      "sha256": "44efd2b0919f795630ea0b22797fbb698b4accc5d6d1ff5ffbf4fcf711682369",
+      "orientation": "flat_rear_on_bed_letters_up",
+      "dimensions": [
+        102.0,
+        40.0,
+        3.2
+      ],
+      "finish_color": "white",
+      "color_change_z_mm": 2.4
+    }
+  },
+  "placements": [
+    {
+      "id": "A-001",
+      "part": "BASE3-18x08-B-a4853c",
+      "color": "black",
+      "position": [
+        0.0,
+        0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 1,
+      "role": "base_course",
+      "index": 0,
+      "group": "BASE3-18x08-B-a4853c|black",
+      "course": 0,
+      "suggested_source": {
+        "plate": "A-black-02.3mf",
+        "slot": 3,
+        "slot_id": "A-black-02.3mf#3",
+        "suggested_placement": "A-001"
+      }
+    },
+    {
+      "id": "A-002",
+      "part": "BASE3-06x08-T-b8aa05",
+      "color": "black",
+      "position": [
+        0.0,
+        0,
+        9.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 2,
+      "role": "base_course",
+      "index": 1,
+      "group": "BASE3-06x08-T-b8aa05|black",
+      "course": 1,
+      "suggested_source": {
+        "plate": "A-black-02.3mf",
+        "slot": 1,
+        "slot_id": "A-black-02.3mf#1",
+        "suggested_placement": "A-002"
+      }
+    },
+    {
+      "id": "A-003",
+      "part": "BASE3-06x08-T-9cb610",
+      "color": "black",
+      "position": [
+        48.0,
+        0,
+        9.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 2,
+      "role": "base_course",
+      "index": 2,
+      "group": "BASE3-06x08-T-9cb610|black",
+      "course": 1,
+      "suggested_source": {
+        "plate": "A-black-02.3mf",
+        "slot": 4,
+        "slot_id": "A-black-02.3mf#4",
+        "suggested_placement": "A-003"
+      }
+    },
+    {
+      "id": "A-004",
+      "part": "BASE3-06x08-T-7f51dc",
+      "color": "black",
+      "position": [
+        96.0,
+        0,
+        9.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 2,
+      "role": "base_course",
+      "index": 3,
+      "group": "BASE3-06x08-T-7f51dc|black",
+      "course": 1,
+      "suggested_source": {
+        "plate": "A-black-01.3mf",
+        "slot": 7,
+        "slot_id": "A-black-01.3mf#7",
+        "suggested_placement": "A-004"
+      }
+    },
+    {
+      "id": "A-005",
+      "part": "BASE3-03x08-T-48de52",
+      "color": "black",
+      "position": [
+        0.0,
+        0,
+        19.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 3,
+      "role": "base_course",
+      "index": 4,
+      "group": "BASE3-03x08-T-48de52|black",
+      "course": 2,
+      "suggested_source": {
+        "plate": "A-black-01.3mf",
+        "slot": 1,
+        "slot_id": "A-black-01.3mf#1",
+        "suggested_placement": "A-005"
+      }
+    },
+    {
+      "id": "A-006",
+      "part": "BASE3-06x08-T-9cb610",
+      "color": "black",
+      "position": [
+        24.0,
+        0,
+        19.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 3,
+      "role": "base_course",
+      "index": 5,
+      "group": "BASE3-06x08-T-9cb610|black",
+      "course": 2,
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 1,
+        "slot_id": "A-black-03.3mf#1",
+        "suggested_placement": "A-006"
+      }
+    },
+    {
+      "id": "A-007",
+      "part": "BASE3-06x08-T-7532db",
+      "color": "black",
+      "position": [
+        72.0,
+        0,
+        19.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 3,
+      "role": "base_course",
+      "index": 6,
+      "group": "BASE3-06x08-T-7532db|black",
+      "course": 2,
+      "suggested_source": {
+        "plate": "A-black-01.3mf",
+        "slot": 5,
+        "slot_id": "A-black-01.3mf#5",
+        "suggested_placement": "A-007"
+      }
+    },
+    {
+      "id": "A-008",
+      "part": "BASE3-03x08-T-80e081",
+      "color": "black",
+      "position": [
+        120.0,
+        0,
+        19.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 3,
+      "role": "base_course",
+      "index": 7,
+      "group": "BASE3-03x08-T-80e081|black",
+      "course": 2,
+      "suggested_source": {
+        "plate": "A-black-01.3mf",
+        "slot": 3,
+        "slot_id": "A-black-01.3mf#3",
+        "suggested_placement": "A-008"
+      }
+    },
+    {
+      "id": "A-009",
+      "part": "BASE3-06x08-T-b8aa05",
+      "color": "black",
+      "position": [
+        0.0,
+        0,
+        28.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 4,
+      "role": "base_course",
+      "index": 8,
+      "group": "BASE3-06x08-T-b8aa05|black",
+      "course": 3,
+      "suggested_source": {
+        "plate": "A-black-02.3mf",
+        "slot": 2,
+        "slot_id": "A-black-02.3mf#2",
+        "suggested_placement": "A-009"
+      }
+    },
+    {
+      "id": "A-010",
+      "part": "BASE3-06x08-T-9cb610",
+      "color": "black",
+      "position": [
+        48.0,
+        0,
+        28.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 4,
+      "role": "base_course",
+      "index": 9,
+      "group": "BASE3-06x08-T-9cb610|black",
+      "course": 3,
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 2,
+        "slot_id": "A-black-03.3mf#2",
+        "suggested_placement": "A-010"
+      }
+    },
+    {
+      "id": "A-011",
+      "part": "BASE3-06x08-T-7f51dc",
+      "color": "black",
+      "position": [
+        96.0,
+        0,
+        28.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 4,
+      "role": "base_course",
+      "index": 10,
+      "group": "BASE3-06x08-T-7f51dc|black",
+      "course": 3,
+      "suggested_source": {
+        "plate": "A-black-01.3mf",
+        "slot": 8,
+        "slot_id": "A-black-01.3mf#8",
+        "suggested_placement": "A-011"
+      }
+    },
+    {
+      "id": "A-012",
+      "part": "BASE3-03x08-T-48de52",
+      "color": "black",
+      "position": [
+        0.0,
+        0,
+        38.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 5,
+      "role": "base_course",
+      "index": 11,
+      "group": "BASE3-03x08-T-48de52|black",
+      "course": 4,
+      "suggested_source": {
+        "plate": "A-black-01.3mf",
+        "slot": 2,
+        "slot_id": "A-black-01.3mf#2",
+        "suggested_placement": "A-012"
+      }
+    },
+    {
+      "id": "A-013",
+      "part": "BASE3-06x08-T-9cb610",
+      "color": "black",
+      "position": [
+        24.0,
+        0,
+        38.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 5,
+      "role": "base_course",
+      "index": 12,
+      "group": "BASE3-06x08-T-9cb610|black",
+      "course": 4,
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 3,
+        "slot_id": "A-black-03.3mf#3",
+        "suggested_placement": "A-013"
+      }
+    },
+    {
+      "id": "A-014",
+      "part": "BASE3-06x08-T-7532db",
+      "color": "black",
+      "position": [
+        72.0,
+        0,
+        38.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 5,
+      "role": "base_course",
+      "index": 13,
+      "group": "BASE3-06x08-T-7532db|black",
+      "course": 4,
+      "suggested_source": {
+        "plate": "A-black-01.3mf",
+        "slot": 6,
+        "slot_id": "A-black-01.3mf#6",
+        "suggested_placement": "A-014"
+      }
+    },
+    {
+      "id": "A-015",
+      "part": "BASE3-03x08-T-80e081",
+      "color": "black",
+      "position": [
+        120.0,
+        0,
+        38.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 5,
+      "role": "base_course",
+      "index": 14,
+      "group": "BASE3-03x08-T-80e081|black",
+      "course": 4,
+      "suggested_source": {
+        "plate": "A-black-01.3mf",
+        "slot": 4,
+        "slot_id": "A-black-01.3mf#4",
+        "suggested_placement": "A-015"
+      }
+    },
+    {
+      "id": "A-016",
+      "part": "NP3-TEXT-A",
+      "color": "black",
+      "position": [
+        4.0,
+        3.3,
+        4.0
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "step": 6,
+      "role": "front_module",
+      "index": 15,
+      "group": "NP3-TEXT-A|black",
+      "module": "text",
+      "suggested_source": {
+        "plate": "A-black-to-white-z2p4-01.3mf",
+        "slot": 1,
+        "slot_id": "A-black-to-white-z2p4-01.3mf#1",
+        "suggested_placement": "A-016"
+      }
+    },
+    {
+      "id": "A-017",
+      "part": "NP3-LOGO-A",
+      "color": "black",
+      "position": [
+        108.0,
+        3.7,
+        4.0
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "step": 6,
+      "role": "front_module",
+      "index": 16,
+      "group": "NP3-LOGO-A|black",
+      "module": "logo",
+      "suggested_source": {
+        "plate": "A-black-to-white-z2p8-01.3mf",
+        "slot": 1,
+        "slot_id": "A-black-to-white-z2p8-01.3mf#1",
+        "suggested_placement": "A-017"
+      }
+    },
+    {
+      "id": "A-018",
+      "part": "NP3-KEEPER",
+      "color": "black",
+      "position": [
+        0,
+        0,
+        48.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 7,
+      "role": "keeper",
+      "index": 17,
+      "group": "NP3-KEEPER|black",
+      "module": "text",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 32,
+        "slot_id": "A-black-03.3mf#32",
+        "suggested_placement": "A-018"
+      }
+    },
+    {
+      "id": "A-019",
+      "part": "NP3-KEEPER",
+      "color": "black",
+      "position": [
+        88.0,
+        0,
+        48.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 7,
+      "role": "keeper",
+      "index": 18,
+      "group": "NP3-KEEPER|black",
+      "module": "text",
+      "suggested_source": {
+        "plate": "A-black-04.3mf",
+        "slot": 1,
+        "slot_id": "A-black-04.3mf#1",
+        "suggested_placement": "A-019"
+      }
+    },
+    {
+      "id": "A-020",
+      "part": "NP3-KEEPER",
+      "color": "black",
+      "position": [
+        112.0,
+        0,
+        48.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 7,
+      "role": "keeper",
+      "index": 19,
+      "group": "NP3-KEEPER|black",
+      "module": "logo",
+      "suggested_source": {
+        "plate": "A-black-04.3mf",
+        "slot": 2,
+        "slot_id": "A-black-04.3mf#2",
+        "suggested_placement": "A-020"
+      }
+    },
+    {
+      "id": "A-021",
+      "part": "BR-04x02-H096",
+      "color": "magenta",
+      "position": [
+        40.0,
+        24.0,
+        48.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 8,
+      "role": "face",
+      "index": 20,
+      "group": "BR-04x02-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 14,
+        "slot_id": "A-magenta-01.3mf#14",
+        "suggested_placement": "A-021"
+      }
+    },
+    {
+      "id": "A-022",
+      "part": "BR-04x02-H096",
+      "color": "magenta",
+      "position": [
+        72.0,
+        24.0,
+        48.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 8,
+      "role": "face",
+      "index": 21,
+      "group": "BR-04x02-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 15,
+        "slot_id": "A-magenta-01.3mf#15",
+        "suggested_placement": "A-022"
+      }
+    },
+    {
+      "id": "A-023",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        32.0,
+        16.0,
+        57.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 9,
+      "role": "face",
+      "index": 22,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 1,
+        "slot_id": "A-magenta-01.3mf#1",
+        "suggested_placement": "A-023"
+      }
+    },
+    {
+      "id": "A-024",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        48.0,
+        24.0,
+        57.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 9,
+      "role": "face",
+      "index": 23,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 4,
+        "slot_id": "A-black-03.3mf#4",
+        "suggested_placement": "A-024"
+      }
+    },
+    {
+      "id": "A-025",
+      "part": "BR-04x02-H096",
+      "color": "black",
+      "position": [
+        64.0,
+        24.0,
+        57.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 9,
+      "role": "face",
+      "index": 24,
+      "group": "BR-04x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 23,
+        "slot_id": "A-black-03.3mf#23",
+        "suggested_placement": "A-025"
+      }
+    },
+    {
+      "id": "A-026",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        96.0,
+        16.0,
+        57.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 9,
+      "role": "face",
+      "index": 25,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 2,
+        "slot_id": "A-magenta-01.3mf#2",
+        "suggested_placement": "A-026"
+      }
+    },
+    {
+      "id": "A-027",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        24.0,
+        16.0,
+        67.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 10,
+      "role": "face",
+      "index": 26,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 3,
+        "slot_id": "A-magenta-01.3mf#3",
+        "suggested_placement": "A-027"
+      }
+    },
+    {
+      "id": "A-028",
+      "part": "BR-04x02-H096",
+      "color": "black",
+      "position": [
+        40.0,
+        24.0,
+        67.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 10,
+      "role": "face",
+      "index": 27,
+      "group": "BR-04x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 24,
+        "slot_id": "A-black-03.3mf#24",
+        "suggested_placement": "A-028"
+      }
+    },
+    {
+      "id": "A-029",
+      "part": "BR-04x02-H096",
+      "color": "black",
+      "position": [
+        72.0,
+        24.0,
+        67.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 10,
+      "role": "face",
+      "index": 28,
+      "group": "BR-04x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 25,
+        "slot_id": "A-black-03.3mf#25",
+        "suggested_placement": "A-029"
+      }
+    },
+    {
+      "id": "A-030",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        104.0,
+        16.0,
+        67.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 10,
+      "role": "face",
+      "index": 29,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 4,
+        "slot_id": "A-magenta-01.3mf#4",
+        "suggested_placement": "A-030"
+      }
+    },
+    {
+      "id": "A-031",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        16.0,
+        16.0,
+        76.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 11,
+      "role": "face",
+      "index": 30,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 5,
+        "slot_id": "A-magenta-01.3mf#5",
+        "suggested_placement": "A-031"
+      }
+    },
+    {
+      "id": "A-032",
+      "part": "BR-03x02-H096",
+      "color": "black",
+      "position": [
+        32.0,
+        24.0,
+        76.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 11,
+      "role": "face",
+      "index": 31,
+      "group": "BR-03x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 17,
+        "slot_id": "A-black-03.3mf#17",
+        "suggested_placement": "A-032"
+      }
+    },
+    {
+      "id": "A-033",
+      "part": "BR-01x02-H096",
+      "color": "green",
+      "position": [
+        56.0,
+        24.0,
+        76.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 11,
+      "role": "face",
+      "index": 32,
+      "group": "BR-01x02-H096|green",
+      "suggested_source": {
+        "plate": "A-green-01.3mf",
+        "slot": 1,
+        "slot_id": "A-green-01.3mf#1",
+        "suggested_placement": "A-033"
+      }
+    },
+    {
+      "id": "A-034",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        64.0,
+        24.0,
+        76.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 11,
+      "role": "face",
+      "index": 33,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 5,
+        "slot_id": "A-black-03.3mf#5",
+        "suggested_placement": "A-034"
+      }
+    },
+    {
+      "id": "A-035",
+      "part": "BR-01x02-H096",
+      "color": "green",
+      "position": [
+        80.0,
+        24.0,
+        76.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 11,
+      "role": "face",
+      "index": 34,
+      "group": "BR-01x02-H096|green",
+      "suggested_source": {
+        "plate": "A-green-01.3mf",
+        "slot": 2,
+        "slot_id": "A-green-01.3mf#2",
+        "suggested_placement": "A-035"
+      }
+    },
+    {
+      "id": "A-036",
+      "part": "BR-03x02-H096",
+      "color": "black",
+      "position": [
+        88.0,
+        24.0,
+        76.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 11,
+      "role": "face",
+      "index": 35,
+      "group": "BR-03x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 18,
+        "slot_id": "A-black-03.3mf#18",
+        "suggested_placement": "A-036"
+      }
+    },
+    {
+      "id": "A-037",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        112.0,
+        16.0,
+        76.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 11,
+      "role": "face",
+      "index": 36,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 6,
+        "slot_id": "A-magenta-01.3mf#6",
+        "suggested_placement": "A-037"
+      }
+    },
+    {
+      "id": "A-038",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        16.0,
+        16.0,
+        86.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 12,
+      "role": "face",
+      "index": 37,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 7,
+        "slot_id": "A-magenta-01.3mf#7",
+        "suggested_placement": "A-038"
+      }
+    },
+    {
+      "id": "A-039",
+      "part": "BR-03x02-H096",
+      "color": "black",
+      "position": [
+        32.0,
+        24.0,
+        86.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 12,
+      "role": "face",
+      "index": 38,
+      "group": "BR-03x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 19,
+        "slot_id": "A-black-03.3mf#19",
+        "suggested_placement": "A-039"
+      }
+    },
+    {
+      "id": "A-040",
+      "part": "BR-01x02-H096",
+      "color": "green",
+      "position": [
+        56.0,
+        24.0,
+        86.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 12,
+      "role": "face",
+      "index": 39,
+      "group": "BR-01x02-H096|green",
+      "suggested_source": {
+        "plate": "A-green-01.3mf",
+        "slot": 3,
+        "slot_id": "A-green-01.3mf#3",
+        "suggested_placement": "A-040"
+      }
+    },
+    {
+      "id": "A-041",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        64.0,
+        24.0,
+        86.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 12,
+      "role": "face",
+      "index": 40,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 6,
+        "slot_id": "A-black-03.3mf#6",
+        "suggested_placement": "A-041"
+      }
+    },
+    {
+      "id": "A-042",
+      "part": "BR-01x02-H096",
+      "color": "green",
+      "position": [
+        80.0,
+        24.0,
+        86.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 12,
+      "role": "face",
+      "index": 41,
+      "group": "BR-01x02-H096|green",
+      "suggested_source": {
+        "plate": "A-green-01.3mf",
+        "slot": 4,
+        "slot_id": "A-green-01.3mf#4",
+        "suggested_placement": "A-042"
+      }
+    },
+    {
+      "id": "A-043",
+      "part": "BR-03x02-H096",
+      "color": "black",
+      "position": [
+        88.0,
+        24.0,
+        86.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 12,
+      "role": "face",
+      "index": 42,
+      "group": "BR-03x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 20,
+        "slot_id": "A-black-03.3mf#20",
+        "suggested_placement": "A-043"
+      }
+    },
+    {
+      "id": "A-044",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        112.0,
+        16.0,
+        86.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 12,
+      "role": "face",
+      "index": 43,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 8,
+        "slot_id": "A-magenta-01.3mf#8",
+        "suggested_placement": "A-044"
+      }
+    },
+    {
+      "id": "A-045",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        16.0,
+        16.0,
+        96.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 13,
+      "role": "face",
+      "index": 44,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 9,
+        "slot_id": "A-magenta-01.3mf#9",
+        "suggested_placement": "A-045"
+      }
+    },
+    {
+      "id": "A-046",
+      "part": "BR-03x02-H096",
+      "color": "black",
+      "position": [
+        32.0,
+        24.0,
+        96.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 13,
+      "role": "face",
+      "index": 45,
+      "group": "BR-03x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 21,
+        "slot_id": "A-black-03.3mf#21",
+        "suggested_placement": "A-046"
+      }
+    },
+    {
+      "id": "A-047",
+      "part": "BR-01x02-H096",
+      "color": "green",
+      "position": [
+        56.0,
+        24.0,
+        96.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 13,
+      "role": "face",
+      "index": 46,
+      "group": "BR-01x02-H096|green",
+      "suggested_source": {
+        "plate": "A-green-01.3mf",
+        "slot": 5,
+        "slot_id": "A-green-01.3mf#5",
+        "suggested_placement": "A-047"
+      }
+    },
+    {
+      "id": "A-048",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        64.0,
+        24.0,
+        96.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 13,
+      "role": "face",
+      "index": 47,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 7,
+        "slot_id": "A-black-03.3mf#7",
+        "suggested_placement": "A-048"
+      }
+    },
+    {
+      "id": "A-049",
+      "part": "BR-01x02-H096",
+      "color": "green",
+      "position": [
+        80.0,
+        24.0,
+        96.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 13,
+      "role": "face",
+      "index": 48,
+      "group": "BR-01x02-H096|green",
+      "suggested_source": {
+        "plate": "A-green-01.3mf",
+        "slot": 6,
+        "slot_id": "A-green-01.3mf#6",
+        "suggested_placement": "A-049"
+      }
+    },
+    {
+      "id": "A-050",
+      "part": "BR-03x02-H096",
+      "color": "black",
+      "position": [
+        88.0,
+        24.0,
+        96.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 13,
+      "role": "face",
+      "index": 49,
+      "group": "BR-03x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 22,
+        "slot_id": "A-black-03.3mf#22",
+        "suggested_placement": "A-050"
+      }
+    },
+    {
+      "id": "A-051",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        112.0,
+        16.0,
+        96.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 13,
+      "role": "face",
+      "index": 50,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 10,
+        "slot_id": "A-magenta-01.3mf#10",
+        "suggested_placement": "A-051"
+      }
+    },
+    {
+      "id": "A-052",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        16.0,
+        16.0,
+        105.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 14,
+      "role": "face",
+      "index": 51,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 11,
+        "slot_id": "A-magenta-01.3mf#11",
+        "suggested_placement": "A-052"
+      }
+    },
+    {
+      "id": "A-053",
+      "part": "BR-04x02-H096",
+      "color": "black",
+      "position": [
+        32.0,
+        24.0,
+        105.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 14,
+      "role": "face",
+      "index": 52,
+      "group": "BR-04x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 26,
+        "slot_id": "A-black-03.3mf#26",
+        "suggested_placement": "A-053"
+      }
+    },
+    {
+      "id": "A-054",
+      "part": "BR-04x02-H096",
+      "color": "black",
+      "position": [
+        64.0,
+        24.0,
+        105.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 14,
+      "role": "face",
+      "index": 53,
+      "group": "BR-04x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 27,
+        "slot_id": "A-black-03.3mf#27",
+        "suggested_placement": "A-054"
+      }
+    },
+    {
+      "id": "A-055",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        96.0,
+        24.0,
+        105.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 14,
+      "role": "face",
+      "index": 54,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 8,
+        "slot_id": "A-black-03.3mf#8",
+        "suggested_placement": "A-055"
+      }
+    },
+    {
+      "id": "A-056",
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "position": [
+        112.0,
+        16.0,
+        105.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 14,
+      "role": "face",
+      "index": 55,
+      "group": "BR-02x03-H096|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 12,
+        "slot_id": "A-magenta-01.3mf#12",
+        "suggested_placement": "A-056"
+      }
+    },
+    {
+      "id": "A-057",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        16.0,
+        16.0,
+        115.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 15,
+      "role": "face",
+      "index": 56,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 1,
+        "slot_id": "A-cyan-01.3mf#1",
+        "suggested_placement": "A-057"
+      }
+    },
+    {
+      "id": "A-058",
+      "part": "BR-04x03-H096",
+      "color": "cyan",
+      "position": [
+        32.0,
+        16.0,
+        115.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 15,
+      "role": "face",
+      "index": 57,
+      "group": "BR-04x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 15,
+        "slot_id": "A-cyan-01.3mf#15",
+        "suggested_placement": "A-058"
+      }
+    },
+    {
+      "id": "A-059",
+      "part": "BR-04x03-H096",
+      "color": "cyan",
+      "position": [
+        64.0,
+        16.0,
+        115.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 15,
+      "role": "face",
+      "index": 58,
+      "group": "BR-04x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 16,
+        "slot_id": "A-cyan-01.3mf#16",
+        "suggested_placement": "A-059"
+      }
+    },
+    {
+      "id": "A-060",
+      "part": "BR-04x03-H096",
+      "color": "cyan",
+      "position": [
+        96.0,
+        16.0,
+        115.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 15,
+      "role": "face",
+      "index": 59,
+      "group": "BR-04x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 17,
+        "slot_id": "A-cyan-01.3mf#17",
+        "suggested_placement": "A-060"
+      }
+    },
+    {
+      "id": "A-061",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        16.0,
+        16.0,
+        124.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 16,
+      "role": "face",
+      "index": 60,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 2,
+        "slot_id": "A-cyan-01.3mf#2",
+        "suggested_placement": "A-061"
+      }
+    },
+    {
+      "id": "A-062",
+      "part": "BR-04x02-H096",
+      "color": "black",
+      "position": [
+        32.0,
+        24.0,
+        124.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 16,
+      "role": "face",
+      "index": 61,
+      "group": "BR-04x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 28,
+        "slot_id": "A-black-03.3mf#28",
+        "suggested_placement": "A-062"
+      }
+    },
+    {
+      "id": "A-063",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        64.0,
+        16.0,
+        124.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 16,
+      "role": "face",
+      "index": 62,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 3,
+        "slot_id": "A-cyan-01.3mf#3",
+        "suggested_placement": "A-063"
+      }
+    },
+    {
+      "id": "A-064",
+      "part": "BR-04x02-H096",
+      "color": "black",
+      "position": [
+        80.0,
+        24.0,
+        124.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 16,
+      "role": "face",
+      "index": 63,
+      "group": "BR-04x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 29,
+        "slot_id": "A-black-03.3mf#29",
+        "suggested_placement": "A-064"
+      }
+    },
+    {
+      "id": "A-065",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        112.0,
+        16.0,
+        124.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 16,
+      "role": "face",
+      "index": 64,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 4,
+        "slot_id": "A-cyan-01.3mf#4",
+        "suggested_placement": "A-065"
+      }
+    },
+    {
+      "id": "A-066",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        16.0,
+        16.0,
+        134.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 17,
+      "role": "face",
+      "index": 65,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 5,
+        "slot_id": "A-cyan-01.3mf#5",
+        "suggested_placement": "A-066"
+      }
+    },
+    {
+      "id": "A-067",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        32.0,
+        24.0,
+        134.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 17,
+      "role": "face",
+      "index": 66,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 9,
+        "slot_id": "A-black-03.3mf#9",
+        "suggested_placement": "A-067"
+      }
+    },
+    {
+      "id": "A-068",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        48.0,
+        24.0,
+        134.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 17,
+      "role": "face",
+      "index": 67,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 10,
+        "slot_id": "A-black-03.3mf#10",
+        "suggested_placement": "A-068"
+      }
+    },
+    {
+      "id": "A-069",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        64.0,
+        16.0,
+        134.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 17,
+      "role": "face",
+      "index": 68,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 6,
+        "slot_id": "A-cyan-01.3mf#6",
+        "suggested_placement": "A-069"
+      }
+    },
+    {
+      "id": "A-070",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        80.0,
+        24.0,
+        134.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 17,
+      "role": "face",
+      "index": 69,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 11,
+        "slot_id": "A-black-03.3mf#11",
+        "suggested_placement": "A-070"
+      }
+    },
+    {
+      "id": "A-071",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        96.0,
+        24.0,
+        134.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 17,
+      "role": "face",
+      "index": 70,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 12,
+        "slot_id": "A-black-03.3mf#12",
+        "suggested_placement": "A-071"
+      }
+    },
+    {
+      "id": "A-072",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        112.0,
+        16.0,
+        134.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 17,
+      "role": "face",
+      "index": 71,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 7,
+        "slot_id": "A-cyan-01.3mf#7",
+        "suggested_placement": "A-072"
+      }
+    },
+    {
+      "id": "A-073",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        16.0,
+        16.0,
+        144.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 18,
+      "role": "face",
+      "index": 72,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 8,
+        "slot_id": "A-cyan-01.3mf#8",
+        "suggested_placement": "A-073"
+      }
+    },
+    {
+      "id": "A-074",
+      "part": "BR-04x02-H096",
+      "color": "black",
+      "position": [
+        32.0,
+        24.0,
+        144.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 18,
+      "role": "face",
+      "index": 73,
+      "group": "BR-04x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 30,
+        "slot_id": "A-black-03.3mf#30",
+        "suggested_placement": "A-074"
+      }
+    },
+    {
+      "id": "A-075",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        64.0,
+        16.0,
+        144.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 18,
+      "role": "face",
+      "index": 74,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 9,
+        "slot_id": "A-cyan-01.3mf#9",
+        "suggested_placement": "A-075"
+      }
+    },
+    {
+      "id": "A-076",
+      "part": "BR-04x02-H096",
+      "color": "black",
+      "position": [
+        80.0,
+        24.0,
+        144.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 18,
+      "role": "face",
+      "index": 75,
+      "group": "BR-04x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 31,
+        "slot_id": "A-black-03.3mf#31",
+        "suggested_placement": "A-076"
+      }
+    },
+    {
+      "id": "A-077",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        112.0,
+        16.0,
+        144.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 18,
+      "role": "face",
+      "index": 76,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 10,
+        "slot_id": "A-cyan-01.3mf#10",
+        "suggested_placement": "A-077"
+      }
+    },
+    {
+      "id": "A-078",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        16.0,
+        16.0,
+        153.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 19,
+      "role": "face",
+      "index": 77,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 11,
+        "slot_id": "A-cyan-01.3mf#11",
+        "suggested_placement": "A-078"
+      }
+    },
+    {
+      "id": "A-079",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        32.0,
+        24.0,
+        153.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 19,
+      "role": "face",
+      "index": 78,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 13,
+        "slot_id": "A-black-03.3mf#13",
+        "suggested_placement": "A-079"
+      }
+    },
+    {
+      "id": "A-080",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        48.0,
+        24.0,
+        153.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 19,
+      "role": "face",
+      "index": 79,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 14,
+        "slot_id": "A-black-03.3mf#14",
+        "suggested_placement": "A-080"
+      }
+    },
+    {
+      "id": "A-081",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        64.0,
+        16.0,
+        153.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 19,
+      "role": "face",
+      "index": 80,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 12,
+        "slot_id": "A-cyan-01.3mf#12",
+        "suggested_placement": "A-081"
+      }
+    },
+    {
+      "id": "A-082",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        80.0,
+        24.0,
+        153.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 19,
+      "role": "face",
+      "index": 81,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 15,
+        "slot_id": "A-black-03.3mf#15",
+        "suggested_placement": "A-082"
+      }
+    },
+    {
+      "id": "A-083",
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "position": [
+        96.0,
+        24.0,
+        153.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 19,
+      "role": "face",
+      "index": 82,
+      "group": "BR-02x02-H096|black",
+      "suggested_source": {
+        "plate": "A-black-03.3mf",
+        "slot": 16,
+        "slot_id": "A-black-03.3mf#16",
+        "suggested_placement": "A-083"
+      }
+    },
+    {
+      "id": "A-084",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        112.0,
+        16.0,
+        153.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 19,
+      "role": "face",
+      "index": 83,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 13,
+        "slot_id": "A-cyan-01.3mf#13",
+        "suggested_placement": "A-084"
+      }
+    },
+    {
+      "id": "A-085",
+      "part": "BR-04x03-H096",
+      "color": "cyan",
+      "position": [
+        24.0,
+        16.0,
+        163.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 20,
+      "role": "face",
+      "index": 84,
+      "group": "BR-04x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 18,
+        "slot_id": "A-cyan-01.3mf#18",
+        "suggested_placement": "A-085"
+      }
+    },
+    {
+      "id": "A-086",
+      "part": "BR-04x03-H096",
+      "color": "cyan",
+      "position": [
+        56.0,
+        16.0,
+        163.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 20,
+      "role": "face",
+      "index": 85,
+      "group": "BR-04x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 19,
+        "slot_id": "A-cyan-01.3mf#19",
+        "suggested_placement": "A-086"
+      }
+    },
+    {
+      "id": "A-087",
+      "part": "BR-04x03-H096",
+      "color": "cyan",
+      "position": [
+        88.0,
+        16.0,
+        163.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 20,
+      "role": "face",
+      "index": 86,
+      "group": "BR-04x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 20,
+        "slot_id": "A-cyan-01.3mf#20",
+        "suggested_placement": "A-087"
+      }
+    },
+    {
+      "id": "A-088",
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "position": [
+        32.0,
+        16.0,
+        172.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 21,
+      "role": "face",
+      "index": 87,
+      "group": "BR-02x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 14,
+        "slot_id": "A-cyan-01.3mf#14",
+        "suggested_placement": "A-088"
+      }
+    },
+    {
+      "id": "A-089",
+      "part": "BR-04x03-H096",
+      "color": "cyan",
+      "position": [
+        48.0,
+        16.0,
+        172.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 21,
+      "role": "face",
+      "index": 88,
+      "group": "BR-04x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 21,
+        "slot_id": "A-cyan-01.3mf#21",
+        "suggested_placement": "A-089"
+      }
+    },
+    {
+      "id": "A-090",
+      "part": "BR-04x03-H096",
+      "color": "cyan",
+      "position": [
+        80.0,
+        16.0,
+        172.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 21,
+      "role": "face",
+      "index": 89,
+      "group": "BR-04x03-H096|cyan",
+      "suggested_source": {
+        "plate": "A-cyan-01.3mf",
+        "slot": 22,
+        "slot_id": "A-cyan-01.3mf#22",
+        "suggested_placement": "A-090"
+      }
+    },
+    {
+      "id": "A-091",
+      "part": "BR-04x02-H032",
+      "color": "magenta",
+      "position": [
+        56.0,
+        24.0,
+        182.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "step": 22,
+      "role": "face",
+      "index": 90,
+      "group": "BR-04x02-H032|magenta",
+      "suggested_source": {
+        "plate": "A-magenta-01.3mf",
+        "slot": 13,
+        "slot_id": "A-magenta-01.3mf#13",
+        "suggested_placement": "A-091"
+      }
+    }
+  ],
+  "plates": [
+    {
+      "file": "A-black-01.3mf",
+      "color": "black",
+      "sha256": "8ef15967f06910eab626e3cf61c95e2976cd8f9c6b5a038d9fb6c1baeec57384",
+      "slots": [
+        {
+          "id": "A-black-01.3mf#1",
+          "number": 1,
+          "part": "BASE3-03x08-T-48de52",
+          "group": "BASE3-03x08-T-48de52|black",
+          "print_position": [
+            28.4,
+            57.1,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            22.5,
+            51.2,
+            58.3,
+            127.0
+          ],
+          "suggested_placement": "A-005",
+          "candidate_placements": [
+            "A-005",
+            "A-012"
+          ]
+        },
+        {
+          "id": "A-black-01.3mf#2",
+          "number": 2,
+          "part": "BASE3-03x08-T-48de52",
+          "group": "BASE3-03x08-T-48de52|black",
+          "print_position": [
+            66.19999999999999,
+            57.1,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            60.3,
+            51.2,
+            96.1,
+            127.0
+          ],
+          "suggested_placement": "A-012",
+          "candidate_placements": [
+            "A-005",
+            "A-012"
+          ]
+        },
+        {
+          "id": "A-black-01.3mf#3",
+          "number": 3,
+          "part": "BASE3-03x08-T-80e081",
+          "group": "BASE3-03x08-T-80e081|black",
+          "print_position": [
+            104.0,
+            57.1,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            98.1,
+            51.2,
+            133.89999999999998,
+            127.0
+          ],
+          "suggested_placement": "A-008",
+          "candidate_placements": [
+            "A-008",
+            "A-015"
+          ]
+        },
+        {
+          "id": "A-black-01.3mf#4",
+          "number": 4,
+          "part": "BASE3-03x08-T-80e081",
+          "group": "BASE3-03x08-T-80e081|black",
+          "print_position": [
+            141.8,
+            57.1,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            135.89999999999998,
+            51.2,
+            171.7,
+            127.0
+          ],
+          "suggested_placement": "A-015",
+          "candidate_placements": [
+            "A-008",
+            "A-015"
+          ]
+        },
+        {
+          "id": "A-black-01.3mf#5",
+          "number": 5,
+          "part": "BASE3-06x08-T-7532db",
+          "group": "BASE3-06x08-T-7532db|black",
+          "print_position": [
+            179.6,
+            57.1,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            173.7,
+            51.2,
+            233.5,
+            127.0
+          ],
+          "suggested_placement": "A-007",
+          "candidate_placements": [
+            "A-007",
+            "A-014"
+          ]
+        },
+        {
+          "id": "A-black-01.3mf#6",
+          "number": 6,
+          "part": "BASE3-06x08-T-7532db",
+          "group": "BASE3-06x08-T-7532db|black",
+          "print_position": [
+            28.4,
+            134.9,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            22.5,
+            129.0,
+            82.3,
+            204.8
+          ],
+          "suggested_placement": "A-014",
+          "candidate_placements": [
+            "A-007",
+            "A-014"
+          ]
+        },
+        {
+          "id": "A-black-01.3mf#7",
+          "number": 7,
+          "part": "BASE3-06x08-T-7f51dc",
+          "group": "BASE3-06x08-T-7f51dc|black",
+          "print_position": [
+            90.2,
+            134.9,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            84.3,
+            129.0,
+            144.1,
+            204.8
+          ],
+          "suggested_placement": "A-004",
+          "candidate_placements": [
+            "A-004",
+            "A-011"
+          ]
+        },
+        {
+          "id": "A-black-01.3mf#8",
+          "number": 8,
+          "part": "BASE3-06x08-T-7f51dc",
+          "group": "BASE3-06x08-T-7f51dc|black",
+          "print_position": [
+            152.0,
+            134.9,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            146.1,
+            129.0,
+            205.89999999999998,
+            204.8
+          ],
+          "suggested_placement": "A-011",
+          "candidate_placements": [
+            "A-004",
+            "A-011"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "A-black-02.3mf",
+      "color": "black",
+      "sha256": "1b9d856edb9213a6a6e796ae2253022858be63d38e46020fdc461e15341eb845",
+      "slots": [
+        {
+          "id": "A-black-02.3mf#1",
+          "number": 1,
+          "part": "BASE3-06x08-T-b8aa05",
+          "group": "BASE3-06x08-T-b8aa05|black",
+          "print_position": [
+            25.099999999999987,
+            57.1,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            19.19999999999999,
+            51.2,
+            78.99999999999999,
+            127.0
+          ],
+          "suggested_placement": "A-002",
+          "candidate_placements": [
+            "A-002",
+            "A-009"
+          ]
+        },
+        {
+          "id": "A-black-02.3mf#2",
+          "number": 2,
+          "part": "BASE3-06x08-T-b8aa05",
+          "group": "BASE3-06x08-T-b8aa05|black",
+          "print_position": [
+            86.89999999999999,
+            57.1,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            80.99999999999999,
+            51.2,
+            140.79999999999998,
+            127.0
+          ],
+          "suggested_placement": "A-009",
+          "candidate_placements": [
+            "A-002",
+            "A-009"
+          ]
+        },
+        {
+          "id": "A-black-02.3mf#3",
+          "number": 3,
+          "part": "BASE3-18x08-B-a4853c",
+          "group": "BASE3-18x08-B-a4853c|black",
+          "print_position": [
+            25.099999999999987,
+            134.9,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            19.19999999999999,
+            129.0,
+            175.0,
+            204.8
+          ],
+          "suggested_placement": "A-001",
+          "candidate_placements": [
+            "A-001"
+          ]
+        },
+        {
+          "id": "A-black-02.3mf#4",
+          "number": 4,
+          "part": "BASE3-06x08-T-9cb610",
+          "group": "BASE3-06x08-T-9cb610|black",
+          "print_position": [
+            182.9,
+            131.5,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            177.0,
+            129.0,
+            236.8,
+            201.39999999999998
+          ],
+          "suggested_placement": "A-003",
+          "candidate_placements": [
+            "A-003",
+            "A-006",
+            "A-010",
+            "A-013"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "A-black-03.3mf",
+      "color": "black",
+      "sha256": "9eee12b56efa7bdbf025816d0f2e100fba1927a620f8de066a4c9f6883969102",
+      "slots": [
+        {
+          "id": "A-black-03.3mf#1",
+          "number": 1,
+          "part": "BASE3-06x08-T-9cb610",
+          "group": "BASE3-06x08-T-9cb610|black",
+          "print_position": [
+            22.599999999999987,
+            19.799999999999983,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            16.69999999999999,
+            17.299999999999983,
+            76.49999999999999,
+            89.69999999999999
+          ],
+          "suggested_placement": "A-006",
+          "candidate_placements": [
+            "A-003",
+            "A-006",
+            "A-010",
+            "A-013"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#2",
+          "number": 2,
+          "part": "BASE3-06x08-T-9cb610",
+          "group": "BASE3-06x08-T-9cb610|black",
+          "print_position": [
+            84.39999999999999,
+            19.799999999999983,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            78.49999999999999,
+            17.299999999999983,
+            138.29999999999998,
+            89.69999999999999
+          ],
+          "suggested_placement": "A-010",
+          "candidate_placements": [
+            "A-003",
+            "A-006",
+            "A-010",
+            "A-013"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#3",
+          "number": 3,
+          "part": "BASE3-06x08-T-9cb610",
+          "group": "BASE3-06x08-T-9cb610|black",
+          "print_position": [
+            146.2,
+            19.799999999999983,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            140.29999999999998,
+            17.299999999999983,
+            200.09999999999997,
+            89.69999999999999
+          ],
+          "suggested_placement": "A-013",
+          "candidate_placements": [
+            "A-003",
+            "A-006",
+            "A-010",
+            "A-013"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#4",
+          "number": 4,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            207.99999999999997,
+            23.19999999999998,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            202.09999999999997,
+            17.299999999999983,
+            229.89999999999998,
+            45.09999999999998
+          ],
+          "suggested_placement": "A-024",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#5",
+          "number": 5,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            22.599999999999987,
+            97.6,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            16.69999999999999,
+            91.69999999999999,
+            44.499999999999986,
+            119.49999999999999
+          ],
+          "suggested_placement": "A-034",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#6",
+          "number": 6,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            52.399999999999984,
+            97.6,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            46.499999999999986,
+            91.69999999999999,
+            74.29999999999998,
+            119.49999999999999
+          ],
+          "suggested_placement": "A-041",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#7",
+          "number": 7,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            82.19999999999999,
+            97.6,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            76.29999999999998,
+            91.69999999999999,
+            104.1,
+            119.49999999999999
+          ],
+          "suggested_placement": "A-048",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#8",
+          "number": 8,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            112.0,
+            97.6,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            106.1,
+            91.69999999999999,
+            133.89999999999998,
+            119.49999999999999
+          ],
+          "suggested_placement": "A-055",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#9",
+          "number": 9,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            141.8,
+            97.6,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            135.89999999999998,
+            91.69999999999999,
+            163.7,
+            119.49999999999999
+          ],
+          "suggested_placement": "A-067",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#10",
+          "number": 10,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            171.6,
+            97.6,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            165.7,
+            91.69999999999999,
+            193.5,
+            119.49999999999999
+          ],
+          "suggested_placement": "A-068",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#11",
+          "number": 11,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            201.4,
+            97.6,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            195.5,
+            91.69999999999999,
+            223.3,
+            119.49999999999999
+          ],
+          "suggested_placement": "A-070",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#12",
+          "number": 12,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            22.599999999999987,
+            127.39999999999999,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            16.69999999999999,
+            121.49999999999999,
+            44.499999999999986,
+            149.29999999999998
+          ],
+          "suggested_placement": "A-071",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#13",
+          "number": 13,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            52.399999999999984,
+            127.39999999999999,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            46.499999999999986,
+            121.49999999999999,
+            74.29999999999998,
+            149.29999999999998
+          ],
+          "suggested_placement": "A-079",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#14",
+          "number": 14,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            82.19999999999999,
+            127.39999999999999,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            76.29999999999998,
+            121.49999999999999,
+            104.1,
+            149.29999999999998
+          ],
+          "suggested_placement": "A-080",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#15",
+          "number": 15,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            112.0,
+            127.39999999999999,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            106.1,
+            121.49999999999999,
+            133.89999999999998,
+            149.29999999999998
+          ],
+          "suggested_placement": "A-082",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#16",
+          "number": 16,
+          "part": "BR-02x02-H096",
+          "group": "BR-02x02-H096|black",
+          "print_position": [
+            141.8,
+            127.39999999999999,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            135.89999999999998,
+            121.49999999999999,
+            163.7,
+            149.29999999999998
+          ],
+          "suggested_placement": "A-083",
+          "candidate_placements": [
+            "A-024",
+            "A-034",
+            "A-041",
+            "A-048",
+            "A-055",
+            "A-067",
+            "A-068",
+            "A-070",
+            "A-071",
+            "A-079",
+            "A-080",
+            "A-082",
+            "A-083"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#17",
+          "number": 17,
+          "part": "BR-03x02-H096",
+          "group": "BR-03x02-H096|black",
+          "print_position": [
+            171.6,
+            127.39999999999999,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            165.7,
+            121.49999999999999,
+            201.5,
+            149.29999999999998
+          ],
+          "suggested_placement": "A-032",
+          "candidate_placements": [
+            "A-032",
+            "A-036",
+            "A-039",
+            "A-043",
+            "A-046",
+            "A-050"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#18",
+          "number": 18,
+          "part": "BR-03x02-H096",
+          "group": "BR-03x02-H096|black",
+          "print_position": [
+            209.4,
+            127.39999999999999,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            203.5,
+            121.49999999999999,
+            239.3,
+            149.29999999999998
+          ],
+          "suggested_placement": "A-036",
+          "candidate_placements": [
+            "A-032",
+            "A-036",
+            "A-039",
+            "A-043",
+            "A-046",
+            "A-050"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#19",
+          "number": 19,
+          "part": "BR-03x02-H096",
+          "group": "BR-03x02-H096|black",
+          "print_position": [
+            22.599999999999987,
+            157.2,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            16.69999999999999,
+            151.29999999999998,
+            52.499999999999986,
+            179.1
+          ],
+          "suggested_placement": "A-039",
+          "candidate_placements": [
+            "A-032",
+            "A-036",
+            "A-039",
+            "A-043",
+            "A-046",
+            "A-050"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#20",
+          "number": 20,
+          "part": "BR-03x02-H096",
+          "group": "BR-03x02-H096|black",
+          "print_position": [
+            60.399999999999984,
+            157.2,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            54.499999999999986,
+            151.29999999999998,
+            90.29999999999998,
+            179.1
+          ],
+          "suggested_placement": "A-043",
+          "candidate_placements": [
+            "A-032",
+            "A-036",
+            "A-039",
+            "A-043",
+            "A-046",
+            "A-050"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#21",
+          "number": 21,
+          "part": "BR-03x02-H096",
+          "group": "BR-03x02-H096|black",
+          "print_position": [
+            98.19999999999999,
+            157.2,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            92.29999999999998,
+            151.29999999999998,
+            128.09999999999997,
+            179.1
+          ],
+          "suggested_placement": "A-046",
+          "candidate_placements": [
+            "A-032",
+            "A-036",
+            "A-039",
+            "A-043",
+            "A-046",
+            "A-050"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#22",
+          "number": 22,
+          "part": "BR-03x02-H096",
+          "group": "BR-03x02-H096|black",
+          "print_position": [
+            136.0,
+            157.2,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            130.09999999999997,
+            151.29999999999998,
+            165.89999999999998,
+            179.1
+          ],
+          "suggested_placement": "A-050",
+          "candidate_placements": [
+            "A-032",
+            "A-036",
+            "A-039",
+            "A-043",
+            "A-046",
+            "A-050"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#23",
+          "number": 23,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|black",
+          "print_position": [
+            173.79999999999998,
+            157.2,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            167.89999999999998,
+            151.29999999999998,
+            211.7,
+            179.1
+          ],
+          "suggested_placement": "A-025",
+          "candidate_placements": [
+            "A-025",
+            "A-028",
+            "A-029",
+            "A-053",
+            "A-054",
+            "A-062",
+            "A-064",
+            "A-074",
+            "A-076"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#24",
+          "number": 24,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|black",
+          "print_position": [
+            22.599999999999987,
+            187.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            16.69999999999999,
+            181.1,
+            60.499999999999986,
+            208.9
+          ],
+          "suggested_placement": "A-028",
+          "candidate_placements": [
+            "A-025",
+            "A-028",
+            "A-029",
+            "A-053",
+            "A-054",
+            "A-062",
+            "A-064",
+            "A-074",
+            "A-076"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#25",
+          "number": 25,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|black",
+          "print_position": [
+            68.39999999999998,
+            187.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            62.499999999999986,
+            181.1,
+            106.29999999999998,
+            208.9
+          ],
+          "suggested_placement": "A-029",
+          "candidate_placements": [
+            "A-025",
+            "A-028",
+            "A-029",
+            "A-053",
+            "A-054",
+            "A-062",
+            "A-064",
+            "A-074",
+            "A-076"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#26",
+          "number": 26,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|black",
+          "print_position": [
+            114.19999999999999,
+            187.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            108.29999999999998,
+            181.1,
+            152.09999999999997,
+            208.9
+          ],
+          "suggested_placement": "A-053",
+          "candidate_placements": [
+            "A-025",
+            "A-028",
+            "A-029",
+            "A-053",
+            "A-054",
+            "A-062",
+            "A-064",
+            "A-074",
+            "A-076"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#27",
+          "number": 27,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|black",
+          "print_position": [
+            159.99999999999997,
+            187.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            154.09999999999997,
+            181.1,
+            197.89999999999998,
+            208.9
+          ],
+          "suggested_placement": "A-054",
+          "candidate_placements": [
+            "A-025",
+            "A-028",
+            "A-029",
+            "A-053",
+            "A-054",
+            "A-062",
+            "A-064",
+            "A-074",
+            "A-076"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#28",
+          "number": 28,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|black",
+          "print_position": [
+            22.599999999999987,
+            216.8,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            16.69999999999999,
+            210.9,
+            60.499999999999986,
+            238.70000000000002
+          ],
+          "suggested_placement": "A-062",
+          "candidate_placements": [
+            "A-025",
+            "A-028",
+            "A-029",
+            "A-053",
+            "A-054",
+            "A-062",
+            "A-064",
+            "A-074",
+            "A-076"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#29",
+          "number": 29,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|black",
+          "print_position": [
+            68.39999999999998,
+            216.8,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            62.499999999999986,
+            210.9,
+            106.29999999999998,
+            238.70000000000002
+          ],
+          "suggested_placement": "A-064",
+          "candidate_placements": [
+            "A-025",
+            "A-028",
+            "A-029",
+            "A-053",
+            "A-054",
+            "A-062",
+            "A-064",
+            "A-074",
+            "A-076"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#30",
+          "number": 30,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|black",
+          "print_position": [
+            114.19999999999999,
+            216.8,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            108.29999999999998,
+            210.9,
+            152.09999999999997,
+            238.70000000000002
+          ],
+          "suggested_placement": "A-074",
+          "candidate_placements": [
+            "A-025",
+            "A-028",
+            "A-029",
+            "A-053",
+            "A-054",
+            "A-062",
+            "A-064",
+            "A-074",
+            "A-076"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#31",
+          "number": 31,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|black",
+          "print_position": [
+            159.99999999999997,
+            216.8,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            154.09999999999997,
+            210.9,
+            197.89999999999998,
+            238.70000000000002
+          ],
+          "suggested_placement": "A-076",
+          "candidate_placements": [
+            "A-025",
+            "A-028",
+            "A-029",
+            "A-053",
+            "A-054",
+            "A-062",
+            "A-064",
+            "A-074",
+            "A-076"
+          ]
+        },
+        {
+          "id": "A-black-03.3mf#32",
+          "number": 32,
+          "part": "NP3-KEEPER",
+          "group": "NP3-KEEPER|black",
+          "print_position": [
+            205.79999999999998,
+            216.8,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            199.89999999999998,
+            210.9,
+            227.7,
+            238.70000000000002
+          ],
+          "suggested_placement": "A-018",
+          "candidate_placements": [
+            "A-018",
+            "A-019",
+            "A-020"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "A-black-04.3mf",
+      "color": "black",
+      "sha256": "947e7b93616e80e064501b57823b61c8058b8a9dde2769dc171f3f083b6c8471",
+      "slots": [
+        {
+          "id": "A-black-04.3mf#1",
+          "number": 1,
+          "part": "NP3-KEEPER",
+          "group": "NP3-KEEPER|black",
+          "print_position": [
+            105.10000000000001,
+            120.0,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            99.2,
+            114.1,
+            127.0,
+            141.9
+          ],
+          "suggested_placement": "A-019",
+          "candidate_placements": [
+            "A-018",
+            "A-019",
+            "A-020"
+          ]
+        },
+        {
+          "id": "A-black-04.3mf#2",
+          "number": 2,
+          "part": "NP3-KEEPER",
+          "group": "NP3-KEEPER|black",
+          "print_position": [
+            134.9,
+            120.0,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            129.0,
+            114.1,
+            156.8,
+            141.9
+          ],
+          "suggested_placement": "A-020",
+          "candidate_placements": [
+            "A-018",
+            "A-019",
+            "A-020"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "A-green-01.3mf",
+      "color": "green",
+      "sha256": "28ce48f0f799d17b3a0655885822cce80e118ac06bf6284341b1a5315ae17f39",
+      "slots": [
+        {
+          "id": "A-green-01.3mf#1",
+          "number": 1,
+          "part": "BR-01x02-H096",
+          "group": "BR-01x02-H096|green",
+          "print_position": [
+            69.5,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            63.599999999999994,
+            114.1,
+            83.39999999999999,
+            141.9
+          ],
+          "suggested_placement": "A-033",
+          "candidate_placements": [
+            "A-033",
+            "A-035",
+            "A-040",
+            "A-042",
+            "A-047",
+            "A-049"
+          ]
+        },
+        {
+          "id": "A-green-01.3mf#2",
+          "number": 2,
+          "part": "BR-01x02-H096",
+          "group": "BR-01x02-H096|green",
+          "print_position": [
+            91.3,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            85.39999999999999,
+            114.1,
+            105.19999999999999,
+            141.9
+          ],
+          "suggested_placement": "A-035",
+          "candidate_placements": [
+            "A-033",
+            "A-035",
+            "A-040",
+            "A-042",
+            "A-047",
+            "A-049"
+          ]
+        },
+        {
+          "id": "A-green-01.3mf#3",
+          "number": 3,
+          "part": "BR-01x02-H096",
+          "group": "BR-01x02-H096|green",
+          "print_position": [
+            113.1,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            107.19999999999999,
+            114.1,
+            127.0,
+            141.9
+          ],
+          "suggested_placement": "A-040",
+          "candidate_placements": [
+            "A-033",
+            "A-035",
+            "A-040",
+            "A-042",
+            "A-047",
+            "A-049"
+          ]
+        },
+        {
+          "id": "A-green-01.3mf#4",
+          "number": 4,
+          "part": "BR-01x02-H096",
+          "group": "BR-01x02-H096|green",
+          "print_position": [
+            134.9,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            129.0,
+            114.1,
+            148.8,
+            141.9
+          ],
+          "suggested_placement": "A-042",
+          "candidate_placements": [
+            "A-033",
+            "A-035",
+            "A-040",
+            "A-042",
+            "A-047",
+            "A-049"
+          ]
+        },
+        {
+          "id": "A-green-01.3mf#5",
+          "number": 5,
+          "part": "BR-01x02-H096",
+          "group": "BR-01x02-H096|green",
+          "print_position": [
+            156.7,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            150.8,
+            114.1,
+            170.6,
+            141.9
+          ],
+          "suggested_placement": "A-047",
+          "candidate_placements": [
+            "A-033",
+            "A-035",
+            "A-040",
+            "A-042",
+            "A-047",
+            "A-049"
+          ]
+        },
+        {
+          "id": "A-green-01.3mf#6",
+          "number": 6,
+          "part": "BR-01x02-H096",
+          "group": "BR-01x02-H096|green",
+          "print_position": [
+            178.5,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            172.6,
+            114.1,
+            192.4,
+            141.9
+          ],
+          "suggested_placement": "A-049",
+          "candidate_placements": [
+            "A-033",
+            "A-035",
+            "A-040",
+            "A-042",
+            "A-047",
+            "A-049"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "A-cyan-01.3mf",
+      "color": "cyan",
+      "sha256": "edee84e287e830db8f6454ac7d53ea9e29aa229d6858c141b77778532058cd65",
+      "slots": [
+        {
+          "id": "A-cyan-01.3mf#1",
+          "number": 1,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            30.599999999999987,
+            59.300000000000004,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            24.69999999999999,
+            53.400000000000006,
+            52.499999999999986,
+            89.2
+          ],
+          "suggested_placement": "A-057",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#2",
+          "number": 2,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            60.399999999999984,
+            59.300000000000004,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            54.499999999999986,
+            53.400000000000006,
+            82.29999999999998,
+            89.2
+          ],
+          "suggested_placement": "A-061",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#3",
+          "number": 3,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            90.19999999999999,
+            59.300000000000004,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            84.29999999999998,
+            53.400000000000006,
+            112.1,
+            89.2
+          ],
+          "suggested_placement": "A-063",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#4",
+          "number": 4,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            120.0,
+            59.300000000000004,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            114.1,
+            53.400000000000006,
+            141.89999999999998,
+            89.2
+          ],
+          "suggested_placement": "A-065",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#5",
+          "number": 5,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            149.8,
+            59.300000000000004,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            143.89999999999998,
+            53.400000000000006,
+            171.7,
+            89.2
+          ],
+          "suggested_placement": "A-066",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#6",
+          "number": 6,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            179.6,
+            59.300000000000004,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            173.7,
+            53.400000000000006,
+            201.5,
+            89.2
+          ],
+          "suggested_placement": "A-069",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#7",
+          "number": 7,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            209.4,
+            59.300000000000004,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            203.5,
+            53.400000000000006,
+            231.3,
+            89.2
+          ],
+          "suggested_placement": "A-072",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#8",
+          "number": 8,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            30.599999999999987,
+            97.1,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            24.69999999999999,
+            91.2,
+            52.499999999999986,
+            127.0
+          ],
+          "suggested_placement": "A-073",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#9",
+          "number": 9,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            60.399999999999984,
+            97.1,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            54.499999999999986,
+            91.2,
+            82.29999999999998,
+            127.0
+          ],
+          "suggested_placement": "A-075",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#10",
+          "number": 10,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            90.19999999999999,
+            97.1,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            84.29999999999998,
+            91.2,
+            112.1,
+            127.0
+          ],
+          "suggested_placement": "A-077",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#11",
+          "number": 11,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            120.0,
+            97.1,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            114.1,
+            91.2,
+            141.89999999999998,
+            127.0
+          ],
+          "suggested_placement": "A-078",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#12",
+          "number": 12,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            149.8,
+            97.1,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            143.89999999999998,
+            91.2,
+            171.7,
+            127.0
+          ],
+          "suggested_placement": "A-081",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#13",
+          "number": 13,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            179.6,
+            97.1,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            173.7,
+            91.2,
+            201.5,
+            127.0
+          ],
+          "suggested_placement": "A-084",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#14",
+          "number": 14,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|cyan",
+          "print_position": [
+            209.4,
+            97.1,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            203.5,
+            91.2,
+            231.3,
+            127.0
+          ],
+          "suggested_placement": "A-088",
+          "candidate_placements": [
+            "A-057",
+            "A-061",
+            "A-063",
+            "A-065",
+            "A-066",
+            "A-069",
+            "A-072",
+            "A-073",
+            "A-075",
+            "A-077",
+            "A-078",
+            "A-081",
+            "A-084",
+            "A-088"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#15",
+          "number": 15,
+          "part": "BR-04x03-H096",
+          "group": "BR-04x03-H096|cyan",
+          "print_position": [
+            30.599999999999987,
+            134.9,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            24.69999999999999,
+            129.0,
+            68.49999999999999,
+            164.8
+          ],
+          "suggested_placement": "A-058",
+          "candidate_placements": [
+            "A-058",
+            "A-059",
+            "A-060",
+            "A-085",
+            "A-086",
+            "A-087",
+            "A-089",
+            "A-090"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#16",
+          "number": 16,
+          "part": "BR-04x03-H096",
+          "group": "BR-04x03-H096|cyan",
+          "print_position": [
+            76.39999999999998,
+            134.9,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            70.49999999999999,
+            129.0,
+            114.29999999999998,
+            164.8
+          ],
+          "suggested_placement": "A-059",
+          "candidate_placements": [
+            "A-058",
+            "A-059",
+            "A-060",
+            "A-085",
+            "A-086",
+            "A-087",
+            "A-089",
+            "A-090"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#17",
+          "number": 17,
+          "part": "BR-04x03-H096",
+          "group": "BR-04x03-H096|cyan",
+          "print_position": [
+            122.19999999999999,
+            134.9,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            116.29999999999998,
+            129.0,
+            160.09999999999997,
+            164.8
+          ],
+          "suggested_placement": "A-060",
+          "candidate_placements": [
+            "A-058",
+            "A-059",
+            "A-060",
+            "A-085",
+            "A-086",
+            "A-087",
+            "A-089",
+            "A-090"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#18",
+          "number": 18,
+          "part": "BR-04x03-H096",
+          "group": "BR-04x03-H096|cyan",
+          "print_position": [
+            167.99999999999997,
+            134.9,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            162.09999999999997,
+            129.0,
+            205.89999999999998,
+            164.8
+          ],
+          "suggested_placement": "A-085",
+          "candidate_placements": [
+            "A-058",
+            "A-059",
+            "A-060",
+            "A-085",
+            "A-086",
+            "A-087",
+            "A-089",
+            "A-090"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#19",
+          "number": 19,
+          "part": "BR-04x03-H096",
+          "group": "BR-04x03-H096|cyan",
+          "print_position": [
+            30.599999999999987,
+            172.7,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            24.69999999999999,
+            166.8,
+            68.49999999999999,
+            202.6
+          ],
+          "suggested_placement": "A-086",
+          "candidate_placements": [
+            "A-058",
+            "A-059",
+            "A-060",
+            "A-085",
+            "A-086",
+            "A-087",
+            "A-089",
+            "A-090"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#20",
+          "number": 20,
+          "part": "BR-04x03-H096",
+          "group": "BR-04x03-H096|cyan",
+          "print_position": [
+            76.39999999999998,
+            172.7,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            70.49999999999999,
+            166.8,
+            114.29999999999998,
+            202.6
+          ],
+          "suggested_placement": "A-087",
+          "candidate_placements": [
+            "A-058",
+            "A-059",
+            "A-060",
+            "A-085",
+            "A-086",
+            "A-087",
+            "A-089",
+            "A-090"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#21",
+          "number": 21,
+          "part": "BR-04x03-H096",
+          "group": "BR-04x03-H096|cyan",
+          "print_position": [
+            122.19999999999999,
+            172.7,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            116.29999999999998,
+            166.8,
+            160.09999999999997,
+            202.6
+          ],
+          "suggested_placement": "A-089",
+          "candidate_placements": [
+            "A-058",
+            "A-059",
+            "A-060",
+            "A-085",
+            "A-086",
+            "A-087",
+            "A-089",
+            "A-090"
+          ]
+        },
+        {
+          "id": "A-cyan-01.3mf#22",
+          "number": 22,
+          "part": "BR-04x03-H096",
+          "group": "BR-04x03-H096|cyan",
+          "print_position": [
+            167.99999999999997,
+            172.7,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            162.09999999999997,
+            166.8,
+            205.89999999999998,
+            202.6
+          ],
+          "suggested_placement": "A-090",
+          "candidate_placements": [
+            "A-058",
+            "A-059",
+            "A-060",
+            "A-085",
+            "A-086",
+            "A-087",
+            "A-089",
+            "A-090"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "A-magenta-01.3mf",
+      "color": "magenta",
+      "sha256": "86089734cd30214772a9cfa11afc45f19cdec7df2aac4a773dae81e1894483b1",
+      "slots": [
+        {
+          "id": "A-magenta-01.3mf#1",
+          "number": 1,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            30.599999999999987,
+            82.20000000000002,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            24.69999999999999,
+            76.30000000000001,
+            52.499999999999986,
+            112.10000000000001
+          ],
+          "suggested_placement": "A-023",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#2",
+          "number": 2,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            60.399999999999984,
+            82.20000000000002,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            54.499999999999986,
+            76.30000000000001,
+            82.29999999999998,
+            112.10000000000001
+          ],
+          "suggested_placement": "A-026",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#3",
+          "number": 3,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            90.19999999999999,
+            82.20000000000002,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            84.29999999999998,
+            76.30000000000001,
+            112.1,
+            112.10000000000001
+          ],
+          "suggested_placement": "A-027",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#4",
+          "number": 4,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            120.0,
+            82.20000000000002,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            114.1,
+            76.30000000000001,
+            141.89999999999998,
+            112.10000000000001
+          ],
+          "suggested_placement": "A-030",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#5",
+          "number": 5,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            149.8,
+            82.20000000000002,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            143.89999999999998,
+            76.30000000000001,
+            171.7,
+            112.10000000000001
+          ],
+          "suggested_placement": "A-031",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#6",
+          "number": 6,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            179.6,
+            82.20000000000002,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            173.7,
+            76.30000000000001,
+            201.5,
+            112.10000000000001
+          ],
+          "suggested_placement": "A-037",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#7",
+          "number": 7,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            209.4,
+            82.20000000000002,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            203.5,
+            76.30000000000001,
+            231.3,
+            112.10000000000001
+          ],
+          "suggested_placement": "A-038",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#8",
+          "number": 8,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            30.599999999999987,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            24.69999999999999,
+            114.10000000000001,
+            52.499999999999986,
+            149.9
+          ],
+          "suggested_placement": "A-044",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#9",
+          "number": 9,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            60.399999999999984,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            54.499999999999986,
+            114.10000000000001,
+            82.29999999999998,
+            149.9
+          ],
+          "suggested_placement": "A-045",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#10",
+          "number": 10,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            90.19999999999999,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            84.29999999999998,
+            114.10000000000001,
+            112.1,
+            149.9
+          ],
+          "suggested_placement": "A-051",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#11",
+          "number": 11,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            120.0,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            114.1,
+            114.10000000000001,
+            141.89999999999998,
+            149.9
+          ],
+          "suggested_placement": "A-052",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#12",
+          "number": 12,
+          "part": "BR-02x03-H096",
+          "group": "BR-02x03-H096|magenta",
+          "print_position": [
+            149.8,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            143.89999999999998,
+            114.10000000000001,
+            171.7,
+            149.9
+          ],
+          "suggested_placement": "A-056",
+          "candidate_placements": [
+            "A-023",
+            "A-026",
+            "A-027",
+            "A-030",
+            "A-031",
+            "A-037",
+            "A-038",
+            "A-044",
+            "A-045",
+            "A-051",
+            "A-052",
+            "A-056"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#13",
+          "number": 13,
+          "part": "BR-04x02-H032",
+          "group": "BR-04x02-H032|magenta",
+          "print_position": [
+            179.6,
+            120.0,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            173.7,
+            114.10000000000001,
+            217.5,
+            141.9
+          ],
+          "suggested_placement": "A-091",
+          "candidate_placements": [
+            "A-091"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#14",
+          "number": 14,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|magenta",
+          "print_position": [
+            30.599999999999987,
+            157.8,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            24.69999999999999,
+            151.9,
+            68.49999999999999,
+            179.7
+          ],
+          "suggested_placement": "A-021",
+          "candidate_placements": [
+            "A-021",
+            "A-022"
+          ]
+        },
+        {
+          "id": "A-magenta-01.3mf#15",
+          "number": 15,
+          "part": "BR-04x02-H096",
+          "group": "BR-04x02-H096|magenta",
+          "print_position": [
+            76.39999999999998,
+            157.8,
+            -0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            70.49999999999999,
+            151.9,
+            114.29999999999998,
+            179.7
+          ],
+          "suggested_placement": "A-022",
+          "candidate_placements": [
+            "A-021",
+            "A-022"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "A-black-to-white-z2p8-01.3mf",
+      "color": "black",
+      "sha256": "72742321d78b543bbd5285b12741e688cdd6d5b2fcd790260302aa4d0072594f",
+      "slots": [
+        {
+          "id": "A-black-to-white-z2p8-01.3mf#1",
+          "number": 1,
+          "part": "NP3-LOGO-A",
+          "group": "NP3-LOGO-A|black",
+          "print_position": [
+            112.0,
+            108.0,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            106.0,
+            102.0,
+            150.0,
+            154.0
+          ],
+          "suggested_placement": "A-017",
+          "candidate_placements": [
+            "A-017"
+          ]
+        }
+      ],
+      "finish_color": "white",
+      "manual_change_after_z_mm": 2.8
+    },
+    {
+      "file": "A-black-to-white-z2p4-01.3mf",
+      "color": "black",
+      "sha256": "9379350bc3d32673c43bd3488af25ca21caf4b176b8116993bd7f4cf5181ea29",
+      "slots": [
+        {
+          "id": "A-black-to-white-z2p4-01.3mf#1",
+          "number": 1,
+          "part": "NP3-TEXT-A",
+          "group": "NP3-TEXT-A|black",
+          "print_position": [
+            77.0,
+            108.0,
+            0.0
+          ],
+          "print_rotation": [
+            0,
+            0,
+            0
+          ],
+          "brim_box": [
+            71.0,
+            102.0,
+            185.0,
+            154.0
+          ],
+          "suggested_placement": "A-016",
+          "candidate_placements": [
+            "A-016"
+          ]
+        }
+      ],
+      "finish_color": "white",
+      "manual_change_after_z_mm": 2.4
+    }
+  ],
+  "groups": {
+    "BASE3-03x08-T-48de52|black": {
+      "part": "BASE3-03x08-T-48de52",
+      "color": "black",
+      "placements": [
+        "A-005",
+        "A-012"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-01.3mf",
+          "slot": 1,
+          "slot_id": "A-black-01.3mf#1",
+          "suggested_placement": "A-005"
+        },
+        {
+          "plate": "A-black-01.3mf",
+          "slot": 2,
+          "slot_id": "A-black-01.3mf#2",
+          "suggested_placement": "A-012"
+        }
+      ],
+      "quantity": 2
+    },
+    "BASE3-03x08-T-80e081|black": {
+      "part": "BASE3-03x08-T-80e081",
+      "color": "black",
+      "placements": [
+        "A-008",
+        "A-015"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-01.3mf",
+          "slot": 3,
+          "slot_id": "A-black-01.3mf#3",
+          "suggested_placement": "A-008"
+        },
+        {
+          "plate": "A-black-01.3mf",
+          "slot": 4,
+          "slot_id": "A-black-01.3mf#4",
+          "suggested_placement": "A-015"
+        }
+      ],
+      "quantity": 2
+    },
+    "BASE3-06x08-T-7532db|black": {
+      "part": "BASE3-06x08-T-7532db",
+      "color": "black",
+      "placements": [
+        "A-007",
+        "A-014"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-01.3mf",
+          "slot": 5,
+          "slot_id": "A-black-01.3mf#5",
+          "suggested_placement": "A-007"
+        },
+        {
+          "plate": "A-black-01.3mf",
+          "slot": 6,
+          "slot_id": "A-black-01.3mf#6",
+          "suggested_placement": "A-014"
+        }
+      ],
+      "quantity": 2
+    },
+    "BASE3-06x08-T-7f51dc|black": {
+      "part": "BASE3-06x08-T-7f51dc",
+      "color": "black",
+      "placements": [
+        "A-004",
+        "A-011"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-01.3mf",
+          "slot": 7,
+          "slot_id": "A-black-01.3mf#7",
+          "suggested_placement": "A-004"
+        },
+        {
+          "plate": "A-black-01.3mf",
+          "slot": 8,
+          "slot_id": "A-black-01.3mf#8",
+          "suggested_placement": "A-011"
+        }
+      ],
+      "quantity": 2
+    },
+    "BASE3-06x08-T-9cb610|black": {
+      "part": "BASE3-06x08-T-9cb610",
+      "color": "black",
+      "placements": [
+        "A-003",
+        "A-006",
+        "A-010",
+        "A-013"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-02.3mf",
+          "slot": 4,
+          "slot_id": "A-black-02.3mf#4",
+          "suggested_placement": "A-003"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 1,
+          "slot_id": "A-black-03.3mf#1",
+          "suggested_placement": "A-006"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 2,
+          "slot_id": "A-black-03.3mf#2",
+          "suggested_placement": "A-010"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 3,
+          "slot_id": "A-black-03.3mf#3",
+          "suggested_placement": "A-013"
+        }
+      ],
+      "quantity": 4
+    },
+    "BASE3-06x08-T-b8aa05|black": {
+      "part": "BASE3-06x08-T-b8aa05",
+      "color": "black",
+      "placements": [
+        "A-002",
+        "A-009"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-02.3mf",
+          "slot": 1,
+          "slot_id": "A-black-02.3mf#1",
+          "suggested_placement": "A-002"
+        },
+        {
+          "plate": "A-black-02.3mf",
+          "slot": 2,
+          "slot_id": "A-black-02.3mf#2",
+          "suggested_placement": "A-009"
+        }
+      ],
+      "quantity": 2
+    },
+    "BASE3-18x08-B-a4853c|black": {
+      "part": "BASE3-18x08-B-a4853c",
+      "color": "black",
+      "placements": [
+        "A-001"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-02.3mf",
+          "slot": 3,
+          "slot_id": "A-black-02.3mf#3",
+          "suggested_placement": "A-001"
+        }
+      ],
+      "quantity": 1
+    },
+    "BR-01x02-H096|green": {
+      "part": "BR-01x02-H096",
+      "color": "green",
+      "placements": [
+        "A-033",
+        "A-035",
+        "A-040",
+        "A-042",
+        "A-047",
+        "A-049"
+      ],
+      "sources": [
+        {
+          "plate": "A-green-01.3mf",
+          "slot": 1,
+          "slot_id": "A-green-01.3mf#1",
+          "suggested_placement": "A-033"
+        },
+        {
+          "plate": "A-green-01.3mf",
+          "slot": 2,
+          "slot_id": "A-green-01.3mf#2",
+          "suggested_placement": "A-035"
+        },
+        {
+          "plate": "A-green-01.3mf",
+          "slot": 3,
+          "slot_id": "A-green-01.3mf#3",
+          "suggested_placement": "A-040"
+        },
+        {
+          "plate": "A-green-01.3mf",
+          "slot": 4,
+          "slot_id": "A-green-01.3mf#4",
+          "suggested_placement": "A-042"
+        },
+        {
+          "plate": "A-green-01.3mf",
+          "slot": 5,
+          "slot_id": "A-green-01.3mf#5",
+          "suggested_placement": "A-047"
+        },
+        {
+          "plate": "A-green-01.3mf",
+          "slot": 6,
+          "slot_id": "A-green-01.3mf#6",
+          "suggested_placement": "A-049"
+        }
+      ],
+      "quantity": 6
+    },
+    "BR-02x02-H096|black": {
+      "part": "BR-02x02-H096",
+      "color": "black",
+      "placements": [
+        "A-024",
+        "A-034",
+        "A-041",
+        "A-048",
+        "A-055",
+        "A-067",
+        "A-068",
+        "A-070",
+        "A-071",
+        "A-079",
+        "A-080",
+        "A-082",
+        "A-083"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 4,
+          "slot_id": "A-black-03.3mf#4",
+          "suggested_placement": "A-024"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 5,
+          "slot_id": "A-black-03.3mf#5",
+          "suggested_placement": "A-034"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 6,
+          "slot_id": "A-black-03.3mf#6",
+          "suggested_placement": "A-041"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 7,
+          "slot_id": "A-black-03.3mf#7",
+          "suggested_placement": "A-048"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 8,
+          "slot_id": "A-black-03.3mf#8",
+          "suggested_placement": "A-055"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 9,
+          "slot_id": "A-black-03.3mf#9",
+          "suggested_placement": "A-067"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 10,
+          "slot_id": "A-black-03.3mf#10",
+          "suggested_placement": "A-068"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 11,
+          "slot_id": "A-black-03.3mf#11",
+          "suggested_placement": "A-070"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 12,
+          "slot_id": "A-black-03.3mf#12",
+          "suggested_placement": "A-071"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 13,
+          "slot_id": "A-black-03.3mf#13",
+          "suggested_placement": "A-079"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 14,
+          "slot_id": "A-black-03.3mf#14",
+          "suggested_placement": "A-080"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 15,
+          "slot_id": "A-black-03.3mf#15",
+          "suggested_placement": "A-082"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 16,
+          "slot_id": "A-black-03.3mf#16",
+          "suggested_placement": "A-083"
+        }
+      ],
+      "quantity": 13
+    },
+    "BR-02x03-H096|cyan": {
+      "part": "BR-02x03-H096",
+      "color": "cyan",
+      "placements": [
+        "A-057",
+        "A-061",
+        "A-063",
+        "A-065",
+        "A-066",
+        "A-069",
+        "A-072",
+        "A-073",
+        "A-075",
+        "A-077",
+        "A-078",
+        "A-081",
+        "A-084",
+        "A-088"
+      ],
+      "sources": [
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 1,
+          "slot_id": "A-cyan-01.3mf#1",
+          "suggested_placement": "A-057"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 2,
+          "slot_id": "A-cyan-01.3mf#2",
+          "suggested_placement": "A-061"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 3,
+          "slot_id": "A-cyan-01.3mf#3",
+          "suggested_placement": "A-063"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 4,
+          "slot_id": "A-cyan-01.3mf#4",
+          "suggested_placement": "A-065"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 5,
+          "slot_id": "A-cyan-01.3mf#5",
+          "suggested_placement": "A-066"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 6,
+          "slot_id": "A-cyan-01.3mf#6",
+          "suggested_placement": "A-069"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 7,
+          "slot_id": "A-cyan-01.3mf#7",
+          "suggested_placement": "A-072"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 8,
+          "slot_id": "A-cyan-01.3mf#8",
+          "suggested_placement": "A-073"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 9,
+          "slot_id": "A-cyan-01.3mf#9",
+          "suggested_placement": "A-075"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 10,
+          "slot_id": "A-cyan-01.3mf#10",
+          "suggested_placement": "A-077"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 11,
+          "slot_id": "A-cyan-01.3mf#11",
+          "suggested_placement": "A-078"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 12,
+          "slot_id": "A-cyan-01.3mf#12",
+          "suggested_placement": "A-081"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 13,
+          "slot_id": "A-cyan-01.3mf#13",
+          "suggested_placement": "A-084"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 14,
+          "slot_id": "A-cyan-01.3mf#14",
+          "suggested_placement": "A-088"
+        }
+      ],
+      "quantity": 14
+    },
+    "BR-02x03-H096|magenta": {
+      "part": "BR-02x03-H096",
+      "color": "magenta",
+      "placements": [
+        "A-023",
+        "A-026",
+        "A-027",
+        "A-030",
+        "A-031",
+        "A-037",
+        "A-038",
+        "A-044",
+        "A-045",
+        "A-051",
+        "A-052",
+        "A-056"
+      ],
+      "sources": [
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 1,
+          "slot_id": "A-magenta-01.3mf#1",
+          "suggested_placement": "A-023"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 2,
+          "slot_id": "A-magenta-01.3mf#2",
+          "suggested_placement": "A-026"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 3,
+          "slot_id": "A-magenta-01.3mf#3",
+          "suggested_placement": "A-027"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 4,
+          "slot_id": "A-magenta-01.3mf#4",
+          "suggested_placement": "A-030"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 5,
+          "slot_id": "A-magenta-01.3mf#5",
+          "suggested_placement": "A-031"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 6,
+          "slot_id": "A-magenta-01.3mf#6",
+          "suggested_placement": "A-037"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 7,
+          "slot_id": "A-magenta-01.3mf#7",
+          "suggested_placement": "A-038"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 8,
+          "slot_id": "A-magenta-01.3mf#8",
+          "suggested_placement": "A-044"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 9,
+          "slot_id": "A-magenta-01.3mf#9",
+          "suggested_placement": "A-045"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 10,
+          "slot_id": "A-magenta-01.3mf#10",
+          "suggested_placement": "A-051"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 11,
+          "slot_id": "A-magenta-01.3mf#11",
+          "suggested_placement": "A-052"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 12,
+          "slot_id": "A-magenta-01.3mf#12",
+          "suggested_placement": "A-056"
+        }
+      ],
+      "quantity": 12
+    },
+    "BR-03x02-H096|black": {
+      "part": "BR-03x02-H096",
+      "color": "black",
+      "placements": [
+        "A-032",
+        "A-036",
+        "A-039",
+        "A-043",
+        "A-046",
+        "A-050"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 17,
+          "slot_id": "A-black-03.3mf#17",
+          "suggested_placement": "A-032"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 18,
+          "slot_id": "A-black-03.3mf#18",
+          "suggested_placement": "A-036"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 19,
+          "slot_id": "A-black-03.3mf#19",
+          "suggested_placement": "A-039"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 20,
+          "slot_id": "A-black-03.3mf#20",
+          "suggested_placement": "A-043"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 21,
+          "slot_id": "A-black-03.3mf#21",
+          "suggested_placement": "A-046"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 22,
+          "slot_id": "A-black-03.3mf#22",
+          "suggested_placement": "A-050"
+        }
+      ],
+      "quantity": 6
+    },
+    "BR-04x02-H032|magenta": {
+      "part": "BR-04x02-H032",
+      "color": "magenta",
+      "placements": [
+        "A-091"
+      ],
+      "sources": [
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 13,
+          "slot_id": "A-magenta-01.3mf#13",
+          "suggested_placement": "A-091"
+        }
+      ],
+      "quantity": 1
+    },
+    "BR-04x02-H096|black": {
+      "part": "BR-04x02-H096",
+      "color": "black",
+      "placements": [
+        "A-025",
+        "A-028",
+        "A-029",
+        "A-053",
+        "A-054",
+        "A-062",
+        "A-064",
+        "A-074",
+        "A-076"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 23,
+          "slot_id": "A-black-03.3mf#23",
+          "suggested_placement": "A-025"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 24,
+          "slot_id": "A-black-03.3mf#24",
+          "suggested_placement": "A-028"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 25,
+          "slot_id": "A-black-03.3mf#25",
+          "suggested_placement": "A-029"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 26,
+          "slot_id": "A-black-03.3mf#26",
+          "suggested_placement": "A-053"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 27,
+          "slot_id": "A-black-03.3mf#27",
+          "suggested_placement": "A-054"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 28,
+          "slot_id": "A-black-03.3mf#28",
+          "suggested_placement": "A-062"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 29,
+          "slot_id": "A-black-03.3mf#29",
+          "suggested_placement": "A-064"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 30,
+          "slot_id": "A-black-03.3mf#30",
+          "suggested_placement": "A-074"
+        },
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 31,
+          "slot_id": "A-black-03.3mf#31",
+          "suggested_placement": "A-076"
+        }
+      ],
+      "quantity": 9
+    },
+    "BR-04x02-H096|magenta": {
+      "part": "BR-04x02-H096",
+      "color": "magenta",
+      "placements": [
+        "A-021",
+        "A-022"
+      ],
+      "sources": [
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 14,
+          "slot_id": "A-magenta-01.3mf#14",
+          "suggested_placement": "A-021"
+        },
+        {
+          "plate": "A-magenta-01.3mf",
+          "slot": 15,
+          "slot_id": "A-magenta-01.3mf#15",
+          "suggested_placement": "A-022"
+        }
+      ],
+      "quantity": 2
+    },
+    "BR-04x03-H096|cyan": {
+      "part": "BR-04x03-H096",
+      "color": "cyan",
+      "placements": [
+        "A-058",
+        "A-059",
+        "A-060",
+        "A-085",
+        "A-086",
+        "A-087",
+        "A-089",
+        "A-090"
+      ],
+      "sources": [
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 15,
+          "slot_id": "A-cyan-01.3mf#15",
+          "suggested_placement": "A-058"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 16,
+          "slot_id": "A-cyan-01.3mf#16",
+          "suggested_placement": "A-059"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 17,
+          "slot_id": "A-cyan-01.3mf#17",
+          "suggested_placement": "A-060"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 18,
+          "slot_id": "A-cyan-01.3mf#18",
+          "suggested_placement": "A-085"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 19,
+          "slot_id": "A-cyan-01.3mf#19",
+          "suggested_placement": "A-086"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 20,
+          "slot_id": "A-cyan-01.3mf#20",
+          "suggested_placement": "A-087"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 21,
+          "slot_id": "A-cyan-01.3mf#21",
+          "suggested_placement": "A-089"
+        },
+        {
+          "plate": "A-cyan-01.3mf",
+          "slot": 22,
+          "slot_id": "A-cyan-01.3mf#22",
+          "suggested_placement": "A-090"
+        }
+      ],
+      "quantity": 8
+    },
+    "NP3-KEEPER|black": {
+      "part": "NP3-KEEPER",
+      "color": "black",
+      "placements": [
+        "A-018",
+        "A-019",
+        "A-020"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-03.3mf",
+          "slot": 32,
+          "slot_id": "A-black-03.3mf#32",
+          "suggested_placement": "A-018"
+        },
+        {
+          "plate": "A-black-04.3mf",
+          "slot": 1,
+          "slot_id": "A-black-04.3mf#1",
+          "suggested_placement": "A-019"
+        },
+        {
+          "plate": "A-black-04.3mf",
+          "slot": 2,
+          "slot_id": "A-black-04.3mf#2",
+          "suggested_placement": "A-020"
+        }
+      ],
+      "quantity": 3
+    },
+    "NP3-LOGO-A|black": {
+      "part": "NP3-LOGO-A",
+      "color": "black",
+      "placements": [
+        "A-017"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-to-white-z2p8-01.3mf",
+          "slot": 1,
+          "slot_id": "A-black-to-white-z2p8-01.3mf#1",
+          "suggested_placement": "A-017"
+        }
+      ],
+      "quantity": 1
+    },
+    "NP3-TEXT-A|black": {
+      "part": "NP3-TEXT-A",
+      "color": "black",
+      "placements": [
+        "A-016"
+      ],
+      "sources": [
+        {
+          "plate": "A-black-to-white-z2p4-01.3mf",
+          "slot": 1,
+          "slot_id": "A-black-to-white-z2p4-01.3mf#1",
+          "suggested_placement": "A-016"
+        }
+      ],
+      "quantity": 1
+    }
+  },
+  "steps": [
+    {
+      "number": 1,
+      "title": "黒い台座 1 / 5段目を積む（縦の継ぎ目をずらす）",
+      "instances": [
+        "A-001"
+      ],
+      "first_index": 0,
+      "end_index": 1,
+      "available_source_files": [
+        "A-black-02.3mf"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "黒い台座 2 / 5段目を積む（縦の継ぎ目をずらす）",
+      "instances": [
+        "A-002",
+        "A-003",
+        "A-004"
+      ],
+      "first_index": 1,
+      "end_index": 4,
+      "available_source_files": [
+        "A-black-01.3mf",
+        "A-black-02.3mf",
+        "A-black-03.3mf"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "黒い台座 3 / 5段目を積む（縦の継ぎ目をずらす）",
+      "instances": [
+        "A-005",
+        "A-006",
+        "A-007",
+        "A-008"
+      ],
+      "first_index": 4,
+      "end_index": 8,
+      "available_source_files": [
+        "A-black-01.3mf",
+        "A-black-02.3mf",
+        "A-black-03.3mf"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "黒い台座 4 / 5段目を積む（縦の継ぎ目をずらす）",
+      "instances": [
+        "A-009",
+        "A-010",
+        "A-011"
+      ],
+      "first_index": 8,
+      "end_index": 11,
+      "available_source_files": [
+        "A-black-01.3mf",
+        "A-black-02.3mf",
+        "A-black-03.3mf"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "黒い台座 5 / 5段目を積む（縦の継ぎ目をずらす）",
+      "instances": [
+        "A-012",
+        "A-013",
+        "A-014",
+        "A-015"
+      ],
+      "first_index": 11,
+      "end_index": 15,
+      "available_source_files": [
+        "A-black-01.3mf",
+        "A-black-02.3mf",
+        "A-black-03.3mf"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "大きい2行銘板と、その右隣のロゴを別々に前面の溝へ差し込む",
+      "instances": [
+        "A-016",
+        "A-017"
+      ],
+      "first_index": 15,
+      "end_index": 17,
+      "available_source_files": [
+        "A-black-to-white-z2p4-01.3mf",
+        "A-black-to-white-z2p8-01.3mf"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "銘板用2個・ロゴ用1個の黒いキーパーを2列目のスタッドに載せる",
+      "instances": [
+        "A-018",
+        "A-019",
+        "A-020"
+      ],
+      "first_index": 17,
+      "end_index": 20,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-black-04.3mf"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "本体 1 段目を左から載せる",
+      "instances": [
+        "A-021",
+        "A-022"
+      ],
+      "first_index": 20,
+      "end_index": 22,
+      "available_source_files": [
+        "A-magenta-01.3mf"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "本体 2 段目を左から載せる",
+      "instances": [
+        "A-023",
+        "A-024",
+        "A-025",
+        "A-026"
+      ],
+      "first_index": 22,
+      "end_index": 26,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-magenta-01.3mf"
+      ]
+    },
+    {
+      "number": 10,
+      "title": "本体 3 段目を左から載せる",
+      "instances": [
+        "A-027",
+        "A-028",
+        "A-029",
+        "A-030"
+      ],
+      "first_index": 26,
+      "end_index": 30,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-magenta-01.3mf"
+      ]
+    },
+    {
+      "number": 11,
+      "title": "本体 4 段目を左から載せる",
+      "instances": [
+        "A-031",
+        "A-032",
+        "A-033",
+        "A-034",
+        "A-035",
+        "A-036",
+        "A-037"
+      ],
+      "first_index": 30,
+      "end_index": 37,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-green-01.3mf",
+        "A-magenta-01.3mf"
+      ]
+    },
+    {
+      "number": 12,
+      "title": "本体 5 段目を左から載せる",
+      "instances": [
+        "A-038",
+        "A-039",
+        "A-040",
+        "A-041",
+        "A-042",
+        "A-043",
+        "A-044"
+      ],
+      "first_index": 37,
+      "end_index": 44,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-green-01.3mf",
+        "A-magenta-01.3mf"
+      ]
+    },
+    {
+      "number": 13,
+      "title": "本体 6 段目を左から載せる",
+      "instances": [
+        "A-045",
+        "A-046",
+        "A-047",
+        "A-048",
+        "A-049",
+        "A-050",
+        "A-051"
+      ],
+      "first_index": 44,
+      "end_index": 51,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-green-01.3mf",
+        "A-magenta-01.3mf"
+      ]
+    },
+    {
+      "number": 14,
+      "title": "本体 7 段目を左から載せる",
+      "instances": [
+        "A-052",
+        "A-053",
+        "A-054",
+        "A-055",
+        "A-056"
+      ],
+      "first_index": 51,
+      "end_index": 56,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-magenta-01.3mf"
+      ]
+    },
+    {
+      "number": 15,
+      "title": "本体 8 段目を左から載せる",
+      "instances": [
+        "A-057",
+        "A-058",
+        "A-059",
+        "A-060"
+      ],
+      "first_index": 56,
+      "end_index": 60,
+      "available_source_files": [
+        "A-cyan-01.3mf"
+      ]
+    },
+    {
+      "number": 16,
+      "title": "本体 9 段目を左から載せる",
+      "instances": [
+        "A-061",
+        "A-062",
+        "A-063",
+        "A-064",
+        "A-065"
+      ],
+      "first_index": 60,
+      "end_index": 65,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-cyan-01.3mf"
+      ]
+    },
+    {
+      "number": 17,
+      "title": "本体 10 段目を左から載せる",
+      "instances": [
+        "A-066",
+        "A-067",
+        "A-068",
+        "A-069",
+        "A-070",
+        "A-071",
+        "A-072"
+      ],
+      "first_index": 65,
+      "end_index": 72,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-cyan-01.3mf"
+      ]
+    },
+    {
+      "number": 18,
+      "title": "本体 11 段目を左から載せる",
+      "instances": [
+        "A-073",
+        "A-074",
+        "A-075",
+        "A-076",
+        "A-077"
+      ],
+      "first_index": 72,
+      "end_index": 77,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-cyan-01.3mf"
+      ]
+    },
+    {
+      "number": 19,
+      "title": "本体 12 段目を左から載せる",
+      "instances": [
+        "A-078",
+        "A-079",
+        "A-080",
+        "A-081",
+        "A-082",
+        "A-083",
+        "A-084"
+      ],
+      "first_index": 77,
+      "end_index": 84,
+      "available_source_files": [
+        "A-black-03.3mf",
+        "A-cyan-01.3mf"
+      ]
+    },
+    {
+      "number": 20,
+      "title": "本体 13 段目を左から載せる",
+      "instances": [
+        "A-085",
+        "A-086",
+        "A-087"
+      ],
+      "first_index": 84,
+      "end_index": 87,
+      "available_source_files": [
+        "A-cyan-01.3mf"
+      ]
+    },
+    {
+      "number": 21,
+      "title": "本体 14 段目を左から載せる",
+      "instances": [
+        "A-088",
+        "A-089",
+        "A-090"
+      ],
+      "first_index": 87,
+      "end_index": 90,
+      "available_source_files": [
+        "A-cyan-01.3mf"
+      ]
+    },
+    {
+      "number": 22,
+      "title": "頭頂のマゼンタのプレートを載せる",
+      "instances": [
+        "A-091"
+      ],
+      "first_index": 90,
+      "end_index": 91,
+      "available_source_files": [
+        "A-magenta-01.3mf"
+      ]
+    },
+    {
+      "number": 23,
+      "title": "2行と右ロゴが5段台座の正面内に収まること、保持と転倒を確認する",
+      "instances": [],
+      "first_index": 91,
+      "end_index": 91,
+      "available_source_files": []
+    }
+  ],
+  "base_source_files": [
+    "A-black-01.3mf",
+    "A-black-02.3mf",
+    "A-black-03.3mf"
+  ],
+  "first_source": {
+    "plate": "A-black-02.3mf",
+    "slot": 3,
+    "slot_id": "A-black-02.3mf#3",
+    "suggested_placement": "A-001"
+  },
+  "motion": {
+    "module_lift_mm": 45.0,
+    "module_front_mm": 32,
+    "keeper_lift_mm": 16
+  },
+  "inputs_sha256": {
+    "catalog": "e0370bc2d7bbef1c8bc6a77f95879001513c17f07f5787f5cb0348f4f0d04b30",
+    "assembly": "c86e62cf9371ab06d9f001e474075bf9d2a4363deced9877a5c69d840f972a23",
+    "plates": "40de05fa47d3d894371e938f2ee931b8e1d06c0874bf3237aff0eb6c4b7f4faf"
+  }
+}

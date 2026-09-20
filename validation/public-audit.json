@@ -1,18 +1,108 @@
 {
   "status": "PASS_RECURSIVE_PUBLIC_ARTIFACT_AUDIT",
-  "expanded_entries": 2766,
-  "public_files": 378,
-  "site_bytes": 414335389,
+  "expanded_entries": 2793,
+  "public_files": 396,
+  "site_bytes": 466471045,
   "files": [
     {
       "path": "app.js",
-      "bytes": 26746,
-      "sha256": "6df4bd5f261b9471c45b2b3c440e3636bb15d006cb1577c3729f08fbb1b0a374"
+      "bytes": 26839,
+      "sha256": "33f5dc8204ebf178759291c1b85f25733f86c312cbc6a899196d45cd120d9a55"
+    },
+    {
+      "path": "assembly-guide/A-offline.zip",
+      "bytes": 3981181,
+      "sha256": "e00a651685a9ba61f7a81fc002d6aba0749cafbb500f151961b4e2e369886832"
+    },
+    {
+      "path": "assembly-guide/A.html",
+      "bytes": 5512487,
+      "sha256": "9ceb6661ae1a70148e9cf734a9dd9a905f99fd9eae94e9b9882bc464ed5fc722"
+    },
+    {
+      "path": "assembly-guide/A.mapping.json",
+      "bytes": 152945,
+      "sha256": "2c7c307c85eaa7ef45c8c868f2ff73d99ebc9444214e061e7b8081dd4d883869"
+    },
+    {
+      "path": "assembly-guide/B-offline.zip",
+      "bytes": 6117818,
+      "sha256": "2106bd51297a478de9cf3c6c9e2f92c8376e5fe632666cc767ebb5af8505f9ca"
+    },
+    {
+      "path": "assembly-guide/B.html",
+      "bytes": 8683685,
+      "sha256": "9a6a8b4c3ec25e33902d941bf2dfc7f95ed7a3be0f7b2a24489e5adc1876cce1"
+    },
+    {
+      "path": "assembly-guide/B.mapping.json",
+      "bytes": 260865,
+      "sha256": "9720e2a4bc34b6e23e50cb653135adfdfcfb01aeeb22f07bee938f83363322db"
+    },
+    {
+      "path": "assembly-guide/C-offline.zip",
+      "bytes": 9073593,
+      "sha256": "2a513623632c03d870d26597aa7e00e38b7da0e33b1c85bcf985161a432998fc"
+    },
+    {
+      "path": "assembly-guide/C.html",
+      "bytes": 13108388,
+      "sha256": "124228f995092966a6c829e1d64dd87c97b07e16c76b0f95665faa93b3fc2a3c"
+    },
+    {
+      "path": "assembly-guide/C.mapping.json",
+      "bytes": 488336,
+      "sha256": "34202883be0ee76a4a2bda32ec78d04170701b0bfd0dcf8b38d322cd9fe04531"
+    },
+    {
+      "path": "assembly-guide/index.html",
+      "bytes": 2477,
+      "sha256": "148856096ccf47f393a6f1b4efb1941ea7a3979903bc81f751b9fbd8c296c67e"
+    },
+    {
+      "path": "assembly-guide/media/B-black-01-sort.png",
+      "bytes": 253044,
+      "sha256": "d4b3c50ae6295f9d783af568b6686d934e0a6110ea64d1d50fdec62e35985fa5"
+    },
+    {
+      "path": "assembly-guide/media/B-black-04-base-parts.png",
+      "bytes": 254397,
+      "sha256": "14c630c89dac973a02906b669602a3ea810937437c1af09ade693772727169f4"
+    },
+    {
+      "path": "assembly-guide/media/B-first-base.png",
+      "bytes": 200517,
+      "sha256": "3d7e4f53717e517c85a4ab9c9fbada8b59f818364b26cab30dc82b0b4c46c335"
+    },
+    {
+      "path": "assembly-guide/media/B-first-seven-steps.gif",
+      "bytes": 2764185,
+      "sha256": "a13ea38245bdc0de935030bf2bd6f70f8b01dcb0a369eff5627e4b5638701d32"
+    },
+    {
+      "path": "assembly-guide/media/B-first-seven-steps.mp4",
+      "bytes": 714482,
+      "sha256": "23b54d6761f540a8c5ed499de89243b9c60a63aa7cc7a7e3686a72fa7880ae61"
+    },
+    {
+      "path": "assembly-guide/runtime.js",
+      "bytes": 544592,
+      "sha256": "217e4d9fe06efbc01da063b843b2b7657082f1c6fed5caf2c2e026650403bff4"
+    },
+    {
+      "path": "assembly-guide/style.css",
+      "bytes": 8136,
+      "sha256": "a5169b93d2ee103006dd7ea8a5f25d2a24f795878521a434b91991d2730f6c39"
     },
     {
       "path": "assembly-motion.js",
       "bytes": 1666,
       "sha256": "84ef900dc4faca6f3bf12da0b01e874e4bf8378cef5a14b921705c1d20803342"
+    },
+    {
+      "path": "assembly.html",
+      "bytes": 9621,
+      "sha256": "3c1a4768fcc1fdd02979cc5c9f762664c7bddc950e782b5088ddb27091410e86"
     },
     {
       "path": "assets/catalog.json",
@@ -111,8 +201,8 @@
     },
     {
       "path": "downloads/A/print-kit.zip",
-      "bytes": 5118520,
-      "sha256": "652a051c435cbf2c97060856fac6c227307324bd66f255232d89c5a3139cb811"
+      "bytes": 5119010,
+      "sha256": "d4033df3f4f337eb506891314e0929313afc7f79cf090d0f75885f29fad7774e"
     },
     {
       "path": "downloads/B/B.FCStd",
@@ -226,8 +316,8 @@
     },
     {
       "path": "downloads/B/print-kit.zip",
-      "bytes": 7807320,
-      "sha256": "533accafabe09d86d48cc9bf5fd5c1d3d9304a57e02872bbd6ed06aecff61cb5"
+      "bytes": 7807810,
+      "sha256": "00bc9b3e1ca4fc2a177c440e23cbc46491a52770cfeaf6dc489fa45c18da2bb2"
     },
     {
       "path": "downloads/C/C.FCStd",
@@ -406,13 +496,13 @@
     },
     {
       "path": "downloads/C/print-kit.zip",
-      "bytes": 11634932,
-      "sha256": "67e775b14af48ec3b3acb900b2de4c12e679b4359569a41af4bebabe617f5dde"
+      "bytes": 11635422,
+      "sha256": "b6d5d17a0a0ebf514e6494a6f890ff2d9fe16ab9a184451e54c48d9a1c8e47ba"
     },
     {
       "path": "downloads/fit-coupons.zip",
-      "bytes": 312452,
-      "sha256": "43c2cd99c87e8ff009b58367dee0c336764cd93ae06c161883520f13599e116d"
+      "bytes": 312699,
+      "sha256": "316eb61c61ecca7158f0461925914ff08b209afe01d9e4e04c6344df26d4b288"
     },
     {
       "path": "downloads/fit-log.csv",
@@ -1681,8 +1771,8 @@
     },
     {
       "path": "guide.html",
-      "bytes": 39468,
-      "sha256": "76460e04443bacc22d9f2f4c4b5630261949770b0f7eb26d4121c18d0bbea818"
+      "bytes": 40524,
+      "sha256": "e130e49a6b6acc6ecafdc20ecfd4363d21baadadf034dc98b3fb09918debd9d1"
     },
     {
       "path": "guide.js",
@@ -1696,8 +1786,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 18747,
-      "sha256": "67295c37ade80ac4c56e217f37999d546170985f663b6e39f8cbdbf8c470dc9e"
+      "bytes": 19185,
+      "sha256": "35931365f9b1e1c652124e7fb6fbcdf0c99dde68bf7a925e6cb2aca4af7a36c3"
     },
     {
       "path": "media/A-assembly.mp4",
@@ -1791,8 +1881,8 @@
     },
     {
       "path": "rebuild.html",
-      "bytes": 8015,
-      "sha256": "880b69a9b019fad3e7d08415aa000b18108437e8e9dc8ada23fc78124b8a600b"
+      "bytes": 9618,
+      "sha256": "7a7c7cf88802cb6dd301a38295f6f258a3c0554ed818bd8b462e8d3263e2ca29"
     },
     {
       "path": "style.css",

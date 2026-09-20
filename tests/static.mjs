@@ -26,9 +26,19 @@ const required = [
   'drawings/interface.svg', 'downloads/interface.pdf', 'downloads/fit-coupons.zip',
   'downloads/part-drawings.pdf', 'downloads/validation.json',
   'vendor/THREE-LICENSE.txt', 'vendor/B612-OFL.txt',
+  'assembly.html', 'assembly-guide/index.html', 'assembly-guide/runtime.js', 'assembly-guide/style.css',
 ];
 for (const model of catalog.models) {
   const prefix = `downloads/${model.id}/`;
+  required.push(`assembly-guide/${model.id}.html`, `assembly-guide/${model.id}.mapping.json`,
+    `assembly-guide/${model.id}-offline.zip`);
+  const guide = await json(`site/assembly-guide/${model.id}.mapping.json`);
+  assert.equal(guide.part_count, model.part_count);
+  assert.equal(guide.sliced, false);
+  assert.equal(guide.physical_fit_tested, false);
+  assert.deepEqual(guide.placements.map(({ id, part, position, rotation }) => ({ id, part, position, rotation })),
+    model.placements.map(({ id, part, position, rotation }) => ({ id, part, position, rotation })));
+  for (const [key, part] of Object.entries(guide.parts)) assert.equal(part.sha256, catalog.parts[key].sha256);
   for (const filename of ['print-kit.zip', 'plates.zip', 'drawings.pdf', 'bom.csv', 'assembly.json',
     `${model.id}.FCStd`, `${model.id}.step`, `${model.id}.blend`]) required.push(prefix + filename);
   required.push(`media/${model.id}-hero.png`, `media/${model.id}-assembly.mp4`, `media/${model.id}-assembly.vtt`);

@@ -6,6 +6,12 @@
 **別PCで印刷する方へ：[色別ファイルの選び方と、黒→白の手動色替え](https://ktanino10.github.io/copilot-brick-display/guide.html?guide=separate-color-2026-09-19#print-another-pc)**
 — A/B/Cを1案だけ選び、最初は試験片から。銘板・右ロゴの白い部分は一体レリーフで、途中の色替えが必要です。
 
+**印刷した部品がどこに入るか分からない方へ：[ファイル → slot → 組立場所の対話3Dガイド](https://ktanino10.github.io/copilot-brick-display/assembly-guide/index.html)**
+— 印刷順と組立順は違います。Bの最初は **`B-black-02.3mf` のslot 3 → `B-001`**。
+[3D仕分け図・最初の台座アニメと使い方](docs/assembly.ja.md) ／ [Bのオフライン版](site/assembly-guide/B-offline.zip)。
+
+![Bの印刷プレート内slot 3と最初の組立B-001を結ぶ実STL表示](site/assembly-guide/media/B-first-base.png)
+
 公開リビジョンは **`4.0-public-template`**。黒い台座5段、大きい2行、正面右のロゴ、
 無接着で交換できる前面部品を持つ非公式の卓上オブジェです。
 公開の銘板は実際のCAD形状として次の仮表示を使います。実在の個人プロフィールではありません。

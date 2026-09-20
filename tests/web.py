@@ -69,6 +69,8 @@ with sync_playwright() as playwright:
         expect(page.locator("#viewport")).to_have_attribute("data-model", model["id"], timeout=180000)
         expect(page.locator("#viewport")).to_have_attribute("data-instances", str(model["part_count"]))
         expect(page.locator("#part-count")).to_contain_text(str(model["part_count"]))
+        expect(page.locator(".model-assembly-guide-link")).to_have_attribute(
+            "href", f"assembly-guide/{model['id']}.html?guide=print-to-place-1")
         explosion_records.append(verify_exploded(page, model, OUT))
         page.locator("#part-select").select_option(model["placements"][0]["id"])
         expect(page.locator("#part-details")).to_contain_text(model["placements"][0]["part"])
@@ -114,6 +116,15 @@ with sync_playwright() as playwright:
         check_no_overflow(page)
         print("MODEL_PASS", model["id"], flush=True)
     page.screenshot(path=str(OUT / "C-inspector.png"), full_page=True)
+    page.goto(BASE + "assembly.html", wait_until="networkidle")
+    expect(page.get_by_role("heading", name="印刷した部品を、どこから・どう組む？", exact=True)).to_have_count(1)
+    expect(page.locator("body")).to_contain_text("B-black-02.3mf")
+    assert page.locator(".document img").evaluate_all(
+        "images => images.length >= 3 && images.every(image => image.complete && image.naturalWidth > 0)")
+    for width in (1440, 375):
+        page.set_viewport_size({"width": width, "height": 1100})
+        check_no_overflow(page)
+    page.set_viewport_size({"width": 1440, "height": 1100})
     page.goto(BASE + "guide.html?model=C", wait_until="networkidle")
     expect(page.get_by_role("heading", name="別PCで、色別に印刷する", exact=True)).to_have_count(1)
     expect(page.locator('a[href="#print-another-pc"]')).to_have_count(1)

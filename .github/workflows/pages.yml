@@ -19,7 +19,7 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - name: Select explicit publication mode
@@ -51,6 +51,11 @@ jobs:
       - name: Verify cross-PC color printing instructions
         if: steps.mode.outputs.maintenance != 'true'
         run: python -m unittest discover -s tests -p test_cross_pc_guide.py -v
+      - name: Verify every print occurrence and assembly pose
+        if: steps.mode.outputs.maintenance != 'true'
+        run: |
+          python -m unittest discover -s tests -p test_assembly_guide.py -v
+          node tests/assembly_guide_model.mjs
       - name: Verify real browser behavior before deployment
         if: steps.mode.outputs.maintenance != 'true'
         env:
@@ -73,6 +78,8 @@ jobs:
             validation/web.json
             site/downloads/validation.json
             build/screenshots/
+            build/assembly-guide-ci-http/
+            build/assembly-guide-ci-file/
           if-no-files-found: warn
       - uses: actions/configure-pages@v5
         if: github.event_name == 'push' || inputs.publish

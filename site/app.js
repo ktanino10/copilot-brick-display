@@ -364,6 +364,7 @@ function updateLinks(model) {
   $('.model-print-link').href = asset(`downloads/${id}/print-kit.zip`);
   $('.model-print-link').innerHTML = `${id}の印刷セット <span>↓</span>`;
   $('.model-guide-link').href = `guide.html?model=${id}&rev=${encodeURIComponent(REVISION)}`;
+  $('.model-assembly-guide-link').href = `assembly-guide/${id}.html?guide=print-to-place-1`;
   $('#download-model').textContent = `${id} / ${model.name}`;
   const files = ['print-kit.zip', `${id}.FCStd`, `${id}.step`, 'drawings.pdf', 'bom.csv', 'plates.zip'];
   [...$('#download-links').children].forEach((link, index) => { link.href = asset(`downloads/${id}/${files[index]}`); });

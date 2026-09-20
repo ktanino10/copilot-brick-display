@@ -86,6 +86,31 @@ the separate ignored-output command in [the customization guide](customize.ja.md
 
 ## Static site
 
+### Print-file to assembly guide (no CAD or Blender regeneration)
+
+The common viewer has an [explicit input/mapping/offline contract](../web/assembly-guide/README.md).
+Its source data is the already-verified catalog, model assembly, actual print-plate manifests,
+STL and 3MF files. It verifies every print occurrence against the assembly by part ID and color.
+It does not invent a one-to-one physical identity for interchangeable copies.
+
+```bash
+npm ci
+npm run build:assembly-guide
+.venv/bin/python scripts/build_public_assembly_guides.py
+.venv/bin/python -m unittest discover -s tests -p test_assembly_guide.py -v
+node tests/assembly_guide_model.mjs
+.venv/bin/python tests/assembly_guide_browser.py \
+  --entry site/assembly-guide/B.html --all-models --capture-media
+```
+
+Only the public wrapper enforces the generic publication policy. For private input, use the
+root-independent `build_assembly_guide.py` with explicit paths and `--standalone` in the
+private destination; do not regenerate the public catalog with private text.
+The offline ZIPs contain a self-contained HTML viewer, correspondence JSON and the Three.js
+MIT notice. They contain no printer profile or G-code. Runtime bundling adds no network dependency.
+The annotated new guide images/video are captured from this real STL viewer, not claimed to be
+new Blender renders. The existing native scenes and movies remain unchanged.
+
 ```bash
 python3 -m http.server 8000 --directory site
 npm test

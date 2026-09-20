@@ -14,19 +14,21 @@ from design import ROOT
 def links(value):
     replacements = {
         "../site/": "", "../design/": "downloads/",
+        "../web/assembly-guide/README.md": "https://github.com/ktanino10/copilot-brick-display/blob/main/web/assembly-guide/README.md",
         "build.ja.md": "guide.html", "design.md": "technical.html",
         "rebuild.md": "rebuild.html", "licensing.md": "notices.html",
         "trial.ja.md": "trial.html",
         "customize.ja.md": "customize.html", "privacy.md": "privacy.html",
+        "assembly.ja.md": "assembly.html",
     }
     def replace(match):
-        url = match.group(1)
+        attribute, url = match.groups()
         for old, new in replacements.items():
             if url.startswith(old):
                 url = new + url[len(old):]
                 break
-        return f'href="{html.escape(url, quote=True)}"'
-    return re.sub(r'href="([^"]+)"', replace, value)
+        return f'{attribute}="{html.escape(url, quote=True)}"'
+    return re.sub(r'\b(href|src)="([^"]+)"', replace, value)
 
 
 def main():
@@ -38,12 +40,16 @@ def main():
         ("trial.ja.md", "trial.html", "7個の段階試作・閉塞を先に確認"),
         ("customize.ja.md", "customize.html", "Fork・Issue・AIで表示文字を変更"),
         ("privacy.md", "privacy.html", "公開テンプレートとプライバシーの境界"),
+        ("assembly.ja.md", "assembly.html", "印刷ファイルから組み立てる3Dガイド"),
     ]:
         body = links(markdown.markdown((ROOT / "docs" / source).read_text(),
                                       extensions=["tables", "fenced_code", "toc"]))
         guide = ""
         if target == "guide.html":
-            guide = ('<p class="doc-note"><strong>別PCで、色別に印刷する方へ。</strong> '
+            guide = ('<p class="doc-note"><strong>刷ったパーツはどこに入る？</strong> '
+                     '<a href="assembly.html">ファイル → slot → 組立場所の3Dガイド</a>。'
+                     'Bの最初はblack-02のslot 3。印刷順は組立順ではありません。</p>'
+                     '<p class="doc-note"><strong>別PCで、色別に印刷する方へ。</strong> '
                      '<a href="#print-another-pc">A/B/Cの保存先・色ごとの3MF・黒→白の手動交換を順に確認</a>。'
                      '1案だけ選びます。公開データは汎用placeholderで、個人用ファイルは含みません。</p>'
                      '<p class="doc-note"><strong>全数印刷の前に。</strong> '

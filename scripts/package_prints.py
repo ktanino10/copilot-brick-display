@@ -107,6 +107,7 @@ def main():
     read_first = read_first.replace("(../design/", "(https://github.com/ktanino10/copilot-brick-display/blob/main/design/")
     read_first = read_first.replace("(rebuild.md)", "(https://ktanino10.github.io/copilot-brick-display/rebuild.html)")
     read_first = read_first.replace("(trial.ja.md)", "(https://ktanino10.github.io/copilot-brick-display/trial.html?guidance=trial-2026-09-19)")
+    read_first = read_first.replace("(assembly.ja.md)", "(https://ktanino10.github.io/copilot-brick-display/assembly.html)")
     coupons = sorted(key for key in c["parts"] if key.startswith(("FIT-", "NP3-FIT-")))
     if not args.plates_only:
         with zipfile.ZipFile(downloads / "fit-coupons.zip", "w", zipfile.ZIP_DEFLATED) as archive:

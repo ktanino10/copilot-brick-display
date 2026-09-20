@@ -4,7 +4,7 @@
 <body><header class="site-header"><a class="brand" href="./?rev=4.0-public-template">BRICK<br>PORTRAIT</a>
 <nav><a href="./?rev=4.0-public-template#workbench">3Dとダウンロード</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="customize.html?rev=4.0-public-template">文字を変える</a></nav></header>
 <main class="document"><div class="doc-nav"><a href="./?rev=4.0-public-template">← 模型のページへ</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="rebuild.html?rev=4.0-public-template">再生成</a></div>
-<p class="doc-note"><strong>別PCで、色別に印刷する方へ。</strong> <a href="#print-another-pc">A/B/Cの保存先・色ごとの3MF・黒→白の手動交換を順に確認</a>。1案だけ選びます。公開データは汎用placeholderで、個人用ファイルは含みません。</p><p class="doc-note"><strong>全数印刷の前に。</strong> <a href="trial.html?guidance=trial-2026-09-19&rev=4.0-public-template">既存coupon → 7個の実部品 → 選択案の台座・前面へ</a>。閉塞・つかみにくさ・着座不良があれば止めます。7個は完成品の合格試験ではありません。</p><section class="stage-guide" aria-label="各案の番号付き組立図"><h2>選んだ案の工程図</h2><p>各図の配置番号はBOM・3D・動画と共通です。手前は図の下です。</p><label for="guide-model">案を選ぶ</label><select id="guide-model"><option>A</option><option selected>B</option><option>C</option></select><label for="guide-step">工程を選ぶ</label><select id="guide-step"></select><figure><img id="guide-drawing" alt="選択工程の配置図" src="drawings/B/step-01.svg?rev=4.0-public-template"></figure><p><a id="guide-pdf" href="downloads/B/drawings.pdf?rev=4.0-public-template">全工程のPDFを保存 ↓</a></p></section><h1 id="_1">作り方 — まず小さく試してから、本体へ</h1>
+<p class="doc-note"><strong>刷ったパーツはどこに入る？</strong> <a href="assembly.html?rev=4.0-public-template">ファイル → slot → 組立場所の3Dガイド</a>。Bの最初はblack-02のslot 3。印刷順は組立順ではありません。</p><p class="doc-note"><strong>別PCで、色別に印刷する方へ。</strong> <a href="#print-another-pc">A/B/Cの保存先・色ごとの3MF・黒→白の手動交換を順に確認</a>。1案だけ選びます。公開データは汎用placeholderで、個人用ファイルは含みません。</p><p class="doc-note"><strong>全数印刷の前に。</strong> <a href="trial.html?guidance=trial-2026-09-19&rev=4.0-public-template">既存coupon → 7個の実部品 → 選択案の台座・前面へ</a>。閉塞・つかみにくさ・着座不良があれば止めます。7個は完成品の合格試験ではありません。</p><section class="stage-guide" aria-label="各案の番号付き組立図"><h2>選んだ案の工程図</h2><p>各図の配置番号はBOM・3D・動画と共通です。手前は図の下です。</p><label for="guide-model">案を選ぶ</label><select id="guide-model"><option>A</option><option selected>B</option><option>C</option></select><label for="guide-step">工程を選ぶ</label><select id="guide-step"></select><figure><img id="guide-drawing" alt="選択工程の配置図" src="drawings/B/step-01.svg?rev=4.0-public-template"></figure><p><a id="guide-pdf" href="downloads/B/drawings.pdf?rev=4.0-public-template">全工程のPDFを保存 ↓</a></p></section><h1 id="_1">作り方 — まず小さく試してから、本体へ</h1>
 <p>これは成人向けの屋内用卓上オブジェです。電子部品、モーター、電池、配線、接着剤は使いません。
 <strong>デジタル設計は用意されていますが、実物の嵌合・保持力・耐久性・転倒しにくさは未試験です。</strong>
 市販LEGOへの互換保証、玩具の安全認証、Bambu Labによる認定を意味しません。</p>
@@ -12,6 +12,9 @@
 原因や補正値は未確定で、この模型の成功例ではありません。
 まず<a href="trial.html?rev=4.0-public-template">7個の現行実部品を段階的に試す手順</a>へ進み、入口・屋根のレイヤープレビューと手での着脱を確認してください。
 <strong>閉塞・つかみにくさ・着座不良があれば全数印刷を止めます。</strong> 既存形状・8 mmピッチ・承認済み外観は変更していません。</p>
+<p><strong>印刷を始めた方へ：<a href="assembly.html?rev=4.0-public-template">刷ったファイルから組立位置を探す3Dガイド</a></strong>。
+印刷順は組立順ではありません。Bの1段目は <code>B-black-02.3mf</code> のslot 3 → <code>B-001</code> です。
+実プレートの番号・溝の拡大・全ての適用先を見て、空の机から1個ずつ再生できます。</p>
 <p><a id="print-another-pc"></a></p>
 <h2 id="pc">別PCで、色別に印刷する</h2>
 <p><strong>手順更新：<code>separate-color-2026-09-19</code>。対象は公開の汎用版 <code>4.0-public-template</code> です。</strong>
@@ -139,7 +142,10 @@ STL方式と3MF方式は代替です。<strong>同じ部品の3MFとSTLを両方
 </tbody>
 </table>
 <p>同じ色でもプレートごとに違う部品・数量です。完了したファイル名と数量を記録し、案名・色・部品IDでトレーを分けます。
-白い仕上げは通常の黒単色プレートとは混ぜません。</p>
+白い仕上げは通常の黒単色プレートとは混ぜません。
+<strong>表を上から印刷しても、その順に組むわけではありません。</strong>
+<a href="assembly.html?rev=4.0-public-template">3D仕分け・組立ガイド</a>でファイルを選び、slotと実物の形を合わせてから進めます。
+Bの全5段台座は黒01〜04の対象部品を使います。黒01だけでは最下段は揃いません。</p>
 <h3 id="_4">白い文字・白いロゴは「別の白部品」ではない</h3>
 <p><strong>文字とロゴは、黒い支持体に白い盛上りがつながった一体のSTLです。白部分だけを別体で刷って組む方式ではありません。</strong>
 色別に本体を印刷しても、この2部品には途中の黒→白切替が必要です。AMSなしで行う場合は手動交換を設定します。</p>

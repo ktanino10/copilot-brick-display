@@ -6,6 +6,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+import zipfile
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
@@ -30,6 +31,16 @@ try:
         raise TimeoutError("Temporary preview server did not become ready")
     env = {**os.environ, "BASE_URL": base}
     subprocess.run([sys.executable, "-u", "tests/web.py"], cwd=root, env=env, check=True, timeout=900)
+    subprocess.run([sys.executable, "-u", "tests/assembly_guide_browser.py",
+                    "--entry", base + "assembly-guide/B.html", "--all-models",
+                    "--output", "build/assembly-guide-ci-http"], cwd=root, env=env, check=True, timeout=300)
+    offline = root / "build/assembly-guide-ci-offline"
+    offline.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(root / "site/assembly-guide/B-offline.zip") as archive:
+        (offline / "index.html").write_bytes(archive.read("index.html"))
+    subprocess.run([sys.executable, "-u", "tests/assembly_guide_browser.py",
+                    "--entry", str(offline / "index.html"),
+                    "--output", "build/assembly-guide-ci-file"], cwd=root, env=env, check=True, timeout=300)
 finally:
     server.terminate()
     try:

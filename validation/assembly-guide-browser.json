@@ -1,0 +1,25 @@
+{
+  "status": "PASS_REAL_PRINT_TO_PLACE_BROWSER",
+  "models": [
+    "B",
+    "A",
+    "C"
+  ],
+  "browser": "140.0.7339.16",
+  "file_protocol": true,
+  "external_requests": 0,
+  "widths_px": [
+    1440,
+    375
+  ],
+  "b_occurrences": 150,
+  "initial_plate": "B-black-02.3mf",
+  "initial_slot": 3,
+  "initial_placement": "B-001",
+  "all_interchangeable_sources_and_targets": true,
+  "manual_controls_and_replay": true,
+  "final_poses_exact": true,
+  "captured_motion_frames": 120,
+  "physical_fit_tested": false,
+  "sliced": false
+}

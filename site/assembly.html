@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>印刷ファイルから組み立てる3Dガイド — Brick Portrait</title><link rel="stylesheet" href="style.css?rev=4.0-public-template"><link rel="icon" href="icon.svg?rev=4.0-public-template"></head>
+<body><header class="site-header"><a class="brand" href="./?rev=4.0-public-template">BRICK<br>PORTRAIT</a>
+<nav><a href="./?rev=4.0-public-template#workbench">3Dとダウンロード</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="customize.html?rev=4.0-public-template">文字を変える</a></nav></header>
+<main class="document"><div class="doc-nav"><a href="./?rev=4.0-public-template">← 模型のページへ</a><a href="guide.html?rev=4.0-public-template">作り方</a><a href="rebuild.html?rev=4.0-public-template">再生成</a></div>
+<h1 id="_1">印刷した部品を、どこから・どう組む？</h1>
+<p><strong><a href="assembly-guide/index.html?rev=4.0-public-template">A / B / C の対話3Dガイドを開く</a></strong></p>
+<p>印刷するファイルの順番と、組み立てる順番は違います。
+色別プレートは効率よく並べた<strong>印刷用の配置</strong>で、ファイル末尾の <code>01</code> は台座の1段目という意味ではありません。
+このガイドは、実際に配布しているSTL・3MF配置・組立番号を結び、1個ずつ取り出して載せるためのものです。</p>
+<table>
+<thead>
+<tr>
+<th>印刷した案</th>
+<th>3Dで仕分け・組立</th>
+<th>オフライン版</th>
+<th>最初に取り出す部品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><a href="assembly-guide/A.html?rev=4.0-public-template">Aの3Dガイド</a></td>
+<td><a href="assembly-guide/A-offline.zip?rev=4.0-public-template">A ZIP</a></td>
+<td><code>A-black-02.3mf</code> のslot 3 → <code>A-001</code></td>
+</tr>
+<tr>
+<td>B</td>
+<td><a href="assembly-guide/B.html?rev=4.0-public-template">Bの3Dガイド</a></td>
+<td><a href="assembly-guide/B-offline.zip?rev=4.0-public-template">B ZIP</a></td>
+<td><code>B-black-02.3mf</code> のslot 3 → <code>B-001</code></td>
+</tr>
+<tr>
+<td>C</td>
+<td><a href="assembly-guide/C.html?rev=4.0-public-template">Cの3Dガイド</a></td>
+<td><a href="assembly-guide/C-offline.zip?rev=4.0-public-template">C ZIP</a></td>
+<td><code>C-black-04.3mf</code> のslot 2 → <code>C-001</code></td>
+</tr>
+</tbody>
+</table>
+<p>オフラインZIPを展開して <code>index.html</code> をダブルクリックします。ローカルサーバー、CDN、ログイン、ネット接続は不要です。
+Chrome / Edge / Firefox / Safariの現行版を使ってください。
+オフラインZIPは閲覧用です。印刷STL・3MFは<a href="guide.html?rev=4.0-public-template#print-another-pc">別PCでの印刷手順</a>から保存します。
+別の案を混ぜないでください。公開の文字は実形状でも <code>YOUR-USERNAME</code> の汎用表示です。</p>
+<h2 id="b1">Bを印刷した方へ：最初の1段</h2>
+<p><code>B-black-02.3mf</code> には3個あります。大きな1枚、<strong>slot 3 / <code>BASE3-24x10-B-562406</code></strong> が
+唯一の <code>B-001</code> です。スタッドを上、前面の取付け溝を手前へ置きます。
+下図の左が元の印刷配置、右が組立側です。番号は案内用で、実物に刻印されていません。</p>
+<p><img alt="B-black-02のslot 3がB-001。実STLの印刷配置と組立位置" src="assembly-guide/media/B-first-base.png?rev=4.0-public-template" /></p>
+<p><strong><code>B-black-01</code> を刷り終えただけでは、1段目はありません。</strong>
+その中には2〜5段目に使う溝・端の部品が入っています。違う形なのに、無理に1段目のように並べないでください。</p>
+<p><img alt="B-black-01の実部品をslot番号と組立候補へ結ぶ3D仕分け見本" src="assembly-guide/media/B-black-01-sort.png?rev=4.0-public-template" /></p>
+<p>台座の全5段を揃えるには、Bの黒 <strong>01・02・03・04</strong> の対象部品が必要です。
+同形同色の <code>BASE3-06x10-T-838259</code> は6個あり、黒03に4個、黒04に2個入っています。
+黒04の2個を忘れないでください。便宜上は5段目の <code>B-016</code> / <code>B-017</code> に割り当てていますが、
+同じID・同じ色の6個の間では交換できます。</p>
+<h2 id="3d">3Dガイドの使い方</h2>
+<ol>
+<li><strong>刷ったファイルを選ぶ。</strong> 左の「印刷した3MF」で、保存したファイル名と一致するものを選びます。
+   実プレートの形・位置とslot番号が出ます。Bambu Studioで再配置した場合、この番号はその新しい表示順ではありません。</li>
+<li><strong>実物を見比べる。</strong> 図内の番号か、下のslotボタンで選びます。part ID・寸法・必要個数を確認します。
+   「選んだ1個を拡大」→「裏面」「背面」を使い、下面空洞・溝・端の形を確認します。
+   同じ外形寸法でも溝の異なる台座部品があります。寸法だけで同一品と判断しません。</li>
+<li><strong>使える場所を全部見る。</strong> 右側では同じpart ID＋同じ色の全候補が濃く表示されます。
+   「使える組立場所」から番号を選ぶと位置が分かり、「ここから組む」でその直前まで組み上がった状態へ移れます。
+   別の場所から開始する場合は、前の工程が実物でも揃っていることを確認してください。</li>
+<li><strong>空の机から順番に。</strong> 「やり直し」または工程0は空の状態です。「最初の1個」から、
+   「次の1個」「1個戻る」、再生／一時停止、「この工程だけ再生」で進みます。
+   動いている部品の <strong>3MF名・slot・part ID・組立番号・工程</strong> が、常に図の上に表示されます。</li>
+<li><strong>接続を見たい時は淡く。</strong> 「組立済みを淡くする」を入れると隠れた位置が見えます。
+   色や完成状態を確認する時は外します。前・右・上のボタン、ドラッグ、ズームでも見られます。</li>
+</ol>
+<p>「便宜割当」は仕分けのために安定させた例です。同じ形・同じ色の部品に固有のシリアル番号はありません。
+その1個だけの行き先とは断定せず、<strong>全ての取り出し元と全ての適用先</strong>を並べています。
+異なるpart ID・異なる色を混ぜたり、必要数を減らしたりしてよいという意味ではありません。</p>
+<h2 id="5-keeper">台座5段 → 銘板と右ロゴ → keeper</h2>
+<p>下の短いアニメは、Bの最初の24個（工程1〜7）を実STLから表示しています。
+各フレームにファイル名・slot・部品・組立番号を付けています。説明用3DCGで、Blenderの再レンダーや物理試験ではありません。</p>
+<p><img alt="Bの台座5段、前面2部品、3個のkeeperを順に載せる実STLアニメ" src="assembly-guide/media/B-first-seven-steps.gif" /></p>
+<p><a href="assembly-guide/media/B-first-seven-steps.mp4?rev=4.0-public-template">一時停止できるMP4を保存</a>。
+細かい動きは<a href="assembly-guide/B.html?rev=4.0-public-template">対話3Dガイド</a>の工程6・7でゆっくり再生してください。</p>
+<p>銘板と右ロゴは印刷時には平らです。表面を正面へ90°起こし、<strong>keeperを付ける前に、溝の上から</strong>差し込みます。
+前から押し込む組み方ではありません。両方が着座してから、銘板用2個・ロゴ用1個のkeeperを載せます。
+その後、顔の1段目から頭頂までを同じガイドで進めます。Bは全150個で、試験片は別です。</p>
+<p>取り外しは逆の順です。keeperを上へ6 mm、前へ32 mm以上離して脇へ置き、
+対象モジュールを45 mm以上上抜きしてから手前へ。接着剤は不要です。
+これらは設計上の案内寸法であり、実物で強く引いてよいという意味ではありません。</p>
+<h2 id="_2">印刷・実物確認の境界は変わりません</h2>
+<p><strong>NOT_SLICED。実物の嵌合、keeper保持、強度、転倒は未試験です。</strong>
+先にFIT、NP3-FIT、<a href="trial.html?rev=4.0-public-template">7個の少量試作</a>。7個の成功は完成品全体の保持合格ではありません。
+穴の閉塞・白化・つかみにくさ・着座不良・強い力が必要なら、全数印刷と組立を止めます。
+無理押し、打撃、穴を全て削って合わせることを完成キットの前提にしません。</p>
+<p>黒・シアン・マゼンタ・緑は単色。文字と右ロゴは黒地一体レリーフなので、白い独立小片ではありません。
+黒支持体の境界は文字2.4 mm、ロゴ2.8 mm。実レイヤープレビューで、最初の白い経路の直前にPauseを入れます。
+汎用3MFにPause、実P1Sプロファイル、G-codeは入っていません。</p></main><footer class="site-footer"><a class="brand" href="./?rev=4.0-public-template">BRICK PORTRAIT</a>
+<p>非公式・成人向け卓上オブジェ。実物の嵌合、保持力、耐久性、転倒は未検証です。</p>
+<a href="notices.html?rev=4.0-public-template">権利・依存ライブラリ</a></footer>
+</body></html>

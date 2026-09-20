@@ -1,0 +1,36 @@
+{
+  "status": "ACTUAL_STL_VIEWER_CAPTURE",
+  "guide_revision": "print-to-place-1",
+  "frame_count": 120,
+  "assembly_range": "B-001 through B-024 / steps1..7",
+  "seated_counts_match_100_percent_pose": true,
+  "physical_simulation": false,
+  "blender_render": false,
+  "files": [
+    {
+      "path": "assembly-guide/media/B-first-base.png",
+      "bytes": 200517,
+      "sha256": "3d7e4f53717e517c85a4ab9c9fbada8b59f818364b26cab30dc82b0b4c46c335"
+    },
+    {
+      "path": "assembly-guide/media/B-black-01-sort.png",
+      "bytes": 253044,
+      "sha256": "d4b3c50ae6295f9d783af568b6686d934e0a6110ea64d1d50fdec62e35985fa5"
+    },
+    {
+      "path": "assembly-guide/media/B-black-04-base-parts.png",
+      "bytes": 254397,
+      "sha256": "14c630c89dac973a02906b669602a3ea810937437c1af09ade693772727169f4"
+    },
+    {
+      "path": "assembly-guide/media/B-first-seven-steps.gif",
+      "bytes": 2764185,
+      "sha256": "a13ea38245bdc0de935030bf2bd6f70f8b01dcb0a369eff5627e4b5638701d32"
+    },
+    {
+      "path": "assembly-guide/media/B-first-seven-steps.mp4",
+      "bytes": 714482,
+      "sha256": "23b54d6761f540a8c5ed499de89243b9c60a63aa7cc7a7e3686a72fa7880ae61"
+    }
+  ]
+}
