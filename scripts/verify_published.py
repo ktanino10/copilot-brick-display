@@ -31,7 +31,7 @@ def main():
              "assets/catalog.json", "app.js", "style.css", "vendor/three.module.js",
              "downloads/validation.json", "downloads/fit-coupons.zip", "downloads/interface.pdf",
              "downloads/part-drawings.pdf", "drawings/interface.svg", "tribute/index.html"}
-    exact = ["index.html", "guide.html", "assets/catalog.json", "lettering.html",
+    exact = ["index.html", "guide.html", "guide.js", "assets/catalog.json", "lettering.html",
              "downloads/lettering.json", "downloads/lettering-coupons.zip",
              "downloads/lettering-coupons/manifest.json"]
     files.update(exact)

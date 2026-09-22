@@ -1,0 +1,88 @@
+{
+  "status": "PASS_REVISION5_LINUX_AND_LIVE_ARTIFACTS",
+  "deployed_commit": "e34d41168af00f95da123b3087dd995da845ea68",
+  "run_url": "https://github.com/ktanino10/copilot-brick-display/actions/runs/35746072808",
+  "revision": "5.0-legible-plaques",
+  "http_assembly_guide": {
+    "status": "PASS_REAL_PRINT_TO_PLACE_BROWSER",
+    "models": [
+      "B",
+      "A",
+      "C"
+    ],
+    "browser": "152.0.7977.82",
+    "file_protocol": false,
+    "external_requests": 0,
+    "widths_px": [
+      1440,
+      375
+    ],
+    "b_occurrences": 150,
+    "initial_plate": "B-black-02.3mf",
+    "initial_slot": 3,
+    "initial_placement": "B-001",
+    "all_interchangeable_sources_and_targets": true,
+    "manual_controls_and_replay": true,
+    "final_poses_exact": true,
+    "captured_motion_frames": 0,
+    "three_piece_fast_replay_seconds": 5.235,
+    "cpu_throttle": 1,
+    "playback_button_state_mismatches": 0,
+    "physical_fit_tested": false,
+    "sliced": false
+  },
+  "offline_assembly_guide": {
+    "status": "PASS_REAL_PRINT_TO_PLACE_BROWSER",
+    "models": [
+      "B"
+    ],
+    "browser": "152.0.7977.82",
+    "file_protocol": true,
+    "external_requests": 0,
+    "widths_px": [
+      1440,
+      375
+    ],
+    "b_occurrences": 150,
+    "initial_plate": "B-black-02.3mf",
+    "initial_slot": 3,
+    "initial_placement": "B-001",
+    "all_interchangeable_sources_and_targets": true,
+    "manual_controls_and_replay": true,
+    "final_poses_exact": true,
+    "captured_motion_frames": 0,
+    "three_piece_fast_replay_seconds": 5.211,
+    "cpu_throttle": 1,
+    "playback_button_state_mismatches": 0,
+    "physical_fit_tested": false,
+    "sliced": false
+  },
+  "reachable_urls": 217,
+  "exact_cad_print_media_hashes": 62,
+  "exact_guide_media_zip_hashes": 28,
+  "current_placeholder": "github.com/USER",
+  "unchanged_nontext_masters": 68,
+  "physical_testing": "NOT_PERFORMED",
+  "live_browser": {
+    "status": "PASS_LIVE_REVISION5_BROWSER",
+    "deployed_commit": "e34d41168af00f95da123b3087dd995da845ea68",
+    "revision": "5.0-legible-plaques",
+    "browser": "140.0.7339.16",
+    "public_placeholder": "github.com/USER",
+    "b_actual_mm": [
+      191.8,
+      80.2,
+      238.6
+    ],
+    "guide_c_deep_link": true,
+    "lettering_preview_loaded": true,
+    "widths_px": [
+      1440,
+      375
+    ],
+    "no_profile_link": true,
+    "page_errors": [],
+    "http_errors": [],
+    "physical_testing": "NOT_PERFORMED"
+  }
+}
