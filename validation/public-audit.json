@@ -2,7 +2,7 @@
   "status": "PASS_RECURSIVE_PUBLIC_ARTIFACT_AUDIT",
   "expanded_entries": 2883,
   "public_files": 418,
-  "site_bytes": 465734347,
+  "site_bytes": 465735084,
   "files": [
     {
       "path": "app.js",
@@ -1846,13 +1846,13 @@
     },
     {
       "path": "guide.html",
-      "bytes": 42379,
-      "sha256": "4340e846fb2832de7e6c5fe8722b486bc5601514e0428f5a99f965983a11c903"
+      "bytes": 42428,
+      "sha256": "359456fe6b44847dc40fbaabecfea56d88bdbc06129986a1006ee3f090ccb144"
     },
     {
       "path": "guide.js",
-      "bytes": 1418,
-      "sha256": "b8bda0369b5b89855262b0c5c3b70e92cfaabcbca25e77495bced4d4f7c6289c"
+      "bytes": 2106,
+      "sha256": "3f87d4922ce80537304cc68c3d8f9f08050ab4e8db36ce857229b0ed789e2368"
     },
     {
       "path": "icon.svg",

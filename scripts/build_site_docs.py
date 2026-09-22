@@ -59,6 +59,7 @@ def main():
                      '閉塞・つかみにくさ・着座不良があれば止めます。7個は完成品の合格試験ではありません。</p>'
                      '<section class="stage-guide" aria-label="各案の番号付き組立図">'
                      '<h2>選んだ案の工程図</h2><p>各図の配置番号はBOM・3D・動画と共通です。手前は図の下です。</p>'
+                     '<p id="guide-data-error" role="alert" hidden></p>'
                      '<label for="guide-model">案を選ぶ</label><select id="guide-model"><option>A</option><option selected>B</option><option>C</option></select>'
                      '<label for="guide-step">工程を選ぶ</label><select id="guide-step"></select>'
                      '<figure><img id="guide-drawing" alt="選択工程の配置図" src="drawings/B/step-01.svg"></figure>'
