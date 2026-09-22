@@ -6560,7 +6560,7 @@
   "final_browser_recheck": {
     "status": "PENDING_CURRENT_REVISION_CI",
     "revision": "5.0-legible-plaques",
-    "local_browser_retry": "not attempted; known environment limitation"
+    "required_gate": "Current-revision full Chrome browser checks before Pages deployment; not physical validation."
   },
   "unselected_individual_variant": "withheld from public distribution",
   "private_personalization_route": {
