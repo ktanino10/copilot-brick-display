@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "guidance_revision": "trial-2026-09-19",
-  "geometry_revision": "4.0-public-template",
-  "catalog_sha256": "e0370bc2d7bbef1c8bc6a77f95879001513c17f07f5787f5cb0348f4f0d04b30",
+  "geometry_revision": "5.0-legible-plaques",
+  "catalog_sha256": "0797824aed50ab9fb5eb138b8ff613a56cfac30e6884156b9e0d061f6ffc262a",
   "units": "mm",
   "sliced": false,
   "physical_trial_performed": false,

@@ -1,6 +1,6 @@
 {
   "status": "PASS_DIGITAL_ONLY",
-  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
   "freecad": [
     "1",
     "1",
@@ -19,7 +19,7 @@
       "units": "mm",
       "actual_mm": [
         143.8,
-        63.8,
+        64.2,
         187.4
       ],
       "appearance_saved": true,
@@ -31,10 +31,10 @@
       "new_unique_boolean_evaluations": 89,
       "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
       "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
-      "cad_material_center_projection_margin_mm": 30.4864,
+      "cad_material_center_projection_margin_mm": 30.4689,
       "physical_fit_and_stability": "NOT TESTED",
-      "fcstd_sha256": "2b17c49b972c5cf13d0f867ce6ced157056e4e532bb82ec48352e00b2a30ba09",
-      "step_sha256": "b2c835d1770ea31c383d9f9a65d87230230b4af5a75439c6330948cecc8e3772",
+      "fcstd_sha256": "4c4d8a5b9dce1e1e4fbd13d0568c6f26d2e29326a3517782ec21d81e84e43f26",
+      "step_sha256": "3fafc700f6ec07daca3c06441a4ce65fa90dcdb0094c6901eb8716f9e3aefeb5",
       "contacts": [
         {
           "lower": "A-001",
@@ -640,7 +640,7 @@
       "units": "mm",
       "actual_mm": [
         191.8,
-        79.8,
+        80.2,
         238.6
       ],
       "appearance_saved": true,
@@ -652,10 +652,10 @@
       "new_unique_boolean_evaluations": 111,
       "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
       "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
-      "cad_material_center_projection_margin_mm": 38.8401,
+      "cad_material_center_projection_margin_mm": 38.8309,
       "physical_fit_and_stability": "NOT TESTED",
-      "fcstd_sha256": "cf07d2d2ecfecafb3cbd2f8897a026c1c32d8fb2d7ae1b0ae14aa1fd789e1750",
-      "step_sha256": "5b17eae7d8d040a25deeda8a0337889dbd5db83884f7e91cd1ca9e496e1d8f8a",
+      "fcstd_sha256": "912caa13adc3b5e43b92a62612b0b90a368b1e7ac68a2c43caac9d8439488237",
+      "step_sha256": "ea205de729dab37e882560f005801c03ad2b54b33cdaa8dcc8a49ad13d150b1e",
       "contacts": [
         {
           "lower": "B-001",
@@ -1706,7 +1706,7 @@
       "units": "mm",
       "actual_mm": [
         239.8,
-        111.8,
+        112.2,
         286.6
       ],
       "appearance_saved": true,
@@ -1718,10 +1718,10 @@
       "new_unique_boolean_evaluations": 110,
       "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
       "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
-      "cad_material_center_projection_margin_mm": 53.1575,
+      "cad_material_center_projection_margin_mm": 53.164,
       "physical_fit_and_stability": "NOT TESTED",
-      "fcstd_sha256": "0d33157315c52900f250792595f2b6c6ea58a888557ba25674a05deeeaf7f371",
-      "step_sha256": "3f016ae01db71f52494dc0c090674ec96a1cb6e41c61fff888e69f254c638533",
+      "fcstd_sha256": "eacd3688942a621db6c9f7e56a57216471519e4b287a6cc28e3b3317d0c0470c",
+      "step_sha256": "e3761398af81a5aff7734a996bcc8b85f50e6940e6358d96d1171553ceefca72",
       "contacts": [
         {
           "lower": "C-001",

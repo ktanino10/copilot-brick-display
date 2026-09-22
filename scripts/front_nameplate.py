@@ -7,7 +7,6 @@ from pathlib import Path
 import FreeCAD as App
 import Part
 
-from letter_metrics import straight_strokes, text_faces
 
 V = App.Vector
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,31 +38,8 @@ def carrier(message):
 
 
 def message_faces(spec, parameters):
-    message = parameters["message"]
-    font = ROOT / message["font"]
-    results = []
-    for text, size, target_height, baseline in zip(message["lines"], spec["text_sizes"],
-                                                  spec["text_heights"], message["line_bottoms"]):
-        faces = text_faces(text, font, size)
-        bound = Part.makeCompound(faces).BoundBox
-        if bound.XLength > spec["width"] - 2 * message["side_taper"] - 3.9:
-            raise ValueError(f"Display text exceeds the available face width for {spec['id']}; stop rather than truncate or compress.")
-        vertical = target_height / bound.YLength
-        if vertical < 1 - 1e-8:
-            raise ValueError("Do not thin the lettering vertically to force a fit")
-        matrix = App.Matrix()
-        matrix.A22 = vertical
-        faces = [face.transformGeometry(matrix) for face in faces]
-        metrics = straight_strokes(faces)
-        if min(item["width_mm"] for item in metrics) < message["minimum_straight_stroke"]:
-            raise ValueError(f"Printed lettering is too fine for {spec['id']}; stop and review the layout.")
-        bound = Part.makeCompound(faces).BoundBox
-        translation = V((spec["width"] - bound.XLength) / 2 - bound.XMin,
-                        baseline - bound.YMin, message["thickness"])
-        for face in faces:
-            face.translate(translation)
-        results.append((text, faces, metrics))
-    return results
+    from nameplate_lettering import message_faces as measured_faces
+    return measured_faces(spec, parameters)
 
 
 def plaque_shape(spec, parameters):

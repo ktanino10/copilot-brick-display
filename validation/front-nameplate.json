@@ -1,6 +1,6 @@
 {
-  "revision": "4.0-public-template",
-  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "revision": "5.0-legible-plaques",
+  "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
   "status": "PASS_NATIVE_FRONT_CAPTURE_AND_EXTRACTION",
   "models": [
     {
@@ -16,7 +16,7 @@
           "bounds_mm": [
             [
               4.0,
-              0.1,
+              -0.3,
               4.0
             ],
             [
@@ -64,7 +64,7 @@
       "lines": [
         {
           "text": "Same icon, New adventures",
-          "width_mm": 93.58125000000001,
+          "width_mm": 93.638328,
           "height_mm": 10.0,
           "assembled_z_range_mm": [
             26.0,
@@ -72,16 +72,16 @@
           ]
         },
         {
-          "text": "github.com/YOUR-USERNAME",
-          "width_mm": 78.26326599999999,
-          "height_mm": 7.0,
+          "text": "github.com/USER",
+          "width_mm": 77.42283800000001,
+          "height_mm": 10.0,
           "assembled_z_range_mm": [
-            12.0,
-            19.0
+            11.0,
+            21.0
           ]
         }
       ],
-      "minimum_actual_parallel_straight_stroke_mm": 1.1751946987293334,
+      "minimum_actual_parallel_straight_stroke_mm": 1.1955026143020007,
       "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
       "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
       "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
@@ -100,7 +100,7 @@
           "bounds_mm": [
             [
               4.0,
-              0.1,
+              -0.3,
               4.0
             ],
             [
@@ -110,10 +110,10 @@
             ]
           ],
           "blocked_translation_volume_mm3": {
-            "front": 66.81024057441238,
-            "rear": 1121.0560011146292,
+            "front": 66.81024057441263,
+            "rear": 1121.056001114629,
             "left": 27.648000000026613,
-            "right": 27.648000000027817,
+            "right": 27.648000000027828,
             "down": 67.19999999891573,
             "up_with_keepers": 2.7571358024613133
           },
@@ -148,7 +148,7 @@
       "lines": [
         {
           "text": "Same icon, New adventures",
-          "width_mm": 133.6875,
+          "width_mm": 132.130128,
           "height_mm": 12.0,
           "assembled_z_range_mm": [
             26.0,
@@ -156,16 +156,16 @@
           ]
         },
         {
-          "text": "github.com/YOUR-USERNAME",
-          "width_mm": 89.443734,
-          "height_mm": 8.0,
+          "text": "github.com/USER",
+          "width_mm": 77.42283800000001,
+          "height_mm": 10.0,
           "assembled_z_range_mm": [
-            12.0,
-            20.0
+            11.0,
+            21.0
           ]
         }
       ],
-      "minimum_actual_parallel_straight_stroke_mm": 1.3430796556906675,
+      "minimum_actual_parallel_straight_stroke_mm": 1.2609977591698005,
       "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
       "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
       "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
@@ -184,7 +184,7 @@
           "bounds_mm": [
             [
               4.0,
-              0.1,
+              -0.3,
               4.0
             ],
             [
@@ -232,7 +232,7 @@
       "lines": [
         {
           "text": "Same icon, New adventures",
-          "width_mm": 173.79375,
+          "width_mm": 167.33147000000002,
           "height_mm": 14.5,
           "assembled_z_range_mm": [
             26.0,
@@ -240,21 +240,21 @@
           ]
         },
         {
-          "text": "github.com/YOUR-USERNAME",
-          "width_mm": 100.62419999999999,
-          "height_mm": 9.0,
+          "text": "github.com/USER",
+          "width_mm": 77.42283800000001,
+          "height_mm": 10.0,
           "assembled_z_range_mm": [
-            12.0,
+            11.0,
             21.0
           ]
         }
       ],
-      "minimum_actual_parallel_straight_stroke_mm": 1.5109646126520033,
+      "minimum_actual_parallel_straight_stroke_mm": 1.523705625663407,
       "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
       "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
       "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
       "physical_fit_clutch_strength": "NOT_TESTED"
     }
   ],
-  "frozen_tribute": "separate BRICK-8-MSG-SLOT-1; no source or public asset changed"
+  "unselected_variant": "not part of the public distribution"
 }

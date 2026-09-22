@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>銘板の印刷しやすさ・小文字試験片 — Brick Portrait</title><link rel="stylesheet" href="style.css?rev=5.0-legible-plaques"><link rel="icon" href="icon.svg?rev=5.0-legible-plaques"></head>
+<body><header class="site-header"><a class="brand" href="./?rev=5.0-legible-plaques">BRICK<br>PORTRAIT</a>
+<nav><a href="./?rev=5.0-legible-plaques#workbench">3Dとダウンロード</a><a href="guide.html?rev=5.0-legible-plaques">作り方</a><a href="customize.html?rev=5.0-legible-plaques">文字を変える</a></nav></header>
+<main class="document"><div class="doc-nav"><a href="./?rev=5.0-legible-plaques">← 模型のページへ</a><a href="guide.html?rev=5.0-legible-plaques">作り方</a><a href="rebuild.html?rev=5.0-legible-plaques">再生成</a></div>
+<h1 id="50">銘板の印刷しやすさ — 5.0改訂と小試験片</h1>
+<p><strong>公開版の2行は <code>Same icon, New adventures</code> / <code>github.com/USER</code> です。</strong>
+<code>USER</code>は短い仮表記であり、実在の人やプロフィールへのリンクではありません。
+長い仮文字列を無理に細く収めるのでなく、短い公開例にすることをユーザーが選択しました。
+個人向け入力の文言をこの仮表記へ変更する仕組みではありません。</p>
+<p>0.2 mmノズルでの試作から「文字が小さい・孔や字間が狭い」というフィードバックを受けた設計候補です。
+<strong>この改訂を実機印刷して合格した証拠はまだありません。</strong>
+糸引きや上面の荒れの原因を写真だけで温度・flow等へ断定していません。原写真も転載していません。</p>
+<h2 id="_1">変えたもの・変えないもの</h2>
+<p>主文はBarlow Condensed <strong>Bold</strong>、下段は<strong>Black</strong>です。主文の文字高はA10 / B12 / C14.5 mmを維持し、
+URLは全案10 mmへ均等拡大しました。元のkerningを保ち、不足する字間だけを追加します。
+閉じた孔の内側と<code>e</code>の右出口を広げ、白い文字の高さを0.8→<strong>1.2 mm</strong>にしました。
+全行の横圧縮、文字の切捨て、3行化はしていません。</p>
+<p>黒い支持体は<strong>2.4 mmのまま</strong>、銘板全厚は<strong>3.6 mm</strong>。各案の裏面・キー溝取付け・顔・台座・右ロゴ・68非文字STLは不変更です。
+文字が0.4 mm前へ出た分、完成奥行きはA64.2 / B80.2 / C112.2 mmになりました。
+幅・高さ・全配置・組込個数91 / 150 / 228は維持しています。右ロゴの白レリーフは0.8 mmのままです。</p>
+<p><img alt="Bの旧4.0と新5.0の実CAD比較。旧データは比較用で、現在の印刷用ではありません" src="media/lettering/B-lettering-before-after.png?rev=5.0-legible-plaques" /></p>
+<p>上図は保存済みCADの実面輪郭から作成しています。旧4.0の長い仮表示は<strong>歴史的な比較用</strong>で、印刷用データではありません。
+元の旧版はGitの版履歴で区別し、現在のダウンロードには新旧の銘板を混在させません。</p>
+<h2 id="_2">文字列ごとの実測</h2>
+<table>
+<thead>
+<tr>
+<th>案・行</th>
+<th style="text-align: right;">実文字高</th>
+<th style="text-align: right;">実インク幅 / 上限</th>
+<th style="text-align: right;">最小字間</th>
+<th style="text-align: right;">平行な正の直線幅</th>
+<th style="text-align: right;">持続的な材料neck指標</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 主文</td>
+<td style="text-align: right;">10 mm</td>
+<td style="text-align: right;">93.638 / 94 mm</td>
+<td style="text-align: right;">0.796 mm</td>
+<td style="text-align: right;">1.196 mm</td>
+<td style="text-align: right;">0.85 mm</td>
+</tr>
+<tr>
+<td>B 主文</td>
+<td style="text-align: right;">12 mm</td>
+<td style="text-align: right;">132.130 / 134 mm</td>
+<td style="text-align: right;">1.048 mm</td>
+<td style="text-align: right;">1.261 mm</td>
+<td style="text-align: right;">1.09 mm</td>
+</tr>
+<tr>
+<td>C 主文</td>
+<td style="text-align: right;">14.5 mm</td>
+<td style="text-align: right;">167.331 / 174 mm</td>
+<td style="text-align: right;">1.048 mm</td>
+<td style="text-align: right;">1.524 mm</td>
+<td style="text-align: right;">1.34 mm</td>
+</tr>
+<tr>
+<td>全案 URL</td>
+<td style="text-align: right;">10 mm</td>
+<td style="text-align: right;">77.423 / 各案上限</td>
+<td style="text-align: right;">1.048 mm</td>
+<td style="text-align: right;">1.689 mm</td>
+<td style="text-align: right;">1.17 mm</td>
+</tr>
+</tbody>
+</table>
+<p>Aの主文は狭い102 mm支持体に収めるため、孔の中央帯目標0.90 mm、<code>e</code>出口0.95 mm、字間0.80 mmを明示的に使用します。
+B/C主文と全案のURLは孔1.02 mm、<code>e</code>出口1.10 mm、字間1.05 mmの目標です。
+<strong>A主文を全字1 mm以上と称していません。</strong> 小型の幅を守った選択で、Aの文字試験片を別に確認します。</p>
+<p>測定定義はそれぞれ別です。</p>
+<ul>
+<li><strong>閉counter</strong>：孔の高さ・幅の中央25–75%帯に、それぞれ101本置いた横・縦chordの最小値。
+  最大内接円の直径とは異なり、鋭い三角孔の全先端幅を保証しません。</li>
+<li><strong>c/eの開口</strong>：0.01 mm格子で内側から外へ抜ける経路を測る近似。誤差は約±0.03 mm。</li>
+<li><strong>字間</strong>：最終BRepの隣接する字形間の実距離。0.002 mm輪郭samplingによる計画値とは最大0.006 mm差を許容し、表は実値です。</li>
+<li><strong>正の材料</strong>：平行直線の幅と、侵食した時に0.05 mm²以上の2領域へ分裂する最初の幅（半径0.005 mm刻み）を別々に報告。
+  全ての曲線先端やスライサーの線幅を保証する値ではありません。</li>
+</ul>
+<p>孔を広げても材料が細くなる文字は停止対象です。長い別handleや大文字を入れても、上の結果を引き継げるとは限りません。
+生成器は文字列・幅・字間・正の材料を再検査し、未成立を無音で縮小・修復しません。
+機械可読の測定は<a href="downloads/lettering.json?rev=5.0-legible-plaques">lettering.json</a>で確認できます。</p>
+<h2 id="_3">本体銘板より先に、選んだ案の文字だけ試す</h2>
+<p><strong><a href="downloads/lettering-coupons.zip?rev=5.0-legible-plaques">文字試験片ZIP</a></strong> を展開し、
+選んだA/B/Cに対応する <strong><code>GLYPH-A</code> / <code>GLYPH-B</code> / <code>GLYPH-C</code> を1個だけ</strong>使います。
+STLと3MFは代替ファイルです。同時に読み込まないでください。
+上段<code>aeod</code>、下段<code>gbo./R</code>を、実銘板の字形から<strong>拡大縮小なし</strong>で取り出し、同じ字間目標で並べ直しています。
+大きな台座全体を印刷せず、孔・<code>e</code>・dot/slash・下段の大小文字を先に確認できます。
+この平らな試験片には取付け機構はなく、完成BOMや150個の組立には入りません。</p>
+<ol>
+<li>3MFは形状・配置だけの <strong>NOT_SLICED</strong>。実P1S・実際の装着ノズル・PLA・プレートを選びます。mm・100%・平らな黒支持体を下。</li>
+<li>実レイヤープレビューで、孔が埋まらないか、細線のpath欠落、隣字間の橋、dot/slashの形を確認します。</li>
+<li>黒支持体2.4 mmが終わり、<strong>最初の白い経路を出す前</strong>へPauseを追加します。初層・可変層高で層番号が変わるので固定番号は指定しません。
+   白は1.2 mm。標準P1Sの交換・排出・再開操作に従い、未検証G-codeは使いません。</li>
+<li>冷めたら孔・出口・字間が開いているか、欠け・白化・反り・糸・上面荒れを確認し、ノギスとスライス画像・条件を記録します。</li>
+<li>閉塞、線の脱落、割れがあれば銘板の全数印刷を停止。0.2 mmで解決済みとはみなしません。
+   原因不明のまま穴径・XY補正・flow・温度を一括変更せず、現物と経路を照合して一条件ずつ見直します。</li>
+</ol>
+<p>実設定入りBambu Studioプロジェクトは未受領です。必要な診断情報は<strong>実際に使った設定入り<code>.3mf</code></strong>であり、
+個人情報を含むなら公開IssueやPagesへ置かず、非公開で扱ってください。
+文字試験片が成功しても、既存FIT/NP3-FIT、keeper保持、完成品の強度・転倒は別の未検証事項です。</p></main><footer class="site-footer"><a class="brand" href="./?rev=5.0-legible-plaques">BRICK PORTRAIT</a>
+<p>非公式・成人向け卓上オブジェ。実物の嵌合、保持力、耐久性、転倒は未検証です。</p>
+<a href="notices.html?rev=5.0-legible-plaques">権利・依存ライブラリ</a></footer>
+</body></html>

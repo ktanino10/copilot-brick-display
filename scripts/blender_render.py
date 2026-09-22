@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
 parser.add_argument("--model", required=True)
 parser.add_argument("--probe", action="store_true")
+parser.add_argument("--start-frame", type=int, default=1)
 args = parser.parse_args(sys.argv[sys.argv.index("--") + 1:])
 scene = bpy.context.scene
 scene.render.threads_mode = "FIXED"
@@ -56,7 +57,14 @@ if not args.probe:
     frames = ROOT / "build/frames" / args.model
     frames.mkdir(parents=True, exist_ok=True)
     for old in frames.iterdir():
-        if old.is_file() and re.fullmatch(r"frame-\d{4}\.png", old.name):
+        if (old.is_file() and re.fullmatch(r"frame-\d{4}\.png", old.name)
+                and int(old.stem.split("-")[1]) >= args.start_frame):
             old.unlink()
+    if not 1 <= args.start_frame <= scene.frame_end:
+        raise ValueError("Invalid render-start frame")
+    for frame in range(1, args.start_frame):
+        if not (frames / f"frame-{frame:04d}.png").is_file():
+            raise ValueError("Missing explicitly preserved unchanged frame")
+    scene.frame_start = args.start_frame
     scene.render.filepath = str(frames / "frame-")
     bpy.ops.render.render(animation=True)

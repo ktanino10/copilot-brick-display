@@ -17,6 +17,6 @@ assert.equal(state.status, 'privacy-maintenance');
 assert.equal(state.model_downloads, false);
 const html = await readFile('site/index.html', 'utf8');
 assert.ok(html.includes('privacy-maintenance'));
-assert.ok(html.includes('YOUR-USERNAME'));
+assert.ok(html.includes('USER'));
 assert.ok(!/\b(?:src|href|poster)=/.test(html), 'The holding page must not reference withdrawn artifacts.');
 console.log('PASS maintenance-only artifact: no model, archive, image, video or private-input distribution.');

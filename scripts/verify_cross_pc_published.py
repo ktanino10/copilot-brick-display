@@ -27,7 +27,7 @@ def main():
     assert manifest["mode"] == "generic" and manifest["public_text_approved"] is False
     write_json(ROOT / "validation/cross-pc-published.json", {
         "status": "PASS_LIVE_GENERIC_COLOR_PRINT_GUIDE",
-        "guide_revision": version, "geometry_revision": "4.0-public-template",
+        "guide_revision": version, "geometry_revision": json.loads((ROOT / "design/catalog.json").read_text())["revision"],
         "entry_url": base + "guide.html?guide=" + version + "#print-another-pc",
         "scope": "Only the listed generic Pages files; separately authorized transfers are outside this check.",
         "files": records, "personal_files_in_verified_pages_files": False,

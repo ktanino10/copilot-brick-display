@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "guidance_revision": "trial-2026-09-19",
-  "geometry_revision": "4.0-public-template",
+  "geometry_revision": "5.0-legible-plaques",
   "units": "mm",
   "sliced": false,
   "physical_trial_performed": false,

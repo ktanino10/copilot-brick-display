@@ -1,88 +1,88 @@
 {
   "status": "PASS_RECURSIVE_PUBLIC_ARTIFACT_AUDIT",
-  "expanded_entries": 2793,
-  "public_files": 396,
-  "site_bytes": 466471806,
+  "expanded_entries": 2883,
+  "public_files": 418,
+  "site_bytes": 465734303,
   "files": [
     {
       "path": "app.js",
       "bytes": 26839,
-      "sha256": "33f5dc8204ebf178759291c1b85f25733f86c312cbc6a899196d45cd120d9a55"
+      "sha256": "5222975ebb8934b7650d26fb9974613068a7aec3b3e10cc9e184937f874288ca"
     },
     {
       "path": "assembly-guide/A-offline.zip",
-      "bytes": 3981290,
-      "sha256": "946546123248a540c8e3a407997cfe43b1fdd91bf4b72dbbf3c470cf40bf99f3"
+      "bytes": 3899149,
+      "sha256": "f9f586809d5db903bf411c245456bb882d7f0be283e1adc499e01bcbeac7426b"
     },
     {
       "path": "assembly-guide/A.html",
-      "bytes": 5512487,
-      "sha256": "9ceb6661ae1a70148e9cf734a9dd9a905f99fd9eae94e9b9882bc464ed5fc722"
+      "bytes": 5402594,
+      "sha256": "171084e9179bbc57026ae4c320a4459ff7ac362104f5d3cca388629b0db3d067"
     },
     {
       "path": "assembly-guide/A.mapping.json",
-      "bytes": 152945,
-      "sha256": "2c7c307c85eaa7ef45c8c868f2ff73d99ebc9444214e061e7b8081dd4d883869"
+      "bytes": 152946,
+      "sha256": "a043002fe16ff9ce9713c25ef67db3e9aca3c9b837fa23dd11f8e8a7873ba338"
     },
     {
       "path": "assembly-guide/B-offline.zip",
-      "bytes": 6117933,
-      "sha256": "8a4b573d019112c3c3f607a2b55ca8a7b355a678ebc8ffe9e72e8bfa5c61ff01"
+      "bytes": 5976180,
+      "sha256": "268334fbd21dcf00514d7c0b5f731cc8bba7daf4998acfb76ae371e45c1314ac"
     },
     {
       "path": "assembly-guide/B.html",
-      "bytes": 8683685,
-      "sha256": "9a6a8b4c3ec25e33902d941bf2dfc7f95ed7a3be0f7b2a24489e5adc1876cce1"
+      "bytes": 8495620,
+      "sha256": "43949078bfcb9526182bc796a7244e606fe681614855e4658ae2540fcbc85f26"
     },
     {
       "path": "assembly-guide/B.mapping.json",
-      "bytes": 260865,
-      "sha256": "9720e2a4bc34b6e23e50cb653135adfdfcfb01aeeb22f07bee938f83363322db"
+      "bytes": 260866,
+      "sha256": "b5452dbb26a7d206354d7ad995f146c6b9b1ef70caf0e694c34f92e091cfb010"
     },
     {
       "path": "assembly-guide/C-offline.zip",
-      "bytes": 9073706,
-      "sha256": "5b6d5197c4124953fa220fc27a54becc8abafd81dc4d80f50987aeefd83ea942"
+      "bytes": 8870637,
+      "sha256": "7a2288d9bbc81ecb2733874c87a7421aed73652e7264ccf3070e60559bb82df1"
     },
     {
       "path": "assembly-guide/C.html",
-      "bytes": 13108388,
-      "sha256": "124228f995092966a6c829e1d64dd87c97b07e16c76b0f95665faa93b3fc2a3c"
+      "bytes": 12840303,
+      "sha256": "66ff0bbc995896c59103a28404ceb8f4243aadceaf7170f7e34d57d2a785e07f"
     },
     {
       "path": "assembly-guide/C.mapping.json",
-      "bytes": 488336,
-      "sha256": "34202883be0ee76a4a2bda32ec78d04170701b0bfd0dcf8b38d322cd9fe04531"
+      "bytes": 488337,
+      "sha256": "9f3df470a6a553eaec4faaa1eca04fde54eae36d3862424a56831549ace51d65"
     },
     {
       "path": "assembly-guide/index.html",
       "bytes": 2477,
-      "sha256": "148856096ccf47f393a6f1b4efb1941ea7a3979903bc81f751b9fbd8c296c67e"
+      "sha256": "a068c7ec9e5518b4728a11579cc2eb7360cab71b5ee60fb86dce128d0a2b5635"
     },
     {
       "path": "assembly-guide/media/B-black-01-sort.png",
-      "bytes": 253044,
-      "sha256": "d4b3c50ae6295f9d783af568b6686d934e0a6110ea64d1d50fdec62e35985fa5"
+      "bytes": 252988,
+      "sha256": "b7aeaca9bf53c69ca76d1e770bfd971066656e2f3a8be1a328ead611ff0696fc"
     },
     {
       "path": "assembly-guide/media/B-black-04-base-parts.png",
-      "bytes": 254397,
-      "sha256": "14c630c89dac973a02906b669602a3ea810937437c1af09ade693772727169f4"
+      "bytes": 254111,
+      "sha256": "ab289b8b13a7a070a98e17b483bfb3f8e34d67dcf72e9fd1eddcda878dc96a9a"
     },
     {
       "path": "assembly-guide/media/B-first-base.png",
-      "bytes": 200517,
-      "sha256": "3d7e4f53717e517c85a4ab9c9fbada8b59f818364b26cab30dc82b0b4c46c335"
+      "bytes": 198308,
+      "sha256": "4e1da52deb21cd4b4fd36eb8f4c7ddbf8c204feb74e68204404bc8ec3e8a5228"
     },
     {
       "path": "assembly-guide/media/B-first-seven-steps.gif",
-      "bytes": 2764185,
-      "sha256": "a13ea38245bdc0de935030bf2bd6f70f8b01dcb0a369eff5627e4b5638701d32"
+      "bytes": 2773220,
+      "sha256": "9ab68b8752d607a8b86c68201830c48c4f4d0cbcdddbdcf4b5a6987ac6c7e276"
     },
     {
       "path": "assembly-guide/media/B-first-seven-steps.mp4",
-      "bytes": 714482,
-      "sha256": "23b54d6761f540a8c5ed499de89243b9c60a63aa7cc7a7e3686a72fa7880ae61"
+      "bytes": 714496,
+      "sha256": "fd30a09655778be4189f77b1223f5dd1db762154bbc7d4a14f326f8534d5d866"
     },
     {
       "path": "assembly-guide/runtime.js",
@@ -101,38 +101,38 @@
     },
     {
       "path": "assembly.html",
-      "bytes": 9621,
-      "sha256": "3c1a4768fcc1fdd02979cc5c9f762664c7bddc950e782b5088ddb27091410e86"
+      "bytes": 9612,
+      "sha256": "0de63363fa84e2c7479da58895defe39fcb92b9acbdcf75e68bdad6b38c0dad9"
     },
     {
       "path": "assets/catalog.json",
-      "bytes": 264190,
-      "sha256": "e0370bc2d7bbef1c8bc6a77f95879001513c17f07f5787f5cb0348f4f0d04b30"
+      "bytes": 265724,
+      "sha256": "0797824aed50ab9fb5eb138b8ff613a56cfac30e6884156b9e0d061f6ffc262a"
     },
     {
       "path": "customize.html",
-      "bytes": 13317,
-      "sha256": "02eb0f878d6dbe4ecc66664741b965fbce95c1839b16ee8e353a9c50cd5c9bc5"
+      "bytes": 14352,
+      "sha256": "8266141f341dc209c3991452ac90478e4f8d474b3a8959cbae64e4881029faba"
     },
     {
       "path": "downloads/A/A.FCStd",
-      "bytes": 3015468,
-      "sha256": "2b17c49b972c5cf13d0f867ce6ced157056e4e532bb82ec48352e00b2a30ba09"
+      "bytes": 3005883,
+      "sha256": "4c4d8a5b9dce1e1e4fbd13d0568c6f26d2e29326a3517782ec21d81e84e43f26"
     },
     {
       "path": "downloads/A/A.blend",
-      "bytes": 20363973,
-      "sha256": "41d08df877aeafdef7c8e28e4e02decdf550be2798085ee2b93a9b51be6f379c"
+      "bytes": 20159531,
+      "sha256": "165f324cc024f9d482adf2d5974d28d1ff091d0aa7d47c60177efa54c88b82e4"
     },
     {
       "path": "downloads/A/A.step",
-      "bytes": 14401927,
-      "sha256": "b2c835d1770ea31c383d9f9a65d87230230b4af5a75439c6330948cecc8e3772"
+      "bytes": 14074931,
+      "sha256": "3fafc700f6ec07daca3c06441a4ce65fa90dcdb0094c6901eb8716f9e3aefeb5"
     },
     {
       "path": "downloads/A/assembly.json",
-      "bytes": 32498,
-      "sha256": "c86e62cf9371ab06d9f001e474075bf9d2a4363deced9877a5c69d840f972a23"
+      "bytes": 32499,
+      "sha256": "3a7f8457ba27da4669d1803be48392596e2555b3a1a06044411c5c36ecb977d4"
     },
     {
       "path": "downloads/A/bom.csv",
@@ -141,8 +141,8 @@
     },
     {
       "path": "downloads/A/drawings.pdf",
-      "bytes": 938668,
-      "sha256": "899bf62fdffe4a78f8fcb3e3fbf340da071a36b487db389337549d43e531a766"
+      "bytes": 903035,
+      "sha256": "8ef98d312086d3e65b204614c0af323cca5aba3446d855482d951152594b6dc8"
     },
     {
       "path": "downloads/A/plates/A-black-01.3mf",
@@ -166,8 +166,8 @@
     },
     {
       "path": "downloads/A/plates/A-black-to-white-z2p4-01.3mf",
-      "bytes": 648117,
-      "sha256": "9379350bc3d32673c43bd3488af25ca21caf4b176b8116993bd7f4cf5181ea29"
+      "bytes": 602868,
+      "sha256": "3c2fd879f772ca199c79aef122ad2200d9a880d1ac669f18f9e39e649e39db32"
     },
     {
       "path": "downloads/A/plates/A-black-to-white-z2p8-01.3mf",
@@ -196,33 +196,33 @@
     },
     {
       "path": "downloads/A/plates.zip",
-      "bytes": 3683264,
-      "sha256": "8671238c4ba4e3250268ea63685a9cefa183489cd49465e91eae4e0880c89528"
+      "bytes": 3639403,
+      "sha256": "6ab344094e33154b765a0aa8e9b01f5c3d39579452ad9169cf4bcaae96d388dc"
     },
     {
       "path": "downloads/A/print-kit.zip",
-      "bytes": 5119010,
-      "sha256": "d4033df3f4f337eb506891314e0929313afc7f79cf090d0f75885f29fad7774e"
+      "bytes": 5009680,
+      "sha256": "4ae3cae0778890b03ad7c57de336277121bfb49dfcaf3505c9b179b77673b6fc"
     },
     {
       "path": "downloads/B/B.FCStd",
-      "bytes": 6577646,
-      "sha256": "cf07d2d2ecfecafb3cbd2f8897a026c1c32d8fb2d7ae1b0ae14aa1fd789e1750"
+      "bytes": 6531256,
+      "sha256": "912caa13adc3b5e43b92a62612b0b90a368b1e7ac68a2c43caac9d8439488237"
     },
     {
       "path": "downloads/B/B.blend",
-      "bytes": 32461132,
-      "sha256": "61ab055e292e4fee25db6ee812729a58a3dd00f138a30b6c5c235a4f75d3a977"
+      "bytes": 32072940,
+      "sha256": "5cff9ddef62a1765ae611b7548960f83963f4fd947fea0a9be5c945ff726db5c"
     },
     {
       "path": "downloads/B/B.step",
-      "bytes": 22592933,
-      "sha256": "5b17eae7d8d040a25deeda8a0337889dbd5db83884f7e91cd1ca9e496e1d8f8a"
+      "bytes": 22214421,
+      "sha256": "ea205de729dab37e882560f005801c03ad2b54b33cdaa8dcc8a49ad13d150b1e"
     },
     {
       "path": "downloads/B/assembly.json",
-      "bytes": 50337,
-      "sha256": "17a0b15408e2bb97a4e303f5576c42d71ba7f37a5bff08f8537bb82bf36d8adb"
+      "bytes": 50338,
+      "sha256": "d9a8444e3f2824586fd49b8b213029c1643f0f376ed07a7bf7e5d671c2d3e607"
     },
     {
       "path": "downloads/B/bom.csv",
@@ -231,8 +231,8 @@
     },
     {
       "path": "downloads/B/drawings.pdf",
-      "bytes": 1356717,
-      "sha256": "aa7e98599b745c2e592f232604bd3b9d0c6c2461ba8d9084cc46ede310c1166e"
+      "bytes": 1323141,
+      "sha256": "86900482e33991a819337ac6575901a28bee113f3b515ca9c89d969dc1eb1636"
     },
     {
       "path": "downloads/B/plates/B-black-01.3mf",
@@ -271,8 +271,8 @@
     },
     {
       "path": "downloads/B/plates/B-black-to-white-z2p4-01.3mf",
-      "bytes": 639378,
-      "sha256": "8a215ab8f52ff9ca5ff1896028ce4558c9f0cc46d7e92e1aa71ac95b3706acc8"
+      "bytes": 555471,
+      "sha256": "1e49844de665351d1a51e30e743c06037643d71dc0f6ec52adcae73bf02d28fb"
     },
     {
       "path": "downloads/B/plates/B-black-to-white-z2p8-01.3mf",
@@ -311,33 +311,33 @@
     },
     {
       "path": "downloads/B/plates.zip",
-      "bytes": 6138593,
-      "sha256": "617e87d8075c0df5778c3f3738caec0d62bd61f20dd29b9a6753618bd33e7463"
+      "bytes": 6055843,
+      "sha256": "8b2cf72796dcbd99c4b9ec174c9da6571391c508cefb7b6632a9f170cb7d025b"
     },
     {
       "path": "downloads/B/print-kit.zip",
-      "bytes": 7807810,
-      "sha256": "00bc9b3e1ca4fc2a177c440e23cbc46491a52770cfeaf6dc489fa45c18da2bb2"
+      "bytes": 7640519,
+      "sha256": "6d8b82f94603402c4eaad6538956179f8300e587c8052d49814e173f6050c144"
     },
     {
       "path": "downloads/C/C.FCStd",
-      "bytes": 13755325,
-      "sha256": "0d33157315c52900f250792595f2b6c6ea58a888557ba25674a05deeeaf7f371"
+      "bytes": 13734260,
+      "sha256": "eacd3688942a621db6c9f7e56a57216471519e4b287a6cc28e3b3317d0c0470c"
     },
     {
       "path": "downloads/C/C.blend",
-      "bytes": 50665763,
-      "sha256": "324d342af68fb4d0ef670def30e46c7feb63e4a174efe3229d00a377e44e2bb4"
+      "bytes": 50083531,
+      "sha256": "d81e51f3eccd839f01928a869a756a5024d0f70aa1fdc80448b7cc4d0796249f"
     },
     {
       "path": "downloads/C/C.step",
-      "bytes": 34783873,
-      "sha256": "3f016ae01db71f52494dc0c090674ec96a1cb6e41c61fff888e69f254c638533"
+      "bytes": 34446446,
+      "sha256": "e3761398af81a5aff7734a996bcc8b85f50e6940e6358d96d1171553ceefca72"
     },
     {
       "path": "downloads/C/assembly.json",
-      "bytes": 72928,
-      "sha256": "bf7e0e696d61021aaba86327173ac41820e776879d86f6e5438d8a9ee08b4852"
+      "bytes": 72929,
+      "sha256": "f5730e450c5ee82ff731a9413466bb951aaf97f88b9faebc5af69ed68a627866"
     },
     {
       "path": "downloads/C/bom.csv",
@@ -346,8 +346,8 @@
     },
     {
       "path": "downloads/C/drawings.pdf",
-      "bytes": 1983670,
-      "sha256": "f59985f99ec9b2d36253996d48ce787bf22dd67d57f230e92f02fd811aafc907"
+      "bytes": 1951430,
+      "sha256": "193fc51caca222b59021fcba200d05d471f3716e2ab4649ab056f0702eff8825"
     },
     {
       "path": "downloads/C/plates/C-black-01.3mf",
@@ -431,8 +431,8 @@
     },
     {
       "path": "downloads/C/plates/C-black-to-white-z2p4-01.3mf",
-      "bytes": 639438,
-      "sha256": "d80fc681b01e9c8a8a7bfa1f0d4627283856f35c5ab47188aab32eb780fa7f64"
+      "bytes": 519025,
+      "sha256": "a1782bdb397a550f3f9b54931976d56a2c9a7a0302bb9f6dcf4a797765fa8798"
     },
     {
       "path": "downloads/C/plates/C-black-to-white-z2p8-01.3mf",
@@ -491,18 +491,18 @@
     },
     {
       "path": "downloads/C/plates.zip",
-      "bytes": 12593150,
-      "sha256": "7e646a0167ef8529247e943275425aaf8365548525bd04cc3d53aeb0f2db0968"
+      "bytes": 12473132,
+      "sha256": "4fb993445c3450597892bdd291e28918f8f7876fa4389b7e2e097ff904963524"
     },
     {
       "path": "downloads/C/print-kit.zip",
-      "bytes": 11635422,
-      "sha256": "b6d5d17a0a0ebf514e6494a6f890ff2d9fe16ab9a184451e54c48d9a1c8e47ba"
+      "bytes": 11408661,
+      "sha256": "4c728f5c798042a90d7136633d12a2f4465f8713ef5b0bfc22d400875ebe4b9a"
     },
     {
       "path": "downloads/fit-coupons.zip",
-      "bytes": 312699,
-      "sha256": "316eb61c61ecca7158f0461925914ff08b209afe01d9e4e04c6344df26d4b288"
+      "bytes": 313227,
+      "sha256": "e7c92b0f73a8696dc8ed7b577ed798cfcb841de34d6181112278778bf6cd47fd"
     },
     {
       "path": "downloads/fit-log.csv",
@@ -511,23 +511,98 @@
     },
     {
       "path": "downloads/interface.json",
-      "bytes": 2530,
-      "sha256": "d5299e1095426d61634e59e3691fd865b9b1aa3983b0f8839226ed9acdc67b3d"
+      "bytes": 2963,
+      "sha256": "5bce309496a5ce29f8ef22de474ed82b59401ec5722534df038bf5ddc66c6c86"
     },
     {
       "path": "downloads/interface.pdf",
-      "bytes": 9174,
-      "sha256": "eeffe40792867c76d5ea53f2added169587cc8e7823fcf5cabd3936b2ee20241"
+      "bytes": 9137,
+      "sha256": "65d7b8fa9e516df503e0beeca5d791185d7d84affd794bdd822ed6336667247d"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-A.3mf",
+      "bytes": 153919,
+      "sha256": "ab2d81183c08ea5ad5de35e458966479b54f6ebf2494088657b45b40b18349ae"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-A.FCStd",
+      "bytes": 89724,
+      "sha256": "185e98b3c04e91d0d381456ab69d1d44c637c3ab017ccc47f84ebdd95ba06bd4"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-A.stl",
+      "bytes": 710484,
+      "sha256": "08c23d07ff6717d4fe7b60b3985fef5cf1c1d2dc774b39d6ba8f0b3838892418"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-A.svg",
+      "bytes": 26021,
+      "sha256": "b53837a9465c95404fd40b96abc95cf2e5cc76182c3471a5dfc5c8892ee27f28"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-B.3mf",
+      "bytes": 149589,
+      "sha256": "5ae8a15ff8562e62310707735895e5278aa0796fbf0419ca05b659eae266eef4"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-B.FCStd",
+      "bytes": 79332,
+      "sha256": "d8f08f8415df1aa5f1822451066d4476d6b866376ffae93a02df615071ba8490"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-B.stl",
+      "bytes": 689684,
+      "sha256": "da2c60cd46626cc7e8f05262efa54d53918682c25f4dacd5123fe70ea87eebbe"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-B.svg",
+      "bytes": 27516,
+      "sha256": "011fc1196c261d73dfa646550679a8be97aa2da862cc49a31e60d20aceb876eb"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-C.3mf",
+      "bytes": 140954,
+      "sha256": "a71238ecc1801d79a101d6b4de63e93bfa4a9fb87b48237d3ba05f491c00b214"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-C.FCStd",
+      "bytes": 79994,
+      "sha256": "7778493429219806c23b2280c9358d1c1b098ecf6bd4c2fef014c7a26af53852"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-C.stl",
+      "bytes": 644484,
+      "sha256": "098ee65b4d09f0406c067b704a5740e5cb6f475cdda7b17e4aa720c726d361bc"
+    },
+    {
+      "path": "downloads/lettering-coupons/GLYPH-C.svg",
+      "bytes": 29294,
+      "sha256": "1dd5ffe63e323781146dc4f9adb5fd742662b638ea40f8deb99c964e84e25d22"
+    },
+    {
+      "path": "downloads/lettering-coupons/manifest.json",
+      "bytes": 12340,
+      "sha256": "f5a22016a066104cd98be0175d2426dd8e35d732ccd249114611e6641573028f"
+    },
+    {
+      "path": "downloads/lettering-coupons.zip",
+      "bytes": 1346534,
+      "sha256": "36672b9aa1d7254adf04e0f49093405c42285cf50cd77478cfb0fb038fb276db"
+    },
+    {
+      "path": "downloads/lettering.json",
+      "bytes": 38249,
+      "sha256": "ae4d7665494cc90a7fd87cb4f29c6120504042eee1dfcafd8f0493f82804df15"
     },
     {
       "path": "downloads/parameters.json",
-      "bytes": 5190,
-      "sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad"
+      "bytes": 5782,
+      "sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f"
     },
     {
       "path": "downloads/part-drawings.pdf",
-      "bytes": 2675965,
-      "sha256": "56c14e4e1fc8f0f816aee28375a55bb88b06e03d02ee94a1f7039af031cfa3d7"
+      "bytes": 2639122,
+      "sha256": "ce8babe268a5b11242d95a9aeef3dec37fd3c41914fc42b2b9319219ff57d9b9"
     },
     {
       "path": "downloads/parts/BASE3-03x08-T-48de52.stl",
@@ -871,33 +946,33 @@
     },
     {
       "path": "downloads/parts/NP3-TEXT-A.stl",
-      "bytes": 3033384,
-      "sha256": "44efd2b0919f795630ea0b22797fbb698b4accc5d6d1ff5ffbf4fcf711682369"
+      "bytes": 2817584,
+      "sha256": "de4b9ec71f68cec4920a76de7ada0efdb851222ebc745e51d173864b82ff7f07"
     },
     {
       "path": "downloads/parts/NP3-TEXT-B.stl",
-      "bytes": 2973684,
-      "sha256": "6cc71347e5eb73c8cb6ee5d1bf4be634c44f32bf76177862bfdd35548c0f49c5"
+      "bytes": 2582884,
+      "sha256": "5b112ee8145e38cb3b32e7b2dc7aa7a4d48ddceb895b820b35c351b5242d45bf"
     },
     {
       "path": "downloads/parts/NP3-TEXT-C.stl",
-      "bytes": 2969684,
-      "sha256": "285e3dd21cc6d204fbf812b57908c9d1d2b3f35e87c9df3c77d7a156038e2e6d"
+      "bytes": 2394084,
+      "sha256": "55f63efe0e63db3b17229f983ff62f19ea8c53d84d1c75904b86fc41bfb3ca38"
     },
     {
       "path": "downloads/personalization.private.example.json",
-      "bytes": 131,
-      "sha256": "4d8aa7447fb05fb2fa0bcccb31251551a456ac8fb4ea60a745e37e3c194b1fa2"
+      "bytes": 114,
+      "sha256": "215b0f96512bfa8dac1e0c2293f5647c3c7bca8e2d14d24def6c7fe7a675b73b"
     },
     {
       "path": "downloads/public-template-invariants.json",
-      "bytes": 163166,
-      "sha256": "09684ef500e7830af9d93a311844eb2b9a3da193c3d1065e5ad77020df94b08d"
+      "bytes": 163253,
+      "sha256": "4756994bb8eede61a810a9b0f54e664ddb47bbbc45083322ee4120372dded1f2"
     },
     {
       "path": "downloads/publication-policy.json",
-      "bytes": 399,
-      "sha256": "0ffc12f4d5f670bc0df67d71c127afe7748b9d2969f0438ba9688a20691f17c0"
+      "bytes": 392,
+      "sha256": "bf5ca1e6642e3e23d5e266673e0a5b0509239181bed57a1b5369f0125d7c9916"
     },
     {
       "path": "downloads/sources.json",
@@ -906,8 +981,8 @@
     },
     {
       "path": "downloads/trial-subset/READ-FIRST-ja.md",
-      "bytes": 11567,
-      "sha256": "553346ec071faa9add679951085fdccdab26a76bc596b30eb909a9fe61376a95"
+      "bytes": 11847,
+      "sha256": "be478c37565ddcc9b411c0f7046c6dba249359e81a9350d21b838b3e041a6238"
     },
     {
       "path": "downloads/trial-subset/bom-A.csv",
@@ -927,17 +1002,17 @@
     {
       "path": "downloads/trial-subset/manifest.json",
       "bytes": 10002,
-      "sha256": "fa8aba71d7e9221377fd4df20ab817be12d5f4f7dd6c32213288ba57420dfddc"
+      "sha256": "6140369424bd99e9a9f9643d292fcacd708156cb4289c721b747afca0f6d7301"
     },
     {
       "path": "downloads/trial-subset.zip",
-      "bytes": 701731,
-      "sha256": "da0a50ffeeb62694ca13b3ebc8cad73bb774760ef014c72efa93387a7f77f217"
+      "bytes": 701822,
+      "sha256": "1d4e05535716c187c331c46f45280cc992b589a4f650f0b27179e5cb94b6f20e"
     },
     {
       "path": "downloads/validation.json",
-      "bytes": 188725,
-      "sha256": "97bdcd6c2fba4668e1da7baba495cd982454c945a359762944057528f0f5e831"
+      "bytes": 217589,
+      "sha256": "17dc355a404049b837b3b0ba48957f2c8f620fc06901e021aca2274d30e347d6"
     },
     {
       "path": "drawings/A/bom-1.svg",
@@ -946,13 +1021,13 @@
     },
     {
       "path": "drawings/A/exploded.svg",
-      "bytes": 916218,
-      "sha256": "575070ab5233a00345810efac42986498a758527ea3b1cd6ff7bd19ff601fff0"
+      "bytes": 834862,
+      "sha256": "f69ed96db11478ac7d1dd23e61000fa63f0d73fb756f5b90f977d1f51707e630"
     },
     {
       "path": "drawings/A/overview.svg",
-      "bytes": 734071,
-      "sha256": "64ea3cd5a0b8ae18c55a91ebecd47be94e3c39c29e436de897cddb67609eb2a6"
+      "bytes": 714789,
+      "sha256": "046ecbe4a81d36802132996526c7b744fcb0f7b8b0c166904b10f0f50a3e71e4"
     },
     {
       "path": "drawings/A/step-01.svg",
@@ -982,92 +1057,92 @@
     {
       "path": "drawings/A/step-06.svg",
       "bytes": 9014,
-      "sha256": "c86ec8e17111540486aa314d6ab2e7b81a9f4780b8252146383993a43d158355"
+      "sha256": "d7adb57ff2c7fd7fb55c60b4665dca7ae2e4a5b8da2f349875defbad1733c092"
     },
     {
       "path": "drawings/A/step-07.svg",
       "bytes": 9960,
-      "sha256": "6071353d7d77a8461ac8bd532636d8c8d15a0a4978136a9184cfb8184f01dd5c"
+      "sha256": "2f1a4702de5b315f40cc558b2fd6d1c3099e04cbbd931b233b2f665c070b7388"
     },
     {
       "path": "drawings/A/step-08.svg",
       "bytes": 9805,
-      "sha256": "63f83f9847a5a44e313515d27c2c643d078dec38bf72198c8caf2b1c584a50b1"
+      "sha256": "d6770cc0b4a35d23b31ffdd487392af9d440247eb2ac58f5d3d616fc9c0ea556"
     },
     {
       "path": "drawings/A/step-09.svg",
       "bytes": 11412,
-      "sha256": "338a9621280f62d1c09091e8c0414411adcce83a1db60148aff7e1bb6e409cf3"
+      "sha256": "c188a6a33f3d570e7764c6c6f94d2c5ff52343060a295e2cddda3cb161c225af"
     },
     {
       "path": "drawings/A/step-10.svg",
       "bytes": 12040,
-      "sha256": "43601a3acfb6ddf798fa74999e27ab4bad3e42bc7ddf881dcf7f7556471b1a4a"
+      "sha256": "3784d431aab4061d037a9aef2fe4f23167562993b5fc9debe8041541a24a9d77"
     },
     {
       "path": "drawings/A/step-11.svg",
       "bytes": 14609,
-      "sha256": "21408939420307e349f30eb3d597d00a7816636bbe47f5c3cab432e1ca985d8e"
+      "sha256": "6e99a413b2a3e8edc5c3e7f1e9115d781ae97008b5cbc80f42e8add587c82154"
     },
     {
       "path": "drawings/A/step-12.svg",
       "bytes": 15698,
-      "sha256": "e479ee601a4369c617f8b0e6cac8b73a4ed8b55989f2e33a7c145745d710e0bc"
+      "sha256": "fbbecf5a7b11a8007b9e8110c9b1a4209654aa6e1dba6d12d0b6a012fc70784a"
     },
     {
       "path": "drawings/A/step-13.svg",
       "bytes": 16773,
-      "sha256": "b06602061e405448958e53c2c466f78a8536e179302bc281f642bedd709ae0fd"
+      "sha256": "1da577e09985cc49e1f0e15a9888dd643d497eee8e8bcded2a5618ca5698d9ad"
     },
     {
       "path": "drawings/A/step-14.svg",
       "bytes": 16585,
-      "sha256": "39145feebfd0a195940814a10ce9c4f6f7fface3b2451cd2865800901b4b3037"
+      "sha256": "09722fb60cd67b5de1e7892a78fef0cb2a5818cd2ba5db481d46971222f9ba6f"
     },
     {
       "path": "drawings/A/step-15.svg",
       "bytes": 16720,
-      "sha256": "ff386a09d2ff72f2cc5eabde63075063a94f37dca1c847ca407e64380d9b4ee8"
+      "sha256": "54aa27b24c54c1017fa54f9e0a1ddd571bd55536bc642cae187e5c7cf150b0ff"
     },
     {
       "path": "drawings/A/step-16.svg",
       "bytes": 17973,
-      "sha256": "e29d6a3acfcbcd9291cd1800d14da1f8a4f16cdc6273ec4bb0343dd4aec91176"
+      "sha256": "2590e90a72c0d3aa2b70e549826441138c0f20b36b58fd8a64605c599643c6c2"
     },
     {
       "path": "drawings/A/step-17.svg",
       "bytes": 20035,
-      "sha256": "a66a14c662ee22ed0c46f7e06599cdd18ef8fe0c7cff0777e651c01fa65aaa83"
+      "sha256": "b71a69576a12822b542985cab5fb7e6c56219bab6cea7f6d0d6277f72a033fdb"
     },
     {
       "path": "drawings/A/step-18.svg",
       "bytes": 19827,
-      "sha256": "f97b2b150dfb48c8be49aa116d9b121c7bee1d11b4499ce254c100e6eeda2b6c"
+      "sha256": "0fa3752c6042d767cc5563ba2d5c3b9163da21c1371d56d06706d32facac9df0"
     },
     {
       "path": "drawings/A/step-19.svg",
       "bytes": 21899,
-      "sha256": "ba64b6d8c18d3a50689fed0f851942f13e52583a1ffd3e65a63231c5bfc09212"
+      "sha256": "270829b87b05cbed693df1dfa6031c7e4a067b0077146bd731adbbc575e852fb"
     },
     {
       "path": "drawings/A/step-20.svg",
       "bytes": 20422,
-      "sha256": "479847b6ef2a5bcc6144a9bc1201307813581699302c4bb528d18950e9841780"
+      "sha256": "30159aefa8c0278010ff82c08d7e5827b8a0962f556f5ae9461b2a79aa74c2f5"
     },
     {
       "path": "drawings/A/step-21.svg",
       "bytes": 20898,
-      "sha256": "4ef0814a5e086e4e0479201d40c18b4e0562aa720506a64840373544b26b24da"
+      "sha256": "34e7f3c2c4b6fcc98a2e57b4add3fa0a15da8047d99c24eed6fdab409a4a783c"
     },
     {
       "path": "drawings/A/step-22.svg",
       "bytes": 20072,
-      "sha256": "6f47a0ece204f9eda31fc6b4155e992a8091de6ffbc3453f5bd3244ef72a571c"
+      "sha256": "c46046b55197c08b3be6d3cfc2d1189ca0ac8ac232f2a92b75d8148ba39a411c"
     },
     {
       "path": "drawings/A/step-23.svg",
       "bytes": 19595,
-      "sha256": "b4ff5352f1f8796fe0e0bad8f90f2dd9753677408932ddfa2d7d983eda42dc92"
+      "sha256": "99814c82df72fdea6b383c89c36efe462f5defef9c4dc5e458cd6ff9669440e5"
     },
     {
       "path": "drawings/B/bom-1.svg",
@@ -1076,13 +1151,13 @@
     },
     {
       "path": "drawings/B/exploded.svg",
-      "bytes": 1226909,
-      "sha256": "e6a2deb130b30a32dc8cdd26c5dcfe26c23c0687df09d034a4d6d36e18967222"
+      "bytes": 1149171,
+      "sha256": "b74c655d1680f2dc6a96d2167444768e08b13e1a4d33e3bc5e2f3ac5404331d8"
     },
     {
       "path": "drawings/B/overview.svg",
-      "bytes": 1059051,
-      "sha256": "f374f6614aa2fb980861855545511b17ddd986a4a1a7d6845bc58783665b4a4b"
+      "bytes": 1035972,
+      "sha256": "bb1d873335f3753c5a0f3ab454f5f272e49c4cbc5b44f5003797da7c45e7af9c"
     },
     {
       "path": "drawings/B/step-01.svg",
@@ -1111,118 +1186,118 @@
     },
     {
       "path": "drawings/B/step-06.svg",
-      "bytes": 10388,
-      "sha256": "7adf4209c1fa2a39eaf864592ab71d78315db7c39686187ea303c82137d244da"
+      "bytes": 10370,
+      "sha256": "72d0d9b89ca6aa7ad48092ac8ef686b2da7a6068ababb5865626746913c59d94"
     },
     {
       "path": "drawings/B/step-07.svg",
-      "bytes": 11327,
-      "sha256": "307240b36db735051ccbdbdbd365fda9789c9d63ba33594d37ec7e191f62a27b"
+      "bytes": 11316,
+      "sha256": "5ac81454637a30fcf29ab4dc6fae9c613cf503c4810970e5296977092e037f76"
     },
     {
       "path": "drawings/B/step-08.svg",
-      "bytes": 11812,
-      "sha256": "42dd2ff880aa6f184c9c5c3ec720a4096668179932e29cded438a7cfac80d2d2"
+      "bytes": 11801,
+      "sha256": "ebc1f3488824fa9f5720251d46c6b867c76b575df5c29bca222f636a56010c0a"
     },
     {
       "path": "drawings/B/step-09.svg",
-      "bytes": 13543,
-      "sha256": "fa91e96cc0fcf60f746cf23b97df72688b31ef939fd281150c5880181f34233f"
+      "bytes": 13532,
+      "sha256": "e65f3e1bccfdc3ff332ebf330d18289cfed2292efaad89768da9d1c4712be69f"
     },
     {
       "path": "drawings/B/step-10.svg",
-      "bytes": 14311,
-      "sha256": "4d3ad0ad9fe967f64ada930bf0e4d60b3b2ea0431f46a8c9f0f6b74254426086"
+      "bytes": 14300,
+      "sha256": "faa7c2dfe88fbd66c6ca9dadc562e3411d608bf384b09adfedfd5bd1adccca7b"
     },
     {
       "path": "drawings/B/step-11.svg",
-      "bytes": 15762,
-      "sha256": "f6dfa9188253d4ab7ad37595413ea965b86671b65df632fdb2bae529ee8b5431"
+      "bytes": 15751,
+      "sha256": "b00050e01e5cce92b6711aacea7fc188904f92406d6cc86209a2b15c7e7438b0"
     },
     {
       "path": "drawings/B/step-12.svg",
-      "bytes": 17335,
-      "sha256": "28f4225eb6adb512040cc8fd69c8bb11baaffdeccea1d39fcdc1194f511b0de1"
+      "bytes": 17324,
+      "sha256": "0534b0a4c2037379380dac96c22da28eb0fb9a8374c1c9fa12412aab3f229387"
     },
     {
       "path": "drawings/B/step-13.svg",
-      "bytes": 20297,
-      "sha256": "2529eb38b68356faa86f5705bcff0efb068e0dd3a182890519f4a37e3664b04c"
+      "bytes": 20286,
+      "sha256": "214ffce9c0dadbbf17644a01797d13c649f88fc797ead76b09ac4bad09cbdee4"
     },
     {
       "path": "drawings/B/step-14.svg",
-      "bytes": 19928,
-      "sha256": "d29aa9dae3842fd8b5a9267e0976330be9fedf85f8fa28d0e4aecc26c32a690b"
+      "bytes": 19917,
+      "sha256": "9fa90e3114b8d3bb35113e3fe79358a45ae645f396b5a408db6596e71bd20958"
     },
     {
       "path": "drawings/B/step-15.svg",
-      "bytes": 22935,
-      "sha256": "fcae929efcd2511c8be122acdcc1f60d902ee673b082b6cb1f103f7fcacd4e3e"
+      "bytes": 22924,
+      "sha256": "bf906ee579e8716f6506466dbac2d1d4e96d7563ee4511f6af6650d4d2d76fc4"
     },
     {
       "path": "drawings/B/step-16.svg",
-      "bytes": 21866,
-      "sha256": "87270143d8c429aa42f378a8f4e96dbb437f8f6ef0586f22a2e5dbf19f74286e"
+      "bytes": 21855,
+      "sha256": "29526046da0abf93fe6de05cb3fa8d253614e9b4b6b4d047541a2a34491e24a7"
     },
     {
       "path": "drawings/B/step-17.svg",
-      "bytes": 22740,
-      "sha256": "aa0911c153d69a0275e62066ed6017caea99bfad26e8ace016bb8d35bd5de26b"
+      "bytes": 22729,
+      "sha256": "a2b8f446c341d2e6415eafe6310eed7d58b353544132dc4c1c93f069f947996d"
     },
     {
       "path": "drawings/B/step-18.svg",
-      "bytes": 24335,
-      "sha256": "450c7b9e68707ebab2a19f082945ae5d344b19a82efde157c29a8ff1b4ecbabd"
+      "bytes": 24324,
+      "sha256": "5a78fa5215529b9be96367bf9876197681b823bf285bb0c40eefb0795e889324"
     },
     {
       "path": "drawings/B/step-19.svg",
-      "bytes": 25476,
-      "sha256": "1d90312c2aa716707af0b2ee0ace7973ebaae87b4928269ac1ef068365770823"
+      "bytes": 25465,
+      "sha256": "34e7833b04f5908650ba532c83c8c9553101ecafdd591f246a216eaa4f4e7696"
     },
     {
       "path": "drawings/B/step-20.svg",
-      "bytes": 26551,
-      "sha256": "44672d245be1d4378d205ce0e1bf9d13be2e1c48bd64df598052f3d610276403"
+      "bytes": 26540,
+      "sha256": "0928ff0e340e2b8bc214948c3a403d4c77e3b8e4c14872948882ad968843520f"
     },
     {
       "path": "drawings/B/step-21.svg",
-      "bytes": 27678,
-      "sha256": "6907b52423647a180a3fe345741a2fe16360aef7d159f4c7c002d0ea2f9d9f70"
+      "bytes": 27667,
+      "sha256": "fb59b70e77d693d3565c8a6bacf49b1f94a266d5190c38c5c44317b523bc7fbb"
     },
     {
       "path": "drawings/B/step-22.svg",
-      "bytes": 28753,
-      "sha256": "019e661169b3095f11bf988dea8f9ad38750b1c350d45e8b34a8cdb2e23c3620"
+      "bytes": 28742,
+      "sha256": "a9191cef8932456c40d52148aed1dcd615604cfecf229cb472d811955fada3eb"
     },
     {
       "path": "drawings/B/step-23.svg",
-      "bytes": 29866,
-      "sha256": "6d2e3d87e6ada60d151485dc492ead0494fa8fcd302cde9ce36a91a5eef44df2"
+      "bytes": 29855,
+      "sha256": "a60633c574a49e04fe1051047ccad81c4ea2e61ec529d397ce09d5d4c71ef050"
     },
     {
       "path": "drawings/B/step-24.svg",
-      "bytes": 30955,
-      "sha256": "e6491820af2b52f260f32028347d6a0bc650af12193f9e7b93e0fea44ce3cc4e"
+      "bytes": 30944,
+      "sha256": "cdce7d053531176d0c89c4193d2053a8792ff150479d2e2ceef3462244ebd1e3"
     },
     {
       "path": "drawings/B/step-25.svg",
-      "bytes": 30799,
-      "sha256": "13e85b6719cce5bf7635c06cbf54d1d0cf8d98df90820ed0db73c3c5fe338966"
+      "bytes": 30788,
+      "sha256": "56df8eeb382b6dc58846ee94f7290a6601fefe7e129261481cb1f832689a7527"
     },
     {
       "path": "drawings/B/step-26.svg",
-      "bytes": 30935,
-      "sha256": "e689514b2c71d8e675934e9aa77ef5dbee5dec037f2b566f884aca3cd5fd58be"
+      "bytes": 30924,
+      "sha256": "42e587e634c5cfe78921dff3741e0ab5c5327b441326e2e48553aa74fe323364"
     },
     {
       "path": "drawings/B/step-27.svg",
-      "bytes": 30962,
-      "sha256": "6c09adbc48ba757b6de862487eb8f4df05e9949b5e916ac419b8b41f3af6073a"
+      "bytes": 30951,
+      "sha256": "6cc69f153f528170286444c65e77d21d45e2812fcc095d2f14a284f7574a61f3"
     },
     {
       "path": "drawings/B/step-28.svg",
-      "bytes": 29528,
-      "sha256": "397c92257021b742e20d4e22a8b1b07d182a386e4787ab90c23f97c8aae4ee22"
+      "bytes": 29517,
+      "sha256": "99675bfb07621c44095a6e2e4a72e014fb058693a66912fd165afca8914ada9e"
     },
     {
       "path": "drawings/C/bom-1.svg",
@@ -1231,13 +1306,13 @@
     },
     {
       "path": "drawings/C/exploded.svg",
-      "bytes": 1636810,
-      "sha256": "0d5427b036f7dd96a7be0fd54c6a4a0a552dd69970fb3af4310ac32220e32819"
+      "bytes": 1561990,
+      "sha256": "6f92823979c02177b83b9a123febae0b05b5fa65247f6d049c17f2440842563c"
     },
     {
       "path": "drawings/C/overview.svg",
-      "bytes": 1629039,
-      "sha256": "4c3d3150b4738269a021cc3c6b4999951c783b13b93b7f35a8346304bf14c4e6"
+      "bytes": 1609718,
+      "sha256": "4167745a0e3400d735c51f912ca8ede66d6b9dea2cb995f915c9f49e5141b985"
     },
     {
       "path": "drawings/C/step-01.svg",
@@ -1266,148 +1341,148 @@
     },
     {
       "path": "drawings/C/step-06.svg",
-      "bytes": 12399,
-      "sha256": "67d1d89c5a2978499efef925f759ed1dce4d9c7aa3ab3a5d28f1726c82572173"
+      "bytes": 12377,
+      "sha256": "28558d9560bcd6add37deccedd34661a28506e3c673d8238e2ba42bc89f90cd2"
     },
     {
       "path": "drawings/C/step-07.svg",
-      "bytes": 13307,
-      "sha256": "536118fa62cc96b0a50e09922a675559f63ce595201ff89605a30019c3ef2e8d"
+      "bytes": 13294,
+      "sha256": "0c47849d9e7070a21c0fea04e2f28fae5aef0894a0e5032a87eae72f4321e1a8"
     },
     {
       "path": "drawings/C/step-08.svg",
-      "bytes": 14244,
-      "sha256": "fa78819307b61bfc524d3f09eb5a12dfc60040303fb913287def2c9c70aaace0"
+      "bytes": 14231,
+      "sha256": "9ef28e412a7979afd3dbea27a87f461230746625b1b416cdb163a7e93136b952"
     },
     {
       "path": "drawings/C/step-09.svg",
-      "bytes": 16157,
-      "sha256": "7154f743c914dbef22330f0a9390766fe8136a480552e024524e1340388935e9"
+      "bytes": 16144,
+      "sha256": "07d478ccf28945c0b94d62379b70ebba349f52858cc0aa83ca2a0335e4f63a01"
     },
     {
       "path": "drawings/C/step-10.svg",
-      "bytes": 16983,
-      "sha256": "e6144f935efabfaf5530aa6e01db7f855539a21bd0aee9d000343ae5f1718a84"
+      "bytes": 16970,
+      "sha256": "9a2a5ef4befb616d4b72f279d4e6d36f487bb97ca885dbcc713104028d7e8a6f"
     },
     {
       "path": "drawings/C/step-11.svg",
-      "bytes": 18456,
-      "sha256": "684d5b9e4f1282bdd8b8034daf6b60d84c720bc0c7f18f15d9328e5003d48e05"
+      "bytes": 18443,
+      "sha256": "05428724ea0709676d0e5b6bc865a4c53f86dcbd751d4e4b091b5d8ae436c202"
     },
     {
       "path": "drawings/C/step-12.svg",
-      "bytes": 19458,
-      "sha256": "bf9a3166025dd38773a8a92f63d357119beedf09e2ae704009ecb1eee746039f"
+      "bytes": 19445,
+      "sha256": "5058dc2459da49f007e8ac11c1fdb6a9442813ceaf9e1c7f432446c46a6b6288"
     },
     {
       "path": "drawings/C/step-13.svg",
-      "bytes": 21017,
-      "sha256": "87795ceff6fff294c4d4e9b89125ad12add5038706ac7ceffc1949a6f4864a2c"
+      "bytes": 21004,
+      "sha256": "907e4b5f8ad6783d37b2cfc0539825e7c79c3fbf3319b811c731d9e475c7289b"
     },
     {
       "path": "drawings/C/step-14.svg",
-      "bytes": 23450,
-      "sha256": "2726b41de89fe2fd0d76a2c667b6483e571e18f45043f46818d9c238d6a81393"
+      "bytes": 23437,
+      "sha256": "5ebc8711c169c49433ae0013acab6bdcd38d1658826a6cb062f0842c0c359468"
     },
     {
       "path": "drawings/C/step-15.svg",
-      "bytes": 24939,
-      "sha256": "fa68f70238425f6e4fdee6d76d3a72ce90aa499d45c452b32ad316a55d1b2d8b"
+      "bytes": 24926,
+      "sha256": "147f69c641a55be2523644d6f26cafac218a74f58526d3329ac0010ad090e651"
     },
     {
       "path": "drawings/C/step-16.svg",
-      "bytes": 26349,
-      "sha256": "0e65ace0aca010b0d7b4ca91903f37087ee70024de282df22ca515de3265a52d"
+      "bytes": 26336,
+      "sha256": "b8c9d25e755459eba1989a9fc325ae43b157a37247d146e81093dd77968494af"
     },
     {
       "path": "drawings/C/step-17.svg",
-      "bytes": 27838,
-      "sha256": "8fc3d169a1ad4ce43ba309785d29fc4e300a6c36010798e322876bedd3649c82"
+      "bytes": 27825,
+      "sha256": "68892af335f3d0962c6c57f5178633884863aa040f68969de71a6876416dd105"
     },
     {
       "path": "drawings/C/step-18.svg",
-      "bytes": 29228,
-      "sha256": "fdfa4ff72e3a5c56fe4a6e2a89745c169345cdfc2e15cf95c49dbeb507e6dc0c"
+      "bytes": 29215,
+      "sha256": "583151be702d9aaaee1c7d939643ffde5861b5ad8f2a6e040d9eabbb3a6435f2"
     },
     {
       "path": "drawings/C/step-19.svg",
-      "bytes": 29387,
-      "sha256": "04594ab1d906e995561a6d6b3a2ae44c66d5d4413544bd87ae54620976a690aa"
+      "bytes": 29374,
+      "sha256": "902791ec08b23126afe59579f41dcec44071ad35e7147bd76311b94e38883c3f"
     },
     {
       "path": "drawings/C/step-20.svg",
-      "bytes": 29848,
-      "sha256": "2f5aa8002e2951e1d61755bd17323e82453775fa81c374ee3a3ac1c8cb3bbee4"
+      "bytes": 29835,
+      "sha256": "ae192fff23a3c86208901297498cc395115b008a40ab0e6a0ae49bc16b634c21"
     },
     {
       "path": "drawings/C/step-21.svg",
-      "bytes": 32049,
-      "sha256": "febe6350c62dfad6cf5fa09f13a94181bb7f6f59d0be5d456f9381ec66010a82"
+      "bytes": 32036,
+      "sha256": "4957a40dd0d6602ee2ebc5d60cd2d413eb19237c92fa494d55163fef0b96f621"
     },
     {
       "path": "drawings/C/step-22.svg",
-      "bytes": 33308,
-      "sha256": "901f5e2c021bafe2621c94a1425ddfe285d545d39bf728761e4bda3fda423c53"
+      "bytes": 33295,
+      "sha256": "f88a41857795ea183be7152aa2e2980d7f78bea6ae8b9e46dfd327e3d6099f40"
     },
     {
       "path": "drawings/C/step-23.svg",
-      "bytes": 34539,
-      "sha256": "bc6dc6d019745161cc4de8ad32c2a769b0ebe3bb9c03a0ff83240493a3175fc0"
+      "bytes": 34526,
+      "sha256": "1276cb5b29010e28761c47b4fe575e6935721ec3f771de57e6524be871e47503"
     },
     {
       "path": "drawings/C/step-24.svg",
-      "bytes": 35816,
-      "sha256": "c995a5b1c32ae05deca83d5140cc9320773d8fae80b4dde8532ae3493a6b3bca"
+      "bytes": 35803,
+      "sha256": "01d0f57fe0ea05a53dae7a16b046edfc32080246bcae0bce9e17b73972ce51a1"
     },
     {
       "path": "drawings/C/step-25.svg",
-      "bytes": 37065,
-      "sha256": "085cfd3699b0ca30e09857eeb4c179ac2b44b73825f6367daa92548f1a839fe3"
+      "bytes": 37052,
+      "sha256": "f1a72847946e9c7ae3e9133aa85b33d2f266638b579a237e3f3d699dce51d060"
     },
     {
       "path": "drawings/C/step-26.svg",
-      "bytes": 38324,
-      "sha256": "2b78fca0e4af73266cebda1fba6aa98945317bfbac01d3b07cccd0830b2fc77e"
+      "bytes": 38311,
+      "sha256": "64135afc50b02effadb93392ba812266ad9e62b8b9687d7e6803478a4293b6ce"
     },
     {
       "path": "drawings/C/step-27.svg",
-      "bytes": 39573,
-      "sha256": "fb1345f388d4a55d8abf0544054bc94b5ab1860c735b25c41d71a8df9c623239"
+      "bytes": 39560,
+      "sha256": "5cdf1ea694554bb84da9db6345941115661689d4697e62dee9c3a13ebd06c44e"
     },
     {
       "path": "drawings/C/step-28.svg",
-      "bytes": 40814,
-      "sha256": "034e38fe505dc7404ca5032ed0174a132df90ae7fe1e0be1436a4b5d4e0b84cc"
+      "bytes": 40801,
+      "sha256": "d58ce76a2d718cea99a6a2afeed5b1a478a1a49a953cad0565f15feb072dd456"
     },
     {
       "path": "drawings/C/step-29.svg",
-      "bytes": 42081,
-      "sha256": "42d8169d5aa29d76dfb05e3f092725c359add7dd864031e8631e5c6bca8a4440"
+      "bytes": 42068,
+      "sha256": "b9c3293b0cd04f71f878dd99e764a2d99bee503dc3c171e1fde6e420607eb8fb"
     },
     {
       "path": "drawings/C/step-30.svg",
-      "bytes": 41449,
-      "sha256": "6b57cd76b50ef9b0a524c6ff4acac01309f70f7d37e528cb3ae0d04f0e0e3f0e"
+      "bytes": 41436,
+      "sha256": "60d6d786fc71da472680e681831de8110a7d24e5d2c44f190e2889266658b8bf"
     },
     {
       "path": "drawings/C/step-31.svg",
-      "bytes": 42251,
-      "sha256": "624ca45a2171c6cde0b39ba3f291e4d2505d20e24043d34a626ecb2485d92bd2"
+      "bytes": 42238,
+      "sha256": "5c0ee067ff408b8255a656ac39591ee07e672fe77dbae8e21de3127187fd355c"
     },
     {
       "path": "drawings/C/step-32.svg",
-      "bytes": 41220,
-      "sha256": "d4ba80c0741f365a1d141f40264a36919b47249fb27b733a3244e20c08426b9c"
+      "bytes": 41207,
+      "sha256": "2952f21a09499ccbc1b108f4aea7b2cd2fd1aefc0ed3341b87b01b7c7c279009"
     },
     {
       "path": "drawings/C/step-33.svg",
-      "bytes": 39763,
-      "sha256": "c26d92936fcd8af92f83f9407b69882bd5fa48f778bacee96854bd561924f4d4"
+      "bytes": 39750,
+      "sha256": "bd800b54edbb4fd0fcf42dc75eb09dda5e8ec1c2589add75d59151848fbabb71"
     },
     {
       "path": "drawings/front-interface.svg",
-      "bytes": 13797,
-      "sha256": "6adac14eb27138e46a0bc073e7fe48dddb1b47c776a06e717daafb28c8b16c73"
+      "bytes": 13840,
+      "sha256": "6b3befab29c33250af3fc02510030a2e218b3108fe3e99403629c898b9bfef4a"
     },
     {
       "path": "drawings/interface.svg",
@@ -1756,23 +1831,23 @@
     },
     {
       "path": "drawings/parts/NP3-TEXT-A.svg",
-      "bytes": 309187,
-      "sha256": "08154c50f0640c2eee768475c3887b0a3ed9427fbf001aec0dbbe9eb9d9bef0e"
+      "bytes": 251770,
+      "sha256": "d9c2862e0bf39466f2264bf9fc8453f0e9f4800d86037dfb7a33ebae596ae4d6"
     },
     {
       "path": "drawings/parts/NP3-TEXT-B.svg",
-      "bytes": 318117,
-      "sha256": "83b1d08f127f3b857199f4ea9a18310d0cdac82073507f8b8f0d3c821e6bfec3"
+      "bytes": 263813,
+      "sha256": "660ebb8d4fa9820e23763766f2b8b2be41758d2bbdd5a05b4c1c7c0b34cd07dc"
     },
     {
       "path": "drawings/parts/NP3-TEXT-C.svg",
-      "bytes": 326840,
-      "sha256": "e19705e54f3cabbdbff402a85aafaf2f57ec0ce711b153dfde61f4cde64d7667"
+      "bytes": 273059,
+      "sha256": "f575a777883f782b80dfe4e73c80b542653a3614b5008c93466f502e44eefdda"
     },
     {
       "path": "guide.html",
-      "bytes": 40524,
-      "sha256": "e130e49a6b6acc6ecafdc20ecfd4363d21baadadf034dc98b3fb09918debd9d1"
+      "bytes": 42379,
+      "sha256": "4340e846fb2832de7e6c5fe8722b486bc5601514e0428f5a99f965983a11c903"
     },
     {
       "path": "guide.js",
@@ -1786,13 +1861,18 @@
     },
     {
       "path": "index.html",
-      "bytes": 19205,
-      "sha256": "6bcd5f9624e0c0dd894796e29ac6af43a9fce663634d33ee350b0ae915496f63"
+      "bytes": 19548,
+      "sha256": "0986243066e22385b6a1d238af74cf8b71119df317ebaf6cf032c0612bd9e902"
+    },
+    {
+      "path": "lettering.html",
+      "bytes": 9221,
+      "sha256": "71064ddbb51fed1d4655379c9ecfb526c3cff8b6d4505e4c7d3a53f7be200985"
     },
     {
       "path": "media/A-assembly.mp4",
-      "bytes": 802497,
-      "sha256": "cccdbc311ed6b81e05375721643cd01a32d3ae293892b440b1d2a9b626761076"
+      "bytes": 788704,
+      "sha256": "a01b44ca18f87fd2d7e9bae81e39ec45c71aca84535b00223decd89dfdd6c3ed"
     },
     {
       "path": "media/A-assembly.vtt",
@@ -1801,23 +1881,23 @@
     },
     {
       "path": "media/A-base-front.png",
-      "bytes": 552925,
-      "sha256": "5b9755ce6fa9b0c51462966214d542b2dc7a5ec4d107fc4bc3b1c97b72caac05"
+      "bytes": 556398,
+      "sha256": "a5c9746cb8bfb5dc0e3debbd0c7ec757218abdaf6e9d82bbdc30e2d5259cea6b"
     },
     {
       "path": "media/A-compare.png",
-      "bytes": 356941,
-      "sha256": "f07f61b530b39d6aa738a8b31f7bd8c898932fc1c574b462c43a1fe5d1a2414d"
+      "bytes": 357828,
+      "sha256": "1985d7a75da7c29d3f4f5ef1d79a4f1955d1b4998db8a83011b5b03bc201f051"
     },
     {
       "path": "media/A-hero.png",
-      "bytes": 943232,
-      "sha256": "c4bd9cc0d0dc2d0d085130b8718a287bb63193fa61a3fdecb944e444f1e8079a"
+      "bytes": 945199,
+      "sha256": "048fe8b981dae6cfa722973b94d3ae3247e9d239ce3592b65549d561cee82dd3"
     },
     {
       "path": "media/B-assembly.mp4",
-      "bytes": 1126967,
-      "sha256": "ed117b814a98f4281477d5b269e0c321a4d60743ae495f82cd768cb07a4e6fd1"
+      "bytes": 1141698,
+      "sha256": "f74aac12b6fa56d919fefc8739395009b726a0fb97f9032f99db4c0c8fd2d08e"
     },
     {
       "path": "media/B-assembly.vtt",
@@ -1826,23 +1906,23 @@
     },
     {
       "path": "media/B-base-front.png",
-      "bytes": 625101,
-      "sha256": "c0ff1b588c27326dec9beeb8a3c8d36b6959351135a26b5bfdce2102e6a3dc30"
+      "bytes": 626175,
+      "sha256": "0675649c9cb39b7ad46f9fde25bab7ead4014cdb13451805c685af052c564a31"
     },
     {
       "path": "media/B-compare.png",
-      "bytes": 405765,
-      "sha256": "442bf3ad7a715be240e83cb9106260abc421704672c87cb15e8fed930d70ebf9"
+      "bytes": 405366,
+      "sha256": "8ccda71e7fc953dd08381a0df73eca538cbfde7dba608edb7cf870638235af4c"
     },
     {
       "path": "media/B-hero.png",
-      "bytes": 975652,
-      "sha256": "790bf14a90456b70d6f078a82ee8e1c372fe7821977b3a46d371ec3f7e3710f6"
+      "bytes": 975826,
+      "sha256": "9b4699c38fadb38647f9bfc45dc61f675eddfff088ed51825bb464a2daf4cbac"
     },
     {
       "path": "media/C-assembly.mp4",
-      "bytes": 1591320,
-      "sha256": "4f68f431500cf4df6fb4c6e3ca95c39bec3432e4ba079dbd9d6bede29a1a8b14"
+      "bytes": 1583305,
+      "sha256": "103c6ea967d11c3fee68b9328724796bacb929a6d977de111850193cae5a81c0"
     },
     {
       "path": "media/C-assembly.vtt",
@@ -1851,28 +1931,58 @@
     },
     {
       "path": "media/C-base-front.png",
-      "bytes": 619115,
-      "sha256": "d32c152d2bb04d2a10d058fc4becc9eebf8a1699dc01040ec12e251e595bb0ee"
+      "bytes": 618514,
+      "sha256": "22304bc874f9eec7855adae85eab94240032781a0bdcb388ab7d8a56dd8c9492"
     },
     {
       "path": "media/C-compare.png",
-      "bytes": 479903,
-      "sha256": "8c88878cc9ee2ca704d9860d4d30289ae15cb3090a73247dcf8b8bce972e1e36"
+      "bytes": 480393,
+      "sha256": "59ee2edc3ee0d8e24c5cf5a8117911b5df4ea71413562dc740e7b43dc8829419"
     },
     {
       "path": "media/C-hero.png",
-      "bytes": 1054457,
-      "sha256": "9a4c1119ec912b80f822868becf17c18fe3d46cad23e3edb15808441632d2512"
+      "bytes": 1053439,
+      "sha256": "7192a216651916771166c831ecf31dcd1e8804a4248c7003b8898fcf77549e6e"
+    },
+    {
+      "path": "media/lettering/A-lettering-before-after.png",
+      "bytes": 141678,
+      "sha256": "157803648f710a1f62ffe7983f5f9a6b7023c03b2c76dcc5184d1209911e906e"
+    },
+    {
+      "path": "media/lettering/A-lettering-before-after.svg",
+      "bytes": 189100,
+      "sha256": "53a02cd2fccb1c3924fddedff9eebffea9461acca3152a1690fbe000e058fda4"
+    },
+    {
+      "path": "media/lettering/B-lettering-before-after.png",
+      "bytes": 153337,
+      "sha256": "b79fc3d36cd73058260d62ef53560ff186db91c45c810e5064bc9a56a8039bce"
+    },
+    {
+      "path": "media/lettering/B-lettering-before-after.svg",
+      "bytes": 210294,
+      "sha256": "82320b2311a044e5d0da20ec8e44ecee15f6980cadc66da4d896513e499101d7"
+    },
+    {
+      "path": "media/lettering/C-lettering-before-after.png",
+      "bytes": 136722,
+      "sha256": "2114f48c4036cc3b032fc34f77eb21247fd537fb4fa57dcdb6fa9f1fe8e029fb"
+    },
+    {
+      "path": "media/lettering/C-lettering-before-after.svg",
+      "bytes": 229233,
+      "sha256": "d9cb8c53739de7a4717b992c87a07b48dce83817f71f4a4556f756f1786a4ebd"
     },
     {
       "path": "notices.html",
-      "bytes": 3074,
-      "sha256": "debf3667ecdcc46e6df37e4cebbd1120b58492a3935bc76a9ead8bd2cbc16a80"
+      "bytes": 3480,
+      "sha256": "2b71cf7a4519ab5bd0f4e4524ac127443cd58a1574e8ab5d10927a10bdcd07a7"
     },
     {
       "path": "privacy.html",
       "bytes": 4623,
-      "sha256": "872757aa31bfef730bd0df26b888837ef212b9e2d451f83a0e3d67d2f608033e"
+      "sha256": "a4bfbbd2669fca668f49b4b244730c3e4d55cbb99650e002aa495bbc1a19945e"
     },
     {
       "path": "publication-state.json",
@@ -1881,8 +1991,8 @@
     },
     {
       "path": "rebuild.html",
-      "bytes": 9618,
-      "sha256": "7a7c7cf88802cb6dd301a38295f6f258a3c0554ed818bd8b462e8d3263e2ca29"
+      "bytes": 11660,
+      "sha256": "28961a655c92294feb17bb232876fd0f93cbcdbe3fc4e3341a92927ef7cbe20c"
     },
     {
       "path": "style.css",
@@ -1891,13 +2001,13 @@
     },
     {
       "path": "technical.html",
-      "bytes": 13918,
-      "sha256": "6e9ab71671fdfd0f5afb63befadef4a06d7cb3ab054f3907c045bba103e55bef"
+      "bytes": 14554,
+      "sha256": "9e546f6ff152060b802a174ab0041401859d11c2974bd69ef53ad551d5736bd2"
     },
     {
       "path": "trial.html",
-      "bytes": 14236,
-      "sha256": "dc53616337caad59556acda1ec18526f043566d82e9ec2ef8c3907f8681fd4a8"
+      "bytes": 14507,
+      "sha256": "97e104b4ef3d36be8fef784a99927521e17624e28dac381f4a78723399e5978e"
     },
     {
       "path": "tribute/index.html",

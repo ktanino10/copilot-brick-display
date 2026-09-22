@@ -20,6 +20,10 @@
   "manual_controls_and_replay": true,
   "final_poses_exact": true,
   "captured_motion_frames": 120,
+  "three_piece_fast_replay_seconds": 9.202,
+  "cpu_throttle": 1,
+  "playback_button_state_mismatches": 0,
   "physical_fit_tested": false,
-  "sliced": false
+  "sliced": false,
+  "geometry_revision": "5.0-legible-plaques"
 }

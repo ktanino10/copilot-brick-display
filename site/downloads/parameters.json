@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "4.0-public-template",
+  "revision": "5.0-legible-plaques",
   "units": "mm",
   "status": "digital_prototype_physical_fit_unverified",
   "interface": {
@@ -27,13 +27,26 @@
   },
   "message": {
     "interface_id": "BASE-FRONT-NP3",
-    "lines": ["Same icon, New adventures", "github.com/YOUR-USERNAME"],
+    "lines": ["Same icon, New adventures", "github.com/USER"],
     "height": 40.0,
     "thickness": 2.4,
-    "relief": 0.8,
+    "relief": 1.2,
     "minimum_straight_stroke": 0.84,
     "font": "resources/fonts/barlow-condensed/BarlowCondensed-Black.ttf",
-    "line_bottoms": [22.0, 8.0],
+    "bold_font": "resources/fonts/barlow-condensed/BarlowCondensed-Bold.ttf",
+    "line_bottoms": [22.0, 7.0],
+    "printability": {
+      "targets": {
+        "counter_central_half_chord": 1.02,
+        "e_exit_channel": 1.1,
+        "adjacent_glyph_clearance": 1.05
+      },
+      "sample_deflection_mm": 0.002,
+      "actual_gap_tolerance_mm": 0.006,
+      "aperture_grid_mm": 0.01,
+      "aperture_uncertainty_mm": 0.03,
+      "not_a_physical_qualification": true
+    },
     "side_taper": 2.0,
     "rear_vertical_margin": 1.2,
     "rear_flat_thickness": 0.8,
@@ -85,7 +98,12 @@
       "base_segments_x": [18],
       "message_width": 102.0,
       "text_sizes": [3.5, 2.8],
-      "text_heights": [10.0, 7.0],
+      "text_heights": [10.0, 10.0],
+      "main_lettering_goals": {
+        "counter_central_half_chord": 0.9,
+        "e_exit_channel": 0.95,
+        "adjacent_glyph_clearance": 0.8
+      },
       "logo_x": 108.0,
       "logo_module_width": 32.0,
       "logo_diameter": 28.0,
@@ -113,7 +131,7 @@
       "base_segments_x": [24],
       "message_width": 142.0,
       "text_sizes": [5.0, 3.2],
-      "text_heights": [12.0, 8.0],
+      "text_heights": [12.0, 10.0],
       "logo_x": 148.0,
       "logo_module_width": 40.0,
       "logo_diameter": 36.0,
@@ -141,7 +159,7 @@
       "base_segments_x": [15, 15],
       "message_width": 182.0,
       "text_sizes": [6.5, 3.6],
-      "text_heights": [14.5, 9.0],
+      "text_heights": [14.5, 10.0],
       "logo_x": 188.0,
       "logo_module_width": 48.0,
       "logo_diameter": 40.0,

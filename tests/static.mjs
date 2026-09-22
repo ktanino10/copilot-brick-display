@@ -13,8 +13,8 @@ assert.equal(catalog.units, 'mm');
 assert.equal(catalog.parameters_sha256, digest(await readFile('design/parameters.json')));
 const policy = await json('design/publication-policy.json');
 if (policy.mode === 'generic') {
-  assert.ok(['Same icon, New adventures', 'YOUR MESSAGE HERE', 'YOUR DISPLAY NAME'].includes(catalog.message.lines[0]), 'Public generic first line must be an explicit placeholder/default.');
-  assert.ok(catalog.message.lines[1] === 'github.com/YOUR-USERNAME', 'Public generic account line must remain a placeholder.');
+  assert.ok(['Same icon, New adventures', 'YOUR MESSAGE HERE', 'YOUR DISPLAY NAME', 'YOUR TEXT'].includes(catalog.message.lines[0]), 'Public generic first line must be an explicit placeholder/default.');
+  assert.ok(catalog.message.lines[1] === 'github.com/USER', 'Public generic account line must remain a placeholder.');
   assert.equal(policy.public_text_approved, false);
 } else {
   assert.equal(policy.mode, 'public_personalization');
@@ -27,6 +27,7 @@ const required = [
   'downloads/part-drawings.pdf', 'downloads/validation.json',
   'vendor/THREE-LICENSE.txt', 'vendor/B612-OFL.txt',
   'assembly.html', 'assembly-guide/index.html', 'assembly-guide/runtime.js', 'assembly-guide/style.css',
+  'lettering.html', 'downloads/lettering.json', 'downloads/lettering-coupons.zip',
 ];
 for (const model of catalog.models) {
   const prefix = `downloads/${model.id}/`;

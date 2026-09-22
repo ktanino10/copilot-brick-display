@@ -6,6 +6,7 @@
 - `scripts/design.py`: discrete A/B/C layout and ID/step rules.
 - `scripts/freecad_geometry.py`: the only source for mechanical solids.
 - `scripts/front_nameplate.py`: five-course front receivers, independent plaque/logo and keeper geometry.
+- `scripts/nameplate_lettering.py`, `legible_lettering.py`, `legible_metrics.py`: exact glyphs, counter/e edits, added spacing and positive-material checks.
 - `resources/github-mark-relief.json`: normalized user-supplied mark contours; no input raster is distributed.
 - Real FreeCAD 1.1.3, Blender 5.1.1 and ffmpeg 8.1 were used for the delivered native files.
 - Python 3.11 with `requirements.txt`, and Node.js with `package-lock.json`.
@@ -23,20 +24,23 @@ python3 -m venv .venv
 npm ci
 npm run vendor
 
+METRICS_SITE_PACKAGES=$(.venv/bin/python -c 'import site; print(site.getsitepackages()[0])')
+export PYTHONPATH="$FREECAD_LIB:$METRICS_SITE_PACKAGES:scripts"
+
 python3 scripts/design.py
 .venv/bin/python -m unittest discover -s tests -v
 
 FREECAD_USER_HOME="$PWD/build/freecad-profile" QT_QPA_PLATFORM=offscreen OMP_NUM_THREADS=2 \
-  PYTHONPATH="$FREECAD_LIB:scripts" \
+  PYTHONPATH="$FREECAD_LIB:$METRICS_SITE_PACKAGES:scripts" \
   "$FREECAD_PYTHON" scripts/freecad_build.py
 
-PYTHONPATH="$FREECAD_LIB:scripts" \
+PYTHONPATH="$FREECAD_LIB:$METRICS_SITE_PACKAGES:scripts" \
   "$FREECAD_PYTHON" scripts/verify_cad.py
 .venv/bin/python scripts/verify_meshes.py
-PYTHONPATH="$FREECAD_LIB:scripts" \
+PYTHONPATH="$FREECAD_LIB:$METRICS_SITE_PACKAGES:scripts" \
   "$FREECAD_PYTHON" scripts/verify_front_nameplate.py
 node tests/motion.mjs
-PYTHONPATH="$FREECAD_LIB:scripts" \
+PYTHONPATH="$FREECAD_LIB:$METRICS_SITE_PACKAGES:scripts" \
   "$FREECAD_PYTHON" scripts/freecad_details.py
 .venv/bin/python scripts/build_drawings.py
 .venv/bin/python scripts/package_prints.py
@@ -75,6 +79,22 @@ The native `.blend` and every movie are reopened/decoded independently.
 
 The black text module changes to white after 2.4 mm; the independent logo changes after 2.8 mm.
 White relief is real geometry, not a texture. Print the two modules on separate plates; no AMS is required.
+Text relief is1.2mm in revision5; logo relief remains0.8mm. The existing rear carrier is unchanged,
+but assembly depth grows0.4mm. The generic URL placeholder is now `github.com/USER`.
+`METRICS_SITE_PACKAGES` must belong to the same Python ABI/architecture as the FreeCAD embedded interpreter.
+If the selected environment cannot import NumPy/SciPy/Shapely and the FreeCAD Qt wrapper together,
+stop and select a matching environment; do not skip the lettering checks.
+
+For a typography-only revision, the mechanical reuse check deliberately excludes text-only
+parameters/functions but still compares the full carrier/receiver/keeper/logo functions and dimensions.
+`--reuse-baseline` takes a locally preserved, verified source/catalog snapshot; it does not import old history.
+`package_prints.py --update-parts NP3-TEXT-A NP3-TEXT-B NP3-TEXT-C` rewrites only the three relevant3MF
+files after checking every original layout hash and occurrence count. Re-run `verify_3mf.py` afterward.
+`update_blender_plaques.py` swaps only that one mesh in each saved scene and removes orphan data.
+`render_plaque_revision.py --model B --baseline PATH` preserves the verified movie interval before
+the plaque appears, then actually rerenders all affected frames. It never relabels unchanged old footage
+as a newly rendered full movie. Use `build_lettering_coupons.py` for same-scale trial glyphs and
+`verify_lettering.py --baseline-cache PATH --preview-folder PATH` for actual native measurements.
 
 For a geometry-identical prior cache, `--reuse-baseline` checks unchanged brick-function ASTs,
 the interface and delivered mesh hashes. `--reuse-preview` reuses the approved B geometry only

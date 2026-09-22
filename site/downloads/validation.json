@@ -1,19 +1,19 @@
 {
   "scope": "A/B/C five-course bases, enlarged front text, independent right logos and vertical exploded display",
-  "revision": "4.0-public-template",
+  "revision": "5.0-legible-plaques",
   "publication_mode": "generic",
   "digital_checks_passed": true,
   "digital_checks_scope": "Native, mesh, package and software-output checks; browser execution is recorded separately.",
-  "publication_ready": true,
+  "publication_ready": false,
   "physical_testing": "NOT_PERFORMED",
-  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
   "mechanical_source_sha256": "2a97d70c72fea83d387fb1eb2fc9bcb99a05c672b185ab7b60c69e8ae0beb0b3",
   "parts": 71,
   "mesh_checks": {
     "status": "PASS_DIGITAL_ONLY",
     "library": "trimesh 4.7.4",
     "units": "mm (STL has no intrinsic unit tag; catalogue and header specify mm)",
-    "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+    "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
     "parts": [
       {
         "part": "NP3-KEEPER",
@@ -220,7 +220,7 @@
         "watertight": true,
         "winding_consistent": true,
         "connected_bodies": 1,
-        "positive_volume_mm3": 9776.2642,
+        "positive_volume_mm3": 10024.6532,
         "vertex_manifold": true,
         "bounds_mm": [
           [
@@ -231,10 +231,10 @@
           [
             102.0,
             40.0,
-            3.200000047683716
+            3.5999999046325684
           ]
         ],
-        "triangles": 60666,
+        "triangles": 56350,
         "bed_envelope_with_6mm_brim_mm": [
           114.0,
           52.0
@@ -645,7 +645,7 @@
         "watertight": true,
         "winding_consistent": true,
         "connected_bodies": 1,
-        "positive_volume_mm3": 13777.9799,
+        "positive_volume_mm3": 14016.1161,
         "vertex_manifold": true,
         "bounds_mm": [
           [
@@ -656,10 +656,10 @@
           [
             142.0,
             40.0,
-            3.200000047683716
+            3.5999999046325684
           ]
         ],
-        "triangles": 59472,
+        "triangles": 51656,
         "bed_envelope_with_6mm_brim_mm": [
           154.0,
           52.0
@@ -1170,7 +1170,7 @@
         "watertight": true,
         "winding_consistent": true,
         "connected_bodies": 1,
-        "positive_volume_mm3": 17880.9806,
+        "positive_volume_mm3": 18121.1532,
         "vertex_manifold": true,
         "bounds_mm": [
           [
@@ -1181,10 +1181,10 @@
           [
             182.0,
             40.0,
-            3.200000047683716
+            3.5999999046325684
           ]
         ],
-        "triangles": 59392,
+        "triangles": 47880,
         "bed_envelope_with_6mm_brim_mm": [
           194.0,
           52.0
@@ -1802,7 +1802,7 @@
         "units": "mm",
         "actual_mm": [
           143.8,
-          63.8,
+          64.2,
           187.4
         ],
         "appearance_saved": true,
@@ -1814,10 +1814,10 @@
         "new_unique_boolean_evaluations": 89,
         "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
         "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
-        "cad_material_center_projection_margin_mm": 30.4864,
+        "cad_material_center_projection_margin_mm": 30.4689,
         "physical_fit_and_stability": "NOT TESTED",
-        "fcstd_sha256": "2b17c49b972c5cf13d0f867ce6ced157056e4e532bb82ec48352e00b2a30ba09",
-        "step_sha256": "b2c835d1770ea31c383d9f9a65d87230230b4af5a75439c6330948cecc8e3772",
+        "fcstd_sha256": "4c4d8a5b9dce1e1e4fbd13d0568c6f26d2e29326a3517782ec21d81e84e43f26",
+        "step_sha256": "3fafc700f6ec07daca3c06441a4ce65fa90dcdb0094c6901eb8716f9e3aefeb5",
         "contacts": [
           {
             "lower": "A-001",
@@ -2424,8 +2424,8 @@
         "assembly_stages": 23,
         "frames": 286,
         "fps": 20,
-        "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
-        "native_sha256": "41d08df877aeafdef7c8e28e4e02decdf550be2798085ee2b93a9b51be6f379c",
+        "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
+        "native_sha256": "165f324cc024f9d482adf2d5974d28d1ff091d0aa7d47c60177efa54c88b82e4",
         "geometry": "same delivered STL; local bounds, units, IDs, colors and final transforms checked",
         "no_orphan_or_hidden_mesh_data": true,
         "animation": "all numbered stages checked after fresh native reopen",
@@ -2455,7 +2455,7 @@
         },
         "faststart": true,
         "full_decode": true,
-        "sha256": "cccdbc311ed6b81e05375721643cd01a32d3ae293892b440b1d2a9b626761076"
+        "sha256": "a01b44ca18f87fd2d7e9bae81e39ec45c71aca84535b00223decd89dfdd6c3ed"
       },
       "drawings_pdf_pages": 45,
       "privacy": {
@@ -2478,7 +2478,7 @@
         "units": "mm",
         "actual_mm": [
           191.8,
-          79.8,
+          80.2,
           238.6
         ],
         "appearance_saved": true,
@@ -2490,10 +2490,10 @@
         "new_unique_boolean_evaluations": 111,
         "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
         "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
-        "cad_material_center_projection_margin_mm": 38.8401,
+        "cad_material_center_projection_margin_mm": 38.8309,
         "physical_fit_and_stability": "NOT TESTED",
-        "fcstd_sha256": "cf07d2d2ecfecafb3cbd2f8897a026c1c32d8fb2d7ae1b0ae14aa1fd789e1750",
-        "step_sha256": "5b17eae7d8d040a25deeda8a0337889dbd5db83884f7e91cd1ca9e496e1d8f8a",
+        "fcstd_sha256": "912caa13adc3b5e43b92a62612b0b90a368b1e7ac68a2c43caac9d8439488237",
+        "step_sha256": "ea205de729dab37e882560f005801c03ad2b54b33cdaa8dcc8a49ad13d150b1e",
         "contacts": [
           {
             "lower": "B-001",
@@ -3545,8 +3545,8 @@
         "assembly_stages": 28,
         "frames": 326,
         "fps": 20,
-        "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
-        "native_sha256": "61ab055e292e4fee25db6ee812729a58a3dd00f138a30b6c5c235a4f75d3a977",
+        "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
+        "native_sha256": "5cff9ddef62a1765ae611b7548960f83963f4fd947fea0a9be5c945ff726db5c",
         "geometry": "same delivered STL; local bounds, units, IDs, colors and final transforms checked",
         "no_orphan_or_hidden_mesh_data": true,
         "animation": "all numbered stages checked after fresh native reopen",
@@ -3576,7 +3576,7 @@
         },
         "faststart": true,
         "full_decode": true,
-        "sha256": "ed117b814a98f4281477d5b269e0c321a4d60743ae495f82cd768cb07a4e6fd1"
+        "sha256": "f74aac12b6fa56d919fefc8739395009b726a0fb97f9032f99db4c0c8fd2d08e"
       },
       "drawings_pdf_pages": 54,
       "privacy": {
@@ -3599,7 +3599,7 @@
         "units": "mm",
         "actual_mm": [
           239.8,
-          111.8,
+          112.2,
           286.6
         ],
         "appearance_saved": true,
@@ -3611,10 +3611,10 @@
         "new_unique_boolean_evaluations": 110,
         "boolean_cache": "Only identical part IDs, rotations and relative translations; every native local bound was checked.",
         "downward_assembly_access": "analytic bounding sweep + exact final socket/slot solids",
-        "cad_material_center_projection_margin_mm": 53.1575,
+        "cad_material_center_projection_margin_mm": 53.164,
         "physical_fit_and_stability": "NOT TESTED",
-        "fcstd_sha256": "0d33157315c52900f250792595f2b6c6ea58a888557ba25674a05deeeaf7f371",
-        "step_sha256": "3f016ae01db71f52494dc0c090674ec96a1cb6e41c61fff888e69f254c638533",
+        "fcstd_sha256": "eacd3688942a621db6c9f7e56a57216471519e4b287a6cc28e3b3317d0c0470c",
+        "step_sha256": "e3761398af81a5aff7734a996bcc8b85f50e6940e6358d96d1171553ceefca72",
         "contacts": [
           {
             "lower": "C-001",
@@ -5296,8 +5296,8 @@
         "assembly_stages": 33,
         "frames": 366,
         "fps": 20,
-        "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
-        "native_sha256": "324d342af68fb4d0ef670def30e46c7feb63e4a174efe3229d00a377e44e2bb4",
+        "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
+        "native_sha256": "d81e51f3eccd839f01928a869a756a5024d0f70aa1fdc80448b7cc4d0796249f",
         "geometry": "same delivered STL; local bounds, units, IDs, colors and final transforms checked",
         "no_orphan_or_hidden_mesh_data": true,
         "animation": "all numbered stages checked after fresh native reopen",
@@ -5327,7 +5327,7 @@
         },
         "faststart": true,
         "full_decode": true,
-        "sha256": "4f68f431500cf4df6fb4c6e3ca95c39bec3432e4ba079dbd9d6bede29a1a8b14"
+        "sha256": "103c6ea967d11c3fee68b9328724796bacb929a6d977de111850193cae5a81c0"
       },
       "drawings_pdf_pages": 62,
       "privacy": {
@@ -5527,10 +5527,10 @@
               [
                 179.0,
                 148.0,
-                3.2
+                3.6
               ]
             ],
-            "sha256": "9379350bc3d32673c43bd3488af25ca21caf4b176b8116993bd7f4cf5181ea29"
+            "sha256": "3c2fd879f772ca199c79aef122ad2200d9a880d1ac669f18f9e39e649e39db32"
           }
         ]
       },
@@ -5772,10 +5772,10 @@
               [
                 199.0,
                 148.0,
-                3.2
+                3.6
               ]
             ],
-            "sha256": "8a215ab8f52ff9ca5ff1896028ce4558c9f0cc46d7e92e1aa71ac95b3706acc8"
+            "sha256": "1e49844de665351d1a51e30e743c06037643d71dc0f6ec52adcae73bf02d28fb"
           }
         ]
       },
@@ -6238,10 +6238,10 @@
               [
                 219.0,
                 148.0,
-                3.2
+                3.6
               ]
             ],
-            "sha256": "d80fc681b01e9c8a8a7bfa1f0d4627283856f35c5ab47188aab32eb780fa7f64"
+            "sha256": "a1782bdb397a550f3f9b54931976d56a2c9a7a0302bb9f6dcf4a797765fa8798"
           }
         ]
       }
@@ -6249,1109 +6249,14 @@
     "note": "Reader, transforms and counts verified; no printer profile, sliced paths, print mass or time validated."
   },
   "browser": {
-    "status": "PASS_REAL_BROWSER",
-    "browser": "152.0.7977.82",
-    "repository_prefix": "/copilot-brick-display/",
-    "models": [
-      "A",
-      "B",
-      "C"
-    ],
-    "native_webgl_geometry_visible": {
-      "cyan": 31082,
-      "magenta": 12849,
-      "green": 2103
-    },
-    "revision": "4.0-public-template",
-    "vertical_explosion": [
-      {
-        "model": "A",
-        "viewport": "desktop",
-        "viewport_width_px": 1440,
-        "states": [
-          {
-            "percent": 0,
-            "bounds": [
-              [
-                0.10000000149011612,
-                0.099999952316284,
-                0
-              ],
-              [
-                143.9000015258789,
-                63.900001525878906,
-                187.4
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              4.440892098500626e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  0.099999952316284,
-                  4
-                ],
-                [
-                  106,
-                  3.3000000000000025,
-                  44
-                ]
-              ],
-              "logo": [
-                [
-                  108,
-                  0.10000009536743182,
-                  4
-                ],
-                [
-                  140,
-                  3.700000000000003,
-                  44
-                ]
-              ]
-            },
-            "offsets": [
-              0,
-              0
-            ],
-            "clip": 0.819672131147541,
-            "gap": -1.7999996185302791,
-            "error": 0,
-            "visible": 91,
-            "screenshot": "A-desktop-explode-000.png"
-          },
-          {
-            "percent": 50,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -31.66666666666666
-              ],
-              [
-                143.9000015258789,
-                63.900001525878906,
-                219.06666666666666
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              2.220446049250313e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  0.5000000000000071
-                ],
-                [
-                  106,
-                  -10.699999999999998,
-                  40.50000000000001
-                ]
-              ],
-              "logo": [
-                [
-                  108,
-                  -13.899999904632569,
-                  0.5000000000000071
-                ],
-                [
-                  140,
-                  -10.299999999999999,
-                  40.50000000000001
-                ]
-              ]
-            },
-            "offsets": [
-              -31.66666666666666,
-              31.66666666666666
-            ],
-            "clip": 0.819672131147541,
-            "gap": 1.5333337148030353,
-            "error": 32,
-            "visible": 91,
-            "screenshot": "A-desktop-explode-050.png"
-          },
-          {
-            "percent": 100,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -242
-              ],
-              [
-                143.9000015258789,
-                63.900001525878906,
-                377.4
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              4.440892098500626e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  -242
-                ],
-                [
-                  106,
-                  -10.699999999999998,
-                  -202
-                ]
-              ],
-              "logo": [
-                [
-                  108,
-                  -13.899999904632569,
-                  -242
-                ],
-                [
-                  140,
-                  -10.299999999999999,
-                  -202
-                ]
-              ]
-            },
-            "offsets": [
-              -190,
-              190
-            ],
-            "clip": 0.819672131147541,
-            "gap": 18.200000381469636,
-            "error": 246,
-            "visible": 91,
-            "screenshot": "A-desktop-explode-100.png"
-          }
-        ],
-        "keyboard_home_end": true,
-        "return_to_zero_exact": true,
-        "assembly_filter_consistent": true
-      },
-      {
-        "model": "B",
-        "viewport": "desktop",
-        "viewport_width_px": 1440,
-        "states": [
-          {
-            "percent": 0,
-            "bounds": [
-              [
-                0.10000000149011612,
-                0.099999952316284,
-                0
-              ],
-              [
-                191.9000015258789,
-                79.9000015258789,
-                238.59999980926514
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -2.220446049250313e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  0.099999952316284,
-                  4
-                ],
-                [
-                  146,
-                  3.3000000000000025,
-                  44
-                ]
-              ],
-              "logo": [
-                [
-                  148,
-                  0.10000009536743182,
-                  4
-                ],
-                [
-                  188,
-                  3.700000000000003,
-                  44
-                ]
-              ]
-            },
-            "offsets": [
-              0,
-              0
-            ],
-            "clip": 0.8196721311475409,
-            "gap": -1.7999996185302791,
-            "error": 0,
-            "visible": 150,
-            "screenshot": "B-desktop-explode-000.png"
-          },
-          {
-            "percent": 50,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -39.99999999999999
-              ],
-              [
-                191.9000015258789,
-                79.9000015258789,
-                278.5999998092651
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -4.440892098500626e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  -7.833333333333325
-                ],
-                [
-                  146,
-                  -10.699999999999998,
-                  32.16666666666667
-                ]
-              ],
-              "logo": [
-                [
-                  148,
-                  -13.899999904632569,
-                  -7.833333333333325
-                ],
-                [
-                  188,
-                  -10.299999999999999,
-                  32.16666666666667
-                ]
-              ]
-            },
-            "offsets": [
-              -39.99999999999999,
-              39.99999999999999
-            ],
-            "clip": 0.819672131147541,
-            "gap": 1.5333337148030068,
-            "error": 39.99999999999999,
-            "visible": 150,
-            "screenshot": "B-desktop-explode-050.png"
-          },
-          {
-            "percent": 100,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -292
-              ],
-              [
-                191.9000015258789,
-                79.9000015258789,
-                478.5999998092651
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -4.440892098500626e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  -292
-                ],
-                [
-                  146,
-                  -10.699999999999998,
-                  -252
-                ]
-              ],
-              "logo": [
-                [
-                  148,
-                  -13.899999904632569,
-                  -292
-                ],
-                [
-                  188,
-                  -10.299999999999999,
-                  -252
-                ]
-              ]
-            },
-            "offsets": [
-              -240,
-              240
-            ],
-            "clip": 0.819672131147541,
-            "gap": 18.200000381469636,
-            "error": 296,
-            "visible": 150,
-            "screenshot": "B-desktop-explode-100.png"
-          }
-        ],
-        "keyboard_home_end": true,
-        "return_to_zero_exact": true,
-        "assembly_filter_consistent": true
-      },
-      {
-        "model": "C",
-        "viewport": "desktop",
-        "viewport_width_px": 1440,
-        "states": [
-          {
-            "percent": 0,
-            "bounds": [
-              [
-                0.10000000149011612,
-                0.099999952316284,
-                0
-              ],
-              [
-                239.9000015258789,
-                111.9000015258789,
-                286.5999998092651
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -2.220446049250313e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  0.099999952316284,
-                  4
-                ],
-                [
-                  186,
-                  3.3000000000000025,
-                  44
-                ]
-              ],
-              "logo": [
-                [
-                  188,
-                  0.10000009536743182,
-                  4
-                ],
-                [
-                  236,
-                  3.700000000000003,
-                  44
-                ]
-              ]
-            },
-            "offsets": [
-              0,
-              0
-            ],
-            "clip": 0.819672131147541,
-            "gap": -1.7999996185303075,
-            "error": 0,
-            "visible": 228,
-            "screenshot": "C-desktop-explode-000.png"
-          },
-          {
-            "percent": 50,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -48.33333333333332
-              ],
-              [
-                239.9000015258789,
-                111.9000015258789,
-                334.9333331425984
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -2.220446049250313e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  -16.166666666666654
-                ],
-                [
-                  186,
-                  -10.699999999999998,
-                  23.833333333333346
-                ]
-              ],
-              "logo": [
-                [
-                  188,
-                  -13.899999904632569,
-                  -16.166666666666654
-                ],
-                [
-                  236,
-                  -10.299999999999999,
-                  23.833333333333346
-                ]
-              ]
-            },
-            "offsets": [
-              -48.33333333333332,
-              48.33333333333332
-            ],
-            "clip": 0.819672131147541,
-            "gap": 1.5333337148030068,
-            "error": 48.33333333333332,
-            "visible": 228,
-            "screenshot": "C-desktop-explode-050.png"
-          },
-          {
-            "percent": 100,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -342
-              ],
-              [
-                239.9000015258789,
-                111.9000015258789,
-                576.5999998092651
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -2.220446049250313e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  -342
-                ],
-                [
-                  186,
-                  -10.699999999999998,
-                  -302
-                ]
-              ],
-              "logo": [
-                [
-                  188,
-                  -13.899999904632569,
-                  -342
-                ],
-                [
-                  236,
-                  -10.299999999999999,
-                  -302
-                ]
-              ]
-            },
-            "offsets": [
-              -290,
-              290
-            ],
-            "clip": 0.819672131147541,
-            "gap": 18.200000381469636,
-            "error": 346,
-            "visible": 228,
-            "screenshot": "C-desktop-explode-100.png"
-          }
-        ],
-        "keyboard_home_end": true,
-        "return_to_zero_exact": true,
-        "assembly_filter_consistent": true
-      },
-      {
-        "model": "A",
-        "viewport": "mobile",
-        "viewport_width_px": 375,
-        "states": [
-          {
-            "percent": 0,
-            "bounds": [
-              [
-                0.10000000149011612,
-                0.099999952316284,
-                0
-              ],
-              [
-                143.9000015258789,
-                63.900001525878906,
-                187.4
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              4.440892098500626e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  0.099999952316284,
-                  4
-                ],
-                [
-                  106,
-                  3.3000000000000025,
-                  44
-                ]
-              ],
-              "logo": [
-                [
-                  108,
-                  0.10000009536743182,
-                  4
-                ],
-                [
-                  140,
-                  3.700000000000003,
-                  44
-                ]
-              ]
-            },
-            "offsets": [
-              0,
-              0
-            ],
-            "clip": 0.819672131147541,
-            "gap": -1.7999996185302791,
-            "error": 0,
-            "visible": 91,
-            "screenshot": "A-mobile-explode-000.png"
-          },
-          {
-            "percent": 50,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -31.66666666666666
-              ],
-              [
-                143.9000015258789,
-                63.900001525878906,
-                219.06666666666666
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              4.440892098500626e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  0.5000000000000071
-                ],
-                [
-                  106,
-                  -10.699999999999998,
-                  40.50000000000001
-                ]
-              ],
-              "logo": [
-                [
-                  108,
-                  -13.899999904632569,
-                  0.5000000000000071
-                ],
-                [
-                  140,
-                  -10.299999999999999,
-                  40.50000000000001
-                ]
-              ]
-            },
-            "offsets": [
-              -31.66666666666666,
-              31.66666666666666
-            ],
-            "clip": 0.819672131147541,
-            "gap": 1.5333337148030353,
-            "error": 32,
-            "visible": 91,
-            "screenshot": "A-mobile-explode-050.png"
-          },
-          {
-            "percent": 100,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -242
-              ],
-              [
-                143.9000015258789,
-                63.900001525878906,
-                377.4
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              4.440892098500626e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  -242
-                ],
-                [
-                  106,
-                  -10.699999999999998,
-                  -202
-                ]
-              ],
-              "logo": [
-                [
-                  108,
-                  -13.899999904632569,
-                  -242
-                ],
-                [
-                  140,
-                  -10.299999999999999,
-                  -202
-                ]
-              ]
-            },
-            "offsets": [
-              -190,
-              190
-            ],
-            "clip": 0.819672131147541,
-            "gap": 18.200000381469636,
-            "error": 246,
-            "visible": 91,
-            "screenshot": "A-mobile-explode-100.png"
-          }
-        ],
-        "keyboard_home_end": true,
-        "return_to_zero_exact": true,
-        "assembly_filter_consistent": true
-      },
-      {
-        "model": "B",
-        "viewport": "mobile",
-        "viewport_width_px": 375,
-        "states": [
-          {
-            "percent": 0,
-            "bounds": [
-              [
-                0.10000000149011612,
-                0.099999952316284,
-                0
-              ],
-              [
-                191.9000015258789,
-                79.9000015258789,
-                238.59999980926514
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -2.220446049250313e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  0.099999952316284,
-                  4
-                ],
-                [
-                  146,
-                  3.3000000000000025,
-                  44
-                ]
-              ],
-              "logo": [
-                [
-                  148,
-                  0.10000009536743182,
-                  4
-                ],
-                [
-                  188,
-                  3.700000000000003,
-                  44
-                ]
-              ]
-            },
-            "offsets": [
-              0,
-              0
-            ],
-            "clip": 0.8196721311475409,
-            "gap": -1.7999996185302791,
-            "error": 0,
-            "visible": 150,
-            "screenshot": "B-mobile-explode-000.png"
-          },
-          {
-            "percent": 50,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -39.99999999999999
-              ],
-              [
-                191.9000015258789,
-                79.9000015258789,
-                278.5999998092651
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -4.440892098500626e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  -7.833333333333325
-                ],
-                [
-                  146,
-                  -10.699999999999998,
-                  32.16666666666667
-                ]
-              ],
-              "logo": [
-                [
-                  148,
-                  -13.899999904632569,
-                  -7.833333333333325
-                ],
-                [
-                  188,
-                  -10.299999999999999,
-                  32.16666666666667
-                ]
-              ]
-            },
-            "offsets": [
-              -39.99999999999999,
-              39.99999999999999
-            ],
-            "clip": 0.819672131147541,
-            "gap": 1.5333337148030068,
-            "error": 39.99999999999999,
-            "visible": 150,
-            "screenshot": "B-mobile-explode-050.png"
-          },
-          {
-            "percent": 100,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -292
-              ],
-              [
-                191.9000015258789,
-                79.9000015258789,
-                478.5999998092651
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -4.440892098500626e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  -292
-                ],
-                [
-                  146,
-                  -10.699999999999998,
-                  -252
-                ]
-              ],
-              "logo": [
-                [
-                  148,
-                  -13.899999904632569,
-                  -292
-                ],
-                [
-                  188,
-                  -10.299999999999999,
-                  -252
-                ]
-              ]
-            },
-            "offsets": [
-              -240,
-              240
-            ],
-            "clip": 0.8196721311475411,
-            "gap": 18.200000381469636,
-            "error": 296,
-            "visible": 150,
-            "screenshot": "B-mobile-explode-100.png"
-          }
-        ],
-        "keyboard_home_end": true,
-        "return_to_zero_exact": true,
-        "assembly_filter_consistent": true
-      },
-      {
-        "model": "C",
-        "viewport": "mobile",
-        "viewport_width_px": 375,
-        "states": [
-          {
-            "percent": 0,
-            "bounds": [
-              [
-                0.10000000149011612,
-                0.099999952316284,
-                0
-              ],
-              [
-                239.9000015258789,
-                111.9000015258789,
-                286.5999998092651
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -2.220446049250313e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  0.099999952316284,
-                  4
-                ],
-                [
-                  186,
-                  3.3000000000000025,
-                  44
-                ]
-              ],
-              "logo": [
-                [
-                  188,
-                  0.10000009536743182,
-                  4
-                ],
-                [
-                  236,
-                  3.700000000000003,
-                  44
-                ]
-              ]
-            },
-            "offsets": [
-              0,
-              0
-            ],
-            "clip": 0.819672131147541,
-            "gap": -1.7999996185303075,
-            "error": 0,
-            "visible": 228,
-            "screenshot": "C-mobile-explode-000.png"
-          },
-          {
-            "percent": 50,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -48.33333333333332
-              ],
-              [
-                239.9000015258789,
-                111.9000015258789,
-                334.9333331425984
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -2.220446049250313e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  -16.166666666666654
-                ],
-                [
-                  186,
-                  -10.699999999999998,
-                  23.833333333333346
-                ]
-              ],
-              "logo": [
-                [
-                  188,
-                  -13.899999904632569,
-                  -16.166666666666654
-                ],
-                [
-                  236,
-                  -10.299999999999999,
-                  23.833333333333346
-                ]
-              ]
-            },
-            "offsets": [
-              -48.33333333333332,
-              48.33333333333332
-            ],
-            "clip": 0.819672131147541,
-            "gap": 1.5333337148030068,
-            "error": 48.33333333333332,
-            "visible": 228,
-            "screenshot": "C-mobile-explode-050.png"
-          },
-          {
-            "percent": 100,
-            "bounds": [
-              [
-                0.10000000149011612,
-                -31.899999998509884,
-                -342
-              ],
-              [
-                239.9000015258789,
-                111.9000015258789,
-                576.5999998092651
-              ]
-            ],
-            "direction": [
-              0,
-              1,
-              -2.220446049250313e-16
-            ],
-            "modules": {
-              "text": [
-                [
-                  4,
-                  -13.900000047683715,
-                  -342
-                ],
-                [
-                  186,
-                  -10.699999999999998,
-                  -302
-                ]
-              ],
-              "logo": [
-                [
-                  188,
-                  -13.899999904632569,
-                  -342
-                ],
-                [
-                  236,
-                  -10.299999999999999,
-                  -302
-                ]
-              ]
-            },
-            "offsets": [
-              -290,
-              290
-            ],
-            "clip": 0.819672131147541,
-            "gap": 18.200000381469636,
-            "error": 346,
-            "visible": 228,
-            "screenshot": "C-mobile-explode-100.png"
-          }
-        ],
-        "keyboard_home_end": true,
-        "return_to_zero_exact": true,
-        "assembly_filter_consistent": true
-      }
-    ],
-    "public_template_policy": {
-      "mode": "generic",
-      "public_text_approved": false
-    },
-    "public_private_customization_guides_opened": true,
-    "checks": [
-      "model changes",
-      "four camera views",
-      "part selection + CAD sheet",
-      "bounds",
-      "explosion",
-      "stage seek + play/pause",
-      "all three MP4 decoded in browser",
-      "Japanese guide stage deep link",
-      "desktop/mobile overflow",
-      "reduced motion",
-      "zero page errors/404s"
-    ],
-    "staged_trial_guidance": {
-      "guidance_revision": "trial-2026-09-19",
-      "geometry_revision": "4.0-public-template",
-      "page_widths_px": [
-        1440,
-        375
-      ],
-      "physical_trial_performed": false
-    },
-    "screenshots": [
-      "desktop.png",
-      "B-front.png",
-      "C-inspector.png",
-      "mobile.png"
-    ]
+    "status": "PENDING_CURRENT_REVISION_CI",
+    "required_revision": "5.0-legible-plaques",
+    "prior_browser_result_not_reused": true,
+    "note": "The bounded Linux full-Chrome gate must test this revision before deployment."
   },
   "explosion_motion": {
     "status": "PASS_REAL_NATIVE_MOTION_CHECK",
-    "revision": "4.0-public-template",
+    "revision": "5.0-legible-plaques",
     "models": [
       {
         "model": "A",
@@ -7382,8 +6287,8 @@
     "physical_simulation": false
   },
   "front_modules": {
-    "revision": "4.0-public-template",
-    "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+    "revision": "5.0-legible-plaques",
+    "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
     "status": "PASS_NATIVE_FRONT_CAPTURE_AND_EXTRACTION",
     "models": [
       {
@@ -7399,7 +6304,7 @@
             "bounds_mm": [
               [
                 4.0,
-                0.1,
+                -0.3,
                 4.0
               ],
               [
@@ -7447,7 +6352,7 @@
         "lines": [
           {
             "text": "Same icon, New adventures",
-            "width_mm": 93.58125000000001,
+            "width_mm": 93.638328,
             "height_mm": 10.0,
             "assembled_z_range_mm": [
               26.0,
@@ -7455,16 +6360,16 @@
             ]
           },
           {
-            "text": "github.com/YOUR-USERNAME",
-            "width_mm": 78.26326599999999,
-            "height_mm": 7.0,
+            "text": "github.com/USER",
+            "width_mm": 77.42283800000001,
+            "height_mm": 10.0,
             "assembled_z_range_mm": [
-              12.0,
-              19.0
+              11.0,
+              21.0
             ]
           }
         ],
-        "minimum_actual_parallel_straight_stroke_mm": 1.1751946987293334,
+        "minimum_actual_parallel_straight_stroke_mm": 1.1955026143020007,
         "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
         "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
         "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
@@ -7483,7 +6388,7 @@
             "bounds_mm": [
               [
                 4.0,
-                0.1,
+                -0.3,
                 4.0
               ],
               [
@@ -7493,10 +6398,10 @@
               ]
             ],
             "blocked_translation_volume_mm3": {
-              "front": 66.81024057441238,
-              "rear": 1121.0560011146292,
+              "front": 66.81024057441263,
+              "rear": 1121.056001114629,
               "left": 27.648000000026613,
-              "right": 27.648000000027817,
+              "right": 27.648000000027828,
               "down": 67.19999999891573,
               "up_with_keepers": 2.7571358024613133
             },
@@ -7531,7 +6436,7 @@
         "lines": [
           {
             "text": "Same icon, New adventures",
-            "width_mm": 133.6875,
+            "width_mm": 132.130128,
             "height_mm": 12.0,
             "assembled_z_range_mm": [
               26.0,
@@ -7539,16 +6444,16 @@
             ]
           },
           {
-            "text": "github.com/YOUR-USERNAME",
-            "width_mm": 89.443734,
-            "height_mm": 8.0,
+            "text": "github.com/USER",
+            "width_mm": 77.42283800000001,
+            "height_mm": 10.0,
             "assembled_z_range_mm": [
-              12.0,
-              20.0
+              11.0,
+              21.0
             ]
           }
         ],
-        "minimum_actual_parallel_straight_stroke_mm": 1.3430796556906675,
+        "minimum_actual_parallel_straight_stroke_mm": 1.2609977591698005,
         "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
         "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
         "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
@@ -7567,7 +6472,7 @@
             "bounds_mm": [
               [
                 4.0,
-                0.1,
+                -0.3,
                 4.0
               ],
               [
@@ -7615,7 +6520,7 @@
         "lines": [
           {
             "text": "Same icon, New adventures",
-            "width_mm": 173.79375,
+            "width_mm": 167.33147000000002,
             "height_mm": 14.5,
             "assembled_z_range_mm": [
               26.0,
@@ -7623,37 +6528,38 @@
             ]
           },
           {
-            "text": "github.com/YOUR-USERNAME",
-            "width_mm": 100.62419999999999,
-            "height_mm": 9.0,
+            "text": "github.com/USER",
+            "width_mm": 77.42283800000001,
+            "height_mm": 10.0,
             "assembled_z_range_mm": [
-              12.0,
+              11.0,
               21.0
             ]
           }
         ],
-        "minimum_actual_parallel_straight_stroke_mm": 1.5109646126520033,
+        "minimum_actual_parallel_straight_stroke_mm": 1.523705625663407,
         "stroke_boundary": "Measured cap-face straight sections; mathematical curve/corner tips are not claimed as constant-width walls.",
         "mechanism": "Independent dovetail slides, shaped bottom seats, two text keepers and one logo keeper.",
         "print": "Rear face on bed; manual black-to-white swap at text2.4mm/logo2.8mm; no AMS required.",
         "physical_fit_clutch_strength": "NOT_TESTED"
       }
     ],
-    "frozen_tribute": "separate BRICK-8-MSG-SLOT-1; no source or public asset changed"
+    "unselected_variant": "not part of the public distribution"
   },
   "revision_invariants": {
     "status": "PASS_PUBLIC_TEMPLATE_GEOMETRY_BOUNDARIES",
-    "revision": "4.0-public-template",
-    "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+    "revision": "5.0-legible-plaques",
+    "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
     "unchanged_nontext_masters": 68,
-    "model_dimensions_and_poses_preserved": true,
+    "model_width_height_and_poses_preserved": true,
+    "approved_added_front_depth_mm": 0.4,
     "public_mode": "generic",
     "unselected_individual_variant": "not_distributed",
     "physical_validation": "NOT_PERFORMED"
   },
   "final_browser_recheck": {
-    "status": "PASS_CURRENT_REVISION_CI",
-    "revision": "4.0-public-template",
+    "status": "PENDING_CURRENT_REVISION_CI",
+    "revision": "5.0-legible-plaques",
     "local_browser_retry": "not attempted; known environment limitation"
   },
   "unselected_individual_variant": "withheld from public distribution",
@@ -7670,6 +6576,1599 @@
     "physical_fit_tested": false,
     "scope": "This proves the software path for the placeholder fixture, not arbitrary lettering printability or physical fit."
   },
+  "lettering_revision": {
+    "status": "PASS_REOPENED_NATIVE_LETTERING_CANDIDATE",
+    "revision": "5.0-legible-plaques",
+    "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
+    "models": [
+      {
+        "model": "A",
+        "part": "NP3-TEXT-A",
+        "bounds_mm": [
+          [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          [
+            102.0,
+            40.0,
+            3.6
+          ]
+        ],
+        "assembly_actual_mm": [
+          143.8,
+          64.2,
+          187.4
+        ],
+        "native_sha256": "4c4d8a5b9dce1e1e4fbd13d0568c6f26d2e29326a3517782ec21d81e84e43f26",
+        "carrier_symmetric_difference_mm3": 0.0,
+        "reopened_valid_solids": 1,
+        "current_lettering_symmetric_difference_mm3": 0.0,
+        "exact_native_text": true,
+        "cap_area_consistent": true,
+        "rows": [
+          {
+            "row": 1,
+            "text": "Same icon, New adventures",
+            "actual_width_mm": 93.63832754519458,
+            "actual_height_mm": 10.0,
+            "minimum_actual_gap_mm": 0.795848080423004,
+            "minimum_parallel_straight_stroke_mm": 1.1955026143020007,
+            "targets": {
+              "counter_central_half_chord": 0.9,
+              "e_exit_channel": 0.95,
+              "adjacent_glyph_clearance": 0.8
+            },
+            "glyphs": [
+              {
+                "index": 0,
+                "character": "S",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2500000000000009
+              },
+              {
+                "index": 1,
+                "character": "a",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    0.8996643315496478,
+                    1.1721703261954097
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2000000000000006
+              },
+              {
+                "index": 2,
+                "character": "m",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 0.8700000000000004
+              },
+              {
+                "index": 3,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    0.8985473577156284,
+                    1.1370387495329162
+                  ]
+                ],
+                "open_pocket_escape_mm": 0.9599853515625,
+                "persistent_core_split_neck_mm": 1.1700000000000008
+              },
+              {
+                "index": 5,
+                "character": "i",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 6,
+                "character": "c",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": 1.6399956354337433,
+                "persistent_core_split_neck_mm": 1.270000000000001
+              },
+              {
+                "index": 7,
+                "character": "o",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    0.8999999999999986,
+                    3.298150212225451
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2600000000000007
+              },
+              {
+                "index": 8,
+                "character": "n",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.0200000000000005
+              },
+              {
+                "index": 9,
+                "character": ",",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 11,
+                "character": "N",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 0.9300000000000005
+              },
+              {
+                "index": 12,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    0.8985473577156355,
+                    1.1370387495329162
+                  ]
+                ],
+                "open_pocket_escape_mm": 0.9599853515625,
+                "persistent_core_split_neck_mm": 1.1700000000000008
+              },
+              {
+                "index": 13,
+                "character": "w",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 0.8500000000000004
+              },
+              {
+                "index": 15,
+                "character": "a",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    0.8996643315496513,
+                    1.1721703261954026
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2000000000000006
+              },
+              {
+                "index": 16,
+                "character": "d",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    0.9000000000000057,
+                    3.3179366328897366
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.0400000000000005
+              },
+              {
+                "index": 17,
+                "character": "v",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.1700000000000008
+              },
+              {
+                "index": 18,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    0.8985473584733512,
+                    1.1370309999629171
+                  ]
+                ],
+                "open_pocket_escape_mm": 0.9599853515625,
+                "persistent_core_split_neck_mm": 1.1700000000000008
+              },
+              {
+                "index": 19,
+                "character": "n",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.0200000000000005
+              },
+              {
+                "index": 20,
+                "character": "t",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2200000000000006
+              },
+              {
+                "index": 21,
+                "character": "u",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.0300000000000007
+              },
+              {
+                "index": 22,
+                "character": "r",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 23,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    0.8985473584733512,
+                    1.13703099996291
+                  ]
+                ],
+                "open_pocket_escape_mm": 0.9599853515625,
+                "persistent_core_split_neck_mm": 1.1700000000000008
+              },
+              {
+                "index": 24,
+                "character": "s",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2100000000000009
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "text": "github.com/USER",
+            "actual_width_mm": 77.42283764929398,
+            "actual_height_mm": 10.0,
+            "minimum_actual_gap_mm": 1.0478448214528842,
+            "minimum_parallel_straight_stroke_mm": 1.6894384478753919,
+            "targets": {
+              "counter_central_half_chord": 1.02,
+              "e_exit_channel": 1.1,
+              "adjacent_glyph_clearance": 1.05
+            },
+            "glyphs": [
+              {
+                "index": 0,
+                "character": "g",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.0199999999999996,
+                    2.154431085700839
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.4000000000000008
+              },
+              {
+                "index": 1,
+                "character": "i",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 2,
+                "character": "t",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.8900000000000015
+              },
+              {
+                "index": 3,
+                "character": "h",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.290000000000001
+              },
+              {
+                "index": 4,
+                "character": "u",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.370000000000001
+              },
+              {
+                "index": 5,
+                "character": "b",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.0200000000000031,
+                    2.154216626011589
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2300000000000009
+              },
+              {
+                "index": 6,
+                "character": ".",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 7,
+                "character": "c",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": 1.0199844360351562,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 8,
+                "character": "o",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.019999999999996,
+                    2.1600740287637024
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 9,
+                "character": "m",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.1700000000000008
+              },
+              {
+                "index": 10,
+                "character": "/",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 11,
+                "character": "U",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 12,
+                "character": "S",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 13,
+                "character": "E",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.9800000000000013
+              },
+              {
+                "index": 14,
+                "character": "R",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.0196069217989248,
+                    1.0621830412716662
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              }
+            ]
+          }
+        ],
+        "comparison": "A-lettering-before-after.svg",
+        "physical_trial": "NOT_PERFORMED"
+      },
+      {
+        "model": "B",
+        "part": "NP3-TEXT-B",
+        "bounds_mm": [
+          [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          [
+            142.0,
+            40.0,
+            3.6
+          ]
+        ],
+        "assembly_actual_mm": [
+          191.8,
+          80.2,
+          238.6
+        ],
+        "native_sha256": "912caa13adc3b5e43b92a62612b0b90a368b1e7ac68a2c43caac9d8439488237",
+        "carrier_symmetric_difference_mm3": 0.0,
+        "reopened_valid_solids": 1,
+        "current_lettering_symmetric_difference_mm3": 0.0,
+        "exact_native_text": true,
+        "cap_area_consistent": true,
+        "rows": [
+          {
+            "row": 1,
+            "text": "Same icon, New adventures",
+            "actual_width_mm": 132.13012759831423,
+            "actual_height_mm": 12.0,
+            "minimum_actual_gap_mm": 1.0481254323138072,
+            "minimum_parallel_straight_stroke_mm": 1.2609977591697135,
+            "targets": {
+              "counter_central_half_chord": 1.02,
+              "e_exit_channel": 1.1,
+              "adjacent_glyph_clearance": 1.05
+            },
+            "glyphs": [
+              {
+                "index": 0,
+                "character": "S",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.7600000000000011
+              },
+              {
+                "index": 1,
+                "character": "a",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.203410396573359,
+                    1.4081211313523418
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.4400000000000008
+              },
+              {
+                "index": 2,
+                "character": "m",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.0900000000000007
+              },
+              {
+                "index": 3,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.040381627159661,
+                    1.3653516775887304
+                  ]
+                ],
+                "open_pocket_escape_mm": 1.0999869443111205,
+                "persistent_core_split_neck_mm": 1.7600000000000011
+              },
+              {
+                "index": 5,
+                "character": "i",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 6,
+                "character": "c",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": 1.9599908650546967,
+                "persistent_core_split_neck_mm": 1.7600000000000011
+              },
+              {
+                "index": 7,
+                "character": "o",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.267083333333332,
+                    3.9611964556987402
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.7700000000000014
+              },
+              {
+                "index": 8,
+                "character": "n",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2400000000000007
+              },
+              {
+                "index": 9,
+                "character": ",",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 11,
+                "character": "N",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.310000000000001
+              },
+              {
+                "index": 12,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.040381627159661,
+                    1.3653516775887304
+                  ]
+                ],
+                "open_pocket_escape_mm": 1.0999869443111205,
+                "persistent_core_split_neck_mm": 1.7600000000000011
+              },
+              {
+                "index": 13,
+                "character": "w",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2100000000000009
+              },
+              {
+                "index": 15,
+                "character": "a",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.2034103965733607,
+                    1.4081211313523347
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.4400000000000008
+              },
+              {
+                "index": 16,
+                "character": "d",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.2033333333333331,
+                    3.9840056362128955
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.270000000000001
+              },
+              {
+                "index": 17,
+                "character": "v",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6500000000000012
+              },
+              {
+                "index": 18,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.040381627159661,
+                    1.3653516775887233
+                  ]
+                ],
+                "open_pocket_escape_mm": 1.0999869443111205,
+                "persistent_core_split_neck_mm": 1.7600000000000011
+              },
+              {
+                "index": 19,
+                "character": "n",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2400000000000007
+              },
+              {
+                "index": 20,
+                "character": "t",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.7500000000000013
+              },
+              {
+                "index": 21,
+                "character": "u",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2600000000000007
+              },
+              {
+                "index": 22,
+                "character": "r",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.4200000000000008
+              },
+              {
+                "index": 23,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.0403816271596895,
+                    1.3653516775887162
+                  ]
+                ],
+                "open_pocket_escape_mm": 1.0999869443111205,
+                "persistent_core_split_neck_mm": 1.7600000000000011
+              },
+              {
+                "index": 24,
+                "character": "s",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.5300000000000011
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "text": "github.com/USER",
+            "actual_width_mm": 77.42283764929398,
+            "actual_height_mm": 10.0,
+            "minimum_actual_gap_mm": 1.047844821452891,
+            "minimum_parallel_straight_stroke_mm": 1.6894384478753919,
+            "targets": {
+              "counter_central_half_chord": 1.02,
+              "e_exit_channel": 1.1,
+              "adjacent_glyph_clearance": 1.05
+            },
+            "glyphs": [
+              {
+                "index": 0,
+                "character": "g",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.019999999999996,
+                    2.154431085700839
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.4000000000000008
+              },
+              {
+                "index": 1,
+                "character": "i",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 2,
+                "character": "t",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.8900000000000015
+              },
+              {
+                "index": 3,
+                "character": "h",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.290000000000001
+              },
+              {
+                "index": 4,
+                "character": "u",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.370000000000001
+              },
+              {
+                "index": 5,
+                "character": "b",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.0200000000000031,
+                    2.1542166260115962
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2300000000000009
+              },
+              {
+                "index": 6,
+                "character": ".",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 7,
+                "character": "c",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": 1.0199844360351562,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 8,
+                "character": "o",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.019999999999996,
+                    2.1600740287636917
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 9,
+                "character": "m",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.1700000000000008
+              },
+              {
+                "index": 10,
+                "character": "/",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 11,
+                "character": "U",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 12,
+                "character": "S",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 13,
+                "character": "E",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.9800000000000013
+              },
+              {
+                "index": 14,
+                "character": "R",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.019606921798939,
+                    1.0621830412716484
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              }
+            ]
+          }
+        ],
+        "comparison": "B-lettering-before-after.svg",
+        "physical_trial": "NOT_PERFORMED"
+      },
+      {
+        "model": "C",
+        "part": "NP3-TEXT-C",
+        "bounds_mm": [
+          [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          [
+            182.0,
+            40.0,
+            3.6
+          ]
+        ],
+        "assembly_actual_mm": [
+          239.8,
+          112.2,
+          286.6
+        ],
+        "native_sha256": "eacd3688942a621db6c9f7e56a57216471519e4b287a6cc28e3b3317d0c0470c",
+        "carrier_symmetric_difference_mm3": 0.0,
+        "reopened_valid_solids": 1,
+        "current_lettering_symmetric_difference_mm3": 0.0,
+        "exact_native_text": true,
+        "cap_area_consistent": true,
+        "rows": [
+          {
+            "row": 1,
+            "text": "Same icon, New adventures",
+            "actual_width_mm": 167.3314707221898,
+            "actual_height_mm": 14.5,
+            "minimum_actual_gap_mm": 1.0480567938574654,
+            "minimum_parallel_straight_stroke_mm": 1.5237056256634043,
+            "targets": {
+              "counter_central_half_chord": 1.02,
+              "e_exit_channel": 1.1,
+              "adjacent_glyph_clearance": 1.05
+            },
+            "glyphs": [
+              {
+                "index": 0,
+                "character": "S",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 2.1200000000000014
+              },
+              {
+                "index": 1,
+                "character": "a",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.564498766342414,
+                    1.7046506163075605
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.740000000000001
+              },
+              {
+                "index": 2,
+                "character": "m",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.3400000000000007
+              },
+              {
+                "index": 3,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.353743426391631,
+                    1.6505734382630841
+                  ]
+                ],
+                "open_pocket_escape_mm": 1.1,
+                "persistent_core_split_neck_mm": 2.1200000000000014
+              },
+              {
+                "index": 5,
+                "character": "i",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 6,
+                "character": "c",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": 2.3799775313248546,
+                "persistent_core_split_neck_mm": 2.1200000000000014
+              },
+              {
+                "index": 7,
+                "character": "o",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.6472083333333316,
+                    4.786008294230459
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 2.1400000000000015
+              },
+              {
+                "index": 8,
+                "character": "n",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.5100000000000011
+              },
+              {
+                "index": 9,
+                "character": ",",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 11,
+                "character": "N",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 12,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.353743426391631,
+                    1.6505734382630983
+                  ]
+                ],
+                "open_pocket_escape_mm": 1.1,
+                "persistent_core_split_neck_mm": 2.1200000000000014
+              },
+              {
+                "index": 13,
+                "character": "w",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.5700000000000012
+              },
+              {
+                "index": 15,
+                "character": "a",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.5644987663424246,
+                    1.704650616307557
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.740000000000001
+              },
+              {
+                "index": 16,
+                "character": "d",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.5643333333333374,
+                    4.8141729311483985
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.5500000000000012
+              },
+              {
+                "index": 17,
+                "character": "v",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 2.1400000000000015
+              },
+              {
+                "index": 18,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.3537434263916452,
+                    1.6505734382630912
+                  ]
+                ],
+                "open_pocket_escape_mm": 1.1,
+                "persistent_core_split_neck_mm": 2.1200000000000014
+              },
+              {
+                "index": 19,
+                "character": "n",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.5100000000000011
+              },
+              {
+                "index": 20,
+                "character": "t",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 2.270000000000002
+              },
+              {
+                "index": 21,
+                "character": "u",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.5300000000000011
+              },
+              {
+                "index": 22,
+                "character": "r",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.7300000000000013
+              },
+              {
+                "index": 23,
+                "character": "e",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.3537434263916168,
+                    1.6505734382630877
+                  ]
+                ],
+                "open_pocket_escape_mm": 1.1,
+                "persistent_core_split_neck_mm": 2.1200000000000014
+              },
+              {
+                "index": 24,
+                "character": "s",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.8400000000000012
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "text": "github.com/USER",
+            "actual_width_mm": 77.42283764929398,
+            "actual_height_mm": 10.0,
+            "minimum_actual_gap_mm": 1.0478448214528877,
+            "minimum_parallel_straight_stroke_mm": 1.6894384478753919,
+            "targets": {
+              "counter_central_half_chord": 1.02,
+              "e_exit_channel": 1.1,
+              "adjacent_glyph_clearance": 1.05
+            },
+            "glyphs": [
+              {
+                "index": 0,
+                "character": "g",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.019999999999996,
+                    2.154431085700841
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.4000000000000008
+              },
+              {
+                "index": 1,
+                "character": "i",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 2,
+                "character": "t",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.8900000000000015
+              },
+              {
+                "index": 3,
+                "character": "h",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.290000000000001
+              },
+              {
+                "index": 4,
+                "character": "u",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.370000000000001
+              },
+              {
+                "index": 5,
+                "character": "b",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.019999999999996,
+                    2.154216626011598
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.2300000000000009
+              },
+              {
+                "index": 6,
+                "character": ".",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 7,
+                "character": "c",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": 1.0199844360351562,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 8,
+                "character": "o",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.0200000000000102,
+                    2.1600740287636846
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 9,
+                "character": "m",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.1700000000000008
+              },
+              {
+                "index": 10,
+                "character": "/",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": null
+              },
+              {
+                "index": 11,
+                "character": "U",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 12,
+                "character": "S",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              },
+              {
+                "index": 13,
+                "character": "E",
+                "closed_counter_chords_xy_mm": [],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.9800000000000013
+              },
+              {
+                "index": 14,
+                "character": "R",
+                "closed_counter_chords_xy_mm": [
+                  [
+                    1.0196069217989248,
+                    1.0621830412716413
+                  ]
+                ],
+                "open_pocket_escape_mm": null,
+                "persistent_core_split_neck_mm": 1.6900000000000013
+              }
+            ]
+          }
+        ],
+        "comparison": "C-lettering-before-after.svg",
+        "physical_trial": "NOT_PERFORMED"
+      }
+    ],
+    "lettering_source_sha256": {
+      "nameplate_lettering.py": "e1ae691d94cdfa7dbebc5d59316d52f8ffff17e31a89c079da41c441b2550475",
+      "legible_lettering.py": "24eb794fc91bff2b42cfe49093bb4979235b3eb00a245d2b8ab614299a88d320",
+      "legible_metrics.py": "d6604fc87042e048211fd75f3057b968686d36bcba9511edbea20d958e96cd78"
+    },
+    "measurement_definitions": {
+      "contour_deflection_mm": 0.002,
+      "counter": "Minimum of101 horizontal and101 vertical chords in central25–75% bands.",
+      "aperture": "Widest escape on0.01mm grid, approximate uncertainty±0.03mm; not a maximum-inscribed-circle guarantee.",
+      "spacing": "Exact BRep adjacent visible-glyph distance; planner's sampled spacing may differ by0.006mm.",
+      "positive_stroke": "Parallel straight gauges and first erosion splitting two cores≥0.05mm² at0.005mm radius increments.",
+      "limits": "Does not guarantee every mathematical curve tip, extrusion path, mechanical strength or successful print."
+    },
+    "sliced": false,
+    "physical_trial": "NOT_PERFORMED"
+  },
+  "lettering_trial_coupons": {
+    "status": "PASS_NATIVE_REOPEN_AND_CLOSED_TRIAL_MESH",
+    "revision": "5.0-legible-plaques",
+    "models": [
+      {
+        "model": "A",
+        "coupon": "GLYPH-A",
+        "quantity": 1,
+        "source_plate": "NP3-TEXT-A",
+        "source_plate_sha256": "de4b9ec71f68cec4920a76de7ada0efdb851222ebc745e51d173864b82ff7f07",
+        "bounds_mm": [
+          [
+            -0.0,
+            -0.0,
+            0.0
+          ],
+          [
+            33.535792,
+            40.0,
+            3.6
+          ]
+        ],
+        "rows": [
+          {
+            "row": 1,
+            "sample": "aeod",
+            "actual_source_height_mm": 10.0,
+            "glyphs": [
+              {
+                "character": "a",
+                "source_index": 1,
+                "source_row": 1,
+                "shape_area_mm2": 17.02362689065816,
+                "actual_gap_to_previous_mm": null,
+                "scale_changed": false
+              },
+              {
+                "character": "e",
+                "source_index": 3,
+                "source_row": 1,
+                "shape_area_mm2": 15.830452104415572,
+                "actual_gap_to_previous_mm": 0.7999999999999998,
+                "scale_changed": false
+              },
+              {
+                "character": "o",
+                "source_index": 7,
+                "source_row": 1,
+                "shape_area_mm2": 16.40377560658235,
+                "actual_gap_to_previous_mm": 0.8000000000000007,
+                "scale_changed": false
+              },
+              {
+                "character": "d",
+                "source_index": 16,
+                "source_row": 1,
+                "shape_area_mm2": 20.092932280101163,
+                "actual_gap_to_previous_mm": 0.7999999999999972,
+                "scale_changed": false
+              }
+            ],
+            "spacing_target_mm": 0.8
+          },
+          {
+            "row": 2,
+            "sample": "gbo./R",
+            "actual_source_height_mm": 10.0,
+            "glyphs": [
+              {
+                "character": "g",
+                "source_index": 0,
+                "source_row": 2,
+                "shape_area_mm2": 27.267959171415704,
+                "actual_gap_to_previous_mm": null,
+                "scale_changed": false
+              },
+              {
+                "character": "b",
+                "source_index": 5,
+                "source_row": 2,
+                "shape_area_mm2": 24.820634444930537,
+                "actual_gap_to_previous_mm": 1.0500000000000043,
+                "scale_changed": false
+              },
+              {
+                "character": "o",
+                "source_index": 8,
+                "source_row": 2,
+                "shape_area_mm2": 19.90200681571316,
+                "actual_gap_to_previous_mm": 1.0500000000000043,
+                "scale_changed": false
+              },
+              {
+                "character": ".",
+                "source_index": 6,
+                "source_row": 2,
+                "shape_area_mm2": 3.1130912124863035,
+                "actual_gap_to_previous_mm": 1.0500000000059713,
+                "scale_changed": false
+              },
+              {
+                "character": "/",
+                "source_index": 10,
+                "source_row": 2,
+                "shape_area_mm2": 14.457855654075223,
+                "actual_gap_to_previous_mm": 1.0500000000004353,
+                "scale_changed": false
+              },
+              {
+                "character": "R",
+                "source_index": 14,
+                "source_row": 2,
+                "shape_area_mm2": 29.25533689279338,
+                "actual_gap_to_previous_mm": 1.0500000000061303,
+                "scale_changed": false
+              }
+            ],
+            "spacing_target_mm": 1.05
+          }
+        ],
+        "manual_color_boundary_mm": 2.4,
+        "relief_mm": 1.2,
+        "installed_quantity": 0,
+        "hashes": {
+          "FCStd": "185e98b3c04e91d0d381456ab69d1d44c637c3ab017ccc47f84ebdd95ba06bd4",
+          "stl": "08c23d07ff6717d4fe7b60b3985fef5cf1c1d2dc774b39d6ba8f0b3838892418",
+          "3mf": "ab2d81183c08ea5ad5de35e458966479b54f6ebf2494088657b45b40b18349ae",
+          "svg": "b53837a9465c95404fd40b96abc95cf2e5cc76182c3471a5dfc5c8892ee27f28"
+        }
+      },
+      {
+        "model": "B",
+        "coupon": "GLYPH-B",
+        "quantity": 1,
+        "source_plate": "NP3-TEXT-B",
+        "source_plate_sha256": "5b112ee8145e38cb3b32e7b2dc7aa7a4d48ddceb895b820b35c351b5242d45bf",
+        "bounds_mm": [
+          [
+            -0.0,
+            -0.0,
+            0.0
+          ],
+          [
+            33.535792,
+            40.0,
+            3.6
+          ]
+        ],
+        "rows": [
+          {
+            "row": 1,
+            "sample": "aeod",
+            "actual_source_height_mm": 12.0,
+            "glyphs": [
+              {
+                "character": "a",
+                "source_index": 1,
+                "source_row": 1,
+                "shape_area_mm2": 29.30959648674503,
+                "actual_gap_to_previous_mm": null,
+                "scale_changed": false
+              },
+              {
+                "character": "e",
+                "source_index": 3,
+                "source_row": 1,
+                "shape_area_mm2": 27.587200107188945,
+                "actual_gap_to_previous_mm": 1.0500000000000025,
+                "scale_changed": false
+              },
+              {
+                "character": "o",
+                "source_index": 7,
+                "source_row": 1,
+                "shape_area_mm2": 28.19219080473327,
+                "actual_gap_to_previous_mm": 1.0499999999999972,
+                "scale_changed": false
+              },
+              {
+                "character": "d",
+                "source_index": 16,
+                "source_row": 1,
+                "shape_area_mm2": 34.763130970633306,
+                "actual_gap_to_previous_mm": 1.0499999999999972,
+                "scale_changed": false
+              }
+            ],
+            "spacing_target_mm": 1.05
+          },
+          {
+            "row": 2,
+            "sample": "gbo./R",
+            "actual_source_height_mm": 10.0,
+            "glyphs": [
+              {
+                "character": "g",
+                "source_index": 0,
+                "source_row": 2,
+                "shape_area_mm2": 27.26795917141571,
+                "actual_gap_to_previous_mm": null,
+                "scale_changed": false
+              },
+              {
+                "character": "b",
+                "source_index": 5,
+                "source_row": 2,
+                "shape_area_mm2": 24.820634444930516,
+                "actual_gap_to_previous_mm": 1.049999999999999,
+                "scale_changed": false
+              },
+              {
+                "character": "o",
+                "source_index": 8,
+                "source_row": 2,
+                "shape_area_mm2": 19.90200681571317,
+                "actual_gap_to_previous_mm": 1.0499999999999972,
+                "scale_changed": false
+              },
+              {
+                "character": ".",
+                "source_index": 6,
+                "source_row": 2,
+                "shape_area_mm2": 3.113091212486299,
+                "actual_gap_to_previous_mm": 1.0500000000059748,
+                "scale_changed": false
+              },
+              {
+                "character": "/",
+                "source_index": 10,
+                "source_row": 2,
+                "shape_area_mm2": 14.457855654075226,
+                "actual_gap_to_previous_mm": 1.0500000000004353,
+                "scale_changed": false
+              },
+              {
+                "character": "R",
+                "source_index": 14,
+                "source_row": 2,
+                "shape_area_mm2": 29.255336892793338,
+                "actual_gap_to_previous_mm": 1.0500000000061234,
+                "scale_changed": false
+              }
+            ],
+            "spacing_target_mm": 1.05
+          }
+        ],
+        "manual_color_boundary_mm": 2.4,
+        "relief_mm": 1.2,
+        "installed_quantity": 0,
+        "hashes": {
+          "FCStd": "d8f08f8415df1aa5f1822451066d4476d6b866376ffae93a02df615071ba8490",
+          "stl": "da2c60cd46626cc7e8f05262efa54d53918682c25f4dacd5123fe70ea87eebbe",
+          "3mf": "5ae8a15ff8562e62310707735895e5278aa0796fbf0419ca05b659eae266eef4",
+          "svg": "011fc1196c261d73dfa646550679a8be97aa2da862cc49a31e60d20aceb876eb"
+        }
+      },
+      {
+        "model": "C",
+        "coupon": "GLYPH-C",
+        "quantity": 1,
+        "source_plate": "NP3-TEXT-C",
+        "source_plate_sha256": "55f63efe0e63db3b17229f983ff62f19ea8c53d84d1c75904b86fc41bfb3ca38",
+        "bounds_mm": [
+          [
+            -0.0,
+            -0.0,
+            0.0
+          ],
+          [
+            33.535792,
+            40.0,
+            3.6
+          ]
+        ],
+        "rows": [
+          {
+            "row": 1,
+            "sample": "aeod",
+            "actual_source_height_mm": 14.5,
+            "glyphs": [
+              {
+                "character": "a",
+                "source_index": 1,
+                "source_row": 1,
+                "shape_area_mm2": 46.04049114792864,
+                "actual_gap_to_previous_mm": null,
+                "scale_changed": false
+              },
+              {
+                "character": "e",
+                "source_index": 3,
+                "source_row": 1,
+                "shape_area_mm2": 43.879530568749715,
+                "actual_gap_to_previous_mm": 1.049999999999999,
+                "scale_changed": false
+              },
+              {
+                "character": "o",
+                "source_index": 7,
+                "source_row": 1,
+                "shape_area_mm2": 44.28523305576847,
+                "actual_gap_to_previous_mm": 1.0500000000000043,
+                "scale_changed": false
+              },
+              {
+                "character": "d",
+                "source_index": 16,
+                "source_row": 1,
+                "shape_area_mm2": 54.607084899703175,
+                "actual_gap_to_previous_mm": 1.0499999999999972,
+                "scale_changed": false
+              }
+            ],
+            "spacing_target_mm": 1.05
+          },
+          {
+            "row": 2,
+            "sample": "gbo./R",
+            "actual_source_height_mm": 10.0,
+            "glyphs": [
+              {
+                "character": "g",
+                "source_index": 0,
+                "source_row": 2,
+                "shape_area_mm2": 27.267959171415708,
+                "actual_gap_to_previous_mm": null,
+                "scale_changed": false
+              },
+              {
+                "character": "b",
+                "source_index": 5,
+                "source_row": 2,
+                "shape_area_mm2": 24.82063444493053,
+                "actual_gap_to_previous_mm": 1.049999999999999,
+                "scale_changed": false
+              },
+              {
+                "character": "o",
+                "source_index": 8,
+                "source_row": 2,
+                "shape_area_mm2": 19.902006815713168,
+                "actual_gap_to_previous_mm": 1.0499999999999972,
+                "scale_changed": false
+              },
+              {
+                "character": ".",
+                "source_index": 6,
+                "source_row": 2,
+                "shape_area_mm2": 3.1130912124863084,
+                "actual_gap_to_previous_mm": 1.0500000000059713,
+                "scale_changed": false
+              },
+              {
+                "character": "/",
+                "source_index": 10,
+                "source_row": 2,
+                "shape_area_mm2": 14.457855654075185,
+                "actual_gap_to_previous_mm": 1.0500000000004355,
+                "scale_changed": false
+              },
+              {
+                "character": "R",
+                "source_index": 14,
+                "source_row": 2,
+                "shape_area_mm2": 29.255336892793395,
+                "actual_gap_to_previous_mm": 1.050000000006102,
+                "scale_changed": false
+              }
+            ],
+            "spacing_target_mm": 1.05
+          }
+        ],
+        "manual_color_boundary_mm": 2.4,
+        "relief_mm": 1.2,
+        "installed_quantity": 0,
+        "hashes": {
+          "FCStd": "7778493429219806c23b2280c9358d1c1b098ecf6bd4c2fef014c7a26af53852",
+          "stl": "098ee65b4d09f0406c067b704a5740e5cb6f475cdda7b17e4aa720c726d361bc",
+          "3mf": "a71238ecc1801d79a101d6b4de63e93bfa4a9fb87b48237d3ba05f491c00b214",
+          "svg": "1dd5ffe63e323781146dc4f9adb5fd742662b638ea40f8deb99c964e84e25d22"
+        }
+      }
+    ],
+    "completed_bom_changed": false,
+    "sliced": false,
+    "physical_trial_performed": false
+  },
+  "plaque_only_render_intervals": [
+    {
+      "status": "PASS_PARTIAL_REUSE_ACTUAL_RENDER",
+      "revision": "5.0-legible-plaques",
+      "model": "A",
+      "unchanged_interval": [
+        1,
+        41
+      ],
+      "reused_interval_source": "Decoded verified generic4.0 Blender movie; plaque is not visible in these frames.",
+      "previous_movie_sha256": "cccdbc311ed6b81e05375721643cd01a32d3ae293892b440b1d2a9b626761076",
+      "newly_rendered_frames_from": 42,
+      "unchanged_body_meshes_and_camera": true,
+      "physical_simulation": false
+    },
+    {
+      "status": "PASS_PARTIAL_REUSE_ACTUAL_RENDER",
+      "revision": "5.0-legible-plaques",
+      "model": "B",
+      "unchanged_interval": [
+        1,
+        41
+      ],
+      "reused_interval_source": "Decoded verified generic4.0 Blender movie; plaque is not visible in these frames.",
+      "previous_movie_sha256": "ed117b814a98f4281477d5b269e0c321a4d60743ae495f82cd768cb07a4e6fd1",
+      "newly_rendered_frames_from": 42,
+      "unchanged_body_meshes_and_camera": true,
+      "physical_simulation": false
+    },
+    {
+      "status": "PASS_PARTIAL_REUSE_ACTUAL_RENDER",
+      "revision": "5.0-legible-plaques",
+      "model": "C",
+      "unchanged_interval": [
+        1,
+        41
+      ],
+      "reused_interval_source": "Decoded verified generic4.0 Blender movie; plaque is not visible in these frames.",
+      "previous_movie_sha256": "4f68f431500cf4df6fb4c6e3ca95c39bec3432e4ba079dbd9d6bede29a1a8b14",
+      "newly_rendered_frames_from": 42,
+      "unchanged_body_meshes_and_camera": true,
+      "physical_simulation": false
+    }
+  ],
   "privacy_cleanup": {
     "schema_version": 1,
     "status": "MANAGED_REACHABLE_HISTORY_CLEANED_SERVER_RETENTION_REMAINS",
@@ -7712,7 +8211,20 @@
       "support_guaranteed": false,
       "note": "This concerns public account information, not leaked credentials. GitHub may decline non-sensitive-data removal. Original values, withdrawn paths and old-SHA URLs are retained privately and are not reproduced here."
     },
-    "physical_manufacturing_qualification": "NOT_PERFORMED"
+    "physical_manufacturing_qualification": "NOT_PERFORMED",
+    "generic_publication": {
+      "revision": "4.0-public-template",
+      "commit": "ae7827458c9448a4c206c2719eb1f7bf9df3b52a",
+      "actions_run": "https://github.com/ktanino10/copilot-brick-display/actions/runs/35448357879",
+      "current_and_reachable_history_audit": "PASS_GENERIC_CURRENT_AND_ALL_REACHABLE_HISTORY",
+      "public_refs": 2,
+      "reachable_commits": 26,
+      "unique_blobs": 1303,
+      "expanded_entries": 3912,
+      "old_identifying_objects_reintroduced": 0,
+      "byte_identical_nonidentifying_summaries": 4,
+      "note": "The four re-created summaries contain only model letters, counts, pass flags and neutral image filenames; no recipient text or geometry."
+    }
   },
   "review_boundary": "Current digital output checks are not physical qualification. Historical personal review records are preserved privately, not republished as generic evidence.",
   "not_claimed": [

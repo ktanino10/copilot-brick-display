@@ -1,6 +1,6 @@
 # Revision 3 / Five-course base and independent front modules
 
-Current normal-model revision: **`4.0-public-template`**.
+Current normal-model revision: **`5.0-legible-plaques`**.
 
 **Manufacturing guidance update `trial-2026-09-19`: no geometry change.**
 A [separate public 4 mm trial report](https://github.com/ktanino10/octoprints-brick-kit-downloads/blob/be956ae14d2aac1601a4a2a87f2e49675a36979e/feedback/2026-09-19/README.md)
@@ -71,9 +71,9 @@ and tested with actual commercial and printed mates. PLA is not ABS; do not forc
 
 | Model | Actual W×D×H, mm | Installed parts | Base blocks / courses | Unchanged face courses |
 | --- | --- | --- | --- | --- |
-| A | 143.8 × 63.8 × 187.4 | 91 | 15 / 5 | 14 |
-| B | 191.8 × 79.8 × 238.6 | 150 | 19 / 5 | 19 |
-| C | 239.8 × 111.8 × 286.6 | 228 | 24 / 5 | 24 |
+| A | 143.8 × 64.2 × 187.4 | 91 | 15 / 5 | 14 |
+| B | 191.8 × 80.2 × 238.6 | 150 | 19 / 5 | 19 |
+| C | 239.8 × 112.2 × 286.6 | 228 | 24 / 5 | 24 |
 
 The base body is **48 mm = 5×9.6 mm**, with independent, printable, separable blocks—not one
 large solid box with drawn seams. Upper courses alternate six-stud runs and half-offset
@@ -95,7 +95,7 @@ toolpaths, warping and first layers still require a slicer and real print check.
 The exact text is:
 
 > Same icon, New adventures<br>
-> github.com/YOUR-USERNAME
+> github.com/USER
 
 There is no handle line on the normal models. The standalone raised cyan sign and its old dock
 are removed from A/B/C. The current message and logo are black-backed front inserts with white
@@ -103,26 +103,32 @@ relief, entirely inside the five-course base at **Z=4..44 mm**.
 
 | Model | Message backing W×H | Main / URL actual cap height | Logo disc / backing width |
 | --- | --- | --- | --- |
-| A | 102×40 mm | 10 / 7 mm | 28 / 32 mm |
-| B | 142×40 mm | 12 / 8 mm | 36 / 40 mm |
-| C | 182×40 mm | 14.5 / 9 mm | 40 / 48 mm |
+| A | 102×40 mm | 10 / 10 mm | 28 / 32 mm |
+| B | 142×40 mm | 12 / 10 mm | 36 / 40 mm |
+| C | 182×40 mm | 14.5 / 10 mm | 40 / 48 mm |
 
-Barlow Condensed Black (SIL OFL, notice bundled) is shaped to the selected height without
-thinning it horizontally. Actual parallel straight strokes in the raised cap faces are measured;
-the design rejects gauges below 0.84 mm. Mathematical curve terminals are not represented as
-uniform-width manufactured walls. In the generic B, the main line is 133.6875 mm wide and the placeholder URL is approximately
-89.444 mm wide. Exact cap-face stroke measurements are recorded for the generated native model;
-they are not measurements of a physical print.
+Barlow Condensed Bold is used for the main line, preserving its X scale and declared ink height;
+Black is enlarged uniformly to10mm for the shorter URL placeholder. Existing kerning is preserved
+when adequate, otherwise additional spacing is inserted. Inner counters and the e's right opening
+are enlarged without inflating the entire outline. `USER` is an explicit placeholder, not a profile link.
+In B the actual ink widths are132.1301 and77.4228mm within134mm; the carrier remains142×40mm.
+See [the measured typography change](lettering.ja.md) and `validation/lettering.json` for
+central-band counter chords, actual BRep gaps, approximate open-pocket escape diameters,
+straight positive strokes and persistent material-neck indicators. A uses explicitly lower
+main-line gap/counter targets to fit without thinning or shortening its text.
+These are not physical-print measurements or guarantees for every mathematical curve terminal.
 
 The mark is vectorized from the user-provided black-circle/white silhouette image. Only the
 derived normalized outline coordinates and solid relief are published, not the input raster
 or its private path. A black carrier supports the black circular pad and all white relief,
 including the tail and ears. This is an unofficial personal model, not an endorsed product.
 
-Print both modules rear-face-down. The message carrier is 2.4 mm thick with 0.8 mm raised text.
+Print both modules rear-face-down. The message carrier is 2.4 mm thick with 1.2 mm raised text.
 The logo adds a 0.4 mm black disc before its 0.8 mm white relief. Manual black-to-white changes
 occur after **2.4 mm** for text and **2.8 mm** for the logo. These are separate print plates;
 do not mix other black blocks into a plate that will change to white. AMS is not required.
+The extra0.4mm of text projects forward toY=-0.30, increasing only the assembled depth by0.4mm.
+The original68 non-text masters, carrier geometry, installation poses, width and height are unchanged.
 
 ## Positive geometry and removal
 

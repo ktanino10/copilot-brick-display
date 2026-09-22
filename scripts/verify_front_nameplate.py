@@ -36,7 +36,8 @@ def measure(model, catalog, downloads):
         other_module = next(by_id[i["id"]].Shape for i in modules if i != item)
         stops = Part.makeCompound(keepers)
         lo, hi = bounds_list(plaque)
-        assert lo[2] >= 0 and hi[2] <= 48 and lo[1] >= .099999
+        minimum_front = -.3 if item["module"] == "text" else .1
+        assert lo[2] >= 0 and hi[2] <= 48 and abs(lo[1] - minimum_front) < 1e-5
         assert abs(lo[2] - 4) < 1e-5 and abs(hi[2] - 44) < 1e-5
         assert plaque.common(base).Volume < 1e-5
         assert plaque.common(stops).Volume < 1e-5

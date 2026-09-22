@@ -1,7 +1,7 @@
 {
   "status": "PASS_REAL_STL_3MF_PLACEMENT_MAPPING",
   "guide_revision": "print-to-place-1",
-  "geometry_revision": "4.0-public-template",
+  "geometry_revision": "5.0-legible-plaques",
   "models": [
     {
       "model": "A",
@@ -35,7 +35,7 @@
         "BR-04x03-H096": "fe22771af4e1dba42dd0856fa7d4767ce6729251ddfa0221a30406f4034e959b",
         "NP3-KEEPER": "b523f99637728aa9e51b4025ec778016f0c9d78f9959aa7823abb71ce691978f",
         "NP3-LOGO-A": "599c8417bf3e3cf65e9c976ae238d4b5a8f31ff3bc411c4074b7b3eb85571a90",
-        "NP3-TEXT-A": "44efd2b0919f795630ea0b22797fbb698b4accc5d6d1ff5ffbf4fcf711682369"
+        "NP3-TEXT-A": "de4b9ec71f68cec4920a76de7ada0efdb851222ebc745e51d173864b82ff7f07"
       }
     },
     {
@@ -75,7 +75,7 @@
         "BR-05x04-H096": "db19a404e4b5dcbcdc0e80e13d3d775ba55c4667bb018b2a911f1e2c1d667b6a",
         "NP3-KEEPER": "b523f99637728aa9e51b4025ec778016f0c9d78f9959aa7823abb71ce691978f",
         "NP3-LOGO-B": "96135856f694c111da16975ad7d7948f20c9fa1c5c3ca11b102477df0a77a7e6",
-        "NP3-TEXT-B": "6cc71347e5eb73c8cb6ee5d1bf4be634c44f32bf76177862bfdd35548c0f49c5"
+        "NP3-TEXT-B": "5b112ee8145e38cb3b32e7b2dc7aa7a4d48ddceb895b820b35c351b5242d45bf"
       }
     },
     {
@@ -122,7 +122,7 @@
         "BR-05x06-H096": "3270c039829a9f0ffc163af994e269d924a5029b020003799a52ae1467dad248",
         "NP3-KEEPER": "b523f99637728aa9e51b4025ec778016f0c9d78f9959aa7823abb71ce691978f",
         "NP3-LOGO-C": "1f757d7f64f646c2f1e0085153dd3693b3953ef4dcc06a11a901f9898c2d6963",
-        "NP3-TEXT-C": "285e3dd21cc6d204fbf812b57908c9d1d2b3f35e87c9df3c77d7a156038e2e6d"
+        "NP3-TEXT-C": "55f63efe0e63db3b17229f983ff62f19ea8c53d84d1c75904b86fc41bfb3ca38"
       }
     }
   ],

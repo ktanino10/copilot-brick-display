@@ -72,12 +72,15 @@ def front_geometry_functions(source):
     for node in ast.walk(tree):
         if isinstance(node, ast.Raise) and isinstance(node.exc, ast.Call):
             node.exc.args = [ast.Constant(value="diagnostic message")]
-    return [ast.dump(node, include_attributes=False) for node in tree.body if isinstance(node, ast.FunctionDef)]
+    return [ast.dump(node, include_attributes=False) for node in tree.body
+            if isinstance(node, ast.FunctionDef) and node.name not in {"message_faces", "plaque_shape"}]
 
 
 def front_geometry_parameters(parameters):
     message = {key: value for key, value in parameters["message"].items()
-               if key not in {"lines", "frozen_legacy_interface", "legacy_variant_distribution"}}
+               if key not in {"lines", "font", "bold_font", "line_bottoms", "relief",
+                              "minimum_straight_stroke", "printability",
+                              "frozen_legacy_interface", "legacy_variant_distribution"}}
     return {"interface": parameters["interface"], "message": message, "logo": parameters.get("logo")}
 
 
@@ -384,6 +387,11 @@ def geometry_recipe(parameters):
         "brick_functions": brick_functions((ROOT / "scripts/freecad_geometry.py").read_text()),
         "front_geometry_sha256": hashlib.sha256((ROOT / "scripts/front_nameplate.py").read_bytes()).hexdigest(),
         "font_sha256": hashlib.sha256((ROOT / parameters["message"]["font"]).read_bytes()).hexdigest(),
+        "bold_font_sha256": hashlib.sha256((ROOT / parameters["message"]["bold_font"]).read_bytes()).hexdigest(),
+        "lettering_source_sha256": {
+            name: hashlib.sha256((ROOT / "scripts" / name).read_bytes()).hexdigest()
+            for name in ("nameplate_lettering.py", "legible_lettering.py", "legible_metrics.py")
+        },
         "logo_sha256": hashlib.sha256((ROOT / parameters["logo"]["outline"]).read_bytes()).hexdigest(),
     }
 

@@ -151,6 +151,10 @@ def build_catalog(p):
         parts[text_id] = {
             "id": text_id, "kind": "front_plaque", "width": v["message_width"],
             "text_sizes": v["text_sizes"], "text_heights": v["text_heights"], "text": message["lines"],
+            "lettering_goals": [
+                {**message["printability"]["targets"], **v.get("main_lettering_goals", {})},
+                message["printability"]["targets"],
+            ],
             "top_studs": False, "socket": False, "stl": f"parts/{text_id}.stl",
             "orientation": "flat_rear_on_bed_letters_up", "optional_color_change_z": message["thickness"],
             "letter_color": message["letter_color"],

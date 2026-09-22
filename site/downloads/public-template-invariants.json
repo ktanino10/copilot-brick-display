@@ -1,7 +1,9 @@
 {
   "schema_version": 1,
   "public_geometry_revision": "4.0-public-template",
-  "purpose": "Privacy-only text replacement; carrier, connections, face, colors and poses retain their numeric mechanical contract.",
+  "purpose": "Frozen non-text mechanical baseline. Revision5 changes only lettering and permits exactly0.4mm extra forward depth from relief0.8 to1.2.",
+  "baseline_text_relief_mm": 0.8,
+  "approved_text_relief_mm": 1.2,
   "unchanged_nontext_stl_sha256": {
     "NP3-KEEPER": "b523f99637728aa9e51b4025ec778016f0c9d78f9959aa7823abb71ce691978f",
     "BASE3-18x08-B-a4853c": "7b261980c94944ab235041fccb1841b15804de5b57bf13ef3adf0dc27ebb63c8",

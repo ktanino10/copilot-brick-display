@@ -99,8 +99,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--plates-only", action="store_true")
     parser.add_argument("--reuse-plates", action="store_true")
+    parser.add_argument("--update-parts", nargs="+", help="Update only plate files containing these changed masters; preserve all print positions.")
     args = parser.parse_args()
     c = json.loads((ROOT / "design/catalog.json").read_text())
+    if args.reuse_plates and args.update_parts:
+        raise ValueError("Choose unchanged-plate reuse or an explicit changed-part set, not both.")
+    if args.update_parts and set(args.update_parts) - set(c["parts"]):
+        raise ValueError("Unknown changed master; do not infer a replacement part.")
     downloads = ROOT / "site/downloads"
     read_first = (ROOT / "docs/build.ja.md").read_text()
     read_first = read_first.replace("(../site/", "(https://ktanino10.github.io/copilot-brick-display/")
@@ -108,6 +113,7 @@ def main():
     read_first = read_first.replace("(rebuild.md)", "(https://ktanino10.github.io/copilot-brick-display/rebuild.html)")
     read_first = read_first.replace("(trial.ja.md)", "(https://ktanino10.github.io/copilot-brick-display/trial.html?guidance=trial-2026-09-19)")
     read_first = read_first.replace("(assembly.ja.md)", "(https://ktanino10.github.io/copilot-brick-display/assembly.html)")
+    read_first = read_first.replace("(lettering.ja.md)", "(https://ktanino10.github.io/copilot-brick-display/lettering.html)")
     coupons = sorted(key for key in c["parts"] if key.startswith(("FIT-", "NP3-FIT-")))
     if not args.plates_only:
         with zipfile.ZipFile(downloads / "fit-coupons.zip", "w", zipfile.ZIP_DEFLATED) as archive:
@@ -129,7 +135,7 @@ def main():
                 archive.write(downloads / "fit-coupons.zip", "fit-coupons.zip")
         plates_path = folder / "plates"
         plates_path.mkdir(exist_ok=True)
-        if args.reuse_plates:
+        if args.reuse_plates or args.update_parts:
             manifest = json.loads((plates_path / "manifest.json").read_text())["plates"]
             counts = Counter((item["part"], plate["color"]) for plate in manifest for item in plate["items"])
             expected = Counter({(row["part"], row["color"]): row["quantity"] for row in model["bom"]})
@@ -139,6 +145,18 @@ def main():
             import hashlib
             for item in verified["files"]:
                 assert hashlib.sha256((plates_path / item["file"]).read_bytes()).hexdigest() == item["sha256"]
+            if args.update_parts:
+                updated = []
+                for plate in manifest:
+                    if set(args.update_parts) & {item["part"] for item in plate["items"]}:
+                        finish = (plate["finish_color"], float(plate["manual_change_after_z_mm"])) if plate["finish_color"] else None
+                        write_3mf(plates_path / plate["file"], plate["color"], plate["items"], c, cache, finish)
+                        updated.append(plate["file"])
+                with zipfile.ZipFile(folder / "plates.zip", "w", zipfile.ZIP_DEFLATED) as archive:
+                    for path in sorted(plates_path.iterdir()):
+                        if path.name == "manifest.json" or path.suffix == ".3mf":
+                            archive.write(path, path.name)
+                print(f"{model['id']}: updated only {updated}; all manifest poses/quantities unchanged")
             results.append({"model": model["id"], "plates": len(manifest), "instances": sum(counts.values()),
                             "bom_exact": True, "all_6mm_brim_envelopes_inside_16_to_240_mm": True})
             print(f"{model['id']}: rebuilt print ZIP; reused {len(manifest)} independently verified 3MF plates")

@@ -2,7 +2,7 @@
   "status": "PASS_DIGITAL_ONLY",
   "library": "trimesh 4.7.4",
   "units": "mm (STL has no intrinsic unit tag; catalogue and header specify mm)",
-  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
   "parts": [
     {
       "part": "NP3-KEEPER",
@@ -209,7 +209,7 @@
       "watertight": true,
       "winding_consistent": true,
       "connected_bodies": 1,
-      "positive_volume_mm3": 9776.2642,
+      "positive_volume_mm3": 10024.6532,
       "vertex_manifold": true,
       "bounds_mm": [
         [
@@ -220,10 +220,10 @@
         [
           102.0,
           40.0,
-          3.200000047683716
+          3.5999999046325684
         ]
       ],
-      "triangles": 60666,
+      "triangles": 56350,
       "bed_envelope_with_6mm_brim_mm": [
         114.0,
         52.0
@@ -634,7 +634,7 @@
       "watertight": true,
       "winding_consistent": true,
       "connected_bodies": 1,
-      "positive_volume_mm3": 13777.9799,
+      "positive_volume_mm3": 14016.1161,
       "vertex_manifold": true,
       "bounds_mm": [
         [
@@ -645,10 +645,10 @@
         [
           142.0,
           40.0,
-          3.200000047683716
+          3.5999999046325684
         ]
       ],
-      "triangles": 59472,
+      "triangles": 51656,
       "bed_envelope_with_6mm_brim_mm": [
         154.0,
         52.0
@@ -1159,7 +1159,7 @@
       "watertight": true,
       "winding_consistent": true,
       "connected_bodies": 1,
-      "positive_volume_mm3": 17880.9806,
+      "positive_volume_mm3": 18121.1532,
       "vertex_manifold": true,
       "bounds_mm": [
         [
@@ -1170,10 +1170,10 @@
         [
           182.0,
           40.0,
-          3.200000047683716
+          3.5999999046325684
         ]
       ],
-      "triangles": 59392,
+      "triangles": 47880,
       "bed_envelope_with_6mm_brim_mm": [
         194.0,
         52.0

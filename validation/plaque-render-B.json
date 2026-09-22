@@ -1,0 +1,14 @@
+{
+  "status": "PASS_PARTIAL_REUSE_ACTUAL_RENDER",
+  "revision": "5.0-legible-plaques",
+  "model": "B",
+  "unchanged_interval": [
+    1,
+    41
+  ],
+  "reused_interval_source": "Decoded verified generic4.0 Blender movie; plaque is not visible in these frames.",
+  "previous_movie_sha256": "ed117b814a98f4281477d5b269e0c321a4d60743ae495f82cd768cb07a4e6fd1",
+  "newly_rendered_frames_from": 42,
+  "unchanged_body_meshes_and_camera": true,
+  "physical_simulation": false
+}

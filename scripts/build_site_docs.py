@@ -20,6 +20,7 @@ def links(value):
         "trial.ja.md": "trial.html",
         "customize.ja.md": "customize.html", "privacy.md": "privacy.html",
         "assembly.ja.md": "assembly.html",
+        "lettering.ja.md": "lettering.html",
     }
     def replace(match):
         attribute, url = match.groups()
@@ -41,6 +42,7 @@ def main():
         ("customize.ja.md", "customize.html", "Fork・Issue・AIで表示文字を変更"),
         ("privacy.md", "privacy.html", "公開テンプレートとプライバシーの境界"),
         ("assembly.ja.md", "assembly.html", "印刷ファイルから組み立てる3Dガイド"),
+        ("lettering.ja.md", "lettering.html", "銘板の印刷しやすさ・小文字試験片"),
     ]:
         body = links(markdown.markdown((ROOT / "docs" / source).read_text(),
                                       extensions=["tables", "fenced_code", "toc"]))
@@ -75,6 +77,7 @@ def main():
     for name in ["parameters.json", "interface.json", "sources.json", "publication-policy.json", "public-template-invariants.json", "personalization.private.example.json"]:
         shutil.copyfile(ROOT / "design" / name, ROOT / "site/downloads" / name)
     shutil.copyfile(ROOT / "resources/fonts/barlow-condensed/OFL.txt", ROOT / "site/vendor/Barlow-OFL.txt")
+    shutil.copyfile(ROOT / "validation/lettering.json", ROOT / "site/downloads/lettering.json")
     from stamp_release import main as stamp
     stamp()
     print("Published maintained guides, staged trial instructions, technical design and notices.")

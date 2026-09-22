@@ -6,8 +6,8 @@ import string
 
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED = set(string.ascii_letters + string.digits + " .,/:@_-!'()")
-GENERIC_LINES = ["Same icon, New adventures", "github.com/YOUR-USERNAME"]
-GENERIC_FIRST_LINES = {"Same icon, New adventures", "YOUR MESSAGE HERE", "YOUR DISPLAY NAME"}
+GENERIC_LINES = ["Same icon, New adventures", "github.com/USER"]
+GENERIC_FIRST_LINES = {"Same icon, New adventures", "YOUR MESSAGE HERE", "YOUR DISPLAY NAME", "YOUR TEXT"}
 
 
 def strict_object(pairs):

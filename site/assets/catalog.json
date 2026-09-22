@@ -1,8 +1,12 @@
 {
   "schema_version": 1,
-  "revision": "4.0-public-template",
+  "revision": "5.0-legible-plaques",
   "units": "mm",
-  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "publication": {
+    "mode": "generic",
+    "public_text_approved": false
+  },
+  "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
   "interface": {
     "pitch": 8.0,
     "brick_height": 9.6,
@@ -24,17 +28,30 @@
     "interface_id": "BASE-FRONT-NP3",
     "lines": [
       "Same icon, New adventures",
-      "github.com/YOUR-USERNAME"
+      "github.com/USER"
     ],
     "height": 40.0,
     "thickness": 2.4,
-    "relief": 0.8,
+    "relief": 1.2,
     "minimum_straight_stroke": 0.84,
     "font": "resources/fonts/barlow-condensed/BarlowCondensed-Black.ttf",
+    "bold_font": "resources/fonts/barlow-condensed/BarlowCondensed-Bold.ttf",
     "line_bottoms": [
       22.0,
-      8.0
+      7.0
     ],
+    "printability": {
+      "targets": {
+        "counter_central_half_chord": 1.02,
+        "e_exit_channel": 1.1,
+        "adjacent_glyph_clearance": 1.05
+      },
+      "sample_deflection_mm": 0.002,
+      "actual_gap_tolerance_mm": 0.006,
+      "aperture_grid_mm": 0.01,
+      "aperture_uncertainty_mm": 0.03,
+      "not_a_physical_qualification": true
+    },
     "side_taper": 2.0,
     "rear_vertical_margin": 1.2,
     "rear_flat_thickness": 0.8,
@@ -467,11 +484,23 @@
       ],
       "text_heights": [
         10.0,
-        7.0
+        10.0
       ],
       "text": [
         "Same icon, New adventures",
-        "github.com/YOUR-USERNAME"
+        "github.com/USER"
+      ],
+      "lettering_goals": [
+        {
+          "counter_central_half_chord": 0.9,
+          "e_exit_channel": 0.95,
+          "adjacent_glyph_clearance": 0.8
+        },
+        {
+          "counter_central_half_chord": 1.02,
+          "e_exit_channel": 1.1,
+          "adjacent_glyph_clearance": 1.05
+        }
       ],
       "top_studs": false,
       "socket": false,
@@ -488,17 +517,17 @@
         [
           102.0,
           40.0,
-          3.2
+          3.6
         ]
       ],
-      "volume_mm3": 9777.122453,
-      "mesh_triangles": 60666,
+      "volume_mm3": 10026.386038,
+      "mesh_triangles": 56350,
       "mesh_linear_deflection_mm": 0.025,
-      "sha256": "44efd2b0919f795630ea0b22797fbb698b4accc5d6d1ff5ffbf4fcf711682369",
+      "sha256": "de4b9ec71f68cec4920a76de7ada0efdb851222ebc745e51d173864b82ff7f07",
       "local_center_mm": [
-        51.01316916583715,
-        20.059030440351627,
-        1.2976913125042915
+        50.99849436201025,
+        19.979771860455532,
+        1.351247471322989
       ]
     },
     "NP3-LOGO-A": {
@@ -1165,11 +1194,23 @@
       ],
       "text_heights": [
         12.0,
-        8.0
+        10.0
       ],
       "text": [
         "Same icon, New adventures",
-        "github.com/YOUR-USERNAME"
+        "github.com/USER"
+      ],
+      "lettering_goals": [
+        {
+          "counter_central_half_chord": 1.02,
+          "e_exit_channel": 1.1,
+          "adjacent_glyph_clearance": 1.05
+        },
+        {
+          "counter_central_half_chord": 1.02,
+          "e_exit_channel": 1.1,
+          "adjacent_glyph_clearance": 1.05
+        }
       ],
       "top_studs": false,
       "socket": false,
@@ -1186,17 +1227,17 @@
         [
           142.0,
           40.0,
-          3.2
+          3.6
         ]
       ],
-      "volume_mm3": 13778.920878,
-      "mesh_triangles": 59472,
+      "volume_mm3": 14018.123111,
+      "mesh_triangles": 51656,
       "mesh_linear_deflection_mm": 0.025,
-      "sha256": "6cc71347e5eb73c8cb6ee5d1bf4be634c44f32bf76177862bfdd35548c0f49c5",
+      "sha256": "5b112ee8145e38cb3b32e7b2dc7aa7a4d48ddceb895b820b35c351b5242d45bf",
       "local_center_mm": [
-        71.00852076457561,
-        20.173925751136743,
-        1.3096586168528315
+        70.98795573132185,
+        20.17531273424519,
+        1.3510382131703373
       ]
     },
     "NP3-LOGO-B": {
@@ -2011,11 +2052,23 @@
       ],
       "text_heights": [
         14.5,
-        9.0
+        10.0
       ],
       "text": [
         "Same icon, New adventures",
-        "github.com/YOUR-USERNAME"
+        "github.com/USER"
+      ],
+      "lettering_goals": [
+        {
+          "counter_central_half_chord": 1.02,
+          "e_exit_channel": 1.1,
+          "adjacent_glyph_clearance": 1.05
+        },
+        {
+          "counter_central_half_chord": 1.02,
+          "e_exit_channel": 1.1,
+          "adjacent_glyph_clearance": 1.05
+        }
       ],
       "top_studs": false,
       "socket": false,
@@ -2032,17 +2085,17 @@
         [
           182.0,
           40.0,
-          3.2
+          3.6
         ]
       ],
-      "volume_mm3": 17881.987154,
-      "mesh_triangles": 59392,
+      "volume_mm3": 18123.110026,
+      "mesh_triangles": 47880,
       "mesh_linear_deflection_mm": 0.025,
-      "sha256": "285e3dd21cc6d204fbf812b57908c9d1d2b3f35e87c9df3c77d7a156038e2e6d",
+      "sha256": "55f63efe0e63db3b17229f983ff62f19ea8c53d84d1c75904b86fc41bfb3ca38",
       "local_center_mm": [
-        91.0027262341537,
-        20.31750021442645,
-        1.3246418212492084
+        90.98731140175194,
+        20.379298001093545,
+        1.3612266718760686
       ]
     },
     "NP3-LOGO-C": {
@@ -2933,8 +2986,13 @@
       ],
       "text_heights": [
         10.0,
-        7.0
+        10.0
       ],
+      "main_lettering_goals": {
+        "counter_central_half_chord": 0.9,
+        "e_exit_channel": 0.95,
+        "adjacent_glyph_clearance": 0.8
+      },
       "logo_x": 108.0,
       "logo_module_width": 32.0,
       "logo_diameter": 28.0,
@@ -4938,7 +4996,7 @@
       "bounds": [
         [
           0.1,
-          0.1,
+          -0.3,
           -0.0
         ],
         [
@@ -4949,14 +5007,14 @@
       ],
       "actual_mm": [
         143.8,
-        63.8,
+        64.2,
         187.4
       ],
-      "cad_solid_volume_mm3": 437883.934,
+      "cad_solid_volume_mm3": 438133.198,
       "center_of_material_mm": [
-        71.9992,
-        30.4864,
-        61.3314
+        71.9892,
+        30.4689,
+        61.3083
       ],
       "center_note": "Uniform solid-CAD material only; not sliced mass or proven stability."
     },
@@ -4988,7 +5046,7 @@
       ],
       "text_heights": [
         12.0,
-        8.0
+        10.0
       ],
       "logo_x": 148.0,
       "logo_module_width": 40.0,
@@ -8121,7 +8179,7 @@
       "bounds": [
         [
           0.1,
-          0.1,
+          -0.3,
           -0.0
         ],
         [
@@ -8132,14 +8190,14 @@
       ],
       "actual_mm": [
         191.8,
-        79.8,
+        80.2,
         238.6
       ],
-      "cad_solid_volume_mm3": 1023437.382,
+      "cad_solid_volume_mm3": 1023676.585,
       "center_of_material_mm": [
-        96.014,
-        38.8401,
-        93.4737
+        96.0088,
+        38.8309,
+        93.4575
       ],
       "center_note": "Uniform solid-CAD material only; not sliced mass or proven stability."
     },
@@ -8172,7 +8230,7 @@
       ],
       "text_heights": [
         14.5,
-        9.0
+        10.0
       ],
       "logo_x": 188.0,
       "logo_module_width": 48.0,
@@ -12752,7 +12810,7 @@
       "bounds": [
         [
           0.1,
-          0.1,
+          -0.3,
           -0.0
         ],
         [
@@ -12763,20 +12821,16 @@
       ],
       "actual_mm": [
         239.8,
-        111.8,
+        112.2,
         286.6
       ],
-      "cad_solid_volume_mm3": 2220948.871,
+      "cad_solid_volume_mm3": 2221189.994,
       "center_of_material_mm": [
-        120.0094,
-        58.8425,
-        120.428
+        120.0066,
+        58.836,
+        120.418
       ],
       "center_note": "Uniform solid-CAD material only; not sliced mass or proven stability."
     }
-  ],
-  "publication": {
-    "mode": "generic",
-    "public_text_approved": false
-  }
+  ]
 }

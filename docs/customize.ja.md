@@ -1,6 +1,6 @@
 # 自分用の文字へ変更する — Fork → Issue → AI → PR
 
-公開デフォルトの `github.com/YOUR-USERNAME` は仮表示です。実在する相手のプロフィールとしてリンクしていません。
+公開デフォルトの `github.com/USER` は印刷幅を確保する短い仮表示です。実在する相手のプロフィールとしてリンクしていません。
 通常A/B/Cの5段台座、右ロゴ、8 mmピッチ、無接着の交換構造を保ち、文字銘板だけを変更することから始めます。
 
 **公開してよい文字かどうかを先に決めてください。**
@@ -38,8 +38,8 @@ Issueフォーム「表示文字のカスタマイズ」も利用できます。
 自分のfork内で、通常モデルの交換銘板を変更する。
 
 対象モデル: B（A / B / Cから選ぶ）
-表示行1: YOUR DISPLAY NAME
-表示行2: github.com/YOUR-USERNAME
+表示行1: YOUR TEXT
+表示行2: github.com/USER
 任意のhandle: 必要なら行1または行2に明示する。自動で3行目を追加しない。
 公開区分: placeholderのみ / 公開してよい値 / 実値は非公開入力
 
@@ -108,10 +108,13 @@ cp design/personalization.private.example.json .private/personalization.json
 
 FreeCADに対応するPython executableとmodule directoryを自分の環境で指定して実行します。
 実際のパスを公開Issueへ貼る必要はありません。
+`requirements.txt`をFreeCADと同じPython ABIのvenvへ導入し、`METRICS_SITE_PACKAGES`はそのsite-packagesを指定します
+（例：`.venv/bin/python -c 'import site; print(site.getsitepackages()[0])'`）。標準のCAD環境だけでSciPy等が見つからない場合は
+検査を省略せず、[再生成の環境設定](rebuild.md)に従ってください。
 
 ```bash
 FREECAD_USER_HOME="$PWD/.private/freecad-profile" QT_QPA_PLATFORM=offscreen \
-  PYTHONPATH="$FREECAD_LIB:scripts" \
+  PYTHONPATH="$FREECAD_LIB:$METRICS_SITE_PACKAGES:scripts" \
   "$FREECAD_PYTHON" scripts/personalize_plate.py \
   --config .private/personalization.json --output .private/generated
 ```
@@ -131,6 +134,10 @@ private生成物をGitHubへ添付した時点で秘密が保たれるとは限�
 `design/publication-policy.json`の明示承認を入力にします。
 [再生成手順](rebuild.md)のFreeCAD → STL/図面 → Blender → 文書/パッケージ → 検査を実行します。
 最初に変更した銘板の実幅・高さ・strokeと正面previewを確認します。
+現行主文はBold、URLは10 mmのBlack、白文字は1.2 mmです。公開の短いplaceholderで成立した測定は、
+長い個人handleや別glyphの合格証明ではありません。文字幅・孔・字間に加え材料neckを確認し、
+全てのglyphの先端が1 mm以上あると誤解しないでください。無断の文字短縮・横潰しで幅を通さず、
+未成立時は停止して明示的なレイアウト判断を求めます。実物は[文字試験片](lettering.ja.md)から確認します。
 
 cloud agentはGitHub Actions基盤の一時環境で動きますが、FreeCAD／Blenderが存在する保証はありません。
 ツールがなければ **BLOCKED: native regeneration not executed** と明記し、

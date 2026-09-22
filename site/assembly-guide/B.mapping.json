@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "guide_revision": "print-to-place-1",
-  "geometry_revision": "4.0-public-template",
+  "geometry_revision": "5.0-legible-plaques",
   "model": "B",
   "title": "B / 印刷ファイルから組み立てる3Dガイド",
   "units": "mm",
@@ -16,7 +16,7 @@
   "bounds": [
     [
       0.1,
-      0.1,
+      -0.3,
       -0.0
     ],
     [
@@ -523,15 +523,15 @@
         [
           142.0,
           40.0,
-          3.2
+          3.6
         ]
       ],
-      "sha256": "6cc71347e5eb73c8cb6ee5d1bf4be634c44f32bf76177862bfdd35548c0f49c5",
+      "sha256": "5b112ee8145e38cb3b32e7b2dc7aa7a4d48ddceb895b820b35c351b5242d45bf",
       "orientation": "flat_rear_on_bed_letters_up",
       "dimensions": [
         142.0,
         40.0,
-        3.2
+        3.6
       ],
       "finish_color": "white",
       "color_change_z_mm": 2.4
@@ -10266,7 +10266,7 @@
     {
       "file": "B-black-to-white-z2p4-01.3mf",
       "color": "black",
-      "sha256": "8a215ab8f52ff9ca5ff1896028ce4558c9f0cc46d7e92e1aa71ac95b3706acc8",
+      "sha256": "1e49844de665351d1a51e30e743c06037643d71dc0f6ec52adcae73bf02d28fb",
       "slots": [
         {
           "id": "B-black-to-white-z2p4-01.3mf#1",
@@ -12092,8 +12092,8 @@
     "keeper_lift_mm": 16
   },
   "inputs_sha256": {
-    "catalog": "e0370bc2d7bbef1c8bc6a77f95879001513c17f07f5787f5cb0348f4f0d04b30",
-    "assembly": "17a0b15408e2bb97a4e303f5576c42d71ba7f37a5bff08f8537bb82bf36d8adb",
+    "catalog": "0797824aed50ab9fb5eb138b8ff613a56cfac30e6884156b9e0d061f6ffc262a",
+    "assembly": "d9a8444e3f2824586fd49b8b213029c1643f0f376ed07a7bf7e5d671c2d3e607",
     "plates": "44a0498de8ccdc4756c8a802f83f72710ee245a2c8ac0f5c4e6ff141d9038af1"
   }
 }

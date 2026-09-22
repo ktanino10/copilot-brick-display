@@ -9,28 +9,29 @@
   "files": [
     {
       "path": "assembly-guide/media/B-first-base.png",
-      "bytes": 200517,
-      "sha256": "3d7e4f53717e517c85a4ab9c9fbada8b59f818364b26cab30dc82b0b4c46c335"
+      "bytes": 198308,
+      "sha256": "4e1da52deb21cd4b4fd36eb8f4c7ddbf8c204feb74e68204404bc8ec3e8a5228"
     },
     {
       "path": "assembly-guide/media/B-black-01-sort.png",
-      "bytes": 253044,
-      "sha256": "d4b3c50ae6295f9d783af568b6686d934e0a6110ea64d1d50fdec62e35985fa5"
+      "bytes": 252988,
+      "sha256": "b7aeaca9bf53c69ca76d1e770bfd971066656e2f3a8be1a328ead611ff0696fc"
     },
     {
       "path": "assembly-guide/media/B-black-04-base-parts.png",
-      "bytes": 254397,
-      "sha256": "14c630c89dac973a02906b669602a3ea810937437c1af09ade693772727169f4"
+      "bytes": 254111,
+      "sha256": "ab289b8b13a7a070a98e17b483bfb3f8e34d67dcf72e9fd1eddcda878dc96a9a"
     },
     {
       "path": "assembly-guide/media/B-first-seven-steps.gif",
-      "bytes": 2764185,
-      "sha256": "a13ea38245bdc0de935030bf2bd6f70f8b01dcb0a369eff5627e4b5638701d32"
+      "bytes": 2773220,
+      "sha256": "9ab68b8752d607a8b86c68201830c48c4f4d0cbcdddbdcf4b5a6987ac6c7e276"
     },
     {
       "path": "assembly-guide/media/B-first-seven-steps.mp4",
-      "bytes": 714482,
-      "sha256": "23b54d6761f540a8c5ed499de89243b9c60a63aa7cc7a7e3686a72fa7880ae61"
+      "bytes": 714496,
+      "sha256": "fd30a09655778be4189f77b1223f5dd1db762154bbc7d4a14f326f8534d5d866"
     }
-  ]
+  ],
+  "geometry_revision": "5.0-legible-plaques"
 }

@@ -78,7 +78,7 @@ class DesignTests(unittest.TestCase):
         self.assertGreater(m["minimum_straight_stroke"], .8)
         self.assertGreaterEqual(m["bottom_z"], 0)
         self.assertLessEqual(m["bottom_z"] + m["height"], 48)
-        self.assertGreaterEqual(m["back_y"] - m["thickness"] - m["relief"], .099)
+        self.assertAlmostEqual(m["back_y"] - m["thickness"] - m["relief"], -.3)
         for model in self.c["models"]:
             plaque = next(x for x in model["placements"] if x.get("module") == "text" and x.get("role") == "front_module")
             self.assertEqual(plaque["rotation"], [90, 0, 0])

@@ -73,7 +73,7 @@ class PersonalizationTests(unittest.TestCase):
                        "BLOCKED", "GitHub Actions", "勝手にPRしません", "secret"):
             self.assertIn(phrase, text)
         form = (ROOT / ".github/ISSUE_TEMPLATE/personalize.yml").read_text()
-        self.assertIn("github.com/YOUR-USERNAME", form)
+        self.assertIn("github.com/USER", form)
         self.assertIn("非公開", form)
 
 

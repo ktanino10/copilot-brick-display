@@ -65,7 +65,8 @@ class CrossPCGuideTests(unittest.TestCase):
                 part = self.catalog["parts"][part_id]
                 self.assertEqual(part["optional_color_change_z"], height)
                 self.assertEqual(part["letter_color"], "white")
-                self.assertAlmostEqual(part["bounds"][1][2], height + .8, places=5)
+                relief = self.catalog["message"]["relief"] if kind == "TEXT" else self.catalog["logo"]["relief"]
+                self.assertAlmostEqual(part["bounds"][1][2], height + relief, places=5)
                 row = next(row for row in bom if row["part"] == part_id)
                 self.assertEqual((row["color"], row["finish_color"], row["quantity"]), ("black", "white", "1"))
                 self.assertEqual(float(row["color_change_z_mm"]), height)
@@ -104,7 +105,7 @@ class CrossPCGuideTests(unittest.TestCase):
         policy = json.loads((ROOT / "design/publication-policy.json").read_text())
         self.assertEqual(policy["mode"], "generic")
         self.assertFalse(policy["public_text_approved"])
-        self.assertEqual(self.catalog["message"]["lines"][1], "github.com/YOUR-USERNAME")
+        self.assertEqual(self.catalog["message"]["lines"][1], "github.com/USER")
 
     def test_embedded_print_guides_and_entry_links_are_current(self):
         for model in "ABC":

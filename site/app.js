@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/OrbitControls.js';
 import { STLLoader } from './vendor/STLLoader.js';
-import { explosionOffset } from './assembly-motion.js?rev=4.0-public-template';
+import { explosionOffset } from './assembly-motion.js?rev=5.0-legible-plaques';
 
 const $ = (selector) => document.querySelector(selector);
 const REVISION = $('meta[name="design-revision"]').content;

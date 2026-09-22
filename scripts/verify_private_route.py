@@ -1,7 +1,9 @@
 """Public evidence for the documented placeholder-only private-route exercise."""
 
 import copy
+import argparse
 import json
+from pathlib import Path
 
 import FreeCAD as App
 import Part
@@ -11,7 +13,12 @@ from front_nameplate import message_faces
 
 
 def main():
-    folder = ROOT / ".private/route-check-output/B"
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--folder", type=Path, default=ROOT / ".private/route-check-output/B")
+    args = parser.parse_args()
+    folder = args.folder.resolve()
+    if not folder.is_relative_to(ROOT / ".private"):
+        raise ValueError("The private-route fixture must remain in the ignored private directory.")
     fixture = json.loads((ROOT / "design/personalization.private.example.json").read_text())
     manifest = json.loads((folder / "private-manifest.json").read_text())
     if manifest["lines"] != fixture["lines"]:
@@ -41,7 +48,7 @@ def main():
     try:
         message_faces(spec, oversized)
     except ValueError as error:
-        assert "exceeds the available face width" in str(error)
+        assert "exceeds available" in str(error) or "exceeds the available face width" in str(error)
         assert "X" * 100 not in str(error)
     else:
         raise AssertionError("An overlong line must stop rather than be compressed or truncated")

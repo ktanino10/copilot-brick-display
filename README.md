@@ -1,6 +1,6 @@
 # Copilot Brick Display — public template
 
-**[3案を回して見る・ダウンロード](https://ktanino10.github.io/copilot-brick-display/?rev=4.0-public-template)**
+**[3案を回して見る・ダウンロード](https://ktanino10.github.io/copilot-brick-display/?rev=5.0-legible-plaques)**
  · **[作り方](docs/build.ja.md)** · **[Fork → Issue → AI → PRで文字を変える](docs/customize.ja.md)**
 
 **別PCで印刷する方へ：[色別ファイルの選び方と、黒→白の手動色替え](https://ktanino10.github.io/copilot-brick-display/guide.html?guide=separate-color-2026-09-19#print-another-pc)**
@@ -12,12 +12,16 @@
 
 ![Bの印刷プレート内slot 3と最初の組立B-001を結ぶ実STL表示](site/assembly-guide/media/B-first-base.png)
 
-公開リビジョンは **`4.0-public-template`**。黒い台座5段、大きい2行、正面右のロゴ、
+公開リビジョンは **`5.0-legible-plaques`**。黒い台座5段、大きい2行、正面右のロゴ、
 無接着で交換できる前面部品を持つ非公式の卓上オブジェです。
 公開の銘板は実際のCAD形状として次の仮表示を使います。実在の個人プロフィールではありません。
 
 > Same icon, New adventures<br>
-> github.com/YOUR-USERNAME
+> github.com/USER
+
+**[文字を印刷しやすくした改訂内容・実CAD比較](docs/lettering.ja.md)**：
+2行目を全案10 mm、白文字を1.2 mm高へ。孔・開口・字間を広げ、背面の取付けと本体68種類は維持しました。
+`USER`は実プロフィールへのリンクではない短い仮表記です。まず[文字の小試験片](site/downloads/lettering-coupons.zip)を選んだ案で印刷してください。
 
 個人値はgitignore対象のローカルJSONへ分離できます。公開してよい値を使うforkでは、
 Issue・PR・native・画像・動画・Actions artifact・Pagesにも表示されることを確認して、
@@ -27,12 +31,12 @@ Issue・PR・native・画像・動画・Actions artifact・Pagesにも表示さ�
 
 | 案 | 完成寸法 W×D×H / mm | 組込部品数 | 特徴 |
 | --- | --- | ---: | --- |
-| A MINI RELIEF | 143.8 × 63.8 × 187.4 | 91 | 浅い顔、14段＋黒台座5段 |
-| B DESK CLASSIC | 191.8 × 79.8 × 238.6 | 150 | 標準型、19段＋黒台座5段 |
-| C DISPLAY SCULPT | 239.8 × 111.8 × 286.6 | 228 | 厚い側面、24段＋黒台座5段、最下段2分割 |
+| A MINI RELIEF | 143.8 × 64.2 × 187.4 | 91 | 浅い顔、14段＋黒台座5段 |
+| B DESK CLASSIC | 191.8 × 80.2 × 238.6 | 150 | 標準型、19段＋黒台座5段 |
+| C DISPLAY SCULPT | 239.8 × 112.2 × 286.6 | 228 | 厚い側面、24段＋黒台座5段、最下段2分割 |
 
 寸法は台座と最上部スタッド込み、部品数は銘板・ロゴ・3個のキーパー込み、試験片は別です。
-文字以外の68種類のSTL、各案の配置・外形・接続寸法を維持しています。
+文字以外の68種類のSTL、各案の配置・幅・高さ・接続寸法を維持しています。文字が0.4 mm厚くなった分だけ完成奥行きが増えています。
 完成Cが256 mmより高くても、分割した各印刷部品はP1Sの公称造形体積内に収まります。
 STLの一律拡大・縮小はしません。AMS・電子部品・接着剤・追加購入金具は不要です。
 

@@ -35,7 +35,8 @@ def archive_text(markdown):
             .replace("(../site/", "(https://ktanino10.github.io/copilot-brick-display/")
             .replace("(build.ja.md)", "(https://ktanino10.github.io/copilot-brick-display/guide.html)")
             .replace("(build.ja.md#", "(https://ktanino10.github.io/copilot-brick-display/guide.html#")
-            .replace("(trial.ja.md)", "(https://ktanino10.github.io/copilot-brick-display/trial.html)"))
+            .replace("(trial.ja.md)", "(https://ktanino10.github.io/copilot-brick-display/trial.html)")
+            .replace("(lettering.ja.md)", "(https://ktanino10.github.io/copilot-brick-display/lettering.html)"))
 
 
 def main():

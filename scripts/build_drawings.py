@@ -148,7 +148,7 @@ def part_sheet(part, c):
     if part["kind"] in ("front_plaque", "front_logo"):
         info += ["Flat rear on bed / relief up", "Carrier 2.40; side taper 2.00",
                  f"Black to white after {part['optional_color_change_z']:.2f}",
-                 "White relief: 0.80; do not scale",
+                 f"White relief: {c['message']['relief'] if part['kind'] == 'front_plaque' else c['logo']['relief']:.2f}; do not scale",
                  "Overall installed Z: 4.00 .. 44.00"]
     if part["kind"] == "front_plaque":
         info += c["message"]["lines"]
@@ -282,7 +282,7 @@ def front_interface_sheet(c):
         "Carrier thickness2.40 / rear flat0.80 / edge relief1.20",
         "Rear width -> front width: 2.00 inset on each X side",
         "Default side clearance0.20; coupon candidates0.15/0.20/0.25",
-        "Text backY=3.30; logo backY=3.70; relief frontY=0.10",
+        "Text frontY=-0.30 / logo frontY=0.10; +0.40mm depth",
         "Both front modules fit in Z=4.00..44.00, inside48mm base",
         "3 separate up-stops: text2 / logo1; stud-grid mounting",
         "Remove: up-stops up6, forward>=32; module up45",

@@ -1,9 +1,10 @@
 {
   "status": "PASS_PUBLIC_TEMPLATE_GEOMETRY_BOUNDARIES",
-  "revision": "4.0-public-template",
-  "parameters_sha256": "1a08afda4872a4adcafe7f826b96f7fb244fa395907d65811fcbad6491124aad",
+  "revision": "5.0-legible-plaques",
+  "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
   "unchanged_nontext_masters": 68,
-  "model_dimensions_and_poses_preserved": true,
+  "model_width_height_and_poses_preserved": true,
+  "approved_added_front_depth_mm": 0.4,
   "public_mode": "generic",
   "unselected_individual_variant": "not_distributed",
   "physical_validation": "NOT_PERFORMED"

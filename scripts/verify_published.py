@@ -31,7 +31,10 @@ def main():
              "assets/catalog.json", "app.js", "style.css", "vendor/three.module.js",
              "downloads/validation.json", "downloads/fit-coupons.zip", "downloads/interface.pdf",
              "downloads/part-drawings.pdf", "drawings/interface.svg", "tribute/index.html"}
-    exact = ["index.html", "guide.html", "assets/catalog.json"]
+    exact = ["index.html", "guide.html", "assets/catalog.json", "lettering.html",
+             "downloads/lettering.json", "downloads/lettering-coupons.zip",
+             "downloads/lettering-coupons/manifest.json"]
+    files.update(exact)
     for model in c["models"]:
         key = model["id"]
         for filename in [f"{key}.FCStd", f"{key}.step", f"{key}.blend", "drawings.pdf",
@@ -45,13 +48,19 @@ def main():
         exact += [f"downloads/{key}/{key}.FCStd", f"downloads/{key}/{key}.step",
                   f"downloads/{key}/{key}.blend", f"downloads/{key}/bom.csv",
                   f"downloads/{key}/drawings.pdf", f"downloads/{key}/print-kit.zip",
+                  f"downloads/{key}/plates.zip", f"downloads/{key}/plates/{key}-black-to-white-z2p4-01.3mf",
                   f"media/{key}-assembly.mp4", f"media/{key}-base-front.png",
                   f"downloads/parts/NP3-TEXT-{key}.stl", f"downloads/parts/NP3-LOGO-{key}.stl"]
+        exact += [f"downloads/lettering-coupons/GLYPH-{key}.stl",
+                  f"downloads/lettering-coupons/GLYPH-{key}.3mf",
+                  f"media/lettering/{key}-lettering-before-after.png"]
     files.update(f"downloads/{part['stl']}" for part in c["parts"].values())
     assert not (ROOT / "site/tribute/manifest.json").exists(), "The private individual variant must not be distributed."
     files.update(("customize.html", "privacy.html", "trial.html", "downloads/trial-subset.zip"))
     exact += ["customize.html", "privacy.html", "trial.html", "downloads/trial-subset.zip",
               "downloads/trial-subset/manifest.json", "downloads/fit-log.csv"]
+    exact += ["downloads/parts/BASE3-24x10-B-562406.stl", "downloads/parts/NP3-KEEPER.stl",
+              "downloads/parts/FIT-M-D470.stl"]
     def check(relative):
         headers = fetch(base + quote(relative), head=True).decode("latin1")
         assert "200" in headers or "206" in headers, relative

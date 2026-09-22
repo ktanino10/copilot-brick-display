@@ -1,0 +1,1162 @@
+{
+  "status": "PASS_REOPENED_NATIVE_LETTERING_CANDIDATE",
+  "revision": "5.0-legible-plaques",
+  "parameters_sha256": "e591e7683c4cda603e2794729e8b1a6e1d7da44d2be0b9d02583e78d6e95a43f",
+  "models": [
+    {
+      "model": "A",
+      "part": "NP3-TEXT-A",
+      "bounds_mm": [
+        [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          102.0,
+          40.0,
+          3.6
+        ]
+      ],
+      "assembly_actual_mm": [
+        143.8,
+        64.2,
+        187.4
+      ],
+      "native_sha256": "4c4d8a5b9dce1e1e4fbd13d0568c6f26d2e29326a3517782ec21d81e84e43f26",
+      "carrier_symmetric_difference_mm3": 0.0,
+      "reopened_valid_solids": 1,
+      "current_lettering_symmetric_difference_mm3": 0.0,
+      "exact_native_text": true,
+      "cap_area_consistent": true,
+      "rows": [
+        {
+          "row": 1,
+          "text": "Same icon, New adventures",
+          "actual_width_mm": 93.63832754519458,
+          "actual_height_mm": 10.0,
+          "minimum_actual_gap_mm": 0.795848080423004,
+          "minimum_parallel_straight_stroke_mm": 1.1955026143020007,
+          "targets": {
+            "counter_central_half_chord": 0.9,
+            "e_exit_channel": 0.95,
+            "adjacent_glyph_clearance": 0.8
+          },
+          "glyphs": [
+            {
+              "index": 0,
+              "character": "S",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2500000000000009
+            },
+            {
+              "index": 1,
+              "character": "a",
+              "closed_counter_chords_xy_mm": [
+                [
+                  0.8996643315496478,
+                  1.1721703261954097
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2000000000000006
+            },
+            {
+              "index": 2,
+              "character": "m",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 0.8700000000000004
+            },
+            {
+              "index": 3,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  0.8985473577156284,
+                  1.1370387495329162
+                ]
+              ],
+              "open_pocket_escape_mm": 0.9599853515625,
+              "persistent_core_split_neck_mm": 1.1700000000000008
+            },
+            {
+              "index": 5,
+              "character": "i",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 6,
+              "character": "c",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": 1.6399956354337433,
+              "persistent_core_split_neck_mm": 1.270000000000001
+            },
+            {
+              "index": 7,
+              "character": "o",
+              "closed_counter_chords_xy_mm": [
+                [
+                  0.8999999999999986,
+                  3.298150212225451
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2600000000000007
+            },
+            {
+              "index": 8,
+              "character": "n",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.0200000000000005
+            },
+            {
+              "index": 9,
+              "character": ",",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 11,
+              "character": "N",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 0.9300000000000005
+            },
+            {
+              "index": 12,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  0.8985473577156355,
+                  1.1370387495329162
+                ]
+              ],
+              "open_pocket_escape_mm": 0.9599853515625,
+              "persistent_core_split_neck_mm": 1.1700000000000008
+            },
+            {
+              "index": 13,
+              "character": "w",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 0.8500000000000004
+            },
+            {
+              "index": 15,
+              "character": "a",
+              "closed_counter_chords_xy_mm": [
+                [
+                  0.8996643315496513,
+                  1.1721703261954026
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2000000000000006
+            },
+            {
+              "index": 16,
+              "character": "d",
+              "closed_counter_chords_xy_mm": [
+                [
+                  0.9000000000000057,
+                  3.3179366328897366
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.0400000000000005
+            },
+            {
+              "index": 17,
+              "character": "v",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.1700000000000008
+            },
+            {
+              "index": 18,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  0.8985473584733512,
+                  1.1370309999629171
+                ]
+              ],
+              "open_pocket_escape_mm": 0.9599853515625,
+              "persistent_core_split_neck_mm": 1.1700000000000008
+            },
+            {
+              "index": 19,
+              "character": "n",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.0200000000000005
+            },
+            {
+              "index": 20,
+              "character": "t",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2200000000000006
+            },
+            {
+              "index": 21,
+              "character": "u",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.0300000000000007
+            },
+            {
+              "index": 22,
+              "character": "r",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 23,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  0.8985473584733512,
+                  1.13703099996291
+                ]
+              ],
+              "open_pocket_escape_mm": 0.9599853515625,
+              "persistent_core_split_neck_mm": 1.1700000000000008
+            },
+            {
+              "index": 24,
+              "character": "s",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2100000000000009
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "text": "github.com/USER",
+          "actual_width_mm": 77.42283764929398,
+          "actual_height_mm": 10.0,
+          "minimum_actual_gap_mm": 1.0478448214528842,
+          "minimum_parallel_straight_stroke_mm": 1.6894384478753919,
+          "targets": {
+            "counter_central_half_chord": 1.02,
+            "e_exit_channel": 1.1,
+            "adjacent_glyph_clearance": 1.05
+          },
+          "glyphs": [
+            {
+              "index": 0,
+              "character": "g",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.0199999999999996,
+                  2.154431085700839
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.4000000000000008
+            },
+            {
+              "index": 1,
+              "character": "i",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 2,
+              "character": "t",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.8900000000000015
+            },
+            {
+              "index": 3,
+              "character": "h",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.290000000000001
+            },
+            {
+              "index": 4,
+              "character": "u",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.370000000000001
+            },
+            {
+              "index": 5,
+              "character": "b",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.0200000000000031,
+                  2.154216626011589
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2300000000000009
+            },
+            {
+              "index": 6,
+              "character": ".",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 7,
+              "character": "c",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": 1.0199844360351562,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 8,
+              "character": "o",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.019999999999996,
+                  2.1600740287637024
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 9,
+              "character": "m",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.1700000000000008
+            },
+            {
+              "index": 10,
+              "character": "/",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 11,
+              "character": "U",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 12,
+              "character": "S",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 13,
+              "character": "E",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.9800000000000013
+            },
+            {
+              "index": 14,
+              "character": "R",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.0196069217989248,
+                  1.0621830412716662
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            }
+          ]
+        }
+      ],
+      "comparison": "A-lettering-before-after.svg",
+      "physical_trial": "NOT_PERFORMED"
+    },
+    {
+      "model": "B",
+      "part": "NP3-TEXT-B",
+      "bounds_mm": [
+        [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          142.0,
+          40.0,
+          3.6
+        ]
+      ],
+      "assembly_actual_mm": [
+        191.8,
+        80.2,
+        238.6
+      ],
+      "native_sha256": "912caa13adc3b5e43b92a62612b0b90a368b1e7ac68a2c43caac9d8439488237",
+      "carrier_symmetric_difference_mm3": 0.0,
+      "reopened_valid_solids": 1,
+      "current_lettering_symmetric_difference_mm3": 0.0,
+      "exact_native_text": true,
+      "cap_area_consistent": true,
+      "rows": [
+        {
+          "row": 1,
+          "text": "Same icon, New adventures",
+          "actual_width_mm": 132.13012759831423,
+          "actual_height_mm": 12.0,
+          "minimum_actual_gap_mm": 1.0481254323138072,
+          "minimum_parallel_straight_stroke_mm": 1.2609977591697135,
+          "targets": {
+            "counter_central_half_chord": 1.02,
+            "e_exit_channel": 1.1,
+            "adjacent_glyph_clearance": 1.05
+          },
+          "glyphs": [
+            {
+              "index": 0,
+              "character": "S",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.7600000000000011
+            },
+            {
+              "index": 1,
+              "character": "a",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.203410396573359,
+                  1.4081211313523418
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.4400000000000008
+            },
+            {
+              "index": 2,
+              "character": "m",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.0900000000000007
+            },
+            {
+              "index": 3,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.040381627159661,
+                  1.3653516775887304
+                ]
+              ],
+              "open_pocket_escape_mm": 1.0999869443111205,
+              "persistent_core_split_neck_mm": 1.7600000000000011
+            },
+            {
+              "index": 5,
+              "character": "i",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 6,
+              "character": "c",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": 1.9599908650546967,
+              "persistent_core_split_neck_mm": 1.7600000000000011
+            },
+            {
+              "index": 7,
+              "character": "o",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.267083333333332,
+                  3.9611964556987402
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.7700000000000014
+            },
+            {
+              "index": 8,
+              "character": "n",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2400000000000007
+            },
+            {
+              "index": 9,
+              "character": ",",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 11,
+              "character": "N",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.310000000000001
+            },
+            {
+              "index": 12,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.040381627159661,
+                  1.3653516775887304
+                ]
+              ],
+              "open_pocket_escape_mm": 1.0999869443111205,
+              "persistent_core_split_neck_mm": 1.7600000000000011
+            },
+            {
+              "index": 13,
+              "character": "w",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2100000000000009
+            },
+            {
+              "index": 15,
+              "character": "a",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.2034103965733607,
+                  1.4081211313523347
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.4400000000000008
+            },
+            {
+              "index": 16,
+              "character": "d",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.2033333333333331,
+                  3.9840056362128955
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.270000000000001
+            },
+            {
+              "index": 17,
+              "character": "v",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6500000000000012
+            },
+            {
+              "index": 18,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.040381627159661,
+                  1.3653516775887233
+                ]
+              ],
+              "open_pocket_escape_mm": 1.0999869443111205,
+              "persistent_core_split_neck_mm": 1.7600000000000011
+            },
+            {
+              "index": 19,
+              "character": "n",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2400000000000007
+            },
+            {
+              "index": 20,
+              "character": "t",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.7500000000000013
+            },
+            {
+              "index": 21,
+              "character": "u",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2600000000000007
+            },
+            {
+              "index": 22,
+              "character": "r",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.4200000000000008
+            },
+            {
+              "index": 23,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.0403816271596895,
+                  1.3653516775887162
+                ]
+              ],
+              "open_pocket_escape_mm": 1.0999869443111205,
+              "persistent_core_split_neck_mm": 1.7600000000000011
+            },
+            {
+              "index": 24,
+              "character": "s",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.5300000000000011
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "text": "github.com/USER",
+          "actual_width_mm": 77.42283764929398,
+          "actual_height_mm": 10.0,
+          "minimum_actual_gap_mm": 1.047844821452891,
+          "minimum_parallel_straight_stroke_mm": 1.6894384478753919,
+          "targets": {
+            "counter_central_half_chord": 1.02,
+            "e_exit_channel": 1.1,
+            "adjacent_glyph_clearance": 1.05
+          },
+          "glyphs": [
+            {
+              "index": 0,
+              "character": "g",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.019999999999996,
+                  2.154431085700839
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.4000000000000008
+            },
+            {
+              "index": 1,
+              "character": "i",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 2,
+              "character": "t",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.8900000000000015
+            },
+            {
+              "index": 3,
+              "character": "h",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.290000000000001
+            },
+            {
+              "index": 4,
+              "character": "u",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.370000000000001
+            },
+            {
+              "index": 5,
+              "character": "b",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.0200000000000031,
+                  2.1542166260115962
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2300000000000009
+            },
+            {
+              "index": 6,
+              "character": ".",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 7,
+              "character": "c",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": 1.0199844360351562,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 8,
+              "character": "o",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.019999999999996,
+                  2.1600740287636917
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 9,
+              "character": "m",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.1700000000000008
+            },
+            {
+              "index": 10,
+              "character": "/",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 11,
+              "character": "U",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 12,
+              "character": "S",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 13,
+              "character": "E",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.9800000000000013
+            },
+            {
+              "index": 14,
+              "character": "R",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.019606921798939,
+                  1.0621830412716484
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            }
+          ]
+        }
+      ],
+      "comparison": "B-lettering-before-after.svg",
+      "physical_trial": "NOT_PERFORMED"
+    },
+    {
+      "model": "C",
+      "part": "NP3-TEXT-C",
+      "bounds_mm": [
+        [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          182.0,
+          40.0,
+          3.6
+        ]
+      ],
+      "assembly_actual_mm": [
+        239.8,
+        112.2,
+        286.6
+      ],
+      "native_sha256": "eacd3688942a621db6c9f7e56a57216471519e4b287a6cc28e3b3317d0c0470c",
+      "carrier_symmetric_difference_mm3": 0.0,
+      "reopened_valid_solids": 1,
+      "current_lettering_symmetric_difference_mm3": 0.0,
+      "exact_native_text": true,
+      "cap_area_consistent": true,
+      "rows": [
+        {
+          "row": 1,
+          "text": "Same icon, New adventures",
+          "actual_width_mm": 167.3314707221898,
+          "actual_height_mm": 14.5,
+          "minimum_actual_gap_mm": 1.0480567938574654,
+          "minimum_parallel_straight_stroke_mm": 1.5237056256634043,
+          "targets": {
+            "counter_central_half_chord": 1.02,
+            "e_exit_channel": 1.1,
+            "adjacent_glyph_clearance": 1.05
+          },
+          "glyphs": [
+            {
+              "index": 0,
+              "character": "S",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 2.1200000000000014
+            },
+            {
+              "index": 1,
+              "character": "a",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.564498766342414,
+                  1.7046506163075605
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.740000000000001
+            },
+            {
+              "index": 2,
+              "character": "m",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.3400000000000007
+            },
+            {
+              "index": 3,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.353743426391631,
+                  1.6505734382630841
+                ]
+              ],
+              "open_pocket_escape_mm": 1.1,
+              "persistent_core_split_neck_mm": 2.1200000000000014
+            },
+            {
+              "index": 5,
+              "character": "i",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 6,
+              "character": "c",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": 2.3799775313248546,
+              "persistent_core_split_neck_mm": 2.1200000000000014
+            },
+            {
+              "index": 7,
+              "character": "o",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.6472083333333316,
+                  4.786008294230459
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 2.1400000000000015
+            },
+            {
+              "index": 8,
+              "character": "n",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.5100000000000011
+            },
+            {
+              "index": 9,
+              "character": ",",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 11,
+              "character": "N",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 12,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.353743426391631,
+                  1.6505734382630983
+                ]
+              ],
+              "open_pocket_escape_mm": 1.1,
+              "persistent_core_split_neck_mm": 2.1200000000000014
+            },
+            {
+              "index": 13,
+              "character": "w",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.5700000000000012
+            },
+            {
+              "index": 15,
+              "character": "a",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.5644987663424246,
+                  1.704650616307557
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.740000000000001
+            },
+            {
+              "index": 16,
+              "character": "d",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.5643333333333374,
+                  4.8141729311483985
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.5500000000000012
+            },
+            {
+              "index": 17,
+              "character": "v",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 2.1400000000000015
+            },
+            {
+              "index": 18,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.3537434263916452,
+                  1.6505734382630912
+                ]
+              ],
+              "open_pocket_escape_mm": 1.1,
+              "persistent_core_split_neck_mm": 2.1200000000000014
+            },
+            {
+              "index": 19,
+              "character": "n",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.5100000000000011
+            },
+            {
+              "index": 20,
+              "character": "t",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 2.270000000000002
+            },
+            {
+              "index": 21,
+              "character": "u",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.5300000000000011
+            },
+            {
+              "index": 22,
+              "character": "r",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.7300000000000013
+            },
+            {
+              "index": 23,
+              "character": "e",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.3537434263916168,
+                  1.6505734382630877
+                ]
+              ],
+              "open_pocket_escape_mm": 1.1,
+              "persistent_core_split_neck_mm": 2.1200000000000014
+            },
+            {
+              "index": 24,
+              "character": "s",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.8400000000000012
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "text": "github.com/USER",
+          "actual_width_mm": 77.42283764929398,
+          "actual_height_mm": 10.0,
+          "minimum_actual_gap_mm": 1.0478448214528877,
+          "minimum_parallel_straight_stroke_mm": 1.6894384478753919,
+          "targets": {
+            "counter_central_half_chord": 1.02,
+            "e_exit_channel": 1.1,
+            "adjacent_glyph_clearance": 1.05
+          },
+          "glyphs": [
+            {
+              "index": 0,
+              "character": "g",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.019999999999996,
+                  2.154431085700841
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.4000000000000008
+            },
+            {
+              "index": 1,
+              "character": "i",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 2,
+              "character": "t",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.8900000000000015
+            },
+            {
+              "index": 3,
+              "character": "h",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.290000000000001
+            },
+            {
+              "index": 4,
+              "character": "u",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.370000000000001
+            },
+            {
+              "index": 5,
+              "character": "b",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.019999999999996,
+                  2.154216626011598
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.2300000000000009
+            },
+            {
+              "index": 6,
+              "character": ".",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 7,
+              "character": "c",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": 1.0199844360351562,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 8,
+              "character": "o",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.0200000000000102,
+                  2.1600740287636846
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 9,
+              "character": "m",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.1700000000000008
+            },
+            {
+              "index": 10,
+              "character": "/",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": null
+            },
+            {
+              "index": 11,
+              "character": "U",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 12,
+              "character": "S",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            },
+            {
+              "index": 13,
+              "character": "E",
+              "closed_counter_chords_xy_mm": [],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.9800000000000013
+            },
+            {
+              "index": 14,
+              "character": "R",
+              "closed_counter_chords_xy_mm": [
+                [
+                  1.0196069217989248,
+                  1.0621830412716413
+                ]
+              ],
+              "open_pocket_escape_mm": null,
+              "persistent_core_split_neck_mm": 1.6900000000000013
+            }
+          ]
+        }
+      ],
+      "comparison": "C-lettering-before-after.svg",
+      "physical_trial": "NOT_PERFORMED"
+    }
+  ],
+  "lettering_source_sha256": {
+    "nameplate_lettering.py": "e1ae691d94cdfa7dbebc5d59316d52f8ffff17e31a89c079da41c441b2550475",
+    "legible_lettering.py": "24eb794fc91bff2b42cfe49093bb4979235b3eb00a245d2b8ab614299a88d320",
+    "legible_metrics.py": "d6604fc87042e048211fd75f3057b968686d36bcba9511edbea20d958e96cd78"
+  },
+  "measurement_definitions": {
+    "contour_deflection_mm": 0.002,
+    "counter": "Minimum of101 horizontal and101 vertical chords in central25–75% bands.",
+    "aperture": "Widest escape on0.01mm grid, approximate uncertainty±0.03mm; not a maximum-inscribed-circle guarantee.",
+    "spacing": "Exact BRep adjacent visible-glyph distance; planner's sampled spacing may differ by0.006mm.",
+    "positive_stroke": "Parallel straight gauges and first erosion splitting two cores≥0.05mm² at0.005mm radius increments.",
+    "limits": "Does not guarantee every mathematical curve tip, extrusion path, mechanical strength or successful print."
+  },
+  "sliced": false,
+  "physical_trial": "NOT_PERFORMED"
+}

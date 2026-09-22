@@ -7,7 +7,7 @@ body:
       value: |
         **このIssueの公開範囲を先に確認してください。**
         公開repoのfork・Issue・PR・CAD・画像・動画・Actions artifact・Pagesは公開され得ます。
-        非公開の名前やhandleは書かず、YOUR-USERNAME等のplaceholderにしてください。
+        非公開の名前やhandleは書かず、USER等のplaceholderにしてください。
         実値はローカルの`.private/personalization.json`、または別の独立private repoで扱います。
         公開forkを後からprivateに変更できる、secretに入れれば出力も隠れる、とは考えないでください。
   - type: dropdown
@@ -31,7 +31,7 @@ body:
     id: line1
     attributes:
       label: 表示文字1
-      value: YOUR DISPLAY NAME
+      value: YOUR TEXT
       description: 正確な1行。非公開にしたい実値を書かないでください。
     validations:
       required: true
@@ -39,7 +39,7 @@ body:
     id: line2
     attributes:
       label: 表示文字2
-      value: github.com/YOUR-USERNAME
+      value: github.com/USER
     validations:
       required: true
   - type: input
@@ -56,6 +56,8 @@ body:
         - label: 自分のforkを対象にし、個別カスタムをupstreamへ勝手にPRしません。
           required: true
         - label: 5段台座・右ロゴ・8 mmピッチ・無接着保持を維持し、長すぎる文字や未対応glyphは停止して確認します。
+          required: true
+        - label: 白文字1.2 mm・黒支持体2.4 mmの形状で、孔・字間だけでなく正の材料も確認し、文字試験片から試します。
           required: true
         - label: 実native・印刷STL・図面・BOM・画像・動画・ZIPの整合を確認し、ツール未実行を実行済みとは記載しません。
           required: true
