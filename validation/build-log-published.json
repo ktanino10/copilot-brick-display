@@ -1,0 +1,129 @@
+{
+  "status": "PASS_LIVE_SANITIZED_BUILD_JOURNAL",
+  "report_date": "2026-09-23",
+  "deployed_commit": "438e6c7448455b203e87d273484ee2e0aa140722",
+  "run_url": "https://github.com/ktanino10/copilot-brick-display/actions/runs/35815016478",
+  "manifest_sha256": "cf7f738f4b5602dffbdec42034b4bb769527aef49ed409c71992b59846499a2d",
+  "entry_url": "https://ktanino10.github.io/copilot-brick-display/build-log.html?log=2026-09-23&commit=438e6c744845",
+  "files": [
+    {
+      "path": "build-log.html",
+      "bytes": 13007,
+      "sha256": "5f1677fc9910772d4c8059cfaf69a13abc269434f2e8c75f4d9d12effa84ad5c"
+    },
+    {
+      "path": "index.html",
+      "bytes": 20034,
+      "sha256": "bdb5df1faf871d8b1e437798dbdd47db36af16bb9a4a0df8dd9aa6202854943c"
+    },
+    {
+      "path": "guide.html",
+      "bytes": 42735,
+      "sha256": "d5e49f1f9b44e3beab8b627a464ac5bf2b9b304c69c610419d4c51d704cf599d"
+    },
+    {
+      "path": "lettering.html",
+      "bytes": 9631,
+      "sha256": "8c8fb404d5017f5f924313f6a2ed148d3677db75090322886182d2aef3a242a5"
+    },
+    {
+      "path": "assembly.html",
+      "bytes": 9912,
+      "sha256": "5c16a4184bead867deacac7db239094492abc69fb0ffc0c699b1396b5a7ad8f2"
+    },
+    {
+      "path": "notices.html",
+      "bytes": 4024,
+      "sha256": "31be3d0b4d91c44a5f65886481fd35bc3e6d2a1262f640c718a5aa9f32fe6e7d"
+    },
+    {
+      "path": "media/build-log/2026-09-23/manifest.json",
+      "bytes": 7047,
+      "sha256": "cf7f738f4b5602dffbdec42034b4bb769527aef49ed409c71992b59846499a2d"
+    },
+    {
+      "path": "media/build-log/2026-09-23/lettering-first.jpg",
+      "bytes": 322789,
+      "sha256": "cdccd3eed10ae5be40709df08a255e3b74602ff103a33c150dcff29b9b81c887"
+    },
+    {
+      "path": "media/build-log/2026-09-23/lettering-follow-up.jpg",
+      "bytes": 607424,
+      "sha256": "9204fd2e4f549ceb809067676cdbfb68608520c1fca7e0af67548af8e5ec0899"
+    },
+    {
+      "path": "media/build-log/2026-09-23/base-overview.jpg",
+      "bytes": 256965,
+      "sha256": "163bf413b35610a9ca6a2fc61067eeb61a4873975deccd3469dc5ca6ed3f0a54"
+    },
+    {
+      "path": "media/build-log/2026-09-23/front-modules-installed.jpg",
+      "bytes": 260712,
+      "sha256": "f34f3a0bff5133e200692ac2ea9670ce281d336cb6ae7d71ecd168da768c84b8"
+    },
+    {
+      "path": "media/build-log/2026-09-23/base-top-angle.jpg",
+      "bytes": 422628,
+      "sha256": "6684749b7dd340d92bdd3a014afd1db36d506f8539d0f8b8bcd17ad97d96c634"
+    },
+    {
+      "path": "media/build-log/2026-09-23/base-side-angle.jpg",
+      "bytes": 465083,
+      "sha256": "b660edb509fefc1be947d2969cda0a0e0af75cd21a2981cb4b8b97225b7e219e"
+    },
+    {
+      "path": "media/build-log/2026-09-23/right-logo-installed.jpg",
+      "bytes": 499438,
+      "sha256": "a407341c0d094b79f1ea37284682def7df7f388c2b73e8a3263735814ccfd831"
+    },
+    {
+      "path": "media/build-log/2026-09-23/base-front-detail.jpg",
+      "bytes": 377697,
+      "sha256": "51b3ccc8599113ca6badf2f94623db9f28a367b0829c5293e8fd22fd5344d2b6"
+    },
+    {
+      "path": "media/build-log/2026-09-23/base-front-overview.jpg",
+      "bytes": 298984,
+      "sha256": "035c3f037f26aaa717308e07a4d7cb0a1ef268dd4a8330977192919523d01ac5"
+    }
+  ],
+  "photo_count": 9,
+  "scope": "Only current public redacted derivatives and journal pages; no original photos or private distribution.",
+  "progress": "Personalized B base and front modules observed and reported, not the complete150-piece figure.",
+  "slicer_input_hashes_verified": false,
+  "physical_qualification_claimed": false,
+  "unchanged_public_downloads": [
+    {
+      "path": "downloads/B/print-kit.zip",
+      "sha256": "6d8b82f94603402c4eaad6538956179f8300e587c8052d49814e173f6050c144",
+      "bytes": 7640519
+    },
+    {
+      "path": "downloads/B/plates.zip",
+      "sha256": "8b2cf72796dcbd99c4b9ec174c9da6571391c508cefb7b6632a9f170cb7d025b",
+      "bytes": 6055843
+    },
+    {
+      "path": "downloads/B/bom.csv",
+      "sha256": "98f9988e8ea58ac1414b348cbfdba479d5ff811da91aac7922083c0ee43ba889",
+      "bytes": 1307
+    },
+    {
+      "path": "downloads/parts/NP3-TEXT-B.stl",
+      "sha256": "5b112ee8145e38cb3b32e7b2dc7aa7a4d48ddceb895b820b35c351b5242d45bf",
+      "bytes": 2582884
+    },
+    {
+      "path": "downloads/B/B.FCStd",
+      "sha256": "912caa13adc3b5e43b92a62612b0b90a368b1e7ac68a2c43caac9d8439488237",
+      "bytes": 6531256
+    },
+    {
+      "path": "media/B-assembly.mp4",
+      "sha256": "f74aac12b6fa56d919fefc8739395009b726a0fb97f9032f99db4c0c8fd2d08e",
+      "bytes": 1141698
+    }
+  ],
+  "existing_physical_qualification_status_unchanged": true,
+  "geometry_revision": "5.0-legible-plaques"
+}

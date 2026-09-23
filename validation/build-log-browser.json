@@ -1,0 +1,18 @@
+{
+  "status": "PASS_REAL_BUILD_LOG_BROWSER",
+  "report_date": "2026-09-23",
+  "widths_px": [
+    1440,
+    375
+  ],
+  "photos": 9,
+  "actual_raster_photos_loaded": true,
+  "full_size_link_uses_same_redacted_file": true,
+  "separate_captions_and_limits_visible": true,
+  "original_photos_accessed": false,
+  "physical_qualification_claimed": false,
+  "browser": "153.0.8010.52",
+  "deployed_commit": "438e6c7448455b203e87d273484ee2e0aa140722",
+  "run_url": "https://github.com/ktanino10/copilot-brick-display/actions/runs/35815016478",
+  "evidence": "Actual Linux browser screenshots viewed at1440/375; original model qualification gates are unchanged."
+}
