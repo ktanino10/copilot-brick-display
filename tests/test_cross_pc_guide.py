@@ -122,6 +122,25 @@ class CrossPCGuideTests(unittest.TestCase):
             self.assertIn("https://ktanino10.github.io/copilot-brick-display/guide.html#print-another-pc",
                           archive.read("READ-FIRST-ja.md").decode())
 
+    def test_authorized_personal_b_site_is_linked_without_embedding_its_content(self):
+        urls = [
+            "https://ktanino10.github.io/copilot-brick-gift-b/",
+            "https://ktanino10.github.io/copilot-brick-gift-b/guide/index.html",
+            "https://ktanino10.github.io/copilot-brick-gift-b/docs/BUILD-LOG.html",
+        ]
+        for filename in ("README.md", "docs/build.ja.md", "docs/assembly.ja.md"):
+            text = (ROOT / filename).read_text()
+            self.assertIn("本人公開許可済み", text)
+            self.assertIn("この汎用版の `USER` 表記・匿名化写真・印刷データはそのまま", text)
+            for url in urls:
+                self.assertIn(f"]({url})", text)
+        for filename in ("guide.html", "assembly.html"):
+            text = (ROOT / "site" / filename).read_text()
+            for url in urls:
+                self.assertIn(f'href="{url}"', text)
+            self.assertNotIn('src="https://ktanino10.github.io/copilot-brick-gift-b/', text)
+        self.assertEqual(self.catalog["message"]["lines"][1], "github.com/USER")
+
 
 if __name__ == "__main__":
     unittest.main()

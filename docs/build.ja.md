@@ -4,6 +4,12 @@
 **デジタル設計は用意されていますが、実物の嵌合・保持力・耐久性・転倒しにくさは未試験です。**
 市販LEGOへの互換保証、玩具の安全認証、Bambu Labによる認定を意味しません。
 
+**個人向けB（本人公開許可済み）：**
+[説明・作り方](https://ktanino10.github.io/copilot-brick-gift-b/) ／
+[3D工程](https://ktanino10.github.io/copilot-brick-gift-b/guide/index.html) ／
+[写真記録](https://ktanino10.github.io/copilot-brick-gift-b/docs/BUILD-LOG.html)。
+別サイトへの案内です。この汎用版の `USER` 表記・匿名化写真・印刷データはそのままです。
+
 **実物の進捗：[Bの台座と前面部品の制作記録（2026-09-23）](build-log.ja.md)**。
 個人向けBの報告と識別情報を伏せた写真です。部品が作られた観察と、測定された嵌合・保持の合格は別です。
 

@@ -3,6 +3,12 @@
 **[3案を回して見る・ダウンロード](https://ktanino10.github.io/copilot-brick-display/?rev=5.0-legible-plaques)**
  · **[作り方](docs/build.ja.md)** · **[Fork → Issue → AI → PRで文字を変える](docs/customize.ja.md)**
 
+**個人向けB（本人公開許可済み）：**
+[説明・作り方](https://ktanino10.github.io/copilot-brick-gift-b/) ／
+[3D工程](https://ktanino10.github.io/copilot-brick-gift-b/guide/index.html) ／
+[写真記録](https://ktanino10.github.io/copilot-brick-gift-b/docs/BUILD-LOG.html)。
+別サイトへの案内です。この汎用版の `USER` 表記・匿名化写真・印刷データはそのままです。
+
 **別PCで印刷する方へ：[色別ファイルの選び方と、黒→白の手動色替え](https://ktanino10.github.io/copilot-brick-display/guide.html?guide=separate-color-2026-09-19#print-another-pc)**
 — A/B/Cを1案だけ選び、最初は試験片から。銘板・右ロゴの白い部分は一体レリーフで、途中の色替えが必要です。
 

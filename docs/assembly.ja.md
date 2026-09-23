@@ -2,6 +2,12 @@
 
 **[A / B / C の対話3Dガイドを開く](../site/assembly-guide/index.html)**
 
+**個人向けB（本人公開許可済み）：**
+[説明・作り方](https://ktanino10.github.io/copilot-brick-gift-b/) ／
+[3D工程](https://ktanino10.github.io/copilot-brick-gift-b/guide/index.html) ／
+[写真記録](https://ktanino10.github.io/copilot-brick-gift-b/docs/BUILD-LOG.html)。
+別サイトへの案内です。この汎用版の `USER` 表記・匿名化写真・印刷データはそのままです。
+
 **[実物写真の制作記録：個人向けBの台座・前面部品](build-log.ja.md)**。
 写真は識別情報を伏せた進捗報告です。以下の説明用3DCGと区別し、全150部品の完成や保持合格とは扱いません。
 
