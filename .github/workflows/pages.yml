@@ -59,6 +59,9 @@ jobs:
       - name: Verify revised lettering and actual small glyph trials
         if: steps.mode.outputs.maintenance != 'true'
         run: python -m unittest discover -s tests -p test_lettering_revision.py -v
+      - name: Verify approved public build-log photographs and evidence boundary
+        if: steps.mode.outputs.maintenance != 'true'
+        run: python -m unittest discover -s tests -p test_build_log.py -v
       - name: Verify real browser behavior before deployment
         if: steps.mode.outputs.maintenance != 'true'
         env:

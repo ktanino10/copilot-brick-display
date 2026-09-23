@@ -1,0 +1,166 @@
+{
+  "status": "PASS_APPROVED_PUBLIC_DERIVATIVE_INTEGRITY",
+  "report_date": "2026-09-23",
+  "manifest_sha256": "cf7f738f4b5602dffbdec42034b4bb769527aef49ed409c71992b59846499a2d",
+  "source_photographs_accessed": false,
+  "photos": [
+    {
+      "file": "lettering-first.jpg",
+      "bytes": 322789,
+      "sha256": "cdccd3eed10ae5be40709df08a255e3b74602ff103a33c150dcff29b9b81c887",
+      "pixels": [
+        1735,
+        545
+      ],
+      "stage": "lettering-feedback",
+      "reported_date": "2026-09-22",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": [
+        [
+          395,
+          260,
+          1455,
+          455
+        ]
+      ]
+    },
+    {
+      "file": "lettering-follow-up.jpg",
+      "bytes": 607424,
+      "sha256": "9204fd2e4f549ceb809067676cdbfb68608520c1fca7e0af67548af8e5ec0899",
+      "pixels": [
+        1795,
+        1460
+      ],
+      "stage": "lettering-follow-up",
+      "reported_date": "2026-09-23",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": [
+        [
+          235,
+          535,
+          1565,
+          715
+        ],
+        [
+          215,
+          1205,
+          1595,
+          1405
+        ]
+      ]
+    },
+    {
+      "file": "base-overview.jpg",
+      "bytes": 256965,
+      "sha256": "163bf413b35610a9ca6a2fc61067eeb61a4873975deccd3469dc5ca6ed3f0a54",
+      "pixels": [
+        1565,
+        635
+      ],
+      "stage": "base-without-front-modules",
+      "reported_date": "2026-09-23",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": []
+    },
+    {
+      "file": "front-modules-installed.jpg",
+      "bytes": 260712,
+      "sha256": "f34f3a0bff5133e200692ac2ea9670ce281d336cb6ae7d71ecd168da768c84b8",
+      "pixels": [
+        1710,
+        520
+      ],
+      "stage": "front-modules-installed",
+      "reported_date": "2026-09-23",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": [
+        [
+          205,
+          319,
+          1165,
+          449
+        ]
+      ]
+    },
+    {
+      "file": "base-top-angle.jpg",
+      "bytes": 422628,
+      "sha256": "6684749b7dd340d92bdd3a014afd1db36d506f8539d0f8b8bcd17ad97d96c634",
+      "pixels": [
+        1885,
+        750
+      ],
+      "stage": "base-detail",
+      "reported_date": "2026-09-23",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": []
+    },
+    {
+      "file": "base-side-angle.jpg",
+      "bytes": 465083,
+      "sha256": "b660edb509fefc1be947d2969cda0a0e0af75cd21a2981cb4b8b97225b7e219e",
+      "pixels": [
+        1955,
+        695
+      ],
+      "stage": "base-detail",
+      "reported_date": "2026-09-23",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": []
+    },
+    {
+      "file": "right-logo-installed.jpg",
+      "bytes": 499438,
+      "sha256": "a407341c0d094b79f1ea37284682def7df7f388c2b73e8a3263735814ccfd831",
+      "pixels": [
+        1905,
+        765
+      ],
+      "stage": "right-logo-installed",
+      "reported_date": "2026-09-23",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": []
+    },
+    {
+      "file": "base-front-detail.jpg",
+      "bytes": 377697,
+      "sha256": "51b3ccc8599113ca6badf2f94623db9f28a367b0829c5293e8fd22fd5344d2b6",
+      "pixels": [
+        1940,
+        740
+      ],
+      "stage": "base-detail",
+      "reported_date": "2026-09-23",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": []
+    },
+    {
+      "file": "base-front-overview.jpg",
+      "bytes": 298984,
+      "sha256": "035c3f037f26aaa717308e07a4d7cb0a1ef268dd4a8330977192919523d01ac5",
+      "pixels": [
+        1610,
+        640
+      ],
+      "stage": "base-without-front-modules",
+      "reported_date": "2026-09-23",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": []
+    }
+  ],
+  "mask_check": "Flat RGB pixels checked away from visible labels; exact approved bytes and separate visual inspection, not an OCR guarantee.",
+  "evidence_scope": "User report and photographs of a personalized B base/front modules, not full assembly or physical qualification.",
+  "source_print_hashes_known": false,
+  "slicer_project_received": false,
+  "physical_qualification_claimed": false
+}

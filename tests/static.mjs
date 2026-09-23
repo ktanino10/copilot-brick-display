@@ -28,6 +28,7 @@ const required = [
   'vendor/THREE-LICENSE.txt', 'vendor/B612-OFL.txt',
   'assembly.html', 'assembly-guide/index.html', 'assembly-guide/runtime.js', 'assembly-guide/style.css',
   'lettering.html', 'downloads/lettering.json', 'downloads/lettering-coupons.zip',
+  'build-log.html', 'media/build-log/2026-09-23/manifest.json',
 ];
 for (const model of catalog.models) {
   const prefix = `downloads/${model.id}/`;

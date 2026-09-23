@@ -14,8 +14,14 @@ Third-party material intentionally redistributed:
 
 Python packages, FreeCAD, Blender and ffmpeg are build/runtime tools rather than vendored
 application binaries. Their respective licenses remain applicable. Package versions are pinned
-where installed for this project. Source-reference PDFs and proprietary photographs are not copied
-into the public package.
+where installed for this project. Source-reference PDFs and unmodified private/reference photographs
+are not copied into the public package.
+
+The [build log](build-log.ja.md) includes only privacy-redacted derivatives of user-supplied progress
+photographs, authorized for this project's public and private repository build records.
+The photographs remain the rights holder's material: no model/library license automatically
+applies to them, and this permission is not CC0, third-party redistribution permission or approval
+to repost to MakerWorld or other services. Original photos and identifying metadata are not distributed.
 
 The unmodified Bold font was obtained from the official Google Fonts `ofl/barlowcondensed`
 directory at commit `e44c4b011a820c2cbe2fd2cfa8052037d7edb571`.

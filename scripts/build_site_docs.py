@@ -21,6 +21,7 @@ def links(value):
         "customize.ja.md": "customize.html", "privacy.md": "privacy.html",
         "assembly.ja.md": "assembly.html",
         "lettering.ja.md": "lettering.html",
+        "build-log.ja.md": "build-log.html",
     }
     def replace(match):
         attribute, url = match.groups()
@@ -43,6 +44,7 @@ def main():
         ("privacy.md", "privacy.html", "公開テンプレートとプライバシーの境界"),
         ("assembly.ja.md", "assembly.html", "印刷ファイルから組み立てる3Dガイド"),
         ("lettering.ja.md", "lettering.html", "銘板の印刷しやすさ・小文字試験片"),
+        ("build-log.ja.md", "build-log.html", "制作記録 — Bの台座と前面モジュール"),
     ]:
         body = links(markdown.markdown((ROOT / "docs" / source).read_text(),
                                       extensions=["tables", "fenced_code", "toc"]))

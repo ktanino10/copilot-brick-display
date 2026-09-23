@@ -7,6 +7,7 @@ from pathlib import Path
 from PIL import Image
 from playwright.sync_api import sync_playwright, expect
 from exploded_browser import verify_exploded
+from build_log_browser import verify_build_log
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = os.environ.get("BASE_URL", "http://127.0.0.1:8766/copilot-brick-display/")
@@ -116,6 +117,8 @@ with sync_playwright() as playwright:
         check_no_overflow(page)
         print("MODEL_PASS", model["id"], flush=True)
     page.screenshot(path=str(OUT / "C-inspector.png"), full_page=True)
+    build_log = verify_build_log(page, BASE, OUT)
+    page.set_viewport_size({"width": 1440, "height": 1100})
     page.goto(BASE + "lettering.html", wait_until="networkidle")
     expect(page.get_by_role("heading", name="銘板の印刷しやすさ — 5.0改訂と小試験片", exact=True)).to_have_count(1)
     expect(page.locator("body")).to_contain_text("github.com/USER")
@@ -199,6 +202,7 @@ with sync_playwright() as playwright:
         "staged_trial_guidance": {"guidance_revision": "trial-2026-09-19",
                                   "geometry_revision": catalog["revision"], "page_widths_px": [1440, 375],
                                   "physical_trial_performed": False},
+        "public_build_log": build_log,
         "screenshots": ["desktop.png", "B-front.png", "C-inspector.png", "mobile.png"],
     }
     (ROOT / "validation/web.json").write_text(json.dumps(report, indent=2) + "\n")
