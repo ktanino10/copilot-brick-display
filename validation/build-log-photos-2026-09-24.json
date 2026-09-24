@@ -1,0 +1,397 @@
+{
+  "status": "PASS_APPROVED_PUBLIC_DERIVATIVE_INTEGRITY",
+  "report_date": "2026-09-24",
+  "manifest_sha256": "88b27bcba2820e2649d14438401316444ab9394a7039e7eec78c1848a00bb6bb",
+  "source_photographs_accessed": false,
+  "photos": [
+    {
+      "file": "first-purple-row.jpg",
+      "bytes": 375612,
+      "sha256": "b45e3cd9754bca7132bb679916ded5e409b51b30f2cd4d22db7e8cd4d834b017",
+      "pixels": [
+        1635,
+        700
+      ],
+      "stage": "lower-outline-start",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": [
+        [
+          250,
+          494,
+          1100,
+          592
+        ]
+      ],
+      "background_mask_polygons": [
+        [
+          [
+            905,
+            0
+          ],
+          [
+            1390,
+            0
+          ],
+          [
+            1390,
+            34
+          ],
+          [
+            1330,
+            34
+          ],
+          [
+            1160,
+            26
+          ],
+          [
+            1020,
+            20
+          ],
+          [
+            905,
+            15
+          ]
+        ]
+      ]
+    },
+    {
+      "file": "lower-face.jpg",
+      "bytes": 608939,
+      "sha256": "d356c80180bd6c8b155244410c55aa2ccc9488a5503f80c6336008b8f540d885",
+      "pixels": [
+        1880,
+        995
+      ],
+      "stage": "lower-face-and-outline",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": [
+        [
+          355,
+          735,
+          1270,
+          839
+        ]
+      ],
+      "background_mask_polygons": []
+    },
+    {
+      "file": "lower-face-detail.jpg",
+      "bytes": 628145,
+      "sha256": "63b848c9058ac6dc1eb7519a9c29635a9ec35be9e9b25b8a1f60d462b5016e07",
+      "pixels": [
+        2000,
+        1180
+      ],
+      "stage": "lower-face-detail",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": [
+        [
+          240,
+          927,
+          1350,
+          1065
+        ]
+      ],
+      "background_mask_polygons": []
+    },
+    {
+      "file": "lower-face-wide.jpg",
+      "bytes": 362302,
+      "sha256": "bbe31a5747fa95d14e983c98680dc16351d41dcd5a3f13383522f129cd1bc13b",
+      "pixels": [
+        1745,
+        665
+      ],
+      "stage": "lower-face-detail",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": [
+        [
+          515,
+          466,
+          1105,
+          532
+        ]
+      ],
+      "background_mask_polygons": [
+        [
+          [
+            1660,
+            0
+          ],
+          [
+            1745,
+            0
+          ],
+          [
+            1745,
+            100
+          ],
+          [
+            1675,
+            100
+          ]
+        ]
+      ]
+    },
+    {
+      "file": "face-eye-strips.jpg",
+      "bytes": 293146,
+      "sha256": "754e83b0f83e70e06c0aea2a357f183193cbb6bed899e3d6f3ffa5a1af8ffb9e",
+      "pixels": [
+        1185,
+        802
+      ],
+      "stage": "yellow-strips",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": [
+        [
+          155,
+          640,
+          795,
+          715
+        ]
+      ],
+      "background_mask_polygons": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1185,
+            0
+          ],
+          [
+            1185,
+            8
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        [
+          [
+            850,
+            0
+          ],
+          [
+            1185,
+            0
+          ],
+          [
+            1185,
+            110
+          ],
+          [
+            1120,
+            110
+          ],
+          [
+            1055,
+            46
+          ],
+          [
+            970,
+            12
+          ],
+          [
+            850,
+            12
+          ]
+        ]
+      ]
+    },
+    {
+      "file": "face-top-row.jpg",
+      "bytes": 358758,
+      "sha256": "59a7271f4226b0aef85e50c4c8d307e92609b033206e4a455d2751e4df10a3f2",
+      "pixels": [
+        1205,
+        935
+      ],
+      "stage": "upper-black-row",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": [
+        [
+          198,
+          733,
+          816,
+          812
+        ]
+      ],
+      "background_mask_polygons": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1205,
+            0
+          ],
+          [
+            1205,
+            14
+          ],
+          [
+            0,
+            14
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            180,
+            0
+          ],
+          [
+            157,
+            38
+          ],
+          [
+            131,
+            63
+          ],
+          [
+            120,
+            80
+          ],
+          [
+            0,
+            95
+          ]
+        ],
+        [
+          [
+            870,
+            0
+          ],
+          [
+            1205,
+            0
+          ],
+          [
+            1205,
+            145
+          ],
+          [
+            1110,
+            125
+          ],
+          [
+            1055,
+            47
+          ],
+          [
+            965,
+            19
+          ],
+          [
+            870,
+            12
+          ]
+        ]
+      ]
+    },
+    {
+      "file": "face-top-row-angle.jpg",
+      "bytes": 406804,
+      "sha256": "f1b47f22ef91f231c1eed241c53ad454501858d5c8cf4842318a882825184dee",
+      "pixels": [
+        1260,
+        1035
+      ],
+      "stage": "upper-black-row-detail",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
+      "pixel_mask_rectangles": [
+        [
+          180,
+          779,
+          848,
+          864
+        ]
+      ],
+      "background_mask_polygons": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1260,
+            0
+          ],
+          [
+            1260,
+            6
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        [
+          [
+            850,
+            0
+          ],
+          [
+            1260,
+            0
+          ],
+          [
+            1260,
+            120
+          ],
+          [
+            1150,
+            120
+          ],
+          [
+            1120,
+            60
+          ],
+          [
+            1060,
+            30
+          ],
+          [
+            880,
+            20
+          ]
+        ]
+      ]
+    }
+  ],
+  "mask_check": "Flat RGB pixels checked away from visible labels; exact approved bytes and separate visual inspection, not an OCR guarantee.",
+  "evidence_scope": "User reports and photographs of personalized B work in progress, not full assembly or physical qualification.",
+  "source_print_hashes_known": false,
+  "slicer_project_received": false,
+  "physical_qualification_claimed": false,
+  "retained_prior_photo_sets": [
+    {
+      "report_date": "2026-09-23",
+      "manifest_sha256": "cf7f738f4b5602dffbdec42034b4bb769527aef49ed409c71992b59846499a2d",
+      "photo_count": 9
+    }
+  ]
+}

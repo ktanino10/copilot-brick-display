@@ -1,8 +1,8 @@
 {
   "status": "PASS_RECURSIVE_PUBLIC_ARTIFACT_AUDIT",
-  "expanded_entries": 2894,
-  "public_files": 429,
-  "site_bytes": 469269879,
+  "expanded_entries": 2902,
+  "public_files": 437,
+  "site_bytes": 472321235,
   "files": [
     {
       "path": "app.js",
@@ -101,8 +101,8 @@
     },
     {
       "path": "assembly.html",
-      "bytes": 10399,
-      "sha256": "dc63b4f4a9b5f7363b9aa21ea92fa3ec40c070c0a6d80c62455491973c3b2b68"
+      "bytes": 10617,
+      "sha256": "5d33ec5e0926a6117ab03eddefbb002eb1f40af0684208d5109bbc660693e528"
     },
     {
       "path": "assets/catalog.json",
@@ -111,8 +111,8 @@
     },
     {
       "path": "build-log.html",
-      "bytes": 13007,
-      "sha256": "5f1677fc9910772d4c8059cfaf69a13abc269434f2e8c75f4d9d12effa84ad5c"
+      "bytes": 20028,
+      "sha256": "9f7d9133a23c2b45ba96218cdb463b231e5cf35b7c9dab5f6b191515c4937324"
     },
     {
       "path": "customize.html",
@@ -1851,8 +1851,8 @@
     },
     {
       "path": "guide.html",
-      "bytes": 43222,
-      "sha256": "fb9971c35ecd1f22e6c9ef3708da4b58a0d1673f6a7100cd6728b042f308a2b2"
+      "bytes": 43385,
+      "sha256": "7d08fc0b98136bb14b7dce7b6555998dd84c06c514bc6fe3f58c2e8c4f72454f"
     },
     {
       "path": "guide.js",
@@ -1866,13 +1866,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 20034,
-      "sha256": "bdb5df1faf871d8b1e437798dbdd47db36af16bb9a4a0df8dd9aa6202854943c"
+      "bytes": 20083,
+      "sha256": "1e6b8879c1ff2d7fd74f9c0fbbd3c681ab505110811ad73f528003639908f264"
     },
     {
       "path": "lettering.html",
-      "bytes": 9631,
-      "sha256": "8c8fb404d5017f5f924313f6a2ed148d3677db75090322886182d2aef3a242a5"
+      "bytes": 9827,
+      "sha256": "ca153ee3db2632984e4284c735eadf53d46b075744a0ec07923ef5e1817f2840"
     },
     {
       "path": "media/A-assembly.mp4",
@@ -1998,6 +1998,46 @@
       "path": "media/build-log/2026-09-23/right-logo-installed.jpg",
       "bytes": 499438,
       "sha256": "a407341c0d094b79f1ea37284682def7df7f388c2b73e8a3263735814ccfd831"
+    },
+    {
+      "path": "media/build-log/2026-09-24/face-eye-strips.jpg",
+      "bytes": 293146,
+      "sha256": "754e83b0f83e70e06c0aea2a357f183193cbb6bed899e3d6f3ffa5a1af8ffb9e"
+    },
+    {
+      "path": "media/build-log/2026-09-24/face-top-row-angle.jpg",
+      "bytes": 406804,
+      "sha256": "f1b47f22ef91f231c1eed241c53ad454501858d5c8cf4842318a882825184dee"
+    },
+    {
+      "path": "media/build-log/2026-09-24/face-top-row.jpg",
+      "bytes": 358758,
+      "sha256": "59a7271f4226b0aef85e50c4c8d307e92609b033206e4a455d2751e4df10a3f2"
+    },
+    {
+      "path": "media/build-log/2026-09-24/first-purple-row.jpg",
+      "bytes": 375612,
+      "sha256": "b45e3cd9754bca7132bb679916ded5e409b51b30f2cd4d22db7e8cd4d834b017"
+    },
+    {
+      "path": "media/build-log/2026-09-24/lower-face-detail.jpg",
+      "bytes": 628145,
+      "sha256": "63b848c9058ac6dc1eb7519a9c29635a9ec35be9e9b25b8a1f60d462b5016e07"
+    },
+    {
+      "path": "media/build-log/2026-09-24/lower-face-wide.jpg",
+      "bytes": 362302,
+      "sha256": "bbe31a5747fa95d14e983c98680dc16351d41dcd5a3f13383522f129cd1bc13b"
+    },
+    {
+      "path": "media/build-log/2026-09-24/lower-face.jpg",
+      "bytes": 608939,
+      "sha256": "d356c80180bd6c8b155244410c55aa2ccc9488a5503f80c6336008b8f540d885"
+    },
+    {
+      "path": "media/build-log/2026-09-24/manifest.json",
+      "bytes": 10003,
+      "sha256": "88b27bcba2820e2649d14438401316444ab9394a7039e7eec78c1848a00bb6bb"
     },
     {
       "path": "media/lettering/A-lettering-before-after.png",

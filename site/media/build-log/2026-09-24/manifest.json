@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "report_date": "2026-09-24",
+  "user_report_ja": "こちらは組み立ての途中記録になります。",
+  "publication_authorization": "User approved adding this batch to both existing public build journals, with personal lettering retained only on the recipient site and personal rows concealed on the generic site. Background computer screens and metadata must be removed.",
+  "copyright": "Photographs supplied by the user. Permission for these build journals does not create a blanket redistribution license.",
+  "evidence_boundary": "Photos show partial lower-face assembly with purple and yellow parts. Upper goggles and the complete figure are not shown. Exact print inputs, settings, forces, durability, and uses of nearby flat black objects are unverified.",
+  "order_note": "Order is explanatory, not an authenticated capture chronology or exact CAD step mapping. Alternate views may show the same construction state.",
+  "scope": "generic build-journal photo derivatives",
+  "photos": [
+    {
+      "id": "first-purple-row",
+      "path": "first-purple-row.jpg",
+      "pixels": [
+        1635,
+        700
+      ],
+      "size_bytes": 375612,
+      "sha256": "b45e3cd9754bca7132bb679916ded5e409b51b30f2cd4d22db7e8cd4d834b017",
+      "caption_ja": "台座の上に、紫色の低い横並びのブロックを置いた途中の状態。",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "stage": "lower-outline-start",
+      "edits": [
+        "cropped to the assembly",
+        "metadata removed",
+        "unrelated background areas covered by opaque pixels",
+        "personal account row covered by opaque pixels"
+      ],
+      "personal_mask_rectangles_px": [
+        [
+          250,
+          494,
+          1100,
+          592
+        ]
+      ],
+      "background_mask_polygons_px": [
+        [
+          [
+            905,
+            0
+          ],
+          [
+            1390,
+            0
+          ],
+          [
+            1390,
+            34
+          ],
+          [
+            1330,
+            34
+          ],
+          [
+            1160,
+            26
+          ],
+          [
+            1020,
+            20
+          ],
+          [
+            905,
+            15
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "lower-face",
+      "path": "lower-face.jpg",
+      "pixels": [
+        1880,
+        995
+      ],
+      "size_bytes": 608939,
+      "sha256": "d356c80180bd6c8b155244410c55aa2ccc9488a5503f80c6336008b8f540d885",
+      "caption_ja": "黒いブロックと紫色の左右の輪郭を積んだ状態。背面に写る黒い板状物の用途は未確認。",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "stage": "lower-face-and-outline",
+      "edits": [
+        "cropped to the assembly",
+        "metadata removed",
+        "personal account row covered by opaque pixels"
+      ],
+      "personal_mask_rectangles_px": [
+        [
+          355,
+          735,
+          1270,
+          839
+        ]
+      ],
+      "background_mask_polygons_px": []
+    },
+    {
+      "id": "lower-face-detail",
+      "path": "lower-face-detail.jpg",
+      "pixels": [
+        2000,
+        1180
+      ],
+      "size_bytes": 628145,
+      "sha256": "63b848c9058ac6dc1eb7519a9c29635a9ec35be9e9b25b8a1f60d462b5016e07",
+      "caption_ja": "顔の下部と紫色の段付き輪郭を近くから写した補足写真。別工程とは断定しない。",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "stage": "lower-face-detail",
+      "edits": [
+        "cropped to the assembly",
+        "metadata removed",
+        "personal account row covered by opaque pixels"
+      ],
+      "personal_mask_rectangles_px": [
+        [
+          240,
+          927,
+          1350,
+          1065
+        ]
+      ],
+      "background_mask_polygons_px": []
+    },
+    {
+      "id": "lower-face-wide",
+      "path": "lower-face-wide.jpg",
+      "pixels": [
+        1745,
+        665
+      ],
+      "size_bytes": 362302,
+      "sha256": "bbe31a5747fa95d14e983c98680dc16351d41dcd5a3f13383522f129cd1bc13b",
+      "caption_ja": "顔の下部と周辺の板状物が写る途中写真。板状物の用途や固定方法は確認されていない。",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "stage": "lower-face-detail",
+      "edits": [
+        "cropped to the assembly",
+        "metadata removed",
+        "unrelated background areas covered by opaque pixels",
+        "personal account row covered by opaque pixels"
+      ],
+      "personal_mask_rectangles_px": [
+        [
+          515,
+          466,
+          1105,
+          532
+        ]
+      ],
+      "background_mask_polygons_px": [
+        [
+          [
+            1660,
+            0
+          ],
+          [
+            1745,
+            0
+          ],
+          [
+            1745,
+            100
+          ],
+          [
+            1675,
+            100
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "face-eye-strips",
+      "path": "face-eye-strips.jpg",
+      "pixels": [
+        1185,
+        802
+      ],
+      "size_bytes": 293146,
+      "sha256": "754e83b0f83e70e06c0aea2a357f183193cbb6bed899e3d6f3ffa5a1af8ffb9e",
+      "caption_ja": "黒い顔の下部、紫色の輪郭、黄色い縦二列が見える状態。上部ゴーグルはまだ写っていない。",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "stage": "yellow-strips",
+      "edits": [
+        "cropped to the assembly",
+        "metadata removed",
+        "unrelated background areas covered by opaque pixels",
+        "personal account row covered by opaque pixels"
+      ],
+      "personal_mask_rectangles_px": [
+        [
+          155,
+          640,
+          795,
+          715
+        ]
+      ],
+      "background_mask_polygons_px": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1185,
+            0
+          ],
+          [
+            1185,
+            8
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        [
+          [
+            850,
+            0
+          ],
+          [
+            1185,
+            0
+          ],
+          [
+            1185,
+            110
+          ],
+          [
+            1120,
+            110
+          ],
+          [
+            1055,
+            46
+          ],
+          [
+            970,
+            12
+          ],
+          [
+            850,
+            12
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "face-top-row",
+      "path": "face-top-row.jpg",
+      "pixels": [
+        1205,
+        935
+      ],
+      "size_bytes": 358758,
+      "sha256": "59a7271f4226b0aef85e50c4c8d307e92609b033206e4a455d2751e4df10a3f2",
+      "caption_ja": "黄色い縦二列の上に黒い横一列がある途中の状態。完成全体の写真ではない。",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "stage": "upper-black-row",
+      "edits": [
+        "cropped to the assembly",
+        "metadata removed",
+        "unrelated background areas covered by opaque pixels",
+        "personal account row covered by opaque pixels"
+      ],
+      "personal_mask_rectangles_px": [
+        [
+          198,
+          733,
+          816,
+          812
+        ]
+      ],
+      "background_mask_polygons_px": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1205,
+            0
+          ],
+          [
+            1205,
+            14
+          ],
+          [
+            0,
+            14
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            180,
+            0
+          ],
+          [
+            157,
+            38
+          ],
+          [
+            131,
+            63
+          ],
+          [
+            120,
+            80
+          ],
+          [
+            0,
+            95
+          ]
+        ],
+        [
+          [
+            870,
+            0
+          ],
+          [
+            1205,
+            0
+          ],
+          [
+            1205,
+            145
+          ],
+          [
+            1110,
+            125
+          ],
+          [
+            1055,
+            47
+          ],
+          [
+            965,
+            19
+          ],
+          [
+            870,
+            12
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "face-top-row-angle",
+      "path": "face-top-row-angle.jpg",
+      "pixels": [
+        1260,
+        1035
+      ],
+      "size_bytes": 406804,
+      "sha256": "f1b47f22ef91f231c1eed241c53ad454501858d5c8cf4842318a882825184dee",
+      "caption_ja": "黒い上列と黄色い縦二列を別角度から撮影。写真番号は説明順で、撮影時刻やCAD工程番号ではない。",
+      "reported_date": "2026-09-24",
+      "capture_date": null,
+      "stage": "upper-black-row-detail",
+      "edits": [
+        "cropped to the assembly",
+        "metadata removed",
+        "unrelated background areas covered by opaque pixels",
+        "personal account row covered by opaque pixels"
+      ],
+      "personal_mask_rectangles_px": [
+        [
+          180,
+          779,
+          848,
+          864
+        ]
+      ],
+      "background_mask_polygons_px": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1260,
+            0
+          ],
+          [
+            1260,
+            6
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        [
+          [
+            850,
+            0
+          ],
+          [
+            1260,
+            0
+          ],
+          [
+            1260,
+            120
+          ],
+          [
+            1150,
+            120
+          ],
+          [
+            1120,
+            60
+          ],
+          [
+            1060,
+            30
+          ],
+          [
+            880,
+            20
+          ]
+        ]
+      ]
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 import json
 from pathlib import Path
 import re
+import shutil
 import sys
+import tempfile
 import unittest
 from urllib.parse import urlsplit
 
@@ -10,26 +12,47 @@ import markdown
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_site_docs import links
-from verify_build_log import verify_photos, PHOTO_NAMES, MASKS
+from verify_build_log import verify_photos, FOLDER, PHOTO_NAMES, MASKS, PHOTO_SETS
 
 
 class BuildLogTests(unittest.TestCase):
     def test_exact_approved_photos_are_flattened_and_metadata_free(self):
-        report = verify_photos()
-        self.assertEqual(len(report["photos"]), 9)
+        self.assertEqual(set(PHOTO_SETS), {"2026-09-23", "2026-09-24"})
+        for date, count in (("2026-09-23", 9), ("2026-09-24", 7)):
+            report = verify_photos(report_date=date)
+            self.assertEqual(len(report["photos"]), count)
+            self.assertFalse(report["physical_qualification_claimed"])
+            self.assertFalse(report["source_photographs_accessed"])
         self.assertEqual(sum(len(rectangles) for rectangles in MASKS.values()), 4)
-        self.assertFalse(report["physical_qualification_claimed"])
-        self.assertFalse(report["source_photographs_accessed"])
 
-    def test_one_canonical_log_has_five_explanation_stages_and_nine_real_photos(self):
+    def test_unapproved_photo_changes_and_extra_images_are_rejected(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            folder = Path(temporary) / "public-derivatives"
+            shutil.copytree(FOLDER, folder)
+            extra = folder / "unapproved.jpg"
+            extra.write_bytes(b"not an approved photo")
+            with self.assertRaisesRegex(ValueError, "Unexpected file"):
+                verify_photos(folder)
+            extra.unlink()
+            target = folder / "lettering-first.jpg"
+            target.write_bytes(target.read_bytes() + b"unexpected trailing data")
+            with self.assertRaisesRegex(ValueError, "Approved photo bytes differ"):
+                verify_photos(folder)
+
+    def test_one_canonical_log_preserves_old_entry_and_adds_four_new_explanation_stages(self):
         source = (ROOT / "docs/build-log.ja.md").read_text()
         body = links(markdown.markdown(source, extensions=["tables", "fenced_code", "toc"]))
         page = (ROOT / "site/build-log.html").read_text()
-        self.assertIn("制作記録 — Bの台座と前面モジュール", page)
+        self.assertIn("制作記録 — Bの台座から顔下部へ", page)
         self.assertEqual(len(re.findall(r"^### 0[1-5] — ", source, re.M)), 5)
+        self.assertEqual(len(re.findall(r"^### 09/24・0[1-4] — ", source, re.M)), 4)
         photos = re.findall(r'<img[^>]+src="([^"]+)"', body)
-        self.assertEqual(len(photos), 9)
-        self.assertEqual({Path(urlsplit(ref).path).name for ref in photos}, PHOTO_NAMES)
+        self.assertEqual(len(photos), 16)
+        for date, expected in PHOTO_SETS.items():
+            dated = [ref for ref in photos if f"media/build-log/{date}/" in ref]
+            self.assertEqual({Path(urlsplit(ref).path).name for ref in dated}, expected["photo_names"])
+            self.assertIn(f'id="build-{date}"', page)
+            self.assertIn(f'href="#build-{date}"', page)
         rendered_photos = re.findall(r'<img[^>]+src="([^"]+)"', page)
         self.assertEqual([urlsplit(ref).path for ref in rendered_photos],
                          [urlsplit(ref).path for ref in photos])
@@ -54,12 +77,34 @@ class BuildLogTests(unittest.TestCase):
         self.assertEqual(catalog["message"]["lines"][1], "github.com/USER")
         self.assertEqual(json.loads((ROOT / "site/downloads/validation.json").read_text())["physical_testing"],
                          "NOT_PERFORMED")
+        for phrase in ("2026-09-24", "22:27", "こちらは組み立ての途中記録になります",
+                       "紫・黄は実制作例の配色", "magenta／green", "黒い板状物の用途は未確認",
+                       "保持具・必須部品・補強材・失敗対策とは断定しません",
+                       "上部ゴーグル・頭頂の完成は未確認", "顔下部", "添付順やファイル名"):
+            self.assertIn(phrase, text)
 
     def test_all_requested_entry_points_link_the_log(self):
         for source in ("README.md", "docs/build.ja.md", "docs/lettering.ja.md", "docs/assembly.ja.md"):
             self.assertIn("build-log.ja.md", (ROOT / source).read_text())
         for page in ("index.html", "guide.html", "lettering.html", "assembly.html", "notices.html"):
             self.assertIn('href="build-log.html', (ROOT / "site" / page).read_text())
+        for source in ("README.md", "docs/build.ja.md", "docs/lettering.ja.md", "docs/assembly.ja.md"):
+            self.assertIn("build-log.ja.md#build-2026-09-24", (ROOT / source).read_text())
+
+    def test_observed_colors_do_not_change_the_public_design(self):
+        parameters = json.loads((ROOT / "design/parameters.json").read_text())
+        catalog = json.loads((ROOT / "design/catalog.json").read_text())
+        self.assertEqual(parameters["colors"], catalog["colors"])
+        self.assertEqual(parameters["colors"]["magenta"]["hex"], "#c42eaa")
+        self.assertEqual(parameters["colors"]["green"]["hex"], "#42df83")
+        self.assertNotIn("yellow", parameters["colors"])
+        self.assertNotIn("purple", parameters["colors"])
+        receipt = json.loads((ROOT / "validation/build-log-design-boundary-2026-09-24.json").read_text())
+        self.assertEqual(receipt["previous_photo_count"], 9)
+        self.assertEqual(receipt["geometry_revision"], catalog["revision"])
+        for field in ("design_colors_changed", "placement_or_bom_changed", "manufacturing_or_native_changed",
+                      "existing_physical_qualification_status_changed"):
+            self.assertFalse(receipt[field])
 
 
 if __name__ == "__main__":

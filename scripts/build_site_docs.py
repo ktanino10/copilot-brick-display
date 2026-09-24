@@ -44,7 +44,7 @@ def main():
         ("privacy.md", "privacy.html", "公開テンプレートとプライバシーの境界"),
         ("assembly.ja.md", "assembly.html", "印刷ファイルから組み立てる3Dガイド"),
         ("lettering.ja.md", "lettering.html", "銘板の印刷しやすさ・小文字試験片"),
-        ("build-log.ja.md", "build-log.html", "制作記録 — Bの台座と前面モジュール"),
+        ("build-log.ja.md", "build-log.html", "制作記録 — Bの台座から顔下部へ"),
     ]:
         body = links(markdown.markdown((ROOT / "docs" / source).read_text(),
                                       extensions=["tables", "fenced_code", "toc"]))

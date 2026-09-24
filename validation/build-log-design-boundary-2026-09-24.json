@@ -1,0 +1,14 @@
+{
+  "status": "PASS_PREEXISTING_ASSETS_UNCHANGED",
+  "baseline_commit": "2197801bb6ee3159b2cb527caad9e5a9115dc5b3",
+  "report_date": "2026-09-24",
+  "geometry_revision": "5.0-legible-plaques",
+  "existing_files_verified": 412,
+  "baseline_set_sha256": "19c7413f0aea77a5200c77a048ce7ac4ace6d60041009614e14f4de2113f10f4",
+  "previous_photo_count": 9,
+  "previous_photo_folder": "media/build-log/2026-09-23",
+  "design_colors_changed": false,
+  "placement_or_bom_changed": false,
+  "manufacturing_or_native_changed": false,
+  "existing_physical_qualification_status_changed": false
+}
