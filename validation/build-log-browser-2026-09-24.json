@@ -1,0 +1,44 @@
+{
+  "status": "PASS_REAL_BUILD_LOG_BROWSER",
+  "report_date": "2026-09-24",
+  "widths_px": [
+    1440,
+    375
+  ],
+  "photos": 16,
+  "photos_by_report": {
+    "2026-09-23": 9,
+    "2026-09-24": 7
+  },
+  "dated_deep_link": "build-2026-09-24",
+  "actual_raster_photos_loaded": true,
+  "full_size_link_uses_same_redacted_file": true,
+  "separate_captions_and_limits_visible": true,
+  "original_photos_accessed": false,
+  "physical_qualification_claimed": false,
+  "browser": "152.0.7977.82",
+  "deployed_commit": "b8e9301e4d6a17ad3ea98edb0e73a421aa327ebb",
+  "run_url": "https://github.com/ktanino10/copilot-brick-display/actions/runs/36008389485",
+  "evidence": "Actual Linux screenshots, nine retained and seven new photographs, captions and safe full-size links at1440/375.",
+  "live_public_browser": {
+    "status": "PASS_REAL_BUILD_LOG_BROWSER",
+    "report_date": "2026-09-24",
+    "widths_px": [
+      1440,
+      375
+    ],
+    "photos": 16,
+    "photos_by_report": {
+      "2026-09-23": 9,
+      "2026-09-24": 7
+    },
+    "dated_deep_link": "build-2026-09-24",
+    "actual_raster_photos_loaded": true,
+    "full_size_link_uses_same_redacted_file": true,
+    "separate_captions_and_limits_visible": true,
+    "original_photos_accessed": false,
+    "physical_qualification_claimed": false,
+    "browser": "140.0.7339.16"
+  },
+  "entry_url": "https://ktanino10.github.io/copilot-brick-display/build-log.html?log=2026-09-24&commit=b8e9301e4d6a#build-2026-09-24"
+}
