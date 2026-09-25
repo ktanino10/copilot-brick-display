@@ -9,7 +9,7 @@ import time
 
 from playwright.sync_api import sync_playwright, expect, TimeoutError as PlaywrightTimeoutError
 
-EMBED = "https://www.youtube-nocookie.com/embed/Lc_enNE3nng?playsinline=1"
+VIDEO_IDS = ("sinN3dKGwRg", "Lc_enNE3nng")
 
 
 def video_state(frame):
@@ -19,13 +19,14 @@ def video_state(frame):
     )
 
 
-def check_player(browser, url, width, output):
+def check_player(browser, url, width, output, video_id):
     context = browser.new_context(viewport={"width": width, "height": 1000})
     page = context.new_page()
-    page.goto(url, wait_until="domcontentloaded", timeout=90000)
-    player = page.locator(".postprocess-video iframe")
+    page.goto(url, wait_until="networkidle", timeout=90000)
+    embed = f"https://www.youtube-nocookie.com/embed/{video_id}?playsinline=1"
+    player = page.locator(f'.postprocess-video iframe[src="{embed}"]')
     expect(player).to_have_count(1)
-    expect(player).to_have_attribute("src", EMBED)
+    expect(player).to_have_attribute("src", embed)
     expect(player).to_have_attribute("referrerpolicy", "strict-origin-when-cross-origin")
     player.scroll_into_view_if_needed()
     expect(player).to_be_visible()
@@ -33,13 +34,16 @@ def check_player(browser, url, width, output):
     assert bounds and bounds["width"] <= width and abs(bounds["width"] / bounds["height"] - 16 / 9) < .02
     assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
     frame = player.content_frame
-    result = {"width_px": width, "layout": "PASS", "user_clicked_play": False,
+    result = {"video_id": video_id, "embed": embed, "width_px": width, "layout": "PASS", "user_clicked_play": False,
               "actual_playback_observed": False, "new_tabs": 0}
     play = frame.get_by_role("button", name=re.compile(r"^(動画を再生|Play|Play video)$")).first
     try:
         expect(play).to_be_visible(timeout=25000)
+        embedded_frame = player.element_handle().content_frame()
+        assert embedded_frame is not None, "The visible player must have an attached iframe"
+        embedded_frame.wait_for_load_state("networkidle", timeout=25000)
     except (AssertionError, PlaywrightTimeoutError):
-        result["limitation"] = "Official player did not expose its play control within25s; consent/network/service restrictions may apply."
+        result["limitation"] = "Official player controls did not finish loading within25s; consent/network/service restrictions may apply."
     else:
         before = video_state(frame)
         assert all(video["paused"] and video["time"] < .2 for video in before), "Video started without the user's play click"
@@ -67,7 +71,7 @@ def check_player(browser, url, width, output):
             result["limitation"] = "Play was clicked but advancing playback was not observed; do not label this an actual-playback pass."
     result["new_tabs"] = len(context.pages) - 1
     assert result["new_tabs"] == 0 and page.url == url, "Playing must not navigate away or open a new tab"
-    page.locator(".postprocess-video").screenshot(path=str(output / f"player-{width}.png"))
+    player.screenshot(path=str(output / f"{video_id}-{width}.png"))
     context.close()
     return result
 
@@ -83,11 +87,12 @@ def main():
         if os.environ.get("BROWSER_PATH"):
             launch["executable_path"] = os.environ["BROWSER_PATH"]
         with p.chromium.launch(**launch) as browser:
-            results = [check_player(browser, args.url, width, args.output) for width in (1440, 375)]
+            results = [check_player(browser, args.url, width, args.output, video_id)
+                       for video_id in VIDEO_IDS for width in (1440, 375)]
             report = {
                 "status": ("PASS_USER_INITIATED_EMBED_PLAYBACK" if all(r["actual_playback_observed"] for r in results)
                            else "LAYOUT_VERIFIED_PLAYBACK_NOT_FULLY_CONFIRMED"),
-                "browser": browser.version, "entry_url": args.url, "embed": EMBED, "results": results,
+                "browser": browser.version, "entry_url": args.url, "video_ids": list(VIDEO_IDS), "results": results,
                 "third_party_network_required": True, "video_conditions_or_effects_verified": False,
                 "video_audio_or_thumbnail_rehosted": False,
             }

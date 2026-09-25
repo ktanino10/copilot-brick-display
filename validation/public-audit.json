@@ -2,7 +2,7 @@
   "status": "PASS_RECURSIVE_PUBLIC_ARTIFACT_AUDIT",
   "expanded_entries": 2911,
   "public_files": 446,
-  "site_bytes": 475532632,
+  "site_bytes": 475536279,
   "files": [
     {
       "path": "app.js",
@@ -111,8 +111,8 @@
     },
     {
       "path": "build-log.html",
-      "bytes": 27607,
-      "sha256": "4492e6a52000b69f94d1a6940e8d275c6d8b016c8e4e405bc1e19f017a45b648"
+      "bytes": 30826,
+      "sha256": "0c0750c9d89514d6addbff4e7d67601ab612ffb70a63223254db404775dfa52a"
     },
     {
       "path": "customize.html",
@@ -1866,8 +1866,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 20078,
-      "sha256": "46e1958a6b16a9d1507835c10be6ae510c8fc7d39114136a0b498a31dda24e77"
+      "bytes": 20506,
+      "sha256": "4f0e6bd6b72e7dd7bb6e6a70fbb604187f0ba3ca2d215b8962860e932e3c9a2a"
     },
     {
       "path": "lettering.html",

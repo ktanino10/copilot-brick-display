@@ -16,6 +16,20 @@ CGの完成図ではなく、台座・前面部品、顔下部、ゴーグルを
 公開モデルの仮文字 `USER` を実写真へ合成してはいません。測定や版の照合とは異なる点は、
 末尾の[写真観察と検証の境界](#evidence-boundary)にまとめています。
 
+## 今回の制作フロー
+
+**[企画](#flow-planning) → [設計](#flow-design) → [3Dプリント](#printing-video) → [超音波洗浄](#post-print-cleaning) → [アッセンブリー（組み立て）](#build-2026-09-25)**
+
+この5工程は、ユーザーが示した今回の制作フローです。写真の撮影時刻・枚数やCADの工程番号を表すものではありません。
+
+| 工程 | 今回の取り組み | 見る資料 |
+| --- | --- | --- |
+| <a id="flow-planning"></a>企画 | 卓上に飾る用途、ブロックらしい形、A/B/Cのサイズや奥行きを検討 | [3案の比較](../site/index.html#compare) |
+| <a id="flow-design"></a>設計 | FreeCADの分割部品・取付け・文字を設計し、図面とBlender設計CGで確認 | [設計の根拠](design.md) ／ [文字改善と実CAD比較](lettering.ja.md) ／ [CAD・図面・設計CG](../site/index.html#downloads) |
+| 3Dプリント | 設計したブロックを印刷 | [ユーザー提供動画をページ内で再生](#printing-video) ／ [印刷手順](build.ja.md#print-another-pc) |
+| 超音波洗浄 | 今回取り入れた印刷後の後処理 | [ユーザー提供動画をページ内で再生](#post-print-cleaning) |
+| アッセンブリー（組み立て） | 台座から顔・ゴーグル・頭頂まで組み立てて完成 | [制作写真と完成報告](#build-2026-09-25) ／ [部品別3D組立ガイド](../site/assembly-guide/B.html) |
+
 ## 本人の報告と、ここまでの学び
 
 | 報告・設計記録 | 分かったこと | まだ分からないこと |
@@ -95,6 +109,19 @@ CGの完成図ではなく、台座・前面部品、顔下部、ゴーグルを
 写真を塗り替えたり、写っていない部品をCGで補ったりしていません。
 9/23・9/24の「まだ写っていない」という説明は、その報告時点の記録として以下に残しています。
 
+<a id="printing-video"></a>
+
+### 3Dプリントの動画（ユーザー提供）
+
+**AIでLEGO風ブロックを設計して3Dプリント｜GitHub Copilot × FreeCAD × Blender**
+
+<div class="postprocess-video" style="width:100%;max-width:100%;aspect-ratio:16/9">
+<iframe src="https://www.youtube-nocookie.com/embed/sinN3dKGwRg?playsinline=1" title="AIでLEGO風ブロックを設計して3Dプリント｜GitHub Copilot × FreeCAD × Blender" style="display:block;width:100%;height:100%;border:0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+</div>
+
+ユーザーから「3Dプリントの動画」として紹介された制作記録です。▶を押すと、このページ内で再生できます。
+再生できない場合の補助リンク：[3Dプリント動画をYouTubeで見る](https://youtu.be/sinN3dKGwRg)。
+
 <a id="post-print-cleaning"></a>
 
 ### 印刷後の後処理：超音波洗浄（ユーザー提供動画）
@@ -106,15 +133,17 @@ CGの完成図ではなく、台座・前面部品、顔下部、ゴーグルを
 </div>
 
 ユーザーから「3D Print後の超音波洗浄」として紹介された制作の参考動画です。
-上の公式YouTubeプレーヤーの▶を押すと、このページ内で再生できます。自動再生はしません。
-**この動画欄はオンライン限定です。** プライバシー強化モードでもYouTubeへの第三者通信は発生します。
+上の公式YouTubeプレーヤーの▶を押すと、このページ内で再生できます。
+再生できない場合の補助リンク：[超音波洗浄動画をYouTubeで見る](https://youtu.be/Lc_enNE3nng)。
+
+**この2本の動画欄はオンライン限定です。** 自動再生はしません。プライバシー強化モードでもYouTubeへの第三者通信は発生します。
 動画・音声・サムネイルをこのrepoへ保存・再アップロードしてはいません。
 写真・3Dガイドのオフライン配布は従来どおり利用できますが、`file://`では動画の参照元制約により再生できない場合があります。
-その場合は[この小節のWeb版を開いてください](https://ktanino10.github.io/copilot-brick-display/build-log.html#post-print-cleaning)。
+その場合は[動画小節のWeb版を開いてください](https://ktanino10.github.io/copilot-brick-display/build-log.html#printing-video)。
 
-再生できない場合の補助リンク：[YouTubeで見る](https://youtu.be/Lc_enNE3nng)。
-タイトルは公開メタデータで確認していますが、本編の機器・洗浄液・温度・時間・効果は未確認です。
-本制作の必須工程や、安全検証済みの手順としては案内していません。
+並びはユーザー申告の制作フロー「3Dプリント → 超音波洗浄」に合わせた説明順です。
+タイトルは公開メタデータで確認していますが、本編の機器・プリンタ設定・洗浄液・温度・時間・効果は未確認です。
+超音波洗浄を今回取り入れた後処理として記録しており、一般に必須の工程や、安全検証済みのレシピとしては案内していません。
 
 <a id="build-2026-09-24"></a>
 

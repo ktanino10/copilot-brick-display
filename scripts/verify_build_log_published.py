@@ -29,23 +29,25 @@ def main():
     paths = ["build-log.html", "index.html", "guide.html", "lettering.html", "assembly.html", "notices.html",
              *manifests, *photo_paths]
     records = []
-    video_reference = "https://youtu.be/Lc_enNE3nng" if args.report_date >= "2026-09-25" else None
-    video_embed = "https://www.youtube-nocookie.com/embed/Lc_enNE3nng?playsinline=1" if video_reference else None
+    video_ids = ("sinN3dKGwRg", "Lc_enNE3nng") if args.report_date >= "2026-09-25" else ()
+    video_references = [f"https://youtu.be/{video_id}" for video_id in video_ids]
+    video_embeds = [f"https://www.youtube-nocookie.com/embed/{video_id}?playsinline=1" for video_id in video_ids]
     base = args.base.rstrip("/") + "/"
     for relative in paths:
         data = fetch(base + quote(relative) + "?log=" + args.report_date + "&commit=" + quote(args.commit))
         if data != (ROOT / "site" / relative).read_bytes():
             raise ValueError(f"Published journal asset differs: {relative}")
-        if relative == "build-log.html" and video_reference:
+        if relative == "build-log.html" and video_ids:
             page = data.decode("utf-8")
-            if page.count(f'href="{video_reference}"') != 1:
-                raise ValueError("The authorized external video link is missing or duplicated")
+            for reference in video_references:
+                if page.count(f'href="{reference}"') != 1:
+                    raise ValueError("An authorized fallback video link is missing or duplicated")
             frames = re.findall(r"<iframe\b[^>]*>", page)
-            if len(frames) != 1 or f'src="{video_embed}"' not in frames[0]:
-                raise ValueError("Expected exactly the authorized privacy-enhanced YouTube player")
-            if 'referrerpolicy="strict-origin-when-cross-origin"' not in frames[0] or "allowfullscreen" not in frames[0]:
-                raise ValueError("YouTube player permissions/referrer policy differ")
-            if "autoplay" in frames[0] or re.search(r"""<(?:img|script|video|audio)\b[^>]*src=["'][^"']*(?:youtu|ytimg)""", page):
+            if len(frames) != len(video_embeds) or any(f'src="{embed}"' not in frame for frame, embed in zip(frames, video_embeds)):
+                raise ValueError("Expected the two authorized privacy-enhanced players in printing/cleaning order")
+            if any('referrerpolicy="strict-origin-when-cross-origin"' not in frame or "allowfullscreen" not in frame for frame in frames):
+                raise ValueError("A YouTube player permission/referrer policy differs")
+            if any("autoplay" in frame for frame in frames) or re.search(r"""<(?:img|script|video|audio)\b[^>]*src=["'][^"']*(?:youtu|ytimg)""", page):
                 raise ValueError("Do not auto-play or separately load/rehost the supplied media")
         records.append({"path": relative, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
     write_json(ROOT / "validation" / f"build-log-published-{args.report_date}.json", {
@@ -60,8 +62,8 @@ def main():
                      if checked[-1]["personalized_b_completion_reported"] else
                      "Personalized B work-in-progress observations only, not the complete150-piece figure or a design-color change."),
         "personalized_b_completion_reported": checked[-1]["personalized_b_completion_reported"],
-        "external_video_reference": video_reference,
-        "official_video_embed": video_embed,
+        "external_video_references": video_references,
+        "official_video_embeds": video_embeds,
         "video_content_downloaded_to_repo": False,
         "embed_playback_tested_by_this_hash_check": False,
         "slicer_input_hashes_verified": False, "physical_qualification_claimed": False,

@@ -28,19 +28,30 @@ def verify_build_log(page, base, output):
     introduction = body.evaluate("element => element.innerText.split('本人の報告と、ここまでの学び')[0]")
     assert "個人向けBが完成しました" in introduction
     assert "上部のゴーグル・頭頂まで完成した写真ではありません" not in introduction
+    for label, anchor in (
+        ("企画", "flow-planning"), ("設計", "flow-design"), ("3Dプリント", "printing-video"),
+        ("超音波洗浄", "post-print-cleaning"), ("アッセンブリー（組み立て）", "build-2026-09-25"),
+    ):
+        page.get_by_role("link", name=label, exact=True).click()
+        assert page.url.endswith("#" + anchor)
     images = page.locator('.document img[src*="media/build-log/"]')
     expect(images).to_have_count(sum(PHOTO_COUNTS.values()))
     for date, count in PHOTO_COUNTS.items():
         expect(page.locator(f'.document img[src*="media/build-log/{date}/"]')).to_have_count(count)
         expect(page.locator(f'a[id="build-{date}"]')).to_have_count(1)
     expect(page.locator('.document a[href*="manifest.json"]')).to_have_count(len(PHOTO_COUNTS))
-    expect(page.locator('.document a[href="https://youtu.be/Lc_enNE3nng"]')).to_have_count(1)
-    player = body.locator(".postprocess-video iframe")
-    expect(player).to_have_count(1)
-    expect(player).to_have_attribute("src", "https://www.youtube-nocookie.com/embed/Lc_enNE3nng?playsinline=1")
-    expect(player).to_have_attribute("referrerpolicy", "strict-origin-when-cross-origin")
-    expect(player).to_have_attribute("title", "3Dプリント後のパーツを超音波洗浄｜Ultrasonic Cleaning of 3D-Printed Parts")
-    assert body.locator("iframe").count() == 1 and body.locator("video, audio").count() == 0
+    players = body.locator(".postprocess-video iframe")
+    expect(players).to_have_count(2)
+    for number, (video_id, title) in enumerate((
+        ("sinN3dKGwRg", "AIでLEGO風ブロックを設計して3Dプリント｜GitHub Copilot × FreeCAD × Blender"),
+        ("Lc_enNE3nng", "3Dプリント後のパーツを超音波洗浄｜Ultrasonic Cleaning of 3D-Printed Parts"),
+    )):
+        expect(page.locator(f'.document a[href="https://youtu.be/{video_id}"]')).to_have_count(1)
+        player = players.nth(number)
+        expect(player).to_have_attribute("src", f"https://www.youtube-nocookie.com/embed/{video_id}?playsinline=1")
+        expect(player).to_have_attribute("referrerpolicy", "strict-origin-when-cross-origin")
+        expect(player).to_have_attribute("title", title)
+    assert body.locator("iframe").count() == 2 and body.locator("video, audio").count() == 0
     assert page.locator("[src]:not(iframe)").evaluate_all("nodes => nodes.every(node => !/youtu|ytimg/i.test(node.getAttribute('src')))")
     for width in (1440, 375):
         page.set_viewport_size({"width": width, "height": 1000})
@@ -54,10 +65,11 @@ def verify_build_log(page, base, output):
             assert bounds and bounds["width"] > 0 and bounds["width"] <= width
             assert image.evaluate("image => Math.abs(image.clientWidth / image.clientHeight - image.naturalWidth / image.naturalHeight) < .02")
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
-        player.scroll_into_view_if_needed()
-        expect(player).to_be_visible()
-        box = player.bounding_box()
-        assert box and box["width"] <= width and abs(box["width"] / box["height"] - 16 / 9) < .02
+        for player in players.all():
+            player.scroll_into_view_if_needed()
+            expect(player).to_be_visible()
+            box = player.bounding_box()
+            assert box and box["width"] <= width and abs(box["width"] / box["height"] - 16 / 9) < .02
         assert body.locator("canvas, svg").count() == 0
         page.locator(f'a[id="build-{LATEST_DATE}"]').scroll_into_view_if_needed()
         page.screenshot(path=str(output / f"build-log-{width}.png"), full_page=True)
@@ -82,7 +94,8 @@ def verify_build_log(page, base, output):
         "dated_deep_link": f"build-{LATEST_DATE}", "actual_raster_photos_loaded": True,
         "personalized_b_completion_report_visible": True,
         "completed_photo_full_size_link_verified": True,
-        "supplied_cleaning_video_embed": "https://www.youtube-nocookie.com/embed/Lc_enNE3nng?playsinline=1",
+        "supplied_video_embeds_in_order": ["sinN3dKGwRg", "Lc_enNE3nng"],
+        "user_reported_flow": ["planning", "design", "3d-printing", "ultrasonic-cleaning", "assembly"],
         "embed_layout_verified_playback_not_asserted_here": True,
         "full_size_link_uses_same_redacted_file": True, "separate_captions_and_limits_visible": True,
         "original_photos_accessed": False, "physical_qualification_claimed": False,

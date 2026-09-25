@@ -23,7 +23,8 @@
 本人の「これで完成ですね」という報告と、ゴーグル上枠・紫頭頂まで揃った完成写真を追加しました。
 [9/23の台座](docs/build-log.ja.md#build-2026-09-23)・[9/24の顔下部](docs/build-log.ja.md#build-2026-09-24)からの記録も残しています。
 写真の紫・黄は実制作例の配色です。設計配色は変えず、測定・版照合の範囲は制作ログに分けて記載しています。
-[ユーザー提供の超音波洗浄動画をページ内で見る](https://ktanino10.github.io/copilot-brick-display/build-log.html#post-print-cleaning)こともできます（YouTube欄はオンライン限定）。
+[企画 → 設計 → 3Dプリント → 超音波洗浄 → アッセンブリーの制作フロー](docs/build-log.ja.md#flow-planning)と、
+[印刷・超音波洗浄の2本の動画をページ内で見る](https://ktanino10.github.io/copilot-brick-display/build-log.html#printing-video)導線も用意しました（YouTube欄はオンライン限定）。
 
 公開リビジョンは **`5.0-legible-plaques`**。黒い台座5段、大きい2行、正面右のロゴ、
 無接着で交換できる前面部品を持つ非公式の卓上オブジェです。

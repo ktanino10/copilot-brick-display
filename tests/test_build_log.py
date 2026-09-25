@@ -130,28 +130,38 @@ class BuildLogTests(unittest.TestCase):
         for phrase in ("STLハッシュ", "実preset", "未照合", "保持力", "量産・玩具認証", "公開の汎用文字版・A/C"):
             self.assertIn(phrase, boundary)
 
-    def test_supplied_cleaning_video_uses_only_the_authorized_online_embed(self):
+    def test_supplied_process_videos_use_only_the_two_authorized_online_embeds(self):
         source = (ROOT / "docs/build-log.ja.md").read_text()
         page = (ROOT / "site/build-log.html").read_text()
-        url = "https://youtu.be/Lc_enNE3nng"
-        title = "3Dプリント後のパーツを超音波洗浄｜Ultrasonic Cleaning of 3D-Printed Parts"
-        self.assertEqual(source.count(f"]({url})"), 1)
-        self.assertEqual(page.count(f'href="{url}"'), 1)
-        self.assertIn(title, source)
-        self.assertIn('id="post-print-cleaning"', page)
-        self.assertIn("build-log.html#post-print-cleaning", (ROOT / "README.md").read_text())
-        self.assertIn("本編の機器・洗浄液・温度・時間・効果は未確認", source)
-        self.assertIn("本制作の必須工程や、安全検証済みの手順としては案内していません", source)
-        self.assertEqual(page.count("<iframe "), 1)
-        self.assertIn('src="https://www.youtube-nocookie.com/embed/Lc_enNE3nng?playsinline=1"', page)
-        self.assertIn(f'title="{title}"', page)
-        self.assertIn('referrerpolicy="strict-origin-when-cross-origin"', page)
-        self.assertIn("allowfullscreen", page)
-        self.assertIn("aspect-ratio:16/9", page)
+        for video_id, title, anchor in (
+            ("sinN3dKGwRg", "AIでLEGO風ブロックを設計して3Dプリント｜GitHub Copilot × FreeCAD × Blender", "printing-video"),
+            ("Lc_enNE3nng", "3Dプリント後のパーツを超音波洗浄｜Ultrasonic Cleaning of 3D-Printed Parts", "post-print-cleaning"),
+        ):
+            url = f"https://youtu.be/{video_id}"
+            self.assertEqual(source.count(f"]({url})"), 1)
+            self.assertEqual(page.count(f'href="{url}"'), 1)
+            self.assertIn(title, source)
+            self.assertIn(f'id="{anchor}"', page)
+            self.assertIn(f'src="https://www.youtube-nocookie.com/embed/{video_id}?playsinline=1"', page)
+            self.assertIn(f'title="{title}"', page)
+        self.assertIn("build-log.html#printing-video", (ROOT / "README.md").read_text())
+        self.assertIn("本編の機器・プリンタ設定・洗浄液・温度・時間・効果は未確認", source)
+        self.assertIn("一般に必須の工程や、安全検証済みのレシピとしては案内していません", source)
+        self.assertEqual(page.count("<iframe "), 2)
+        self.assertEqual(page.count('referrerpolicy="strict-origin-when-cross-origin"'), 2)
+        self.assertEqual(page.count("allowfullscreen"), 2)
+        self.assertEqual(page.count("aspect-ratio:16/9"), 2)
+        self.assertLess(page.index("/embed/sinN3dKGwRg"), page.index("/embed/Lc_enNE3nng"))
         self.assertIn("YouTubeへの第三者通信は発生します", source)
-        self.assertIn("この動画欄はオンライン限定", source)
+        self.assertIn("この2本の動画欄はオンライン限定", source)
         self.assertNotIn("autoplay=", page)
         self.assertNotRegex(page, r"""<(?:img|script|video|audio)\b[^>]*src=["'][^"']*(?:youtu|ytimg)""")
+        flow = source.split("## 今回の制作フロー")[1].split("## 本人の報告")[0]
+        labels = ["[企画]", "[設計]", "[3Dプリント]", "[超音波洗浄]", "[アッセンブリー（組み立て）]"]
+        self.assertEqual([flow.index(label) for label in labels], sorted(flow.index(label) for label in labels))
+        for anchor in ("flow-planning", "flow-design", "printing-video", "post-print-cleaning", "build-2026-09-25"):
+            self.assertIn(f'id="{anchor}"', page)
+        self.assertIn("ユーザーが示した今回の制作フロー", flow)
 
 
 if __name__ == "__main__":
