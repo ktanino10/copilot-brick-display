@@ -130,7 +130,7 @@ class BuildLogTests(unittest.TestCase):
         for phrase in ("STLハッシュ", "実preset", "未照合", "保持力", "量産・玩具認証", "公開の汎用文字版・A/C"):
             self.assertIn(phrase, boundary)
 
-    def test_supplied_cleaning_video_is_an_external_link_not_an_embed(self):
+    def test_supplied_cleaning_video_uses_only_the_authorized_online_embed(self):
         source = (ROOT / "docs/build-log.ja.md").read_text()
         page = (ROOT / "site/build-log.html").read_text()
         url = "https://youtu.be/Lc_enNE3nng"
@@ -139,12 +139,19 @@ class BuildLogTests(unittest.TestCase):
         self.assertEqual(page.count(f'href="{url}"'), 1)
         self.assertIn(title, source)
         self.assertIn('id="post-print-cleaning"', page)
-        self.assertIn("docs/build-log.ja.md#post-print-cleaning", (ROOT / "README.md").read_text())
-        self.assertIn("本編・字幕は未視聴", source)
-        self.assertIn("機器・洗浄液・温度・時間・効果は未確認", source)
+        self.assertIn("build-log.html#post-print-cleaning", (ROOT / "README.md").read_text())
+        self.assertIn("本編の機器・洗浄液・温度・時間・効果は未確認", source)
         self.assertIn("本制作の必須工程や、安全検証済みの手順としては案内していません", source)
-        self.assertNotRegex(page, r"<(?:iframe|video|audio)\b")
-        self.assertNotRegex(page, r"""src=["'][^"']*(?:youtu|ytimg)""")
+        self.assertEqual(page.count("<iframe "), 1)
+        self.assertIn('src="https://www.youtube-nocookie.com/embed/Lc_enNE3nng?playsinline=1"', page)
+        self.assertIn(f'title="{title}"', page)
+        self.assertIn('referrerpolicy="strict-origin-when-cross-origin"', page)
+        self.assertIn("allowfullscreen", page)
+        self.assertIn("aspect-ratio:16/9", page)
+        self.assertIn("YouTubeへの第三者通信は発生します", source)
+        self.assertIn("この動画欄はオンライン限定", source)
+        self.assertNotIn("autoplay=", page)
+        self.assertNotRegex(page, r"""<(?:img|script|video|audio)\b[^>]*src=["'][^"']*(?:youtu|ytimg)""")
 
 
 if __name__ == "__main__":

@@ -30,6 +30,7 @@ def main():
              *manifests, *photo_paths]
     records = []
     video_reference = "https://youtu.be/Lc_enNE3nng" if args.report_date >= "2026-09-25" else None
+    video_embed = "https://www.youtube-nocookie.com/embed/Lc_enNE3nng?playsinline=1" if video_reference else None
     base = args.base.rstrip("/") + "/"
     for relative in paths:
         data = fetch(base + quote(relative) + "?log=" + args.report_date + "&commit=" + quote(args.commit))
@@ -39,8 +40,13 @@ def main():
             page = data.decode("utf-8")
             if page.count(f'href="{video_reference}"') != 1:
                 raise ValueError("The authorized external video link is missing or duplicated")
-            if re.search(r"<(?:iframe|video|audio)\b", page) or re.search(r"""src=["'][^"']*(?:youtu|ytimg)""", page):
-                raise ValueError("The video reference must not embed or load remote media")
+            frames = re.findall(r"<iframe\b[^>]*>", page)
+            if len(frames) != 1 or f'src="{video_embed}"' not in frames[0]:
+                raise ValueError("Expected exactly the authorized privacy-enhanced YouTube player")
+            if 'referrerpolicy="strict-origin-when-cross-origin"' not in frames[0] or "allowfullscreen" not in frames[0]:
+                raise ValueError("YouTube player permissions/referrer policy differ")
+            if "autoplay" in frames[0] or re.search(r"""<(?:img|script|video|audio)\b[^>]*src=["'][^"']*(?:youtu|ytimg)""", page):
+                raise ValueError("Do not auto-play or separately load/rehost the supplied media")
         records.append({"path": relative, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
     write_json(ROOT / "validation" / f"build-log-published-{args.report_date}.json", {
         "status": "PASS_LIVE_SANITIZED_BUILD_JOURNAL", "report_date": args.report_date,
@@ -55,7 +61,9 @@ def main():
                      "Personalized B work-in-progress observations only, not the complete150-piece figure or a design-color change."),
         "personalized_b_completion_reported": checked[-1]["personalized_b_completion_reported"],
         "external_video_reference": video_reference,
-        "video_content_downloaded_or_viewed": False,
+        "official_video_embed": video_embed,
+        "video_content_downloaded_to_repo": False,
+        "embed_playback_tested_by_this_hash_check": False,
         "slicer_input_hashes_verified": False, "physical_qualification_claimed": False,
     })
     print(f"PASS {len(records)} actual live page/image hashes; all {len(photo_paths)} photos match the approved redacted bytes.")

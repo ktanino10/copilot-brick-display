@@ -99,11 +99,21 @@ CGの完成図ではなく、台座・前面部品、顔下部、ゴーグルを
 
 ### 印刷後の後処理：超音波洗浄（ユーザー提供動画）
 
-[3Dプリント後のパーツを超音波洗浄｜Ultrasonic Cleaning of 3D-Printed Parts — YouTubeで見る](https://youtu.be/Lc_enNE3nng)
+**3Dプリント後のパーツを超音波洗浄｜Ultrasonic Cleaning of 3D-Printed Parts**
+
+<div class="postprocess-video" style="width:100%;max-width:100%;aspect-ratio:16/9">
+<iframe src="https://www.youtube-nocookie.com/embed/Lc_enNE3nng?playsinline=1" title="3Dプリント後のパーツを超音波洗浄｜Ultrasonic Cleaning of 3D-Printed Parts" style="display:block;width:100%;height:100%;border:0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+</div>
 
 ユーザーから「3D Print後の超音波洗浄」として紹介された制作の参考動画です。
-クリックすると外部のYouTubeへ移動します。ここでは動画・音声・サムネイルの保存や自動読込みは行いません。
-タイトルは公開メタデータで確認していますが、本編・字幕は未視聴で、機器・洗浄液・温度・時間・効果は未確認です。
+上の公式YouTubeプレーヤーの▶を押すと、このページ内で再生できます。自動再生はしません。
+**この動画欄はオンライン限定です。** プライバシー強化モードでもYouTubeへの第三者通信は発生します。
+動画・音声・サムネイルをこのrepoへ保存・再アップロードしてはいません。
+写真・3Dガイドのオフライン配布は従来どおり利用できますが、`file://`では動画の参照元制約により再生できない場合があります。
+その場合は[この小節のWeb版を開いてください](https://ktanino10.github.io/copilot-brick-display/build-log.html#post-print-cleaning)。
+
+再生できない場合の補助リンク：[YouTubeで見る](https://youtu.be/Lc_enNE3nng)。
+タイトルは公開メタデータで確認していますが、本編の機器・洗浄液・温度・時間・効果は未確認です。
 本制作の必須工程や、安全検証済みの手順としては案内していません。
 
 <a id="build-2026-09-24"></a>
