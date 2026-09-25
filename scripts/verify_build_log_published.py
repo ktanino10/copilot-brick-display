@@ -42,7 +42,10 @@ def main():
         "files": records, "photo_count": len(photo_paths),
         "photos_by_report": {entry["report_date"]: len(entry["photos"]) for entry in checked},
         "scope": "Only current public redacted derivatives and journal pages; no original photos or private distribution.",
-        "progress": "Personalized B work-in-progress observations only, not the complete150-piece figure or a design-color change.",
+        "progress": ("Personalized B completion report and full-view photos; not a physical qualification or design-color change."
+                     if checked[-1]["personalized_b_completion_reported"] else
+                     "Personalized B work-in-progress observations only, not the complete150-piece figure or a design-color change."),
+        "personalized_b_completion_reported": checked[-1]["personalized_b_completion_reported"],
         "slicer_input_hashes_verified": False, "physical_qualification_claimed": False,
     })
     print(f"PASS {len(records)} actual live page/image hashes; all {len(photo_paths)} photos match the approved redacted bytes.")

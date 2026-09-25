@@ -1,8 +1,8 @@
 {
   "status": "PASS_RECURSIVE_PUBLIC_ARTIFACT_AUDIT",
-  "expanded_entries": 2902,
-  "public_files": 437,
-  "site_bytes": 472321235,
+  "expanded_entries": 2911,
+  "public_files": 446,
+  "site_bytes": 475530715,
   "files": [
     {
       "path": "app.js",
@@ -101,8 +101,8 @@
     },
     {
       "path": "assembly.html",
-      "bytes": 10617,
-      "sha256": "5d33ec5e0926a6117ab03eddefbb002eb1f40af0684208d5109bbc660693e528"
+      "bytes": 10506,
+      "sha256": "23564c3834564caf3e5219fa64ae9b9b5a00811395814361e6593f06c3187cc1"
     },
     {
       "path": "assets/catalog.json",
@@ -111,8 +111,8 @@
     },
     {
       "path": "build-log.html",
-      "bytes": 20028,
-      "sha256": "9f7d9133a23c2b45ba96218cdb463b231e5cf35b7c9dab5f6b191515c4937324"
+      "bytes": 25690,
+      "sha256": "41c40d98754cb92a9ec7954107543b62e49392dd1d6d5cd423526e2be66be13f"
     },
     {
       "path": "customize.html",
@@ -1851,8 +1851,8 @@
     },
     {
       "path": "guide.html",
-      "bytes": 43385,
-      "sha256": "7d08fc0b98136bb14b7dce7b6555998dd84c06c514bc6fe3f58c2e8c4f72454f"
+      "bytes": 43352,
+      "sha256": "41204fe99732e0e2a169dbd79462887c859791c1a543db7e0dc430115b45114d"
     },
     {
       "path": "guide.js",
@@ -1866,13 +1866,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 20083,
-      "sha256": "1e6b8879c1ff2d7fd74f9c0fbbd3c681ab505110811ad73f528003639908f264"
+      "bytes": 20078,
+      "sha256": "46e1958a6b16a9d1507835c10be6ae510c8fc7d39114136a0b498a31dda24e77"
     },
     {
       "path": "lettering.html",
-      "bytes": 9827,
-      "sha256": "ca153ee3db2632984e4284c735eadf53d46b075744a0ec07923ef5e1817f2840"
+      "bytes": 9960,
+      "sha256": "09616280e5c0fd228ad05b9a558cbb97dc7a32eb0bd9f2d7808c85a4223620c8"
     },
     {
       "path": "media/A-assembly.mp4",
@@ -2038,6 +2038,51 @@
       "path": "media/build-log/2026-09-24/manifest.json",
       "bytes": 10003,
       "sha256": "88b27bcba2820e2649d14438401316444ab9394a7039e7eec78c1848a00bb6bb"
+    },
+    {
+      "path": "media/build-log/2026-09-25/finished-portrait.jpg",
+      "bytes": 309379,
+      "sha256": "2019b9ef2a790084dcb7627c4896e0db969d4b9b7d1e68f6590676c6d9cb8270"
+    },
+    {
+      "path": "media/build-log/2026-09-25/goggle-before-closure.jpg",
+      "bytes": 339229,
+      "sha256": "46ac8c02a86bd4630d9b964cdfe9948ddd95381b9823f77ec08dc1b49324ff91"
+    },
+    {
+      "path": "media/build-log/2026-09-25/goggle-first-row.jpg",
+      "bytes": 495505,
+      "sha256": "fb05b82fa698f0cb4f169a3dbbd570ceac108958a869a110909f5f927c5ef977"
+    },
+    {
+      "path": "media/build-log/2026-09-25/goggle-growing.jpg",
+      "bytes": 343054,
+      "sha256": "2fd3e980fd48fddf67052e4312ff64d886cdcca066b5f1b98aa39fabc249644b"
+    },
+    {
+      "path": "media/build-log/2026-09-25/goggle-higher.jpg",
+      "bytes": 439061,
+      "sha256": "1159bb6653bab9fcf61229afef8eda054d9dd08ada8211eccb0b1e358932de86"
+    },
+    {
+      "path": "media/build-log/2026-09-25/goggle-lower-band.jpg",
+      "bytes": 405490,
+      "sha256": "be8d33fb9008cb2268c559a23b1e1ee1a2cc709097bad14d3f5f2278e6968311"
+    },
+    {
+      "path": "media/build-log/2026-09-25/goggle-midway.jpg",
+      "bytes": 450526,
+      "sha256": "95348b0d6f669f46dcbd0a4be330beb6d3c4300f3c2d88f367a495ef7b82f8cb"
+    },
+    {
+      "path": "media/build-log/2026-09-25/goggle-near-top.jpg",
+      "bytes": 393789,
+      "sha256": "f54fa5d18f72380b7aed31ddb3e2b5a735442ef77807bc7dd04ecc7d76f67b2c"
+    },
+    {
+      "path": "media/build-log/2026-09-25/manifest.json",
+      "bytes": 27801,
+      "sha256": "4e07df6e20ab45eb65b308eea3467d7e1785bba83f9912c6a659e8b2dcbc69bd"
     },
     {
       "path": "media/lettering/A-lettering-before-after.png",

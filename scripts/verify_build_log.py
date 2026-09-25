@@ -34,6 +34,15 @@ PHOTO_SETS = {
         "total_bytes": 3033706, "masks": {}, "scope": "generic build-journal photo derivatives",
         "masks_from_manifest": True,
     },
+    "2026-09-25": {
+        "manifest_sha256": "4e07df6e20ab45eb65b308eea3467d7e1785bba83f9912c6a659e8b2dcbc69bd",
+        "photo_names": {
+            "goggle-lower-band.jpg", "goggle-first-row.jpg", "goggle-growing.jpg", "goggle-midway.jpg",
+            "goggle-higher.jpg", "goggle-near-top.jpg", "goggle-before-closure.jpg", "finished-portrait.jpg",
+        },
+        "total_bytes": 3176033, "masks": {}, "scope": "generic completion-journal derivatives",
+        "masks_from_manifest": True, "subject_boundary_masks": True, "completion_reported": True,
+    },
 }
 
 
@@ -43,7 +52,7 @@ def require(condition, message):
 
 
 def verify_photo_set(folder, *, manifest_sha256, photo_names, report_date, total_bytes, masks,
-                     scope, masks_from_manifest=False):
+                     scope, masks_from_manifest=False, completion_reported=False, subject_boundary_masks=False):
     raw = (folder / "manifest.json").read_bytes()
     require(hashlib.sha256(raw).hexdigest() == manifest_sha256, "Approved photo manifest changed")
     manifest = json.loads(raw)
@@ -89,17 +98,36 @@ def verify_photo_set(folder, *, manifest_sha256, photo_names, report_date, total
                     patch = image.crop((left, y0 + 12, right, y1 - 12))
                     require(patch.getextrema() == ((32, 32), (39, 39), (47, 47)),
                             "Expected solid baked-in pixels around the redaction label")
-            description = ("personal account row covered by opaque pixels" if masks_from_manifest else
+            description = ("personal account row masked in pixels" if subject_boundary_masks else
+                           "personal account row covered by opaque pixels" if masks_from_manifest else
                            "personal account row irreversibly masked in the pixels")
             require((description in row["edits"])
                     == (path.name in masks), "Pixel masking scope and manifest differ")
-            backgrounds = row["background_mask_polygons_px"] if masks_from_manifest else []
-            if masks_from_manifest:
+            backgrounds = (row["additional_background_mask_polygons_px"] if subject_boundary_masks else
+                           row["background_mask_polygons_px"] if masks_from_manifest else [])
+            retained = row["subject_retention_polygon_px"] if subject_boundary_masks else []
+            if subject_boundary_masks:
+                require("unrelated background replaced by opaque neutral pixels outside the recorded subject boundary" in row["edits"],
+                        "Subject-background processing is not declared")
+                require(len(retained) >= 3, "Missing approved subject boundary")
+            elif masks_from_manifest:
                 require(("unrelated background areas covered by opaque pixels" in row["edits"]) == bool(backgrounds),
                         "Background-mask scope and manifest differ")
-            for polygon in backgrounds:
+            for polygon in backgrounds + ([retained] if retained else []):
                 require(len(polygon) >= 3 and all(0 <= x <= image.width and 0 <= y <= image.height for x, y in polygon),
                         "Background mask outside image")
+            if retained:
+                mask = Image.new("L", image.size, 255)
+                draw = ImageDraw.Draw(mask)
+                draw.polygon([tuple(point) for point in retained], fill=0)
+                for polygon in backgrounds:
+                    draw.polygon([tuple(point) for point in polygon], fill=255)
+                interior = mask.filter(ImageFilter.MinFilter(5))
+                require(interior.getbbox() is not None, "No subject-background mask interior")
+                delta = ImageChops.difference(image, Image.new("RGB", image.size, (234, 239, 243)))
+                require(max(ImageStat.Stat(delta, interior).mean) < 1.5,
+                        "Pixels outside the retained subject do not match the approved opaque background")
+            for polygon in backgrounds:
                 mask = Image.new("L", image.size)
                 ImageDraw.Draw(mask).polygon([tuple(point) for point in polygon], fill=255)
                 interior = mask.filter(ImageFilter.MinFilter(5))
@@ -113,14 +141,22 @@ def verify_photo_set(folder, *, manifest_sha256, photo_names, report_date, total
             "capture_date": None, "metadata": "JFIF only; no EXIF/XMP/ICC/comment/thumbnail",
             "pixel_mask_rectangles": masks.get(path.name, []),
             "background_mask_polygons": backgrounds,
+            "subject_retention_polygon": retained,
         })
     require(sum(row["bytes"] for row in records) == total_bytes, "Approved photo total differs")
+    if completion_reported:
+        require("これで完成ですね" in manifest["user_reports_ja"], "Missing authorized completion report")
+        require([row["path"] for row in manifest["photos"] if row["stage"] == "completed"] == ["finished-portrait.jpg"],
+                "The completed view must be the approved final photograph")
     return {
         "status": "PASS_APPROVED_PUBLIC_DERIVATIVE_INTEGRITY",
         "report_date": report_date, "manifest_sha256": manifest_sha256,
         "source_photographs_accessed": False, "photos": records,
         "mask_check": "Flat RGB pixels checked away from visible labels; exact approved bytes and separate visual inspection, not an OCR guarantee.",
-        "evidence_scope": "User reports and photographs of personalized B work in progress, not full assembly or physical qualification.",
+        "evidence_scope": ("User completion report and full-view photographs of a personalized B; physical qualification is separate."
+                           if completion_reported else
+                           "User reports and photographs of personalized B work in progress, not full assembly or physical qualification."),
+        "personalized_b_completion_reported": completion_reported,
         "source_print_hashes_known": False, "slicer_project_received": False,
         "physical_qualification_claimed": False,
     }
