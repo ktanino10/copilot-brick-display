@@ -1,0 +1,74 @@
+{
+  "status": "PASS_REAL_BUILD_LOG_BROWSER",
+  "report_date": "2026-09-25",
+  "widths_px": [
+    1440,
+    375
+  ],
+  "photos": 24,
+  "photos_by_report": {
+    "2026-09-23": 9,
+    "2026-09-24": 7,
+    "2026-09-25": 8
+  },
+  "dated_deep_link": "build-2026-09-25",
+  "actual_raster_photos_loaded": true,
+  "personalized_b_completion_report_visible": true,
+  "completed_photo_full_size_link_verified": true,
+  "supplied_video_embeds_in_order": [
+    "sinN3dKGwRg",
+    "Lc_enNE3nng"
+  ],
+  "user_reported_flow": [
+    "planning",
+    "design",
+    "3d-printing",
+    "ultrasonic-cleaning",
+    "assembly"
+  ],
+  "embed_layout_verified_playback_not_asserted_here": true,
+  "full_size_link_uses_same_redacted_file": true,
+  "separate_captions_and_limits_visible": true,
+  "original_photos_accessed": false,
+  "physical_qualification_claimed": false,
+  "browser": "153.0.8010.52",
+  "deployed_commit": "ae91f728bae5a23d908b82c3ab8474748e4df1b7",
+  "run_url": "https://github.com/ktanino10/copilot-brick-display/actions/runs/36146167694",
+  "live_public_page": {
+    "status": "PASS_REAL_BUILD_LOG_BROWSER",
+    "report_date": "2026-09-25",
+    "widths_px": [
+      1440,
+      375
+    ],
+    "photos": 24,
+    "photos_by_report": {
+      "2026-09-23": 9,
+      "2026-09-24": 7,
+      "2026-09-25": 8
+    },
+    "dated_deep_link": "build-2026-09-25",
+    "actual_raster_photos_loaded": true,
+    "personalized_b_completion_report_visible": true,
+    "completed_photo_full_size_link_verified": true,
+    "supplied_video_embeds_in_order": [
+      "sinN3dKGwRg",
+      "Lc_enNE3nng"
+    ],
+    "user_reported_flow": [
+      "planning",
+      "design",
+      "3d-printing",
+      "ultrasonic-cleaning",
+      "assembly"
+    ],
+    "embed_layout_verified_playback_not_asserted_here": true,
+    "full_size_link_uses_same_redacted_file": true,
+    "separate_captions_and_limits_visible": true,
+    "original_photos_accessed": false,
+    "physical_qualification_claimed": false,
+    "browser": "140.0.7339.16"
+  },
+  "live_player_test_status": "PASS_USER_INITIATED_EMBED_PLAYBACK",
+  "source_originals_accessed": false
+}

@@ -1,0 +1,150 @@
+{
+  "status": "PASS_USER_INITIATED_EMBED_PLAYBACK",
+  "browser": "140.0.7339.16",
+  "entry_url": "https://ktanino10.github.io/copilot-brick-display/build-log.html?log=2026-09-25&commit=ae91f728bae5#printing-video",
+  "video_ids": [
+    "sinN3dKGwRg",
+    "Lc_enNE3nng"
+  ],
+  "results": [
+    {
+      "video_id": "sinN3dKGwRg",
+      "embed": "https://www.youtube-nocookie.com/embed/sinN3dKGwRg?playsinline=1",
+      "width_px": 1440,
+      "layout": "PASS",
+      "user_clicked_play": true,
+      "actual_playback_observed": true,
+      "new_tabs": 0,
+      "before_click": [
+        {
+          "time": 0,
+          "paused": true,
+          "ready": 0,
+          "error": null
+        }
+      ],
+      "after_click": [
+        {
+          "time": 0.747835,
+          "paused": false,
+          "ready": 4,
+          "error": null
+        }
+      ],
+      "later": [
+        {
+          "time": 2.252575,
+          "paused": false,
+          "ready": 4,
+          "error": null
+        }
+      ]
+    },
+    {
+      "video_id": "sinN3dKGwRg",
+      "embed": "https://www.youtube-nocookie.com/embed/sinN3dKGwRg?playsinline=1",
+      "width_px": 375,
+      "layout": "PASS",
+      "user_clicked_play": true,
+      "actual_playback_observed": true,
+      "new_tabs": 0,
+      "before_click": [
+        {
+          "time": 0,
+          "paused": true,
+          "ready": 0,
+          "error": null
+        }
+      ],
+      "after_click": [
+        {
+          "time": 0.2919,
+          "paused": false,
+          "ready": 4,
+          "error": null
+        }
+      ],
+      "later": [
+        {
+          "time": 1.800831,
+          "paused": false,
+          "ready": 4,
+          "error": null
+        }
+      ]
+    },
+    {
+      "video_id": "Lc_enNE3nng",
+      "embed": "https://www.youtube-nocookie.com/embed/Lc_enNE3nng?playsinline=1",
+      "width_px": 1440,
+      "layout": "PASS",
+      "user_clicked_play": true,
+      "actual_playback_observed": true,
+      "new_tabs": 0,
+      "before_click": [
+        {
+          "time": 0,
+          "paused": true,
+          "ready": 0,
+          "error": null
+        }
+      ],
+      "after_click": [
+        {
+          "time": 0.58948,
+          "paused": false,
+          "ready": 4,
+          "error": null
+        }
+      ],
+      "later": [
+        {
+          "time": 2.096301,
+          "paused": false,
+          "ready": 4,
+          "error": null
+        }
+      ]
+    },
+    {
+      "video_id": "Lc_enNE3nng",
+      "embed": "https://www.youtube-nocookie.com/embed/Lc_enNE3nng?playsinline=1",
+      "width_px": 375,
+      "layout": "PASS",
+      "user_clicked_play": true,
+      "actual_playback_observed": true,
+      "new_tabs": 0,
+      "before_click": [
+        {
+          "time": 0,
+          "paused": true,
+          "ready": 0,
+          "error": null
+        }
+      ],
+      "after_click": [
+        {
+          "time": 0.692985,
+          "paused": false,
+          "ready": 4,
+          "error": null
+        }
+      ],
+      "later": [
+        {
+          "time": 2.204649,
+          "paused": false,
+          "ready": 4,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "third_party_network_required": true,
+  "video_conditions_or_effects_verified": false,
+  "video_audio_or_thumbnail_rehosted": false,
+  "reduced_motion": true,
+  "player_settle_after_load_ms": 2000,
+  "deployed_commit": "ae91f728bae5a23d908b82c3ab8474748e4df1b7",
+  "run_url": "https://github.com/ktanino10/copilot-brick-display/actions/runs/36146167694"
+}

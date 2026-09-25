@@ -20,7 +20,7 @@ def video_state(frame):
 
 
 def check_player(browser, url, width, output, video_id):
-    context = browser.new_context(viewport={"width": width, "height": 1000})
+    context = browser.new_context(viewport={"width": width, "height": 1000}, reduced_motion="reduce")
     page = context.new_page()
     page.goto(url, wait_until="networkidle", timeout=90000)
     embed = f"https://www.youtube-nocookie.com/embed/{video_id}?playsinline=1"
@@ -45,6 +45,8 @@ def check_player(browser, url, width, output, video_id):
     except (AssertionError, PlaywrightTimeoutError):
         result["limitation"] = "Official player controls did not finish loading within25s; consent/network/service restrictions may apply."
     else:
+        # Allow the third-party overlay to settle before the normal user gesture.
+        page.wait_for_timeout(2000)
         before = video_state(frame)
         assert all(video["paused"] and video["time"] < .2 for video in before), "Video started without the user's play click"
         result["before_click"] = before
@@ -95,6 +97,7 @@ def main():
                 "browser": browser.version, "entry_url": args.url, "video_ids": list(VIDEO_IDS), "results": results,
                 "third_party_network_required": True, "video_conditions_or_effects_verified": False,
                 "video_audio_or_thumbnail_rehosted": False,
+                "reduced_motion": True, "player_settle_after_load_ms": 2000,
             }
             (args.output / "playback.json").write_text(json.dumps(report, indent=2) + "\n")
             print(json.dumps(report, indent=2))
