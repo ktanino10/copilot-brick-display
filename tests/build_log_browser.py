@@ -34,6 +34,11 @@ def verify_build_log(page, base, output):
         expect(page.locator(f'.document img[src*="media/build-log/{date}/"]')).to_have_count(count)
         expect(page.locator(f'a[id="build-{date}"]')).to_have_count(1)
     expect(page.locator('.document a[href*="manifest.json"]')).to_have_count(len(PHOTO_COUNTS))
+    video = page.locator('.document a[href="https://youtu.be/Lc_enNE3nng"]')
+    expect(video).to_have_count(1)
+    expect(video).to_contain_text("3Dプリント後のパーツを超音波洗浄｜Ultrasonic Cleaning of 3D-Printed Parts")
+    assert body.locator("iframe, video, audio").count() == 0
+    assert page.locator("[src]").evaluate_all("nodes => nodes.every(node => !/youtu|ytimg/i.test(node.getAttribute('src')))")
     for width in (1440, 375):
         page.set_viewport_size({"width": width, "height": 1000})
         for image in images.all():
@@ -70,6 +75,7 @@ def verify_build_log(page, base, output):
         "dated_deep_link": f"build-{LATEST_DATE}", "actual_raster_photos_loaded": True,
         "personalized_b_completion_report_visible": True,
         "completed_photo_full_size_link_verified": True,
+        "supplied_cleaning_video_external_link_only": "https://youtu.be/Lc_enNE3nng",
         "full_size_link_uses_same_redacted_file": True, "separate_captions_and_limits_visible": True,
         "original_photos_accessed": False, "physical_qualification_claimed": False,
     }

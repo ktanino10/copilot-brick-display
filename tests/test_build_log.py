@@ -130,6 +130,22 @@ class BuildLogTests(unittest.TestCase):
         for phrase in ("STLハッシュ", "実preset", "未照合", "保持力", "量産・玩具認証", "公開の汎用文字版・A/C"):
             self.assertIn(phrase, boundary)
 
+    def test_supplied_cleaning_video_is_an_external_link_not_an_embed(self):
+        source = (ROOT / "docs/build-log.ja.md").read_text()
+        page = (ROOT / "site/build-log.html").read_text()
+        url = "https://youtu.be/Lc_enNE3nng"
+        title = "3Dプリント後のパーツを超音波洗浄｜Ultrasonic Cleaning of 3D-Printed Parts"
+        self.assertEqual(source.count(f"]({url})"), 1)
+        self.assertEqual(page.count(f'href="{url}"'), 1)
+        self.assertIn(title, source)
+        self.assertIn('id="post-print-cleaning"', page)
+        self.assertIn("docs/build-log.ja.md#post-print-cleaning", (ROOT / "README.md").read_text())
+        self.assertIn("本編・字幕は未視聴", source)
+        self.assertIn("機器・洗浄液・温度・時間・効果は未確認", source)
+        self.assertIn("本制作の必須工程や、安全検証済みの手順としては案内していません", source)
+        self.assertNotRegex(page, r"<(?:iframe|video|audio)\b")
+        self.assertNotRegex(page, r"""src=["'][^"']*(?:youtu|ytimg)""")
+
 
 if __name__ == "__main__":
     unittest.main()
